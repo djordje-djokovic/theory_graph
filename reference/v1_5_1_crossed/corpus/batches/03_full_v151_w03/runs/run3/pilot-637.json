@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-637",
+    "coder_session_id": "session_04",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Moving money in Africa is slow and costly because 155-plus isolated mobile money wallets hinder cross-network, cross-border, and online payments",
+      "status": "explicit",
+      "evidence_span": "There are more than 155 mobile money wallets running, isolated one from another in our continent, making it very difficult to make cross-network payments, cross-border payments, and online payments"
+    },
+    {
+      "id": "P2",
+      "text": "A universal payment platform lets online merchants accept cash and mobile money wallets through a single API with high conversion, blockchain-ledger security, and multi-currency ease for the unbanked",
+      "status": "explicit",
+      "evidence_span": "WeCashUp is a universal mobile money payment platform that enables online merchants to accept all cash and mobile money wallet online through a single API"
+    },
+    {
+      "id": "P3",
+      "text": "Version 2.0 also supports cards, bank mobile wallets, and cryptocurrencies plus merchant features such as split, disburse, marketplace hold, and airtime top-up across many African countries",
+      "status": "explicit",
+      "evidence_span": "supports cash, mobile money, credit and debit card, bank mobile wallet, and cryptocurrencies"
+    },
+    {
+      "id": "P4",
+      "text": "A patented blockchain tunneling interoperability network interconnects payment channels for secured cross-network, cross-border, and online payments",
+      "status": "explicit",
+      "evidence_span": "we have built the first blockchain tunneling network which is a global interoperability network that secures and interconnects all these payment channels"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from a monthly fee plus a transaction fee",
+      "status": "explicit",
+      "evidence_span": "We charge a monthly fee and a transaction fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented African mobile money",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "universal merchant payment API",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "blockchain interoperability network",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "fee monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Merchants and people in Africa can move and accept money fast enough for critical needs across wallets and borders",
+      "status": "explicit",
+      "evidence_span": "Moving money fast here in Africa is very, very difficult"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It can be a matter of life or death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ease of transaction processing for the unbanked across currencies"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitate cross-network payments, cross-border payments, and online payments globally"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We charge a monthly fee and a transaction fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Wallet isolation pain folded as one problem set. Single-API acceptance and v2 channel/feature expansion kept as one merchant platform mechanism with cascade of rails/features; blockchain tunneling kept separate as distinct interoperability module with patents folded as IP detail. Merchant traction excluded. Personal hospital story used only as value framing evidence."
+}

@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Amazing STEM projects built in classrooms and garages go unseen by colleges and employers",
+      "status": "explicit",
+      "evidence_span": "no one knows about them"
+    },
+    {
+      "id": "P2",
+      "text": "A searchable multimedia portfolio is the right product form for innovative high school minds",
+      "status": "explicit",
+      "evidence_span": "Introducing GradFly, a portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "id": "P3",
+      "text": "College matches surface programs aligned to a student's project domains",
+      "status": "explicit",
+      "evidence_span": "you can see some college matches"
+    },
+    {
+      "id": "P4",
+      "text": "Little ed-tech focus exists on the high-school-to-college transition versus college-to-job",
+      "status": "explicit",
+      "evidence_span": "Plenty is being done from college to the job market, but what about the high school students"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Invisible STEM talent",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Portfolio and college match product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get STEM students into top schools and high-tech internships via project portfolios",
+      "status": "explicit",
+      "evidence_span": "get those students into internships and co-op programs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no one knows about them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best portfolio platform for science, tech, engineering, and math students"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Commendations/badges folded into portfolio product premise P2 in this run (v1.3.2 #5 feature list).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:49:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

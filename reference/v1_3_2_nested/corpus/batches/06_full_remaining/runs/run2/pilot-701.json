@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Technology can replace most hospital administrative functions while doctors deliver care",
+      "status": "explicit",
+      "evidence_span": "you can replace most of these things with technology"
+    },
+    {
+      "id": "P2",
+      "text": "Carbon onboarding uses insurance-card scan and short setup instead of long forms",
+      "status": "explicit",
+      "evidence_span": "No more long registration forms"
+    },
+    {
+      "id": "P3",
+      "text": "Patients get an actionable phone-based medical chart: images, labs, referrals, appointments, messaging, and home actions",
+      "status": "explicit",
+      "evidence_span": "this is more than just a record. It's not just about looking. You can also take action"
+    },
+    {
+      "id": "P4",
+      "text": "Automated, history-aware intake questions speed new-issue triage before physician review",
+      "status": "explicit",
+      "evidence_span": "we've automated a lot of the questions that your doctor would be asking you to save time. And these questions dynamically adjust based on your medical history"
+    },
+    {
+      "id": "P5",
+      "text": "Hybrid virtual/in-person care shares context across clinic and follow-up channels",
+      "status": "explicit",
+      "evidence_span": "a seamless hybrid of virtual and in-person care"
+    },
+    {
+      "id": "P6",
+      "text": "Prescription fulfillment and automatic pill reminders close the loop on treatment plans",
+      "status": "explicit",
+      "evidence_span": "we can schedule the pill reminders automatically, and all you have to do is flip them on"
+    },
+    {
+      "id": "P7",
+      "text": "End-to-end control of physician and patient applications enables experiences traditional providers cannot offer, expandable to independent practices",
+      "status": "explicit",
+      "evidence_span": "we are able to design an experience that would be impossible for the traditional health care providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tech-replaced hospital admin",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Actionable hybrid care app",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Full-stack versus traditional providers",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Best possible collaborative care through a ubiquitous doctor-connection platform",
+      "status": "explicit",
+      "evidence_span": "give the best possible care to their patients"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "World's largest hospital as a technology network rather than buildings",
+      "evidence_span": "the world's largest hospital won't be about buildings"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "At its core, there are doctors who give the actual care"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your clinic doctor has all the context of your virtual interactions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "experience that would be impossible for the traditional health care providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run2 places 'world's largest hospital' in secondary_value as vision framing per §4.1(4) rather than as a premise. Feature demo items mostly folded; pill reminders kept as closing-the-loop condition. Independent-practices expansion folded into P7.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-701",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:47:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "coder_session_id": "session_02",
+    "session_case_index": 4,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home automation adoption is blocked because lighting automation today is painful: wired switches need electricians or cannot be used in rentals, and smart bulbs break normal switch use",
+      "status": "explicit",
+      "evidence_span": "Why is it that a product meant to make our lives simple and better is such a pain to deal with right out of the box?"
+    },
+    {
+      "id": "P2",
+      "text": "Switchmate snaps magnetically onto a standard light switch and mechanically flips it so users get phone-controlled smart lighting without rewiring or smart bulbs",
+      "status": "explicit",
+      "evidence_span": "It uses two magnets on the back that snap right to the screws on your standard light switch. And it mechanically flips the switch up and down"
+    },
+    {
+      "id": "P3",
+      "text": "An optional hub serves as a base station for Switchmate and future easy-to-use smart-home products",
+      "status": "explicit",
+      "evidence_span": "we'll be providing an optional hub that will serve as the base station for SwitchMate and any other feature products"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market runs from pre-order/crowdfunding through online retail then brick-and-mortar, with an experienced manufacturing partner",
+      "status": "explicit",
+      "evidence_span": "we're planning to launch a pre-order campaign. We're also working with a manufacturing partner"
+    },
+    {
+      "id": "P5",
+      "text": "Addressable market includes US homes and rentals with many automatable light switches",
+      "status": "explicit",
+      "evidence_span": "There's about 120 million homes in the United States alone, a third of them being rentals and condos"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "simple smart lighting hardware",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "hub platform expansion",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retail and manufacturing GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the smart home / smart lighting extremely simple to use",
+      "status": "explicit",
+      "evidence_span": "on a mission to make the smart home simple"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peace of mind via vacation lighting timers and related use cases",
+      "evidence_span": "leave on vacation with some peace of mind"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will never compromise on making sure we make products that are extremely simple to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hope to deliver to online retail, such as Amazon, and through our own website"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain of wired switches vs smart bulbs folded into one problem-set premise (v1.5.1 #6). Vacation timers, geofencing, and manual/phone control folded into P2 as applications of one mechanism. Singleton D2 justified as separately launched hub/platform module."
+}

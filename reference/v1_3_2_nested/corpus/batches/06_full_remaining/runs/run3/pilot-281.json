@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current milk testing still relies on pickup-and-distant-lab workflows that lack real-time information",
+      "status": "explicit",
+      "evidence_span": "Lab technicians drive everywhere, kind of like UPS truck drivers"
+    },
+    {
+      "id": "P2",
+      "text": "Mastitis requires frequent early testing because it is hard to detect and spreads easily",
+      "status": "explicit",
+      "evidence_span": "Mastitis is hard to detect, unlike COVID, and spreads easily among the herd"
+    },
+    {
+      "id": "P3",
+      "text": "Handheld analyzer produces critical milk-quality metrics including butterfat, protein, and somatic cell count in seconds",
+      "status": "explicit",
+      "evidence_span": "Produce critical meal quality information, including butter fat, protein, and the somatic cell count"
+    },
+    {
+      "id": "P4",
+      "text": "Three-module solution pairs optical analyzer, customized data portal, and remote veterinary support",
+      "status": "explicit",
+      "evidence_span": "Our solution has three modules"
+    },
+    {
+      "id": "P5",
+      "text": "Technology is reagent-free, low-maintenance, needs no special training, and can scale across the dairy supply chain",
+      "status": "explicit",
+      "evidence_span": "can be easily scale up entire supply chain from dairy producers, to dairy co-op and dairy processors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Real-time testing gap and mastitis",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Field optical quality measurement",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Modular analyzer-portal-vet system",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Continuous milk-quality and herd-health management that prevents major mastitis losses",
+      "status": "explicit",
+      "evidence_span": "With our daily, weekly, and monthly data, farmer now have reliable and continuous data to monitor the health of their herd"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of real-time information is causing a big problem for industry"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "analyzed in real time in just about 10 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "LabVIEW brings the lab testing technology to the field"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Three modules coded as one system premise plus scaling condition. ASR 'meal quality'/'mass status' left as transcript text in spans. Future apps excluded (4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-281",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

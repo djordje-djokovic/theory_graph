@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-892",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents leave hospital anxious about SIDS and breathing crises, while current baby monitors are outdated and do not actually show whether the baby is breathing",
+      "status": "explicit",
+      "evidence_span": "the current monitors on the market stink. They're old, they're outdated, and they don't actually tell you if your baby is breathing or not"
+    },
+    {
+      "id": "P2",
+      "text": "Owlet smart sock uses clinical-style pulse-ox tech in a flexible waterproof form to send heart rate, oxygen, temperature, rollover, and sleep alerts to a parent's phone",
+      "status": "explicit",
+      "evidence_span": "It's a smart sock that sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "id": "P3",
+      "text": "Multi-sensor pulse-ox design (four sensors, nine combinations) keeps accurate wireless readings as an infant's foot triples in size",
+      "status": "explicit",
+      "evidence_span": "With four sensors, we're getting nine different combinations, and we're getting a great reading the whole time"
+    },
+    {
+      "id": "P4",
+      "text": "Sock-generated infant vitals will build the largest infant health dataset to enable predictions from common cold to life-threatening conditions",
+      "status": "explicit",
+      "evidence_span": "creating the largest data set of infant health data that's ever been known"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SIDS anxiety and bad monitors",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Owlet smart sock vitals monitor",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "infant health data predictions",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower parents and improve infant health by alerting on emergencies and keeping parenting fulfilling rather than fear-driven",
+      "status": "explicit",
+      "evidence_span": "empower parents and it's gonna improve the health of infants all over the world"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anything that saves a baby's life is worth it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "alert you in case of an emergency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "predictions from anything from the common cold to things that are more life-threatening"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "SIDS fear and broken-monitor pains folded as one parent problem (§4.1.6). HR/O2/temp/rollover/sleep notifications and baby-proof silicone/BLE folded as sock feature cascade (§4.1.7); multi-sensor sizing kept as enabling engineering of that sock. Pre-sales $250k excluded as traction (§4.2.3). Audio/video/elderly roadmap treated as future vision, not premises. Three domains; not a need/product/money triad."
+}

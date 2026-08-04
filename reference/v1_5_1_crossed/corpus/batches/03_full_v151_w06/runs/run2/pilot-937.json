@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-937",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large buyers lack usable information on suppliers' environmental sustainability while stakeholders increasingly demand it",
+      "status": "explicit",
+      "evidence_span": "they don't have almost any information on their supplier's environmental sustainability"
+    },
+    {
+      "id": "P2",
+      "text": "Buyers enroll suppliers and collect sustainability scorecards through the platform",
+      "status": "explicit",
+      "evidence_span": "sign up for supply shift, enroll your suppliers, and release your first questionnaire"
+    },
+    {
+      "id": "P3",
+      "text": "Buyers can drill into supplier risk dimensions such as regional water pollution on the fly",
+      "status": "explicit",
+      "evidence_span": "drill down and look at which suppliers are in the region, which suppliers have high water pollution"
+    },
+    {
+      "id": "P4",
+      "text": "Suppliers see peer benchmarks and buyers can compare anonymous outside-network scores, incentivizing improvement and switching to greener suppliers",
+      "status": "explicit",
+      "evidence_span": "Spacely Sprockets can see where it stands relative to its industry peers"
+    },
+    {
+      "id": "P5",
+      "text": "A unified scorecard library reduces RFP fatigue so suppliers answer once across buyers",
+      "status": "explicit",
+      "evidence_span": "unified scorecard library that fixes the RFP fatigue problem"
+    },
+    {
+      "id": "P6",
+      "text": "Suppliers pay an annual fee plus a small per-supplier fee once enrolled",
+      "status": "explicit",
+      "evidence_span": "once suppliers enroll, they pay a annual fee plus a small fee per supplier"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "buyer supply-chain sustainability analysis",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "supplier benchmarking and scorecard network",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "supplier subscription pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies understand and manage supply-chain sustainability risk and choose greener suppliers without scandal headlines",
+      "status": "explicit",
+      "evidence_span": "helps companies understand and manage their supply chain sustainability, as well as evaluate supply chain risk, and drive their suppliers to be better"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "buyers have access to more sustainable suppliers, and more sustainable suppliers get more business"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "supply chain risk analysis on the fly"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive their suppliers to be better"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they pay a annual fee plus a small fee per supplier"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Peer dashboard and outside-network anonymous scores folded into P4 as one supplier-market incentive mechanism. Analytics/reporting/data-quality feature list folded as cascade of the platform analysis surface. Consulting background treated as credential framing, not a premise. GRI reporting growth left as market framing. Singleton D3 retained as independently revisable pricing."
+}

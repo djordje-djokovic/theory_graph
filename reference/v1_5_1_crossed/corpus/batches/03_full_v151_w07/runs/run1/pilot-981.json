@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-981",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The G-tar has matured from a prototype into a sturdier, more reliable real product with interchangeable docks for different handsets",
+      "status": "explicit",
+      "evidence_span": "It's gotten sturdier. It's gotten more reliable. We've added some features like an interchangeable dock system"
+    },
+    {
+      "id": "P2",
+      "text": "Functionality now makes it an instrument in itself, not only a learning tool, via multiple compatible apps acting as instruments",
+      "status": "explicit",
+      "evidence_span": "it's gone beyond being just kind of a learning tool for people who want to play guitar and become kind of an amazing instrument in and of itself"
+    },
+    {
+      "id": "P3",
+      "text": "Units are fulfilled from Kickstarter with ongoing online preorders toward inventory stock",
+      "status": "explicit",
+      "evidence_span": "we're taking preorders online now"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "G-tar hardware product",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-app instrument experience",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "preorder fulfillment channel",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A real playable instrument experience built around phone-docked guitar hardware and apps",
+      "status": "explicit",
+      "evidence_span": "become kind of an amazing instrument in and of itself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "watching the GTAR grow from this prototype that we brought here last year into a real product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "each app is representing a different instrument in the song"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're taking preorders online now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Thin update pitch. Kickstarter raise amount excluded as financing (§4.2); preorders/fulfillment coded as continuing go-to-market condition. Limited causal content; singletons retained because hardware, app-instrument experience, and sales channel are separately stated."
+}

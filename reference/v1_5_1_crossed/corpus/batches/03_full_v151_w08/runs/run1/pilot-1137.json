@@ -1,0 +1,111 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Internet giants invest in global CDN-like speed and large security teams; ordinary websites lack those tools",
+      "status": "explicit",
+      "evidence_span": "if you're trying to run a website today, you're left alone without access to any of these tools"
+    },
+    {
+      "id": "P2",
+      "text": "Cloudflare brings performance and security tools of big providers to any website via one DNS nameserver change—no hardware, software, or code changes (~5 minutes)",
+      "status": "explicit",
+      "evidence_span": "all you do is make one change to your domain's name servers, and suddenly you're on the Cloudflare network"
+    },
+    {
+      "id": "P3",
+      "text": "Traffic through Cloudflare's global network speeds pages (~30% average) and stops spam/attacks while allowing any server stack",
+      "status": "explicit",
+      "evidence_span": "We deliver an average of a 30% decrease in page load times"
+    },
+    {
+      "id": "P4",
+      "text": "Core price point is free",
+      "status": "explicit",
+      "evidence_span": "there's really only one price point for a service like ours, and that's free"
+    },
+    {
+      "id": "P5",
+      "text": "Network is a globally distributed caching proxy with deep packet inspection that can rewrite HTML in real time (e.g., fix Analytics, block XSS)",
+      "status": "explicit",
+      "evidence_span": "built a globally distributed caching proxy that does deep packet inspection"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "website performance and security gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "DNS-onboarded CDN security network",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "free pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the web faster and safer—sites fast, safe, and secure for anyone online",
+      "status": "explicit",
+      "evidence_span": "make the web a faster, safer place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "left alone without access to any of these tools"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we make sure that the bad guys don't get to you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Giant speed+security concerns folded as one access gap for ordinary sites (§4.1.6). Performance/security benefits and HTML rewrite demos folded into network mechanism (§4.1.7/8). Free pricing singleton separately revisable. Beta metrics/unit economics traction excluded (§4.2). User testimonials are evidence not premises. Anti-template: gap, network product, free price separately revisable.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1137",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

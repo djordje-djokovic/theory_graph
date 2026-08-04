@@ -1,0 +1,100 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wrong hiring data—unadvertised jobs and soft-skill blind spots—causes widespread hire failure",
+      "status": "explicit",
+      "evidence_span": "In the US, 46% of hires fail"
+    },
+    {
+      "id": "P2",
+      "text": "Scoutable games measure soft skills in 20 minutes and match people to roles via top-performer predictive models",
+      "status": "explicit",
+      "evidence_span": "our science-based mobile games measure and quantify soft skills to match perfect fit candidates to top jobs"
+    },
+    {
+      "id": "P3",
+      "text": "Revenue from employer setup fees, subscriptions, and sourcing while candidates play free",
+      "status": "explicit",
+      "evidence_span": "a subscription for filtering inbound candidates against that model, or a sourcing fee for bringing undiscovered talent"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Talent misallocation problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Game-based matching product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Employer fees and free play",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unlock better human potential by building world-class teams",
+      "status": "explicit",
+      "evidence_span": "unlock the next wave of human potential"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Match perfect-fit candidates to top jobs",
+      "evidence_span": "match perfect fit candidates to top jobs"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "human talent misallocation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Moneyball for hiring"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Companies like Cloud Co pay us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cognitive-assessment unused-because-friction claim folded into product necessity within market+product rather than separate premise. Need/product/money triad justified.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-692",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:56:00+02:00"
+  }
+}

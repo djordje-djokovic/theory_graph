@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1070",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "With millions of photos shared daily across services, finding pictures you like is hard",
+      "status": "explicit",
+      "evidence_span": "The question is, how do you find pictures you like?"
+    },
+    {
+      "id": "P2",
+      "text": "Skyline collects personal interests from social networks (liked pages, saved searches, hashtags, places) beyond just people",
+      "status": "explicit",
+      "evidence_span": "We connect to your social networks to collect your interests"
+    },
+    {
+      "id": "P3",
+      "text": "Matching those interests to a real-time multi-service photo stream gives each user a personal skyline timeline (rank, friends, location, events, explore, back channel)",
+      "status": "explicit",
+      "evidence_span": "Matching your personal interest to that stream of real-time photos means everybody gets his own skyline"
+    },
+    {
+      "id": "P4",
+      "text": "Product ships as website plus iPhone and Android apps with the same interest-based skylines",
+      "status": "explicit",
+      "evidence_span": "We are not only launching this as a website, but also as an app, both on iPhone and on Android"
+    },
+    {
+      "id": "P5",
+      "text": "Brands can target an interest combined with location or time; site widgets share ad revenue or pay a monthly ad-free fee; services sit on an open API",
+      "status": "explicit",
+      "evidence_span": "Brands can target an interest, like TechCrunch Disrupt, if they want, combined with location or time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "photo discovery problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "interest-matched skyline product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "brand targeting and widgets",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyone gets a personal real-time stream of photos matched to their interests",
+      "status": "explicit",
+      "evidence_span": "everybody gets his own skyline, hence the company name Skylines"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do you find pictures you like? That's where we come in"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Matching your personal interest to that stream of real-time photos means everybody gets his own skyline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This both increases our revenue and our reach"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Picture-rank/friends/location/events/explore/back-channel folded as cascade of one interest-matched stream (§4.1.7). Interest collection kept with matching as one mechanism; multi-surface website/apps kept as distribution facet of product. Brand targeting+widget monetization separately revisable. Singleton D1/D3 justified as problem vs commercial modules."
+}

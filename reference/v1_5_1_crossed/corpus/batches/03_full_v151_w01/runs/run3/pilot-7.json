@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "coder_session_id": "session_04",
+    "session_case_index": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:12:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Farm software built by a grower for growers is the right product design",
+      "status": "explicit",
+      "evidence_span": "it was built by a grower for growers, by a farmer for farmers"
+    },
+    {
+      "id": "P2",
+      "text": "Farms must track worker location and activity to stay compliant with H-2A and labor laws",
+      "status": "explicit",
+      "evidence_span": "farmers do this not just to better understand their farms, but to be compliant with labor laws"
+    },
+    {
+      "id": "P3",
+      "text": "Most farms still track labor with pen and paper, which makes compliance impractical",
+      "status": "explicit",
+      "evidence_span": "84% of farms today are still tracking everything with pen and paper"
+    },
+    {
+      "id": "P4",
+      "text": "A multi-app stack digitizes labor who-what-when-where data with dashboard, field tablet/NFC, and geotagged phone clock-in",
+      "status": "explicit",
+      "evidence_span": "AgriTrack captures the most vital data that farmers need, which is labor"
+    },
+    {
+      "id": "P5",
+      "text": "A labor audit report packages Department of Labor-ready documentation for farm audits",
+      "status": "explicit",
+      "evidence_span": "it has everything that's in step with the Department of Labor and what they need if they come and audit a farm"
+    },
+    {
+      "id": "P6",
+      "text": "The system accurately calculates complex hour, piece-rate, and overtime payroll so farms stay compliant",
+      "status": "explicit",
+      "evidence_span": "we handle all that for them, so that they know that when they do payroll, it's accurate"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Labor compliance tracking need",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Grower-built labor digitization apps",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Audit report and payroll automation",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Farms gain accurate digitized labor data and confidence they can pass Department of Labor audits",
+      "status": "explicit",
+      "evidence_span": "farms can utilize AgriTrack to have confidence in the data that they're collecting, knowing that it's accurate, and that if the Department of Labor comes knocking, they feel okay"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Payroll that used to take a day or more can be completed in minutes",
+      "evidence_span": "what used to take a day or more to run payroll and do that process is now actually being done in minutes with AgriTrack"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "it's really difficult to stay compliant when you're recording everything with pen and paper"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "to be compliant with labor laws"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AgriTrack helps solve this problem by digitizing the whole process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download that report, give it to them, and they're ready to go"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three-app stack folded as one digitization mechanism (v1.5.1 feature cascade). Future traceability/spray modules treated as roadmap vision and omitted. Traction (21 farms, ARR) excluded per 4.2. Anti-template: need/product/compliance-workflow modules are separately revisable in the pitch (pen-paper problem vs grower-built apps vs audit/payroll jobs)."
+}

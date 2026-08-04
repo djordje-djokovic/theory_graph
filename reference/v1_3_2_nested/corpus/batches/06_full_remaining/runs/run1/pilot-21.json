@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises hold large portfolios of applications needing modernization, and traditional SI-driven work is too costly and slow to scale across dozens to thousands of apps",
+      "status": "explicit",
+      "evidence_span": "the costs are tremendously high, and the timelines are extremely long"
+    },
+    {
+      "id": "P2",
+      "text": "Technical debt across infrastructure, architecture, code, and dependencies compounds over time and drives performance, scalability, and maintainability failures",
+      "status": "explicit",
+      "evidence_span": "technical debt actually compounds over time. It becomes more complex the longer we leave it"
+    },
+    {
+      "id": "P3",
+      "text": "A continuous productized modernization platform can automate identifying, cutting, and maintaining technical debt as a repeatable, predictable process",
+      "status": "explicit",
+      "evidence_span": "AppFactor is a continuous modernization platform. It's a productized solution to help identify, cut, and maintain technical debt"
+    },
+    {
+      "id": "P4",
+      "text": "Automated environment scan, dependency capture, container image build, and cloud-native deploy remove months of manual discovery and consultancy",
+      "status": "explicit",
+      "evidence_span": "cutting out all of the manual processes around app discovery, trying to understand and analyze"
+    },
+    {
+      "id": "P5",
+      "text": "The product is built for daily architect and engineer use with ML classifications across common legacy stacks such as Linux, Windows Server, Java, and .NET",
+      "status": "explicit",
+      "evidence_span": "designed for daily use for architects and engineers to empower them to transform applications as part of their BAU"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market runs through cloud-provider programs that accelerate cloud spend and customer modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "Our route to market is one that we see work very closely with the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Legacy portfolio and technical debt",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Continuous modernization automation product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud-provider route to market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises get ahead of the legacy continuum with faster, repeatable modernization that frees budget wasted on maintenance",
+      "status": "explicit",
+      "evidence_span": "help enterprises get ahead of this legacy continuum"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Our product is designed to really accelerate the process and simplify the entire end-to-end journey"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "freeing up that 40% that's wasted maintaining legacy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automate and simplify and create a repeatable, predictable process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerate cloud revenue spend for the cloud providers, obviously support the outcomes that customers are looking to achieve"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Pitch truncated by timekeeper before differentiation close. Market-size and Gartner percentage figures treated as problem framing; coded compounding debt and portfolio scale as conditions, not the dollar totals. Team Amazon/Microsoft/Google experience excluded as biography per 4.2. Demo steps (Dockerfile, Fargate) folded into one automation mechanism (v1.3.2 clarification 5). Singleton D3 retained: cloud-provider GTM is separately revisable from the product.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

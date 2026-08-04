@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1014",
+    "coder_session_id": "session_02",
+    "session_case_index": 20,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Calories and fat on labels are insufficient because modern food is chemistry-laden and hard to interpret for personal health",
+      "status": "explicit",
+      "evidence_span": "looking at calories and fat, it's just not enough today"
+    },
+    {
+      "id": "P2",
+      "text": "A catalog of over 250,000 products supports product, ingredient, and barcode search",
+      "status": "explicit",
+      "evidence_span": "a catalog with over 250,000 products"
+    },
+    {
+      "id": "P3",
+      "text": "An encyclopedia of about 15,000 researched ingredients explains function, health effects, and origin",
+      "status": "explicit",
+      "evidence_span": "encyclopedia with 15,000 professionally researched ingredients"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in nutritionist personalization uses medical and cultural concerns such as allergies, diabetes, vegan, or pregnancy",
+      "status": "explicit",
+      "evidence_span": "personalize the information custom to the user based on their medical concerns and cultural concerns"
+    },
+    {
+      "id": "P5",
+      "text": "MyPlate analytics track frequency of consumed ingredients over time",
+      "status": "explicit",
+      "evidence_span": "a food tracker to actually analyze the components of the food"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "opaque food chemistry",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "InnerFood ingredient platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People know where food comes from, how it is made, and how it affects their personal health",
+      "status": "explicit",
+      "evidence_span": "know exactly where your food comes from, how it's made, and also how it affects your personal health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Aggregate ingredient analytics could reveal health risk common denominators across users",
+      "evidence_span": "find out the common denominator of what may be leading the cause of breast cancer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "never see your food the same way again"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nutritionist and dietitian built into our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Canonical pain-bundle + capability split (§4.1.6–7): avocado vs fries and Shannon vignette folded into one label-insufficiency problem; catalog, encyclopedia, personalization, and tracker kept as distinct capabilities. Avoid/moderation alerts, Disqus, and scraped articles folded into encyclopedia/personalization package. Population breast-cancer vignette as secondary impact value. Two domains."
+}

@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:08+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers still lack a better power solution than hunting for outlets for 21st-century mobiles",
+      "status": "explicit",
+      "evidence_span": "you as a consumer deserve a better solution for power for your mobile devices"
+    },
+    {
+      "id": "P2",
+      "text": "Technology converts RF energy transmitted by the device into extra battery power",
+      "status": "explicit",
+      "evidence_span": "converts radio frequency energy transmitted by mobile devices into extra battery power for that device"
+    },
+    {
+      "id": "P3",
+      "text": "iPhone case harvests wasted RF through conversion and dumps power back into the phone for ~30% longer life",
+      "status": "explicit",
+      "evidence_span": "takes it through a conversion process to convert it into electricity and then dumps it back into the phone"
+    },
+    {
+      "id": "P4",
+      "text": "Green passive harvesting needs no plugging, unlike battery cases and portable chargers",
+      "status": "explicit",
+      "evidence_span": "our technology does not have to be plugged into use. It is a green technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "RF-to-battery case product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Extend phone battery life using wasted energy without user charging rituals",
+      "status": "explicit",
+      "evidence_span": "extending your battery life"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extending your battery life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Future wireless chargers and IoT sensors omitted as roadmap. One domain: beachhead case and harvesting mechanism are one product theory."
+}

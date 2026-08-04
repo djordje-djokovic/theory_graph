@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-452",
+    "session_case_index": 7,
+    "extraction_run": 2
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Field robot with vision detects ripe strawberries and a patented soft silicone gripper delicately extracts them in real time on moving farm equipment without internet/off-site compute",
+      "status": "explicit",
+      "evidence_span": "Our robotic platform drives across the field while our vision system detects the berries and figures out how to reach them. Then our patented gripper delicately extracts the produce from the plant"
+    },
+    {
+      "id": "P2",
+      "text": "Focus on year-round strawberry harvest without requiring growers to change growing process",
+      "status": "explicit",
+      "evidence_span": "Traptic focuses on year-round strawberry harvest. We don't require any change in growing process, providing a smooth path for deployment"
+    },
+    {
+      "id": "P3",
+      "text": "Robots-as-a-service: growers pay ~23 cents per pound; provider supplies machine, tractor, driver, etc.",
+      "status": "explicit",
+      "evidence_span": "Robots as a service. We pick strawberries, and growers will pay us 23 cents per pound"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Vision and gripper strawberry picking robot",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Year-round strawberry deployment fit",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Robots-as-a-service pricing",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automate strawberry picking work people do not want to do, sustaining food production",
+      "status": "explicit",
+      "evidence_span": "Our robots are saving the world's food production system by automating the work people don't want to do"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our system does all this in real time while hanging off the back of a tractor and moving continuously over real strawberry fields"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we provide all aspects of the service, machine, tractor, driver, et cetera"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision, path planning, gripper compliance, local compute, and farm robustness folded into one picking mechanism (rules 7–8). Master-plan expansion to other crops treated as vision/roadmap, not premises. Anti-template: picking tech, crop/deployment fit, and RaaS model separately revisable."
+}

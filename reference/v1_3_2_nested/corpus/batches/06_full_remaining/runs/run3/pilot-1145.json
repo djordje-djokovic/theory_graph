@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large share of couples experience sleep disruption and relationship tension from partners' sleeping habits",
+      "status": "explicit",
+      "evidence_span": "38% of couples experience high relationship tension because of their partner's sleeping habits. that's 88 million Americans who want to do something about it"
+    },
+    {
+      "id": "P2",
+      "text": "Product is a silent wristband-plus-smartphone wake system (app + dock + gentle nudge)",
+      "status": "explicit",
+      "evidence_span": "in the morning, the Lark wristband gently nudges you awake. It's peaceful, it's silent, and best of all, she gets to sleep in"
+    },
+    {
+      "id": "P3",
+      "text": "Technology is effective across sleep phases and creates a more peaceful wake than adrenaline-based alarms",
+      "status": "explicit",
+      "evidence_span": "By circumventing this, Lark Up creates a peaceful and natural-feeling wake-up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Couple sleep market need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Silent natural LarkUp wake",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help couples sleep better together",
+      "status": "explicit",
+      "evidence_span": "We're Lark, and we help couples sleep better together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "88 million Americans who want to do something about it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she gets to sleep in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Wristband styling folded into silent wake product premise (v1.3.2 feature list). Soft count 3 on focused theory.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1145",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:28:40+02:00"
+  }
+}

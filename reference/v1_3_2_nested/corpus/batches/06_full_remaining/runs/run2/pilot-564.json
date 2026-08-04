@@ -1,0 +1,127 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Converting pre-consumer food waste into insect protein and fertilizer solves waste and protein shortage together",
+      "status": "explicit",
+      "evidence_span": "convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    },
+    {
+      "id": "P2",
+      "text": "Specially designed hatchery and incubator accelerate edible-insect growth on ground food waste, yielding insects and fertilizer",
+      "status": "explicit",
+      "evidence_span": "place the ground food waste and insect eggs together in another specially designed incubator that accelerates the insect growth and food decomposition"
+    },
+    {
+      "id": "P3",
+      "text": "Triple revenue: tip fees for waste intake, insect protein powder sales, and fertilizer sales",
+      "status": "explicit",
+      "evidence_span": "we get revenue by taking our raw material and by selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "id": "P4",
+      "text": "System is exponentially more resource-efficient than other protein sources and nutritionally denser than regular meat",
+      "status": "explicit",
+      "evidence_span": "Our production system is exponentially more efficient than any protein sources"
+    },
+    {
+      "id": "P5",
+      "text": "Launch via pet B2C/B2B (influencers, pet shops), then human niches including athletes, renal/cancer patients, and meat-allergic consumers",
+      "status": "explicit",
+      "evidence_span": "we first target three initial customer segments. One is athletes who already use whey protein"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dual waste-and-protein thesis",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Insect hatchery production",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Triple-stream revenue",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Pet then clinical human segments",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable edible-insect protein powder and fertilizer from food waste",
+      "status": "explicit",
+      "evidence_span": "produces the next generation protein from a specific edible insect by converting food waste into fertilizer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This technology makes our revenue model revolutionary"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainable solution for both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "grind the insect into protein powder, which is ready for consumption"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launched our first product in May for reptile, fish and bird"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Explicit P2->P3 dependency on 'This technology makes our revenue model revolutionary'. Competitive alternatives folded into efficiency/nutrition claims rather than separate premises this run. Team credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-564",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:21:00+02:00"
+  }
+}

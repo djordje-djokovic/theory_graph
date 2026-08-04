@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-712",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:11:32+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Animal disease creates large economic losses and public-health risks, and farms catch outbreaks too late despite heavy drug spend",
+      "status": "explicit",
+      "evidence_span": "we're not catching these events until it's far too late"
+    },
+    {
+      "id": "P2",
+      "text": "REX combines historic and real-time clinical data with animal and pathogen genomics into one standard view of animal health",
+      "status": "explicit",
+      "evidence_span": "we bring in historic and real-time data, and then we combine it into one standard format, and finally combine this clinical information with genomics data"
+    },
+    {
+      "id": "P3",
+      "text": "Software pillars help vets diagnose and spot outbreaks, choose effective treatments including antibiotic-resistance maps, and help pharma find gene targets faster",
+      "status": "explicit",
+      "evidence_span": "we have three pillars to our software"
+    },
+    {
+      "id": "P4",
+      "text": "Sold via annual subscriptions to livestock and pharma customers plus add-ons for collaborative custom projects, leveraging vendor-customer network effects",
+      "status": "explicit",
+      "evidence_span": "we charge them an annual subscription fee to access our tools and data. And then for more collaborative custom projects, we'll add on extra"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Late, costly animal disease risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Clinical-plus-genomics analytics platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and custom project sales",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Predict, prevent, and precisely manage animal disease for a safer, more sustainable food supply",
+      "status": "explicit",
+      "evidence_span": "predict, prevent, and precisely manage disease in animals to ensure a safer and more sustainable food supply"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce public-health risk from zoonoses and farm-origin antibiotic resistance",
+      "evidence_span": "Seventy percent of all new and emerging diseases in humans come from animals"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$13 billion in losses can be prevented if we were able to catch them early on"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide a comprehensive view of animal health and disease"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're at some of the largest livestock and pharmaceutical companies in the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Three software pillars folded as uses of one platform (v1.3.1 §4.1(2)). Precision husbandry / citizen science treated as future vision, not premises. Pharma bio excluded. Need/product/money triad justified: subscription terms revisable independently of data platform."
+}

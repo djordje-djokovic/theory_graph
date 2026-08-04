@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app users needing live help are forced into leave-the-app channels not designed for mobile",
+      "status": "explicit",
+      "evidence_span": "your only options for support are to leave the app and call an 800 number, send email feedback, or actually go in person to the store or branch"
+    },
+    {
+      "id": "P2",
+      "text": "ShowKit powers real-time communication inside any mobile app",
+      "status": "explicit",
+      "evidence_span": "We power real-time communication inside of any mobile app"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending technology is packaged as an SDK and platform licensed to companies and developers",
+      "status": "explicit",
+      "evidence_span": "We've packaged our patent-pending technology into an SDK and platform that we license to companies and developers"
+    },
+    {
+      "id": "P4",
+      "text": "Web plugin embeds into CRM solutions so agents support mobile customers from the desktop",
+      "status": "explicit",
+      "evidence_span": "our web plugin can be embedded into any web CRM solution"
+    },
+    {
+      "id": "P5",
+      "text": "Peer-to-peer architecture keeps real-time data off ShowKit servers",
+      "status": "explicit",
+      "evidence_span": "ShowKit uses peer-to-peer technology, so none of your real-time data goes to ShowKit servers"
+    },
+    {
+      "id": "P6",
+      "text": "Partnerships with cloud services, app studios, and developer tools distribute ShowKit through tools clients already use",
+      "status": "explicit",
+      "evidence_span": "These partnerships allow us to distribute ShowKit to a larger number of potential clients through the tools and services they already use"
+    },
+    {
+      "id": "P7",
+      "text": "Pricing is a flat monthly rate with included minutes after a free trial",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at a flat rate of $1,000 a month, which includes 50,000 minutes of call time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken mobile support channels",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "In-app real-time support SDK",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner distribution and pricing",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies deliver visual, interactive mobile customer support inside the app",
+      "status": "explicit",
+      "evidence_span": "ShowKit enhances the mobile customer support experience by making it visual and interactive"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These support solutions were not designed for mobile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it visual and interactive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distribute ShowKit to a larger number of potential clients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-invite; truncated=true. Patent folded into SDK premise. Demo features illustrate P2. Traction excluded. Need/product/GTM partition justified by separately revisable partner/pricing module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-849",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

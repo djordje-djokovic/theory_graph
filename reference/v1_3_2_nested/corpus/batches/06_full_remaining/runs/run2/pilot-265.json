@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-265",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:01+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Women have no guide for whether hormonal changes are expected, normal, or abnormal",
+      "status": "explicit",
+      "evidence_span": "Who's there to tell us if a change is expected, normal, or abnormal? Today, no one"
+    },
+    {
+      "id": "P2",
+      "text": "Hormones must be tested on specific days because they fluctuate constantly through the month",
+      "status": "explicit",
+      "evidence_span": "they change and they fluctuate constantly throughout the month. They need to be tested on specific days"
+    },
+    {
+      "id": "P3",
+      "text": "Lab blood testing is slow and costly for discovering individual hormone levels across a cycle",
+      "status": "explicit",
+      "evidence_span": "not a convenient or cost efficient solution as you need multiple blood tests per cycle"
+    },
+    {
+      "id": "P4",
+      "text": "Hormona's urine test and app give quantitative at-home results in 15 minutes without a lab and at lower cost",
+      "status": "explicit",
+      "evidence_span": "decreased the time it takes for you to get your test results from five days to 15 minutes, and also offering a five times cheaper product"
+    },
+    {
+      "id": "P5",
+      "text": "Three key female hormones plus a cycle algorithm and app analysis reveal each woman's hormone pattern and symptom links",
+      "status": "explicit",
+      "evidence_span": "The three quantitative test results per cycle allows women to see their unique hormone pattern"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing hormonal guidance",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Home testing product",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better predictions and earlier detection of overlooked hormonal issues through regular monitoring",
+      "status": "explicit",
+      "evidence_span": "Regular testing and monitoring of these key hormones will enable better predictions and earlier detections"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Women understand hormones from home",
+      "evidence_span": "understand their hormones from the comfort of our home"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Who's there to tell us if a change is expected, normal, or abnormal? Today, no one"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Regular testing and monitoring of these key hormones will enable better predictions and earlier detections"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Merged three-hormone choice, algorithm, and pattern readout into P5 as one offering mechanism (§4.1(5)). Mission-to-create-medicine-baseline left as vision (§4.1(4)). Bio anecdote and market size excluded (§4.2)."
+}

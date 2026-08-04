@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-601",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-volume hiring favors prestige schools and employers and keyword search fails to translate diverse experiences, overlooking high-potential candidates and creating false positives",
+      "status": "explicit",
+      "evidence_span": "evaluations today are based on criteria such as well-known schools or well-known companies. They favor prestige over potential"
+    },
+    {
+      "id": "P2",
+      "text": "Deep learning qualifies every resume experience, project, education, and transition, including hidden correlations, for technical and non-technical roles across languages and media formats",
+      "status": "explicit",
+      "evidence_span": "Our unique deep learning technology is able to qualify every experience project, education, or transition people can write down in their resumes"
+    },
+    {
+      "id": "P3",
+      "text": "Computer vision and NLP extract structured profiles, then general career-path AI plus company-custom layers learn from recruiter actions to rank and cross-suggest candidates across open roles",
+      "status": "explicit",
+      "evidence_span": "we use deep computer vision and natural language processing to extract each resume as a structured data profile"
+    },
+    {
+      "id": "P4",
+      "text": "Capture integrations such as a one-line SavvyBot on career pages simplify applying and feed more candidates into assessment sources",
+      "status": "explicit",
+      "evidence_span": "It allows you to capture four times more candidates by tremendously simplifying the application experience"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing starts at $99 and scales as the customer grows",
+      "status": "explicit",
+      "evidence_span": "our pricing starts only at $99 and scales as you grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "prestige-biased hiring failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "deep learning talent assessment",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "application capture integrations",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "starter pricing scale",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Recruiters reveal candidates' full potential and hire more relevant talent with far fewer interviews",
+      "status": "explicit",
+      "evidence_span": "we reveal people's full potential"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "overlook the majority of high potential candidates while revealing false positives"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify three times more relevant talents in their initial pools"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture four times more candidates"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every recruiter in the world to concentrate on tasks that are emotionally intelligent"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Prestige/keyword failures folded as one pain bundle. Language/media/technical-nontechnical claims folded into assessment mechanism; CV+NLP extraction and dual AI layers treated as same assessment stack. SavvyBot kept as separately revisable capture module. Beta volume metrics excluded; 3x/80% benefits used as value evidence of mechanism. Founder biography excluded."
+}

@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge volumes of uploaded and produced video all need music",
+      "status": "explicit",
+      "evidence_span": "400 hours of video is uploaded to YouTube every single minute"
+    },
+    {
+      "id": "P2",
+      "text": "Stock audio is slow to search, expensive, rights-confusing, poorly fitting, and non-unique",
+      "status": "explicit",
+      "evidence_span": "spent ages searching for the right track. When he's finally found one he likes, it's expensive, costing around $40 for a three-minute track. The copyright and royalties are really confusing. And it won't fit his video"
+    },
+    {
+      "id": "P3",
+      "text": "AI software writes original music from scratch using music-theory and machine-learning rules and auto-produces it to a professional standard",
+      "status": "explicit",
+      "evidence_span": "patent-pending software that writes original music completely on its own"
+    },
+    {
+      "id": "P4",
+      "text": "The system yields unlimited unique royalty-free tracks that are instantly customizable and much cheaper",
+      "status": "explicit",
+      "evidence_span": "create an unlimited amount of unique music in a variety of styles that's completely royalty-free, instantly customizable, and far cheaper than the alternatives"
+    },
+    {
+      "id": "P5",
+      "text": "Users get five free tracks monthly then pay about $7 per additional track at download",
+      "status": "explicit",
+      "evidence_span": "You get five free tracks every month and then pay around $7 for an additional track"
+    },
+    {
+      "id": "P6",
+      "text": "Technology can also be licensed to platforms that supply music to their users",
+      "status": "explicit",
+      "evidence_span": "we'll also license our technology to companies that themselves want to provide music to their users, such as YouTube itself, Twitch, Instagram, Vime, you name it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Creator music sourcing problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI music composer product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Download pricing and platform licensing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Original, customizable, royalty-free music for video creators at much lower cost",
+      "status": "explicit",
+      "evidence_span": "unlimited amount of unique music in a variety of styles that's completely royalty-free, instantly customizable, and far cheaper"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finding music for video sucks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "writes original music completely on its own"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "about 80% cheaper than what you'd pay elsewhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "v1.3.1 §4.1.1: patent-pending attached to the AI composer mechanism, not a separate premise. Traction (Google, Royal Family, track counts) excluded. Price and B2B licensing kept together as commercial domain but as two premises because licensing could fail while consumer pricing stands.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-738",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

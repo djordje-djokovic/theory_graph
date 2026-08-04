@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-941",
+    "coder_session_id": "session_03",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses have lacked a single switch platform for all telecom services across niches like carriers, PBX, and developer APIs",
+      "status": "explicit",
+      "evidence_span": "there hasn't been a single platform where you can actually get all of your telecommunication services from the same system until today"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile is integrated into the switch over the cellular network so business call logic always routes through the switch, not an over-the-top data app",
+      "status": "explicit",
+      "evidence_span": "we have been able to integrate mobile with our switch directly"
+    },
+    {
+      "id": "P3",
+      "text": "One-stop switch enables BYOD activation, presence, non-GPS location, seamless transfer, recording, transcription, private networks, and cheaper IP international calling",
+      "status": "explicit",
+      "evidence_span": "you can actually bring your own device"
+    },
+    {
+      "id": "P4",
+      "text": "Activation and control are exposed via APIs so customers can attach their own software or non-phone devices",
+      "status": "explicit",
+      "evidence_span": "all of this technology, even the activation of the cell phone, is being done via APIs that are exposed to you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented telecom switch niches",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "mobile-integrated one-stop switch",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "open telecom APIs",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses get real business-phone features on mobile with carrier-quality voice from one communications platform",
+      "status": "explicit",
+      "evidence_span": "These switches help their businesses communicate better"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "2600 Hertz is a one-stop shop where all of these APIs and all of this functionality come in one box"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your mobile call is going over actual phone channel"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can attach your own software and your own systems to activate the cellular devices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Canonical feature-cascade case (§4.1.7): BYOD, presence, location, transfer, recording, transcription, private networks, cheap IP international folded into mobile-integrated switch mechanism; API openness split as independently revisable developer/module path. Niche one-stop-shop claim kept as distinct platform premise. Transcript may end mid-pitch (truncated). Three domains."
+}

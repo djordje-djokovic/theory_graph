@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lawn care customers face no-shows, delayed quotes, and painful payment",
+      "status": "explicit",
+      "evidence_span": "Sounds pretty painful, right? This is a very, very typical experience in the lawn care industry"
+    },
+    {
+      "id": "P2",
+      "text": "Human crew capacity cannot recover multi-day rain or equipment/crew failures",
+      "status": "explicit",
+      "evidence_span": "the backlog of jobs is almost insurmountable, and service delays happen"
+    },
+    {
+      "id": "P3",
+      "text": "DIY robotic mowers are expensive, require buried perimeter wire expertise, and omit edging/trim/fertilize/weed",
+      "status": "explicit",
+      "evidence_span": "they cost anywhere from $1,500 to $5,000 up front"
+    },
+    {
+      "id": "P4",
+      "text": "Robin sells installed, remotely monitored robotic mowing as a managed service",
+      "status": "explicit",
+      "evidence_span": "we are announcing the world's first robotic lawn service"
+    },
+    {
+      "id": "P5",
+      "text": "Robots are battery-powered and emissions-free versus gas mowers",
+      "status": "explicit",
+      "evidence_span": "These mowers are battery operated, emissions free"
+    },
+    {
+      "id": "P6",
+      "text": "$99/month is less than traditional lawn service, with optional recurring add-on services",
+      "status": "explicit",
+      "evidence_span": "The best part about this is that it costs less than a traditional lawn service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unreliable human lawn care",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Managed robotic mowing",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable monthly pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reliable eco-friendly affordable lawn maintenance on autopilot",
+      "status": "explicit",
+      "evidence_span": "most environmentally friendly, most reliable, and most affordable lawn care service"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Reliable lawn care still depends upon both human nature and mother nature"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "world's first robotic lawn service"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "costs less than a traditional lawn service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Prior digital booking product treated as background; focus on robotic service theory.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-713",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fake academic credentials are a huge problem",
+      "status": "explicit",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "id": "P2",
+      "text": "Akowe is a blockchain platform for institutions to issue digital academic credentials, with APIs for other systems",
+      "status": "explicit",
+      "evidence_span": "Akowe is a digital issuance platform and verification of academic records using blockchain technology"
+    },
+    {
+      "id": "P3",
+      "text": "Employers, embassies, and HR firms verify records through Akowe's verification platform",
+      "status": "explicit",
+      "evidence_span": "allows employers, embassies, HR firms, anybody who needs to verify academic records to be able to verify academic records via our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Individuals carry verifiable academic credentials in a mobile app",
+      "status": "explicit",
+      "evidence_span": "carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fake credential problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Issuance and verification stack",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Personal credential app",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Academic records can be digitally issued and verified on blockchain",
+      "status": "explicit",
+      "evidence_span": "digital issuance platform and verification of academic records using blockchain technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "transition from manual credential processes to digital processes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "safe and verifiable manner"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Issuance and verification grouped as one institutional stack; API folded into issuance. Fundraising and 30-customer traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-11",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

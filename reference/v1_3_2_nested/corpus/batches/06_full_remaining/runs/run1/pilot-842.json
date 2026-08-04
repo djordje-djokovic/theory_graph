@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mass outlets cannot stock niche colors because volume-discount supply chains force them to carry only mass-selling shades, while prestige color selection is expensive",
+      "status": "explicit",
+      "evidence_span": "Walmart can't offer you all the colors that expensive prestige stores can, like Sephora. Why? Supply chain"
+    },
+    {
+      "id": "P2",
+      "text": "A desktop inkjet-like printer can turn any digital image or hex color into wearable FDA-compliant makeup at home",
+      "status": "explicit",
+      "evidence_span": "Mink is a desktop printer that prints makeup. It can take any image and instantly transform it into a wearable color cosmetic"
+    },
+    {
+      "id": "P3",
+      "text": "No new software is required—ordinary color pickers and print software plus commodity ink and substrates from trusted-brand sources suffice",
+      "status": "explicit",
+      "evidence_span": "You do not need any new software. All you need is a color picker to copy the hex code and any software to print"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware at about $300 with commodity-priced ink and substrates keeps the offering accessible",
+      "status": "explicit",
+      "evidence_span": "I'm going to retail this for about $300 initially. And the ink and the substrates are going to be commodity priced"
+    },
+    {
+      "id": "P5",
+      "text": "Girls ages 13 to 21 who already learn makeup online are the beachhead customers who will grow up with the product",
+      "status": "explicit",
+      "evidence_span": "My initial target market, they're girls, ages 13 to 21. They have not formed any habits yet"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mass vs prestige color access gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Home makeup printer and workflow",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Accessible pricing and young beachhead",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Internet-wide color selection with home convenience for makeup buyers",
+      "status": "explicit",
+      "evidence_span": "It gives you the selection of prestige and it combines it with the convenience of mass"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Girls learn that beauty is something they control rather than corporations",
+      "evidence_span": "The definition of beauty is something that they should be able to control, not our corporations"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you want like the cool niche colors, you have to go to expensive Sephora"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turning any phone, laptop, or camera into an endless beauty aisle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clicking to print is just the next natural step"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Future print categories (lipsticks, powders, creams) and developer sign-up folded into the printer platform rather than split (v1.3.2 clarification 5). Inventor/HBS biography excluded per 4.2. Industry size figures treated as framing. Price and consumables kept one commercial premise with beachhead in D3. Singleton D1 retained: retail color-assortment failure is independently revisable. Anti-template note: domains are market gap, printer mechanism, and pricing/beachhead—not a desirability/feasibility/viability label triad.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-842",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:40+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

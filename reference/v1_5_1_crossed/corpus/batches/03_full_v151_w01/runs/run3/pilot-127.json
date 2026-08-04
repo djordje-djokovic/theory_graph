@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "coder_session_id": "session_02",
+    "session_case_index": 19,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "E-commerce flooded retailers with single-use cardboard/polymer packaging that consumers increasingly reject",
+      "status": "explicit",
+      "evidence_span": "E-commerce grew much faster than any of us thought. And then we found ourselves surrounded by these boxes"
+    },
+    {
+      "id": "P2",
+      "text": "Company replaces single-use packaging with smart reusable shippers plus software sold as a fleet to retailers",
+      "status": "explicit",
+      "evidence_span": "replacing all single-use packaging. So think of kind of that cardboard and the polymers you get when you order something online with our smart reusable option"
+    },
+    {
+      "id": "P3",
+      "text": "Reusable shippers are designed in-house from upcycled billboard vinyl that is lightweight, durable, and waterproof",
+      "status": "explicit",
+      "evidence_span": "we actually designed our own reusable shippers. So the first fleet of shippers that we're working with actually use upcycled materials, so billboard vinyls"
+    },
+    {
+      "id": "P4",
+      "text": "Network efficiency improves as more retailers join because shippers can be sent to the closest place of need instead of only back to origin",
+      "status": "explicit",
+      "evidence_span": "It actually works better the bigger it is, because then it allows us to send shippers to the closest place of need, as opposed to back to the original retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Single-use e-commerce packaging problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Retailer reusable shipper fleet",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Shared reverse-logistics network",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More sustainable and efficient supply-chain shipping by replacing single-use packaging",
+      "status": "explicit",
+      "evidence_span": "make the supply chain system more sustainable and efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers are fed up with it and looking for solutions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smart reusable option"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the more people that buy into the program, the better and more efficient it becomes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Interview format: only founder answers coded; interviewer prompts excluded per §4.2. Retailer count/names and Target accelerator treated as traction. truncated=true — transcript opens mid-answer and ends mid-interview."
+}

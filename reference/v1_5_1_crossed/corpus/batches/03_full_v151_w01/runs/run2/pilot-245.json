@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "coder_session_id": "session_05",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shorter attention spans make long textbook studying hard to compete with social apps",
+      "status": "explicit",
+      "evidence_span": "My generation has half the attention span that the generation before me did"
+    },
+    {
+      "id": "P2",
+      "text": "Kado creates flashcards from a photo of textbook text using OCR and ML question generation",
+      "status": "explicit",
+      "evidence_span": "create flashcards with just a picture of their textbooks"
+    },
+    {
+      "id": "P3",
+      "text": "Milo is a messaging-based virtual tutor that generates Q&A and essay help from short prompts",
+      "status": "explicit",
+      "evidence_span": "Milo is a virtual learning assistant that acts as a tutor in your pocket"
+    },
+    {
+      "id": "P4",
+      "text": "Task-specific language models with semantic understanding deliver faster Q&A than industry benchmarks",
+      "status": "explicit",
+      "evidence_span": "training task-specific behavior in the model itself"
+    },
+    {
+      "id": "P5",
+      "text": "The same models expand beyond students into university knowledge distillation and workplace training",
+      "status": "explicit",
+      "evidence_span": "we're able to service workplace and training"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "attention and textbook learning problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "student learning products and models",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "university and workplace expansion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students learn faster and teachers teach faster through generative AI learning tools",
+      "status": "explicit",
+      "evidence_span": "help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Seamless upskilling and training resources for workforces",
+      "evidence_span": "building out a seamless learning experience for your workforce and upskilling them as fast as possible"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if we could make learning personalized? What if we could make learning addictive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "process that took me two hours in school, now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create instant training resources for their employees"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Kado and Milo coded as separately revisable products (speaker relaunched after Kado). Latency comparison folded into P4 as quantitative detail of the model premise. Beta-user counts treated as traction."
+}

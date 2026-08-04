@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Community organizers currently juggle multiple separate platforms for events, email, and members",
+      "status": "explicit",
+      "evidence_span": "I've had to use five platforms to stay organized. One for events, another for email management, another for member management"
+    },
+    {
+      "id": "P2",
+      "text": "A single umbrella product can cover communication, event, member, and transaction management",
+      "status": "explicit",
+      "evidence_span": "the single solution that an organizer needs to engage their membership. Communication management, event management, member management, transaction management, under one umbrella"
+    },
+    {
+      "id": "P3",
+      "text": "Email lists integrate automatically into discussion boards so members stop repeating questions",
+      "status": "explicit",
+      "evidence_span": "each email list is automatically integrated into a discussion board, capturing all of the conversation that takes place between your members. Your members will never have to ask the same question twice"
+    },
+    {
+      "id": "P4",
+      "text": "Hierarchical chapters and subgroups can run autonomously while organizers retain global control",
+      "status": "explicit",
+      "evidence_span": "enabling your local leadership to operate completely autonomously without you losing control. You can send global communications and global events at any time"
+    },
+    {
+      "id": "P5",
+      "text": "Interest-topic channels help users discover groups and events",
+      "status": "explicit",
+      "evidence_span": "Channels are a curated list of groups for a given interest topic"
+    },
+    {
+      "id": "P6",
+      "text": "Public, private, and hidden privacy toggles apply to groups, events, and members",
+      "status": "explicit",
+      "evidence_span": "a very simple lexicon of public, private, and hidden. And we have applied those toggles to groups, events, and members"
+    },
+    {
+      "id": "P7",
+      "text": "Most groups are free; revenue comes from channel subscriptions, premium groups, and transaction fees",
+      "status": "explicit",
+      "evidence_span": "for the vast majority of groups, it's entirely free. We generate revenue by selling subscriptions against our channels in free groups. We generate subscription revenue for our premium groups. And we generate service fees revenue at any time we conduct a transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unified community organizer toolkit",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Chapters, channels, and privacy",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium and transaction monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One platform that lets community organizers engage their membership",
+      "status": "explicit",
+      "evidence_span": "the single solution that an organizer needs to engage their membership"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cohort connects community"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We also connect groups to their chapters, and we allow groups to interact online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained: monetization is a separately revisable commercial module. Fundraising and signup counts excluded as traction/financing per 4.2. Feature list (ticketing, dues, profiles) treated as one umbrella product condition (P2) rather than split.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1065",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

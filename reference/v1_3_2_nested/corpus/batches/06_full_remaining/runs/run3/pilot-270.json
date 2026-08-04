@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Overheating limits compute performance and reliability as data demand outpaces cooling",
+      "status": "explicit",
+      "evidence_span": "The more you ask your computer to do stuff, it overheats. And as it overheats, it becomes slower"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary two-phase cooling reaches CPU temperatures no market cooling system can (demo ~13°C)",
+      "status": "explicit",
+      "evidence_span": "It says 13 degrees Celsius. That's around 30 degrees Fahrenheit, I think, in the US. That is the lowest temperature you can ever get on the CPU. No system in the world can do that"
+    },
+    {
+      "id": "P3",
+      "text": "Solution ships as a standard drop-in server with integrated cooling",
+      "status": "explicit",
+      "evidence_span": "It's a standard server. You can insert it in any data center today, so you don't have to change a thing"
+    },
+    {
+      "id": "P4",
+      "text": "Going low on CPU temperature yields both higher speed and better energy efficiency",
+      "status": "explicit",
+      "evidence_span": "By going lower on the CPU, we both accelerate it, so we make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Heat-limited compute",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Below-ambient two-phase server",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Speed and efficiency outcome mechanism",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cool servers to accelerate innovation with the fastest, most efficient compute",
+      "status": "explicit",
+      "evidence_span": "world's fastest and most efficient server to accelerate your innovation"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it overheats"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No system in the world can do that"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more energy efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Team credentials and remaining pilot slots excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-270",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:10+02:00"
+  }
+}

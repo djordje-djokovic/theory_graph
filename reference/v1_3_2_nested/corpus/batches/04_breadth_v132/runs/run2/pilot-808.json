@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drones cannot operate in the up-close airspace near obstacles where the most valuable work is",
+      "status": "explicit",
+      "evidence_span": "They're very challenging to fly in that up-close airspace, close to obstacles that you see every day."
+    },
+    {
+      "id": "P2",
+      "text": "A platform-agnostic avoidance suite automatically alters the flight path against obstacles, even against operator input or wind gusts",
+      "status": "explicit",
+      "evidence_span": "It alters the flight path even if the operator is trying to crash the drone or if a wind gust comes and pushes it toward the obstacle."
+    },
+    {
+      "id": "P3",
+      "text": "Partner-led entry through inspection firms, seeded by an early-adopter program, carries the product to market",
+      "status": "explicit",
+      "evidence_span": "partnering with major infrastructure inspection, commercial users that want to use drones today"
+    },
+    {
+      "id": "P4",
+      "text": "Capabilities extend to avoiding other aircraft in the airspace through an NSF phase-one SBIR",
+      "status": "explicit",
+      "evidence_span": "We are also working closely with the National Science Foundation through a phase one SBIR to extend our capabilities"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Obstacle-choked airspace",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Guardian platform and market entry",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any operator can fly drones safely near obstacles, unlocking the aerial workforce",
+      "status": "explicit",
+      "evidence_span": "unlock their aerial workforce"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Inspectors keep their feet on the ground while getting better data faster",
+      "evidence_span": "keep his feet safely on the ground"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't see them in our cities, our neighborhoods, around our bridges, or around our energy infrastructure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people that are not highly trained pilots to use drones"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Compact reading: the inspection partnership channel and the 90-day early-adopter program are one market-entry motion, grouped with the avoidance technology in a single solution domain because the pitch presents product and partner-led rollout as one launch plan. Drone-market size forecasts excluded as framing (v1.3.2 clarification 4); delivery and pizza futures treated as aspiration. Farm/inspector/delivery use list treated as applications of one capability (v1.3.1 clarification 2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-808",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:30:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

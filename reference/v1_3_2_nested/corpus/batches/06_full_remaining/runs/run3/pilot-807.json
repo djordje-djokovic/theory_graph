@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cookie is a Keurig-like robotic cooker for fresh pre-portioned meal trays controlled from a phone",
+      "status": "explicit",
+      "evidence_span": "Think of it as a Keurig for cooking fresh food using robotics. In the same way that Keurig simplified the process of making coffee down to insert a cup and press a button, Cookie delivers that same experience in making home-cooked meals with multiple trays of fresh ingredients"
+    },
+    {
+      "id": "P2",
+      "text": "Busy students (and later professionals/moms) need convenient ways to eat right without cooking skill",
+      "status": "explicit",
+      "evidence_span": "how can my fellow classmates and I manage our new responsibilities while still continuing to eat right?"
+    },
+    {
+      "id": "P3",
+      "text": "Foodie plus Cookie enable recipe selection, store purchases, scheduling, and chef-taught cooking motions",
+      "status": "explicit",
+      "evidence_span": "They can specify the recipes step by step. They can even teach Cookie to move like they do by tracing out a motion on their phone"
+    },
+    {
+      "id": "P4",
+      "text": "Unit economics: meals ~$4, device $600 or subscription rental, competing with frozen but using fresh food",
+      "status": "explicit",
+      "evidence_span": "A Serenity meal is typically priced at around $4 per meal. The app is free, and cookie will retail at $600"
+    },
+    {
+      "id": "P5",
+      "text": "Pre-portioned kits address food waste and overconsumption/obesity by reducing prep work and excess ingredients",
+      "status": "explicit",
+      "evidence_span": "An average American household lets 40% of the fresh ingredients that they buy spoil. 69% of Americans are considered obese"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Busy eater convenience need",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cookie plus Foodie cooking system",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Meal kit economics and waste reduction",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make food better by delivering push-button fresh cooked meals",
+      "status": "explicit",
+      "evidence_span": "Let's make food better together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "continuing to eat right"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "without picking up a spatula"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Hardware detail of arm/cooktop folded into Cookie system premise. Closing mission slogan used as value with product benefit warrant elsewhere.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-807",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:31:40+02:00"
+  }
+}

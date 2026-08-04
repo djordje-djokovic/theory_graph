@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passengers share private pilots' flight costs through a booking marketplace",
+      "status": "explicit",
+      "evidence_span": "connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "id": "P2",
+      "text": "Platform provides end-to-end booking ops including payments, matching, vetting, and insurance",
+      "status": "explicit",
+      "evidence_span": "Online payments, pricing algorithm, smart matching, flight suggestion, pilot vetting, and insurance"
+    },
+    {
+      "id": "P3",
+      "text": "Passengers can request unposted flights that are routed to pilots in the region",
+      "status": "explicit",
+      "evidence_span": "it's smartly sent to pilots in your region"
+    },
+    {
+      "id": "P4",
+      "text": "2016 rules allow private pilots to share costs and advertise flights ahead of time",
+      "status": "explicit",
+      "evidence_span": "they're allowed to share the cost of a flight and also advertise it on light beforehand"
+    },
+    {
+      "id": "P5",
+      "text": "Custom insurance gives customers an extra €1 million of coverage",
+      "status": "explicit",
+      "evidence_span": "an extra 1 million euro coverage on all the flights you do"
+    },
+    {
+      "id": "P6",
+      "text": "Example shared pricing turns a €400 pilot cost into €100 per person with a platform commission",
+      "status": "explicit",
+      "evidence_span": "This would cost him 400 euros. And thanks to Wingly, it's actually now only 100 euros per person. Wingly then takes a commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared-cost flight marketplace",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Regulatory permission",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Insurance coverage",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Per-person pricing and commission",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make private aviation accessible with convenience and pleasure via shared-cost flights",
+      "status": "explicit",
+      "evidence_span": "Wingly makes private aviation accessible to everybody"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Environmental benefit alongside pilot and passenger gains",
+      "evidence_span": "win-to-win for our pilots, our passengers, and also the environment"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share the cost of a flight"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allowed to share the cost of a flight and also advertise it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extra 1 million euro coverage"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only 100 euros per person"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Cattle-vs-jet framing merged into value rather than a separate premise this run. Price amount and commission kept one commercial premise (§4.1(3)). Truncated ending; growth metrics excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-528",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:04+02:00"
+  }
+}

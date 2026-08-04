@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-602",
+    "coder_session_id": "session_05",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:45:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High clothing return rates stem from design around only two of nine body shapes, so fit problems are about shape not just size",
+      "status": "explicit",
+      "evidence_span": "The problem with returns is more than just a size or a measurement issue. The solution must include shape"
+    },
+    {
+      "id": "P2",
+      "text": "Recommendations match garment design details to an individual's body shape and proportion via shape-filter technology",
+      "status": "explicit",
+      "evidence_span": "We make recommendations on clothing for an individual body shape and proportion using the design details in an individual garment"
+    },
+    {
+      "id": "P3",
+      "text": "AI, visual recognition, machine learning, and knowledge-based systems classify assortments while a UI captures shopper shape and proportion",
+      "status": "explicit",
+      "evidence_span": "Our AI, visual recognition, machine learning, knowledge-based systems classify assortments. Our user interface captures a shopper's shape and her proportion"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise implementation plugs into retailer inventory systems with annual contracts combining upfront fee and percentage of sales",
+      "status": "explicit",
+      "evidence_span": "Our enterprise implementation fits easily into our customers' inventory management system. We have an annual contract with an upfront fee and a percentage of sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "body-shape apparel returns problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "shape-filter recommendation tech",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise retail commercial model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make dressing well easy by helping women find clothes that fit their shape, increasing sales and decreasing returns",
+      "status": "explicit",
+      "evidence_span": "Savitude is making dressing well ridiculously easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help all women, not only idolized body types, shop with confidence",
+      "evidence_span": "Help women, help all women, and not just the few idolized women"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of clothing be returned because it doesn't fit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making her shopping a whole lot easier"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase your sales, decrease your returns"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: hourglass/rectangle design teaching and return rate folded as one shape-fit pain (P1). Demo seven questions and personalized boutique subset folded into shape-filter mechanism (P2–P3). IP scalability and patent-pending knowledge base treated as IP detail of P2/P3 (§4.1.1). Founder exit credentials excluded. Competitor size-only contrast sharpens P2, not a separate premise."
+}

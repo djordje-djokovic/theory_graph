@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-924",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Priorities are not only emails; email clients and task managers alone cannot solve priority management because capture, triage, plan, and do must work together as the Handle habit",
+      "status": "explicit",
+      "evidence_span": "email clients have not been able to solve this problem alone, and task managers have not been able to solve this problem alone"
+    },
+    {
+      "id": "P2",
+      "text": "Handle is a priority engine that captures thoughts/tasks/emails from mobile and inbox, triages via handlebar keyboard commands, plans an importance-ordered must-do list with calendar blocking, and executes with full task context",
+      "status": "explicit",
+      "evidence_span": "Introducing the world's first priority engine, Handle"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email and tasks fail priority alone",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Handle priority engine habit",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People get their must-do work done that day so they can do what they feel is most important, including family dinner without phone-checking",
+      "status": "explicit",
+      "evidence_span": "getting all the must do things you have to do done that day"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Keep yourself in shape and reclaim life beyond Handle-the-product",
+      "evidence_span": "The disruption is keeping yourself in shape"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Priorities are not all emails, and emails are not all priorities"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I finished all my important work for the day"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Capture/triage/plan/do stated as one indivisible Handle habit; mobile capture, handlebar commands, priority list, and do-context demo folded as product cascade of that engine (§4.1.7). Outcome claims kept in value/secondary_value, not as premises (§3.5). Menlo/Siri bio detail excluded. Two-domain partition."
+}

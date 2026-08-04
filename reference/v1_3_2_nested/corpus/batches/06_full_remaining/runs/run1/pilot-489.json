@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes requires constant blood-sugar management because food, activity, medication, stress, and even weather affect sugar",
+      "status": "explicit",
+      "evidence_span": "everything affects my sugar. from food, activity, medication, the stress of tech crunch disrupt, and even the weather"
+    },
+    {
+      "id": "P2",
+      "text": "Existing diabetes apps mainly add fancy logging tools that still force hard manual analysis",
+      "status": "explicit",
+      "evidence_span": "all they do is provide us with fancy tools so that we can do hard work of logging details and then manually analyzing them or sharing them"
+    },
+    {
+      "id": "P3",
+      "text": "Spike automatically collects routine, activity, and vitals to give proactive insulin tips, reminders, and food suggestions before incidents",
+      "status": "explicit",
+      "evidence_span": "By automatically collecting details about your life, your routine, your activity, and your vitals, Spike proactively provides you with the right insulin tips and reminders with food suggestions"
+    },
+    {
+      "id": "P4",
+      "text": "Supported patches and glucometers automatically supply readings that can be compared with other connected signals",
+      "status": "explicit",
+      "evidence_span": "Supporting more than 10 other glucometers spike would automatically get a reading"
+    },
+    {
+      "id": "P5",
+      "text": "Guardians and doctors receive real-time status and alerts on unusual patterns",
+      "status": "explicit",
+      "evidence_span": "they are informed in real time about her situation. But they are also alerted if unusual pattern is detected or something is wrong"
+    },
+    {
+      "id": "P6",
+      "text": "Spike is free for diabetics and paid for by insurers and self-insured employers who value productivity",
+      "status": "explicit",
+      "evidence_span": "spike is free forever for diabetics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard manual diabetes management",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Proactive automated assistant",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Guardian and doctor alerts",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Free-for-patient payer model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make diabetes management less work and less worry through proactive assistance",
+      "status": "explicit",
+      "evidence_span": "We changed it from more work to less worry"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce mismanagement-related diabetes deaths by intervening before incidents",
+      "evidence_span": "Spike could have saved them by doing what it does best, making diabetes management less diabetic"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Living with diabetes is incredibly difficult"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the problem lies before the incident happens, not after it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "guardians and doctors, they are informed in real time about her situation"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's also extremely expensive. But don't worry spike is free forever for diabetics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "DAU, transfer %, funding, patents, and named partners treated as traction/credentials (4.2). Proactive-before-incident thesis kept inside D2 value warrant rather than a separate premise. Price and payer stay one commercial premise (4.1(3)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-489",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

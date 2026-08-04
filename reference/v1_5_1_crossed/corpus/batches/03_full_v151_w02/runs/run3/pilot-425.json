@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-425",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Africa faces a developer shortage and children need to become creators of technology, not only consumers",
+      "status": "explicit",
+      "evidence_span": "Africa suffers from what I would love to call SOD, shortage of developers"
+    },
+    {
+      "id": "P2",
+      "text": "A gamified block-based programming app with AR lessons teaches kids coding fundamentals offline",
+      "status": "explicit",
+      "evidence_span": "learn the fundamentals of computer programming through game puzzles"
+    },
+    {
+      "id": "P3",
+      "text": "Offline-first design expands reach where internet penetration is low while staying locally relevant",
+      "status": "explicit",
+      "evidence_span": "our application works fully offline, ensuring inclusivity in regions where internet penetration is very low"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from an in-app character store and branded-character partnerships",
+      "status": "explicit",
+      "evidence_span": "Our primary source of revenue is in-app toy store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "African kids coding need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Gamified offline AR learning app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "In-app and brand monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children learn programming in an easy, fun way and become tech creators",
+      "status": "explicit",
+      "evidence_span": "Programming has never been this easy and fun"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These children need not only be passive consumers of technology, but also become creators and innovators of it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "presents code concepts, which is primarily presumed as very complicated things in graphical programming blocks, which are very easy and intuitive to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase different game characters in our toy store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Coins/characters/AR demo facets folded into P2 learning mechanism; offline reach kept as P3 because speaker frames it as the Africa-market differentiator vs Hopscotch/Scratch. Download counts and industry growth rates excluded as traction/market framing."
+}

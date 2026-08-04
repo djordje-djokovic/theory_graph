@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online merchants must verify shopper identity and keep personal information safe",
+      "status": "explicit",
+      "evidence_span": "They need to know that Emily is who she says she is, and once they've confirmed that she is who she says she is, they need to keep her information safe"
+    },
+    {
+      "id": "P2",
+      "text": "Patented software confirms two parties hold the same information without exchanging that information",
+      "status": "explicit",
+      "evidence_span": "patented software that allows two parties to confirm that the information that they have is the same without ever exchanging the information"
+    },
+    {
+      "id": "P3",
+      "text": "An identity exchange lets organizations publish verified attributes in Siddiqui format for merchants who have never identified the person before",
+      "status": "explicit",
+      "evidence_span": "merchants who've never identified somebody before can leverage the information that others have previously done before them"
+    },
+    {
+      "id": "P4",
+      "text": "Transactional fees per verification with 30% shared back to the information provider",
+      "status": "explicit",
+      "evidence_span": "Every verification we do, we charge a fee for. But the interesting thing is we give 30% of that back to the provider of the information"
+    },
+    {
+      "id": "P5",
+      "text": "Target use cases include real-time fraud monitoring of card transactions and faster identity verification",
+      "status": "explicit",
+      "evidence_span": "We're looking to compete in two specific areas, the prevention of fraud, which is real-time monitoring of credit card transactions, and the identity verification area"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Merchant identity and safety need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Zero-exchange verification tech",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Transactional fees and use cases",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses prove identity and keep information safe without moving PII",
+      "status": "explicit",
+      "evidence_span": "help businesses prove that you are who you say you are and keep your information safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This creates a number of problems for merchants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no information left my browser, no information left the server in the bank"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it fast and accurate"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hash/graph micro-component demo folded into P2 per v1.3.2 clarification 5. BT selection treated as traction. KYC/sharing-economy examples support value/use-case framing inside P5.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-848",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

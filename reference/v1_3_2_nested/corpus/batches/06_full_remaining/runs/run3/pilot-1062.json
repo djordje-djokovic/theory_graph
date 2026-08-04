@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1062",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:09+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mission is online creation of custom plush toys (CafePress/Build-A-Bear style)",
+      "status": "explicit",
+      "evidence_span": "give users the ability to create cool, cute, and crazy custom plush toys online"
+    },
+    {
+      "id": "P2",
+      "text": "Designer UI lets users personalize parts, colors, decorations, and names",
+      "status": "explicit",
+      "evidence_span": "You can do all sorts of things to create their truly own personal and unique toy"
+    },
+    {
+      "id": "P3",
+      "text": "Pressing build triggers physical factory manufacture and shipment",
+      "status": "explicit",
+      "evidence_span": "when you're done making your toy online, you can press build it and we actually manufacture the toy"
+    },
+    {
+      "id": "P4",
+      "text": "Start with individual consumers then expand to teams and organizations wanting runs of toys",
+      "status": "explicit",
+      "evidence_span": "In future iterations of the website, we hope to target small businesses and organizations"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Custom design experience",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Physical fulfillment",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Segment expansion",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cool unique custom plush toys made to order",
+      "status": "explicit",
+      "evidence_span": "create something truly cool and unique for our customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design their own custom plush toy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "physically manufacture the toy and send it to you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "target small businesses and organizations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Singletons D2/D3: manufacturing and segment expansion are independently revisable from the designer UI. Judge Q&A not coded."
+}

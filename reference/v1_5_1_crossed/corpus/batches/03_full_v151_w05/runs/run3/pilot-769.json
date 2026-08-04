@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Irrelevant video ads cause losses for content providers, brands, and users",
+      "status": "explicit",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "id": "P2",
+      "text": "Market leaders base ad targeting only on user data and reach",
+      "status": "explicit",
+      "evidence_span": "they all base targeting on user data and reach"
+    },
+    {
+      "id": "P3",
+      "text": "A patented content-recognition engine layers content signals on user data to target ads by detecting faces, objects, logos, music, gender, age, and emotion",
+      "status": "explicit",
+      "evidence_span": "Our engine able to detect today faces, objects, logos, music, gender, age, and even emotion to better target advertising"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile advertising where cookie-based targeting is disabled needs a new targeting standard",
+      "status": "explicit",
+      "evidence_span": "in the mobile advertising, where cookie-based targeting is disabled, a new standard on targeting solution"
+    },
+    {
+      "id": "P5",
+      "text": "Customers are digital TV operators, online video platforms, media companies, and brands",
+      "status": "explicit",
+      "evidence_span": "Our customers are the digital TVs and operators like Fox, RTL, the online platform like YouTube, Dailymotion, and the media companies and the brands like GroupM"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue comes from selling recognition data plus campaign management",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Irrelevant ads and user-data targeting limits",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Content recognition targeting engine",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Customers and data monetization",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant video ads matched to content that improve advertiser control and user experience",
+      "status": "explicit",
+      "evidence_span": "they enjoy show video content and be inspired by related ads"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Higher brand return from content-aware targeting",
+      "evidence_span": "42% more people viewed the ads that was based on our recognition technology"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "And why this is happening? Because today, all the market leader, like Google, Facebook, they all base targeting on user data and reach"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring the power of the content on top of the user data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain facets for providers/brands/users folded as one problem set (v1.5.1 §4.1.6). Engine detection list, second-level matching, and patents folded into one recognition mechanism (IP attached to mechanism). Traction CTR/view-lift and team bio excluded per §4.2. Anti-template: D1/D2/D3 are separately revisable problem, product, and commercial modules."
+}

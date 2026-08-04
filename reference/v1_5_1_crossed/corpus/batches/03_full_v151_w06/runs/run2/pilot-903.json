@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-903",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bicycle theft is a large costly problem and existing keyless locks and trackers are not integrated into one smart lock",
+      "status": "explicit",
+      "evidence_span": "bike security tech today is not that advanced. There are some keyless locks, and then there are some tracking devices. But they haven't been integrated really"
+    },
+    {
+      "id": "P2",
+      "text": "Lock8 integrates alarm, physical security, GPS tracking, and keyless unlocking in one device",
+      "status": "explicit",
+      "evidence_span": "It has to have an alarm. It has to be secure. And it has to be GPS trackable"
+    },
+    {
+      "id": "P3",
+      "text": "Multi-sensor tamper detection (vibration, gyroscope, temperature, light, hot-wired cable) triggers alarms and push notifications",
+      "status": "explicit",
+      "evidence_span": "the sensors inside Lock8 are truly advanced"
+    },
+    {
+      "id": "P4",
+      "text": "App locates the lock, adjusts sensitivity, and delivers notifications by push, email, or SMS",
+      "status": "explicit",
+      "evidence_span": "I can locate myself I can locate my lock where my lock is"
+    },
+    {
+      "id": "P5",
+      "text": "Owners can share or rent bikes/locks via the connected device without needing city bike-share infrastructure",
+      "status": "explicit",
+      "evidence_span": "we can share bikes easily with anyone that we want"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "integrated smart lock security and tracking",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "bike sharing and rental via lock",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bikes stay safer while owners can share or monetize them through connected mobility",
+      "status": "explicit",
+      "evidence_span": "you can rent your bike out to whoever you want, and you can rest assured that your bike will be safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if your bicycle actually gets stolen, we have a tracker, a GPS tracker"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "truly disrupt what bicycle sharing is all about"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Required smart-lock attributes (alarm, secure, GPS, keyless) kept as one integrated product premise; sensor list folded as feature cascade of tamper detection (v1.5.1 §4.1.7). Sharing/rental split as separately revisable connected-mobility path. Demo glitches noted but pitch not truncated."
+}

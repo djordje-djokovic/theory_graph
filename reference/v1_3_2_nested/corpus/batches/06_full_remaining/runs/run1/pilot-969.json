@@ -1,0 +1,121 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Understanding brain health and emotional wellness matters more for daily life than only tracking steps and sleep",
+      "status": "explicit",
+      "evidence_span": "we think it is much more important for us to understand how healthy our brains are, how emotionally well we are"
+    },
+    {
+      "id": "P2",
+      "text": "Scientific patented games measure personality, cognition, and emotion in short play sessions",
+      "status": "explicit",
+      "evidence_span": "Using scientific and patented technology, our games are designed to help you understand what makes you unique"
+    },
+    {
+      "id": "P3",
+      "text": "Combining game metrics with personality, sleep, and activity yields insights on peak sharpness and activity recommendations",
+      "status": "explicit",
+      "evidence_span": "combines all of that information with her personality, sleep, and activity patterns"
+    },
+    {
+      "id": "P4",
+      "text": "Integrations with biometric devices like Fitbit provide a holistic multi-dimension health view",
+      "status": "explicit",
+      "evidence_span": "Tidepool integrates with other biometric devices like Fitbit and gives you a holistic perspective of your health"
+    },
+    {
+      "id": "P5",
+      "text": "Premium model unlocks premium games and shareable reports for family, doctors, or coaches",
+      "status": "explicit",
+      "evidence_span": "through our premium model, you can also access premium games and reports, reports that you can actually share with your family, doctors, or even coaches"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Brain-health tracking need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Games, insights, and device integrations",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Premium reports monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people understand and improve daily performance and brain health today",
+      "status": "explicit",
+      "evidence_span": "understanding our health today, taking actions that can help us take better care of ourselves"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Support healthier relationships and resilience over time",
+      "evidence_span": "have healthier relationships that can actually help us build resilience over time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Tidepool, in this instance, actually measures a lot of factors"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how healthy our brains are"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "organize her day better, get more done in a day"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share with your family, doctors, or even coaches"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Five-dimension list folded into holistic-view premise per §4.1(5). 'Quantify your brain health' treated as mission/value framing, not a separate premise (§4.1(4)). Free launch ask excluded. Patents kept inside games mechanism (§4.1(1)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-969",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

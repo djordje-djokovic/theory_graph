@@ -1,0 +1,133 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing fitness trackers and logbooks make exercise logging high-friction and often only count steps, not strength exercises",
+      "status": "explicit",
+      "evidence_span": "there's just never been an easy way to do it"
+    },
+    {
+      "id": "P2",
+      "text": "Smartwatch app automatically identifies exercises, counts reps, and estimates calories using only built-in motion sensors",
+      "status": "explicit",
+      "evidence_span": "the first and only smartwatch app that automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "id": "P3",
+      "text": "Users can train new custom exercises in about three seconds; system also handles indoor cardio like treadmill runs",
+      "status": "explicit",
+      "evidence_span": "It takes only three seconds to train VemoFit to track any of my favorite exercises"
+    },
+    {
+      "id": "P4",
+      "text": "Patent-pending algorithms achieve this on consumer-grade Android Wear and Apple Watch sensors despite acceleration-error challenges",
+      "status": "explicit",
+      "evidence_span": "accomplish it using only the consumer-grade sensors of the Android Wear and Apple Watch"
+    },
+    {
+      "id": "P5",
+      "text": "GTM via fitness influencers, gym trainers (online-to-offline logging/prescription), and viral CrossFit/bodybuilding communities",
+      "status": "explicit",
+      "evidence_span": "leverage our strong relationships with popular fitness influencers to help us spread the word in the community"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium model with trainer routines/feedback plus personalized product offers based on fitness journey data",
+      "status": "explicit",
+      "evidence_span": "VmoFit will operate on a freemium business model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "High-friction workout tracking",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automatic smartwatch exercise recognition",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Influencer and gym viral GTM",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Freemium trainer monetization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Frictionless automatic tracking of gym and home strength workouts beyond pedometers",
+      "status": "explicit",
+      "evidence_span": "VemoFit takes the friction out of tracking my workouts"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring new users into fitness tracking because of low friction",
+      "evidence_span": "bring new users into the tracking market because of VemoFit's lack of friction"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it only tracked my steps, not my exercises"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically identifies your exercises, counts your repetitions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tap into VemoFit's inherent viral nature"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you stay motivated to reach your goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Calorie-accuracy claim folded into auto-identification capability. Patent-pending stays with sensor algorithm premise (v1.3.1 #1). Team bios and store-availability CTAs excluded. '70% gym/home' segment framing folded into problem/product beachhead not separate vision premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-771",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:04:00+02:00"
+  }
+}

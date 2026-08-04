@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Even well-connected people are severely limited by social-graph reach when they need the right person for a job, opportunity, or advice",
+      "status": "explicit",
+      "evidence_span": "even the most well-connected of us are severely limited in our reach via our social graphs"
+    },
+    {
+      "id": "P2",
+      "text": "Bots and AI are currently limited to narrow automated tricks, so people need conversations with humans they do not know",
+      "status": "explicit",
+      "evidence_span": "robots are currently limited, and AI is going to take a long time before it catches up"
+    },
+    {
+      "id": "P3",
+      "text": "Sensei matches messenger requests to humans via NLP on context and intent plus a match-and-dispatch algorithm",
+      "status": "explicit",
+      "evidence_span": "Sensei's natural language processing understands both the context and the intent behind our need"
+    },
+    {
+      "id": "P4",
+      "text": "Anonymous-by-default chats close with ratings and tipping, forming a conversation marketplace",
+      "status": "explicit",
+      "evidence_span": "It's a conversation marketplace in which users transact and chat commerce"
+    },
+    {
+      "id": "P5",
+      "text": "Sensei is cross-platform across major messengers and is expanding globally in Line, WeChat, and Skype",
+      "status": "explicit",
+      "evidence_span": "Sensei is also available in Kik, Telegram, and in text message, where you are, in SMS"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social-graph reach limits",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human match and marketplace mechanics",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cross-platform messenger distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One messenger contact that connects you to awesome humans for advice, referrals, opportunities, and jobs",
+      "status": "explicit",
+      "evidence_span": "Sensei is one contact with the experience of millions of people"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need to chat with awesome humans that we don't know"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sensei will match you with an awesome human to chat with"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reach out to Sensei on your favorite messenger"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "'Future of intelligence is human' treated as vision framing, not a premise (v1.3.2 4.1(4)). Community size, response time, ratings treated as traction (4.2). NLP/match/rating/tip folded into marketplace mechanism where listed as one flow (4.1(5)); cross-platform kept separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-714",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

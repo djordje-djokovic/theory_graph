@@ -1,0 +1,106 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected students still cannot get classmates' help on demand, which hurts mastery and widens achievement gaps",
+      "status": "explicit",
+      "evidence_span": "the most connected and social generation ever could not get help from the people they see every day in class"
+    },
+    {
+      "id": "P2",
+      "text": "Student-first social learning platform plus campus-founder and viral invite growth connects classmates for shared study resources",
+      "status": "explicit",
+      "evidence_span": "we put the students first in everything that we do. So we put together a campus founder program, and we do a big marketing and social media push the first day of class"
+    },
+    {
+      "id": "P3",
+      "text": "Peer mentors recruited from the platform deliver targeted one-on-one tutoring priced affordably and placed on course pages",
+      "status": "explicit",
+      "evidence_span": "we know exactly when they need help. We know exactly the subject they need help with, and that allows us to be highly targeted like no other"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Classmate help gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Study Room network",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Targeted peer tutoring",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let every college student get personalized help right when stuck",
+      "status": "explicit",
+      "evidence_span": "if you're stuck studying and just need a little extra help, even if it is at 11 p.m. on a Sunday, you can get help for the price of a beer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Students can earn money as peer mentors",
+      "evidence_span": "a way for students to make some money for college"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increases the achievement gap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Students learn best by helping each other out"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in one tap, you can get the best peer mentor for you"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We're able to find the best students right on our platform and invite them to become peer mentors"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Platform features and GTM combined as one student-network premise. Explicit platform-enables-mentors dependency coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-876",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "epistemic_markers": []
+}

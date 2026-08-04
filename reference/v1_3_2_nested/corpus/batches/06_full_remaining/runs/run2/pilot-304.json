@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-304",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Between chemo treatments, patients lack home tracking of blood counts and vitals, so infections trigger hospitalizations and delayed treatment",
+      "status": "explicit",
+      "evidence_span": "there was no way to keep track of changes in his blood cell counts and his vitals"
+    },
+    {
+      "id": "P2",
+      "text": "Early detection of infection signs before symptoms could avoid many hospitalizations",
+      "status": "explicit",
+      "evidence_span": "up to 50% of hospitalizations can be avoided with early detection"
+    },
+    {
+      "id": "P3",
+      "text": "An implanted smart port adds microelectronics and optical sensors to the standard chemo port to measure blood cells, heart function, and vitals in the body",
+      "status": "explicit",
+      "evidence_span": "adding microelectronics and optical sensors to the port"
+    },
+    {
+      "id": "P4",
+      "text": "Machine learning on longitudinal port data alerts physicians via EMR-integrated API before problems escalate",
+      "status": "explicit",
+      "evidence_span": "Our advanced warning alerts physicians to changes in health status so they can take action and deliver life-saving care"
+    },
+    {
+      "id": "P5",
+      "text": "The approach avoids wearable engagement limits and clinic-only lab tests while imposing no additional patient burden",
+      "status": "explicit",
+      "evidence_span": "NextGenPort gathers a data package that has no additional burden on the patients"
+    },
+    {
+      "id": "P6",
+      "text": "Commercialization sells to port manufacturers with FDA 510(k) and reimbursement predicates in view",
+      "status": "explicit",
+      "evidence_span": "GoToMarket focuses on selling the technology to port manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home infection monitoring gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Implanted sensing and physician alerts",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Manufacturer channel and clearance",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Life-saving early infection alerts for cancer patients at home",
+      "status": "explicit",
+      "evidence_span": "Providing life-saving health information, NextGenCare can alert you to changes in your health before you even have symptoms"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "In between chemo treatments, our software uses machine learning to look for changes in health status before symptoms emerge"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect early signs of infection before they even had symptoms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver life-saving care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "commercial launch of next-gen port in 2025"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: folded ML software and EMR API into one alert pathway; dropped separate 'current methods miss info' as restatement of P1. NextGenCare multi-indication future treated as vision, not premise."
+}

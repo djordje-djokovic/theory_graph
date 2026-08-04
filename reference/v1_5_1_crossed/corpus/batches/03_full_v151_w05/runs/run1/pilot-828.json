@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-828",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The web is fragmented across sites and single-purpose apps, forcing users to assemble information in stacks of tabs",
+      "status": "explicit",
+      "evidence_span": "we've traded the fluidity and connectedness of surfing for stacks of browser tabs and single-purpose mobile apps"
+    },
+    {
+      "id": "P2",
+      "text": "VIRB weaves services into contextual cards and a persistent activity stream so users can plan and explore without leaving the page",
+      "status": "explicit",
+      "evidence_span": "reinvent surfing the internet on web or mobile by weaving together services you use"
+    },
+    {
+      "id": "P3",
+      "text": "Semantic search, recommendations, and new UI paradigms build contextual bridges across services",
+      "status": "explicit",
+      "evidence_span": "To build these contextual bridges across services, we use data technologies like semantic search and recommendations"
+    },
+    {
+      "id": "P4",
+      "text": "Activity syncs across web and mobile with deep links into other apps and shared collections with notifications",
+      "status": "explicit",
+      "evidence_span": "VIRB syncs my activity and data across devices"
+    },
+    {
+      "id": "P5",
+      "text": "Initial service graph focuses on places, movies, and media, with beta signup as the entry channel",
+      "status": "explicit",
+      "evidence_span": "We're starting by connecting services around places, movies, and media"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented web experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "contextual service-weaving product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "places-movies-media beachhead",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get things done in one place by fluidly surfing across interconnected services on any device",
+      "status": "explicit",
+      "evidence_span": "an intelligent layer over the internet that helps you get things done in one place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why do we need to settle on a fragmented web?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring back the magic of surfing, fluidly moving from link to link, service to service"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting services around places, movies, and media"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Night-out planning and judge-graph demos treated as applications of one weaving mechanism (§4.1.2). Cards, streams, collections, share, deep links, and sync folded as feature cascade of that product (§4.1.7). Semantic search/recommendations kept with product as enabling tech of the same bridges. Beachhead categories + beta signup as separately revisable GTM module. Singleton D1/D3 retained. Anti-template: problem, product, and beachhead separately revisable. ASR VIRB/Verb left in spans."
+}

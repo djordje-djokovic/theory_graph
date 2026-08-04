@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-685",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises must protect source code and other proprietary data, but perimeter walls and alarms still get bypassed after the fact",
+      "status": "explicit",
+      "evidence_span": "Walls can be bypassed, and alarms only alert you after the fact"
+    },
+    {
+      "id": "P2",
+      "text": "Ordinary encryption makes data unsearchable and unusable, forcing a choice between convenience and security",
+      "status": "explicit",
+      "evidence_span": "encryption makes your data completely unsearchable and unusable"
+    },
+    {
+      "id": "P3",
+      "text": "Overnest provides practical searchable encryption (AES-256, cryptographer-vetted) so encrypted data can be searched without revealing the key",
+      "status": "explicit",
+      "evidence_span": "Overnest allows you to search encrypted data as easily and as quickly as Google can search web pages, all without revealing your key"
+    },
+    {
+      "id": "P4",
+      "text": "Git Zero is encrypted Git hosting that encrypts source code and history, builds an encrypted index, and preserves the familiar Git workflow with one-command migration",
+      "status": "explicit",
+      "evidence_span": "the world's first encrypted Git hosting that not only encrypts your source code, at the same time, allows you to search while it's all encrypted"
+    },
+    {
+      "id": "P5",
+      "text": "Users can password-protect and upload their encryption key so that not even Git Zero can use it",
+      "status": "explicit",
+      "evidence_span": "nobody, not even Git Zero, can use it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "source code security vs encryption usability",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "searchable encryption and Git Zero hosting",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises can encrypt source code in the cloud while still searching and using it in their normal Git workflow",
+      "status": "explicit",
+      "evidence_span": "encrypt everything and search anything"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they have to make a choice between convenience and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encrypted search on an encrypted source code repository"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo steps (migrate, index, view, search) folded as cascade of Git Zero encrypted hosting (v1.5.1 §4.1.7). FireEye credentials and university/telecom traction excluded. Key custody kept separate as independently revisable trust condition."
+}

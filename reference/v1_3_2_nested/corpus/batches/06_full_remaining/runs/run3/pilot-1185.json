@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Employers cannot efficiently find the few relevant candidates among hundreds of applications",
+      "status": "explicit",
+      "evidence_span": "how do I find the 10 out of those 300 that matter to me"
+    },
+    {
+      "id": "P2",
+      "text": "Job seekers need to get noticed and know when applications are viewed and how employers respond",
+      "status": "explicit",
+      "evidence_span": "As a job seeker, I also want to know what my application's viewed. I also want to know what the employer thought of me"
+    },
+    {
+      "id": "P3",
+      "text": "Uniform handpicked full-time job listings exclude scams and MLM",
+      "status": "explicit",
+      "evidence_span": "all of the jobs are listed the same. We have a uniform format, and we handpick every single job"
+    },
+    {
+      "id": "P4",
+      "text": "Pay-to-apply plus employer feedback and view transparency make seekers worth noticing",
+      "status": "explicit",
+      "evidence_span": "job seekers pay to apply on LocalBacon. And they notice that. In addition, employers and recruiters agree to give feedback"
+    },
+    {
+      "id": "P5",
+      "text": "Job credits from $0.99 with bulk discounts are the paid-apply currency",
+      "status": "explicit",
+      "evidence_span": "you can purchase job credits. This is basically a virtual currency for our site"
+    },
+    {
+      "id": "P6",
+      "text": "Employer tools stay familiar while flagging to ATS and shelving with seeker notification",
+      "status": "explicit",
+      "evidence_span": "as an employer, I gain credibility for giving transparency to my process without changing my behavior of handling candidates"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Two-sided hiring friction",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated marketplace with paid apply and employer tools",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Job credits monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Quality matching and transparency for job seekers and employers",
+      "status": "explicit",
+      "evidence_span": "solve the fundamental problems that exist for both job seekers and employers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those three words evoke a bad taste in the mouth of both job seekers and employers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is quality jobs for our quality candidates"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these are worth something"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Pay-to-apply and feedback bundled as one commercial-transparency condition (could fail together as the seeker value proposition). Singleton D3 for credits pricing. iPaper and Ajax UI folded into marketplace product.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1185",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

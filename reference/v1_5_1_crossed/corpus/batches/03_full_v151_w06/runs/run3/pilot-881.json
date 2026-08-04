@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "coder_session_id": "session_04",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medication non-adherence—patients not taking the right pill at the right time—is a costly healthcare problem",
+      "status": "explicit",
+      "evidence_span": "the problem that we're solving is that of medication adherence, which basically means patients taking the right pill at the right time"
+    },
+    {
+      "id": "P2",
+      "text": "A smart pill bottle passively captures cap open/close timestamps and amount of medication removed, then compares that to the recommended dosage schedule",
+      "status": "explicit",
+      "evidence_span": "Every time the patient uses the bottle, it sends two pieces of data into the cloud"
+    },
+    {
+      "id": "P3",
+      "text": "When the schedule and observed use diverge, the bottle intervenes with on-bottle lights and chimes plus automated phone or text alerts",
+      "status": "explicit",
+      "evidence_span": "we have on-bottle lights and chimes, and we also have phone or text message alerts as well"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in cellular connectivity lets the bottle work without Wi-Fi or Bluetooth sync and without apps, so non-tech-savvy patients can use it like a normal bottle",
+      "status": "explicit",
+      "evidence_span": "patients don't have to sync it to Wi-Fi or Bluetooth. It simply works the moment they get it from the pharmacy"
+    },
+    {
+      "id": "P5",
+      "text": "Reminder notifications also solicit why patients missed doses so care parties can be alerted in real time",
+      "status": "explicit",
+      "evidence_span": "when we send those reminder notifications to patients, we also ask them why they didn't take their meds"
+    },
+    {
+      "id": "P6",
+      "text": "Specialty pharma partners pay for the service while patients receive the bottle free from specialty pharmacies for high-cost specialty meds",
+      "status": "explicit",
+      "evidence_span": "our business model is to partner with specialty pharma companies to distribute high-cost drugs in our bottle"
+    },
+    {
+      "id": "P7",
+      "text": "An open API enables integration with healthcare partners",
+      "status": "explicit",
+      "evidence_span": "We've built this solution with an open API so we can easily integrate with all of our health care partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "smart pill bottle adherence sensing and intervention",
+      "premise_ids": ["P1", "P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "specialty pharma partnership distribution",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D3",
+      "name": "healthcare partner open API",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved medication adherence and patient engagement that increases refills and revenues for pharma while improving patients' lives",
+      "status": "explicit",
+      "evidence_span": "smart pill bottles that improve medication adherence and patient engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve medication adherence and patient engagement"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AdhereTech will increase adherence. refills, and ultimately revenues for the pharma company"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easily integrate with all of our health care partners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Pain costs folded into P1 as one problem set (v1.5.1 §4.1.6). On-bottle and phone/text interventions kept as one intervention mechanism (feature cascade). Cellular/no-app ease split from sensing because speaker frames it as the core differentiator for non-adherent patients. Patents treated as IP detail on the bottle, not a separate premise. Trial and partnership traction excluded per §4.2."
+}

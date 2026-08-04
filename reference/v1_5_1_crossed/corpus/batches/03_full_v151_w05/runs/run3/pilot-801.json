@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-801",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile gaming still keeps players staring at tiny screens instead of interacting with people in the real world",
+      "status": "explicit",
+      "evidence_span": "we're really trying to get people to play mobile games without sitting there staring at this tiny little screen"
+    },
+    {
+      "id": "P2",
+      "text": "Sensor peripherals (IR beam lighter, puck, accelerometers, Bluetooth) plus phone enable automated real-world interactive games",
+      "status": "explicit",
+      "evidence_span": "the lighter utilizes an array of sensors, a Bluetooth, IR, accelerometers, and others that you can program for whatever type of game you want"
+    },
+    {
+      "id": "P3",
+      "text": "A cloud-based open-source software and hardware platform lets third parties develop games and peripherals, including with developer kits and 3D-printed parts",
+      "status": "explicit",
+      "evidence_span": "with the platform both being open source software and open source hardware. you're able to develop your own games and your own peripherals"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization combines first-party apps and peripherals with hosting third-party game developers",
+      "status": "explicit",
+      "evidence_span": "not only do we have our own apps that we're creating, and as you can see, the peripherals, as well as the STL files, but we're developing this as an open community and hosting the third-party game developers"
+    },
+    {
+      "id": "P5",
+      "text": "Launch goes through a Kickstarter campaign",
+      "status": "explicit",
+      "evidence_span": "today, we are launching our Kickstarter campaign"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "real-world mobile play need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "sensor IoT gaming platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "apps marketplace and Kickstarter",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive real-world multiplayer gaming that uses phones and IoT sensors without staring at a small screen",
+      "status": "explicit",
+      "evidence_span": "get them to look up, interact with real people, but without having to forego all the technology that we've gotten used to"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "play mobile games without sitting there staring at this tiny little screen"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a totally next-generation gaming system that leverages all of the Internet of Things"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hosting the third-party game developers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Assassin/Invasion/Besieged and HUD stats folded as applications/cascade of one sensor+cloud platform (v1.5.1 §4.1.2 and §4.1.7). Open-source developer surface kept with platform as the same open gaming system. Transcript ends mid-CTA on Kickstarter URL (truncated=true). Anti-template: need, product platform, and monetization/launch separately revisable."
+}

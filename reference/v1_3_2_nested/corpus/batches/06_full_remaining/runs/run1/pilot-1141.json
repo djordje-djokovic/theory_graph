@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online gaming today is anonymous and static with no control over who you play with",
+      "status": "explicit",
+      "evidence_span": "the online gaming environment today, it's pretty static. You don't know who you're playing with. You're dealing with anonymous gamer tags"
+    },
+    {
+      "id": "P2",
+      "text": "Women gamers often mute mics because of hostile comments",
+      "status": "explicit",
+      "evidence_span": "if you're a girl, chances are you're not going to turn on your mic. Because if you do, you're going to get the inevitable, go make me a sandwich comment"
+    },
+    {
+      "id": "P3",
+      "text": "Rich profiles with blogs, pictures, chat, and videos enable deep social engagement before optional play",
+      "status": "explicit",
+      "evidence_span": "We offer rich user profiles, deep engagements with other users, including profiles that include blogs, pictures, and you're able to chat online, you can post your videos, and if you decide to, you can play a game"
+    },
+    {
+      "id": "P4",
+      "text": "Payers pay and play dates earn money, addressing supply and demand monetarily",
+      "status": "explicit",
+      "evidence_span": "The payer, as we call it, pays, and the play date actually makes money playing that game. It offers greater control of your environment and monetarily addresses the issues of supply and demand"
+    },
+    {
+      "id": "P5",
+      "text": "Respectful ratings earned from prior play dates signal whether a payer is safe to accept",
+      "status": "explicit",
+      "evidence_span": "she can actually see my respectful rating, which is what I've earned by playing other play dates before me"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Anonymous hostile gaming",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social profiles and play",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Payer and play-date monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A fun, inviting, secure place to meet gamers and play them online with control",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure. You can come in, meet gamers, and play them online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anonymous gamer tags"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "rich user profiles, deep engagements"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "monetarily addresses the issues of supply and demand"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Sports-bar story is analogy framing, not a premise. 10k viral users excluded as traction. Flash/console game catalog and tip UI folded into social play product (§4.1(5)). Developer CPM payout teaser treated as GTM aside without a full commercial module — omitted.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1141",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:05+02:00"
+  }
+}

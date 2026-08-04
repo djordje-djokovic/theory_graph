@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-603",
+    "coder_session_id": "session_01",
+    "session_case_index": 13,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many diagnosed with mental health conditions get no care; money alone fails as resources do not reach those most at risk, including first responders and veterans",
+      "status": "explicit",
+      "evidence_span": "two in three of those diagnosed get zero care whatsoever"
+    },
+    {
+      "id": "P2",
+      "text": "Anonymous text-based group psychotherapy moderated by a therapist combines peer support with clinical therapy including scheduled VoIP sessions",
+      "status": "explicit",
+      "evidence_span": "a mobile app for text-based group psychotherapy powered by natural language processing"
+    },
+    {
+      "id": "P3",
+      "text": "NLP flags suicidality and maliciousness—including nuanced and context-dependent ideation—so providers intervene when needed and scale capacity",
+      "status": "explicit",
+      "evidence_span": "advanced NLP algorithms to run on user messages and detect messages containing suicidality or maliciousness"
+    },
+    {
+      "id": "P4",
+      "text": "B2B SaaS licenses to organizations with provider infrastructure so end users get the service free",
+      "status": "explicit",
+      "evidence_span": "we deploy with the B2B SaaS enterprise model, where we license out this technology to organizations"
+    },
+    {
+      "id": "P5",
+      "text": "Combines group relatability with tech-kept safety versus inaccessible one-to-one therapy and toxic anonymous social media",
+      "status": "explicit",
+      "evidence_span": "we combine the best parts of all of these solutions by deploying the relatability of groups in an environment kept safe through technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unreachable mental health care gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "NLP-moderated group therapy app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise license free to users",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "safe groups vs therapy and social media",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Broader access to smarter psychotherapy with greater provider efficiency and lower cost of care",
+      "status": "explicit",
+      "evidence_span": "broaden access to care to patients, but also gives today's overburdened providers a means to scale"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Earlier detection of complications and fewer crisis incidents with population insights for institutions",
+      "evidence_span": "detect complications early and reduce the number of crisis incidences within a population"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't reach those who need it the most"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the efficiency of today's providers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide services to the end user at no charge to them"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "relatability of groups in an environment kept safe through technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Veteran/first-responder examples folded into one access/reach problem set. Group anonymity, peer texting, and VoIP sessions folded into group-therapy product; NLP risk detection kept separate as the scaling safety mechanism. Pilot funding and commitment figures excluded as traction. Early adopter org types treated as GTM illustration within B2B model rather than separate premise."
+}

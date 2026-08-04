@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-603",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:41:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many people with mental health conditions get no care; stigma and access block treatment",
+      "status": "explicit",
+      "evidence_span": "two in three of those diagnosed get zero care whatsoever"
+    },
+    {
+      "id": "P2",
+      "text": "Text-based groups of five to seven users are moderated by a therapist with optional VoIP sessions",
+      "status": "explicit",
+      "evidence_span": "Groups consist of five to seven users and are moderated by a therapist"
+    },
+    {
+      "id": "P3",
+      "text": "NLP flags suicidality and malicious content so providers intervene when needed",
+      "status": "explicit",
+      "evidence_span": "advanced NLP algorithms to run on user messages and detect messages containing suicidality or maliciousness"
+    },
+    {
+      "id": "P4",
+      "text": "Anonymous participation reduces fear of stigma while preserving clinical therapy",
+      "status": "explicit",
+      "evidence_span": "Users join groups anonymously, which greatly reduces their fear of stigma and judgment when sharing"
+    },
+    {
+      "id": "P5",
+      "text": "B2B SaaS licenses to organizations with existing providers; end users are not charged",
+      "status": "explicit",
+      "evidence_span": "we license out this technology to organizations that already have an infrastructure of providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Untreated mental health access gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "NLP-moderated group therapy product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Institutional licensing model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Broader, safer, scalable access to psychotherapy",
+      "status": "explicit",
+      "evidence_span": "broaden access to care to patients, but also gives today's overburdened providers a means to scale"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "it's impossible to expect any therapist to read every single message generated on our app. And that's why we designed advanced NLP algorithms"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make smarter psychotherapy a reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "marry the persistence of peer support with the demonstrated clinical efficacy of therapy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide services to the end user at no charge to them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team bios and NIH commitment dollars excluded. Competitor landscape used only to position the mechanism, not as separate premises. Anti-template triad justified by speaker's distinct modules."
+}

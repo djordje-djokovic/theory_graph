@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer-driven health is growing while at-home wellness lab testing stays underserved",
+      "status": "explicit",
+      "evidence_span": "These forces have given rise to a $250 billion consumer-driven health industry"
+    },
+    {
+      "id": "P2",
+      "text": "Eight expandable at-home kits cover evidenced markers via mailed samples and a clear results dashboard",
+      "status": "explicit",
+      "evidence_span": "We have eight test kits available that study key, well-evidenced lab markers"
+    },
+    {
+      "id": "P3",
+      "text": "Partner labs are CLIA-certified and tests match doctor-ordered accuracy under DTC rules in operating states",
+      "status": "explicit",
+      "evidence_span": "all of our partner labs are fully CLIA-certified, proven reference laboratories that conduct third-party independent validation testing"
+    },
+    {
+      "id": "P4",
+      "text": "Virtual physicians, kit fulfillment, and HL7 normalization power the simple consumer flow",
+      "status": "explicit",
+      "evidence_span": "we translate largely unstandardized HL7 information across multiple labs, markers, and tests into the dashboard and results"
+    },
+    {
+      "id": "P5",
+      "text": "Online kit prices from $79–$399 undercut typical out-of-pocket lab costs",
+      "status": "explicit",
+      "evidence_span": "from $79 to $399. These costs are actually lower by test than out-of-pocket or not-covered costs per test, and often the same or lower than insurance"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer lab testing gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Home collection and understandable results",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Regulated lab network and software",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Direct kit pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Transform consumer lab testing into an understandable at-home experience",
+      "status": "explicit",
+      "evidence_span": "transforming the consumer lab testing experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there had to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "results you can actually understand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "as accurate as a test your doctor would order"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lower by test than out-of-pocket"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Market-size figure kept only as industry context inside the gap premise; $250B is framing attached to the untouched-DTC claim. Vision of ubiquitous wellness tests not coded as premise (§4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-702",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:40+02:00"
+  }
+}

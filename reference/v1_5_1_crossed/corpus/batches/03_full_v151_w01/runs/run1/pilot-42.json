@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-42",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:11:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Humanity needs much higher agricultural output while climate-related crop failures rise, creating urgent need for new resilient varieties",
+      "status": "explicit",
+      "evidence_span": "we're going to need to increase our agricultural output by 60%. That's 60% more food, more clothes, and more medicine. And at the same time, we're expecting a massive uptick in the number of climate-related crop failures"
+    },
+    {
+      "id": "P2",
+      "text": "Complex traits involve thousands of genes, and GWAS returns mostly non-useful targets while GMO or traditional breeding takes years and large cost",
+      "status": "explicit",
+      "evidence_span": "if you're working on something complex like time to harvest or drought resistance, it might involve thousands of these genes, which makes this process way more complicated. The genome-wide association studies are our current state-of-the-art, but only about 14% of the things that they return are actually useful"
+    },
+    {
+      "id": "P3",
+      "text": "Interpretable ML on natural-selection-inspired statistical models identifies causal gene targets at high precision versus GWAS",
+      "status": "explicit",
+      "evidence_span": "a new discovery method that, instead of the 14% accuracy of GWAS, allows us to identify causal gene targets with 90% precision"
+    },
+    {
+      "id": "P4",
+      "text": "An AI recommendation system suggests plant crosses that produce desired traits using far less data and forecasts outcomes before planting",
+      "status": "explicit",
+      "evidence_span": "an AI-enabled recommendation system that suggests which plant crosses might produce the traits that we're looking for. And it does that with only a hundredth of the data that's normally required"
+    },
+    {
+      "id": "P5",
+      "text": "The discovery-plus-recommendation stack speeds discovery and development substantially and can be validated in a single breeding cycle using existing natural genes",
+      "status": "explicit",
+      "evidence_span": "that lets us increase the process of discovery and development by up to 77%"
+    },
+    {
+      "id": "P6",
+      "text": "Cost and time efficiency makes previously uneconomic crops workable and allows plugging into partners' existing breeding pipelines",
+      "status": "explicit",
+      "evidence_span": "even crops that were too complicated or too costly to work on are now economically feasible for us. And as a result, we're working with a number of pilot partners to get our technology into their existing breeding pipelines"
+    },
+    {
+      "id": "P7",
+      "text": "Avalo also develops its own new seeds with partners for alternative rubber, sustainable sunflower oil, and drought-resistant cotton fiber",
+      "status": "explicit",
+      "evidence_span": "the real goal of our company is to make new seeds, and we're currently doing that with partners like Farmed Materials to create an alternative source of rubber, and with our own R&D pipeline to create sustainable sunflowers for cooking oil and drought-resistant cotton with better fiber quality"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Urgent resilient-crop discovery bottleneck",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Causal gene discovery and cross recommendation AI",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner pipelines and proprietary seed programs",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accelerate creation of new productive climate-resilient crop varieties for farmers",
+      "status": "explicit",
+      "evidence_span": "accelerate the creation of new and productive crop varieties"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help meet food, clothing, and medicine needs of billions amid climate stress",
+      "evidence_span": "we're just not going to meet the needs of billions of people in time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We then used that knowledge to build an AI-enabled recommendation system that suggests which plant crosses might produce the traits that we're looking for"
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "This level of accuracy and efficiency allows us to forecast plant outcomes before they even happen. And that lets us increase the process of discovery and development by up to 77%"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "urgent and unmet need to deliver new and resilient crop varieties to farmers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify causal gene targets with 90% precision"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get our technology into their existing breeding pipelines so that they can reap the time and cost advantages"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Broccoli greenhouse experiment treated as validation evidence of the discovery/recommendation mechanism, not separate premises. Team credentials excluded per 4.2. Partner pipeline vs own seed R&D split (P6/P7). Anti-template note: D1 problem, D2 tech, D3 GTM/productization are separately revisable modules with distinct failure modes in the pitch."
+}

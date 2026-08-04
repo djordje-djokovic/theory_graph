@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Renters lack tailored neighborhood guidance, rich listing media, and live availability data",
+      "status": "explicit",
+      "evidence_span": "There's not that much that's tailored towards tenants"
+    },
+    {
+      "id": "P2",
+      "text": "Craigslist-scale markets are flooded with duplicate and spam posts relative to unique apartments",
+      "status": "explicit",
+      "evidence_span": "there are 40,000 apartments on Craigslist at any one time"
+    },
+    {
+      "id": "P3",
+      "text": "Curated supply comes straight from brokers, landlords, and property managers",
+      "status": "explicit",
+      "evidence_span": "We work directly with brokers, landlords, property managers to get all of our listings directly from them"
+    },
+    {
+      "id": "P4",
+      "text": "Neighborhood pages, followable feeds, and qualification messaging form the renter-broker workflow",
+      "status": "explicit",
+      "evidence_span": "we have a neighborhood page that allows you to discover new neighborhoods, search apartments locally"
+    },
+    {
+      "id": "P5",
+      "text": "City expansion depends on slow bottom-up BD rather than launching many cities at once",
+      "status": "explicit",
+      "evidence_span": "this is bottom up. It'll take time. We can't move to 15 cities tomorrow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tenant search market failures",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated Zumper product workflow",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "City-by-city supply BD",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give renters an edge getting through the door on the right apartment",
+      "status": "explicit",
+      "evidence_span": "it's really useful for the renter because it gives them an edge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We work directly with brokers, landlords, property managers to get all of our listings directly from them"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "poor user experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting people through the door first"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build this bottom up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Open-house video is illustrative problem framing, not a premise. Monetization opportunity rhetoric not coded as a viability module (no concrete model asserted beyond implied marketplace).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1004",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

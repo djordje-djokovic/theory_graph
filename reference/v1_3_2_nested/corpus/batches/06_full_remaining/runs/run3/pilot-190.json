@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without pre-symptomatic detection, illnesses disrupt businesses and lives while moving silently",
+      "status": "explicit",
+      "evidence_span": "illnesses are moving silently amongst us, disrupting our businesses and our lives"
+    },
+    {
+      "id": "P2",
+      "text": "Sewage surveillance measures whole communities early but is stuck as expensive manual lab work",
+      "status": "explicit",
+      "evidence_span": "But at the moment, it's manual"
+    },
+    {
+      "id": "P3",
+      "text": "Untap's plug-and-play automated end-to-end solution installs in buildings",
+      "status": "explicit",
+      "evidence_span": "plug-and-play automated end-to-end hardware and software solution that can be installed into any and every building"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware automates filtration, RNA extraction, and continuous qPCR so data reaches customers the same day",
+      "status": "explicit",
+      "evidence_span": "We do a continuous time series collective PCR testing system. This data is sent directly to customers that day"
+    },
+    {
+      "id": "P5",
+      "text": "Dashboard risk insights let workplaces and nursing homes prevent outbreaks and reassure workers when risk is low",
+      "status": "explicit",
+      "evidence_span": "They can then click through onto their COVID-19 page and see personalized insights, which provide them with their risk levels and ways to prevent outbreak happening"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Silent community infection",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated sewage hardware",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Preventative risk dashboard",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect illnesses early across whole buildings without testing entire communities, enabling outbreak prevention",
+      "status": "explicit",
+      "evidence_span": "providing a better way without testing whole communities"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "City- and country-scale data insights for healthcare and policy",
+      "evidence_span": "Collect enough sites across a city, a country, the world. Those data insights can be used to guide preventative healthcare solutions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing a better way without testing whole communities"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plug-and-play automated end-to-end hardware and software solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ways to prevent outbreak happening"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Merged sewage science and manual-cost critique into D1 as one learnable market/tech context bundle this run. GI/$45B cost figures excluded as market framing. No dependency links; automation enabling same-day data is topical, not an explicit 'this lets us' warrant beyond adjacent description.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-190",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:03+02:00"
+  }
+}

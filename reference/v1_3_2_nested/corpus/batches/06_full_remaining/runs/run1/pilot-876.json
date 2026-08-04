@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-876",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students struggle to get on-demand help, find study groups, and share knowledge, which widens the achievement gap",
+      "status": "explicit",
+      "evidence_span": "It's really hard for students to master a topic if they can't get help on demand. It's hard to find study groups if students cannot easily share knowledge or resources"
+    },
+    {
+      "id": "P2",
+      "text": "School-email signup connects students to classmates and course pages for collaborative study guides and free shared resources",
+      "status": "explicit",
+      "evidence_span": "any student can easily access the brainpower and knowledge of their entire class right on our platform"
+    },
+    {
+      "id": "P3",
+      "text": "Growth relies on a campus founder program, first-day-of-class marketing push, then student-to-student invites",
+      "status": "explicit",
+      "evidence_span": "we put together a campus founder program, and we do a big marketing and social media push the first day of class. After that, it's the students inviting their classmates"
+    },
+    {
+      "id": "P4",
+      "text": "Peer Mentor Program offers scalable, affordable, highly targeted one-on-one online tutoring using platform student and subject signals",
+      "status": "explicit",
+      "evidence_span": "we decided to make it highly scalable, affordable, and highly targeted. And we call it the Peer Mentor Program"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Campus help gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Study Room social learning platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Campus founder growth motion",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Peer Mentor tutoring",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give every college student personalized one-on-one help right when they need it",
+      "status": "explicit",
+      "evidence_span": "a way for every single college student to get personalized one-on-one help right when they need it"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Let peer mentors earn money while helping classmates",
+      "evidence_span": "a way for students to make some money for college"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if students who really need the extra help can't get it, and this increases the achievement gap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Students learn best by helping each other out"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "students inviting their classmates, their friends, and their roommates"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get personalized one-on-one help right when they need it"
+    },
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "not only do we have all the students already on our platform, But also, we know exactly when they need help"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Beta headcount traction excluded. Course-page UI features folded into P2 per §4.1(5). Peer Mentor framed as separately revisable next module after core platform. Q&A excluded. Singletons D1–D4 retained as independently learnable need, product, GTM, and tutoring modules."
+}

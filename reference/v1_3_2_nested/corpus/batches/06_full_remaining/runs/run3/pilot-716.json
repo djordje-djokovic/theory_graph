@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Scanners, infrequent audits, and permissive firewalls leave developers exposed after code changes",
+      "status": "explicit",
+      "evidence_span": "You don't trust them. You don't read the reports anymore. And the firewalls, they are way too permissive"
+    },
+    {
+      "id": "P2",
+      "text": "Screen is an in-app runtime security solution based on logic, not just patterns",
+      "status": "explicit",
+      "evidence_span": "our protection is based on logic, not just patterns"
+    },
+    {
+      "id": "P3",
+      "text": "Simple dependency-style install plus developer dashboard with attack details and backtraces",
+      "status": "explicit",
+      "evidence_span": "Don't expect a complex product here, because we've made it so simple"
+    },
+    {
+      "id": "P4",
+      "text": "Blocks major vulnerabilities including SQL injection blueprints at the database layer",
+      "status": "explicit",
+      "evidence_span": "Screen detected that the attack tried to modify the structure of a SQL query"
+    },
+    {
+      "id": "P5",
+      "text": "Available for Python, Rails, and Node with pricing from $99/month scaling by hosts",
+      "status": "explicit",
+      "evidence_span": "Screen is now available for Python, Rails, and Node.js applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Security left behind in modern stacks",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Runtime logic protection product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Language coverage and pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Application security made simple for developers",
+      "status": "explicit",
+      "evidence_span": "We are Screen, and we make application security simple"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Protect users from account takeover and brute force",
+      "evidence_span": "protect your users and customers against account takeovers and brute force attacks"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Security is left behind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protects your application at runtime"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pricing starts at only $99 per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Language availability folded with pricing as commercial packaging of the offer.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-716",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses are responsible for safeguarding their own and their customers' sensitive data",
+      "status": "explicit",
+      "evidence_span": "they also need to properly manage and safeguard their customers' and users' data"
+    },
+    {
+      "id": "P2",
+      "text": "The explosion of data and its storage and compute demands is driving IT infrastructure into the public cloud",
+      "status": "explicit",
+      "evidence_span": "This absolute explosion of data and the associated storage and computational demands is driving much of the underlying IT infrastructure into the public cloud"
+    },
+    {
+      "id": "P3",
+      "text": "Attackers will inevitably find a way in and systems will be hacked",
+      "status": "explicit",
+      "evidence_span": "The bad guys will find a way in, around, or through your walls, and you will get hacked"
+    },
+    {
+      "id": "P4",
+      "text": "Traditional encryption carries significant performance and functionality drawbacks",
+      "status": "explicit",
+      "evidence_span": "They have significant performance and functionality drawbacks"
+    },
+    {
+      "id": "P5",
+      "text": "A patented proxy re-encryption cryptosystem protects data wherever it goes, on-prem and in the cloud",
+      "status": "explicit",
+      "evidence_span": "With our patented proxy re-encryption cryptosystem, NuCypher is able to protect data wherever it goes, both on-prem and in the cloud"
+    },
+    {
+      "id": "P6",
+      "text": "Access controls embedded directly into the encryption guarantee only valid users can read the data",
+      "status": "explicit",
+      "evidence_span": "We do this by embedding access controls directly into the encryption itself"
+    },
+    {
+      "id": "P7",
+      "text": "The technology is compliant with standards bodies such as NIST and FIPS",
+      "status": "explicit",
+      "evidence_span": "our technology is compliant with standards bodies like NIST and FIPS"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sensitive-data exposure and the shift to cloud",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Proxy re-encryption protection",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Standards compliance",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprise data stays secure even when attackers break into the system",
+      "status": "explicit",
+      "evidence_span": "And when that happens, NuCypher will keep your data secure"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Modernize the infrastructure underlying the world's most sensitive systems",
+      "evidence_span": "NuCypher can modernize much of the infrastructure on which some of the world's most sensitive systems operate"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "you will get hacked. And when that happens, NuCypher will keep your data secure"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will get hacked"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all they see is encrypted gibberish"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "compliant with standards bodies like NIST and FIPS"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Vision claim ('de facto security layer for the $35 billion cloud infrastructure market') not coded as premise per v1.3.2 4.1(4); open-source Hadoop/Kafka availability folded into the platform rather than split (4.1(5)). Team credentials and tier-one bank traction excluded per 4.2. Singleton D3 retained: standards compliance is an independently testable institutional condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-598",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

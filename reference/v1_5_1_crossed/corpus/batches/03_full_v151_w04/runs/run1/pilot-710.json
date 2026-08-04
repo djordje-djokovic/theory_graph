@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-710",
+    "coder_session_id": "session_02",
+    "session_case_index": 13,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Product managers lack discovery tools: feedback is scattered across systems, ideas live in spreadsheets and messy backlogs, so teams fail to understand needs and build unwanted features",
+      "status": "explicit",
+      "evidence_span": "stuck with tools that are optimized and designed for product delivery, not the crucial part of product discovery"
+    },
+    {
+      "id": "P2",
+      "text": "Product Board is a system of record that consolidates user insights via integrations, links them to need-organized feature ideas, and scores impact for prioritization",
+      "status": "explicit",
+      "evidence_span": "a system of record for product management that helps product people understand what people need, prioritize what to build"
+    },
+    {
+      "id": "P3",
+      "text": "It auto-generates shareable interactive roadmaps and pushes prioritized features to engineering tools like Jira with real-time progress updates",
+      "status": "explicit",
+      "evidence_span": "automate interactive roadmaps"
+    },
+    {
+      "id": "P4",
+      "text": "Sold as a per-user subscription starting at $24/month, reached via content marketing and inside sales for cross-sell/up-sell across product companies",
+      "status": "explicit",
+      "evidence_span": "subscription service with a per user tiered pricing starting at $24 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "scattered product-discovery feedback",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "insights prioritization and roadmaps",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription pricing and sales motion",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make products people actually want by grounding discovery, prioritization, and roadmaps in real user needs",
+      "status": "explicit",
+      "evidence_span": "help you make products people want"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasting energy building features and products that nobody wants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completed the complete product discovery cycle, from research to prioritization"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Every product maker needs product board"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Scattered feedback/spreadsheet/backlog pains folded as one discovery problem (§4.1.6). Research inbox/features/needs scoring treated as one PM system-of-record; roadmaps+Jira as delivery-handoff module of same product cycle (§4.1.7). Founder bio and 100 paying companies excluded as bio/traction. 'New market category' vision not coded as premise (§4.1.4). Singleton D1/D3 retained. Anti-template noted."
+}

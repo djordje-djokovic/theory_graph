@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-449",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:22+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sending money abroad is plagued by loss, delay, high fees, and opacity",
+      "status": "explicit",
+      "evidence_span": "We've experienced every problem imaginable as it relates to sending money"
+    },
+    {
+      "id": "P2",
+      "text": "SendMe is a payroll-integrated global flex-pay app for cross-border sends, phone top-ups, and bill pay",
+      "status": "explicit",
+      "evidence_span": "SendMe is a global flex pay solution that integrates with an employer's payroll system"
+    },
+    {
+      "id": "P3",
+      "text": "Fee of about $1 (and up to $4 plus 2% FX) undercuts industry averages",
+      "status": "explicit",
+      "evidence_span": "We charge between $1 and $4 up front and 2% in foreign exchange"
+    },
+    {
+      "id": "P4",
+      "text": "Wallet balances are held FDIC-insured at a financial institution",
+      "status": "explicit",
+      "evidence_span": "that balance is held at a financial institution and is FDIC-insured"
+    },
+    {
+      "id": "P5",
+      "text": "Central Bank of Mexico connection enables instant Mexican bank transfers; BBVA ATM network adds cash-out",
+      "status": "explicit",
+      "evidence_span": "We can also send funds to a network of over 10,000 BBVA ATMs in Mexico"
+    },
+    {
+      "id": "P6",
+      "text": "Payroll-plus-MSB category reduces regulatory and CAC costs while shifting payer to employers",
+      "status": "explicit",
+      "evidence_span": "shift user behavior, reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "id": "P7",
+      "text": "Products are distributed via banks, payroll providers, and employers",
+      "status": "explicit",
+      "evidence_span": "We distribute the products to banks, payroll providers, and direct to employers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Flex-pay product and pricing",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mexico payout interoperability",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Category economics and distribution",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "International transfer failures",
+      "premise_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees get high-transparency, lower-cost cross-border payroll transfers",
+      "status": "explicit",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Recipients keep more of remitted funds as transfer costs fall",
+      "evidence_span": "With each 1% reduction in the cost of international transfers, $6 billion goes into the hands of recipients"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have solved for this problem"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Price and payroll integration kept in one commercial product domain; FDIC wallet coded as trust condition of that offer (§4.1(3) price/structure). Beachhead market size figures treated as market framing, not premises."
+}

@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data can be sent over audio and sold as a per-device-per-year service",
+      "status": "explicit",
+      "evidence_span": "We send data over audio. We sell data over audio as a service per device per year"
+    },
+    {
+      "id": "P2",
+      "text": "Ticketing firms use the tech for mobile-device identification and moment-of-access authentication",
+      "status": "explicit",
+      "evidence_span": "Ticketing companies have chosen us as their mobile authentication tool. Simply put, identifying your mobile device, then having authentication for the moment of access"
+    },
+    {
+      "id": "P3",
+      "text": "Ultrasonic transmission works locally even when devices are in airplane mode",
+      "status": "explicit",
+      "evidence_span": "happening completely local both devices were actually in airplane mode"
+    },
+    {
+      "id": "P4",
+      "text": "Transmission spans audio-to-mobile, mobile-to-device/POS, and embedded in-car connectivity",
+      "status": "explicit",
+      "evidence_span": "We transmit data essentially four key ways. Audio to mobile devices, like playing silently or being embedded into broadcast television. Mobile to mobile or mobile to any device, like the ticket or even driving point of sale"
+    },
+    {
+      "id": "P5",
+      "text": "The audio protocol outperforms competitors including Android-only Google approaches",
+      "status": "explicit",
+      "evidence_span": "We send more data across more devices than any other technology, audio technology, in the market, 14 times that of our closest competitor"
+    },
+    {
+      "id": "P6",
+      "text": "Market spans in-venue, in-car, and at-home proximity messaging, ID, and authentication",
+      "status": "explicit",
+      "evidence_span": "powering in-venue, in-car, and at home, enabling solutions for proximity-based messaging, identification, to authentication"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ultrasonic data protocol and modes",
+      "premise_ids": [
+        "P1",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ticketing and connected-world uses",
+      "premise_ids": [
+        "P2",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple flexible audio protocol connecting devices for authentication and the connected world",
+      "status": "explicit",
+      "evidence_span": "There's no other protocol as simple, as flexible, or as powerful as Listener"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We send data over audio"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ticketing companies have chosen us as their mobile authentication tool"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript begins mid-sentence and ends mid-sentence. Traction metrics (30M devices, 0% fraud) treated as evidence not premises except where mechanism is stated. Company name Listener used as protocol label in value span.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-595",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

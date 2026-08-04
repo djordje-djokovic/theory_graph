@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1145",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most Americans sleep with a partner whose alarms fragment sleep and create relationship tension; wake-ups are disruptive for the sleeper and ineffective/groggy for the person waking",
+      "status": "explicit",
+      "evidence_span": "Over 75% of Americans sleep with someone else in the room. And we're ruining each other's sleep"
+    },
+    {
+      "id": "P2",
+      "text": "LarkUp is a silent natural-feeling wake-up using a buttonless Lark wristband plus smartphone app and nightstand dock",
+      "status": "explicit",
+      "evidence_span": "LarkUp is a silent and completely natural-feeling wake-up. And all you need is our Lark wristband and your smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Patented Up technology with sleep experts wakes users in all sleep phases and feels far more peaceful than an adrenaline-jolt alarm",
+      "status": "explicit",
+      "evidence_span": "It's 100% effective in waking you in all phases of sleep"
+    },
+    {
+      "id": "P4",
+      "text": "Manufacturing is tooled with an international partner so pre-orders at a special price can ship for the new year",
+      "status": "explicit",
+      "evidence_span": "We've been working day and night with a world-renowned international manufacturing company"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "couple sleep disruption problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "silent wristband wake-up",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "manufacturing and pre-order path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Couples sleep better together—one wakes peacefully while the partner sleeps uninterrupted",
+      "status": "explicit",
+      "evidence_span": "we help couples sleep better together"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Live better together and share simple daily happiness",
+      "evidence_span": "sleep better together, live better together, and be happy"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're ruining each other's sleep day in and day out"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the Lark wristband gently nudges you awake. It's peaceful, it's silent, and best of all, she gets to sleep in"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so you can enjoy this in the new year and start the new year fresh"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Partner disruption + ineffective wake-up folded as one couple-sleep problem set (§4.1.6). Wristband/app/dock cascade folded into one silent wake-up product; patents/efficacy/peaceful feel kept as performance detail of that mechanism (§4.1.1, §4.1.8). Sleep revolution vision not coded as premise (§4.1.4). Pre-order price/code is commercial detail folded with manufacturing path. Credentials (Stanford/MIT/Harvard) excluded (§4.2)."
+}

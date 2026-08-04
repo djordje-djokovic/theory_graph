@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web data is trapped in pages and accessible mainly to organizations that can hire developers",
+      "status": "explicit",
+      "evidence_span": "web data is the domain of organizations. Organizations that can employ developers to write code, build systems, and publish apps"
+    },
+    {
+      "id": "P2",
+      "text": "Data browser lets users show example rows/columns and publish a live extraction API",
+      "status": "explicit",
+      "evidence_span": "This extraction pattern is now available as an API on our cloud platform, allowing me to pull live data straight from the website"
+    },
+    {
+      "id": "P3",
+      "text": "Works at scale by combining many site APIs into one application call",
+      "status": "explicit",
+      "evidence_span": "this works at scale"
+    },
+    {
+      "id": "P4",
+      "text": "Chrome Data Factory surfaces prebuilt APIs instantly into tables or live integrations",
+      "status": "explicit",
+      "evidence_span": "Click on the link, and instantly, the data is extracted from the site, formatted, and placed into a table"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Developer-gated web data",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "No-code extraction browser and scale",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Shared API library via Data Factory",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Open the web by making trapped data simple to use for everyone",
+      "status": "explicit",
+      "evidence_span": "we can finally begin to open the web and release the full potential of the data inside it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "trapped inside the HTML of the page"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't have to be a developer to do it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anybody to get access to our library of APIs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Minutes-without-code claim folded into data-browser premise. Doubling public API count is launch ambition/framing, not a condition premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-900",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

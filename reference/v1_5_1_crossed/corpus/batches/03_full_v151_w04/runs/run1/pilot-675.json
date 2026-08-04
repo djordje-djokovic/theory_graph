@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-675",
+    "coder_session_id": "session_01",
+    "session_case_index": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor CO2 builds to levels that impair cognition, while typical ventilation mostly recirculates air instead of supplying fresh outdoor air",
+      "status": "explicit",
+      "evidence_span": "we typically have three times the concentrations than outside"
+    },
+    {
+      "id": "P2",
+      "text": "A microfluidic high-density photobioreactor with photosynthetic algae converts indoor CO2 to oxygen as a self-sustained, wall-mountable fresh-air system",
+      "status": "explicit",
+      "evidence_span": "the system itself is microfluidic high-density photobioreactor"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market starts with businesses via direct sales and HVAC distribution partners, with commercial launch before residential expansion",
+      "status": "explicit",
+      "evidence_span": "we're targeting businesses, selling our custom systems as well as standard units"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Indoor CO2 air-quality problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Photobioreactor fresh-air system",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Business and HVAC go-to-market",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh air made indoors where people need it",
+      "status": "explicit",
+      "evidence_span": "improving indoor air quality by making fresh air"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it might not be the work that's making you sick, but the actual air that you breathe"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've created a system that makes fresh air indoors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launch of first generation of systems to commercial segment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "LED/biochip/cover parts, maple-tree output, and CO2 drawdown treated as feature/performance package of one photobioreactor (§4.1.7–8). Team credentials and advisors excluded. Anti-template: indoor-air problem, bioreactor product, and HVAC/commercial GTM are separately revisable."
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-585",
+    "coder_session_id": "session_01",
+    "session_case_index": 18,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected vehicles can be remotely hacked so critical controls like steering, braking, and acceleration are taken over",
+      "status": "explicit",
+      "evidence_span": "suddenly your car is hacked. Critical control functions, such as steering, braking, and acceleration, is out of your hands"
+    },
+    {
+      "id": "P2",
+      "text": "Secure IoT is a patented multi-layered software stack (encryption, authentication, key management, firewall, OTA updates, big-data modules) protecting connected vehicles",
+      "status": "explicit",
+      "evidence_span": "Our core solution is Secure IoT. This is a software-based solution for protecting connected vehicles from hacker attacks"
+    },
+    {
+      "id": "P3",
+      "text": "Cybersecurity-as-a-service at about $10 per vehicle per month to fleet owners, delivered via OEM deployment and subscription partners with revenue sharing",
+      "status": "explicit",
+      "evidence_span": "We charge $10 per vehicle per month to protect them from outside attacks"
+    },
+    {
+      "id": "P4",
+      "text": "Secure onboard systems are a required condition before autonomous driving, full EV deployment, and intended ride-sharing can scale",
+      "status": "explicit",
+      "evidence_span": "Until we have cyber secure vehicles, we will never have autonomous drive"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "connected-vehicle hacking threat",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-layered Secure IoT stack",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "fleet cybersecurity subscription",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "security precondition for new mobility",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop car hacking so connected vehicles and next-generation mobility can be deployed safely",
+      "status": "explicit",
+      "evidence_span": "we're stopping car hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This threat is real today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protecting connected vehicles from hacker attacks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "continuous updates to the fleet"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is the fundamental component to deploy these next paradigm for mobility"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Encryption/auth/firewall/OTA module list and patents folded into one Secure IoT mechanism (v1.3.1 IP attachment + feature cascade). Price and OEM/CSP revenue-share kept as one commercial premise. DEF CON test and project counts excluded as traction. Mobility future claim coded as a stated precondition, not aspirational vision alone."
+}

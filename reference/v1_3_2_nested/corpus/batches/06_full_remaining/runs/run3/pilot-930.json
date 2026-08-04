@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users suffer when app state does not follow them across phones, tablets, and web",
+      "status": "explicit",
+      "evidence_span": "Have you ever beat that frustrating level of Angry Birds on your phone, only to find that you can't unlock the next level on your tablet?"
+    },
+    {
+      "id": "P2",
+      "text": "Nimbus Base is a mobile/web backend that stores data in users' personal clouds and syncs with a few lines of code",
+      "status": "explicit",
+      "evidence_span": "all of this is done with a few lines of code from developers"
+    },
+    {
+      "id": "P3",
+      "text": "Offline-local then sync architecture plus user-owned deletion give continuity and data control",
+      "status": "explicit",
+      "evidence_span": "It gives you data continuity across devices and lets you have complete control over all your data"
+    },
+    {
+      "id": "P4",
+      "text": "Developers save months of backend work and pay no data storage costs while scaling on free personal cloud",
+      "status": "explicit",
+      "evidence_span": "there are no data storage costs for the developer, and he can scale from one user to millions for free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "User cross-device continuity pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personal-cloud Nimbus backend",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free scale for developers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Think iCloud for all platforms: easy backend, free to scale, works everywhere",
+      "status": "explicit",
+      "evidence_span": "Think iCloud, but for all platforms and all devices"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of data continuity across devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage app users' personal clouds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free to scale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Offline and delete capabilities merged into continuity/control premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-930",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:40+02:00"
+  }
+}

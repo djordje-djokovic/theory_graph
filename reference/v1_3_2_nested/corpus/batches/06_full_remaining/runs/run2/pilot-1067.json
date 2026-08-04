@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current tools lack location, rewards, and rich posting for local breaking news",
+      "status": "explicit",
+      "evidence_span": "they don't have all of the things that Meeporter has, all the cool stuff I just talked about, the location, the rewards, the ability to post as much information as you want"
+    },
+    {
+      "id": "P2",
+      "text": "Map-pinned stories with categorized posts, media, directions, and eyewitness check-ins",
+      "status": "explicit",
+      "evidence_span": "because we're location-based, we allow anybody to post news and it gets pinpointed to a map"
+    },
+    {
+      "id": "P3",
+      "text": "Press-pass badges redeem for prizes and sponsor rewards",
+      "status": "explicit",
+      "evidence_span": "we give away badges or what we call press passes"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue from promoted placement, syndication deals, in-product ads, and brand-sponsored categories",
+      "status": "explicit",
+      "evidence_span": "We've actually been talking to a lot of publishers about data syndication deals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Incomplete local news apps",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "MePorter reporting product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Publisher and sponsor monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local mobile news desk for reporting and reading news as it happens",
+      "status": "explicit",
+      "evidence_span": "your local mobile news desk"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's no great way to break news"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "post news and it gets pinpointed to a map"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "supply us with the local data for the news"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Anti-template: problem/product/monetization separately revisable in transcript. Social invite/profile treated as features of the reporting product.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1067",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

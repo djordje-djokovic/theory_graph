@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1156",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:12+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable new connections are scarce (~4/year) because networks only reinforce existing relationships",
+      "status": "explicit",
+      "evidence_span": "existing networks today are fantastic, excellent in reinforcing connections with people that we've already made"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile app initiates permissioned introductions between contacts and tracks connection status",
+      "status": "explicit",
+      "evidence_span": "with just a few clicks, I'm able to initiate an introduction"
+    },
+    {
+      "id": "P3",
+      "text": "Socializing Your Real-Time Needs posts opportunities across multiple networks and surfaces hidden-network reach",
+      "status": "explicit",
+      "evidence_span": "you're able to leverage your network and connect with the networks and the hidden networks of the people you already know"
+    },
+    {
+      "id": "P4",
+      "text": "Analytics on posts help users see how connections are discovered via rebroadcasting",
+      "status": "explicit",
+      "evidence_span": "see how these connections are being made and how we're discovering these connections"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "One-to-one intro app",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Needs socialization service",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Under-discovery of valuable ties",
+      "premise_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People connect intelligently to valuable people and opportunities beyond their current reach",
+      "status": "explicit",
+      "evidence_span": "connect intelligently to the people and opportunities that you don't know, but should"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make, manage, and track valuable introductions on the go"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "intelligently connect to the masses"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this number four is way too low"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Singleton D1 and D3 retained as independently learnable modules with distinct value paths (strengthen known ties vs discover hidden ones). App Store launch CTA excluded."
+}

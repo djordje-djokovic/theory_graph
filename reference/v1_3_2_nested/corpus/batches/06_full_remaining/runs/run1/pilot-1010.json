@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1010",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:57+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fashion lacks personalization of fit; clothes on standard models leave shoppers unsure, so most fashion still sells in stores",
+      "status": "explicit",
+      "evidence_span": "What's missing in online fashion shopping is personalization. People still don't know how clothes fit when they're buying online"
+    },
+    {
+      "id": "P2",
+      "text": "Shoppers create a personal true-to-size 3D model from two brand/size questions and try on items in-browser without special hardware",
+      "status": "explicit",
+      "evidence_span": "Creating a model is as simple as answering just two basic questions. Not 15,000 questions, just two basic questions"
+    },
+    {
+      "id": "P3",
+      "text": "Fitikit digitizes designer collections at high throughput and delivers them to retailers via API with no retailer upfront cost",
+      "status": "explicit",
+      "evidence_span": "We work with fashion designers and digitize their collection. The cool thing about this process is scalability. We can process thousands of items per day"
+    },
+    {
+      "id": "P4",
+      "text": "Retailers pay as they go and gain increased sales, reduced returns, and fit/style analytics",
+      "status": "explicit",
+      "evidence_span": "The retailers have no upfront costs. They pay us as they go. They get increased sales, reduced returns, and they get access to this amazing data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online fit personalization gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Browser 3D true-to-size fitting room",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Designer digitization and retailer API economics",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let online shoppers see how clothes truly fit on their body before buying",
+      "status": "explicit",
+      "evidence_span": "People still don't know how clothes fit when they're buying online"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help retailers cut returns and grow online fashion sales",
+      "evidence_span": "They get increased sales, reduced returns"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Because 90% of fashion is still sold in store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is true to size. That means she can try on each sizes one by one and really see how each size would fit"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Once they are digitized, we offer this collection to the retailers who carry these designers using our API"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Digital fashion platform / mass customization / Holy Grail treated as vision (v1.3.2 §4.1(4)), not premises. Facebook share and outfit stacking folded into fitting-room capability. Designer-name traction excluded. Pay-as-you-go kept with digitization as one commercial supply module."
+}

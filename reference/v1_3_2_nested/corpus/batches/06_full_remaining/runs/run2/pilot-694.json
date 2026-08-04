@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Single-serve pod systems are unsustainable, expensive, and not fresh versus third-wave craft coffee",
+      "status": "explicit",
+      "evidence_span": "That wave is not sustainable. It creates a lot of waste"
+    },
+    {
+      "id": "P2",
+      "text": "Home coffee-maker market lacks innovation beyond gravity or pressure techniques",
+      "status": "explicit",
+      "evidence_span": "there is very low innovation in the coffee maker market"
+    },
+    {
+      "id": "P3",
+      "text": "Centrifugal Spin maker brews any style from espresso to filter without pods or filters",
+      "status": "explicit",
+      "evidence_span": "This machine makes any coffee style you like, from a single serve espresso to a full jar of filter coffee"
+    },
+    {
+      "id": "P4",
+      "text": "App is remote control and marketplace; low-bean sensor triggers automatic roaster orders",
+      "status": "explicit",
+      "evidence_span": "The app is both a remote control for our machine and an online marketplace for local coffee roasters"
+    },
+    {
+      "id": "P5",
+      "text": "Margins come from manufacturing machines and taking a cut of marketplace orders",
+      "status": "explicit",
+      "evidence_span": "we take a cut of every order that goes out to the marketplace"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pod and home-brew shortcomings",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Spin hardware and bean marketplace",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware plus marketplace take rate",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh, barista-quality coffee at home without pods or downtime",
+      "status": "explicit",
+      "evidence_span": "the machine uses fresh beans to grind and brew your coffee"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not fresh coffee what you're drinking"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't use any pods, filters, or wasteful materials"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Coffee industry wave history mostly framing; P1/P2 keep only conditions needed for the theory.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:57:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

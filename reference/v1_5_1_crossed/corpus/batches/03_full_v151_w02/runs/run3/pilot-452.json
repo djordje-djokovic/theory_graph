@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-452",
+    "coder_session_id": "session_03",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Food production needs automation of farm work people do not want to do, especially delicate produce harvest",
+      "status": "explicit",
+      "evidence_span": "automating the work people don't want to do"
+    },
+    {
+      "id": "P2",
+      "text": "A field robot with vision and a patented soft gripper picks strawberries continuously in tough outdoor conditions using onboard compute",
+      "status": "explicit",
+      "evidence_span": "Our robotic platform drives across the field while our vision system detects the berries and figures out how to reach them"
+    },
+    {
+      "id": "P3",
+      "text": "Focus on year-round strawberry harvest without requiring growers to change their growing process",
+      "status": "explicit",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment"
+    },
+    {
+      "id": "P4",
+      "text": "Robots-as-a-service charges growers about 23 cents per pound including machine, tractor, and driver",
+      "status": "explicit",
+      "evidence_span": "We pick strawberries, and growers will pay us 23 cents per pound"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial deployment path runs through testing partnerships with large commercial growers",
+      "status": "explicit",
+      "evidence_span": "Traptiq has developed testing partnerships over the last three years with the largest commercial growers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unwanted farm harvest labor",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "strawberry picking robot system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "RaaS pricing and grower channels",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automated strawberry harvesting that sustains food production without scarce manual labor",
+      "status": "explicit",
+      "evidence_span": "saving the world's food production system by automating the work people don't want to do"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automating the work people don't want to do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "TrapTik's giant farming robots pick strawberries"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we provide all aspects of the service, machine, tractor, driver, et cetera"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision, gripper mechanics, robustness, ripeness accuracy, and local compute folded into one harvest-robot mechanism cascade (v1.5.1). Year-round strawberry / no grower-process-change kept as deployment condition. Future other-crop master plan treated as vision, not premises. Anti-template note: labor need, robot system, and RaaS/channel are separately revisable."
+}

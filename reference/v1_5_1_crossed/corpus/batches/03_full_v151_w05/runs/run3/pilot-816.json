@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-816",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clinic microscopy malaria diagnosis is slow, costly for families, expertise-heavy, and misses low-level infections that continue transmission",
+      "status": "explicit",
+      "evidence_span": "walk two miles to the nearest clinic and get his blood read through a microscope by a clinician"
+    },
+    {
+      "id": "P2",
+      "text": "RAM is a reusable magnet-and-laser device with a consumable cuvette that gives fast quantitative yes/no and infection-size malaria results without clinical expertise",
+      "status": "explicit",
+      "evidence_span": "a reusable device that matches refrigerator magnets and a laser pointer with a consumable plastic cuvette and a patient database"
+    },
+    {
+      "id": "P3",
+      "text": "Results feed a patient database for treatment dosing, longitudinal tracking, and epidemiology",
+      "status": "explicit",
+      "evidence_span": "a patient database with the patient ID and a score. That score is quantitative to how large that infection is"
+    },
+    {
+      "id": "P4",
+      "text": "Bosch Healthcare distribution in India and IDEO design support enable smaller, better-UI devices for clinics, NGOs, and militaries",
+      "status": "explicit",
+      "evidence_span": "we've partnered with Bosch Healthcare in India for distribution"
+    },
+    {
+      "id": "P5",
+      "text": "The magneto-optical platform can expand beyond malaria to HIV and other neglected tropical diseases",
+      "status": "explicit",
+      "evidence_span": "Malaria is the first out of HIV, other neglected tropical diseases that we can attack with this Magneto obstacle platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "failing clinic microscopy pathway",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "RAM magneto-optical diagnostics",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "distribution and design partners",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, inexpensive, accurate malaria diagnosis that can save lives at scale",
+      "status": "explicit",
+      "evidence_span": "save one million lives every year"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "someone like Emmanuel got misdiagnosed, didn't get treated, and went back to his village and spread it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not only a binary decision on yes or no if he has an infection, but also how large that is"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnered with Bosch Healthcare in India for distribution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid call-to-action (quality.truncated=true). Walk/time/cost/misread microscopy folded as one diagnostic-failure problem (§4.1.6). Magnets/laser/cuvette/speed/reuse/no-expertise and magnetic-biomarker light mechanism folded as one RAM product (§4.1.7). Trial sensitivity treated as traction for the mechanism. Airport/truck use cases as applications (§4.1.2). Platform expansion to other diseases kept as roadmap module within product domain. Singleton D3 retained as separately revisable partner GTM. ASR Magneto obstacle/optical left in spans."
+}

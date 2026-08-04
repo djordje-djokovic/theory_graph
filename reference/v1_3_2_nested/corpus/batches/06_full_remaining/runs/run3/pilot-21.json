@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises face many legacy applications needing modernization while integrator quotes are too costly and timelines too long to scale across large portfolios",
+      "status": "explicit",
+      "evidence_span": "getting quotes from system integrators and partners to help, but the costs are tremendously high, and the timelines are extremely long"
+    },
+    {
+      "id": "P2",
+      "text": "Technical debt across infrastructure, architecture, code, and dependencies compounds and leaves systems with performance, scalability, and maintainability failures",
+      "status": "explicit",
+      "evidence_span": "This leaves systems become susceptible to performance degradation, scalability issues, becomes a maintainability nightmare"
+    },
+    {
+      "id": "P3",
+      "text": "A continuous modernization product—not a services project—lets architects and engineers identify, cut, and maintain technical debt as routine BAU work",
+      "status": "explicit",
+      "evidence_span": "App Factor, as I mentioned before, is a product, not a service"
+    },
+    {
+      "id": "P4",
+      "text": "Automated discovery builds an inventory of infrastructure, apps, and dependencies and modernizes candidates into containerized cloud-native deployments without manual config",
+      "status": "explicit",
+      "evidence_span": "It's built a system of record and an inventory of all of the infrastructure, applications, and their dependencies"
+    },
+    {
+      "id": "P5",
+      "text": "ML classifications support identifying and optimizing common legacy stacks including Linux, Windows Server, Java, and .NET",
+      "status": "explicit",
+      "evidence_span": "Linux, Windows Server, Java, .NET applications, the whole market is full of legacy applications riddled with technical debt"
+    },
+    {
+      "id": "P6",
+      "text": "Route to market rides cloud-provider programs that accelerate providers' cloud spend and customers' modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "work very closely with the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Legacy debt and portfolio scale",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Continuous productized modernization",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud-provider distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises escape the legacy maintenance pitfall with repeatable modernization that frees wasted budget",
+      "status": "explicit",
+      "evidence_span": "we're actually freeing up that 40% that's wasted maintaining legacy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Our product is designed to really accelerate the process and simplify the entire end-to-end journey"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this really is a never-ending pitfall problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly cuts that technical debt and makes it easier moving forward"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "support the outcomes that customers are looking to achieve, and therefore drive the adoption of App Factor"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent coding: emphasized product-vs-service as the organizing product premise. Market-size dollars excluded. Team cloud-vendor experience excluded as biography. Truncated mid-differentiation. Anti-template: D1/D2/D3 are legacy problem, product automation, and cloud GTM—not a need/product/money triad from a pitch template.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

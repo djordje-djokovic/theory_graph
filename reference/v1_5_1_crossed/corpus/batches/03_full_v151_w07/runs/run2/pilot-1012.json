@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1012",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Competitive programming sites focus on textbook algorithms, whereas hackers want real-world problems spanning ML, AI, and distributed systems",
+      "status": "explicit",
+      "evidence_span": "sites like ACM and Topcoder focus on a small set of textbook algorithms, whereas in the real world, you work on things ranging from machine learning to artificial intelligence to distributed systems"
+    },
+    {
+      "id": "P2",
+      "text": "HackerRank offers varied challenges across difficulty levels with dynamic ranking based on how many users solve them",
+      "status": "explicit",
+      "evidence_span": "a variety of challenges classified into 10 levels of difficulty"
+    },
+    {
+      "id": "P3",
+      "text": "Companies contribute real anonymized datasets and problems so hackers can build and benchmark algorithms against production-like tasks",
+      "status": "explicit",
+      "evidence_span": "inviting companies to give us real data sets or problems that they're actually working on"
+    },
+    {
+      "id": "P4",
+      "text": "In-browser coding supports compile/test in multiple languages plus bot-vs-bot AI games with visualization and cross-school matchups",
+      "status": "explicit",
+      "evidence_span": "you can compile and code right inside our interface"
+    },
+    {
+      "id": "P5",
+      "text": "Archived challenges release code snippets every two weeks so hackers can learn optimal algorithms from others",
+      "status": "explicit",
+      "evidence_span": "archive the challenges every two weeks, and release all the code snippets so that hackers can learn from others"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "real-world competitive programming gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "HackerRank challenge platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "shared learning from archived solutions",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "The competitive league where hackers solve the world's most interesting real-world problems",
+      "status": "explicit",
+      "evidence_span": "building the competitive lead for hackers to solve real world problems"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how much fun it would be to have a competitive site for real world problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building the largest collection of the world's most interesting problems for hackers to solve"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hackers can learn from others to write optimal algorithms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ML classifier, anti-chess bot, and language choices folded as challenge-type cascades of one platform (§4.1.7). Traction metrics (signups/games/time-on-site) and celebrity Topcoder anecdotes excluded as evidence/framing. Centralizing Stripe/Netflix-style contests is vision framing folded into value, not an extra premise."
+}

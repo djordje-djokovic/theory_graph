@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-108",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing text, scheduled video chat, and attachment video messaging fail to combine convenience with spontaneous personality",
+      "status": "explicit",
+      "evidence_span": "something that had the convenience of text messaging, but the personality of video"
+    },
+    {
+      "id": "P2",
+      "text": "Broadcast video reaches the recipient about a second later and can be watched while still recording",
+      "status": "explicit",
+      "evidence_span": "somebody can watch it while you're still recording it"
+    },
+    {
+      "id": "P3",
+      "text": "Cloud storage keeps messages off-device for later playback when recipients are unavailable",
+      "status": "explicit",
+      "evidence_span": "If you're available, you watch it in real time. If you're not available, that's fine. You'll watch it later"
+    },
+    {
+      "id": "P4",
+      "text": "Consumer Glide will be fully free and ad-free while they focus on the product",
+      "status": "explicit",
+      "evidence_span": "110% focused on building a consumer product"
+    },
+    {
+      "id": "P5",
+      "text": "Half-duplex asynchronous instant messaging can enrich games, dating, enterprise, hospitals, and first responders",
+      "status": "explicit",
+      "evidence_span": "whether it's games, whether it's dating, whether it's enterprise, it's hospitals or first responders, the ability to send a half-duplex, asynchronous message instantaneously is powerful"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Spontaneous video messaging",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Free consumer focus with broader apps",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how people communicate with convenient personal video messaging",
+      "status": "explicit",
+      "evidence_span": "change how people view video chat, change how people view chat in general"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "convenience of text messaging, but the personality of video"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free app with all of our features free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "P5 coded as a capability extension condition (enumerated uses of same mechanism kept as one premise §4.1(2)); future lucrative enterprise play not separately premised (§4.1(4)). Free+ad-free folded into P4 with consumer focus. Truncated ending. Team bios excluded."
+}

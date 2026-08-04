@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "coder_session_id": "session_05",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Retail shippers of diverse real items face a hard, hidden packing-and-shipping cost problem: fragmented carriers will not quote unless items are boxed/crated/palletized, and buyers get few delivery options",
+      "status": "explicit",
+      "evidence_span": "This problem is the cost of packing and shipping. Now, why is this such a problem? It's a problem because it's so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "id": "P2",
+      "text": "ShipHawk aggregates fragmented shipping markets and converts real items into packed weights and dimensions to deliver instant multi-carrier packing and shipping quotes",
+      "status": "explicit",
+      "evidence_span": "we're going to convert your real item into packed weights and dimensions. This allows us to provide customers with instant data, instant packing quotes, instant shipping quotes"
+    },
+    {
+      "id": "P3",
+      "text": "Users can schedule home/office pickup, drop off at a local ShipHawk network location, or get local delivery through the same system",
+      "status": "explicit",
+      "evidence_span": "you get to schedule a pickup at your home or office. Or you can find a local ShipHawk network location where you can drop your item off"
+    },
+    {
+      "id": "P4",
+      "text": "ShipHawk monetizes by taking a commission from shipping, packing, insurance, and other service providers it sends business to",
+      "status": "explicit",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "opaque packing and shipping costs",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-carrier quote aggregation",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "pickup dropoff and local delivery network",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "service-provider commission model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shippers can move almost any item of any size/weight to almost any destination quickly and easily with comparable carrier options",
+      "status": "explicit",
+      "evidence_span": "help us make shipping easy for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ShipHawk solves a problem that people experience every day. It costs people real money and real time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can ship almost any item of almost any size or weight to almost any destination from one website"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can overnight a letter or ship a tank from your living room in your slippers in less than three minutes"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fragmentation, no-box quotes, and buyer option limits folded as one retail-shipping problem set (§4.1.6). Item-to-pack conversion and multi-carrier instant quotes folded as one Kayak-for-shipping mechanism (§4.1.7). Founder shipping-company biography excluded (§4.2.2). Four-domain partition; not a need/product/money triad."
+}

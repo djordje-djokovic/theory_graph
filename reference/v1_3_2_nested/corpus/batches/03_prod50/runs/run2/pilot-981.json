@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Interchangeable docks adapt GTAR to different phone handsets",
+      "status": "explicit",
+      "evidence_span": "an interchangeable dock system. So you can pop out the dock and add an iPhone 5 version or versions for other handsets"
+    },
+    {
+      "id": "P2",
+      "text": "Functionality now makes GTAR an instrument itself, not only a learning tool",
+      "status": "explicit",
+      "evidence_span": "the functionality has grown so that it's gone beyond being just kind of a learning tool for people who want to play guitar and become kind of an amazing instrument in and of itself"
+    },
+    {
+      "id": "P3",
+      "text": "Compatible apps on the App Store enable multi-instrument performances",
+      "status": "explicit",
+      "evidence_span": "dozens of G-tar compatible apps out on the App Store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Handset dock hardware",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Instrument and app platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Guitar-related instrument experience via GTAR and apps",
+      "status": "inferred",
+      "evidence_span": "amazing instrument in and of itself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interchangeable dock system"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "G-tar compatible apps"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Sturdiness/reliability treated as restatement of product maturation merged into instrument premise in this run. Singleton dock domain: separately revisable handset compatibility.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-981",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:53:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

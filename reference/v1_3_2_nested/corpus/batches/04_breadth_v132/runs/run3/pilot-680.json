@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A misread in a medical image has major negative health implications",
+      "status": "explicit",
+      "evidence_span": "A misread in a medical image can have major negative health implications."
+    },
+    {
+      "id": "P2",
+      "text": "Radiologists face a 500%-plus increase in scan volume with only seconds per image",
+      "status": "explicit",
+      "evidence_span": "There's been over a 500% increase in the amount of scan volume for radiologists."
+    },
+    {
+      "id": "P3",
+      "text": "Training new radiologists is very resource-intensive in time and money",
+      "status": "explicit",
+      "evidence_span": "And training radiologists is very resource intensive, taking lots of time and money."
+    },
+    {
+      "id": "P4",
+      "text": "Deep-learning technology prioritizes scans and helps radiologists find abnormalities",
+      "status": "explicit",
+      "evidence_span": "Behold's technology can allow us to prioritize the scans that the radiologists are looking at today."
+    },
+    {
+      "id": "P5",
+      "text": "Computer-recognition breakthroughs elsewhere show the technology is ready",
+      "status": "explicit",
+      "evidence_span": "we've seen computer recognition technology become much better"
+    },
+    {
+      "id": "P6",
+      "text": "Vendor integration and a dual channel of partnerships plus direct hospital sales drive adoption",
+      "status": "explicit",
+      "evidence_span": "We also have another channel of sales and distribution. The first being the partnerships, and the second being direct sales to hospitals."
+    },
+    {
+      "id": "P7",
+      "text": "Hospital partners provide the medical images needed to train the algorithms plus pilot sites",
+      "status": "explicit",
+      "evidence_span": "gather the data to train our algorithms, as well as giving us pilot sites to test out our software"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Radiology capacity crisis",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Deep-learning capability",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Workflow integration and channels",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Training-data partnerships",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI that improves patient outcomes and doctor workflow in medical imaging",
+      "status": "explicit",
+      "evidence_span": "help improve both the outcome of patients as well as the workflow of doctors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P7",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "the ability to train on the plethora of medical images"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "major negative health implications"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help radiologists find abnormalities in medical images"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamlessly integrate into the workflow of radiologists"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "train on the plethora of medical images"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Finer reading: the problem side splits into stakes, volume overload, and training-cost premises because each could fail independently; workflow/channel (D3) and data partnerships (D4) are kept as singleton domains — the data-for-technology exchange is a distinct learnable mechanism feeding the algorithms, and channel structure stands apart from it. FDA progress excluded as status/traction; the paradigm-shift line treated as aspiration. Data-to-capability dependency coded from the explicit training warrant.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-680",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:37:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-647",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-platform selling is time- and capital-intensive because listings, orders, and inventory must be replicated across platforms",
+      "status": "explicit",
+      "evidence_span": "The lack of efficiency and central management across platforms makes cross-platform selling for online merchants time and capital intensive"
+    },
+    {
+      "id": "P2",
+      "text": "Syncommerce centralizes selling, tracking, and inventory management across multiple sales channels",
+      "status": "explicit",
+      "evidence_span": "centralized dashboard allows online merchants to sell, track, and manage inventory across multiple sales channels simultaneously"
+    },
+    {
+      "id": "P3",
+      "text": "Bulk product import and publish moves thousands of listings to a new channel in minutes",
+      "status": "explicit",
+      "evidence_span": "Nicole publishes all her 5,000 products to her new Etsy store. She can track, manage, and continue to expand through the Synchromesh dashboard in minutes"
+    },
+    {
+      "id": "P4",
+      "text": "Real-time multi-directional product and inventory sync updates stock across channels when orders arrive",
+      "status": "explicit",
+      "evidence_span": "real-time multi-directional syncing of product data"
+    },
+    {
+      "id": "P5",
+      "text": "Product is optimized and affordable for small businesses versus large-business or async competitors",
+      "status": "explicit",
+      "evidence_span": "Syncommerce provides affordable and optimized solutions for small businesses"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription pricing tiers from $40–$200 depend on listed products and connected channels",
+      "status": "explicit",
+      "evidence_span": "monthly subscription ranges from $40 to $200 per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-platform management burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Central sync and listing product",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription tiers",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Effective efficient multichannel retailing so merchants sell more and work less",
+      "status": "explicit",
+      "evidence_span": "Syncommerce makes effective and efficient multichannel retailing for online merchants a reality"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "time and capital intensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sell more, work less"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable and optimized solutions for small businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: merged 190% lift statistic into framing rather than a separate demand premise; folded competitor contrasts into SMB-fit premise. Traction and Amazon announcement excluded."
+}

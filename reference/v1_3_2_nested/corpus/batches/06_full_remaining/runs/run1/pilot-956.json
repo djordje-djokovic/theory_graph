@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Furniture shopping is high risk because it is hard to see how items will look in one's own home",
+      "status": "explicit",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "id": "P2",
+      "text": "Current 3D model solutions are too difficult, expensive, or slow for homeowners",
+      "status": "explicit",
+      "evidence_span": "current solutions available are just too difficult for homeowners. They're too expensive, or they just take a long time"
+    },
+    {
+      "id": "P3",
+      "text": "A smartphone app lets anyone create a 3D model of their home by capturing walls with photos and onboard sensors",
+      "status": "explicit",
+      "evidence_span": "allows anyone to create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-image point-cloud processing on cloud GPUs detects structure and renders photorealistic WebGL room models",
+      "status": "explicit",
+      "evidence_span": "we're able to do this in a few minutes using GPU compute power on the cloud"
+    },
+    {
+      "id": "P5",
+      "text": "Connecting furniture retailers to homeowners via in-home 3D models drives upsell, new customers, and lower returns",
+      "status": "explicit",
+      "evidence_span": "connect retailers with homeowners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Furniture visualization risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Homeowner smartphone 3D modeling",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Retailer-homeowner connection",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Homeowners can shop for furniture by seeing it photorealistically in their own home",
+      "status": "explicit",
+      "evidence_span": "your home becomes the ideal place to shop for furniture"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "By working with retailers and connecting them to homeowners and providing the ideal shopping experience for homeowners"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard to see how something that you choose online or even in a retail store will look in your own home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing the ideal shopping experience for homeowners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Measurement tool, sticky notes, design boards folded into the core modeling/shopping experience (v1.3.2 §4.1(5)). Top-10 retailer signing excluded as traction; P5 codes the retailer connection mechanism. Singleton D3 retained: retailer link is a separately revisable GTM module. '$50 billion' market claim treated as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-911",
+    "coder_session_id": "session_01",
+    "session_case_index": 18,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "95% of retail sales are still brick-and-mortar, yet stores lack online-style personalization—no rich data, recommendations, or customer personality at the point of sale",
+      "status": "explicit",
+      "evidence_span": "95% of sales still comes from brick-and-mortar stores"
+    },
+    {
+      "id": "P2",
+      "text": "42 uses POS to assign shopper personalities/stereotypes and send receipts with rich recommended-product visuals tailored to what each customer wants",
+      "status": "explicit",
+      "evidence_span": "we leverage the point of sales system"
+    },
+    {
+      "id": "P3",
+      "text": "Visual brand dashboard turns opaque retail numbers into performance, growth-driver diagnosis, and per-customer profiles with past purchases and likely next buys",
+      "status": "explicit",
+      "evidence_span": "turn those numbers into a really visual dashboard and an easy way for brands to tell not only how their sales are doing, but what they can do about it"
+    },
+    {
+      "id": "P4",
+      "text": "Start with mid-to-high luxury standalone fashion brands that care about customer experience rather than mass merchandisers",
+      "status": "explicit",
+      "evidence_span": "We went after the individual brands in the mid to high luxury tier fashion retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unpersonalized brick-and-mortar retail",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "POS personality and recommendations",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "visual retail action dashboard",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "luxury fashion brand beachhead",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalize the in-store experience so brands know who's who and customers are treated as they want to be treated",
+      "status": "explicit",
+      "evidence_span": "personalize the retail store experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put in all those rich visuals with the recommended products"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what can you do about it"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These people care about providing the best experience for the customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Online-knows-you vs store confusion folded as one personalization problem (§4.1.6). Dashboard sales/growth-driver/customer-list cascade folded as one brand analytics mechanism (§4.1.7); POS receipt recommendations split as shopper-facing path. P&G bio and TAM framing excluded/partial. Four-domain partition; not a need/product/money triad."
+}

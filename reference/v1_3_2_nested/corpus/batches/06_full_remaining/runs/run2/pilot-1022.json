@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app conversion lags website conversion because updates are gated by approvals and downloads",
+      "status": "explicit",
+      "evidence_span": "Mobile app conversion is consistently lower than our websites"
+    },
+    {
+      "id": "P2",
+      "text": "PathMap brings web-parity mobile A/B testing and interaction heat maps in one platform",
+      "status": "explicit",
+      "evidence_span": "PathMap gives you heat maps, so you can see interactions from every single user inside of your apps. Two, PathMap gives you mobile A-B tests in real time"
+    },
+    {
+      "id": "P3",
+      "text": "A 45-day free trial then tiered pricing covers apps of all sizes",
+      "status": "explicit",
+      "evidence_span": "absolutely free of charge for 45 days"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile conversion problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "PathMap conversion platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Closer view of mobile users that lifts conversion",
+      "status": "explicit",
+      "evidence_span": "see your app through your user's eyes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "to solve that problem, we built PathMap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings mobile A-B testing up to all of our expectations of the web"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "v1.3.2 §4.1(5): heat maps and A-B folded into one core platform premise from the speaker's numbered feature list. Singleton D1 kept as independently revisable market problem. Demo Stuffington Post narrative treated as illustration, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1022",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

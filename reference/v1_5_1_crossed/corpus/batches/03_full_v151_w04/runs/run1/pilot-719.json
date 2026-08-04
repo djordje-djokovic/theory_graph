@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-719",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:58Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shoes leave arches unsupported, misaligned, and uncomfortable; prescription orthotics are costly/time-consuming while OTC insoles lack support",
+      "status": "explicit",
+      "evidence_span": "On one side, you have orthotics. Prescription orthotics cost around $400"
+    },
+    {
+      "id": "P2",
+      "text": "Base by Weave is a biomechanically engineered custom insole for comfort, alignment, and less fatigue at $75",
+      "status": "explicit",
+      "evidence_span": "a biomechanically engineered custom insole designed to maximize comfort, promote alignment, and lessen fatigue"
+    },
+    {
+      "id": "P3",
+      "text": "Smartphone computer-vision scanning plus a customization engine produces a biomechanically enhanced 3D-printable file in seconds in the cloud",
+      "status": "explicit",
+      "evidence_span": "We go from 3D scan to custom 3D printable file in five seconds"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise-grade 3D printing manufactures the personalized insoles for delivery",
+      "status": "explicit",
+      "evidence_span": "we do 3D printing. We use basically enterprise grade 3D printers, SLS printers"
+    },
+    {
+      "id": "P5",
+      "text": "Insoles are the first product in a broader vision of 3D-printed body-perfect gear measured and ordered from a phone",
+      "status": "explicit",
+      "evidence_span": "a company that makes 3D-printed, body-perfect gear from a smartphone"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "orthotic vs OTC insole gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "phone-scan custom 3D insole",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "body-perfect gear platform vision",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Custom-fit insoles that maximize comfort, promote alignment, and lessen fatigue affordably",
+      "status": "explicit",
+      "evidence_span": "maximize comfort, promote alignment, and lessen fatigue"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Ambition to add active years to people's lives via on-demand body-perfect gear",
+      "evidence_span": "end 10 active years to people's lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There has to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Base by Weave, a biomechanically engineered custom insole"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "3D-printed, body-perfect gear from a smartphone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Foot fatigue/misalignment/comfort listed pains folded into one gap premise with orthotic/OTC poles. Scan/customize/print kept as linked manufacturing chain in D2; broader gear platform as separately revisable vision module (P5). Kickstarter ask cut off mid-sentence (truncated). Weave100 testing excluded as traction."
+}

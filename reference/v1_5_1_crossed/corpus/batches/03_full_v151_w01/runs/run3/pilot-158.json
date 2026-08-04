@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-158",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security tools force users to trade productivity for security decisions they are not paid to make",
+      "status": "explicit",
+      "evidence_span": "users have to make security decisions, and they pit that against productivity decisions"
+    },
+    {
+      "id": "P2",
+      "text": "Identity-tied individualized file encryption overlays everyday document actions so only files in use are exposed",
+      "status": "explicit",
+      "evidence_span": "tying identity to individualized encrypted files"
+    },
+    {
+      "id": "P3",
+      "text": "A digital map shows who accesses which files where across workspaces and is portable via API",
+      "status": "explicit",
+      "evidence_span": "Phalanx provides a digital map of every file across every existing workspace"
+    },
+    {
+      "id": "P4",
+      "text": "Identity-based automation deploys in less than a day with zero weekly maintenance versus rules-based DLP",
+      "status": "explicit",
+      "evidence_span": "we're deployable in less than a day and requires zero weekly maintenance"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market reaches mid-to-large enterprise per user and SMBs via channel partners",
+      "status": "explicit",
+      "evidence_span": "we focus on mid- to large-scale enterprise by doing per-user requirements"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "security versus productivity conflict",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "identity-based file protection and visibility",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise and channel go-to-market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-loss prevention that lets humans stay productive while securing unused data",
+      "status": "explicit",
+      "evidence_span": "cybersecurity that lets humans be human"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why does it feel like we can't let humans be human"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those 999 unused secured files don't impact your productivity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finally have an ability to deploy data loss prevention to their SMB clients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Bank-vault metaphor treated as illustration of P2, not a separate premise. Risk-reduction percentage treated as traction. Anti-template note: need / product / GTM separately revisable per transcript."
+}

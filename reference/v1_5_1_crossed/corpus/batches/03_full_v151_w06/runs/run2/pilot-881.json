@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Patients often fail to take the right pill at the right time, creating large health and cost harms",
+      "status": "explicit",
+      "evidence_span": "the problem that we're solving is that of medication adherence, which basically means patients taking the right pill at the right time"
+    },
+    {
+      "id": "P2",
+      "text": "A smart pill bottle passively sends open/close timestamps and medication-amount data to the cloud and compares it to the dosage schedule",
+      "status": "explicit",
+      "evidence_span": "Every time the patient uses the bottle, it sends two pieces of data into the cloud"
+    },
+    {
+      "id": "P3",
+      "text": "On-bottle lights/chimes plus phone, text, or email alerts intervene when doses are missed, and can ask why and notify caregivers",
+      "status": "explicit",
+      "evidence_span": "we have on-bottle lights and chimes, and we also have phone or text message alerts as well"
+    },
+    {
+      "id": "P4",
+      "text": "Cellular CDMA connectivity, long battery, normal-cap use, and no app requirement make the bottle easy and versatile out of the pharmacy",
+      "status": "explicit",
+      "evidence_span": "making it very easy to use and making it extremely versatile"
+    },
+    {
+      "id": "P5",
+      "text": "Business model partners with specialty pharma: bottles free to patients; pharma pays for adherence lift on high-cost drugs",
+      "status": "explicit",
+      "evidence_span": "Our business model is to partner with specialty pharma companies to distribute high-cost drugs in our bottle"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "medication non-adherence problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "smart bottle sensing and interventions",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "specialty pharma partnership model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients take medications correctly and pharma gains adherence, refills, and better outcomes",
+      "status": "explicit",
+      "evidence_span": "improve medication adherence and patient engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Medication adherence is arguably the most costly problem in health care today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All data is collected and analyzed in a completely passive manner"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pharma is our customer. Patients are our users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cost/death stats treated as problem magnitude evidence. Sensing, glow/beep/SMS interventions, feedback-why, and easy cellular/battery design folded as one bottle system with usability package (§4.1.7–8). Open API and label design folded into product. Trial partners/GE treated as traction evidence, not premises. Patents named in intro folded into bottle mechanism. Anti-template: problem, product, and pharma model separately revisable."
+}

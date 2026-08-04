@@ -1,0 +1,130 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hair/beauty is a huge word-of-mouth industry largely offline, making it hard to find stylists despite self-expression importance",
+      "status": "explicit",
+      "evidence_span": "this industry isn't online. I'm talking about the hair industry"
+    },
+    {
+      "id": "P2",
+      "text": "Stylists lack websites, client tracking, marketing email, online schedules, and business insight to grow",
+      "status": "explicit",
+      "evidence_span": "She doesn't have a website. She doesn't track client information or send marketing emails"
+    },
+    {
+      "id": "P3",
+      "text": "Large fragmented market of beauty/wellness pros and clients actively looking for new professionals, now going online via Facebook/smartphones",
+      "status": "explicit",
+      "evidence_span": "There's over 2 million Glendas in the US"
+    },
+    {
+      "id": "P4",
+      "text": "StyleSeat gives professionals a website with social share, specials, client CRM, education, inspiration photos, and business dashboard/analytics",
+      "status": "explicit",
+      "evidence_span": "with StyleSeek, Glenda gets her own website"
+    },
+    {
+      "id": "P5",
+      "text": "Clients can search/book local professionals online with photos, reminders, and post-visit recommendations shared socially",
+      "status": "explicit",
+      "evidence_span": "I can go to styleseat.com, type in haircut San Francisco, get a search results page"
+    },
+    {
+      "id": "P6",
+      "text": "Tools to grow: specials on slow days, monetary value of time slots, schedule optimization and marketing channels over time",
+      "status": "explicit",
+      "evidence_span": "Glenda can actively grow her business"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium model with free online booking/scheduling for the entire industry",
+      "status": "explicit",
+      "evidence_span": "We have freemium model, free online booking, free scheduling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "offline beauty industry gap",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "pro tools and client marketplace",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "freemium access model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring the hair/beauty industry online so pros can grow and clients can find and book stylists",
+      "status": "explicit",
+      "evidence_span": "StyleSeed is bringing this $40 billion industry online"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unlock industry inefficiency by freeing unused marketing capital and redirecting revenue",
+      "evidence_span": "StyleSeat will unlock $18 billion in inefficiency in the space"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's hard to find a stylist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "book it directly online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available for the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Glenda pain list folded as one pro-empowerment problem (§4.1.6). Website/CRM/dashboard/apps feature cascade folded into pro tools (§4.1.7); client search/book split as marketplace-facing module. Growth specials/schedule value kept with pro tools. Traction/partners/credits promo excluded except freemium as continuing access condition (§4.2). ASR StyleSeek/StyleSeed/StyleSeat kept verbatim in spans. Singleton D3: freemium commercial model. Anti-template justified: industry gap, two-sided product, freemium separately revisable.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1076",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

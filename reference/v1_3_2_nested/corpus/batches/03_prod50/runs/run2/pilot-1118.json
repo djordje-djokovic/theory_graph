@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shared database for applications lets any app add any information to any object",
+      "status": "explicit",
+      "evidence_span": "It's a shared database for applications"
+    },
+    {
+      "id": "P2",
+      "text": "Storing related app data in one place enables queries that combine independent databases",
+      "status": "explicit",
+      "evidence_span": "That kind of operation, where I'm combining data from two different databases, is very difficult in the normal world. But when the information is in the same place, it becomes trivial"
+    },
+    {
+      "id": "P3",
+      "text": "Applications need not know each other or ask permission to contribute data",
+      "status": "explicit",
+      "evidence_span": "those applications are not aware of each other. They have no knowledge of each other"
+    },
+    {
+      "id": "P4",
+      "text": "Platform covers everything from barcodes to people as writable objects for the web of things",
+      "status": "explicit",
+      "evidence_span": "FluidDB gives you a shared, writable object for everything. In other words, it's a platform for the web of things"
+    },
+    {
+      "id": "P5",
+      "text": "Final word on data should not rest solely in the hands of applications",
+      "status": "explicit",
+      "evidence_span": "a future where our data, the final word on our data, is not in the hands of applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Permissionless shared application data store",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Web-of-things universal objects and data ownership",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A writable social future of data where related information lives together and is more useful",
+      "status": "explicit",
+      "evidence_span": "The future of data is a writable future"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "add information to anything without asking for permission"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "platform for the web of things"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split universal object scope / ownership thesis from core shared-DB query mechanism as separately revisable. Demo mashups not separately premised (§4.1.2).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:41:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

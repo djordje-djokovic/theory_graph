@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-689",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:49:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cyclists and pedestrians face fatal nighttime collisions while traditional hi-vis gear and taillights are limited and unfashionable",
+      "status": "explicit",
+      "evidence_span": "the current state of the technology for safety is high visibility clothing, or retro-reflectives, or even red taillights. But these are incredibly limited in their functionality"
+    },
+    {
+      "id": "P2",
+      "text": "App-connected smart clothing lighting communicates turn signals, intersection strobes, and brake lights using destination and motion data",
+      "status": "explicit",
+      "evidence_span": "wearable smart lighting designed to save lives"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware plus software can turn harvestable data into visual lighting cues for performance coaching and notifications",
+      "status": "explicit",
+      "evidence_span": "we've combined advanced hardware with luminous software and an endless opportunity for animation and colors so that we can take virtually any harvestable data and turn that into visual lighting cues"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market mixes DTC activewear, college bookstores, brand licensing, and partner products such as a smart bike helmet",
+      "status": "explicit",
+      "evidence_span": "we're also working with brands that you already know and love through licensing engagements"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "nighttime visibility safety gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart lighting apparel system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "DTC licensing and partner distribution",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep cyclists and other users seen and safer through communicative smart lighting gear",
+      "status": "explicit",
+      "evidence_span": "These keep you seen and could potentially save your life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Communicate intent between runners, cyclists, and drivers while coaching the wearer",
+      "evidence_span": "They communicate information between the runners, the cyclists, and the drivers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Every six hours, a motorist hits and kills a cyclist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "designed to save lives by visibility at nighttime"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parents will be able to purchase luminous gear at college bookstores across the US to keep their students safe at night"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Turn signal, intersection strobe, and brake light folded as feature cascade of one destination-aware lighting mechanism (§4.1.7). Pace lighting/data cues kept with product software bundle. Pre-order and PO traction excluded. Team Outdoor Tech bio excluded. Anti-template: problem, product, and multi-channel GTM separately revisable."
+}

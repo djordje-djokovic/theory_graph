@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-958",
+    "coder_session_id": "session_02",
+    "session_case_index": 24,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:12:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fast-growing engineering teams lose productivity to mismatched environments, long test times, and build breaks that block the whole team",
+      "status": "explicit",
+      "evidence_span": "our development environments never matched up with our production environments"
+    },
+    {
+      "id": "P2",
+      "text": "Quality isolates each change in limbo, spins production-like replicas in a chosen cloud including behind the firewall, and runs the test suite in massive parallel",
+      "status": "explicit",
+      "evidence_span": "takes that change and holds it in a limbo state"
+    },
+    {
+      "id": "P3",
+      "text": "Isolated testing prevents broken builds from reaching the team while delivering fast test turnaround",
+      "status": "explicit",
+      "evidence_span": "The build is not broken. And quality has just prevented a bunch of engineers from being very angry"
+    },
+    {
+      "id": "P4",
+      "text": "Making existing engineers ~20% more effective is worth free headcount versus hard external hiring",
+      "status": "explicit",
+      "evidence_span": "quality can make your development team 20% more effective"
+    },
+    {
+      "id": "P5",
+      "text": "Companies buy Quality instead of building internal testing platforms, with deals trending to six figures",
+      "status": "explicit",
+      "evidence_span": "You can now buy the quality product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "environment test and build-break pains",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "isolated parallel production testing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "engineer effectiveness and product sales",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Engineering teams unleash productivity with faster tests, no build breaks, and happier more effective developers",
+      "status": "explicit",
+      "evidence_span": "unleash your engineers and radically change the way that they actually write software"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these problems have been looked at in the past"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "devs don't have to wait for tests"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Get those free devs of yours today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three enumerated engineering pains folded as one problem set the platform solves (§4.1.6). Limbo isolation, production replicas, and parallel test chunking folded as one Quality mechanism cascade (§4.1.7); break prevention kept as outcome package of that mechanism. Customer test-time charts treated as traction evidence of the mechanism (§4.2). Palantir origin as biography excluded. Anti-template: problem, testing platform, and effectiveness/sales module separately revisable."
+}

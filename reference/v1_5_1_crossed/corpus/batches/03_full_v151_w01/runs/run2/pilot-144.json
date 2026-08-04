@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-144",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:15:55Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Monoclonal antibody drugs are limited by tissue barriers, cold-chain instability, and high manufacturing cost, blocking many therapeutic applications",
+      "status": "explicit",
+      "evidence_span": "incapability to cross through most tissue barriers on the body, lack of stability out of cold chain, and high manufacturing costs"
+    },
+    {
+      "id": "P2",
+      "text": "AMP platform fuses shark single-domain CDR3 regions to a synthetic sea-snail conoprotein scaffold using molecular and AI design without in vivo models",
+      "status": "explicit",
+      "evidence_span": "uses CDR3 regions from single-domain shark antibodies fused to a synthetic conoprotein scaffold from a sea snail"
+    },
+    {
+      "id": "P3",
+      "text": "Much smaller AMPs retain antibody function while crossing barriers, resisting heat, limiting immune reaction, and enabling new delivery formats such as eye drops and aerosols",
+      "status": "explicit",
+      "evidence_span": "Our AMPs are 40 times smaller than a monoclonal antibody, but with the same biological functions"
+    },
+    {
+      "id": "P4",
+      "text": "Business model out-licenses AMPs to pharma for upfront fees, milestones, and royalties",
+      "status": "explicit",
+      "evidence_span": "we out-license our AMPs to pharmaceutical companies"
+    },
+    {
+      "id": "P5",
+      "text": "Lead programs include AMP1 for diabetic retinopathy as eye drops and AMP4 neutralizing respiratory virus in lung culture",
+      "status": "explicit",
+      "evidence_span": "you will be able to take your treatment in simple eye drops at home"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "monoclonal antibody limitations",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AMP synthetic mimetic platform",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "pharma out-licensing model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Antibody drugs that are affordable, accessible, and as easy to use as common pharmaceuticals",
+      "status": "explicit",
+      "evidence_span": "make antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these are not easy to use or affordable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generating revenue from upfront payments, clinical phase and approval milestones, and then royalties"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "mAb challenge list folded into one need premise. AMP size/barrier/heat/immune/antigen advantages and delivery formats treated as one mechanism cascade (v1.5.1 §4.1.7). Lead candidates kept as pipeline path-to-value for the platform. Prior company bio excluded. Anti-template: need / platform / licensing separately revisable."
+}

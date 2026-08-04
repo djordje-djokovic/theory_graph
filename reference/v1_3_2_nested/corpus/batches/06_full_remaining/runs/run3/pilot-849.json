@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In-app mobile users who need live help currently must leave the app for phone, email, or branch support",
+      "status": "explicit",
+      "evidence_span": "leave the app and call an 800 number, send email feedback, or actually go in person to the store or branch"
+    },
+    {
+      "id": "P2",
+      "text": "ShowKit enables real-time in-app support where agents can see, draw on, navigate, and control the customer's mobile screen",
+      "status": "explicit",
+      "evidence_span": "I can draw on it, navigate your app, and even tap buttons"
+    },
+    {
+      "id": "P3",
+      "text": "Technology ships as a licensed SDK/platform plus CRM web plugin",
+      "status": "explicit",
+      "evidence_span": "packaged our patent-pending technology into an SDK and platform that we license to companies and developers"
+    },
+    {
+      "id": "P4",
+      "text": "Secure peer-to-peer design keeps real-time data off ShowKit servers",
+      "status": "explicit",
+      "evidence_span": "ShowKit uses peer-to-peer technology, so none of your real-time data goes to ShowKit servers"
+    },
+    {
+      "id": "P5",
+      "text": "Partner channels and flat-rate minute pricing with trial drive adoption",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at a flat rate of $1,000 a month, which includes 50,000 minutes of call time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile support channel gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "In-app visual support platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Go-to-market offer",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Visual interactive mobile customer support optimized for mobile customers",
+      "status": "explicit",
+      "evidence_span": "customer support looks like in an app powered by ShowKit and optimized to meet the needs of a mobile customer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "support solutions were not designed for mobile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it visual and interactive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free for the first 30 days, so you can integrate and test"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Partners folded into commercial GTM premise with pricing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-849",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

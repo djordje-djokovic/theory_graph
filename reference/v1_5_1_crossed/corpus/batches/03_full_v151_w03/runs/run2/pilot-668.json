@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-668",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sites waste personalization spend because users are diverse and moment-specific while historical segments and A/B cohorts miss real-time intent",
+      "status": "explicit",
+      "evidence_span": "millions of dollars are spent every single year to get the right information in front of the right people. Almost all of this is wasted"
+    },
+    {
+      "id": "P2",
+      "text": "LiftIgniter personalizes in real time across verticals, content types, touchpoints, and devices, including cold-start users",
+      "status": "explicit",
+      "evidence_span": "platform for every single vertical, across all types of content, across every single touchpoint, and across all devices"
+    },
+    {
+      "id": "P3",
+      "text": "Integration is minutes-fast: enter URL, choose site areas and goals/rules, and serve intelligent reactions in about 125 ms per user action as a cohort of one",
+      "status": "explicit",
+      "evidence_span": "took minutes to integrate, not months"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS pricing is usage-based so customers can add items and site areas to personalize easily",
+      "status": "explicit",
+      "evidence_span": "pricing is usage-based, which means that it's very easy for our customers to add new items and new parts of the site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wasted non-real-time personalization spend",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "real-time ML personalization platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "usage-based SaaS pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Serve users the items they love, want to buy, and want to share at the moment they care",
+      "status": "explicit",
+      "evidence_span": "give them the items they love, the items they want to buy, and the items they want to share"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "none of that really targets you at this very moment in time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "intelligent real-time reaction immediately"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy for our customers to add new items"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Trial lift percentages and customer logos excluded as traction. Google co-founder bio excluded. Demo workflow folded into platform mechanism. Anti-template: problem, product, pricing separately justified."
+}

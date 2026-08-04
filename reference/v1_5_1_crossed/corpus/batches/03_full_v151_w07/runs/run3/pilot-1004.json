@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1004",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Apartment renting is broken: weak tenant neighborhood content, thin listing media, dead links, and Craigslist spam/reposts",
+      "status": "explicit",
+      "evidence_span": "Apartment rentals are broken, we all know that"
+    },
+    {
+      "id": "P2",
+      "text": "Listings are curated directly from brokers, landlords, and property managers rather than scraped",
+      "status": "explicit",
+      "evidence_span": "these are all curated. They're not scraped"
+    },
+    {
+      "id": "P3",
+      "text": "Neighborhood pages with content and videos plus followable neighborhood news feeds enable tailored apartment search",
+      "status": "explicit",
+      "evidence_span": "we created Neighborhood Pages"
+    },
+    {
+      "id": "P4",
+      "text": "A messaging tool lets qualified renters share credentials so brokers can compare profiles and get them through the door first",
+      "status": "explicit",
+      "evidence_span": "we created a messaging tool to help with that"
+    },
+    {
+      "id": "P5",
+      "text": "Supply is built bottom-up via business development with leading landlords and brokers, not instant multi-city rollout",
+      "status": "explicit",
+      "evidence_span": "We're doing a lot of business development with the leading landlords and brokers in the States to build this bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken apartment search experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "curated listings and neighborhood discovery",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "renter-broker qualification messaging",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "bottom-up landlord broker GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Tenants can search and inquire for an apartment quickly and get closer to closing without a song-and-dance",
+      "status": "explicit",
+      "evidence_span": "search for and make an inquiry for an apartment in under three minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's a really poor user experience, and we all know that"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can search curated content alongside curated listings"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it gives them an edge"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build this bottom up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Neighborhood content, listing quality, 404/live-data, and Craigslist spam folded as one rental problem (§4.1.6). Neighborhood pages and follow/news-feed folded as discovery cascade; messaging kept as separately claimed closing module. Overnight traffic and Zillow framing excluded. Four domains—not a need/product/money triad."
+}

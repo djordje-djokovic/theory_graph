@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-839",
+    "coder_session_id": "session_06",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:02:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Adult weight-loss tools are unsafe for children because they rely on calorie counting, leaving parents without usable options",
+      "status": "explicit",
+      "evidence_span": "none of these are safe for children. They all involve calorie counting, and kids are not supposed to calorie count"
+    },
+    {
+      "id": "P2",
+      "text": "Stanford pediatric obesity program works but is expensive and inaccessible for working parents",
+      "status": "explicit",
+      "evidence_span": "it's $3,500 and has weekday afternoon sessions, so completely not available for working parents"
+    },
+    {
+      "id": "P3",
+      "text": "Curbo is a mobile scalable version of the licensed Stanford approach for child healthier eating and weight loss",
+      "status": "explicit",
+      "evidence_span": "we licensed the Stanford program, and we created a mobile, scalable version of their approach"
+    },
+    {
+      "id": "P4",
+      "text": "Traffic-light food tracker with gradual red-food goals replaces calorie counting",
+      "status": "explicit",
+      "evidence_span": "Rather than tracking calories, we have you track your red, yellow, and green foods"
+    },
+    {
+      "id": "P5",
+      "text": "Avatar messaging, challenges, and therapy-informed progress reinforce learning",
+      "status": "explicit",
+      "evidence_span": "The avatar I talked about earlier, it gives you reminders and messages based on the food that you're eating"
+    },
+    {
+      "id": "P6",
+      "text": "Weekly coach contact via phone, Skype, or text takes food-police role off parents",
+      "status": "explicit",
+      "evidence_span": "once a week, a coach calls, either they call on the telephone, they can call using Skype, they can text"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium model: free tracker, $35/mo text coaching, $85/mo live coaching",
+      "status": "explicit",
+      "evidence_span": "We're giving a free food tracker so that we can attract as many kids as we can"
+    },
+    {
+      "id": "P8",
+      "text": "Scale via insurers, hospital systems, and educational PE/nutrition channels",
+      "status": "explicit",
+      "evidence_span": "we are talking to health insurers like Humana and UnitedHealthcare. We're talking to hospital systems like Kaiser and Sutter Health"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsafe inaccessible child weight-loss options",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Curbo mobile Stanford-based program",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium pricing and institutional GTM",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children eat healthier, feel better, and lose weight safely",
+      "status": "explicit",
+      "evidence_span": "help millions of kids worldwide eat healthier feel great and lose weight"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Families fight less about food",
+      "evidence_span": "they're fighting a lot less about food"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There were no tools available for me"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mobile platform to enable children to eat healthier and to lose weight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help as many kids as we can in our program"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Adult-tool and Stanford-access barriers kept as separately failable conditions. Avatar/challenges/therapy progress treated as engagement package facets with avatar messaging as the stated feedback mechanism. Free tracker plus paid text/live coaching is one commercial package. User counts and son's weight loss excluded as traction/personal outcome evidence. Anti-template noted."
+}

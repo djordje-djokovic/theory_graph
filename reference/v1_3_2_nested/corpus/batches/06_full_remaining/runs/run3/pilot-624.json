@@ -1,0 +1,133 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Piezoelectric braille keyboards cost $5–8k and only display a few words, limiting literacy",
+      "status": "explicit",
+      "evidence_span": "it's a $5,000 up to $8,000 keyboard. And where a blind person can read, it's extremely limited to just a few words"
+    },
+    {
+      "id": "P2",
+      "text": "Membrane airflow actuators enable a mechanical-element-free tactile display with thousands of controllable dots",
+      "status": "explicit",
+      "evidence_span": "through an airflow channel, we can control and deform each braille dot individually"
+    },
+    {
+      "id": "P3",
+      "text": "BlindTap tablet combines tactile screen and voiceover touch control so users learn, work, and play on one device",
+      "status": "explicit",
+      "evidence_span": "the first tactile tablet for people with sight loss. It allows blind users for the first time to learn, work, and play with one single device"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud Braille Converter turns text, documents, and web pages into full-page braille output",
+      "status": "explicit",
+      "evidence_span": "It can convert anything into Brow, like text files, documents, even whole web pages"
+    },
+    {
+      "id": "P5",
+      "text": "Sold at about $500 via website, signed distributors, and developing-country institutional channels",
+      "status": "explicit",
+      "evidence_span": "with the affordable price of $500 US. But what about the market?"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly limited braille interfaces",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Actuating tactile tablet",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Braille conversion software",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Affordable go-to-market",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Provide an affordable full-page tactile e-reader tablet for blind users",
+      "status": "explicit",
+      "evidence_span": "LightUp can output one whole page in braille. And this makes it the digital e-reader for blind users"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Open education access for millions of blind children as a social mission",
+      "evidence_span": "we can change the future of millions of children"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we successfully scaled the technology and produced the world's first tactile display without any mechanical elements"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely limited to just a few words"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "learn, work, and play with one single device"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "convert anything into Brow"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable price of $500 US"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run3: split cloud converter as separately revisable software module from hardware tablet. Price+distribution remain one commercial premise. Kenya request inside GTM, not traction-only.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-624",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:41:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

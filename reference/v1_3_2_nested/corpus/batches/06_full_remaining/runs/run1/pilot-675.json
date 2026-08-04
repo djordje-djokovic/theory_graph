@@ -1,0 +1,121 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People spend most of their time indoors where exhaled CO2 rises far above outdoor levels and impairs cognitive performance",
+      "status": "explicit",
+      "evidence_span": "we actually spend over 90% of our time indoors"
+    },
+    {
+      "id": "P2",
+      "text": "Most ventilation systems recirculate the same air and take little from outside because conditioning outdoor air is energy-intensive",
+      "status": "explicit",
+      "evidence_span": "Most of them just recirculate the same air, taking minimum from outside, because it takes a lot of energy to heat it, clean it, and cool it"
+    },
+    {
+      "id": "P3",
+      "text": "A microfluidic high-density photobioreactor with photosynthetic algae biochips converts indoor CO2 into oxygen more efficiently than trees",
+      "status": "explicit",
+      "evidence_span": "the system itself is microfluidic high-density photobioreactor"
+    },
+    {
+      "id": "P4",
+      "text": "The wall-mountable system is self-sustained, auto-adjusts room CO2, and uses replaceable nutrient cartridges a few times a year",
+      "status": "explicit",
+      "evidence_span": "it's a self-sustained system. It automatically adjusts the CO2 levels in the room"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial go-to-market sells custom and standard units to businesses via direct sales and HVAC distribution partners",
+      "status": "explicit",
+      "evidence_span": "we're targeting businesses, selling our custom systems as well as standard units. In addition to direct sales, we're partnering with distributions such as HVAC"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Indoor CO2 and ventilation gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Algae photobioreactor system",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Business and HVAC sales",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh air indoors where people need it, improving indoor air quality",
+      "status": "explicit",
+      "evidence_span": "we're improving indoor air quality by making fresh air"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Support cognitive performance by lowering elevated indoor CO2",
+      "evidence_span": "at these levels, we have 50% decline in cognitive performance"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "And still, the only way to get fresh air is from outside"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the actual air that you breathe"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our system provides fresh air inside where we need it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launch of first generation of systems to commercial segment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Three domains match need/product/channel; justified because HVAC partnering and business targeting are revisable without changing the algae bioreactor, and the recirculation energy problem is a separate market assumption. LED/biochip/art-cover parts folded into P3/P4 per v1.3.2 §4.1(5). 'Future of making fresh air' treated as vision framing, not a premise. Stanford team credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-675",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inside companies, only specialists can mine data, so question-to-insight takes weeks and is costly for smaller firms",
+      "status": "explicit",
+      "evidence_span": "From question to insight, it can take several weeks"
+    },
+    {
+      "id": "P2",
+      "text": "Company data is fragmented across siloed third-party services",
+      "status": "explicit",
+      "evidence_span": "all our data is fragmented across different services"
+    },
+    {
+      "id": "P3",
+      "text": "The product unifies data by connecting to services and automatically extracts patterns",
+      "status": "explicit",
+      "evidence_span": "unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "id": "P4",
+      "text": "Users can auto-build predictive models and behavioral segments without being data scientists",
+      "status": "explicit",
+      "evidence_span": "finds out the influencing factors that affect subscription status. It builds the model automatically"
+    },
+    {
+      "id": "P5",
+      "text": "SaaS predictive insights start at an affordable $1,000 per month scaled by volume",
+      "status": "explicit",
+      "evidence_span": "we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data divide and silos",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated pattern and prediction platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable SaaS pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyone can get deep data-science insights without depending on specialists",
+      "status": "explicit",
+      "evidence_span": "empower everyone with data science skills"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data divide inside companies"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get deep insights that typically require you to be a data scientist"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "very affordable rate of $1,000 per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Predictions and Segments demos treated as speaker-enumerated uses of one auto-analytics capability and folded into P4 (§4.1(2)/(5)). 'Data is the new gold' / every-job-will-require-analysis left as framing, not premises (§4.1(4)). Price and volume scaling kept as one commercial premise (§4.1(3)). Singleton D3 justified as separately revisable pricing. Personal PM anecdote used only as motivation for the divide premise, not as a bio credential."
+}

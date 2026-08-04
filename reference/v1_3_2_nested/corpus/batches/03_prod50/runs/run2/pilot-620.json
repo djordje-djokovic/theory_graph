@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wired charging and single-device pads make charging a terrible user experience",
+      "status": "explicit",
+      "evidence_span": "Charging is a terrible experience"
+    },
+    {
+      "id": "P2",
+      "text": "Pi is a contactless charger that powers several devices at once at varied angles during use",
+      "status": "explicit",
+      "evidence_span": "Leeshan can even continue to use the device and move it around in different directions"
+    },
+    {
+      "id": "P3",
+      "text": "Breakthrough magnetic-field math plus patents enable any-angle multi-device power",
+      "status": "explicit",
+      "evidence_span": "unlocked the solution to wireless power by the bending of magnetic fields"
+    },
+    {
+      "id": "P4",
+      "text": "Magnetic standard is safe and FCC-cleared versus blocked alternatives",
+      "status": "explicit",
+      "evidence_span": "It's safe, it's affordable, and it's FCC compliant"
+    },
+    {
+      "id": "P5",
+      "text": "Accessory cases support legacy devices and tablets without built-in receivers",
+      "status": "explicit",
+      "evidence_span": "We built these cases to enable people with popular legacy devices to be able to charge, as well as to charge your tablets"
+    },
+    {
+      "id": "P6",
+      "text": "Direct-to-consumer sales with high margins plus OEM platform licensing",
+      "status": "explicit",
+      "evidence_span": "we will sell Pi directly to consumers. We have over 50% gross margins"
+    },
+    {
+      "id": "P7",
+      "text": "OEM platform opens Pi for existing consumer electronics brands",
+      "status": "explicit",
+      "evidence_span": "we are opening the Pi platform for use by existing consumer electronics OEMs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pi contactless charging product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "D2C sales",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "OEM platform",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Contactless wireless charging that feels like everyday magic",
+      "status": "explicit",
+      "evidence_span": "you'll experience how Pi makes everyday magic"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the world's first contactless wireless charging device"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will sell Pi directly to consumers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "opening the Pi platform for use by existing consumer electronics OEMs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split D2C vs OEM as separately revisable GTM modules per speaker's two-part business model.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-711",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Talk media (podcasts/radio) remain long, non-interactive, and poorly suited to mobile-first, short-attention creators unlike reinvented music/photos/video",
+      "status": "explicit",
+      "evidence_span": "They're long. They're not interactive. They don't really cater to the ADD generation, the mobile-first content creators"
+    },
+    {
+      "id": "P2",
+      "text": "Pundit is a social network for bite-sized talk shows where users start short conversations and invite friends/followers to participate with max ~30-second replies",
+      "status": "explicit",
+      "evidence_span": "a social network for voice experiences, where users can start bite-sized talk shows about their favorite topics and invite their friends or followers to participate"
+    },
+    {
+      "id": "P3",
+      "text": "Recording auto-cleans audio and supports voice filters and background music to make spoken content sound fun",
+      "status": "explicit",
+      "evidence_span": "Pundit will automatically reduce the background noise and engineer your voice to make you sound your best"
+    },
+    {
+      "id": "P4",
+      "text": "Pundit Voice Box sends private voice messages that disappear in 24 hours",
+      "status": "explicit",
+      "evidence_span": "you can send private voice messages that disappear in 24 hours"
+    },
+    {
+      "id": "P5",
+      "text": "Creators can share and natively embed talks across social platforms and the web, including brand/cast AMAs that fans can join without the app",
+      "status": "explicit",
+      "evidence_span": "creators can share their Pundit talks on other social platforms and natively embed them on any website"
+    },
+    {
+      "id": "P6",
+      "text": "Expansion via Android and launches in Asian and Middle Eastern markets where voice interaction is already dominant",
+      "status": "explicit",
+      "evidence_span": "Pundit will also be releasing our Android version and launching in Asian and Middle Eastern markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "talk media mobile gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "bite-sized social voice product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "creator distribution and geographic expansion",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make talk lightweight, interactive, and fun like Snapchat did for photos",
+      "status": "explicit",
+      "evidence_span": "making talk more lightweight, interactive, and fun"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what about talk, the voice, the podcast, the radio? You know, it's still behind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can create short, insanely fun audio content"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this opened a new world of possibilities for brands and top-notch creators"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Voice filters/music treated as facets of fun recording polish (v1.5.1 §4.1.7); Voice Box kept separate as privately revisable messaging module. Engagement metrics and Comic-Con fan counts excluded. Anti-template: problem, product, and distribution/expansion separately revisable."
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contract workflows across drafts, approvals, negotiations, and signatures are painful and hard to track at scale",
+      "status": "explicit",
+      "evidence_span": "everybody hates dealing with contracts"
+    },
+    {
+      "id": "P2",
+      "text": "A visual workflow builder of request, approval, and signature blocks structures any contract process",
+      "status": "explicit",
+      "evidence_span": "simple visual building blocks that each represent common tasks"
+    },
+    {
+      "id": "P3",
+      "text": "Automatic requests, reminders, one-click approve/sign, and team notifications remove babysitting",
+      "status": "explicit",
+      "evidence_span": "Glider takes care of all the requests and reminders so no babysitting is required"
+    },
+    {
+      "id": "P4",
+      "text": "A management dashboard shows which deals are stuck in legal, negotiation, or final signature",
+      "status": "explicit",
+      "evidence_span": "see in one place how many deals are off in legal land"
+    },
+    {
+      "id": "P5",
+      "text": "Sitting between CRM start and e-signature end shortens close times while teams work together",
+      "status": "explicit",
+      "evidence_span": "That's where Glider is shortening close times and keeping teams working together seamlessly"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contract process pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Workflow automation product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Visibility and close-time wedge",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make managing the contract process drop-dead simple and shorten close times",
+      "status": "explicit",
+      "evidence_span": "make managing this process drop dead simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody hates dealing with contracts"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no babysitting is required"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shortening close times"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Financing/seed and pilot customer list excluded (§4.2). CRM/DocuSign market sandwich coded as positioning wedge P5, not market-size framing alone.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-922",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:44:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

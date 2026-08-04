@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer product companies have no targeting and misspend half their marketing budgets",
+      "status": "explicit",
+      "evidence_span": "They have no targeting"
+    },
+    {
+      "id": "P2",
+      "text": "Barcode check-ins with social sharing, Fanships, dragon quips, and comic unlocks form one consumer engagement product",
+      "status": "explicit",
+      "evidence_span": "Snapdragon is product check-ins with a twist. It's product check-ins that unlock a comic book adventure"
+    },
+    {
+      "id": "P3",
+      "text": "Check-in data lets CPG marketers target promotions and loyalty rewards correctly",
+      "status": "explicit",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need"
+    },
+    {
+      "id": "P4",
+      "text": "Marketers still rely on mass printed Sunday-paper coupons that cannot target",
+      "status": "explicit",
+      "evidence_span": "an industry that still prints millions upon millions of coupons and stuffs them into Sunday papers each week"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Untargeted CPG marketing",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Snapdragon check-in game",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Marketer targeting from check-ins",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reinvent how consumer product companies market to customers with targeting wrapped in a fun game",
+      "status": "explicit",
+      "evidence_span": "we want to fundamentally reinvent how consumer product companies market to their customers"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Consumers get hooked on a fun product check-in gaming experience",
+      "evidence_span": "wrapping the whole thing in this fun gaming experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They have no targeting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "product check-ins that unlock a comic book adventure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Fanship, Quips, and comics folded into one offering premise per §4.1(5). Sunday-paper coupon practice kept as continuing industry condition with the targeting gap. No financing ask present.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1154",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:01+02:00"
+  }
+}

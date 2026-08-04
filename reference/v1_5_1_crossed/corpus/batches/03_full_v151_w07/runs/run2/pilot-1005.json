@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1005",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social TV and similar experiences create a hard real-time big-data problem of processing huge concurrent streams and broadcasting results back instantly",
+      "status": "explicit",
+      "evidence_span": "That's a real-time big data problem, where you have to take that deluge of data, you have to process it, and then you have to transmit it back out to the audience very, very quickly"
+    },
+    {
+      "id": "P2",
+      "text": "Bright Context is a cloud developer platform for processing in-flight real-time data streams and incorporating push/broadcast into apps via an easy API",
+      "status": "explicit",
+      "evidence_span": "we provide a cloud-based platform for software developers that makes it easy to do two key things"
+    },
+    {
+      "id": "P3",
+      "text": "Through channels and quant channels with inputs, processing, and outputs plus an SDK offload scaling complexity from app builders",
+      "status": "explicit",
+      "evidence_span": "There's a thing called a through channel, which is for broadcasting data without processing it"
+    },
+    {
+      "id": "P4",
+      "text": "The platform packages stream processing with broadcast/push, stores real-time history, and lowers barriers via dashboard, API, and cloud pricing",
+      "status": "explicit",
+      "evidence_span": "we provide both data stream processing as well as data broadcast and push in one package"
+    },
+    {
+      "id": "P5",
+      "text": "Adoption is driven by self-service engagement of innovative developers across use cases beyond social TV",
+      "status": "explicit",
+      "evidence_span": "we're engaging developers directly through a self-service model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "real-time big data broadcast problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "stream processing and push platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "self-service developer GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers can gift-wrap real-time stream processing and push into apps and innovate around real-time",
+      "status": "explicit",
+      "evidence_span": "This is the problem that Bright Context Platform solves, and we gift wrap it for developers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This problem right here, this is a hard problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you've offloaded a huge amount of complexity to us in terms of scaling and back-end"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "adopted more broadly, more quickly, and more creatively through partnering with innovative developers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Election Meter demo treated as illustrative cascade of the platform, not a separate product. Through/quant channel config folded into platform mechanism (§4.1.7). Three disruption claims folded as one complete-platform package (§4.1.7). Anti-template: problem, platform, and self-service developer GTM separately revisable."
+}

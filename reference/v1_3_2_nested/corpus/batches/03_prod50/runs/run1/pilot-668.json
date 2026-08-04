@@ -1,0 +1,130 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Success requires showing users the items they love/buy/share at the moment they care",
+      "status": "explicit",
+      "evidence_span": "if you give them the items they want and you can target them at the moment they most care about it, you'll succeed in your goal"
+    },
+    {
+      "id": "P2",
+      "text": "Historical cohort/segment/A-B personalization fails to target the present moment",
+      "status": "explicit",
+      "evidence_span": "none of that really targets you at this very moment in time"
+    },
+    {
+      "id": "P3",
+      "text": "Real-time ML personalizes for every user including cold-start users",
+      "status": "explicit",
+      "evidence_span": "personalize in real time for every single user, even brand new cold start users"
+    },
+    {
+      "id": "P4",
+      "text": "One platform covers all verticals, content types, touchpoints, and devices",
+      "status": "explicit",
+      "evidence_span": "we built a platform for every single vertical, across all types of content, across every single touchpoint, and across all devices"
+    },
+    {
+      "id": "P5",
+      "text": "Integration takes minutes with selectable site areas, goals, and business rules",
+      "status": "explicit",
+      "evidence_span": "it took minutes to integrate, not months"
+    },
+    {
+      "id": "P6",
+      "text": "125ms round-trip returns an intelligent reaction for every user action as a cohort of one",
+      "status": "explicit",
+      "evidence_span": "all in 125 millisecond round trip"
+    },
+    {
+      "id": "P7",
+      "text": "Usage-based SaaS pricing makes adding personalized surfaces easy",
+      "status": "explicit",
+      "evidence_span": "our pricing is usage-based, which means that it's very easy for our customers to add new items and new parts of the site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Moment-level personalization thesis",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time ML platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Usage-based SaaS monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Websites and apps serve users the right items in real time to lift engagement and conversion",
+      "status": "explicit",
+      "evidence_span": "give them the items they love, the items they want to buy, and the items they want to share"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "every time that a user takes an action, it's processed by our algorithms, it's returned to the site, all in 125 millisecond round trip"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "target them at the moment they most care about it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're personalizing for Listia on their site in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "SaaS-based company, and our pricing is usage-based"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Trial lift percentages and never-lost A/B claims excluded as traction. Singleton D3 retained: usage pricing is independently revisable commercial module. Co-founder Google bio used only for the real-time/cold-start mechanism claim.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-668",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:28:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

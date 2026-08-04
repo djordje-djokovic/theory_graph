@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-685",
+    "coder_session_id": "session_03",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises leave source code and sensitive data largely unencrypted because encryption makes data unsearchable and unusable for software teams",
+      "status": "explicit",
+      "evidence_span": "encryption makes your data completely unsearchable and unusable"
+    },
+    {
+      "id": "P2",
+      "text": "Perimeter walls and alarms can be bypassed and only alert after breaches",
+      "status": "explicit",
+      "evidence_span": "Walls can be bypassed, and alarms only alert you after the fact"
+    },
+    {
+      "id": "P3",
+      "text": "Searchable AES-256 encryption lets teams search encrypted data without revealing keys",
+      "status": "explicit",
+      "evidence_span": "search encrypted data as easily and as quickly as Google can search web pages, all without revealing your key"
+    },
+    {
+      "id": "P4",
+      "text": "Git Zero is encrypted Git hosting that encrypts code and history while preserving searchable Git workflow via an encrypted index",
+      "status": "explicit",
+      "evidence_span": "the world's first encrypted Git hosting that not only encrypts your source code, at the same time, allows you to search while it's all encrypted"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "encryption versus usability tradeoff",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "searchable encryption and Git Zero",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises can encrypt source code and still search and use it in normal workflows",
+      "status": "explicit",
+      "evidence_span": "you should encrypt everything and search anything"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they have to make a choice between convenience and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encrypted search on an encrypted source code repository"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Stolen-record statistic treated as evidence of the perimeter-failure condition, not traction. Cryptographer vetting and FireEye bios excluded as credentials. Migrate/encrypt/index/password-protect-key demo folded as feature cascade of Git Zero (§4.1.7). Vision that cloud/security/on-prem privacy coexist treated as value framing, not a separate premise. Two domains: problem tradeoff vs searchable-encryption product."
+}

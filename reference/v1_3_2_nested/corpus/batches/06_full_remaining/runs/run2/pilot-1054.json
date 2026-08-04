@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CodeGuard backs up sites via FTP/SFTP, monitors for changes on a schedule, and takes new snapshots when changes are found",
+      "status": "explicit",
+      "evidence_span": "we back up your site. Right now, we use FTP or SFTP"
+    },
+    {
+      "id": "P2",
+      "text": "One-button undo reverts site changes whether wanted or unwanted",
+      "status": "explicit",
+      "evidence_span": "if anything happens to your site, whether it was wanted or unwanted, that you want to revert, you can do it with just one button"
+    },
+    {
+      "id": "P3",
+      "text": "Owners can configure monitoring to auto-push the last version when differences appear (e.g., vacation AdWords/malware case)",
+      "status": "explicit",
+      "evidence_span": "if it notices anything is different, I want it to repair by pushing the last version"
+    },
+    {
+      "id": "P4",
+      "text": "Product is Git-based version control made easy for non-experts",
+      "status": "explicit",
+      "evidence_span": "Our system is built upon Git, developed by Linus Torvalds. It's an industry-leading source version control tool. But we provide it for the masses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "FTP backup and change monitoring",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Revert and auto-repair",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Time-machine style website protection with one-button revert",
+      "status": "explicit",
+      "evidence_span": "We are a time machine for your website"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we back up your site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can do it with just one button"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Change-only snapshot uniqueness folded into P1 backup/monitor mechanism (v1.3.2 feature fold). cPanel plugins treated as roadmap detail of FTP path, not separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1054",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:26:40+02:00"
+  }
+}

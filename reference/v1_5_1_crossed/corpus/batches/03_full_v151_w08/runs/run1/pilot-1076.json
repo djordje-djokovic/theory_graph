@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1076",
+    "coder_session_id": "session_03",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stylists lack websites, client tracking, marketing email, online schedules, and business insight needed to grow",
+      "status": "explicit",
+      "evidence_span": "she's not empowered"
+    },
+    {
+      "id": "P2",
+      "text": "Clients find it hard to discover and book the right stylist because the hair industry is largely offline",
+      "status": "explicit",
+      "evidence_span": "it's hard to find a stylist"
+    },
+    {
+      "id": "P3",
+      "text": "StyleSeat gives professionals a website, social sharing, specials, scheduling, client CRM, education, inspiration photos, mobile apps, and growth dashboards",
+      "status": "explicit",
+      "evidence_span": "with StyleSeek, Glenda gets her own website"
+    },
+    {
+      "id": "P4",
+      "text": "Clients search and sort local professionals, book online, get reminders, and leave recommendations shared socially",
+      "status": "explicit",
+      "evidence_span": "I can go to styleseat.com, type in haircut San Francisco"
+    },
+    {
+      "id": "P5",
+      "text": "Freemium model offers free online booking and scheduling for the entire industry",
+      "status": "explicit",
+      "evidence_span": "We have freemium model, free online booking, free scheduling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "offline stylist and client marketplace gaps",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "two-sided StyleSeat booking platform",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "freemium industry packaging",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring the hair and beauty industry online so stylists grow and clients find and book the right professional",
+      "status": "explicit",
+      "evidence_span": "StyleSeed is bringing this $40 billion industry online starting today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the industry isn't online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the internet has come to her and her world"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available for the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ASR StyleSeed/StyleSeek/StyleSeat normalized in premise text; spans verbatim. Pro tool cascade folded (§4.1.7). Future schedule-optimization/dynamic pricing treated as roadmap. Traction and promo credits excluded (§4.2). Aestheticians/trainers treated as same pro problem set (§4.1.6)."
+}

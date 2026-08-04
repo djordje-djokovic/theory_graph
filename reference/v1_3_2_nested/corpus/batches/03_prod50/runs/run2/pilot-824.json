@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote island/clinic settings cannot access expensive bulky hospital diagnostics",
+      "status": "explicit",
+      "evidence_span": "local residents rely on local clinics for their health care. But clinics are not equipped to meet patients' needs"
+    },
+    {
+      "id": "P2",
+      "text": "OSCULT is an iPad ultrasound for diagnosis plus communication in medical imaging",
+      "status": "explicit",
+      "evidence_span": "This will bring great user experience and communication in medical imaging"
+    },
+    {
+      "id": "P3",
+      "text": "Capture, measure, annotate, and document exams on-device",
+      "status": "explicit",
+      "evidence_span": "I can zoom in to see more accurately the cyst. my two fingers to measure it"
+    },
+    {
+      "id": "P4",
+      "text": "Remote specialist consult over cellular/Wi-Fi with shared images avoids unnecessary medevac",
+      "status": "explicit",
+      "evidence_span": "no need to send the patient to the hospital"
+    },
+    {
+      "id": "P5",
+      "text": "One-third the price of regular ultrasound opens the market to every practitioner",
+      "status": "explicit",
+      "evidence_span": "This opens the market to every partition"
+    },
+    {
+      "id": "P6",
+      "text": "Classroom broadcast mode supports healthcare education",
+      "status": "explicit",
+      "evidence_span": "Oscult is also ready for education"
+    },
+    {
+      "id": "P7",
+      "text": "Regulatory approvals (CE/FDA) required for US/EU commercialization",
+      "status": "explicit",
+      "evidence_span": "CE Medical and FDA are on track to be approved by mid-next year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remote diagnostic access problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Portable ultrasound telemedicine product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affordability, education, regulation",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Ultimate portable diagnosis tool for clinics far from hospitals",
+      "status": "explicit",
+      "evidence_span": "introduce OSCULT, the ultimate diagnosis tool"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clinics are not equipped to meet patients' needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better diagnose and connect to specialists"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of the price of the regular ultrasound device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Portable ultrasound market size stats excluded as market color. Pre-order CTA excluded as financing/sales ask.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

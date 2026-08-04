@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clean-energy transition and battery growth create exploding demand for lithium that current brine extraction cannot efficiently meet",
+      "status": "explicit",
+      "evidence_span": "lithium brine industry lack efficient lithium extraction technology to meet the current demands of exploding battery market"
+    },
+    {
+      "id": "P2",
+      "text": "Solar evaporation of brine uses huge water volumes, emits carbon, takes years, and costs about $6,000 per metric ton",
+      "status": "explicit",
+      "evidence_span": "to just produce one metric ton of lithium, they use up 500,000 gallons of water, releasing 5,000 kilograms of carbon, with a production cost of $6,000"
+    },
+    {
+      "id": "P3",
+      "text": "Nano-mosaic absorbents selectively attract lithium and reject other minerals, enabling a two-step process to battery-grade lithium within 48 hours",
+      "status": "explicit",
+      "evidence_span": "These sponge-like materials are chemically and physically designed to just attract lithium, rejecting all other minerals"
+    },
+    {
+      "id": "P4",
+      "text": "The process uses far less water, about $1,000 per ton production cost, and zero carbon emission versus evaporation",
+      "status": "explicit",
+      "evidence_span": "only 30,000 gallons of water is used, with a production cost of $1,000, with zero carbon emission"
+    },
+    {
+      "id": "P5",
+      "text": "Filter units with the absorbents can treat large brine volumes and extract multiple metric tons of lithium per day",
+      "status": "explicit",
+      "evidence_span": "our filter units, which can treat almost 171 gallons of water per minute, extracting two metric tons of lithium per day"
+    },
+    {
+      "id": "P6",
+      "text": "Current customers are lithium brine and petrochemical operators needing cost- and efficiency-advantaged DLE",
+      "status": "explicit",
+      "evidence_span": "Our current customers are lithium brine operators"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient brine extraction versus battery demand",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Selective nano-mosaic direct lithium extraction",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Brine and petrochemical operator customers",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Provide sustainable, efficient lithium extraction technology for the clean-energy market",
+      "status": "explicit",
+      "evidence_span": "aims to provide sustainable energy technology to the global market"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Technology can extend beyond lithium to nickel and cobalt extraction",
+      "evidence_span": "can be extended to various chemical extraction like nickel and cobalt"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Addressing these challenges, Minerva Lithium have developed direct lithium extraction technology"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our company offers competitive advantage in terms of cost and efficiency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our current customers are lithium brine operators"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team credentials and $40M revenue projection excluded as bio/traction. Market-size figures used only to ground demand premise. Extension to nickel/cobalt is secondary_value not a core premise. Need/technology/customer triad justified by separate revisability.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-295",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:34:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

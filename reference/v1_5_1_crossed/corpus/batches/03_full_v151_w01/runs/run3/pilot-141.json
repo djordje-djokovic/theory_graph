@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-141",
+    "coder_session_id": "session_06",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web3 game economies become real economies that can crash without active health management",
+      "status": "explicit",
+      "evidence_span": "how do I make sure my economy doesn't crash"
+    },
+    {
+      "id": "P2",
+      "text": "On-chain minigames let players produce inside the game economy",
+      "status": "explicit",
+      "evidence_span": "we have on-chain minigames"
+    },
+    {
+      "id": "P3",
+      "text": "On-chain crafting (Minecraft-style) supports player production in the economy",
+      "status": "explicit",
+      "evidence_span": "on-chain crafting, Minecraft style"
+    },
+    {
+      "id": "P4",
+      "text": "Games can deliver rewards to players for activities they do",
+      "status": "explicit",
+      "evidence_span": "deliver rewards to their players for activities that they do"
+    },
+    {
+      "id": "P5",
+      "text": "Leaderboards incentivize players to act in a healthy manner inside the economy",
+      "status": "explicit",
+      "evidence_span": "leaderboards that incentivize players to act in a healthy manner inside the economy"
+    },
+    {
+      "id": "P6",
+      "text": "Security bots protect the economy against bad actors",
+      "status": "explicit",
+      "evidence_span": "we run security bots as well to make sure that the economy is protected against bad actors"
+    },
+    {
+      "id": "P7",
+      "text": "Monetization is $1000/month for on-chain economy visibility plus $0.10 per user interaction for game projects",
+      "status": "explicit",
+      "evidence_span": "we charge $1,000 per month to anyone who wants to know what's going on in an on-chain economy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Web3 game economy crash risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "on-chain economy tools",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "infrastructure pricing",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Healthy, crash-resistant economies for Web3 games",
+      "status": "explicit",
+      "evidence_span": "help games maintain healthy economies"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do I keep the economy healthy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "features on our platform that help games maintain healthy economies"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for game projects, we charge as an infrastructure provider"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Prior marketing/staking approaches folded into the economy-health problem framing, not separate premises. Platform capabilities split per enumeration atomicity (distinct JTBD). Transaction-volume traction excluded. Anti-template note: need / tooling / pricing separately revisable in the transcript."
+}

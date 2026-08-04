@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Making respiratory devices data-smart improves adherence and pulmonary outcomes",
+      "status": "explicit",
+      "evidence_span": "making respiratory devices data smart to enable improved adherence, leading to better patient outcomes"
+    },
+    {
+      "id": "P2",
+      "text": "Patients cannot reliably self-report complex multi-device asthma regimens and peak-flow logging",
+      "status": "explicit",
+      "evidence_span": "she could remember only three of her 14 total weekly doses"
+    },
+    {
+      "id": "P3",
+      "text": "Clinic spirometers are bulky and unchanged for generations, making lung checks infrequent and intimidating",
+      "status": "explicit",
+      "evidence_span": "bulky and intimidating spirometer, a device that has not evolved in function or form since it was first introduced in 1840"
+    },
+    {
+      "id": "P4",
+      "text": "Inhaler sensors objectively timestamp controller/rescue use and assess technique",
+      "status": "explicit",
+      "evidence_span": "objectively time stamping when she's taken her medication"
+    },
+    {
+      "id": "P5",
+      "text": "FDA Class II mobile spirometer delivers clinical-grade six-second tests on the go",
+      "status": "explicit",
+      "evidence_span": "we received FDA clearance at the end of May as a class two medical device"
+    },
+    {
+      "id": "P6",
+      "text": "Doctor dashboard summarizes adherence and spirometry for the 99% of time patients are outside clinic",
+      "status": "explicit",
+      "evidence_span": "enable optimal decision making for the 99% of time that Jillian spends her life outside of clinic"
+    },
+    {
+      "id": "P7",
+      "text": "Connected platform sells primarily B2B to health systems, pharma, and payers",
+      "status": "explicit",
+      "evidence_span": "while our system is primarily focused on B2B"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Respiratory self-management burden",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected sensors, spirometry, and clinician portal",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B commercial model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better pulmonary outcomes through improved medication adherence and home lung-function visibility",
+      "status": "explicit",
+      "evidence_span": "improved adherence, leading to better patient outcomes for pulmonary patients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing asthma does not need to be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smarter tools really are the key to breathing better"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully connected health platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team credentials excluded as biographical. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-778",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

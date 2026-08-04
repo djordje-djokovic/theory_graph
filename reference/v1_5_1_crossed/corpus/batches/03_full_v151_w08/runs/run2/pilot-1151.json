@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1151",
+    "coder_session_id": "session_03",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers are overwhelmed with information",
+      "status": "explicit",
+      "evidence_span": "consumers are absolutely overwhelmed with information"
+    },
+    {
+      "id": "P2",
+      "text": "Quickie generates machine-made, curated, interactive information experiences you can watch",
+      "status": "explicit",
+      "evidence_span": "an information experience that was generated to describe San Francisco"
+    },
+    {
+      "id": "P3",
+      "text": "Quickie is a platform/API that can produce experiences from any content on any device beyond the first reference product",
+      "status": "explicit",
+      "evidence_span": "Quickie is a platform that can accommodate all sort of content from an API"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "information overload problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "machine-generated quickie experiences",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "content platform and API",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Information becomes a curated interactive experience you can watch instead of overload",
+      "status": "explicit",
+      "evidence_span": "Information becomes an experience that I can watch"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "overwhelmed with information"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "watching a quickie"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "produce a Quickie from any content on any device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript truncates during live demo (truncated). Hollywood framing folded into value. Profile/restaurant/morning-briefing demos folded as platform applications (§4.1.2). First reference product vs broader platform split as speaker-framed modules."
+}

@@ -1,0 +1,125 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People buy brand clothes because they want to talk about them and show others what they have and wear",
+      "status": "explicit",
+      "evidence_span": "They want to talk about them. They want others get to know what they have, what they wear"
+    },
+    {
+      "id": "P2",
+      "text": "People often see clothing they want but cannot identify the brand or where to buy it",
+      "status": "explicit",
+      "evidence_span": "you see somebody, for example, in a cafe wearing with gorgeous shoes, and you realize you want the same one"
+    },
+    {
+      "id": "P3",
+      "text": "Brand-in tags let users label brands on their own photos and on photos from social networks",
+      "status": "explicit",
+      "evidence_span": "It provides them with the tools for tagging brands on their photos and even on photos from social networks like Facebook"
+    },
+    {
+      "id": "P4",
+      "text": "The community answers brand-identification questions through the app",
+      "status": "explicit",
+      "evidence_span": "ask community what brand it is by making a question branding"
+    },
+    {
+      "id": "P5",
+      "text": "Photo polls deliver purchase advice from friends and fashion experts in less than a minute",
+      "status": "explicit",
+      "evidence_span": "Take photos of yourself and create a poll. In less than a minute, you'll get a lot of advice"
+    },
+    {
+      "id": "P6",
+      "text": "The web service brings people together on the basis of their brand loyalty, with wardrobes, wish lists, and cross-site tagging",
+      "status": "explicit",
+      "evidence_span": "brings people together on the basis of their brand's loyalty"
+    },
+    {
+      "id": "P7",
+      "text": "Brands will pay to communicate with their fans and with fans of their competitors",
+      "status": "explicit",
+      "evidence_span": "brands can communicate with their fans and even with fans of their competitors"
+    },
+    {
+      "id": "P8",
+      "text": "A store marketplace automatically attaches purchase links to brand-ins by analyzing store price lists for keywords",
+      "status": "explicit",
+      "evidence_span": "Stores provide us with a price list and our system analyze keywords and automatically attach the links to the branding"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Brand-sharing motivation and identification gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Tagging and community features",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Brand communication and store marketplace",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Brand-loving people can discover what brand something is and where to buy it",
+      "status": "explicit",
+      "evidence_span": "how to know what brand it is and where to buy it"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Brands gain a direct channel to communicate with their own and their competitors' fans",
+      "evidence_span": "brands can communicate with their fans and even with fans of their competitors"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They want others get to know what they have, what they wear"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tagging brands on their photos"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically attach the links to the branding"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Heavy ASR noise ('TechBrand'/'Tag Brand', 'BookMarket' bookmarklet); corrected silently in premise text where unambiguous. 'Just launched' status, pending app approval, international expansion plans, investment search, and team experience excluded per 4.2. No dependency links coded; none plainly asserted. Partition happens to follow need/features/monetization: justified because community tagging mechanics, the brand-loyalty need claims, and the brand/store monetization modules are separately revisable (monetization could change without altering tagging, and vice versa).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-998",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:26:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

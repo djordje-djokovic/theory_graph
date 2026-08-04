@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-452",
+    "coder_session_id": "session_01",
+    "session_case_index": 7,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Food production needs automation for farm work people do not want to do, starting with strawberry harvest",
+      "status": "explicit",
+      "evidence_span": "saving the world's food production system by automating the work people don't want to do"
+    },
+    {
+      "id": "P2",
+      "text": "A field robot with vision and a patented soft gripper picks strawberries in real time under tough farm conditions",
+      "status": "explicit",
+      "evidence_span": "Our robotic platform drives across the field while our vision system detects the berries and figures out how to reach them"
+    },
+    {
+      "id": "P3",
+      "text": "Deployment requires no change in the grower's growing process",
+      "status": "explicit",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment"
+    },
+    {
+      "id": "P4",
+      "text": "Robots-as-a-service picks strawberries for growers at about 23 cents per pound with full service included",
+      "status": "explicit",
+      "evidence_span": "We pick strawberries, and growers will pay us 23 cents per pound"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unwanted farm labor gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Strawberry picking robot",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "No grower process change",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "RaaS pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automate strawberry picking to sustain food production",
+      "status": "explicit",
+      "evidence_span": "help save the world's food production system"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "saving the world's food production system by automating the work people don't want to do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "TrapTik's giant farming robots pick strawberries"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing a smooth path for deployment"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is slightly less than the current spend"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision, path planning, gripper mechanics, dust/rain robustness, ripeness accuracy, and on-device compute folded into P2 (feature cascade + process/performance package). Year-round strawberry focus vs weeding/apples treated as positioning within P2. Master-plan expansion to other crops coded as vision, not premises. Grower testing partnerships treated as traction."
+}

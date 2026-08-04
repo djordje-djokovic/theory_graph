@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without credit history, people pay extreme rates (e.g., 23% car loans)",
+      "status": "explicit",
+      "evidence_span": "because she did not have a credit score, Dolores had to pay an absurd 23% interest rate"
+    },
+    {
+      "id": "P2",
+      "text": "Credit-builder CD-like product reports payments and returns savings at term end",
+      "status": "explicit",
+      "evidence_span": "After making her six payments, she will receive her entire $600 back at the end of the term"
+    },
+    {
+      "id": "P3",
+      "text": "Users choose $25–$250 monthly amounts and 3–12 month terms for greater score impact",
+      "status": "explicit",
+      "evidence_span": "choosing a monthly amount between $25 to $250 and selecting a term between 3, 6, 9, or 12 months"
+    },
+    {
+      "id": "P4",
+      "text": "Bureau reporting of monthly performance builds the score",
+      "status": "explicit",
+      "evidence_span": "Self Lender reports her monthly payment performance to the credit bureaus"
+    },
+    {
+      "id": "P5",
+      "text": "Platform then offers exclusive loans and applies balance as down payment",
+      "status": "explicit",
+      "evidence_span": "Delores has offered multiple financial products, including a auto loan at 11% instead of the subprime rate"
+    },
+    {
+      "id": "P6",
+      "text": "Low-friction $3/month DIY credit improvement targeting unbanked-from-mainstream users",
+      "status": "explicit",
+      "evidence_span": "only costs $3 per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Self-lender credit builder mechanics",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Rewards lending marketplace",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "DIY path from no/subprime credit to affordable products and large interest savings",
+      "status": "explicit",
+      "evidence_span": "empowers our users with the tools for active, do-it-yourself financial improvement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she has built positive payment history, and she now has a credit score of 660"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building credit, saving money, and getting access to affordable financial products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Amount/term choices kept separate from bureau reporting (could fail separately).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-872",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:33:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

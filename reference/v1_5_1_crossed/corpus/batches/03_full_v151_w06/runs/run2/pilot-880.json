@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-880",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In-car technology goes outdated quickly and cannot be upgraded without buying a new car, leaving over a billion existing vehicles behind OEM smart-car efforts",
+      "status": "explicit",
+      "evidence_span": "aren't you afraid that a year from now, this technology will be completely outdated, and the only way to change that is to buy a new car"
+    },
+    {
+      "id": "P2",
+      "text": "A plug-in connected-car device and platform make post-1996 cars smarter with an app catalog usable from day one",
+      "status": "explicit",
+      "evidence_span": "The VINLY platform uses this small device to connect and communicate with your car"
+    },
+    {
+      "id": "P3",
+      "text": "Consumer hardware is sold at fixed price tiers for basic and complete devices",
+      "status": "explicit",
+      "evidence_span": "$49.99 for our vinly basic device, at $149.99 for our vinly complete"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprises can plug the same devices into fleets and run business apps including customizable fleet tracking on a per-year device-and-data price",
+      "status": "explicit",
+      "evidence_span": "companies can buy Vinly devices, plug it into their fleet, and start using business applications"
+    },
+    {
+      "id": "P5",
+      "text": "Developers can build connected-car apps for any make and model through a simple API plus hardware backpack, SDKs, and tooling",
+      "status": "explicit",
+      "evidence_span": "developers can build applications for the connected car, regardless of their make and model, because we simplified the complicated car into a simple API call"
+    },
+    {
+      "id": "P6",
+      "text": "Hundreds of millions of vehicles in major markets form a large connected-car opportunity developers previously could not build for",
+      "status": "explicit",
+      "evidence_span": "more than 400 million vehicles of which developers could not build applications for"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "outdated existing-car technology",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "consumer and fleet connected-car platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "open developer platform",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "connected-car market for developers",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A connected-car platform that makes existing cars smarter with apps and services for consumers, fleets, and developers",
+      "status": "explicit",
+      "evidence_span": "VINLY is a connected car platform that enables building applications and services for your car"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What about more than one billion vehicles on the road right now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download the Vinly app catalog and start using apps right away"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "developers can build applications for the connected car, regardless of their make and model"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we wanted to enable developers to get a huge piece of this market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Safety/money/fun app list folded as day-one catalog facets of the device/platform mechanism (§4.1.7). Developer API/backpack/SDK cascade folded into one developer-platform premise. Enterprise fleet kept with consumer product as same device offering with separate pricing detail. Traction (developers signed up, apps submitted) and Disrupt prize excluded (§4.2). Singleton D1/D3/D4 retained as separately revisable problem, developer module, and market claims. Anti-template: four domains, not need/product/money."
+}

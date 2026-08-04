@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote clinics lack affordable, portable diagnostic tools available in large hospitals",
+      "status": "explicit",
+      "evidence_span": "Many tools are available in large hospitals. are not accessible because they are expensive or too bulky"
+    },
+    {
+      "id": "P2",
+      "text": "Oscult is an iPad-based ultrasound that captures, annotates, measures, and documents exams with a mobile UX",
+      "status": "explicit",
+      "evidence_span": "We have built a new ultrasound solution working on an iPad"
+    },
+    {
+      "id": "P3",
+      "text": "Clinicians can share live images over cellular or Wi-Fi to get specialist advice without patient transfer",
+      "status": "explicit",
+      "evidence_span": "I can call a more experienced doctor in a major city hospital to get advice"
+    },
+    {
+      "id": "P4",
+      "text": "Priced at about one-third of regular ultrasound and positioned for emergency and classroom broadcast use",
+      "status": "explicit",
+      "evidence_span": "14,900 euros, Ausgut is a great tool for emergency. This is one third of the price of the regular ultrasound device"
+    },
+    {
+      "id": "P5",
+      "text": "Emerging-market clinic trials plus pending CE/FDA clearance unlock US and European sales via pre-order",
+      "status": "explicit",
+      "evidence_span": "CE Medical and FDA are on track to be approved by mid-next year, which will allow us to sell to US and European markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inaccessible clinic diagnostics",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "iPad ultrasound and teleconsult",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "pricing, regulatory, and market entry",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local clinics better diagnose and connect to specialists to improve patient health without medevac",
+      "status": "explicit",
+      "evidence_span": "local clinics can better diagnose and connect to specialists to improve the patient's health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clinics are not equipped to meet patients' needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring great user experience and communication in medical imaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of the price of the regular ultrasound device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Expensive/bulky hospital tools inaccessible to remote clinics folded as one access problem (§4.1.6). Capture/contrast/annotate/measure cascade folded into iPad ultrasound; teleconsult kept as separately emphasized communication capability within product domain (§4.1.7). Education broadcast as application (§4.1.2). Portable-ultrasound market size as framing. Consumer future as vision. Founder bio excluded. Anti-template: problem, product, and price/regulatory GTM separately revisable. ASR Oscult/Ausgut/skirt left in spans."
+}

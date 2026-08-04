@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "ML-powered virtual marketing manager suggests location- and industry-relevant campaigns and executes them across channels",
+      "status": "explicit",
+      "evidence_span": "This is how my virtual marketing manager gives me marketing ideas"
+    },
+    {
+      "id": "P2",
+      "text": "Alliance campaigns let merchants jointly message shared and new audiences",
+      "status": "explicit",
+      "evidence_span": "With just a few clicks, I can either create a new alliance campaign or join an existing one"
+    },
+    {
+      "id": "P3",
+      "text": "Also automates tasks like Google Places visibility and holiday customer messaging",
+      "status": "explicit",
+      "evidence_span": "Alicanto realized I'm not on Google Places. It will actually do it for me, increasing my visibility on the web"
+    },
+    {
+      "id": "P4",
+      "text": "Freemium with sponsored suggestions; viral invites through Alliances",
+      "status": "explicit",
+      "evidence_span": "Alliance feature that enables businesses to invite other businesses to our system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Automated multi-channel marketing suite",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Alliance co-marketing",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium viral model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Rapidly improve retail marketing KPIs versus basic prior marketing",
+      "status": "explicit",
+      "evidence_span": "Before Alicanto, Ruti and our other beta customers ran very basic marketing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Now with Alicanto, they run very sophisticated marketing mix"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reaching a huge number of new customers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "revenue model is freemium"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Borderline: SEO/Places kept as part of suite rather than vision. Templates folded into P1.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1002",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:48:00+02:00"
+  }
+}

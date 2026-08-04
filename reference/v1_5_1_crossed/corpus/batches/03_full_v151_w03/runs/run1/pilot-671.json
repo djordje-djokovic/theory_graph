@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-671",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CDN/HLS large-audience streaming introduces minutes of latency while existing real-time streams under half a second do not scale to enough concurrent viewers",
+      "status": "explicit",
+      "evidence_span": "content delivery network based solution that results in an awful lot of latency"
+    },
+    {
+      "id": "P2",
+      "text": "A ground-up platform with proprietary algorithms including an interactive transport protocol streams to millions of concurrent viewers at under half a second of latency via APIs and SDKs",
+      "status": "explicit",
+      "evidence_span": "scalable real time video streaming platform we can stream to millions of concurrent viewers with under half a second of latency"
+    },
+    {
+      "id": "P3",
+      "text": "Optional proximity multicast peer-to-peer algorithms further cut cost and address bandwidth constraints at internet and micro scale",
+      "status": "explicit",
+      "evidence_span": "proximity multicast, which is a series of peer-to-peer algorithms that help to further reduce cost"
+    },
+    {
+      "id": "P4",
+      "text": "Licensed for one-to-many broadcast, expanded group chat, and broadcast-out-to-millions use cases across social, webinar, news, education, and later e-sports/OTT",
+      "status": "explicit",
+      "evidence_span": "we're able to take that group broadcast, that group chat, and broadcast out to millions of concurrent viewers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "latency versus scale tradeoff",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "scalable real-time streaming stack",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "broadcast and group-chat use cases",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Content owners reach large audiences with low enough latency to drive real-time interaction and engagement",
+      "status": "explicit",
+      "evidence_span": "reach really large audiences and do so in a very innovative way with very low latency to drive interactive interaction and engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the video was being delivered minutes later"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver that same stream to that same audience in under half a second of latency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive interactivity and engagement in the streams they're creating"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "CDN latency vs non-scaling realtime folded as one tradeoff pain. API/SDK/30-min integration and transport protocol folded into platform mechanism; proximity multicast kept as optional separately revisable cost/scale module (speaker frames as additional option). Named customer pilots treated as traction not premises. Team bios excluded."
+}

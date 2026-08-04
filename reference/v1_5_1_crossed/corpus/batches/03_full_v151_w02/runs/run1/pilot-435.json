@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-435",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People attend events to learn from content and to socialize; livestreams, webinars, and AMAs deliver content but not socialization",
+      "status": "explicit",
+      "evidence_span": "People come to events for two reasons. To learn from great content and to socialize with people"
+    },
+    {
+      "id": "P2",
+      "text": "Virtual venue platform with customized avatars lets hundreds of real people move around and talk as at an in-person event, including post-panel socialization",
+      "status": "explicit",
+      "evidence_span": "Enter Teo, a platform for virtual events. You appear inside of a venue"
+    },
+    {
+      "id": "P3",
+      "text": "Monetize by charging organizations a monthly venue fee plus a percentage of ticket sales and virtual sponsorship",
+      "status": "explicit",
+      "evidence_span": "charging organizations a monthly fee to have access to our venues. And then we also take a percentage of ticket sales and virtual sponsorship"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing online event socialization",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Avatar virtual event venue",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Venue subscription and event take-rate",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect distributed communities by delivering both event learning and in-venue socialization online",
+      "status": "explicit",
+      "evidence_span": "help connect your community, ah, your distributed community"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The world is missing a product that gives the two benefits of why we are all here at this event online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Creating connections that you could never create otherwise"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The way that we make money as a company is by charging organizations a monthly fee to have access to our venues"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Livestream/webinar/AMA limitations folded into one missing-socialization pain (rule 6). Avatar movement, stage, and multi-hour socializing treated as cascade of one virtual-venue mechanism. Anti-template: need, product, and monetization separately revisable."
+}

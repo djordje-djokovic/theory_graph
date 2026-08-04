@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-427",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drug development requires molecules that are effective and satisfy many other properties in a huge chemical space, but human chemists explore it ad hoc and slowly without accurate behavior predictions",
+      "status": "explicit",
+      "evidence_span": "as you're developing a drug, you need it to be effective, but you also need all of these other things to line up. And this is really hard as basically a human chemist"
+    },
+    {
+      "id": "P2",
+      "text": "Graph-based PotentialNet AI platform predicts molecular properties from atom/bond structure better than hard-coded features or voxel image-style methods",
+      "status": "explicit",
+      "evidence_span": "one feature of potential net is that it uses, as its representation, a graph, which is pretty straightforward"
+    },
+    {
+      "id": "P3",
+      "text": "Experienced chemists who have produced FDA-approved drugs remain necessary alongside AI because drug development is still an incredibly complicated process",
+      "status": "explicit",
+      "evidence_span": "we also have a couple other very key competencies. In particular, I want to call out our chemical expertise"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "High-dimensional drug property search problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Graph AI molecular property prediction",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Experienced chemistry team competence",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make drug development more effective so people get medicines for diseases with few current options",
+      "status": "explicit",
+      "evidence_span": "make the drug development industry more effective and basically help people get medicines for diseases that currently they don't have very many options for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it would be much better if we had accurate predictions of what a particular molecule in there is going to do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Predicting molecular properties via computer is very desirable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're very excited to see what they can do with our technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript starts mid-argument (truncated). Hard-coded ML and voxel approaches kept as contrast inside PotentialNet premise, not separate premises. Chemical expertise coded because speaker states it as a key competency required with AI (exclusion override)."
+}

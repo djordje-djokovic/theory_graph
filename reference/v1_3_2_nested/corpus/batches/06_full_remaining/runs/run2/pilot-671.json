@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large-audience CDN streaming adds about a minute or two of latency while true real-time streams fail to scale",
+      "status": "explicit",
+      "evidence_span": "they don't scale to reach enough concurrent viewers"
+    },
+    {
+      "id": "P2",
+      "text": "Phoenix streams the same video to huge audiences under half a second using a ground-up platform and proprietary algorithms including interactive transport",
+      "status": "explicit",
+      "evidence_span": "we've built it from the ground up to eliminate many of these, deliver the same video using several of our proprietary algorithms, including our interactive transport protocol"
+    },
+    {
+      "id": "P3",
+      "text": "Proximity multicast peer-to-peer option further cuts cost and scales under bandwidth constraints",
+      "status": "explicit",
+      "evidence_span": "proximity multicast, which is a series of peer-to-peer algorithms that help to further reduce cost deliver on an even massive scale"
+    },
+    {
+      "id": "P4",
+      "text": "Customers integrate via APIs/SDKs across mobile, web, and desktop browsers",
+      "status": "explicit",
+      "evidence_span": "through our API's and SDK's that reach devices like Android iOS as well as web and desktop browsers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Real-time at scale problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Phoenix transport and multicast platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "API and SDK distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Low-latency video at large concurrent scale for interactive engagement",
+      "status": "explicit",
+      "evidence_span": "very low latency to drive interactive interaction and engagement with your users"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That is until now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "under half a second of latency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "customers have been able to integrate our solution with as little as 30 minutes of work"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "CDN latency and real-time scale limits merged into one market-gap premise. Bio and customer logos excluded. Use-case laundry list folded into platform capability (§4.1(2)). Need/product/channel triad justified: licensing channel separately revisable from transport algorithms.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-671",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:48:00+02:00"
+  }
+}

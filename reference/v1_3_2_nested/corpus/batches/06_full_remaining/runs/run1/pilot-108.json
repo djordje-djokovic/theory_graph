@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-108",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Text messaging is convenient but not personal, while video chat is engaging but hard to schedule on the fly",
+      "status": "explicit",
+      "evidence_span": "text, which is very convenient, but not really personal. And also video, like video chat, which is engaging, but it doesn't really allow for you to do it on the fly"
+    },
+    {
+      "id": "P2",
+      "text": "Attachment-based video messaging lacks spontaneity and the wow of the moment",
+      "status": "explicit",
+      "evidence_span": "You don't really get the wow of the moment. There's no spontaneity"
+    },
+    {
+      "id": "P3",
+      "text": "Glide delivers near-instant half-duplex video that recipients can watch while it is still being recorded",
+      "status": "explicit",
+      "evidence_span": "When I begin broadcasting, about a second later, you can consume my message on the recipient's end"
+    },
+    {
+      "id": "P4",
+      "text": "Messages are stored in the cloud so they take no device space and can be watched later if the recipient is unavailable",
+      "status": "explicit",
+      "evidence_span": "all the messages are stored in the cloud. Nothing takes up any room on the device"
+    },
+    {
+      "id": "P5",
+      "text": "The consumer product will be free with all features free and completely ad-free",
+      "status": "explicit",
+      "evidence_span": "we want to be a free app with all of our features free. And we want to be completely ad free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Async personal video gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time cloud video messaging",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Free ad-free consumer model",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Video messaging with the convenience of text and the personality of video",
+      "status": "explicit",
+      "evidence_span": "the convenience of text messaging, but the personality of video"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "convenience of text messaging, but the personality of video"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "somebody can watch it while you're still recording it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free app with all of our features free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript truncates mid-sentence. Future enterprise/third-party monetization treated as vision framing (§4.1(4)), not a premise; GlideBot support demo folded into the consumer product story rather than a separate module. Patent-pending claim folded into the messaging mechanism (§4.1(1)). Team angel credentials and Android beta launch excluded as bio/traction. Singleton D3: free/ad-free commercial condition is separately revisable."
+}

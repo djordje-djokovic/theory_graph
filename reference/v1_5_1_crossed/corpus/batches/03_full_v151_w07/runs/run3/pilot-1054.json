@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1054",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Website owners need Time Machine-like backup and restore for their sites",
+      "status": "explicit",
+      "evidence_span": "We are a time machine for your website"
+    },
+    {
+      "id": "P2",
+      "text": "CodeGuard backs up sites via FTP/SFTP, monitors for changes on a schedule, snapshots only when code changes, and offers one-button undo",
+      "status": "explicit",
+      "evidence_span": "we back up your site. Right now, we use FTP or SFTP"
+    },
+    {
+      "id": "P3",
+      "text": "Monitoring can auto-repair by pushing the last version when unexpected changes appear (e.g., while away or under malware)",
+      "status": "explicit",
+      "evidence_span": "if it notices anything is different, I want it to repair by pushing the last version"
+    },
+    {
+      "id": "P4",
+      "text": "Git-based version control is packaged so non-expert site owners can use it easily",
+      "status": "explicit",
+      "evidence_span": "Our system is built upon Git"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "website time-machine need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "FTP backup monitor and auto-repair",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Website protection for ordinary owners via easy backup and one-button revert of any change",
+      "status": "explicit",
+      "evidence_span": "website protection for the rest of us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are a time machine for your website"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can do it with just one button"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "FTP backup, change-only snapshots, hourly/daily monitoring, and one-button undo folded as one backup mechanism cascade (§4.1.7); auto-repair vacation mode kept as a configured behavior of that mechanism rather than a separate product. Beta seat count and promo code excluded (§4.2). cPanel plugins noted as roadmap detail inside the backup premise."
+}

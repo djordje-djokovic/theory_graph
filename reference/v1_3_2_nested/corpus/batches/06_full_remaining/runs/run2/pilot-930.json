@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developers need cross-platform backends for data sync; current choices are limited, slow, or costly to scale",
+      "status": "explicit",
+      "evidence_span": "to have data sync across different devices, they first need a back end"
+    },
+    {
+      "id": "P2",
+      "text": "Backend uses Dropbox/Google Drive personal clouds to store and instantly sync app data across web and mobile",
+      "status": "explicit",
+      "evidence_span": "once both apps are authorized on your Dropbox account, data is instantly synced between the two"
+    },
+    {
+      "id": "P3",
+      "text": "Local-first offline storage then cloud sync is the default persistence path",
+      "status": "explicit",
+      "evidence_span": "that data is first stored locally and then synced to be online when you do have a connection"
+    },
+    {
+      "id": "P4",
+      "text": "Users can personally delete app data from their cloud, unlike opaque social-network servers",
+      "status": "explicit",
+      "evidence_span": "you can personally delete your data for your apps"
+    },
+    {
+      "id": "P5",
+      "text": "Removes the developer's server: setup in minutes and no storage hosting costs at any scale",
+      "status": "explicit",
+      "evidence_span": "we completely remove the server from the app development equation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Backend sync requirement",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personal cloud data plane",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Serverless cost and time for developers",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Solve data continuity across devices via personal cloud as application backend",
+      "status": "explicit",
+      "evidence_span": "Nimbus Space solves the data continuity problem by tapping into the power of personal cloud in a completely new way"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data continuity across devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "perfectly syncing application back end"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "never have to look at your own back end again"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "iCloud/self-build/BaaS alternatives folded into P1 need context.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-930",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:37:10+02:00"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-733",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite heavy brand marketing spend, brands lack control over what happens in stores where most purchase decisions are made",
+      "status": "explicit",
+      "evidence_span": "they have no control over what's really happening in stores"
+    },
+    {
+      "id": "P2",
+      "text": "In-store execution fails because brand–retailer collaboration depends on calls, emails, and costly store visits",
+      "status": "explicit",
+      "evidence_span": "the collaboration is broken. Brands and retailers are still relying on multiple phone calls and emails and very expensive and inefficient store visits"
+    },
+    {
+      "id": "P3",
+      "text": "Ubique is a collaboration platform connecting brands, retailers, and in-store employees around campaign execution",
+      "status": "explicit",
+      "evidence_span": "we are reinventing how retailers and brands collaborate"
+    },
+    {
+      "id": "P4",
+      "text": "Store staff complete guided missions with barcode checks, training, and photo confirmation while brands see real-time activity feeds",
+      "status": "explicit",
+      "evidence_span": "he sees a list of all of his tasks. And after reading the instruction, he's ready to start his mission"
+    },
+    {
+      "id": "P5",
+      "text": "Real-time object detection plus combined sales and merchandising data surfaces share-of-shelf gaps and live retailer chats",
+      "status": "explicit",
+      "evidence_span": "By combining sales data with merchandising info, she has now insights that were never available before"
+    },
+    {
+      "id": "P6",
+      "text": "Brands can optionally crowdsource in-store data collection via a large consumer community",
+      "status": "explicit",
+      "evidence_span": "use our crowdsourcing community of 50,000 consumers to collect the data on her behalf"
+    },
+    {
+      "id": "P7",
+      "text": "SaaS pricing charges on a per-user, per-company basis",
+      "status": "explicit",
+      "evidence_span": "charge on a per-user, per-company basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-store execution gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mission and detection platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Crowdsourced collection option",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Per-user SaaS",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved field efficiency and merchandising ROI that lifts in-store sales",
+      "status": "explicit",
+      "evidence_span": "We've improved field efficiency. We've maximized the merchandising return on investment"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "in-store execution requires a new collaboration platform. That's why we built Ubique"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "poor in-store execution will result in 20 billion euro of lost revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maximized the merchandising return on investment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collect the data on her behalf"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "SaaS business model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent run: crowdsourcing split as separately revisable collection module (speaker presents it as alternative path). Transcript truncated at end. Traction figures excluded. Four-domain partition; not a need/product/money triad."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "coder_session_id": "session_02",
+    "session_case_index": 7,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial job sites suffer preventable water leaks, mold, and fire damage with no active fire monitoring on most sites",
+      "status": "explicit",
+      "evidence_span": "there's currently no active fire monitoring solution for most job sites today"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time end-to-end environmental sensor networks provide active warning and damage mitigation on job sites",
+      "status": "explicit",
+      "evidence_span": "Pillar is the first real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    },
+    {
+      "id": "P3",
+      "text": "Sensor data supports logistics placement of equipment and management of personnel exposure",
+      "status": "explicit",
+      "evidence_span": "the data is actually usable for logistics. So we can help contractors better place equipment and better manage personnel exposure to potentially harmful conditions"
+    },
+    {
+      "id": "P4",
+      "text": "Stored construction environmental data creates a building history transferable to future owners",
+      "status": "explicit",
+      "evidence_span": "Now your building has a Carfax. All that data is stored and passed on"
+    },
+    {
+      "id": "P5",
+      "text": "Alerts push to smartphones so contractors need not learn new dashboard software",
+      "status": "explicit",
+      "evidence_span": "contractors don't want to learn a new piece of software. So that's why we push notifications directly to the smartphone"
+    },
+    {
+      "id": "P6",
+      "text": "Pricing is a one-time per-square-foot install fee plus monthly per-square-foot SaaS bundling hardware, firmware, software, and analytics",
+      "status": "explicit",
+      "evidence_span": "we charge $0.03 per square foot one-time installation fee, and $0.02 per square foot per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Job-site water, mold, and fire damage",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time environmental monitoring network",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Per-square-foot hardware-software package",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buildings built with less time, less money, and higher quality via preventable-damage monitoring",
+      "status": "explicit",
+      "evidence_span": "we're going to change the way buildings are built. Less time, less money, and with a quality never before seen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of which were preventable or mitigatable if they had a monitoring solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we do active warning and damage mitigation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bundling hardware, firmware, software, and data analytics into one easy package"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Water/mold/fire pains coded as one job-site damage problem set (v1.5.1 §4.1.6). Mounting methods and floor-plan deployment cascade folded into the monitoring solution. Warning, logistics, Carfax history, and smartphone alerts kept as separately framed jobs of the product under rule 2. Install+monthly price folded as one commercial package. Team bios and market-size figures excluded. Anti-template: need/product/pricing triad justified by separately revisable damage problem, monitoring offering, and sqft commercial model."
+}

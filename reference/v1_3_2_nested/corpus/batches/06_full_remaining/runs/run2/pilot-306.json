@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Content is the most important growth factor yet budgets are wasted on ineffective creative",
+      "status": "explicit",
+      "evidence_span": "Content is the most important factor for growth. 47% of sales is attributed to the ad creative, and yet 25% of marketing budgets are wasted"
+    },
+    {
+      "id": "P2",
+      "text": "Turning design into data points reveals which creative features drive conversions",
+      "status": "explicit",
+      "evidence_span": "by turning design into data points, we can discover what exactly about the creative is driving results"
+    },
+    {
+      "id": "P3",
+      "text": "Insights feed generative models that produce image prompts, copy, and headlines in seconds",
+      "status": "explicit",
+      "evidence_span": "what used to take a team of marketers, designers, data scientists, copywriters, weeks, not months sometimes, of work has taken our AI mere seconds to generate"
+    },
+    {
+      "id": "P4",
+      "text": "Human annotation and explicit approval keep every ad on brand before multi-network launch",
+      "status": "explicit",
+      "evidence_span": "Customers can annotate each ad, provide feedback, and ensure that every single content we're generating is on brand"
+    },
+    {
+      "id": "P5",
+      "text": "Ad-network API integrations ground generation in live performance data",
+      "status": "explicit",
+      "evidence_span": "proprietary API integrations with all the ad networks and marketing platforms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Creative waste problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Analytics-to-generation creative loop",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalized ads that deliver conversions from real-time data while marketers stay in control",
+      "status": "explicit",
+      "evidence_span": "OmniKey lets customers harness the power of state-of-art machine learning and generative AI while staying in control"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ineffective content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "actually delivers conversions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Named foundation models (DALL-E, GPT-3, Stability) folded into generative capability. ICP 12M businesses treated as market framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-306",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

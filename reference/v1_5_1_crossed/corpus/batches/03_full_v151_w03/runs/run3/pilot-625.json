@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-625",
+    "coder_session_id": "session_01",
+    "session_case_index": 14,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pregnancy complications are rising while prenatal visits are inconvenient, expensive, and limited by outdated technology, leaving moms uncertain",
+      "status": "explicit",
+      "evidence_span": "these trips are inconvenient, expensive, and ultimately limited by 50-year-old antiquated technology"
+    },
+    {
+      "id": "P2",
+      "text": "A medical-grade wearable plus analytics measures maternal/fetal biopotentials (including contractions) to reassure moms and give doctors better information",
+      "status": "explicit",
+      "evidence_span": "We combine wearable devices with data analytics to both reassure expecting moms and provide doctors with better information"
+    },
+    {
+      "id": "P3",
+      "text": "Same sensor roadmap expands via OTA updates to fetal movement and heart rate beyond starting with contractions, outperforming existing/emerging wearables",
+      "status": "explicit",
+      "evidence_span": "All of these features will be made available via over-the-air software updates"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts DTC monthly subscription with sensor return, then referrals/channels, then FDA reimbursement toward standard of care",
+      "status": "explicit",
+      "evidence_span": "We will first offer Bloom Life direct to consumers via monthly subscription"
+    },
+    {
+      "id": "P5",
+      "text": "Crowdsourced maternal-fetal dataset powers cloud ML to help doctors predict and manage complications before it is too late",
+      "status": "explicit",
+      "evidence_span": "crowdsource the largest and most comprehensive data set on maternal and fetal health ever collected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "uncertain antiquated prenatal care",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "wearable prenatal biopotential sensing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "DTC subscription to reimbursed care",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "crowdsourced complication prediction data",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved mom and baby health and birth outcomes, preventing heartache of lost children",
+      "status": "explicit",
+      "evidence_span": "technology designed to improve the health of moms and babies"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peace of mind and clearer communication with doctors for expecting moms",
+      "evidence_span": "takes the guesswork out of pregnancy and puts need-to-know information about her body and her baby at her fingertips"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are failing women and babies at this time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve birth outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "utilized by doctors all over to better track and manage the health of their moms"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better predict and manage pregnancy complications before it's too late"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Gestational diabetes/preeclampsia/preterm birth listed as one rising-complication problem set. Contraction UI stats folded into wearable mechanism; fetal movement/HR kept as OTA capability expansion of same sensor rather than separate products. Clinical studies and beta shipments excluded as traction. Cardiac/brain monitoring experience treated as team credential framing, not a premise."
+}

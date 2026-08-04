@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Naming a manager and showing social reach lets consumers demand on-the-spot resolution or escalate to a gripe",
+      "status": "explicit",
+      "evidence_span": "if we can't resolve it, I'm going to be forced to start a gripe, and it's going to go to those same people"
+    },
+    {
+      "id": "P2",
+      "text": "Public gripes grow via Facebook/Twitter and a permanent URL showing viewer counts",
+      "status": "explicit",
+      "evidence_span": "They immediately see how many people have started to see this and how many more people are going to see this soon"
+    },
+    {
+      "id": "P3",
+      "text": "B2B email alerts merchants to claim accounts and resolve known customer asks",
+      "status": "explicit",
+      "evidence_span": "we send them an email saying, hey, this is a gripe, a public complaint that's been started"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer leverage and viral gripe",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Merchant claim-and-resolve",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get complaints resolved via social pressure and merchant response",
+      "status": "explicit",
+      "evidence_span": "That's what we're trying to do, get your complaints resolved"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get your complaints resolved"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All you have to do is resolve it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Photo/ask capture folded into gripe escalation path. Truncated transcript; coded only present entrepreneurial claims.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1144",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

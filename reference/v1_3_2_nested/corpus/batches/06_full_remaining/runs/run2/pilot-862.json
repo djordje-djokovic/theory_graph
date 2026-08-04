@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers must make dozens of calls to compare charter prices abroad",
+      "status": "explicit",
+      "evidence_span": "make dozens of phone calls just to get the different prices from captains"
+    },
+    {
+      "id": "P2",
+      "text": "Captains have outdated websites and weak online marketing",
+      "status": "explicit",
+      "evidence_span": "This is what charter websites look like today. Even though they look like they were built in 1999"
+    },
+    {
+      "id": "P3",
+      "text": "Two-sided site enables find/book/compare/review for customers and free captain business tools",
+      "status": "explicit",
+      "evidence_span": "They can manage their business, their availability, and get customers more easily"
+    },
+    {
+      "id": "P4",
+      "text": "Crew follow-up drives reviews and fishing reports that improve angler choices",
+      "status": "explicit",
+      "evidence_span": "50% of fishing trips booked through Fishing Booker turn into reviews or fishing reports"
+    },
+    {
+      "id": "P5",
+      "text": "Mostly paid search acquisition with ~$40 CAC and ~$125 revenue per booking",
+      "status": "explicit",
+      "evidence_span": "We use mostly search to acquire customers. And it costs us about $40 to get one person to book a fishing trip"
+    },
+    {
+      "id": "P6",
+      "text": "All captains are interviewed and 100% verified with seven-day support",
+      "status": "explicit",
+      "evidence_span": "All of our captains are 100% verified, and we interview each of them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard charter discovery for both sides",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Marketplace, verification, and reviews",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Search acquisition economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Book memorable fishing trips through an easy verified marketplace",
+      "status": "explicit",
+      "evidence_span": "find a boat you like, and let's go"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "he had to find a fishing charter abroad"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps anglers make better choices"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "return on advertising spend of about 300%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Bootstrapped and growth-rate claims excluded as financing/traction. 50% review rate coded as continuing review mechanism condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-862",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

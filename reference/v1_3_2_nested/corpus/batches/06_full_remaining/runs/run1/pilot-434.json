@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Volatile weather creates unpredictable food supply and volatile prices that kill businesses across farmers and food companies",
+      "status": "explicit",
+      "evidence_span": "Volatile weather creates unpredictable supply. And unpredictable supply, of course, creates volatile prices. And volatile prices kill businesses"
+    },
+    {
+      "id": "P2",
+      "text": "Soft commodities are hard to standardize onto exchanges, creating limited hedge coverage and basis risk across countries/currencies",
+      "status": "explicit",
+      "evidence_span": "soft commodities are not like gold, and they're not like oil. They're very hard to standardize. And that means you can't get them onto an exchange. Less than 8% of the world's commodities are traded"
+    },
+    {
+      "id": "P3",
+      "text": "Stable offers a large index insurance platform with thousands of local indexes so businesses can match physical goods risk to a targeted index",
+      "status": "explicit",
+      "evidence_span": "Stable has built the world's largest index insurance platform. We have over 3,000 indexes from 40 different countries. And what that means is that you, as a business, can come in and match the risk, the risk of your physical goods, to a local index, highly, highly targeted"
+    },
+    {
+      "id": "P4",
+      "text": "Index insurance pays out automatically within 48 hours when agreed thresholds are breached",
+      "status": "explicit",
+      "evidence_span": "because index insurance means all of this is agreed in advance, so our platform plays out automatically in 48 hours"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market is B2B to corporates and via aggregators (banks, insurers, co-ops) for farmers to solve acquisition cost",
+      "status": "explicit",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators. That might be banks, that might be insurers, it might be co-ops"
+    },
+    {
+      "id": "P6",
+      "text": "Pricing uses university-built algos with massive historical simulations, futures ingestion, and automatic portfolio diversification",
+      "status": "explicit",
+      "evidence_span": "We run 62 trillion simulations across these indexes to look at the historical prices to predict what will happen in the future"
+    },
+    {
+      "id": "P7",
+      "text": "Client UX is three simple protection questions with automatic algo pricing and instant certificate",
+      "status": "explicit",
+      "evidence_span": "she answers one of three questions. How long do you want to protect your business?"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Food price volatility risk",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Index insurance platform and payouts",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Corporate and aggregator distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Pricing algos and simple buy UX",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Deliver financial confidence by helping food businesses manage supply/price risk simply",
+      "status": "explicit",
+      "evidence_span": "Stable is delivering financial confidence to our clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage that risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match the risk, the risk of your physical goods, to a local index"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protect your business"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accurately protect the risk"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Lloyd's cover holder / underwriter backing treated as traction/credential, not premise. Soft count 7 within warning band but distinct modules. Growing-population vision not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-434",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:33:40+02:00"
+  }
+}

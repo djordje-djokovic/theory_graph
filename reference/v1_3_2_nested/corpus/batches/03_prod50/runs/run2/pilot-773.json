@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor growers must tightly control lighting, climate, and related conditions for profits",
+      "status": "explicit",
+      "evidence_span": "they have to worry a lot about each and every controllable growing condition. Because being able to control those conditions means being able to control your profits"
+    },
+    {
+      "id": "P2",
+      "text": "Without integrated data, growers dig through notes, hire consultants, or rely on gut",
+      "status": "explicit",
+      "evidence_span": "Tom will end up losing hours digging through his notes to find out what goes wrong. He will spend tons of money, thousands of dollars on consultants"
+    },
+    {
+      "id": "P3",
+      "text": "Unified data ingestion from hardware sensors, uploads, and manual entry",
+      "status": "explicit",
+      "evidence_span": "For the first time, Tom has all of his information in one place"
+    },
+    {
+      "id": "P4",
+      "text": "Analytics and task views expose yield problems early for sales and operations",
+      "status": "explicit",
+      "evidence_span": "the green peppers are expecting low yield because of some low germination rates and problems they had. Now that he has this information, Tom can proactively let his sales team know"
+    },
+    {
+      "id": "P5",
+      "text": "Energy recommendations exploit time-varying rates for large lighting savings",
+      "status": "explicit",
+      "evidence_span": "With our recommendation, Tom can save $150 today, which means he can save $50,000 annually just by turning his lights on or off at different times"
+    },
+    {
+      "id": "P6",
+      "text": "Per-acre monthly subscription for greenhouse vegetable production",
+      "status": "explicit",
+      "evidence_span": "subscription price at $1,000 per acre per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Integrated grower decision platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Energy optimization",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make indoor farming easier by aggregating data and recommending actions",
+      "status": "explicit",
+      "evidence_span": "Agilis aggregates all of Tom's data in one place. Agilis analyzes and makes recommendations for Tom, saving him money"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating the guesswork from decision making"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription price at $1,000 per acre per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 retained: energy recommendations presented as distinct value-driving module. Singleton D3: pricing separately revisable. Anti-template note: not a need/product/money triad; energy is ops analytics.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-773",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

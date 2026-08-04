@@ -1,0 +1,76 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About 40% of hourly professionals' mobile talk time goes unbilled, costing large annual losses",
+      "status": "explicit",
+      "evidence_span": "roughly 40% of the time, professionals that build by the hour spend talking on a mobile phone goes unbilled"
+    },
+    {
+      "id": "P2",
+      "text": "Pressing BillsEye's third call-screen button instead of answer automatically tracks the call for billing",
+      "status": "explicit",
+      "evidence_span": "You press our button when you receive the call instead of pressing the green button when mom calls, and our app automatically starts tracking that call for billing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbilled mobile time problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Call-screen billing capture",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop losing revenue from forgotten mobile client calls",
+      "status": "explicit",
+      "evidence_span": "this adds up into huge losses"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one 15-minute missed call a day, equals $20,000 a year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've solved this problem by adding a third button to the mobile call screen"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Financing ask excluded. Two domains: problem magnitude vs capture mechanism are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-56",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

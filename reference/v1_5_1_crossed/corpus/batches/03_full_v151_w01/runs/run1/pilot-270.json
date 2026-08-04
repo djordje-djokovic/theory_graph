@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-270",
+    "coder_session_id": "session_06",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:19:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rising compute demand is limited by server heat, and current data-center cooling is inadequate",
+      "status": "explicit",
+      "evidence_span": "our demand for data is bigger than what technology can handle"
+    },
+    {
+      "id": "P2",
+      "text": "Two-phase liquid-to-gas cooling integrated in a drop-in server cools CPUs below ambient, accelerating compute and cutting energy use",
+      "status": "explicit",
+      "evidence_span": "this can allow us to go below ambient"
+    },
+    {
+      "id": "P3",
+      "text": "Customers needing fast, reliable compute (e.g., banking, innovation, real-time data) adopt the cooled servers without changing data-center form factor",
+      "status": "explicit",
+      "evidence_span": "You can insert it in any data center today, so you don't have to change a thing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "data-center heat bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "two-phase in-server cooling",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "drop-in server customers",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more energy-efficient servers by cooling CPUs below ambient",
+      "status": "explicit",
+      "evidence_span": "world's fastest and most efficient server to accelerate your innovation"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cool down the planet one server at a time",
+      "evidence_span": "cool down the planet one server at a time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "as it overheats, it becomes slower"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we both accelerate it, so we make it go faster, and we can actually make it more energy efficient"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "run their computing task almost 50% less time, whilst using only half of the energy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.5.1 §4.1.8: speed and energy gains of the cooling process folded into P2 with the below-ambient mechanism. LHC origin story treated as development context, not a separate premise. Team bio and remaining pilot slots excluded/financing-adjacent."
+}

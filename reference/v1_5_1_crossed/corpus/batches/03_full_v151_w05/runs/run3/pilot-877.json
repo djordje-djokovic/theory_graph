@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-877",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Restaurants charge the same price in peak and empty periods, leaving perishable table inventory underutilized and driving waste and high failure rates",
+      "status": "explicit",
+      "evidence_span": "you end up paying the exact same price for your meal at both those occasions. Well, this doesn't make economic sense, at least not for a perishable inventory"
+    },
+    {
+      "id": "P2",
+      "text": "ResGuru automatically changes restaurant prices based on demand and supply using multi-variable forecasting",
+      "status": "explicit",
+      "evidence_span": "a dynamic pricing platform for restaurants. It allows the restaurants to automatically change their prices based on demand and supply"
+    },
+    {
+      "id": "P3",
+      "text": "A GDS-style console consolidates reservations and POS across channels with analytics on utilization and RevPASH",
+      "status": "explicit",
+      "evidence_span": "a consolidated snapshot of my reservation diary, which is seamlessly integrated with my point of sale system"
+    },
+    {
+      "id": "P4",
+      "text": "Operators set goals, overbooking, blackouts, walk-in holds, and channel commissions to drive pricing recommendations",
+      "status": "explicit",
+      "evidence_span": "I can select different overall goals. Do I want to increase my overall sales? Or do I want to increase my rev bash"
+    },
+    {
+      "id": "P5",
+      "text": "Private beta launch targets restaurant owners after pilots showing higher utilization, RevPASH, and gross profit",
+      "status": "explicit",
+      "evidence_span": "We are launching our private beta today"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "flat-price perishable inventory loss",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "ResGuru dynamic pricing platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "restaurant private-beta GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Restaurants optimize revenue and utilization while diners can get better deals",
+      "status": "explicit",
+      "evidence_span": "help them optimize their revenue, but also get you better deals in your restaurants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce food waste through better forecasting and pricing",
+      "evidence_span": "130 million pounds of food is wasted on a daily basis"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "about 40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically change their prices based on demand and supply"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "welcome all of you who are restaurant owners to sign up with us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Peak queues vs empty rooms, flat pricing, underutilization, food waste, and failure rates folded as one perishable-inventory problem set (§4.1.6). Dynamic pricing, 21-variable forecast, diary/POS consolidation, analytics, and strategy rules folded as one ResGuru platform with feature cascade (§4.1.7). Pilot utilization/RevPASH/profit lifts treated as traction for the mechanism. Table Grabber digitization count as traction. Hospitality credentials excluded. Singleton D3 retained. Anti-template: problem, product, and GTM separately revisable."
+}

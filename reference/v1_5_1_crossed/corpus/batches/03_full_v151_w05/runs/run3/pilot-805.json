@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-805",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About one billion existing remote-control window and split air conditioners lack smart connectivity unlike Nest-style thermostats",
+      "status": "explicit",
+      "evidence_span": "All I could find is smart thermostats like Nest. But I had this air conditioner in my home, and there are one billion of these kinds of air conditioners all around the world"
+    },
+    {
+      "id": "P2",
+      "text": "A retrofit Sensible pod can connect any remote-control AC to the internet for app control",
+      "status": "explicit",
+      "evidence_span": "It works on any remote control air conditioner, window air conditioner, which is very popular in the big cities in the U.S., and the split types"
+    },
+    {
+      "id": "P3",
+      "text": "The system learns lifestyle and applies efficiency algorithms (efficient temperature, clogged filters, open windows, vacancy) to cut energy use substantially",
+      "status": "explicit",
+      "evidence_span": "Sensible recognizes the efficient temperature. It can set it for you. It detects clogged filters. It detects open, if the window is open. And the air is leaking out. It detects that nobody is home"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware is sold as a basic kit plus lower-priced add-on pods per additional AC",
+      "status": "explicit",
+      "evidence_span": "The first kit, the basic kit for Sensible costs $160, and then for each additional air conditioner you have in your home or office, it's another $80"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dumb installed air conditioners",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "retrofit pod control and efficiency",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "kit and add-on pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make any existing AC smart with less energy cost and greener operation without manual control",
+      "status": "explicit",
+      "evidence_span": "We make any air conditioner smart"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce CO2 emissions alongside electricity-bill savings",
+      "evidence_span": "we want the world to be greener to reduce co2 emissions and of course to affect your electricity bill"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the only logical conclusion was to build a product that connects to the air conditioner"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can actually save a huge amount of energy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The first kit, the basic kit for Sensible costs $160"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Efficiency feature list (temperature, filters, windows, vacancy, learning) folded into one energy-saving mechanism cascade (§4.1.7). Wearable/future roadmap treated as aspiration not current premise. Indiegogo award and pilot 40% savings figure treated as traction; process claim retained qualitatively in P3. Singleton D3 retained as independently revisable commercial packaging."
+}

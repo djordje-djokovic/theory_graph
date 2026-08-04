@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-926",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Homes waste energy and comfort because rooms stay heated/cooled when unused under central HVAC",
+      "status": "explicit",
+      "evidence_span": "average of two to four rooms that are overheated or overcooled at various times"
+    },
+    {
+      "id": "P2",
+      "text": "KeenVent wireless vents in unoccupied rooms automatically redirect airflow from the central unit",
+      "status": "explicit",
+      "evidence_span": "KeenVents are placed in rooms throughout the home that are unoccupied for large portions of the day"
+    },
+    {
+      "id": "P3",
+      "text": "DIY vent swap plus Lifestyle Survey smart-cycle programming gets the system running in minutes",
+      "status": "explicit",
+      "evidence_span": "have the system up and running in minutes"
+    },
+    {
+      "id": "P4",
+      "text": "Online account enables ongoing services such as severe-weather schedule alerts",
+      "status": "explicit",
+      "evidence_span": "if severe weather were forecasted for one of our customers' homes, we would send an alert"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market moves from web to retail and subsidized builder/utility partnerships",
+      "status": "explicit",
+      "evidence_span": "partner with home builders, HVAC suppliers, and utility companies to sell the Keen Vent to their customers with some form of subsidy"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription versus lifetime pricing models monetize the four-vent system",
+      "status": "explicit",
+      "evidence_span": "This is our subscription model. The same four-vent system will be sold for $150 with no monthly service fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Intelligent airflow vents",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ongoing customer services",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Distribution and pricing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Comfortable efficient homes with less HVAC runtime",
+      "status": "explicit",
+      "evidence_span": "reduces the HVAC system runtime needed to reach the desired temperature"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maximizes the comfort and efficiency"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "services that Keen Home will provide to its customers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely enticing value proposition"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D2: post-install services framed as separately claimed value path. Efficiency study % folded into product benefits via D1. 40M homes market framing excluded."
+}

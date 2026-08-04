@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-306",
+    "session_case_index": 9,
+    "extraction_run": 1
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ineffective ad creative wastes a large share of marketing budgets despite creative driving sales",
+      "status": "explicit",
+      "evidence_span": "47% of sales is attributed to the ad creative, and yet 25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "id": "P2",
+      "text": "Computer vision turns design elements into data to discover what drives conversions, then generative AI creates personalized ads from that real-time marketing data for human approval and multi-platform launch",
+      "status": "explicit",
+      "evidence_span": "OmniKey uses computer vision to quantify design elements into data points. Our AI discovers the image features, video features, design features, keywords, and more that are driving sales in your marketing"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary API integrations with ad networks and marketing platforms ensure generated content is backed by real data and can launch across platforms",
+      "status": "explicit",
+      "evidence_span": "We have proprietary API integrations with all the ad networks and marketing platforms listed here to ensure that the content we generate actually drives results, actually is backed by real data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ineffective marketing creative waste",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-driven generative ad platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drive sales with AI-generated content backed by real-time marketing performance data",
+      "status": "explicit",
+      "evidence_span": "drive your sales to the moon with AI-generated content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The content we generate actually delivers conversions, actually delivers results because it's backed by real-time marketing data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Analytics→generate→approve→launch workflow and brand DAM/creator finishing touches folded as cascade of one data-driven generative mechanism (rule 7). API integrations kept as separately failable distribution/data-backing condition. Traction metrics excluded."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-483",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most companies have been or will be breached; encryption is the most effective mitigation of breach cost",
+      "status": "explicit",
+      "evidence_span": "More than 60% of companies have already been breached"
+    },
+    {
+      "id": "P2",
+      "text": "Never-decrypt cloud database keeps data encrypted at rest, in transit, and in memory while still allowing private search and fetch with no application changes and no key reveal",
+      "status": "explicit",
+      "evidence_span": "Calypso is the first never decrypt cloud database solution. So the data remains encrypted, addressed, in transit, and in memory at the database storage"
+    },
+    {
+      "id": "P3",
+      "text": "Docker intercepts and encrypts data streams in real time so unauthorized users including admins and cloud providers see only ciphertext",
+      "status": "explicit",
+      "evidence_span": "Our Docker intercepts the data stream and encrypts the data in real time before storing it"
+    },
+    {
+      "id": "P4",
+      "text": "SQL analytics run on encrypted data with dynamic re-encryption after queries",
+      "status": "explicit",
+      "evidence_span": "on top of this encrypted data, and while they are encrypted, someone can run SQL queries"
+    },
+    {
+      "id": "P5",
+      "text": "Combines AES with oblivious RAM and differential privacy for efficient secure indexing, delivering true security at much higher speeds than peers",
+      "status": "explicit",
+      "evidence_span": "we combine cryptography, so oblivious RAM, with differential privacy in order to ensure an efficient and secure indexing of these records"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market via financial services, cloud-native companies, and database providers as channel partners",
+      "status": "explicit",
+      "evidence_span": "we're working with direct engagements with financial services, medium-sized, cloud-native companies, and also database providers as channel partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Breach cost and encryption need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Never-decrypt searchable cloud database",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Financial and database-partner GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "True security that lets products differentiate for clients while keeping cloud data usable",
+      "status": "explicit",
+      "evidence_span": "help you differentiate your products for your clients based on true security"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are a private search engine on top of encrypted data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "database providers as channel partners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Private-search and never-decrypt claims kept as core product premise; Docker path and SQL-on-ciphertext treated as distinct operational capabilities. Cryptographic stack folded into one tech premise. Fundraising ask and pre-revenue status excluded. ASR 'addressed' left verbatim in evidence_span."
+}

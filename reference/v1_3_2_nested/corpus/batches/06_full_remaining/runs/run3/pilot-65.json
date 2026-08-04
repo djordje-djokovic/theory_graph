@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cloud data centers are energy-intensive and strained by AI/media demand and chip shortages while billions of devices sit idle",
+      "status": "explicit",
+      "evidence_span": "12 billion devices sit idly in our pockets or on our desks"
+    },
+    {
+      "id": "P2",
+      "text": "ByteKnight software uses those devices for intensive tasks such as video encoding, generative AI, and 3D rendering",
+      "status": "explicit",
+      "evidence_span": "harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering"
+    },
+    {
+      "id": "P3",
+      "text": "Device owners earn a majority revenue share up to a monthly per-device amount while customers get much cheaper, faster compute than cloud",
+      "status": "explicit",
+      "evidence_span": "We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide"
+    },
+    {
+      "id": "P4",
+      "text": "The model reuses older devices and reduces energy waste versus traditional data centers",
+      "status": "explicit",
+      "evidence_span": "breathing new life into older devices and reducing substantial energy wastage relative to traditional data centers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle-device compute grid",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Two-sided compute economics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Green reuse versus data centers",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast distributed computing that is sustainable and equitable relative to centralized cloud",
+      "status": "explicit",
+      "evidence_span": "supporting fast, distributed computations and providing a sustainable, equitable way of computing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fast, distributed computations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cost-effective, speedy computing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "green initiative"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Provider and customer economics merged into P3 as one two-sided commercial condition. Vision of a worldwide grid not separately coded. Partnership/beta traction excluded. Singletons D2/D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-65",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

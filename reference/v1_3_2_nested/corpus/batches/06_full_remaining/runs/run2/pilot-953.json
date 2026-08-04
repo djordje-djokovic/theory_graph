@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Music online lifts spending, dwell time, and brand perception, but licensing it is a legal nightmare",
+      "status": "explicit",
+      "evidence_span": "using music online is a legal nightmare"
+    },
+    {
+      "id": "P2",
+      "text": "Feed.fm supplies a legal turnkey music service with APIs, SDKs, and CMS plugins so products can stream music in-place",
+      "status": "explicit",
+      "evidence_span": "We provide a legal turnkey way to add popular music to your website, app, or game"
+    },
+    {
+      "id": "P3",
+      "text": "Embedded players are designed to increase on-site session time rather than divert traffic",
+      "status": "explicit",
+      "evidence_span": "Our player is 100% designed to increase session time and therefore engagement on your product"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in analytics and A/B testing show whether music lifts engagement, retention, and revenue",
+      "status": "explicit",
+      "evidence_span": "analytics and A-B test infrastructure for you to quickly determine if there is lift in engagement, retention, and revenues when using Feed FM"
+    },
+    {
+      "id": "P5",
+      "text": "A self-service tier prices popular music streaming at a low monthly fee",
+      "status": "explicit",
+      "evidence_span": "launch of our self-service platform. For the price of $25 per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Legal music engagement barrier",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Turnkey music platform and measurement",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Self-service pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers increase engagement, retention, and revenues via legally cleared music in their products",
+      "status": "explicit",
+      "evidence_span": "focused on building engagement, retention, and revenues for our customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "And that's exactly why we created Feed.fm"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using music online increases spending"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase session time and therefore engagement"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "popular music streaming on your website, app, or game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Research benefits and legal barrier merged into P1 as one commercial condition pair for the same offer. Customer A/B result numbers excluded as traction. Plugin/SDK list folded into P2. Singletons D1 and D3 retained with separate revisability.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-953",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

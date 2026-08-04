@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-698",
+    "coder_session_id": "session_05",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High relapse rates are driven by lack of communication and lack of accountability for recovery activities",
+      "status": "explicit",
+      "evidence_span": "address the two key things that cause relapse. One, lack of communication, and two, lack of accountability for your recovery activities"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile platform integrated with wearables helps patients execute a treatment plan of sponsor, therapy, coaching, and 12-step meetings",
+      "status": "explicit",
+      "evidence_span": "Palo Link is a mobile platform that integrates with wearables"
+    },
+    {
+      "id": "P3",
+      "text": "Geolocation and accelerometer verify real attendance and engagement at recovery meetings",
+      "status": "explicit",
+      "evidence_span": "Those activities that have a geolocation are tracked by geolocation and also accelerometer"
+    },
+    {
+      "id": "P4",
+      "text": "Support-network dashboards, noncompliance alerts, and an isolation SOS reach-out button keep the accountability community connected",
+      "status": "explicit",
+      "evidence_span": "You can simply press this button, and it sends everybody in your support network on the application a message to reach out to you"
+    },
+    {
+      "id": "P5",
+      "text": "Non-triggering rewards such as fitness, yoga, and coffee coupons reinforce active recovery",
+      "status": "explicit",
+      "evidence_span": "rewards that don't trigger your technology addiction, but you accrue points to get rewards such as fitness classes, yoga classes, and free coffee coupons"
+    },
+    {
+      "id": "P6",
+      "text": "First sales channel is inpatient treatment centers, later expanding to healthcare providers, insurers, and EAPs, with outcome data for centers",
+      "status": "explicit",
+      "evidence_span": "our first sales channel, which is inpatient treatment centers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "relapse from weak accountability",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "wearable-backed recovery tracking",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "treatment-center GTM then payers",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people in recovery stay engaged and reduce relapse risk to save lives",
+      "status": "explicit",
+      "evidence_span": "join us on this quest to save lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "two key things that cause relapse"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the accountability"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inpatient treatment centers, is 3.1 million people per year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Personal recovery biography used only to motivate relapse problem; 60%/6% statistic inconsistency treated as ASR noise—coded the mechanism (communication/accountability), not the number. Check-in demo folded into geolocation accountability."
+}

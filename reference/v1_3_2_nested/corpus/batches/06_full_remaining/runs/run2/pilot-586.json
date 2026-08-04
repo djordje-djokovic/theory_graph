@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Few-second tests feed a dashboard/data system that tracks athlete or player health across many profiles",
+      "status": "explicit",
+      "evidence_span": "information to be gained from just a few second tests"
+    },
+    {
+      "id": "P2",
+      "text": "Rollout path includes educational and clinical sites plus a major-league baseball partnership for elite athletes",
+      "status": "explicit",
+      "evidence_span": "we've partnered with a notable major league baseball team"
+    },
+    {
+      "id": "P3",
+      "text": "Same diagnostic IP can expand to neurological, autism, and intoxication detection for mobile healthcare",
+      "status": "explicit",
+      "evidence_span": "we can move towards detecting drugs and intoxication"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Seconds-scale health testing",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sports and institutional adoption",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Expanded diagnostic services",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Medically mobile automated healthcare insights from quick tests",
+      "status": "explicit",
+      "evidence_span": "Medically mobile, that's our mission"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "complete dashboard and data management system"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "phase one testing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "total automated mobile health care platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.32
+  },
+  "notes": "Severely truncated; premises inferred only from closing claims. Unlimited profiles treated as product feature of P1.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-586",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

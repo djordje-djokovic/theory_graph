@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Getting hearing aids is burdensome, up to thousands per year, and socially unattractive, so many delay care",
+      "status": "explicit",
+      "evidence_span": "getting hearing aids is a really burdensome process, that it can cost up to $4,000 per year, and it's not exactly cool hiding a flesh-colored device behind your ear"
+    },
+    {
+      "id": "P2",
+      "text": "Home smartphone hearing test with calibrated headphones produces personalized results including high-frequency loss profiles",
+      "status": "explicit",
+      "evidence_span": "we're calibrating for different types. Now in this quick test, there are tones played in different frequencies, ramping from quiet to loud"
+    },
+    {
+      "id": "P3",
+      "text": "Smartphone-based personalized sound processing enhances digital audio and ambient microphone sound",
+      "status": "explicit",
+      "evidence_span": "the phone can be used to enhance digital audio, like audio books, music, voice over IP calls. But it can also use the microphone to enhance the sound around you"
+    },
+    {
+      "id": "P4",
+      "text": "Dedicated earpiece plus cloud fitting/settings updates without always carrying a phone or visiting an audiologist for simple changes",
+      "status": "explicit",
+      "evidence_span": "we don't understand why we have to go physically to an audiologist just to change a couple of settings while our phones are constantly updating themselves"
+    },
+    {
+      "id": "P5",
+      "text": "Freemium app and subscription earpiece model fund accessible hearing enhancement",
+      "status": "explicit",
+      "evidence_span": "The basic version of the app is for free. The premium version with the cloud support comes for $5 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hearing aid adoption barriers",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smartphone test and enhancement",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Dedicated device, cloud control, pricing",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Show people the benefits of hearing better again and make enhancement accessible at home",
+      "status": "explicit",
+      "evidence_span": "help someone to take the test and show them the benefits of hearing better again"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "burdensome process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "benefits of hearing better again"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lowering the entry barrier"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Multi-user fitting improvement folded into cloud control premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-841",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:40+02:00"
+  }
+}

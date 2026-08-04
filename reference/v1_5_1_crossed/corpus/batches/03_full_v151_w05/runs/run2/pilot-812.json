@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-812",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise rapid prototyping/advanced manufacturing is cumbersome: designers and machine operators shuttle Excel/spreadsheets across heterogeneous machine software, often across decentralized sites",
+      "status": "explicit",
+      "evidence_span": "all day, they go back and forth with Excel files, spreadsheets, file shares. It's a very cumbersome process"
+    },
+    {
+      "id": "P2",
+      "text": "Zap is a cloud manufacturing platform that connects 3D printers, CNC, waterjets, welding, and assembly workflows for one-click remote job control, live render, and factory duplication via a fog client",
+      "status": "explicit",
+      "evidence_span": "our vision is one-click manufacturing"
+    },
+    {
+      "id": "P3",
+      "text": "Monetized via about $200K per site license to large enterprises",
+      "status": "explicit",
+      "evidence_span": "we charge 200K per site license"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented manufacturing workflows",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cloud one-click manufacturing platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise site licensing",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Go from design to a real manufactured object instantly, anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "taking an idea to a real object instantly, anytime, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "time to market is one of the most important things when you're trying to beat your competition"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting all these machines and workflows in the cloud, anytime, anywhere"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to be more efficient as they scale worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Heterogeneous machine software, manual operation, and multi-site decentralization folded as one workflow problem (§4.1.6). Prior 3D OS traction and 75k parts excluded. Demo print/CNC/weld/assembly/duplicate-factory steps folded as one Zap platform cascade (§4.1.7). Ford/Cisco named as enterprise evidence of site-license GTM, not separate premises. Anti-template: problem, platform, and licensing separately revisable."
+}

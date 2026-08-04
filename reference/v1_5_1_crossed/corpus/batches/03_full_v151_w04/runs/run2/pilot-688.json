@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-688",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large comedy demand exists, but streaming has not caught up—only about 10% of comedy is available and 1% of the market is served",
+      "status": "explicit",
+      "evidence_span": "streaming hasn't caught up. So now you only have about 10% of the comedy that's available and only 1% of the market"
+    },
+    {
+      "id": "P2",
+      "text": "Laughly is a streaming app built from the ground up for stand-up comedy / spoken word with a growing comedian and track catalog",
+      "status": "explicit",
+      "evidence_span": "first of its kind built from the ground up streaming app focused on stand-up comedy"
+    },
+    {
+      "id": "P3",
+      "text": "A Spoken Word Project transcribes jokes to enable profanity filtering and topic-based radio stations",
+      "status": "explicit",
+      "evidence_span": "technology which allows us to transcribe every single joke into text"
+    },
+    {
+      "id": "P4",
+      "text": "Free tier is ad-supported; $7.99/month unlocks ad-free listening, offline play, and exclusive content",
+      "status": "explicit",
+      "evidence_span": "for $7.99 a month, you get ad-free, you get offline play, and you get access to exclusive content"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue share with comedians incentivizes them to promote Laughly to their followers",
+      "status": "explicit",
+      "evidence_span": "we share revenue with them for every single stream, so these guys are promoting these apps for us"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution partnerships with top record labels supply comedy content",
+      "status": "explicit",
+      "evidence_span": "we actually have distribution with lumber the top record labels"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "comedy streaming supply gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "spoken-word streaming product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "comedian revenue share and label distribution",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Comedy fans get a dedicated spoken-word streaming experience with discovery and access",
+      "status": "explicit",
+      "evidence_span": "streaming app focused on stand-up comedy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "What that allows us to do is it allows us to, for example, search for profanity"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That creates a huge problem for all these big fans of comedy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "built from the ground up to focus on streaming comedy or specifically spoken word"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use the comedian to promote their product on Laughly to their followers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Profanity filter and topic radio folded into Spoken Word transcription mechanism (feature cascade). Catalog counts and advisor names excluded as traction. ASR 'lumber the top record labels' kept verbatim in evidence."
+}

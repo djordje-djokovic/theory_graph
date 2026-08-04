@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Children socialize heavily on connected devices, and new technology creates new online risks such as harmful messages",
+      "status": "explicit",
+      "evidence_span": "new technology creates new risks"
+    },
+    {
+      "id": "P2",
+      "text": "Parents' only options today are manually scanning phones or spot-checking with saved passwords, which undermines independence and is daily friction",
+      "status": "explicit",
+      "evidence_span": "my only options are to pick up his phone, scan through his messages, or to save his passwords and randomly spot check his activity online"
+    },
+    {
+      "id": "P3",
+      "text": "Bark uses machine learning on social and message content to detect issues like cyberbullying, sexting, and depression/suicide signs, alerting parents with recommended actions without unfettered message access",
+      "status": "explicit",
+      "evidence_span": "we've developed machine learning-based algorithms to detect issues like cyberbullying, sexting, signs of depression or suicide"
+    },
+    {
+      "id": "P4",
+      "text": "Bark costs $9 per month per family for unlimited children and accounts, with an affiliate model for schools and nonprofits",
+      "status": "explicit",
+      "evidence_span": "BARC is just $9 per month per family, unlimited children, unlimited connected accounts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online child safety monitoring gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "ML issue detection and parent alerts",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Family subscription and school affiliates",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep children safe online while preserving privacy and building family trust",
+      "status": "explicit",
+      "evidence_span": "keep children safe online while allowing them privacy and helping their families build trust in that process"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parents need a smarter solution to help keep their children safe online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If we detect an issue, we send an alert to the parent along with recommended actions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working directly with schools and nonprofits to provide them affiliate revenue"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Message volume and school-commit counts excluded as traction. UI setup steps and psychologist advisors folded into the detection/alert offering (§4.1(5)). Price and school/nonprofit affiliate channel kept as one commercial premise (§4.1(3)). Need/product/money triad justified: subscription/affiliate economics revisable without changing ML detection, and the manual-monitoring parent problem is a separate assumption. Singleton D2 and D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-679",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

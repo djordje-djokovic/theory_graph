@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Automated fashion search is backed by human personal stylists",
+      "status": "explicit",
+      "evidence_span": "your very own personal stylist, a human being that will be behind the computer searching the item on your behalf"
+    },
+    {
+      "id": "P2",
+      "text": "An Instagram-for-fashion social layer provides inspiration and shopping",
+      "status": "explicit",
+      "evidence_span": "we have also an Instagram for fashion feature, a social network, where you can inspire people and get inspiration as well"
+    },
+    {
+      "id": "P3",
+      "text": "Best image-recognition technology is developed in-house",
+      "status": "explicit",
+      "evidence_span": "We're developing the best technology when it comes to image recognition in-house"
+    },
+    {
+      "id": "P4",
+      "text": "Business rules override technology when it fails, so the user is never let down",
+      "status": "explicit",
+      "evidence_span": "we're also adding business rules to override technology when it fails"
+    },
+    {
+      "id": "P5",
+      "text": "A team combining image-recognition PhDs and 12 years in fashion builds a better system",
+      "status": "explicit",
+      "evidence_span": "Our system is better simply because our team has experience"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue comes from a 6% affiliate commission on sales",
+      "status": "explicit",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-house image recognition with override rules",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human and community fallback layers",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affiliate revenue model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A promise to never let the fashion-search user down",
+      "status": "explicit",
+      "evidence_span": "And our promise is to never let the user down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our system is better simply because our team has experience"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best technology when it comes to image recognition"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can then count on the community"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affiliate with commission of 6%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Run 2 folds the layered-fallback claim into the business-rules premise (P4) rather than a separate premise. Transcript begins mid-demo; 'They will say ASAP it' treated as vision; possible future revenue streams (subscriptions, trend data, ads) not coded as current premises; traction numbers (2,000 active users, 200 partners) excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-895",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:48:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

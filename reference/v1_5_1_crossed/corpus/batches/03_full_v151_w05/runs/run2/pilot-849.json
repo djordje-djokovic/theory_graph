@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-849",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app support still forces users to leave the app for phone, email, or in-person channels",
+      "status": "explicit",
+      "evidence_span": "your only options for support are to leave the app and call an 800 number, send email feedback, or actually go in person to the store or branch"
+    },
+    {
+      "id": "P2",
+      "text": "ShowKit enables real-time visual interactive support inside mobile apps with screen share, draw, and remote control",
+      "status": "explicit",
+      "evidence_span": "ShowKit enhances the mobile customer support experience by making it visual and interactive"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending SDK and platform license integrates into apps with few lines of code and embeds into web CRMs",
+      "status": "explicit",
+      "evidence_span": "We've packaged our patent-pending technology into an SDK and platform that we license to companies and developers"
+    },
+    {
+      "id": "P4",
+      "text": "Cross-platform mobile-to-web and mobile-to-mobile support works across iOS, Android, and web",
+      "status": "explicit",
+      "evidence_span": "ShowKit is mobile-to-web and also mobile-to-mobile, which we just demonstrated, and cross-platform between iOS, Android, and web"
+    },
+    {
+      "id": "P5",
+      "text": "Peer-to-peer architecture keeps real-time session data off ShowKit servers while APIs connect backends",
+      "status": "explicit",
+      "evidence_span": "ShowKit uses peer-to-peer technology, so none of your real-time data goes to ShowKit servers"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution partners include cloud services, app studios, and third-party developer tools",
+      "status": "explicit",
+      "evidence_span": "We also partner with cloud services, app development studios, and third-party developer tools"
+    },
+    {
+      "id": "P7",
+      "text": "Pricing is SaaS with free trial, flat monthly rate including minutes, and reduced rates for early startups",
+      "status": "explicit",
+      "evidence_span": "ShowKit is free for the first 30 days, so you can integrate and test. And our pricing starts at a flat rate of $1,000 a month, which includes 50,000 minutes of call time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken mobile support channels",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "In-app visual support SDK platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner distribution and SaaS pricing",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time visual customer support and engagement inside mobile apps",
+      "status": "explicit",
+      "evidence_span": "We power real-time communication inside of any mobile app"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These support solutions were not designed for mobile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it visual and interactive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distribute ShowKit to a larger number of potential clients through the tools and services they already use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Phone/email/branch options folded as one broken mobile-support channel set. Screen share/draw/tap are cascade of the visual support mechanism. Telesign engineer credential and beta company counts largely excluded as bio/traction; security claim retained via P2P architecture condition. Transcript ends mid-invite; truncated=true. Singleton D1 retained."
+}

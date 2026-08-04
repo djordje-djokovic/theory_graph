@@ -1,0 +1,130 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A human personal stylist searches items on the user's behalf",
+      "status": "explicit",
+      "evidence_span": "your very own personal stylist, a human being that will be behind the computer searching the item on your behalf"
+    },
+    {
+      "id": "P2",
+      "text": "An Instagram-for-fashion social network lets users shop what others search",
+      "status": "explicit",
+      "evidence_span": "we have also an Instagram for fashion feature, a social network, where you can inspire people and get inspiration as well"
+    },
+    {
+      "id": "P3",
+      "text": "Best-in-class image recognition is developed in-house",
+      "status": "explicit",
+      "evidence_span": "We're developing the best technology when it comes to image recognition in-house"
+    },
+    {
+      "id": "P4",
+      "text": "Business rules override the technology when it fails",
+      "status": "explicit",
+      "evidence_span": "we're also adding business rules to override technology when it fails"
+    },
+    {
+      "id": "P5",
+      "text": "Layered fallbacks from automation to styling to community mean the user is never let down",
+      "status": "explicit",
+      "evidence_span": "If automated fails, you can then counter the personal styling. If the personal styling fails, you can then count on the community"
+    },
+    {
+      "id": "P6",
+      "text": "The team pairs image-recognition PhDs with 12 years of fashion-industry experience",
+      "status": "explicit",
+      "evidence_span": "Our system is better simply because our team has experience"
+    },
+    {
+      "id": "P7",
+      "text": "An affiliate model earns a 6% commission on sales",
+      "status": "explicit",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Image recognition with business-rule override",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human styling and community layers",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affiliate commerce model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fashion search that never lets the user down",
+      "status": "explicit",
+      "evidence_span": "And our promise is to never let the user down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our system is better simply because our team has experience"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "never let the user down"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the personal styling and the community"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "commission of 6% on sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Run 3 restores the layered-fallback premise P5 (separate from the business-rules claim) matching run 1's reading. Transcript begins mid-demo; 'They will say ASAP it' treated as vision; future revenue possibilities not coded; traction numbers excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-895",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:02:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

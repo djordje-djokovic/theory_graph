@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "coder_session_id": "session_05",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Urban parking is painful and drives large amounts of circling traffic",
+      "status": "explicit",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "Curb Karma is a smartphone social network where leavers publish spots and seekers reserve them with map pinpointing, messaging, GPS navigation, and ratings",
+      "status": "explicit",
+      "evidence_span": "you can participate in a social network for parking"
+    },
+    {
+      "id": "P3",
+      "text": "Karma Credits priced at $1 mediate reservations: seekers spend two credits, spot-givers earn one, and Curb Karma keeps one",
+      "status": "explicit",
+      "evidence_span": "A Karma Credit is worth $1 and available for purchase in the App Store"
+    },
+    {
+      "id": "P4",
+      "text": "High-demand urban parking spots turn over enough that capturing a small share of exchanges yields meaningful city-level revenue, expandable globally",
+      "status": "explicit",
+      "evidence_span": "only about 50,000 of those are considered in high demand"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "urban parking scarcity pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "spot handoff social app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Karma Credit marketplace economics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "high-demand spot exchange market",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find and reserve parking where and when you need it so everyone wins—seeker parks, leaver earns credit, platform earns",
+      "status": "explicit",
+      "evidence_span": "Curb Karma finds you parking where and when you need it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parking is a big problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Marissa can find and reserve Heather's parking spot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everybody wins"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parking's actually a problem all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Publish/reserve/map/message/GPS/finish/rate demo cascade folded into one social parking app premise (§4.1.7). Credit split economics kept as separately revisable commercial mechanism. SF exchange math and IBM pain-index expansion folded into market premise. Free credit promo excluded."
+}

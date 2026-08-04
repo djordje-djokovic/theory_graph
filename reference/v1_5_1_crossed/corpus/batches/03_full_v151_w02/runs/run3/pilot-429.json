@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-429",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Global partner infrastructure is required to get worldwide data coverage that validates and perpetuates the subscription model",
+      "status": "explicit",
+      "evidence_span": "leverage the infrastructure of these global partners to get the global coverage of data required to validate and to perpetuate our subscription model"
+    },
+    {
+      "id": "P2",
+      "text": "Paying customers already include reinsurers, tech firms, and cities across Germany, Switzerland, and the UK",
+      "status": "explicit",
+      "evidence_span": "we're counting Munich Re, Swisscom, IBM, Siemens as customers, along with 20 other cities across Germany, Switzerland, and the UK who are already paying for our data"
+    },
+    {
+      "id": "P3",
+      "text": "A global partner must integrate greenhouse gas and pollution data into everyday business decision making",
+      "status": "explicit",
+      "evidence_span": "integrate greenhouse gas emissions data and pollution data into everyday business decision making"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Global data coverage via partners",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Decision-making integration use",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Air quality data relevant to financial markets as well as health",
+      "status": "explicit",
+      "evidence_span": "air quality data is as relevant to the financial markets as it is to asthmas"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "global coverage of data required to validate and to perpetuate our subscription model"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "air quality data is as relevant to the financial markets as it is to asthmas"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-pitch; only closing segment present. Team bios excluded unless causal. Named customers coded as continuing paid-data distribution condition, not traction metrics. Singleton D2 retained."
+}

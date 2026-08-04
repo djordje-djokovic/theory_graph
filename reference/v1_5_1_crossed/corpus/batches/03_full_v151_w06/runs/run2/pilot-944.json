@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-944",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer wearables and GPS lack the inch-level multi-point precision athletes need to improve technique",
+      "status": "explicit",
+      "evidence_span": "They are more motivators than real professional tools"
+    },
+    {
+      "id": "P2",
+      "text": "QOSP provides inch-accurate multi-observation-point tracking of acceleration, speed, and position in real time",
+      "status": "explicit",
+      "evidence_span": "multiple observation points as well as an inch-accurate positioning response"
+    },
+    {
+      "id": "P3",
+      "text": "Differential GNSS fusing device and access-point readings corrects satellite signals for that accuracy",
+      "status": "explicit",
+      "evidence_span": "fuses the motion readings and corrects the satellite signal using the technique called differential GNSS positioning"
+    },
+    {
+      "id": "P4",
+      "text": "APIs expose acceleration, position, and speed readings for non-sport uses, but go-to-market focuses on team sports",
+      "status": "explicit",
+      "evidence_span": "Its APIs were specifically developed to get the readings of acceleration, position, and speed in the most convenient way"
+    },
+    {
+      "id": "P5",
+      "text": "Patents on sensor networks and indoor/outdoor positioning create competitive advantage in team sports",
+      "status": "explicit",
+      "evidence_span": "Beastar owns several patents on sensor networks, on our indoor and outdoor positioning system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inch-accurate multi-point motion tracking",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "team-sport focused platform APIs",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "positioning IP advantage",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Athletes and teams get professional-grade motion tracking to improve performance",
+      "status": "explicit",
+      "evidence_span": "patented, inch-accurate motion tracker for individuals and teams"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "the real difference between QOSP and everything else in its inch-accurate position technology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you really want to improve, if you really want to cut your times"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep a razor sharp focus on the team sport market"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distinctive competitive advantage over the competition"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Ski/tennis use cases folded as applications of one precision-tracking mechanism. Tactic analyzer/injury prevention/talent scouting listed as unmet team-sport jobs motivating focus, folded into P4 GTM focus rather than split. Market-size spend figures left as framing. IP kept as singleton D3 because speaker presents patents as separately revisable competitive condition. Platform API breadth noted but focus claim kept in P4."
+}

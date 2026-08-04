@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mainstream users skip free apps because fake-free, crippleware, and spyware products feel too risky",
+      "status": "explicit",
+      "evidence_span": "it's just not worth the risk of trying a free product and they're missing out on some great apps and services"
+    },
+    {
+      "id": "P2",
+      "text": "CatchFree is a verification and exploration site for trusted free products and category best picks",
+      "status": "explicit",
+      "evidence_span": "CatchFree provides a safe environment to explore the world of free"
+    },
+    {
+      "id": "P3",
+      "text": "Top user picks and freemium-principle badges concentrate attention on safe choices",
+      "status": "explicit",
+      "evidence_span": "top two user picks are featured on this page. Both are safe picks"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from CPA growth buys sold to freemium companies limited to top picks",
+      "status": "explicit",
+      "evidence_span": "this program is only going to be available for top user picks in each category"
+    },
+    {
+      "id": "P5",
+      "text": "Growth loops include reverse affiliate credits, viral sharing, and SEO as a comprehensive free-apps resource",
+      "status": "explicit",
+      "evidence_span": "Search, this will be the most comprehensive resource about free apps and services, perfect for search"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Free-product trust gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "CatchFree curation UX",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CPA monetization and growth",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users control discovery of free products they can trust",
+      "status": "explicit",
+      "evidence_span": "users are in control with CatchFree"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "this program is only going to be available for top user picks in each category"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eroding our trust in the concept of free"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "safe to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "profitable CPAs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Vision sentence kept as value rather than premise (§4.1(4)). Sean/Eugene dual-presenter content pooled. User-test quotes excluded as non-causal testimonials.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1052",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

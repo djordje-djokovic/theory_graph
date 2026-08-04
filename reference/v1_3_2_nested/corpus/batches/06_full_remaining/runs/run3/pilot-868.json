@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data divide plus siloed SaaS data makes insight slow and specialist-dependent",
+      "status": "explicit",
+      "evidence_span": "there's a data divide inside companies between people who have the skills to mine data and everybody else"
+    },
+    {
+      "id": "P2",
+      "text": "PatternEQ connects services, unifies customer data, and auto-mines patterns, predictions, and segments",
+      "status": "explicit",
+      "evidence_span": "Pattern EQ unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "id": "P3",
+      "text": "Affordable SaaS from $1,000/month by volume delivers predictive insights without hiring a data team",
+      "status": "explicit",
+      "evidence_span": "we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Specialist data bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated analytics SaaS",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower non-specialists to answer data questions themselves",
+      "status": "explicit",
+      "evidence_span": "empower everyone with data science skills"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "That's when I decided to start Pattern EQ to empower everyone with data science skills"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "couldn't answer that question myself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "experience the power of data science yourself"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Aggressive fold of prediction/segment features into one capability premise (§4.1(5)). Pricing kept with product as commercial offer describing how insights are sold (§4.1(3)). Coarser breadth this run."
+}

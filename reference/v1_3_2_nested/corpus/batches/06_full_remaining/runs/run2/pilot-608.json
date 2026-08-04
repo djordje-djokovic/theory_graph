@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Male layer chicks are useless for eggs and meat, creating an ethical and financial culling problem at massive scale",
+      "status": "explicit",
+      "evidence_span": "In the layer industry, males are useless. They do not lay eggs, and they are considered to be too skinny to be sold for their meat"
+    },
+    {
+      "id": "P2",
+      "text": "Sexit device scans eggs through the shell pre-incubation to distinguish male from female",
+      "status": "explicit",
+      "evidence_span": "our device capable of scanning the egg through the eggshell in a non-invasive way pre-incubation"
+    },
+    {
+      "id": "P3",
+      "text": "Scientific team is creating a commercial sex-detectable layer breed",
+      "status": "explicit",
+      "evidence_span": "Exit's scientific team is now working on creating a commercial sex-detectable breed of layers which lay sex-detectable eggs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Male chick waste problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Non-invasive egg sexing device",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Sex-detectable layer breed",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Save billions of dollars and chicks and create product from waste",
+      "status": "explicit",
+      "evidence_span": "saving billions of dollars, billions of chicks, and creating a product out of waste"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A massive ethical and financial challenge"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It is not going to be incubated, and it will be sold as an egg"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sex-detectable breed of layers which lay sex-detectable eggs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Device and breed split as separately revisable science modules. Truncated closing. Singleton D2/D3 retained with own path to value.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-608",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

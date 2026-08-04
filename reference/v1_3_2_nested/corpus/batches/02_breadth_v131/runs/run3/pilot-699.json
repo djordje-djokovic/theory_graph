@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-699",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:44:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fraud/analytics workloads joining huge tables overwhelm CPU databases",
+      "status": "explicit",
+      "evidence_span": "We had to bring together billions of rows of data for a fraud detection model"
+    },
+    {
+      "id": "P2",
+      "text": "GPU-distributed SQL collapses multi-hour joins to seconds",
+      "status": "explicit",
+      "evidence_span": "that 35-hour monstrosity came down to 30 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "BlazingDB is server-side software with remote secure workbench access",
+      "status": "explicit",
+      "evidence_span": "BlazingDB is a server-side software"
+    },
+    {
+      "id": "P4",
+      "text": "Distributed multi-server execution with hardware-aware self-configuration",
+      "status": "explicit",
+      "evidence_span": "were maximally efficient. It actually self-configures itself based on the hardware in your cluster"
+    },
+    {
+      "id": "P5",
+      "text": "SQL compatibility broadens who can use big-data processing",
+      "status": "explicit",
+      "evidence_span": "But it's also because businesses, frankly, live in SQL"
+    },
+    {
+      "id": "P6",
+      "text": "Cloud, on-prem, and free community edition expand where the engine can run",
+      "status": "explicit",
+      "evidence_span": "BlazingDB was built for the cloud, but it actually works anywhere that has the appropriate specs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Problem of slow large-scale SQL",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "GPU distributed engine",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SQL interfaces and deployment modes",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hyper-fast massive-scale SQL analytics",
+      "status": "explicit",
+      "evidence_span": "massive scale and hyper-fast SQL"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "banging our heads against the table trying to find a way that we could make this run faster"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's insane"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free to use for life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split need vs engine vs access. Benchmarks vs Redshift/Postgres treated as evidence of P2, not separate premises."
+}

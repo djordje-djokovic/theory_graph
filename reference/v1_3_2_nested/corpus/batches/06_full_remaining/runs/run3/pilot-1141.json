@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Anonymous gamer tags and hostile chat make controlled, inviting online play hard especially for women",
+      "status": "explicit",
+      "evidence_span": "You're dealing with anonymous gamer tags that come in and out of games"
+    },
+    {
+      "id": "P2",
+      "text": "Profiles, blogs, pictures, chat, videos, and optional games create deep engagements",
+      "status": "explicit",
+      "evidence_span": "profiles that include blogs, pictures, and you're able to chat online, you can post your videos, and if you decide to, you can play a game"
+    },
+    {
+      "id": "P3",
+      "text": "Two-sided money flow: payer pays, play date earns",
+      "status": "explicit",
+      "evidence_span": "The payer, as we call it, pays, and the play date actually makes money playing that game"
+    },
+    {
+      "id": "P4",
+      "text": "Respectful ratings and invites give play dates control over who they accept",
+      "status": "explicit",
+      "evidence_span": "in this invite, she can actually see my respectful rating"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken online play social context",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Game Crush social product",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Payer pays play-date earns",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A fun, inviting, secure place to meet gamers and play them online with control",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure. You can come in, meet gamers, and play them online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anonymous gamer tags that come in and out of games"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deep engagements with other users"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the play date actually makes money playing that game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "UI feature enumeration folded into P2. Partition is need/product/money triad; justified because paid play-date economics are revisable without changing profile features, and anonymity problem is a market assumption separate from the UI.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1141",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:05+02:00"
+  }
+}

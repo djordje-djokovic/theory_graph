@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-926",
+    "coder_session_id": "session_04",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Homes with central HVAC have uncomfortable overheated/overcooled rooms and high heating/cooling energy bills because vents and airflow are not intelligently redirected",
+      "status": "explicit",
+      "evidence_span": "The same household has an average of two to four rooms that are overheated or overcooled at various times"
+    },
+    {
+      "id": "P2",
+      "text": "KeenVent is a wirelessly networked, user-installable smart vent that automatically redirects HVAC airflow in unoccupied rooms",
+      "status": "explicit",
+      "evidence_span": "a wirelessly networked home air vent that maximizes the comfort and efficiency of a home's central heating and cooling system by automatically redirecting the air"
+    },
+    {
+      "id": "P3",
+      "text": "Lifestyle Survey inputs program each vent's smart-cycle schedule so users need not manually program vents",
+      "status": "explicit",
+      "evidence_span": "these inputs will allow us to program each individual vent's opening and closing schedule, or smart cycle"
+    },
+    {
+      "id": "P4",
+      "text": "Online account enables ongoing services such as weather-based schedule alerts and push notifications",
+      "status": "explicit",
+      "evidence_span": "we would send an alert to their mobile device and recommend a one-time change to their event schedule"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market via e-commerce then retail, plus partners (home builders, HVAC suppliers, utilities) with subsidies for peak-load efficiency",
+      "status": "explicit",
+      "evidence_span": "we will leverage e-commerce partnerships to sell the KeenVent directly to consumers via the web"
+    },
+    {
+      "id": "P6",
+      "text": "Two commercial offers: lower hardware price with monthly SmartCycle subscription, or higher one-time lifetime price with no monthly fee",
+      "status": "explicit",
+      "evidence_span": "A four KeenVents system will be sold for $25 with a $4 monthly service fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "smart vent airflow automation",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-channel and partner distribution",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription versus lifetime pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Greater home comfort and lower HVAC energy use/cost through intelligent airflow redirection",
+      "status": "explicit",
+      "evidence_span": "eliminates uncomfortable hot or cold spots throughout the home. And more importantly, it reduces the HVAC system runtime"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maximizes the comfort and efficiency of a home's central heating and cooling system"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "utility companies are looking for energy efficiency products that help them with their peak load management initiatives"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "yield average annual savings for our customers of one hundred and fifty to three hundred dollars"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Comfort and efficiency benefits of smart cycle treated as value outcomes of P2/P3, not separate premises (process+performance package). Matching non-networked vents treated as aesthetic accessory detail, not a separate value mechanism. Indiegogo pre-orders excluded as traction."
+}

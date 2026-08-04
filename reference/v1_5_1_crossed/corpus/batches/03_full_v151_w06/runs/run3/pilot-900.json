@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-900",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable web data is trapped in HTML pages; most sites lack APIs and creating them requires developers, so access is limited to organizations that can hire engineers",
+      "status": "explicit",
+      "evidence_span": "The majority of sites do not have an API, and creating one is complex"
+    },
+    {
+      "id": "P2",
+      "text": "A no-code data browser lets anyone turn a webpage into a live table/API by showing example rows and columns that the system generalizes",
+      "status": "explicit",
+      "evidence_span": "turn any website. into a table of data or an API in a matter of minutes without writing code"
+    },
+    {
+      "id": "P3",
+      "text": "Extraction patterns become cloud APIs that can be combined so many sites stream into one application call",
+      "status": "explicit",
+      "evidence_span": "Combining the API that I just created with other APIs is very easy"
+    },
+    {
+      "id": "P4",
+      "text": "Data Factory Chrome extension gives anyone access to Import.io's library of pre-built APIs (and requests for ones not yet built) for instant table extraction",
+      "status": "explicit",
+      "evidence_span": "The data factory is a chrome extension that will allow anybody to get access to our library of APIs"
+    },
+    {
+      "id": "P5",
+      "text": "Free tier remains available while the product scales API coverage",
+      "status": "explicit",
+      "evidence_span": "It's all free at the moment, and there will always be a free version"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "no-code web-to-API extraction",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Data Factory API library distribution",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "free access tier",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Web data easily accessible to everyone without writing code, opening the full potential of data inside websites",
+      "status": "explicit",
+      "evidence_span": "data on the web would be easily accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "without writing code. For the first time ever, data on the web would be easily accessible to everyone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instantly, the data is extracted from the site, formatted, and placed into a table"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making data this simple to use, we can finally begin to open the web"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Use-case demos (Red Cross, HP) treated as illustrations of P2/P3, not separate premises. User counts and API launch volume treated as traction, not premises. Vision that every website has an API coded as value framing rather than a premise (v1.3.2 §4.1.4)."
+}

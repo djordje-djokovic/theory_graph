@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-603",
+    "coder_session_id": "session_06",
+    "session_case_index": 13,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many people with mental health conditions get no care, and institutional spend often fails to reach those most at risk",
+      "status": "explicit",
+      "evidence_span": "two in three of those diagnosed get zero care whatsoever"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile app delivers text-based group psychotherapy moderated by therapists, combining peer support with scheduled VoIP therapy",
+      "status": "explicit",
+      "evidence_span": "a mobile app for text-based group psychotherapy powered by natural language processing"
+    },
+    {
+      "id": "P3",
+      "text": "NLP flags suicidality and maliciousness, including nuanced and context-dependent messages, so providers intervene when needed",
+      "status": "explicit",
+      "evidence_span": "advanced NLP algorithms to run on user messages and detect messages containing suicidality or maliciousness"
+    },
+    {
+      "id": "P4",
+      "text": "Anonymous groups of five to seven users reduce stigma while keeping groups clinically moderated",
+      "status": "explicit",
+      "evidence_span": "Users join groups anonymously, which greatly reduces their fear of stigma and judgment"
+    },
+    {
+      "id": "P5",
+      "text": "B2B SaaS licenses the stack to organizations that already have providers so end users pay nothing",
+      "status": "explicit",
+      "evidence_span": "we deploy with the B2B SaaS enterprise model, where we license out this technology to organizations that already have an infrastructure of providers"
+    },
+    {
+      "id": "P6",
+      "text": "Early focus is insular stigmatized organizations such as fire departments, universities, and police, then larger systems and NLP API services",
+      "status": "explicit",
+      "evidence_span": "Our early adopters include fire departments, universities, and police departments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mental health access gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Group therapy app and NLP safety",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B institutional licensing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Broader access to safer, scalable psychotherapy that makes providers more efficient",
+      "status": "explicit",
+      "evidence_span": "broaden access to care to patients, but also gives today's overburdened providers a means to scale"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduced crisis incidents and better population health insights for institutions",
+      "evidence_span": "detect complications early and reduce the number of crisis incidences within a population"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "two in three of those diagnosed get zero care whatsoever"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the efficiency of today's providers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide services to the end user at no charge to them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Moderator dashboard visualization treated as UI of NLP safety premise. Competitive landscape used as positioning for group+safety combo, not separate premises. Pilot/NIH traction and commitment figures excluded. Team bios excluded."
+}

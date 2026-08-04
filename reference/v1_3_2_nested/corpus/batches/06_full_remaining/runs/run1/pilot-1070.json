@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge volumes of photos are shared daily and it is hard to find pictures you like",
+      "status": "explicit",
+      "evidence_span": "One and a half million pictures are shared every day, such as this one. And a lot of fast-growing companies, such as Instagram, YFrog, and TwitPic, are sharing these photos. The question is, how do you find pictures you like?"
+    },
+    {
+      "id": "P2",
+      "text": "Skyline collects interests from social networks (Facebook likes, Twitter searches/hashtags; Foursquare planned)",
+      "status": "explicit",
+      "evidence_span": "We connect to your social networks to collect your interests. We really believe interests are more than just people. They can be something, someone, or somewhere"
+    },
+    {
+      "id": "P3",
+      "text": "Matches personal interests to a stream of over a million photos a day from Instagram and similar services into a personal skyline",
+      "status": "explicit",
+      "evidence_span": "Then we collect over a million pictures a day from services such as Instagram, TwitPic, and WhyFrog"
+    },
+    {
+      "id": "P4",
+      "text": "Skylines are real-time photo streams sortable by recency, picture-rank algorithm, friends, location, and events",
+      "status": "explicit",
+      "evidence_span": "It's a real-time stream of photos with the most recent pictures shown on top. You can also sort the pictures by our picture rank algorithm, or only show photos from your friends"
+    },
+    {
+      "id": "P5",
+      "text": "Product ships as website plus iPhone and Android apps with shared interest-based skylines, plus back channel and widgets",
+      "status": "explicit",
+      "evidence_span": "We are not only launching this as a website, but also as an app, both on iPhone and on Android"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via brand interest/location/time targeting and site widgets with ad revenue share or monthly ad-free fees",
+      "status": "explicit",
+      "evidence_span": "Brands can target an interest, like TechCrunch Disrupt, if they want, combined with location or time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Finding liked photos in the flood",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Interest matching to real-time photo stream",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Multi-surface product and brand monetization",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organize real-time photos the way Google organized websites so everyone gets a personal skyline of pictures they like",
+      "status": "explicit",
+      "evidence_span": "Skyline organizes real-time photos. So we'll do real-time photos, what Google did for websites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody gets his own skyline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increases our revenue and our reach"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "API/widget launch announcements partly GTM; widget monetization kept in P6. Explore/back-channel UI folded into stream product features (v1.3.2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1070",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:38:10+02:00"
+  }
+}

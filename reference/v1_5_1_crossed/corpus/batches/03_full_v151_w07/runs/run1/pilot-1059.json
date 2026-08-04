@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1059",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CRM pipeline data is garbage-in/garbage-out because reps skip entry or leave information stale, leaving management without transparency",
+      "status": "explicit",
+      "evidence_span": "it's garbage in, neatly packaged garbage out"
+    },
+    {
+      "id": "P2",
+      "text": "A lightweight plugin captures emails, activities, IMs, and contacts and combines them with the pipeline into a predictive model of how the rep sells",
+      "status": "explicit",
+      "evidence_span": "taking all of the unstructured data, all of my emails, activities, IMs, contacts, putting that information, combining it with my sales pipeline to build a predictive model"
+    },
+    {
+      "id": "P3",
+      "text": "The product answers whether the rep will make the quarter and flags which deals are at risk and why",
+      "status": "explicit",
+      "evidence_span": "will I make my quarter?"
+    },
+    {
+      "id": "P4",
+      "text": "Timeline views of opportunity communications let reps and managers triage exact blockers (e.g., inactive customer legal)",
+      "status": "explicit",
+      "evidence_span": "This is the view of everything going on around this particular sales opportunity"
+    },
+    {
+      "id": "P5",
+      "text": "Fortuit is available free to sales reps with no IT involvement to start",
+      "status": "explicit",
+      "evidence_span": "Available free on fortuit.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CRM compliance and transparency failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "predictive pipeline from activity data",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "free self-serve sales-rep distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reps and managers know if they will make the quarter and why deals will or will not close",
+      "status": "explicit",
+      "evidence_span": "will I make my quarter?"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you don't know what's going on, you can't manage it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "go all the way from, you know, I've got a problem with my pipeline, I'm not going to meet my quarter, to know exactly why"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "within five minutes, I was up and running. No IT involvement"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript begins mid-sentence (truncated=true). Compliance and stale-data CRM failures folded as one problem (§4.1.6). Capture→predict→risk reason→timeline triage folded as cascade of one predictive sales engine (§4.1.7). 89% classification stat treated as traction of the engine (§4.2). Three domains—anti-template: free rep distribution separately revisable from prediction product."
+}

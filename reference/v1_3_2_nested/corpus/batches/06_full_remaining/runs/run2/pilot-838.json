@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Today's heaters waste waiting water, control temperature poorly, waste energy, and fail when internals overheat",
+      "status": "explicit",
+      "evidence_span": "doesn't save water. It's difficult to control the temperature. It's not energy efficient and the things inside that get really hot to heat the water break"
+    },
+    {
+      "id": "P2",
+      "text": "HeatWorks heats only the water via electronic controls and water resistance—no elements or burners",
+      "status": "explicit",
+      "evidence_span": "the only thing that gets hot inside this water heater is the hot water itself"
+    },
+    {
+      "id": "P3",
+      "text": "App connectivity enables presets such as scald-safe baby mode and usage/cost reporting",
+      "status": "explicit",
+      "evidence_span": "One of the presets we like, we call the baby preset, which is where you can set the temperature to a temperature where there will never be any scalding"
+    },
+    {
+      "id": "P4",
+      "text": "Utilities can limit maximum power during peak demand",
+      "status": "explicit",
+      "evidence_span": "the utility will be able to control the maximum amount of power that the Model 1 can use during times of peak demand"
+    },
+    {
+      "id": "P5",
+      "text": "Three unique retrofit applications—booster, extender, turbocharger—create a new install market on existing heaters",
+      "status": "explicit",
+      "evidence_span": "three unique applications that only works with our technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Legacy heater problems",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fully electronic Model 1",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "New retrofit applications",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Redefine how the world heats and uses water with instant, efficient heating",
+      "status": "explicit",
+      "evidence_span": "redefine how the world heats and uses water"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save roughly a quarter of energy and a fifth of water used",
+      "evidence_span": "save 24% of the energy you use and 20% of the water"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We solved all four of those problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Instant water heating saves water"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've created a whole brand new market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Utility peak control kept as its own condition within the electronics domain because speaker marks why it matters separately. Quantitative savings placed in secondary_value rather than a duplicate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-838",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:34:10+02:00"
+  }
+}

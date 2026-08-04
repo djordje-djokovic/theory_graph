@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:16:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shorter student attention spans make long textbook study compete poorly with social apps, so learning must become personalized and addictive",
+      "status": "explicit",
+      "evidence_span": "How do you convince a generation that spends eight hours a day on Snapchat and TikTok to spend two hours a day on a textbook"
+    },
+    {
+      "id": "P2",
+      "text": "OCR plus ML can turn a textbook photo into categorized flashcards in seconds",
+      "status": "explicit",
+      "evidence_span": "allows students to create flashcards with just a picture of their textbooks"
+    },
+    {
+      "id": "P3",
+      "text": "A messaging-app tutor (Milo) generates Q&A, essay help, and other learning aids from short text prompts where students already spend time",
+      "status": "explicit",
+      "evidence_span": "Milo is a virtual learning assistant that acts as a tutor in your pocket"
+    },
+    {
+      "id": "P4",
+      "text": "Task-specific semantic language models trained on product data run much faster than general prompt-engineered benchmarks",
+      "status": "explicit",
+      "evidence_span": "this is done by training task-specific behavior in the model itself"
+    },
+    {
+      "id": "P5",
+      "text": "The same models can distill university knowledge repositories and create instant employee training resources",
+      "status": "explicit",
+      "evidence_span": "using our algorithms and our models to distill their knowledge repositories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Attention-scarce student learning need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Flashcard and messaging AI tutors",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Fast task-specific models and B2B expansion",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students learn faster and teachers teach faster through generative AI learning tools",
+      "status": "explicit",
+      "evidence_span": "generative AI to help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Workforce upskilling via instant training resources",
+      "evidence_span": "create instant training resources for their employees"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "went to what students do most. What do students spend eight hours a day on? Snapchat and TikTok"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make learning personalized? What if we could make learning addictive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This was a process that took me two hours in school, now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have a fantastic, seamless user experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Kado and Milo split as separately launched product surfaces. Beta user counts excluded. Founder age/dropout bio excluded except as context that they are users. 200ms vs 1200ms folded into P4 performance detail."
+}

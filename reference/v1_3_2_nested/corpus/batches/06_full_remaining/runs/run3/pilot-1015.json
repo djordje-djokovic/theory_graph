@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1015",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:02+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People want to try new activities but avoid public classes where mistakes feel embarrassing",
+      "status": "explicit",
+      "evidence_span": "as I've gotten older, I've found myself willing to try fewer and fewer new things"
+    },
+    {
+      "id": "P2",
+      "text": "Motion-capture web coaching gives personalized pose feedback so users can fail privately and improve",
+      "status": "explicit",
+      "evidence_span": "I can fail over and over and over again and never be embarrassed"
+    },
+    {
+      "id": "P3",
+      "text": "Setup needs a computer, internet, and Microsoft Kinect (with webcam Lite as lighter path)",
+      "status": "explicit",
+      "evidence_span": "to use Kenobi, you need any laptop or any computer, you need an internet connection, and you need a Microsoft Kinect"
+    },
+    {
+      "id": "P4",
+      "text": "Content ranges from individual poses to full classes and can be supplied by instructors and users",
+      "status": "explicit",
+      "evidence_span": "high-quality content that's varying in degrees of difficulty and goes from individual poses all the way up to full classes"
+    },
+    {
+      "id": "P5",
+      "text": "Business model partners with premium content creators on revenue share",
+      "status": "explicit",
+      "evidence_span": "engage in a revenue share with them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Private motion-capture learning",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Embarrassment barrier to trying",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Instructor revenue share",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Learners build confidence to learn new muscle-movement activities with private personalized instruction",
+      "status": "explicit",
+      "evidence_span": "We help you build the confidence required to learn any new activity"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give you the individualized instruction you need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build the confidence required to learn any new activity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is a place where instructors can come and provide high-quality content"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "28M poll folded into demand framing under P1 rather than separate premise this run. Truncated before full GTM detail."
+}

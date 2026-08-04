@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Status and project communications containing valuable business information remain inaccessible company-wide when sent as private email",
+      "status": "explicit",
+      "evidence_span": "the rest of the company can't access them. As a result, decisions are less informed, work is duplicated"
+    },
+    {
+      "id": "P2",
+      "text": "A simple manager setup of recipients, schedule, and report template collects consistent status reports without chasing writers",
+      "status": "explicit",
+      "evidence_span": "She enters the email addresses for her employees. She chooses a schedule, in this case, Friday afternoon, and selects a template"
+    },
+    {
+      "id": "P3",
+      "text": "Central recipient lists and project follow make shared reports reachable like a social follow graph rather than copy-paste email blasts",
+      "status": "explicit",
+      "evidence_span": "each of these people can follow a project just as easily as they can follow someone on Twitter"
+    },
+    {
+      "id": "P4",
+      "text": "Aggregated status reports let employees search for internal expertise, client relationships, and location that would otherwise stay in other inboxes",
+      "status": "explicit",
+      "evidence_span": "her company has that information, but she can't access it because it's stuck in someone else's inbox"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inaccessible email status information",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Shared status collection and follow",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Cross-inbox expertise search",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Each person understands where their work fits in the company puzzle so people and resources align",
+      "status": "explicit",
+      "evidence_span": "each person understanding the entire puzzle and where their pieces fit in"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies lose money because of this"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making status reports more accessible, by making them more consistent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more powerful to align people and resources across an organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent coding: folded consistency/timeliness/reminders into the collection setup premise rather than splitting. Business-graph framing treated as the search/access mechanism in P4, not a separate premise (v1.3.2 clarification 4/5). Truncated closing. Singleton D1 and D3 retained as separately revisable problem and discovery modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1077",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

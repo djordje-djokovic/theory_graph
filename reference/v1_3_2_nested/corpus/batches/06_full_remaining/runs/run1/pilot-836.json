@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers can top up and manage the transit card from a phone wherever they are",
+      "status": "explicit",
+      "evidence_span": "They can top up their card while on their way to the bus"
+    },
+    {
+      "id": "P2",
+      "text": "Every phone becomes a ticket sales channel without new physical infrastructure for operators",
+      "status": "explicit",
+      "evidence_span": "every phone becomes a sales channel"
+    },
+    {
+      "id": "P3",
+      "text": "The card integrates into existing public-transport infrastructure",
+      "status": "explicit",
+      "evidence_span": "the Videsmo card integrates seamlessly into their existing infrastructure"
+    },
+    {
+      "id": "P4",
+      "text": "Business takes a percentage of ticket sales distributed via transit operators",
+      "status": "explicit",
+      "evidence_span": "we intend to sell a lot of tickets and take a percentage on those"
+    },
+    {
+      "id": "P5",
+      "text": "MyFair-based technology works across most contactless systems so one card can replace many city cards",
+      "status": "explicit",
+      "evidence_span": "70% of all contactless ticketing systems in the world are based on MyFair"
+    },
+    {
+      "id": "P6",
+      "text": "Core API lets other firms build loyalty, hotel-key, and cloud-access services on the same card/platform",
+      "status": "explicit",
+      "evidence_span": "Fidesmo is, at the core, an API"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer card control",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Operator sales without new infrastructure",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "MyFair reach and open services API",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One connected card that simplifies transit ticketing and can host many services",
+      "status": "explicit",
+      "evidence_span": "We will make one card to replace them all"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Future-proof if the card later moves into the phone",
+      "evidence_span": "If the card one day moves into the mobile phone, Fidesma will be there too"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes life simple for the consumer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easier for public transport organizations to sell tickets"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one card to rule them all"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Transcript starts mid-pitch (IP portfolio mention) and uses ASR Videsmo/Fidesmo/MyFair/Fidesma; truncated=true. Market $ size figures excluded. Connected-car aside treated as framing not premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-836",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:05:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

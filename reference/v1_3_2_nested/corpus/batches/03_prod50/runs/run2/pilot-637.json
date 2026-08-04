@@ -1,0 +1,111 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High African transaction costs and slow settlement block urgent money movement",
+      "status": "explicit",
+      "evidence_span": "Transaction costs are 15 times higher here, and settlement times can last up to 20 days"
+    },
+    {
+      "id": "P2",
+      "text": "WeCashUp single-API universal mobile money acceptance for online merchants",
+      "status": "explicit",
+      "evidence_span": "WeCashUp is a universal mobile money payment platform that enables online merchants to accept all cash and mobile money wallet online through a single API"
+    },
+    {
+      "id": "P3",
+      "text": "First blockchain tunneling network for global payment-channel interoperability",
+      "status": "explicit",
+      "evidence_span": "we have built the first blockchain tunneling network which is a global interoperability network"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-rail support including cards and crypto plus split-pay invites",
+      "status": "explicit",
+      "evidence_span": "supports cash, mobile money, credit and debit card, bank mobile wallet, and cryptocurrencies"
+    },
+    {
+      "id": "P5",
+      "text": "Merchant toolkit: accept, split, disburse, marketplace hold, airtime top-up in 42 countries",
+      "status": "explicit",
+      "evidence_span": "top up airtime to any prepared mobile phone in Africa in 42 countries"
+    },
+    {
+      "id": "P6",
+      "text": "Monthly and transaction fees; patents on the stack",
+      "status": "explicit",
+      "evidence_span": "We charge a monthly fee and a transaction fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Interoperable mobile payments platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pricing and IP commercialization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Merchants and patients can complete payments without cash/wallet fragmentation barriers",
+      "status": "explicit",
+      "evidence_span": "they have adopted WeCashUp to facilitate payments for the patient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "secures and interconnects all these payment channels to facilitate cross-network payments"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitate cross-network payments, cross-border payments, and online payments globally"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sign up on wikashop.com to reach the next billion"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Patents merged into commercial premise with fees in this run (borderline §4.1.1 judgment).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-637",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:31:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

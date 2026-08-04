@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-771",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing fitness trackers and logbooks fail to easily track specific strength exercises beyond steps",
+      "status": "explicit",
+      "evidence_span": "I even went out and bought a brand new fitness tracker, but soon realized it only tracked my steps, not my exercises"
+    },
+    {
+      "id": "P2",
+      "text": "A smartwatch app uses built-in motion sensors to automatically identify exercises, count reps, and estimate calories, including user-trained moves",
+      "status": "explicit",
+      "evidence_span": "the first and only smartwatch app that automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending algorithms work on consumer-grade Android Wear and Apple Watch sensors despite hard acceleration-to-trajectory error",
+      "status": "explicit",
+      "evidence_span": "our engineers were able to accomplish it using only the consumer-grade sensors of the Android Wear and Apple Watch"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market targets fitness influencers, gym personal trainers O2O, and viral CrossFit/bodybuilding communities",
+      "status": "explicit",
+      "evidence_span": "VemoFit will first leverage our strong relationships with popular fitness influencers to help us spread the word in the community"
+    },
+    {
+      "id": "P5",
+      "text": "Freemium model lets trainers create routines and feedback while enabling personalized product offers from workout data",
+      "status": "explicit",
+      "evidence_span": "VmoFit will operate on a freemium business model, allowing your favorite personal trainers to create professional routines"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "exercise logging friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smartwatch auto exercise tracking",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "influencer gym GTM and freemium",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Gym and home athletes get frictionless, accurate strength-workout tracking on a smartwatch",
+      "status": "explicit",
+      "evidence_span": "VemoFit takes the friction out of tracking my workouts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's just never been an easy way to do it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring new users into the tracking market because of VemoFit's lack of friction"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Logbook and step-only tracker pain folded as one friction problem (§4.1.6). Auto-detect, confirm, calories, three-second train, indoor cardio folded as one mechanism (§4.1.7); patents stay inside that tech (§4.1.1). Influencer/trainer/viral channels kept as GTM; freemium+offers as commercial packaging. Team credentials and follower counts excluded/treated as framing. Store availability treated as launch status not a premise. Anti-template: problem, product, and GTM/monetization separately revisable. ASR Vemo/Vimo/vMo left in spans."
+}

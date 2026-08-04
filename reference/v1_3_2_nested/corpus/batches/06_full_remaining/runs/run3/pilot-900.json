@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most websites have no API so web data stays trapped for non-developers",
+      "status": "explicit",
+      "evidence_span": "the data's there. It's just trapped, trapped inside the HTML of the page"
+    },
+    {
+      "id": "P2",
+      "text": "Import.io turns websites into tables and APIs without code in minutes",
+      "status": "explicit",
+      "evidence_span": "enable anybody to go to a website and turn the content into an API. And you don't have to be a developer to do it"
+    },
+    {
+      "id": "P3",
+      "text": "Example-driven extraction publishes live cloud APIs that can be combined at scale",
+      "status": "explicit",
+      "evidence_span": "with a couple of clicks, I've turned a web page into a table of data"
+    },
+    {
+      "id": "P4",
+      "text": "Data Factory extension distributes a growing library of ready APIs",
+      "status": "explicit",
+      "evidence_span": "we are launching the Data Factory"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Trapped HTML data",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "No-code API creation platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Data Factory library access",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Significant step forward in information accessibility via easy web APIs",
+      "status": "explicit",
+      "evidence_span": "representing a significant step forward in information accessibility"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If we could release it, well, the impact would be huge"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making data this simple to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get access to ones we've created"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Vision that every website has an API excluded as premise. Free forever version excluded as pricing promo.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-900",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

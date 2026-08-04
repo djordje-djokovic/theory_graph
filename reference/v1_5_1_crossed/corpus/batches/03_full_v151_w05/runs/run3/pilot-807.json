@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-807",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students and other busy people lack time and skill to cook fresh meals, while microwave meals taste bad and are unhealthy",
+      "status": "explicit",
+      "evidence_span": "We'll have limited time and ability to make food. Many of us don't know how to cook"
+    },
+    {
+      "id": "P2",
+      "text": "Cookie is a push-button robotic cooker with food-tray delivery, induction cooktop, and arm that prepares pre-portioned fresh meals",
+      "status": "explicit",
+      "evidence_span": "Cookie, a push-of-a-button automated cooking device from Serenity Kitchen"
+    },
+    {
+      "id": "P3",
+      "text": "The Foodie app selects recipes, schedules cooking, sells meal kits, and lets chefs teach Cookie motions and recipes",
+      "status": "explicit",
+      "evidence_span": "Foodie presents a clean, simple interface to connect a user with his or her food choices"
+    },
+    {
+      "id": "P4",
+      "text": "Meals are priced around $4 with a free app; Cookie retails at $600 or via monthly rental subscription",
+      "status": "explicit",
+      "evidence_span": "A Serenity meal is typically priced at around $4 per meal. The app is free, and cookie will retail at $600"
+    },
+    {
+      "id": "P5",
+      "text": "Pre-portioned kits reduce household food waste and support healthier eating versus spoil and obesity patterns",
+      "status": "explicit",
+      "evidence_span": "By pre-portioning just the right amount of healthy fresh ingredients into meal kits and reducing the amount of work required to prepare these meals"
+    },
+    {
+      "id": "P6",
+      "text": "Launch targets college students first via Indiegogo crowdfunding, then broader market",
+      "status": "explicit",
+      "evidence_span": "deliver cookie and foodie first to college students and then to the broader market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fresh home-cooking barriers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Cookie robot and Foodie app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "meal pricing and device packaging",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "waste-health benefits and student GTM",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Push-button fresh home-cooked meals without cooking skill or spatula work",
+      "status": "explicit",
+      "evidence_span": "cook a recipe meal from a recipe database without picking up a spatula"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Conserve food and encourage healthier eating through pre-portioned kits",
+      "evidence_span": "help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage our new responsibilities while still continuing to eat right"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cookie delivers that same experience in making home-cooked meals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our meals compete on price with mid-tier frozen meals"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help save people time, but we also help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Microwave inadequacy and college time/skill constraints folded as one cooking-barrier problem (§4.1.6). Tray delivery, induction, robotic arm, and five cooking parameters folded as one Cookie mechanism (§4.1.7). Foodie store/schedule/tips/chef teaching folded as companion software module in product domain. Meal+$600/rent as one commercial packaging (§4.1.3). Moms/professionals framed as expansions of same convenience value. Demo failures noted; coded claimed mechanism. Singleton D3 retained as independently revisable pricing module."
+}

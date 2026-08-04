@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CDN/HLS large-audience streaming introduces substantial latency (on the order of a minute or two)",
+      "status": "explicit",
+      "evidence_span": "a content delivery network based solution that results in an awful lot of latency being introduced the minute or 2 minutes that we were talking about earlier"
+    },
+    {
+      "id": "P2",
+      "text": "Existing real-time streams (under half a second) do not scale to enough concurrent viewers",
+      "status": "explicit",
+      "evidence_span": "The challenge with these real time applications is that they don't scale to reach enough concurrent viewers"
+    },
+    {
+      "id": "P3",
+      "text": "Phoenix is a scalable real-time video platform streaming to millions of concurrent viewers under half a second of latency via proprietary algorithms including an interactive transport protocol",
+      "status": "explicit",
+      "evidence_span": "we can stream to millions of concurrent viewers with under half a second of latency"
+    },
+    {
+      "id": "P4",
+      "text": "The product is licensed through APIs and SDKs to Android, iOS, web, and desktop, with quick customer integration",
+      "status": "explicit",
+      "evidence_span": "we license our product to our customers through our API's and SDK's that reach devices like Android iOS as well as web and desktop browsers"
+    },
+    {
+      "id": "P5",
+      "text": "Optional proximity multicast peer-to-peer algorithms further reduce cost, enable massive scale, and address bandwidth constraints",
+      "status": "explicit",
+      "evidence_span": "we give our customers the option to add in our proximity multicast, which is a series of peer-to-peer algorithms that help to further reduce cost deliver on an even massive scale and address the bandwidth constraints"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Latency versus scale streaming gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Scalable real-time Phoenix platform",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "API and SDK licensing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reach very large audiences with low latency that enables interactivity and engagement",
+      "status": "explicit",
+      "evidence_span": "reach really large audiences and do so in a very innovative way with very low latency to drive interactive interaction and engagement with your users"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "latency that results from your video stream"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stream to millions of concurrent viewers with under half a second of latency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license our product to our customers through our API's and SDK's"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Founder bio and named customers/pilots excluded as credentials/traction. One-to-many, group chat, news, education, e-sports, AR/VR, OTT listed as uses of the same scalable real-time mechanism and folded per §4.1(2). Partition is need/product/channel triad; justified because API licensing is revisable without changing the transport stack, and the CDN latency vs real-time scale gap is a separate market assumption. Singleton D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-671",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

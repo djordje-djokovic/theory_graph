@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-815",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Scalable backends require distributed databases, but assembling relational, document, blob, and search stacks and then sharding/replicating is hard",
+      "status": "explicit",
+      "evidence_span": "building that today, even today, is really hard. You have to combine a lot of different technologies"
+    },
+    {
+      "id": "P2",
+      "text": "Crate provides real-time SQL in a distributed elastic data store that is simple to install, run, and program",
+      "status": "explicit",
+      "evidence_span": "It gives you real-time SQL in a distributed environment, and unless most of the competition in the modern architecture, which makes it extremely simple to install, run, and program"
+    },
+    {
+      "id": "P3",
+      "text": "Clusters self-heal when nodes fail while clients keep accessing data",
+      "status": "explicit",
+      "evidence_span": "Create doesn't care. It detects a missing node, removes it from the cluster, and immediately starts the self-healing process"
+    },
+    {
+      "id": "P4",
+      "text": "Deployment spans cloud, on-premise, and even consumer-grade PCs, with language drivers and admin UI",
+      "status": "explicit",
+      "evidence_span": "You just install Create on Promise. Or even on consumer-grade PCs"
+    },
+    {
+      "id": "P5",
+      "text": "Open-source core with paid enterprise licenses",
+      "status": "explicit",
+      "evidence_span": "We're an open-source software, and on top, we sell enterprise licenses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard distributed backend stacks",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "elastic distributed SQL store",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "open source enterprise licenses",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Put scalable, reliable distributed SQL backends in every developer's hands",
+      "status": "explicit",
+      "evidence_span": "bring distributed SQL backends in the hand of every developer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the future of databases is distributed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale just with the success of your application"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "on top, we sell enterprise licenses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Multi-tech stack pain (relational/document/blob/search + sync/shard/replicate) folded as one distributed-backend difficulty. Self-heal and flexible deploy treated as reliability/ops facets alongside the SQL store rather than separate products. Query latency demo and prior company bios excluded as traction/biography. Singleton D3 retained as independently revisable monetization."
+}

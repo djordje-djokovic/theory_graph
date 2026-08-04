@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite time being the most valuable resource, people do not monitor how they spend it across days, months, and lifetimes",
+      "status": "explicit",
+      "evidence_span": "despite the fact that time is our most valuable resource, we don't really monitor it"
+    },
+    {
+      "id": "P2",
+      "text": "Kronos passively collects sensor data 24/7 and turns it into actionable insights about where and how time is spent",
+      "status": "explicit",
+      "evidence_span": "We passively collect data about what you're doing. We turn that data into insights"
+    },
+    {
+      "id": "P3",
+      "text": "Map, goal, and social views show locations, goal progress, and a real-world social graph of time with friends to drive intentional behavior change",
+      "status": "explicit",
+      "evidence_span": "one of the core goals with Khronos is to help you live your life more intentionally"
+    },
+    {
+      "id": "P4",
+      "text": "Tracking all 168 hours reveals tradeoffs better than narrow fitness verticals, with planned integration as a one-stop personal-data shop",
+      "status": "explicit",
+      "evidence_span": "by tracking all 168 hours, Chronos enables you to see those tradeoffs"
+    },
+    {
+      "id": "P5",
+      "text": "Always-on context including who, what, when, where, and intent enables monetization beyond ads via goal-aligned offers",
+      "status": "explicit",
+      "evidence_span": "the data we collect 24 hours a day, seven days a week, is extremely valuable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unmonitored time problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "passive intentional living product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "intent-aware data monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People live more intentionally by knowing and acting on how they spend time with whom and where",
+      "status": "explicit",
+      "evidence_span": "help you live your life more intentionally"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "knowing how you spend your time matters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "change my behavior to ultimately do what's most important to me"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer you things that can help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-argument and ends mid-sentence (truncated=true). Map/goal/social views folded as one intentional-living product cascade (§4.1.7). Full-week tradeoff vs Fitbit-style verticals kept inside that product contrast package. Anti-template: problem, product, and monetization separately revisable."
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "coder_session_id": "session_04",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wired charging and charging pads fail as solutions because pads block phone use, look ugly, and charge only one device per pad section",
+      "status": "explicit",
+      "evidence_span": "You can't use your phone while it's charging. It's kind of ugly. And worst of all, each section of pad can only charge one device at a time"
+    },
+    {
+      "id": "P2",
+      "text": "Pi uses a patented magnetic-field-bending platform to safely charge multiple devices at any angle in a contactless, FCC-compliant way, including legacy devices via cases",
+      "status": "explicit",
+      "evidence_span": "our patented platform can power multiple devices at any angle"
+    },
+    {
+      "id": "P3",
+      "text": "Direct-to-consumer sales of Pi units are paired with opening the platform to consumer-electronics OEMs",
+      "status": "explicit",
+      "evidence_span": "First, we will sell Pi directly to consumers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wired and pad charging pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "contactless multi-device magnetic charging",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "DTC plus OEM platform",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users charge phones and tablets truly wirelessly without pads, tangles, or single-device limits",
+      "status": "explicit",
+      "evidence_span": "Pi makes everyday magic"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Charging is a terrible experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "five devices now charging simultaneously at different angles from just one pie"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "opening the Pi platform for use by existing consumer electronics OEMs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wire/pad pain facets folded as one problem set. Safety vs microwave/ultrasound/laser alternatives and Qi/legacy-case details folded into magnetic Pi mechanism (cascade + IP). DTC and OEM channels kept in one commercial module as speaker presents two parts of one business model. Reservation/press traction and investor names excluded."
+}

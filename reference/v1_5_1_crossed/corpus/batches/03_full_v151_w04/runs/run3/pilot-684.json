@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-684",
+    "coder_session_id": "session_03",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home IoT devices are easy to hack because makers lack network security, exposing privacy and other devices on the home network",
+      "status": "explicit",
+      "evidence_span": "the companies making those devices are clueless about intranet security"
+    },
+    {
+      "id": "P2",
+      "text": "Cujo is a plug-and-play smart gateway device that inventories every device on the home network",
+      "status": "explicit",
+      "evidence_span": "Cujo is a little smart device, very powerful, that you connect to your network"
+    },
+    {
+      "id": "P3",
+      "text": "Cloud threat intelligence and device behavioral models block only anomalous device behavior while leaving devices working",
+      "status": "explicit",
+      "evidence_span": "we also use machine learning to build behavioral models of your devices"
+    },
+    {
+      "id": "P4",
+      "text": "When one Cujo blocks a threat, other Cujos are updated in real time to block the same threat",
+      "status": "explicit",
+      "evidence_span": "everyone else's Cujos are updated in real time and they can now block that same threat"
+    },
+    {
+      "id": "P5",
+      "text": "Product is sold as a hardware unit plus a monthly subscription for business-level protection of every network device",
+      "status": "explicit",
+      "evidence_span": "Cujo is for sale for $99 as well as an $8.99 a month fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home IoT hacking threat",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Cujo gateway and collective threat defense",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "hardware plus subscription pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Home networks and smart devices kept safe from remote cyber threats",
+      "status": "explicit",
+      "evidence_span": "the smart way to fight home hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these same criminals are hacking your home and the smart devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep you safe against all kinds of cyber threats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep every single device on your network protected on a business level"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Ransomware/webcam/stalking examples folded into one home-IoT threat premise (v1.5.1 §4.1.6). App inventory/block demo treated as cascade of the gateway mechanism; ML/cloud intelligence kept with gateway as the protection mechanism; real-time fleet update split as a separately failable network-effect condition. Unit sales traction excluded per §4.2; price+subscription kept as one commercial premise (§4.1.3). Singleton D1/D3 retained as independently revisable problem and monetization modules."
+}

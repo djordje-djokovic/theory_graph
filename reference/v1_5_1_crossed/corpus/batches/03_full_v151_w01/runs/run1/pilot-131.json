@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Physical-world businesses need AP to validate bills, code line items, and enter accounting without fraud or lost cost visibility",
+      "status": "explicit",
+      "evidence_span": "If you're a business like Trey, operating in the physical world, bills and receipts are the source of truth for your costs. Every time the business gets a bill, a series of jobs need to be performed"
+    },
+    {
+      "id": "P2",
+      "text": "Bills are hard (long/complex) and organizational functions are disconnected, causing manual double entry and limited visibility",
+      "status": "explicit",
+      "evidence_span": "First, bills are hard. Some are very long. Others are structurally complex. And some are just a total kitchen sink. Second, in a hygienic AP process, multiple functions in an organization need to participate. But they're all disconnected"
+    },
+    {
+      "id": "P3",
+      "text": "Platform captures bill data with no manual entry via spatial mapping, indexing, deterministic LMs, and one-shot learning",
+      "status": "explicit",
+      "evidence_span": "we take a very different approach to reading bills. We extract more than 50,000 data points from every page, the characters, and their relation to one another. Then, using spatial mapping and proprietary indexing, we start to make sense and reconcile that data"
+    },
+    {
+      "id": "P4",
+      "text": "Workflow connects validation, smart routing, job coding, accounting write-back, and flexible payment/scheduling including net-term discounts",
+      "status": "explicit",
+      "evidence_span": "a single click approves the bill, auto-creates the associated record in the accounting system, and loads the next bill in the queue"
+    },
+    {
+      "id": "P5",
+      "text": "Integrated contextual data thread gives PMs and accounting shared live payable visibility",
+      "status": "explicit",
+      "evidence_span": "The value of being a fully integrated system is that we can push this contextual data thread all the way through the process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken physical-world AP process",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Data-enriched AP capture and workflow",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Effortless, efficient AP with better organizational data and financial confidence",
+      "status": "explicit",
+      "evidence_span": "a more efficient workforce, better data for the organization, and greater confidence in his financial operations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the vast majority of businesses cannot execute these fundamental steps"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prosecute their AP tasks more effortlessly and more efficiently"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Validate/code/enter job list folded into AP need premise (P1). Hours-saved customer metrics excluded as traction. Demo UI cascade folded into capture+workflow (P3/P4)."
+}

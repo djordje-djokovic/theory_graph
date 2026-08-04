@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "coder_session_id": "session_04",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords and plastic IDs are weak authenticators; people are not reducible to numbers, photos, or complex passwords",
+      "status": "explicit",
+      "evidence_span": "you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "UnifyID builds a unique digital fingerprint from biometric and behavioral factors across phone, computer, wearables, and nearby devices for implicit authentication without conscious user action",
+      "status": "explicit",
+      "evidence_span": "We use biometric and behavioral factors to build a unique digital fingerprint of you"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary ML over 100+ attributes (e.g. gait, typing) distinguishes the real human cross-device when sensor signals match",
+      "status": "explicit",
+      "evidence_span": "over 100 different attributes that go into our proprietary machine learning system that automatically discovers what makes you unique"
+    },
+    {
+      "id": "P4",
+      "text": "Deployed with financial and tech partners to reduce account takeover and password-reset help-desk load, with applicability online and offline/IoT",
+      "status": "explicit",
+      "evidence_span": "we're working with some of the top financial services and technology companies to evaluate and deploy Unify ID"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "password identity weakness",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "implicit behavioral biometric authentication",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise fraud and password-reset deployments",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Authenticate by being yourself—streamlined, secure identity without passwords, codes, or fuss",
+      "status": "explicit",
+      "evidence_span": "the best way to authenticate yourself is to be yourself"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce fraud and prevent account takeover",
+      "evidence_span": "streamlining authentication, reducing fraud, and preventing account takeover"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Humans have always been thought of as the weak link in security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No passwords to remember, no codes to read off your phone, and no fuss"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These are both problems we're solving for them immediately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Walk/typing factors folded as examples of the multi-attribute ML fingerprint (v1.5.1 §4.1.7). Market-size figures treated as framing. Team credentials excluded. Singleton D1/D3 retained as separately revisable problem and GTM modules."
+}

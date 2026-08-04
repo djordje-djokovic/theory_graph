@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-828",
+    "coder_session_id": "session_03",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The modern web forces users to jump across sites, tabs, and single-purpose apps to assemble everyday tasks like planning a night out",
+      "status": "explicit",
+      "evidence_span": "we've traded the fluidity and connectedness of surfing for stacks of browser tabs and single-purpose mobile apps"
+    },
+    {
+      "id": "P2",
+      "text": "VIRB weaves third-party services into contextual cards, persistent activity streams, and shareable collections on web and mobile with deep links",
+      "status": "explicit",
+      "evidence_span": "reinvent surfing the internet on web or mobile by weaving together services you use"
+    },
+    {
+      "id": "P3",
+      "text": "Semantic search and recommendations power contextual bridges across services",
+      "status": "explicit",
+      "evidence_span": "To build these contextual bridges across services, we use data technologies like semantic search and recommendations"
+    },
+    {
+      "id": "P4",
+      "text": "Initial service graph focuses on places, movies, and media",
+      "status": "explicit",
+      "evidence_span": "We're starting by connecting services around places, movies, and media"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented web surfing pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cross-service surfing layer",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "places movies media beachhead",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fluid multi-service getting-things-done in one place across screens",
+      "status": "explicit",
+      "evidence_span": "Verb is an intelligent layer over the internet that helps you get things done in one place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why do we need to settle on a fragmented web?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when we can weave together these services, we can explore opportunities around this interconnected graph"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting services around places, movies, and media"
+    },
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "To build these contextual bridges across services, we use data technologies like semantic search and recommendations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Movie/dinner planning, judge research, mobile sync, deep links, and collections folded as feature cascade of one weaving product (v1.5.1 §4.1.7). New UI paradigms treated as design detail of that layer. Beachhead categories kept as separately revisable market focus. Magic-of-surfing vision mapped primarily to value."
+}

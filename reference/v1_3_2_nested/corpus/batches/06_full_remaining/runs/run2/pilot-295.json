@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lithium demand from batteries will soar while brine resources are abundant but lack efficient extraction",
+      "status": "explicit",
+      "evidence_span": "we have enough resources of lithium, but lithium brine industry lack efficient lithium extraction technology"
+    },
+    {
+      "id": "P2",
+      "text": "Solar evaporation ponds take ~36 months, consume vast water, emit carbon, and cost ~$6,000/ton",
+      "status": "explicit",
+      "evidence_span": "Solar evaporation is a current technique that is used to extract lithium from brine"
+    },
+    {
+      "id": "P3",
+      "text": "Minerva's nano-mosaic absorbents act like selective sponges for lithium only",
+      "status": "explicit",
+      "evidence_span": "develop nano-mosaic absorbents, which are very similar to a sponge"
+    },
+    {
+      "id": "P4",
+      "text": "Two-step DLE extracts lithium within 48 hours and processes it to battery grade at ~$1,000/ton with much less water and zero carbon",
+      "status": "explicit",
+      "evidence_span": "our process is just two-step. extracting lithium within 48 hours and process it into battery grade"
+    },
+    {
+      "id": "P5",
+      "text": "Absorption efficiency rises to ~95% over soak time in filter units made at room temperature from polyphenols",
+      "status": "explicit",
+      "evidence_span": "as the time increases from 0 to 25 hours, the efficiency of lithium absorption increases from 40 to 95%"
+    },
+    {
+      "id": "P6",
+      "text": "Versus traditional and other DLE approaches, the company claims cost and efficiency competitive advantage for brine operators",
+      "status": "explicit",
+      "evidence_span": "our company offers competitive advantage in terms of cost and efficiency"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Brine industry efficiency gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Nano-mosaic DLE process",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Cost and efficiency advantage",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable direct lithium extraction that meets exploding battery-market demand",
+      "status": "explicit",
+      "evidence_span": "provide sustainable energy technology to the global market"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack efficient lithium extraction technology to meet the current demands"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "direct lithium extraction technology using nanotechnology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "competitive advantage in terms of cost and efficiency"
+    },
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "So taking advantage of the selectivity, our process is just two-step"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 codes explicit selectivity→two-step dependency. Customer segment folded into competitive-advantage commercial premise rather than separate domain. Bio/advisors excluded. Room-temperature polyphenol manufacture kept inside product performance detail of P5.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-295",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

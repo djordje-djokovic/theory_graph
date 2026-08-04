@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security audits, scanners, and firewalls leave a gap: audits are infrequent, scanners are noisy, firewalls too permissive",
+      "status": "explicit",
+      "evidence_span": "security audits cannot be performed each time your code is changed. Scanner reports are full of false positives"
+    },
+    {
+      "id": "P2",
+      "text": "Developers have strong tooling for deploy and monitoring but security is left behind",
+      "status": "explicit",
+      "evidence_span": "Security is left behind"
+    },
+    {
+      "id": "P3",
+      "text": "Screen protects applications at runtime by monitoring critical functions inside the app",
+      "status": "explicit",
+      "evidence_span": "Screen is a security solution that protects your application at runtime"
+    },
+    {
+      "id": "P4",
+      "text": "In-app logic-based protection blocks unknown vulnerabilities and reduces false positives, with debugger-like detail",
+      "status": "explicit",
+      "evidence_span": "This allows us to block unknown vulnerabilities, because our protection is based on logic, not just patterns"
+    },
+    {
+      "id": "P5",
+      "text": "Install is as simple as adding a dependency with a few commands",
+      "status": "explicit",
+      "evidence_span": "installing screen is not different from installing any other dependency in your application"
+    },
+    {
+      "id": "P6",
+      "text": "Dashboard shows attacks, suspicious user activity, and actionable backtraces for developers",
+      "status": "explicit",
+      "evidence_span": "the full backtrace here in green, showing you the exact vulnerabilities in your codes, all in one place"
+    },
+    {
+      "id": "P7",
+      "text": "Pricing starts at $99/month and scales with hosts; available for Python, Rails, and Node.js",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at only $99 per month and scales as you grow with the number of hosts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dev-security tooling gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Runtime in-app protection",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Host-based pricing and language support",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers can protect applications simply at runtime",
+      "status": "explicit",
+      "evidence_span": "we make application security simple"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Protect users against account takeovers and brute force",
+      "evidence_span": "We protect your users and customers against account takeovers and brute force attacks"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this gap every day between development and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protects your application at runtime"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable all developers to protect their application"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "1M attacks / 400 users excluded as traction. Apple bio excluded. SQL-injection demo illustrates runtime logic, folded into P4.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-716",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

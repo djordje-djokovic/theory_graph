@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Asian scooter market products are low quality, out of fashion, and short on tech amid traffic and air pollution",
+      "status": "explicit",
+      "evidence_span": "the scooter market in Asia, they are low quality and out of fashion, and always short of tech"
+    },
+    {
+      "id": "P2",
+      "text": "Menro 2.0 is a fully electronic clean-energy e-bike replacing gas power",
+      "status": "explicit",
+      "evidence_span": "Mineral 2.0 is fully electronic, with clean energy, e-bike"
+    },
+    {
+      "id": "P3",
+      "text": "Removable aluminum batteries are more environmentally friendly than lithium-ion and reach 200 km with four packs",
+      "status": "explicit",
+      "evidence_span": "we are using the removable the removable aluminum battery. Compared to the Widespear, the lithium-ion battery, which is more environmentally friendly and way better. With four packs of batteries, they can go up to 200 kilometers"
+    },
+    {
+      "id": "P4",
+      "text": "Vehicle design combines high-power LEDs, dual caliper disc brakes, a smooth efficient motor, and aluminum-titanium frame",
+      "status": "explicit",
+      "evidence_span": "We use the high power, the lights with a filled LED"
+    },
+    {
+      "id": "P5",
+      "text": "A customization system with adaptive manufacturing lets buyers choose steering, color, and components",
+      "status": "explicit",
+      "evidence_span": "We have a customization system where you can choose the option of the steering wheel, bike steering wheel. And you can choose a color. You can choose a component"
+    },
+    {
+      "id": "P6",
+      "text": "Sold starting at $1,700 to daily-commute riders replacing old-fashioned scooters",
+      "status": "explicit",
+      "evidence_span": "our retail price start at $1,700"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Low-quality scooter market",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Electric bike and battery",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Customization manufacturing",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Commute pricing offer",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A modern clean-energy e-bike that replaces low-quality scooters for daily commuting",
+      "status": "explicit",
+      "evidence_span": "who wants to replace their old fashioned scooters"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Clean energy and more environmentally friendly batteries versus lithium-ion",
+      "evidence_span": "fully electronic, with clean energy"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "low quality and out of fashion"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully electronic, with clean energy, e-bike"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "customization system"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "retail price start at $1,700"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "ASR names Menro/Mineral/Merrill/main road treated as same venture. LED, brakes, motor, frame folded into one vehicle-design premise (§4.1(5)). Price and commute segment kept one commercial premise (§4.1(3)); evidence span uses price line. 'Writing into the future' closing treated as vision (§4.1(4)). Gas-powered 1.0 mentioned as prior iteration, not a continuing condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-629",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:06+02:00"
+  }
+}

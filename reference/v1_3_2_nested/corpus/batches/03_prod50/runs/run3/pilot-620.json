@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pads are not true wireless charging because of contact, single-device limits, and blocked use",
+      "status": "explicit",
+      "evidence_span": "Pads are not the solution"
+    },
+    {
+      "id": "P2",
+      "text": "Pi uses safe magnetic any-angle multi-device charging from a patented platform",
+      "status": "explicit",
+      "evidence_span": "our patented platform can power multiple devices at any angle"
+    },
+    {
+      "id": "P3",
+      "text": "Users can keep using and moving devices while multiple devices charge from one unit",
+      "status": "explicit",
+      "evidence_span": "continue to use the device and move it around in different directions"
+    },
+    {
+      "id": "P4",
+      "text": "Legacy cases and future Qi phones expand device coverage",
+      "status": "explicit",
+      "evidence_span": "when the iPhone 8 and X start arriving, you will not need a case to use Pi. Similar for upcoming Android phones supporting the Qi standard"
+    },
+    {
+      "id": "P5",
+      "text": "Two-sided model: sell to consumers and license platform to OEMs",
+      "status": "explicit",
+      "evidence_span": "Our business model has two parts. First, we will sell Pi directly to consumers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contactless charging technology",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Two-part commercial model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "World's first contactless wireless charger for everyday devices",
+      "status": "explicit",
+      "evidence_span": "the world's first contactless wireless charging device"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "introducing Pi, the world's first contactless wireless charging device"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our business model has two parts"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged safety/FCC into patented platform premise. Soft count 5.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

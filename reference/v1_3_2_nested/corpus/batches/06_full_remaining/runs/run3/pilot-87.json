@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "There is no affordable way today to supply heavy industry with heat that is simultaneously cheap, reliable, and flame-hot without carbon",
+      "status": "explicit",
+      "evidence_span": "There is no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "id": "P2",
+      "text": "Joule Hive converts intermittent cheap electricity into stored on-demand hot gas for existing industrial equipment",
+      "status": "explicit",
+      "evidence_span": "with this device, we can turn the power from those sources into reliable industrial heat"
+    },
+    {
+      "id": "P3",
+      "text": "Performance targets include 1,800 Celsius output, hydrogen-beating cost, and retrofit attachment to furnaces and boilers",
+      "status": "explicit",
+      "evidence_span": "We can do this hot as they need, 1,800 Celsius, the same as hydrogen, say. But we can keep it affordable, at least three times cheaper than hydrogen. And best of all, we're retrofitable"
+    },
+    {
+      "id": "P4",
+      "text": "Electrically conductive fire bricks form a three-in-one heater, store, and heat exchanger built from cheap abundant refractories",
+      "status": "explicit",
+      "evidence_span": "all built from cheap, affordable, abundant bricks"
+    },
+    {
+      "id": "P5",
+      "text": "Deployment economics work where renewables or time-of-use rates make electricity cheaper than gas or electric boilers",
+      "status": "explicit",
+      "evidence_span": "We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Industrial heat affordability gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Joule Hive e-brick battery",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Cheap-power site economics",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decarbonize heavy industry with affordable reliable electrified heat using existing processes",
+      "status": "explicit",
+      "evidence_span": "decarbonize our heat"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "The Joule Hive is unmatched because of a new technology that we've been developing and patenting. and that is the building block of industrial decarbonization, the electrically conductive fire brick"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reliable industrial heat"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offsetting 80% of your carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Independent run: collapsed e-brick doping detail into three-in-one brick system premise; collapsed Midwest and TOU payback into one economics premise. 2045 vision and GW revenue targets excluded as aspiration/traction."
+}

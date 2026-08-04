@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drift moves keys to the user's resting fingers so they do not have to hunt for keys",
+      "status": "explicit",
+      "evidence_span": "Instead of making the user move their fingers to the keys, we move the keys to their fingers"
+    },
+    {
+      "id": "P2",
+      "text": "Typing is detected by combining touch sensing with accelerometer thump/vibration sensing to separate taps from rests",
+      "status": "explicit",
+      "evidence_span": "We use two sensors, the touch sensor and the accelerometer"
+    },
+    {
+      "id": "P3",
+      "text": "About 96% of people can type without looking using some memory typing, including two- or four-finger typists, and those users are Drift's audience",
+      "status": "explicit",
+      "evidence_span": "96% of people out there can type without looking. They have some form of memory typing"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market licenses Drift to OEMs for keyboard embedding and also offers embedding to application developers",
+      "status": "explicit",
+      "evidence_span": "We're going to license this to OEMs directly so they can embed it in the keyboard, but we know that's going to take time. We also are going to embed this into applications"
+    },
+    {
+      "id": "P5",
+      "text": "Estimated about 2x performance versus today's tablet typing solutions, with the algorithm improving",
+      "status": "explicit",
+      "evidence_span": "We're estimating today we're about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Keys-to-fingers plus tap sensing",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Memory typists as addressable users",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM and app licensing with 2x performance",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let tablet users type much faster without looking by combining touch and tap sensing",
+      "status": "explicit",
+      "evidence_span": "What we do is combine two sensors, touch and tap. That's what makes Drift and gives it some magic"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Accelerate tablet growth in enterprise and field/school applications versus notebooks",
+      "evidence_span": "really excel the growth of tablets at the enterprise"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's what makes Drift and gives it some magic"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those people are who Drift are for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript starts mid-pitch (truncated=true); problem setup before 'So we solved that problem' missing. Notebook-coffin claim treated as secondary_value vision per §4.1(4). Swype history and signup traction excluded. OEM+app channels kept one commercial premise with performance.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-950",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

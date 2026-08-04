@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-680",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Radiologists face massively increased scan volumes and seconds-per-case pressure, making misreads costly and training new radiologists resource-intensive",
+      "status": "explicit",
+      "evidence_span": "Radiologists are simply overwhelmed"
+    },
+    {
+      "id": "P2",
+      "text": "Behold.ai uses deep learning to help radiologists find abnormalities and prioritize which scans to read, integrating with NLP/EMR context",
+      "status": "explicit",
+      "evidence_span": "Behold.ai's medical software uses artificial intelligence to help radiologists find abnormalities in medical images"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market via vendor partnerships for seamless workflow integration plus direct hospital sales, exchanging technology for training data and pilot sites",
+      "status": "explicit",
+      "evidence_span": "The first being the partnerships, and the second being direct sales to hospitals"
+    },
+    {
+      "id": "P4",
+      "text": "Pursuing FDA clearance (not approval) through a multi-phase process for medical software",
+      "status": "explicit",
+      "evidence_span": "We're currently through the first phase of our three-phase FDA process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "radiologist overload and misread risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI abnormality detection software",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "hospital channels and FDA clearance",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve patient outcomes and doctor workflow by helping radiologists catch abnormalities under time pressure",
+      "status": "explicit",
+      "evidence_span": "help improve both the outcome of patients as well as the workflow of doctors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A misread in a medical image can have major negative health implications"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps improve the workflow of doctors, as well as the outcomes of patients"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamlessly integrate into the workflow of radiologists"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Scan-volume/efficiency stats folded into radiologist-overwhelm problem (v1.5.1 §4.1.8). Founder credentials and named hospital network as traction/partner detail folded into GTM premise rather than separate. Singleton D1/D2 retained as separately revisable problem vs product modules."
+}

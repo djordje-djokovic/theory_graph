@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-427",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:29:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "There is no way short of experiment to know how a molecule will behave when developing drugs",
+      "status": "explicit",
+      "evidence_span": "there's really no way to know, short of actually trying it out, how a particular molecule is going to behave"
+    },
+    {
+      "id": "P2",
+      "text": "PotentialNet graph AI predicts molecular properties better than hard-coded features or voxel image approaches",
+      "status": "explicit",
+      "evidence_span": "one feature of potential net is that it uses, as its representation, a graph"
+    },
+    {
+      "id": "P3",
+      "text": "Experienced chemists who have produced FDA-approved drugs remain essential alongside AI",
+      "status": "explicit",
+      "evidence_span": "we have strong, experienced people on the team who have basically done this all before. They've produced multiple FDA-approved drugs"
+    },
+    {
+      "id": "P4",
+      "text": "Accurate molecular predictions let teams explore chemical space systematically and automatically at computer speed",
+      "status": "explicit",
+      "evidence_span": "if we had accurate predictions of what a particular molecule in there is going to do if we could explore the space more systematically, automatically"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Molecular unpredictability in drug development",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "PotentialNet AI plus chemistry expertise",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More effective drug development that helps patients get medicines for underserved diseases",
+      "status": "explicit",
+      "evidence_span": "make the drug development industry more effective and basically help people get medicines for diseases that currently they don't have very many options for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "it would be much better if we had accurate predictions of what a particular molecule in there is going to do if we could explore the space more systematically"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how a particular molecule is going to behave"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the drug development industry more effective"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-sentence and ends at Q&A invitation; thin on GTM/pricing. Prior ML approaches treated as contrast folded into PotentialNet premise P2. Team chemistry capability coded because speaker makes it a condition for the theory (P3). Singleton D1 retained as the core problem module."
+}

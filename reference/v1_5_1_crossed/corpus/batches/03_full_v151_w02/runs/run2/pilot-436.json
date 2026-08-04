@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-436",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most home gardeners struggle with watering, plant choice, placement, sourcing, and fertilizer decisions",
+      "status": "explicit",
+      "evidence_span": "We are overwatering, we are underwatering, we are just doing it wrong. Gardening is really hard"
+    },
+    {
+      "id": "P2",
+      "text": "Many gardening products use toxic chemicals bad for people and the environment",
+      "status": "explicit",
+      "evidence_span": "most of these products actually have toxic chemicals, which is not only bad for you, but it's also bad for the environment"
+    },
+    {
+      "id": "P3",
+      "text": "Fully assembled self-watering planter uses proprietary sub-irrigation reservoir hardware so plants draw water as needed",
+      "status": "explicit",
+      "evidence_span": "We've created the first fully-assembled, self-watering garden that you can just bring anywhere with you"
+    },
+    {
+      "id": "P4",
+      "text": "Coaching app answers questions and keeps gardeners engaged before problems arise",
+      "status": "explicit",
+      "evidence_span": "we have a coaching app to keep you active, engaged and get all your questions answered before you even know that you have them"
+    },
+    {
+      "id": "P5",
+      "text": "Plan arrives fully assembled with soil; accessories enable vertical growing and cold-frame year-round growth",
+      "status": "explicit",
+      "evidence_span": "It has come fully assembled and with soil, which means he doesn't need any tools"
+    },
+    {
+      "id": "P6",
+      "text": "Insulated built-in reservoir regulates temperature for different climates",
+      "status": "explicit",
+      "evidence_span": "the water reservoir is actually built in underneath. It also is completely insulated to help keep that temperature regulated"
+    },
+    {
+      "id": "P7",
+      "text": "Grow team coaching is location- and season-aware, including photo-based proactive troubleshooting",
+      "status": "explicit",
+      "evidence_span": "we can give you accurate information based on your location as well as your season"
+    },
+    {
+      "id": "P8",
+      "text": "Product works as an outdoor planter for small spaces in varied climates",
+      "status": "explicit",
+      "evidence_span": "This is an outdoor planter that you can put in small spaces, whether you are in Chicago or you're in Florida"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard toxic home gardening",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Self-watering insulated planter hardware",
+      "premise_ids": ["P3", "P5", "P6", "P8"]
+    },
+    {
+      "id": "D3",
+      "name": "Coaching app and Grow team",
+      "premise_ids": ["P4", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Grow food successfully anywhere with much easier gardening",
+      "status": "explicit",
+      "evidence_span": "With Avalo, you can grow anything, anywhere"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Direct positive climate impact by growing food at home",
+      "evidence_span": "have a direct positive impact right now by just growing a little bit of food outside"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gardening should not be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-watering garden that you can just bring anywhere with you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "coaching app to keep you active, engaged"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Gardening failure modes folded as one pain-bundle. Self-watering mechanism keeps reservoir efficiency/vacation detail inside P3. Accessories and insulation split where framed as distinct hardware modules. 10-year warranty treated as confidence claim not premise."
+}

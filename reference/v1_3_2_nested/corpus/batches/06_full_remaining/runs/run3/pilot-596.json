@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Messaging workflows for getting place and brand info are fragmented across search, links, pins, and apps",
+      "status": "explicit",
+      "evidence_span": "You leave your message to open a Google search, send a link, drop a pin, and you visit countless apps"
+    },
+    {
+      "id": "P2",
+      "text": "Interactive logos in messaging deliver aggregated actionable data via deep linking without typing",
+      "status": "explicit",
+      "evidence_span": "With one tap on the logo, look at that, all of the most useful and actionable information in one place"
+    },
+    {
+      "id": "P3",
+      "text": "Community and brand-managed logo library scales content, including instant Google profiles",
+      "status": "explicit",
+      "evidence_span": "regardless of who adds a logo, in this case, TechCrunch can log back in"
+    },
+    {
+      "id": "P4",
+      "text": "Brand side offers sponsorship, customization, integrations, and analytics as a new marketing channel into messaging",
+      "status": "explicit",
+      "evidence_span": "sponsor it for premium placement, do branded content and customizations, app-to-app integrations, and view their logo's data analytics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented in-chat search",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Logo-in-messaging product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Brand monetization platform",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Coordinate and share useful brand and place information inside messaging without leaving the chat",
+      "status": "explicit",
+      "evidence_span": "I've sent her the place, the store location, and all of the pertinent brand information without typing a word"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "should not accept this fragmented process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instant access to information inside of your messaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting inside of text messaging in a helpful way"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Anti-template: consumer platform vs brand sponsorship are separately revisable modules per speaker's marketing-platform framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-596",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

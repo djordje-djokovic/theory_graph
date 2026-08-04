@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-162",
+    "coder_session_id": "session_05",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Point-of-need toxicology is required for opioid-exposed infants, impaired driving, and overdose death investigations that labs cannot cover at scale",
+      "status": "explicit",
+      "evidence_span": "we are bringing laboratory quality toxicology testing to the point of need"
+    },
+    {
+      "id": "P2",
+      "text": "A portable battery-powered lab-on-a-chip system makes many simultaneous measurements from a drop of saliva via recirculating flow",
+      "status": "explicit",
+      "evidence_span": "make up to 100 simultaneous measurements from a single drop of saliva"
+    },
+    {
+      "id": "P3",
+      "text": "Forensic toxicology is the beachhead because of immediate need, growth, and minimal regulatory burden versus decade-long diagnostic pathways",
+      "status": "explicit",
+      "evidence_span": "we first launched in the forensic toxicology market, which has immediate need, high growth potential, and has minimal regulatory burden"
+    },
+    {
+      "id": "P4",
+      "text": "A roadside drug test for law enforcement works with low saliva volume, detects more drugs, and reaches relevant fentanyl cutoffs",
+      "status": "explicit",
+      "evidence_span": "we're the only device in this category that can detect fentanyl down to the relevant cutoff values recommended by the National Safety Council"
+    },
+    {
+      "id": "P5",
+      "text": "Beachhead is U.S. police departments, then leapfrog to cause-of-death and neonatal toxicology markets",
+      "status": "explicit",
+      "evidence_span": "we are trying to reach 18,000 police departments in the United States"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "point-of-need toxicology demand",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "lab-on-a-chip roadside product",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "forensic beachhead and expansion",
+      "premise_ids": ["P3", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More accessible and affordable forensic and diagnostic toxicology testing at the point of need",
+      "status": "explicit",
+      "evidence_span": "making forensic toxicology and diagnostic testing more accessible and affordable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "laboratory quality toxicology testing to the point of need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "toxicology lab in a box"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get a product to market quickly while expanding to those regulated diagnostic testing markets over time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Opioid/impaired-driving/overdose examples folded into one point-of-need need premise. Lateral-flow competitor comparison folded into roadside product advantages (P4). Pilot counts treated as traction."
+}

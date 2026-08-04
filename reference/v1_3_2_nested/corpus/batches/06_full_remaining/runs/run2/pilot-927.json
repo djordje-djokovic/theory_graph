@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People need to share home access but physical keys get lost or not returned",
+      "status": "explicit",
+      "evidence_span": "hand out keys to friends and I don't get them back. Happens a lot"
+    },
+    {
+      "id": "P2",
+      "text": "Keezy is plug-and-play German-engineered hardware that opens almost any door from inside the apartment",
+      "status": "explicit",
+      "evidence_span": "Keysy can open almost any door from inside your apartment. It's plug and play, and it's German engineered"
+    },
+    {
+      "id": "P3",
+      "text": "A chip in the apartment intercom opens the front door downstairs without modifying that door, while an internet lock covers the apartment door",
+      "status": "explicit",
+      "evidence_span": "there's a chip located in your intercom inside the apartment"
+    },
+    {
+      "id": "P4",
+      "text": "The phone app unlocks doors remotely, shares temporary keys, and monitors access like a personal doorman",
+      "status": "explicit",
+      "evidence_span": "consider Keezy as your personal doorman"
+    },
+    {
+      "id": "P5",
+      "text": "Kwikset partnership supplies security and reliability for the lock package",
+      "status": "explicit",
+      "evidence_span": "partner with big brands like Kwikset, who enable us to provide you with a maximum of security and reliability"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Physical key sharing friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dual-door plug-and-play hardware",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Remote doorman software controls",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Full anytime-anywhere smartphone control of home access with digital key sharing",
+      "status": "explicit",
+      "evidence_span": "You have full control anytime and anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's no more hassle to hand over the keys"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the smartphone becomes the remote control for your doors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Keezy is actually a doorman who never sleeps"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "PIN/key fallback folded into product reliability rather than split this run. Kwikset kept with hardware as partner detail on the lock (4.1(1)/(5)). Campaign pricing excluded. Partition is need/hardware/software, not a forced triad.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-927",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

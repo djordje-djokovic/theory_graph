@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-914",
+    "coder_session_id": "session_04",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Insurance brokers cannot rebate commissions to clients, so Zenefits instead gives free HR/benefits software funded by those commissions",
+      "status": "explicit",
+      "evidence_span": "it's illegal for them to rebate any portion of that commission to their clients. So I can't give you guys money back, but what I can do is provide a whole lot of services and software for free"
+    },
+    {
+      "id": "P2",
+      "text": "HR-as-a-service platform manages payroll, benefits, and associated HR admin for free because revenue comes from insurance commissions",
+      "status": "explicit",
+      "evidence_span": "we take on and manage all of your payroll, all of your benefits, all of the associated HR administrative work"
+    },
+    {
+      "id": "P3",
+      "text": "Companies connect existing payroll and benefits systems two-way without re-enrolling, or Zenefits can set them up online without faxing",
+      "status": "explicit",
+      "evidence_span": "if you already have payroll and benefits you don't have to set anything up. You don't have to re enroll or switch anything you could just connect your existing systems"
+    },
+    {
+      "id": "P4",
+      "text": "Making Zenefits broker of record is a simple online flow that lets them manage benefits and collect ongoing commissions without changing plans or pricing",
+      "status": "explicit",
+      "evidence_span": "If you want to add your health insurance benefits to our platform, you make us your broker"
+    },
+    {
+      "id": "P5",
+      "text": "Connected systems automate onboarding: hire with minimal fields, auto-generate docs, collect payroll/tax/I-9 info, and enroll employees in benefits",
+      "status": "explicit",
+      "evidence_span": "once you've connected this stuff, we can start to mechanize it. We can start to replace people and paper with software and technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "free HR platform funded by broker commissions",
+      "premise_ids": ["P1", "P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "payroll and benefits system connectivity",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "automated employee onboarding",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employers get payroll, benefits, and HR admin automated and free, removing administrative headaches",
+      "status": "explicit",
+      "evidence_span": "if we can take all these headaches off your hands, that's got to be something that's got to make sense for you to switch to us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "just connect your existing systems to our platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the least amount of work that is physically possible to do for you to hire someone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Onboarding step cascade folded into one automation premise (v1.5.1 §4.1.7). Broker-of-record economics kept with the free-platform commercial mechanism; connectivity split as separately revisable integration condition. Competitive disruption rhetoric not coded as premises."
+}

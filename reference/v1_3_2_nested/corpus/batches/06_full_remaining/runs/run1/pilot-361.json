@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-361",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A novel plant-ingredient processing method can create the complex layered textures of meat",
+      "status": "explicit",
+      "evidence_span": "create a novel processing method for actually creating those complex layers of texture that make eating meat so good"
+    },
+    {
+      "id": "P2",
+      "text": "Sundial Wings deliver crispy skin and meat-like texture using natural ingredients",
+      "status": "explicit",
+      "evidence_span": "the outer layer is a crispy skin, and if you give a bite, you can see the meat texture"
+    },
+    {
+      "id": "P3",
+      "text": "The nutritional profile is very similar to real chicken",
+      "status": "explicit",
+      "evidence_span": "the nutritional profile is very similar to real chicken"
+    },
+    {
+      "id": "P4",
+      "text": "The venture needs a way to reach consumers with the technology and product line",
+      "status": "explicit",
+      "evidence_span": "find a way to actually reach consumers with it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Plant-based texture technology",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer reach",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Plant-based wings that recreate the eating experience of meat",
+      "status": "explicit",
+      "evidence_span": "complex layers of texture that make eating meat so good"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "crispy skin, and if you give a bite, you can see the meat texture"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reach consumers with it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Thin pitch: much of the audio is tasting Q&A from non-presenters, excluded per §4.2(5). Singleton D2 retained as an independently stated GTM condition (marketing partner / consumer reach). Bamboo-stick bone detail folded into the wing product premise. Looking-for-creator-partner ask treated as the reach condition, not a financing ask."
+}

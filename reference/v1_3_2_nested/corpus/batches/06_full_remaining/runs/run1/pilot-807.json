@@ -1,0 +1,146 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cookie is a push-button automated cooking device that cooks fresh home meals from pre-portioned ingredient trays using robotics, like a Keurig for cooking",
+      "status": "explicit",
+      "evidence_span": "Cookie, a push-of-a-button automated cooking device from Serenity Kitchen. Think of it as a Keurig for cooking fresh food using robotics"
+    },
+    {
+      "id": "P2",
+      "text": "College students have limited time and cooking ability and less access to home-cooked meals",
+      "status": "explicit",
+      "evidence_span": "We'll have limited time and ability to make food. Many of us don't know how to cook, and being away from home, we'll have less access to these home-cooked meals"
+    },
+    {
+      "id": "P3",
+      "text": "Cookie implements cooking via food-tray storage/delivery, induction cooktop, and a robotic arm for manipulation",
+      "status": "explicit",
+      "evidence_span": "Cookie captures these things with a storage and delivery mechanism for food trays, a safe induction cooktop, and of course, the robotic arm"
+    },
+    {
+      "id": "P4",
+      "text": "Foodie app connects users to recipes, a recipe store, scheduling, tips, and cooking progress; chefs can teach recipes and motions",
+      "status": "explicit",
+      "evidence_span": "Foodie presents a clean, simple interface to connect a user with his or her food choices. Foodie also presents a way to access our upcoming recipe store to buy food and recipes"
+    },
+    {
+      "id": "P5",
+      "text": "Meals are about $4, Cookie retails at $600 or can be rented via subscription, competing on price with mid-tier frozen meals while using fresh ingredients",
+      "status": "explicit",
+      "evidence_span": "A Serenity meal is typically priced at around $4 per meal. The app is free, and cookie will retail at $600. A consumer can also rent the machine with a monthly subscription for a substantially reduced initial cost"
+    },
+    {
+      "id": "P6",
+      "text": "Pre-portioned healthy meal kits reduce work, cut household food waste, and encourage healthier eating",
+      "status": "explicit",
+      "evidence_span": "By pre-portioning just the right amount of healthy fresh ingredients into meal kits and reducing the amount of work required to prepare these meals, we not only help save people time, but we also help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "College student cooking constraints",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cookie robot cooking hardware",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Foodie recipes and teaching app",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Meal and device commercial model",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Portioning for waste and health",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cook a fresh recipe meal from a database without picking up a spatula, by pushing a button",
+      "status": "explicit",
+      "evidence_span": "now we can cook a recipe meal from a recipe database without picking up a spatula"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Conserve food and encourage healthier eating via pre-portioned kits",
+      "evidence_span": "we also help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "limited time and ability to make food"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "push-of-a-button automated cooking device"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect a user with his or her food choices"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "priced at around $4 per meal"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pre-portioning just the right amount of healthy fresh ingredients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Crowdfunding ask excluded. Demo failures ignored. Soft count 6 near upper typical range; chef-teaching folded into Foodie premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-807",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:40+02:00"
+  }
+}

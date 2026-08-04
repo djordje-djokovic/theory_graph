@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-805",
+    "coder_session_id": "session_04",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing installed remote/window/split air conditioners (~one billion units) are not smart/connected the way Nest-style thermostats are",
+      "status": "explicit",
+      "evidence_span": "All I could find is smart thermostats like Nest. But I had this air conditioner in my home, and there are one billion of these kinds of air conditioners"
+    },
+    {
+      "id": "P2",
+      "text": "Sensible Pod attaches to any remote-control AC and uses app control plus learning algorithms to cut energy use (efficient temp, clogged filters, open windows, occupancy) without constant manual control",
+      "status": "explicit",
+      "evidence_span": "we make any air conditioner smart"
+    },
+    {
+      "id": "P3",
+      "text": "Multiple ACs can be controlled from one place in the app",
+      "status": "explicit",
+      "evidence_span": "You have like 10 rooms and 10 aces you want to control it from one place"
+    },
+    {
+      "id": "P4",
+      "text": "Basic kit is $160 plus $80 for each additional air conditioner",
+      "status": "explicit",
+      "evidence_span": "The first kit, the basic kit for Sensible costs $160, and then for each additional air conditioner you have in your home or office, it's another $80"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dumb installed air conditioners",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "energy-saving smart AC pod",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "kit and add-on pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Large energy and electricity-bill savings on existing air conditioners with maintained comfort",
+      "status": "explicit",
+      "evidence_span": "we can actually save a huge amount of energy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Greener world via reduced CO2 emissions",
+      "evidence_span": "we want the world to be greener to reduce co2 emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the only logical conclusion was to build a product that connects to the air conditioner"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save to our pilot users an average of 40% on the energy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're taking pre-orders now on our site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Nest gap and billion installed ACs folded as one retrofit need (§4.1.6). Efficient-temp, filter/window/occupancy detection, lifestyle learning, and multi-AC control folded as energy-smart pod cascade (§4.1.7–8). Wearable roadmap treated as future vision, not premise. Indiegogo awards excluded as traction. Anti-template: problem, product, and pricing separately revisable."
+}

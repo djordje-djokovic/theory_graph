@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-533",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ethereum and 0x-style name lookup repurposes old non-blockchain technology, which IoV avoids by building new technology from the ground up in a well-documented way",
+      "status": "explicit",
+      "evidence_span": "Ethereum and the 0x project enable name lookup by repurposing old technology that does not need blockchain to function"
+    },
+    {
+      "id": "P2",
+      "text": "IoV provides that technology free for non-commercial use by private developers to aid adoption",
+      "status": "explicit",
+      "evidence_span": "provides it for free for non-commercial use for private developers. This will aid adoption of our technology among that group"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ground-up blockchain name tech",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "free non-commercial developer access",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers adopt IoV technology in the ecosystem rather than flawed repurposed name-lookup approaches",
+      "status": "inferred",
+      "evidence_span": "This will aid adoption of our technology among that group"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "IoV solves these issues by building new technology from the ground up"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "aid adoption of our technology among that group"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Heavily truncated mid-pitch; only closing competitive/tech and freemium-adoption claims coded. Founder Lisp mainnet bio and market-cap traction excluded. Token/ecosystem-center claim treated as vision framing and not coded as a premise. Both singletons retained as separately revisable tech vs adoption-policy conditions."
+}

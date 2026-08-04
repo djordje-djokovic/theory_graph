@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Choosing drug targets is difficult because each protein needs genomic, chemical, biological, structural, functional, and compound-interaction assessment",
+      "status": "explicit",
+      "evidence_span": "First, we need to identify which genes in our genome are responsible for the production of the protein"
+    },
+    {
+      "id": "P2",
+      "text": "Manual subjective filtering leaves the best-track targets outside research",
+      "status": "explicit",
+      "evidence_span": "they just leave outside of their target research the ones that are best track targets"
+    },
+    {
+      "id": "P3",
+      "text": "InsideDNA automates objective comprehensive target discovery with genomics, AI, and text mining",
+      "status": "explicit",
+      "evidence_span": "make the process of the drug target discovery fast, automated, objective, and comprehensive"
+    },
+    {
+      "id": "P4",
+      "text": "Researchers configure disease, data-source ratings, and upload diverse genomic modalities for cloud processing",
+      "status": "explicit",
+      "evidence_span": "we support various type of primary genomic data from the whole exome sequencing, genome sequencing to the genotyping array and even metabolomic data"
+    },
+    {
+      "id": "P5",
+      "text": "Outputs include shortlists with confidence and druggability scores plus clinical and 3D detail for pipeline follow-up",
+      "status": "explicit",
+      "evidence_span": "The second score is the dregability score. And this is what we mined from the secondary data sources"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual target-evaluation bottleneck",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Configurable multi-omics AI platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster cheaper less-risky drug target and compound choices for biotech R&D",
+      "status": "explicit",
+      "evidence_span": "find the best and less risky choice for the biotech companies"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the process is lengthy and expensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we make drug discovery faster and cheaper"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Truncated close. Pricing omitted this run as less central than discovery mechanism. Feature steps of the demo folded into platform premises (4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-666",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

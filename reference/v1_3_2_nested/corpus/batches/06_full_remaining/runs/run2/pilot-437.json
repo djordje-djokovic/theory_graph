@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits still run core processes on pen and paper despite a huge sector",
+      "status": "explicit",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile geofencing, kiosk mode, and admin check-in automate volunteer hour tracking with almost no staff work",
+      "status": "explicit",
+      "evidence_span": "It required no work from the Habitat staff. It was simple, easy, and efficient"
+    },
+    {
+      "id": "P3",
+      "text": "Engagement data is a key impact metric nonprofits share with foundations and donors",
+      "status": "explicit",
+      "evidence_span": "This critical information is used by nonprofits to understand the level of engagement of their volunteers and is a key impact metric used to share with both foundations and donors"
+    },
+    {
+      "id": "P4",
+      "text": "Micro-donations at peak inspiration, informed by volunteer data and corporate matching, convert volunteers to donors",
+      "status": "explicit",
+      "evidence_span": "By leveraging our volunteer data, we can tell nonprofits when to give, how much to give, and what to say"
+    },
+    {
+      "id": "P5",
+      "text": "Unlike competitors siloed by nonprofit, volunteer, or corporate buyers, Civic Champs' stack enables seamless cross-party data sharing",
+      "status": "explicit",
+      "evidence_span": "Unlike these competitors, Civic Champs has a database and technology architecture that's uniquely built to serve the full market"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription pricing from $25 to $450/month targets the nonprofit CRM market and adjacent industries",
+      "status": "explicit",
+      "evidence_span": "Civic Champs is targeting the $1.7 billion CRM market for nonprofits"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pen-and-paper nonprofit operations",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated volunteer tracking and impact metrics",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Volunteer-to-donor conversion",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Full-market architecture and SaaS pricing",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how nonprofits operate and engage supporters to make greater community impact",
+      "status": "explicit",
+      "evidence_span": "fundamentally change how nonprofits operate and engage their supporters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nonprofits continue to be underserved"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automated volunteer management"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "converting volunteers to donors"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make a greater impact in our communities"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run2 splits volunteer tracking from micro-donation conversion as separately launched/revisable modules (speaker announces micro-donations launch distinctly). Traction (34 clients, referrals) excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:38:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote top-up gives travelers control of transit tickets from hotel, home city, or roadside",
+      "status": "explicit",
+      "evidence_span": "wherever and whenever they are"
+    },
+    {
+      "id": "P2",
+      "text": "Operators sell tickets via phones instead of physical sales infrastructure; card drops into existing systems",
+      "status": "explicit",
+      "evidence_span": "You don't need a physical infrastructure for that"
+    },
+    {
+      "id": "P3",
+      "text": "Revenue model is a take-rate on large transit ticket volumes",
+      "status": "explicit",
+      "evidence_span": "take a percentage on those"
+    },
+    {
+      "id": "P4",
+      "text": "MyFair standard coverage enables multi-city one-card use after transit distribution",
+      "status": "explicit",
+      "evidence_span": "The reason it works everywhere is that it's based on a technology known as MyFair"
+    },
+    {
+      "id": "P5",
+      "text": "Open APIs distribute additional services after transit operators put cards in consumers' hands",
+      "status": "explicit",
+      "evidence_span": "leverage the reach of public transport organizations, and we will distribute additional services using open APIs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Phone-managed transit card",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ticket take-rate",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Standards reach and API distribution",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify life with a cloud-managed connected card for transit and beyond",
+      "status": "explicit",
+      "evidence_span": "the connected card that can be managed and updated from the cloud"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy to use, and it gives them control"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "great business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one card to replace them all"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Singleton D2 retained as separately revisable monetization. Biographical MyFair chair role excluded as credential.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-836",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:06:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

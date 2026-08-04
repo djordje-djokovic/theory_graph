@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Helping someone pay a bill via cash/check has last-mile leakage and no co-payer visibility",
+      "status": "explicit",
+      "evidence_span": "70% of those transactions was using cash and check"
+    },
+    {
+      "id": "P2",
+      "text": "PayTap routes collaborative contributions directly to billers with share links and multiple payment methods",
+      "status": "explicit",
+      "evidence_span": "collaborate and contribute towards a bill with the money going directly to the biller"
+    },
+    {
+      "id": "P3",
+      "text": "No-account flow, private financial details, notifications, and recurring setups enable family/roommate collaboration",
+      "status": "explicit",
+      "evidence_span": "no one gets to see my financial information"
+    },
+    {
+      "id": "P4",
+      "text": "Amazon-style merchant integration splits collective purchases with notification until funded",
+      "status": "explicit",
+      "evidence_span": "our first merchant integration, and that is with Amazon"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via web/Facebook/mobile apps and by letting billers offer PayTap to users",
+      "status": "explicit",
+      "evidence_span": "we're rolling out Paytap as a web app and a Facebook app"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cash-check shared payment friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Collaborative direct-to-biller payments",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "App and biller distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People collaborate on shared payments with money delivered to the intended biller",
+      "status": "explicit",
+      "evidence_span": "none allow you to collaborate together and contribute where the money goes directly to the biller"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "may not end up at its intended destination"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "funds are insured by the FDIC, and it goes directly to the biller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us great distribution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Amazon integration kept as product module of merchant collaboration rather than pure traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1023",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

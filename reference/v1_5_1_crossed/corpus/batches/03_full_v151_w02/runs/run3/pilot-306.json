@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-306",
+    "coder_session_id": "session_04",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Marketing budgets are wasted on ineffective ad content even though creative drives sales",
+      "status": "explicit",
+      "evidence_span": "25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "id": "P2",
+      "text": "Computer vision quantifies design elements into data points that reveal what drives sales",
+      "status": "explicit",
+      "evidence_span": "OmniKey uses computer vision to quantify design elements into data points"
+    },
+    {
+      "id": "P3",
+      "text": "Generative AI creates personalized ads from real-time marketing data insights",
+      "status": "explicit",
+      "evidence_span": "generate personalized content based on real-time marketing data"
+    },
+    {
+      "id": "P4",
+      "text": "Customers approve generated ads in the dashboard before automatic multi-platform launch",
+      "status": "explicit",
+      "evidence_span": "approve the generated ads through the OmniKey dashboard, at which point they're automatically launched across all the different platforms"
+    },
+    {
+      "id": "P5",
+      "text": "Proprietary API integrations with ad networks back generated content with real performance data",
+      "status": "explicit",
+      "evidence_span": "proprietary API integrations with all the ad networks and marketing platforms"
+    },
+    {
+      "id": "P6",
+      "text": "A creator marketplace applies finishing touches with customer annotation and feedback",
+      "status": "explicit",
+      "evidence_span": "sent to our marketplace or creators to make the finishing touches"
+    },
+    {
+      "id": "P7",
+      "text": "Digital asset management of brand guidelines and assets keeps generated content on brand",
+      "status": "explicit",
+      "evidence_span": "upload their brand guidelines, brand assets, and more through our digital asset management feature"
+    },
+    {
+      "id": "P8",
+      "text": "Ideal customers are the 12 million businesses currently advertising online",
+      "status": "explicit",
+      "evidence_span": "our ICP is the 12 million businesses currently advertising online today"
+    },
+    {
+      "id": "P9",
+      "text": "Self-serve product is the go-to-market path for acquiring customers",
+      "status": "explicit",
+      "evidence_span": "launch of our self-serve product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ineffective content waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Design-to-data analytics and generative ads",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Approval, creators, and brand control",
+      "premise_ids": ["P4", "P6", "P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Online advertiser ICP and self-serve",
+      "premise_ids": ["P8", "P9"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-generated ad content that drives sales and conversions",
+      "status": "explicit",
+      "evidence_span": "drive your sales to the moon with AI-generated content"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Marketers stay in control while using generative AI",
+      "evidence_span": "harness the power of state-of-art machine learning and generative AI while staying in control"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The content we generate actually delivers conversions, actually delivers results because it's backed by real-time marketing data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "OmniKey lets customers harness the power of state-of-art machine learning and generative AI while staying in control"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our ICP is the 12 million businesses currently advertising online today"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our AI then utilizes these insights to generate personalized content at scale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "CV feature list folded as cascade of one analytics mechanism. Creator marketplace and DAM split from approval under tie-break as separately framed modules. Singleton D1 retained as independently revisable problem condition. Revenue/traction metrics excluded."
+}

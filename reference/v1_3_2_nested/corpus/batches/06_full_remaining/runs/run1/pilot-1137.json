@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Internet giants invest in global CDN speed and large fraud/abuse teams, but ordinary website operators lack those tools",
+      "status": "explicit",
+      "evidence_span": "if you're trying to run a website today, you're left alone without access to any of these tools"
+    },
+    {
+      "id": "P2",
+      "text": "Cloudflare delivers performance and security tools of the biggest providers to anyone with a website",
+      "status": "explicit",
+      "evidence_span": "Cloudflare is a performance and security solution that takes the tools of the biggest service providers and makes them available for anyone with a website online"
+    },
+    {
+      "id": "P3",
+      "text": "Setup is ridiculously easy: no hardware, software install, or code changes—only a DNS nameserver change in about five minutes",
+      "status": "explicit",
+      "evidence_span": "Cloudflare doesn't require hardware. It doesn't require you to install any software. You don't have to change a single line of code anywhere on your site"
+    },
+    {
+      "id": "P4",
+      "text": "Traffic through Cloudflare's global network yields about 30% faster page loads and stops virtually all spam and attacks",
+      "status": "explicit",
+      "evidence_span": "We deliver an average of a 30% decrease in page load times to your site when you sign up. We stop virtually all the spam, attackers, other garbage that are coming to your site"
+    },
+    {
+      "id": "P5",
+      "text": "The service is free at the primary price point while already covering variable costs per user",
+      "status": "explicit",
+      "evidence_span": "there's really only one price point for a service like ours, and that's free"
+    },
+    {
+      "id": "P6",
+      "text": "Underlying mechanism is a globally distributed caching proxy with deep packet inspection that can rewrite HTML in real time",
+      "status": "explicit",
+      "evidence_span": "we've done is built a globally distributed caching proxy that does deep packet inspection to layer 7 of the OSI model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Small-site tool gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Easy performance-security network",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free unit economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the web a faster, safer place so any site is fast, safe, and secure",
+      "status": "explicit",
+      "evidence_span": "our goal at the end of the day is to make the web a faster, safer place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "We had to make them ridiculously easy"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "left alone without access to any of these tools"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cloudflare's got your back, and we won't rest until your site is fast, safe, and secure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only one price point for a service like ours, and that's free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "User testimonial clips treated as other speakers and excluded (4.2.5). Beta visitor/threat counts excluded as traction. Google Analytics auto-update demo folded into ease/capability (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1137",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:05+02:00"
+  }
+}

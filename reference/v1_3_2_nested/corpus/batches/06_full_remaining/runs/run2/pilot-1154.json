@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CPG marketers cannot tell prospects from existing loyal buyers, so half of coupon and media spend is wasted",
+      "status": "explicit",
+      "evidence_span": "If you're a Coca-Cola, you don't know if your customer is this guy here on the left or this guy here on the right"
+    },
+    {
+      "id": "P2",
+      "text": "Snapdragon is barcode product check-ins that unlock a comic adventure and dragon commentary",
+      "status": "explicit",
+      "evidence_span": "It's product check-ins that unlock a comic book adventure"
+    },
+    {
+      "id": "P3",
+      "text": "In-store check-ins surface friends' opinions when shoppers need them for purchase decisions",
+      "status": "explicit",
+      "evidence_span": "you get it when you're in the store trying to make your purchase decision"
+    },
+    {
+      "id": "P4",
+      "text": "The check-in game supplies targeting tools CPG marketers need inside a fun gaming experience",
+      "status": "explicit",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need, and wrapping the whole thing in this fun gaming experience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "No CPG targeting",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Product check-in game",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reinvent how consumer product companies market to customers with targeting wrapped in a fun game",
+      "status": "explicit",
+      "evidence_span": "we want to fundamentally reinvent how consumer product companies market to their customers"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Consumers get hooked on a fun product check-in gaming experience",
+      "evidence_span": "wrapping the whole thing in this fun gaming experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They have no targeting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "product check-ins that unlock a comic book adventure"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Two-domain partition: market targeting failure vs consumer check-in product that also sells targeting. Twitter/Foursquare analogies and $2.2T disruption claim treated as vision/framing (v1.3.2 §4.1(4)). Bay Area comedy writers treated as production detail inside the comic unlock premise, not a separate module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1154",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:01+02:00"
+  }
+}

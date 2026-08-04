@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-performance and high-throughput compute users spend months deploying tools so hundreds or thousands of cloud instances work together",
+      "status": "explicit",
+      "evidence_span": "they have teams of people that will spend months deploying software and writing tools and technologies to make hundreds or thousands of cloud instances work together"
+    },
+    {
+      "id": "P2",
+      "text": "Developers configure one sandbox instance and CPUsage auto-distributes it across hundreds or thousands of cloud nodes in minutes, including a custom API for command-line apps",
+      "status": "explicit",
+      "evidence_span": "distribute virtually any high-performance or high-throughput application across any cloud at any scale in a matter of minutes, not months"
+    },
+    {
+      "id": "P3",
+      "text": "Platform supports AWS now and will add other public clouds then private cloud",
+      "status": "explicit",
+      "evidence_span": "Today we support Amazon Web Services and over the next few months will add support for other infrastructure such as Microsoft Windows Azure and Google Compute Engine"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "months of cloud HPC orchestration pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "sandbox-to-scale distribution platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "multi-cloud and private cloud reach",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any compute application can scale across the cloud in minutes like a utility, without months of configuration",
+      "status": "explicit",
+      "evidence_span": "plug in any compute application, consume as much compute power as you want, without having to think about configuration"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll spend months"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll be up and running in just a matter of minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "add support for other infrastructure such as Microsoft Windows Azure and Google Compute Engine"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Molecule/workload story folded into HPC orchestration pain (§4.1.6). Sandbox, auto-replicate, click-start, and API builder folded as one distribution mechanism (§4.1.7). Electricity vision used as value framing, not a separate premise (§4.1.4). Market-size stats excluded. Anti-template: problem, product, and cloud coverage separately revisable."
+}

@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Healthcare should let doctors, nurses, labs, and pharmacies collaborate nationwide as if in one hospital",
+      "status": "explicit",
+      "evidence_span": "imagining this health care system where doctors, nurses, labs, pharmacies, all across the country can collaborate"
+    },
+    {
+      "id": "P2",
+      "text": "Most hospital functions are administrative and replaceable by a technology platform that connects patients to doctors",
+      "status": "explicit",
+      "evidence_span": "The hospital itself is mostly an administrative layer that handles things like registration, billing, and shared access to medical records"
+    },
+    {
+      "id": "P3",
+      "text": "Carbon delivers easy insurance-based onboarding, an actionable longitudinal chart, messaging, and automated intake on the phone",
+      "status": "explicit",
+      "evidence_span": "Onboarding with Carbon couldn't be easier"
+    },
+    {
+      "id": "P4",
+      "text": "Hybrid virtual and clinic care preserves context in both directions",
+      "status": "explicit",
+      "evidence_span": "when you leave the clinic, you can choose to do follow-ups virtually if you wish"
+    },
+    {
+      "id": "P5",
+      "text": "Owning physician and patient applications plus integrations yields experiences traditional providers cannot match",
+      "status": "explicit",
+      "evidence_span": "since you control your experience all the way from the physician applications to the patient applications and integrations with third parties"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Collaborative care without hospital buildings",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Carbon hybrid care product",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Full-stack control advantage",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Best possible care via a ubiquitous technology platform connecting people with their doctors",
+      "status": "explicit",
+      "evidence_span": "a ubiquitous technology platform that connects us with our doctors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give the best possible care to their patients"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamless hybrid of virtual and in-person care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "impossible for the traditional health care providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run3 folds many UI features into onboarding/chart premise. Collaborative nationwide care kept as theory condition. Personal disease story excluded. SF pilot opening excluded as traction/rollout.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-701",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

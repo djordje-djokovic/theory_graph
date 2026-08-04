@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Phones should power look-up social games rather than only screen-bound titles like Words with Friends",
+      "status": "explicit",
+      "evidence_span": "all they're doing is using it to play words with friends"
+    },
+    {
+      "id": "P2",
+      "text": "Physical IR tagger and puck plus phone app complete timed assassination-style missions",
+      "status": "explicit",
+      "evidence_span": "shoots an infrared beam to the light puck. which immediately registers here"
+    },
+    {
+      "id": "P3",
+      "text": "Cloud platform uses the phone to relay all gaming activity over the internet",
+      "status": "explicit",
+      "evidence_span": "all the gaming activity goes leverages the power of your phone. All that data is relayed through the Internet"
+    },
+    {
+      "id": "P4",
+      "text": "Open-source software/hardware and 3D-printable peripherals support community-built games",
+      "status": "explicit",
+      "evidence_span": "You can use ours, or you can 3D print your own, depending on whatever type of game you want"
+    },
+    {
+      "id": "P5",
+      "text": "Sensor-rich lighter is programmable for RPG, FPS, assassin, and other genres",
+      "status": "explicit",
+      "evidence_span": "whether it's a fantasy RPG, first-person, assassin"
+    },
+    {
+      "id": "P6",
+      "text": "Automated game-mastering replaces a human GM and supports custom rules",
+      "status": "explicit",
+      "evidence_span": "no longer do you need a game master for each of these interactive-type games. Now all of it's automated"
+    },
+    {
+      "id": "P7",
+      "text": "HUD integration surfaces real-time game information to players",
+      "status": "explicit",
+      "evidence_span": "integrated heads-up display. So now you can see all of your in-game stats, your health, any type of game information that you have as part of the gameplay, you can be relayed in real time"
+    },
+    {
+      "id": "P8",
+      "text": "Monetization mixes owned games/hardware with an open third-party developer community",
+      "status": "explicit",
+      "evidence_span": "developing this as an open community and hosting the third-party game developers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Beyond-screen mobile gaming need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "IR/sensor gameplay and cloud automation",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Open peripheral ecosystem and developer hosting",
+      "premise_ids": [
+        "P4",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Next-generation IoT gaming that connects devices and people in physical space",
+      "status": "explicit",
+      "evidence_span": "totally next-generation gaming system that leverages all of the Internet of Things, connecting those devices together, and bringing the gameplay together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "look up, interact with real people"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mission has been completed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "third-party game developers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Transcript truncates at Kickstarter CTA; truncated=false because pitch content is otherwise complete. Gamify IoT claim kept inside platform domain rather than separate premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-801",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

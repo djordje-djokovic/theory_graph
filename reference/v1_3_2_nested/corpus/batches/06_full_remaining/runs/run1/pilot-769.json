@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "User-data-and-reach targeting makes video ads irrelevant, so providers, brands, and users all lose",
+      "status": "explicit",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "id": "P2",
+      "text": "A recognition engine detects faces, objects, logos, music, gender, age, and emotion in video content to target ads beyond user data",
+      "status": "explicit",
+      "evidence_span": "Our engine able to detect today faces, objects, logos, music, gender, age, and even emotion to better target advertising"
+    },
+    {
+      "id": "P3",
+      "text": "The engine matches relevant ads to the right second for pre-roll, mid-roll, or related placements using nightly content metadata",
+      "status": "explicit",
+      "evidence_span": "Then we're able to match on the right second the relevant advertising that can be shown in pre-roll or mid-roll or second cream solution"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from selling content recognition data and offering campaign management to platforms, operators, and brands",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Irrelevant user-data video ads",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Content recognition targeting engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Data sales and campaign management",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant video ads that improve engagement and brand ROI while reducing user irritation",
+      "status": "explicit",
+      "evidence_span": "they enjoy show video content and be inspired by related ads"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Higher brand return on investment from content-aware targeting",
+      "evidence_span": "The brand, they get lower return on investment"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody is losing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "42% more people viewed the ads that was based on our recognition technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable any programmatic party to use our solution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "BMW/Fox campaign metrics treated as traction evidence of the recognition mechanism, not separate premises. Patent folded into engine (v1.3.1 §4.1(1)). Detection list kept as one capability (v1.3.1 §4.1(2)). Mission 'organize the world of video' / new standard framing not coded as premises (v1.3.2 §4.1(4)). Team bios excluded. Anti-template triad justified: data+campaign sales revisable without changing recognition stack; irrelevance problem is a market assumption."
+}

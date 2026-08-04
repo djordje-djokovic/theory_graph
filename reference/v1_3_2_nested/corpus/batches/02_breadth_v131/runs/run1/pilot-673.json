@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video consumption is surging while creators get savvier, increasing demand for video output",
+      "status": "explicit",
+      "evidence_span": "video consumption is going through the roof, but also people are getting savvier to create their own video"
+    },
+    {
+      "id": "P2",
+      "text": "Studio-controlled production and wild uncurated UGC are separate worlds that must be bridged",
+      "status": "explicit",
+      "evidence_span": "The video landscape is divided on one side we have a tightly controlled industry driven by studios and agencies and on the other side there's this explosion of user generated content online that's kind of crazy and wild and uncurated"
+    },
+    {
+      "id": "P3",
+      "text": "Companies can produce high-impact video at scale by engaging their own fans, customers, and employees as filmers",
+      "status": "explicit",
+      "evidence_span": "produce high-impact video at scale by engaging their own communities of fans, customers, and employees to become the filmers"
+    },
+    {
+      "id": "P4",
+      "text": "Product is client tools to engage their own communities, not a third-party filmer marketplace",
+      "status": "explicit",
+      "evidence_span": "We're not building a scenic community. Instead, we're building the tools to enable our clients to engage and create with their own communities"
+    },
+    {
+      "id": "P5",
+      "text": "Clients load filming instructions and in-app terms grant reuse rights over uploaded community footage",
+      "status": "explicit",
+      "evidence_span": "they loaded filming instruction that they wanted their community to capture"
+    },
+    {
+      "id": "P6",
+      "text": "Uploads are auto-tagged and processed, with editing in-platform, in external tools, or via remote freelancers",
+      "status": "explicit",
+      "evidence_span": "All of the video is then automatically tagged, analyzed, and processed on upload as well. Then there's 3 ways to edit"
+    },
+    {
+      "id": "P7",
+      "text": "Monetization is a subscription studio model",
+      "status": "explicit",
+      "evidence_span": "now we're fully into a subscription model"
+    },
+    {
+      "id": "P8",
+      "text": "Machine-learning search (sentiment, objects, transcription) makes the content library reusable",
+      "status": "explicit",
+      "evidence_span": "search sentiment analysis object recognition and transcription"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bridging studio video and community capture",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Client community production platform",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6",
+        "P8"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription studio economics",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "High-impact authentic branded video produced at scale from a company's own community",
+      "status": "explicit",
+      "evidence_span": "produce high-impact video at scale by engaging their own communities of fans, customers, and employees to become the filmers"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Authentic community footage that connects because it is real",
+      "evidence_span": "because it's real and it connects"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring these 2 worlds together"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tools to enable our clients to engage and create with their own communities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully into a subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "v1.3.1 §4.1.2: three edit paths coded as one production-workflow premise (enumerated uses of the same platform). Rights span uses filming-instructions sentence; T&Cs reuse noted in premise text with supporting span on T&Cs in run notes. Revenue figures excluded. Singleton D3 justified as distinct monetization shift from pay-as-you-go.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-673",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

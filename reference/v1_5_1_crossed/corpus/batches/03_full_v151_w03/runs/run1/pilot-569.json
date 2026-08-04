@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "coder_session_id": "session_05",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After-school private tutoring is essential for success in MENA, but many students struggle to find a qualified, accessible, available tutor quickly",
+      "status": "explicit",
+      "evidence_span": "One out of three students struggle to find a tutor. And it takes, on average, four to five hours to find someone who's qualified, accessible, and available"
+    },
+    {
+      "id": "P2",
+      "text": "A peer-to-peer app connects students to pre-vetted tutors via course pick, preference-based selection, and direct booking",
+      "status": "explicit",
+      "evidence_span": "a peer-to-peer platform that connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in online tutoring with note sharing, whiteboarding, video, chat, ratings, and progress reports",
+      "status": "explicit",
+      "evidence_span": "we build our online tutoring system from scratch with note sharing, whiteboarding, and video functionalities"
+    },
+    {
+      "id": "P4",
+      "text": "ML-assisted tutor hiring plus graph-based matching recommend tutors by proximity, education, and hours tutored",
+      "status": "explicit",
+      "evidence_span": "we have an algorithm that favors our tutors based on several criteria, like proximity, education background, number of hours tutored"
+    },
+    {
+      "id": "P5",
+      "text": "Peer tutors with similar educational backgrounds are rewarded with pay, internships, training, and bonuses",
+      "status": "explicit",
+      "evidence_span": "we match students with peer tutors who have been in their shoes and have the same educational background"
+    },
+    {
+      "id": "P6",
+      "text": "Arabic MENA-focused GTM with 20% tutor commission and planned institutional analytics subscriptions",
+      "status": "explicit",
+      "evidence_span": "We charge our tutors a 20% commission per transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard-to-find tutoring supply",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "peer tutoring marketplace and matching",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "MENA monetization model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make education accessible by matching students quickly to qualified peer tutors online or in person",
+      "status": "explicit",
+      "evidence_span": "make education Accessible to all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "struggle to find a tutor"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "20% commission per transaction"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "§4.1.6: closed centers, commute, and long search time folded into one tutor-finding pain (P1). Demo booking/chat/location steps folded into marketplace (P2). Online session features kept as one capability package (P3). Student/tutor traction and Ministry MOUs excluded. Market-size doubling vision excluded (§4.1.4)."
+}

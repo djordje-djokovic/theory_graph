@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-502",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "African logistics lack flexibility and centralized coordination, so contracted trucks often fail to finalize, price, or show up and cargo owners overpay for commodities",
+      "status": "explicit",
+      "evidence_span": "there's no flexibility or centralized coordination in the system"
+    },
+    {
+      "id": "P2",
+      "text": "Truckers are empty or idle most of the time and wait days at load/offload for short journeys because of the same coordination gaps",
+      "status": "explicit",
+      "evidence_span": "The truckers are empty or idle 93% of the time"
+    },
+    {
+      "id": "P3",
+      "text": "Tech-enabled logistics optimization provides flexibility and centralized coordination across the entire journey, including dynamic redirects when delays or weather block loading",
+      "status": "explicit",
+      "evidence_span": "We are a tech-enabled logistics optimization solution that provides this flexibility and centralized coordination"
+    },
+    {
+      "id": "P4",
+      "text": "Thousands of data points per truck journey enable data-driven operations decisions and visibility for cargo owners and transporters",
+      "status": "explicit",
+      "evidence_span": "collecting thousands of data points of every single truck in every journey and then providing data-driven decision making through our systems"
+    },
+    {
+      "id": "P5",
+      "text": "Live dashboards and tracking (including Google Waze partnership in beta) give cargo owners visibility of truck location",
+      "status": "explicit",
+      "evidence_span": "We're providing our car owners with further visibility through dashboards and tracking mechanisms where you can see where your trucks are at any given stage live"
+    },
+    {
+      "id": "P6",
+      "text": "Focus is large-volume haulage of grains, fertilizers, cement, and sugar across Sub-Saharan Africa rather than inner-city small-parcel delivery",
+      "status": "explicit",
+      "evidence_span": "Right now we're focused on grains, fertilizers, cement, and sugar"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken African haulage coordination",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Data-driven journey optimization and visibility",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Commodity haulage market focus",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring down the cost of goods by revolutionizing African logistics",
+      "status": "explicit",
+      "evidence_span": "bringing down the cost of goods for all of us and for the whole continent"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peace of mind for cargo owners and transporters during stressful journeys",
+      "evidence_span": "allowing them to have peace of mind, which we found to be quite important in these stressful times"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The logistic system's broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provides this flexibility and centralized coordination"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Lorry is moving large volumes across Sub-Saharan Africa"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Shipper and trucker pain folded as two related problem premises sharing the coordination failure. Redirect examples treated as cascade of the optimization mechanism (P3). Traction, retention, and competitor geography claims used as evidence only. Singleton D3 retained as independently revisable market-focus module."
+}

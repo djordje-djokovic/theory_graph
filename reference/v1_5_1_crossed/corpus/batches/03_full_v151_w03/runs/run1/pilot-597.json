@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-597",
+    "coder_session_id": "session_05",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Exploding multi-partner data volumes, formats, and access frequency make inter-company data management hard technically and operationally",
+      "status": "explicit",
+      "evidence_span": "This explosion in data makes managing inter-company data very hard, both technically and operationally"
+    },
+    {
+      "id": "P2",
+      "text": "A data operations platform handles giving and getting data so teams focus on using data rather than integrating it",
+      "status": "explicit",
+      "evidence_span": "Nexla is a data operations platform that takes care of how you give and get the data so that you can focus on how to use the data"
+    },
+    {
+      "id": "P3",
+      "text": "The platform is operable by ops teams, with end-to-end security and smart monitoring of schema, quality, and volume changes",
+      "status": "explicit",
+      "evidence_span": "Nexla is easy to use, secure, and smart"
+    },
+    {
+      "id": "P4",
+      "text": "No-code workflows scan data into datasets, transform/filter, share to destinations, and automate monitored pipelines across infrastructures",
+      "status": "explicit",
+      "evidence_span": "It took our user no time to set this up, and no coding was required"
+    },
+    {
+      "id": "P5",
+      "text": "Built for inter-company data needs that in-house builds and existing tools cannot handle at monitoring, security, and operational scale",
+      "status": "explicit",
+      "evidence_span": "Existing solutions, meanwhile, cannot handle inter-company data with its needs for monitoring, security, and operational scale"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inter-company data operations problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "secure no-code data ops platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less time integrating data, more time creating business value by scaling data operations securely and repeatedly",
+      "status": "explicit",
+      "evidence_span": "Less time integrating, more time creating business value"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing inter-company data very hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focus on scaling your business while we scale your data operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: partner/format/frequency explosion and third-party data adoption folded into one inter-company data-ops pain (P1). Easy/secure/smart facets kept as one platform quality package (P3). Demo scan/annotate/transform/MySQL steps folded into no-code workflow premise (P4). Closed-beta customer names and $30B opportunity excluded as traction/market framing."
+}

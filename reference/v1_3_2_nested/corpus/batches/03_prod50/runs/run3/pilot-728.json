@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing robotic arms fail on cost, usability, and safety for non-factory use",
+      "status": "explicit",
+      "evidence_span": "they're expensive, they're difficult to use, and quite frankly, not that safe"
+    },
+    {
+      "id": "P2",
+      "text": "Casio is an industrial-capable arm at laptop price with precision motion and customizable attachments",
+      "status": "explicit",
+      "evidence_span": "Casio has the capabilities of an industrial arm, but the price of a laptop"
+    },
+    {
+      "id": "P3",
+      "text": "Guide-through training and consumer interfaces remove the need for advanced degrees",
+      "status": "explicit",
+      "evidence_span": "Simply guide the arm through a motion that it plays back perfectly"
+    },
+    {
+      "id": "P4",
+      "text": "Novel full-coverage proximity sensors keep the arm safe around humans",
+      "status": "explicit",
+      "evidence_span": "we've invented a new type of sensor. It can detect a human up to 20 inches away in any direction from any point on the arm"
+    },
+    {
+      "id": "P5",
+      "text": "APIs turn Cassia into a developer platform anyone who can build a website can use",
+      "status": "explicit",
+      "evidence_span": "Our APIs cut the complexity, so if you can build a website, you can code for Cassia"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Casio arm product (price, performance, safety, training)",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Developer platform",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable new robotic applications by making arms ubiquitous like computers",
+      "status": "explicit",
+      "evidence_span": "to enable these new types of applications, and ultimately to make robotic arms as ubiquitous as computers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've created Casio, our kick-ass, trainable, intelligent arm that solves all three problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when you give people incredible tools, they can do incredible things"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Coarser merge of hardware/price/customization into P2. Singleton D2: developer platform presented as separately learnable from the physical arm. Truncated.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-728",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

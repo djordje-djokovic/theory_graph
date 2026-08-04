@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-757",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Digital Genius provides practical deep-learning AI for customer service used in contact centers across countries and languages to support high message volumes",
+      "status": "explicit",
+      "evidence_span": "bringing practical applications of deep learning and AI into customer service"
+    },
+    {
+      "id": "P2",
+      "text": "The AI enables more consistent service, more effective agents, and can support a large share of incoming message volume including Messenger and WhatsApp channels",
+      "status": "explicit",
+      "evidence_span": "able to provide a more consistent service. They're empowering their customer service agents"
+    },
+    {
+      "id": "P3",
+      "text": "Research advances (e.g. outperforming an IBM Watson insurance QA benchmark) are productized into the contact-center offering",
+      "status": "explicit",
+      "evidence_span": "outperforms the IBM Watson's benchmark for the insurance QA dataset"
+    },
+    {
+      "id": "P4",
+      "text": "Expanding beyond private contact centers via a local-government partnership to help government innovate as fast as the private sector",
+      "status": "explicit",
+      "evidence_span": "announcing our first government partnership"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI customer service product",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "research-to-product and government channel",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better customer experiences by combining human and machine intelligence seamlessly in contact centers",
+      "status": "explicit",
+      "evidence_span": "by combining the best of human and machine intelligence in a seamless experience, we can really help create better experiences for people"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowering their customer service agents in the trenches to be more effective every single day"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerate the adoption of cutting-edge research and making it into a practical product reality"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Update-style pitch with limited causal problem statement; premises coded from asserted product conditions. Deployment geography/language/volume and headcount treated as traction and folded/excluded per §4.2; mechanism kept. Fundraising anecdote excluded. Thin on separately revisable modules—D2 groups research edge and new government GTM as expansion conditions."
+}

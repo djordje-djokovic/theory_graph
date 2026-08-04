@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-551",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cattle weight is critical for health, genetics, sale timing, and farm value, but traditional weighing is laborious, stressful, causes weight loss, and is rarely done",
+      "status": "explicit",
+      "evidence_span": "obtaining weight information is labor-intensive, time-consuming, and expensive, so it's rarely obtained"
+    },
+    {
+      "id": "P2",
+      "text": "Portable 3D-camera software estimates cattle weight automatically as animals pass, stress-free and about ten times faster than traditional weighing",
+      "status": "explicit",
+      "evidence_span": "uses a portable 3D camera to estimate the weight of the cattle, allowing farmers to monitor weight variation frequently at a stress-free manner for the cow, at a rate that is 10 times faster than the traditional process"
+    },
+    {
+      "id": "P3",
+      "text": "Dashboard recommendations help farmers optimize weight gain and profitability (sale timing, feed, sickness, genetics)",
+      "status": "explicit",
+      "evidence_span": "farmers can see our dashboard with recommendations on how to optimize weight gain and profitability"
+    },
+    {
+      "id": "P4",
+      "text": "Portable camera plus per-animal monthly fee is cheaper than passage scales and works for farms of all sizes without requiring animals to stand still",
+      "status": "explicit",
+      "evidence_span": "Olho do Dono is portable. The 3D camera costs around R$ 3,000 and we charge R$ 1 per animal month"
+    },
+    {
+      "id": "P5",
+      "text": "Platform recommends products that optimize weight gain and earns commission on those products",
+      "status": "explicit",
+      "evidence_span": "Our platform also gives recommendations on products that can optimize weight gain and we make a commission fee on that"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "costly stressful cattle weighing",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "3D camera weight estimation and recommendations",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "portable pricing and product commissions",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase beef cattle productivity and profitability while maintaining cow well-being",
+      "status": "explicit",
+      "evidence_span": "increase the beef cattle productivity and profitability while maintaining the well-being of the cow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more weight, more money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We help farmers to grow their bottom lines"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Olho do Dono is portable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: health/genetics/sale/financial importance plus labor/stress/injury costs folded as one weighing-pain bundle (P1). Demo pass/record/dashboard facets folded into P2–P3. Competitor still-photo and scale-cost contrasts sharpen P4. Market-size and paid-beta traction excluded. Speed/price numbers treated as quantitative detail of P2/P4 (§4.1.8)."
+}

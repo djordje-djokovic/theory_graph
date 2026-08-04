@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-915",
+    "coder_session_id": "session_04",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:13:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customers struggle to book last-minute personal services while qualified small businesses have idle capacity and want new paying customers",
+      "status": "explicit",
+      "evidence_span": "I had to go through the painful process of dialing all of those merchants just to find one that was willing to take my money"
+    },
+    {
+      "id": "P2",
+      "text": "Customers place service requests with named price, travel, timing, and minimum rating; Bidzee offers the bid to local merchants",
+      "status": "explicit",
+      "evidence_span": "you can easily place a request for personal service, and you can even name your own price"
+    },
+    {
+      "id": "P3",
+      "text": "Merchants accept bids from their app when they have capacity; acceptance charges the customer card and schedules both calendars",
+      "status": "explicit",
+      "evidence_span": "When this merchant hits accept, my credit card is immediately charged and the service is scheduled on both of our calendars"
+    },
+    {
+      "id": "P4",
+      "text": "Merchant acquisition is free of upfront cost, with bottom-of-funnel carded demand, timing certainty, and accept-only-when-idle capacity control",
+      "status": "explicit",
+      "evidence_span": "A merchant working with BidZ faces no upfront investment at all"
+    },
+    {
+      "id": "P5",
+      "text": "Marketplace connects consumers only to verified, rated local businesses rather than peer consumers",
+      "status": "explicit",
+      "evidence_span": "BidZ is only connecting you with a verified, rated local business in order to perform the service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "customer-named-price service bidding",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "merchant-friendly acquisition terms",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "verified local business trust",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get services on their terms while merchants monetize idle time with paying customers",
+      "status": "explicit",
+      "evidence_span": "A customer gets an appointment on their terms, and a business gets a paying customer through the door"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get the service that I desperately need and put extra money in the pocket of this merchant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gives these merchants customer acquisition on their own terms"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "starting off with the key facet to a successful marketplace, trust"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Merchant pain list about existing channels folded into P4 as one merchant-side acquisition condition set. Service category list treated as scope of the same marketplace, not separate premises. Flip-the-equation uniqueness folded into P2 mechanism."
+}

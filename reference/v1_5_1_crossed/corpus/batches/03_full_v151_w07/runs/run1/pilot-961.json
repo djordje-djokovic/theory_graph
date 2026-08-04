@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-961",
+    "coder_session_id": "session_01",
+    "session_case_index": 1,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:15:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Phone-based customer service forces painful hold times and spelling out identifying information",
+      "status": "explicit",
+      "evidence_span": "It sucks to wait on hold. It sucks to spell out your name and address"
+    },
+    {
+      "id": "P2",
+      "text": "NextCaller sends the caller's profile to the answering agent via API at call time so identifying details need not be spoken",
+      "status": "explicit",
+      "evidence_span": "we send your profile to the answering agent at the time of your call via our API"
+    },
+    {
+      "id": "P3",
+      "text": "Businesses reward sufficient information exchange by letting callers skip the hold line via priority routing",
+      "status": "explicit",
+      "evidence_span": "they reward you by letting you skip the whole line"
+    },
+    {
+      "id": "P4",
+      "text": "Call centers on Zendesk, Five9, and Salesforce can integrate NextCaller and go live within minutes",
+      "status": "explicit",
+      "evidence_span": "Companies using Zendesk, Five9, and Salesforce to manage their call centers can easily integrate the Nextcaller application and be live and running within minutes"
+    },
+    {
+      "id": "P5",
+      "text": "Callers can release billing information to a payment gateway with a four-digit PIN instead of reading a card aloud",
+      "status": "explicit",
+      "evidence_span": "you simply provide your four-digit billing PIN"
+    },
+    {
+      "id": "P6",
+      "text": "Tens of billions of US customer-service calls still require costly manual caller identification",
+      "status": "explicit",
+      "evidence_span": "that's over $14 billion wasted by businesses every year just to ask you how to spell your name"
+    },
+    {
+      "id": "P7",
+      "text": "Profiles sold at $0.10 deliver over 90% savings versus per-call identification cost",
+      "status": "explicit",
+      "evidence_span": "We sell our profiles for $0.10. That represents savings of over 90%"
+    },
+    {
+      "id": "P8",
+      "text": "Major telco partnerships already identify ~180 million US numbers without requiring callers to sign up",
+      "status": "explicit",
+      "evidence_span": "We've partnered with all the major telcos to provide caller information"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "profile API and skip-the-line routing",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "call center CRM integrations",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "secure phone billing PIN",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "identification market and pricing",
+      "premise_ids": ["P6", "P7"]
+    },
+    {
+      "id": "D5",
+      "name": "telco identity coverage",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customer service without hold, spelling, and identity hassle for callers",
+      "status": "explicit",
+      "evidence_span": "just customer service without all the hassle"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Businesses save money by avoiding costly manual caller identification",
+      "evidence_span": "a sufficient exchange of information saves businesses so much money"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you never have to spell your name, your email, your address over the phone ever again"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "agents spend less time asking questions and more time answering them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this process clearly much more efficient"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That represents savings of over 90%"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you didn't say a word. No waiting on hold, no more spelling out your information"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Widget, priority routing, and agent-desktop delivery folded as one profile/routing mechanism (§4.1). Billing PIN split as separately revisable commerce module. Telco coverage and $0.10 pricing kept separate from product UX. Singleton D2/D3/D5: each is an independently claimed path to value. Financing ask absent."
+}

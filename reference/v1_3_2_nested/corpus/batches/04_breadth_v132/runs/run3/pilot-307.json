@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-307",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stalking, identity theft, phishing, and social engineering attacks are exploding and everyone is vulnerable",
+      "status": "explicit",
+      "evidence_span": "Stalking and harassment, identity theft and fraud, phishing and social engineering, these types of attacks are exploding"
+    },
+    {
+      "id": "P2",
+      "text": "Data brokers have treated personal data as their own for decades, compromising privacy and security",
+      "status": "explicit",
+      "evidence_span": "These companies have treated our data as their own, compromising our privacy and security in the process"
+    },
+    {
+      "id": "P3",
+      "text": "Automated opt-out software removes users from hundreds of data broker websites",
+      "status": "explicit",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "id": "P4",
+      "text": "A premium SaaS model serves both consumer and business customers",
+      "status": "explicit",
+      "evidence_span": "We have a premium SaaS model, and we sell both to consumers and to businesses"
+    },
+    {
+      "id": "P5",
+      "text": "The software finds more profiles than anyone — 95 on average, across 228 brokers — with live screenshot proof",
+      "status": "explicit",
+      "evidence_span": "at 228 data brokers and counting, we have the most comprehensive coverage in the industry"
+    },
+    {
+      "id": "P6",
+      "text": "The free exposure report scan demonstrates missed profiles and converts competitors' customers",
+      "status": "explicit",
+      "evidence_span": "being floored when they still see 20 to 50 profiles exposed that we found and our competitors have missed"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data-broker privacy threat",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Opt-out software and free scan",
+      "premise_ids": ["P3", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Premium SaaS model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People take back control of their personal information and stop the privacy-security compromise",
+      "status": "explicit",
+      "evidence_span": "But today, we're putting a stop to this"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "compromising our privacy and security in the process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we sell both to consumers and to businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "D3 is a singleton: the premium SaaS pricing/segment model revises independently of the opt-out technology (the product could ship under a different commercial model). The free scan is grouped with the product in D2 because the speaker presents it as product-led demonstration of the same detection capability rather than a separate channel business. Differentiator items (patented search, screenshots, coverage count) are folded into P5 per v1.3.2 clarification 5; growth figures excluded as traction per 4.2; the data-rights platform vision is framing, uncoded per v1.3.2 clarification 4. No plainly asserted premise-prerequisite."
+}

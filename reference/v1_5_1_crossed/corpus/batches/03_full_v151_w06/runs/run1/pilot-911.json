@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-911",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brick-and-mortar still drives most retail sales but lacks the personalized data experience of online shopping",
+      "status": "explicit",
+      "evidence_span": "95% of sales still comes from brick-and-mortar stores"
+    },
+    {
+      "id": "P2",
+      "text": "POS-linked profiles assign shopper personalities and send receipt-side recommended products",
+      "status": "explicit",
+      "evidence_span": "we leverage the point of sales system"
+    },
+    {
+      "id": "P3",
+      "text": "A visual brand dashboard shows performance drivers and which customer segments cause growth or decline",
+      "status": "explicit",
+      "evidence_span": "turn those numbers into a really visual dashboard"
+    },
+    {
+      "id": "P4",
+      "text": "Brands can open individual customer profiles with past purchases and likely future buys",
+      "status": "explicit",
+      "evidence_span": "a customer profile for your customers"
+    },
+    {
+      "id": "P5",
+      "text": "Initial go-to-market targets mid-to-high luxury standalone fashion brands that care about experience",
+      "status": "explicit",
+      "evidence_span": "individual brands in the mid to high luxury tier fashion retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "in-store personalization gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "POS profiles and brand analytics",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "luxury fashion brand GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Retail brands personalize the in-store experience and know how to act on customer-level performance",
+      "status": "explicit",
+      "evidence_span": "personalize the retail store experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not only how their sales are doing, but what they can do about it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These people care about providing the best experience for the customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Receipt recommendations folded into P2 POS personalization mechanism. Dashboard segment drill-down and per-customer profile split as distinct brand-facing jobs (analytics vs CRM profile). P&G credential excluded. Market-size figures left as framing. Singletons D1 and D3 retained as separately revisable problem and segment focus."
+}

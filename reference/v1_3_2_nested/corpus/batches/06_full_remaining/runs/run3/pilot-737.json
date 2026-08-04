@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "E-shower refresh cycles reuse water ~7× with filtration/UV, delivering large water and energy savings plus high-pressure flow",
+      "status": "explicit",
+      "evidence_span": "The Hemwell Z-Shower uses every precious drop, not once, but about seven times"
+    },
+    {
+      "id": "P2",
+      "text": "Offer is sell hardware or free shower stack financed by sharing user savings",
+      "status": "explicit",
+      "evidence_span": "You get the shower, the installation, and the insurance, and the maintenance for free if you are willing to share your savings with us"
+    },
+    {
+      "id": "P3",
+      "text": "Product removes need for large water and heating systems, disrupting sanitation and construction cost structures",
+      "status": "explicit",
+      "evidence_span": "We don't only disrupt sanitation, but also construction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Recirculating e-shower",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Shared-savings hardware model",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Construction infrastructure disruption",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Save energy and water with a comfort upgrade and near-zero infrastructure",
+      "status": "explicit",
+      "evidence_span": "saving you 80% on energy, 90% on water, giving you a huge comfort upgrade, and reducing your infrastructure to near zero"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save about 80% on energy and about 90% on water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share your savings with us"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainable homes available for everyone at very little cost"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Merged mechanism details into one product premise to avoid over-splitting on a truncated pitch. Investment ask excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-737",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

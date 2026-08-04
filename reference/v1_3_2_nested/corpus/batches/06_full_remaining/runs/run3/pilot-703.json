@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Custom currency is powerful for marketing but hard because payment systems and home-built tooling fail at tracking, controls, and promo association",
+      "status": "explicit",
+      "evidence_span": "existing infrastructure and home-built systems are failing to drive new sales and meet the needs of online businesses"
+    },
+    {
+      "id": "P2",
+      "text": "The ~300,000 businesses with their own online checkout are stuck building custom currency themselves until a SaaS alternative exists",
+      "status": "explicit",
+      "evidence_span": "you're stuck building your own custom currency solution yourself, until now"
+    },
+    {
+      "id": "P3",
+      "text": "GiftBit's web application and API integrate with checkout so businesses can create, send, track, and administer gift cards, refunds, and promotional currency",
+      "status": "explicit",
+      "evidence_span": "We have built a web application and a powerful API to enable a business to have, distribute, and manage their own custom currency"
+    },
+    {
+      "id": "P4",
+      "text": "Starting price of $90/month for 1,000 active codes makes the platform accessible across business sizes",
+      "status": "explicit",
+      "evidence_span": "We've priced our product starting at $90 a month to make it accessible to businesses of any size"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken DIY custom currency",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "GiftBit e-commerce currency platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Accessible SaaS pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Online businesses get Salesforce/Twilio-like infrastructure for custom currency instead of building it",
+      "status": "explicit",
+      "evidence_span": "no one needs to build their own complicated custom currency because they have GiftBit"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're here to fix that problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "e-commerce currency platform ready for your online business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accessible to businesses of any size"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run3 collapses demo features (code creation, reactivation) into one platform capability premise. Singleton product and pricing domains retained as separately revisable. Prior reseller history excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-703",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

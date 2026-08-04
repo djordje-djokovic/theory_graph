@@ -1,0 +1,137 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Search is still too difficult to implement, so good website search remains rare",
+      "status": "explicit",
+      "evidence_span": "it's a sign that search is still too difficult to implement"
+    },
+    {
+      "id": "P2",
+      "text": "Combining the database, search index, and web server into one system removes the need to modify three separate places",
+      "status": "explicit",
+      "evidence_span": "combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P3",
+      "text": "Companies across domains represent their data as objects with attributes",
+      "status": "explicit",
+      "evidence_span": "every company represents their data as objects"
+    },
+    {
+      "id": "P4",
+      "text": "Native object handling (objects in, objects out, search across them) makes data modeling for search simple",
+      "status": "explicit",
+      "evidence_span": "you put in objects, you get objects back, you search across them"
+    },
+    {
+      "id": "P5",
+      "text": "Attribute-level filtering exploits object information that incumbent site search cannot use",
+      "status": "explicit",
+      "evidence_span": "we can take advantage of all the attribute information"
+    },
+    {
+      "id": "P6",
+      "text": "Search is fast and scalable right out of the box",
+      "status": "explicit",
+      "evidence_span": "you get fast, scalable search right out of the box"
+    },
+    {
+      "id": "P7",
+      "text": "New attributes are added by uploading a new schema with no downtime, cutting development time",
+      "status": "explicit",
+      "evidence_span": "Now we just upload a new schema, and that's it"
+    },
+    {
+      "id": "P8",
+      "text": "The product is delivered as an on-demand cloud service with free beta signup",
+      "status": "explicit",
+      "evidence_span": "we're launching it today as a on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Search implementation problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "One-system architecture and object data model",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Performance and schema flexibility",
+      "premise_ids": ["P6", "P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Cloud delivery",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies get powerful search for their own data that is extremely simple to implement and use",
+      "status": "explicit",
+      "evidence_span": "It's a really powerful tool that's also extremely simple to use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "objects are so important that we designed ThriftDB to handle objects natively"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "search is still too difficult to implement"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combining the database, the search index, and the web server into one system"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you get fast, scalable search right out of the box"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo scale numbers (3M Hacker News posts, 15M parts, 300 attributes) and 'built this entire app in a day' treated as evidence for already-coded capability premises, not as separate premises (4.2.3). P3->P4 coded on the explicit warrant 'so important that we designed'. Singletons: D1 (the market-need claim is independently revisable from the solution) and D4 (cloud delivery is a standalone distribution model); reasons stated here per singleton rule.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:20:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

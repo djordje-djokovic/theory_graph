@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Chat app enables messaging communication for billions including politics and dating topics",
+      "status": "explicit",
+      "evidence_span": "People began talking about issues ranging from politics, dating, whatever. All of a sudden, we're giving billions of people in the world a mouthpiece to send messages and communicate"
+    },
+    {
+      "id": "P2",
+      "text": "Business model is advertising positioned as useful information in emerging economies",
+      "status": "explicit",
+      "evidence_span": "SEIA is not just a chat application. It's actually a business. So we monetize with advertisement"
+    },
+    {
+      "id": "P3",
+      "text": "SEA becomes the platform bringing Yelp/iTunes/shopping-like access to non-smartphone users among 5.4B mobile leapfroggers",
+      "status": "explicit",
+      "evidence_span": "I see SEA as a platform that is going to bring internet access to people to have Stuff like Yelp, iTunes, shopping on their non-smartphones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Chat mouthpiece and ad-funded business",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Non-smartphone services platform vision",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Internet-like access and communication for billions on non-smartphones",
+      "status": "explicit",
+      "evidence_span": "bring this to the billions of people that actually need this"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mouthpiece to send messages and communicate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring internet access to people"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Truncated; soft count 3. Merged chat with ad monetization as current business bundle.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1026",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:50:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

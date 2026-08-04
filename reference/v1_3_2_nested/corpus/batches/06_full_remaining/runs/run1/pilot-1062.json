@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1062",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:09+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combining strong plush-toy demand with growing online custom-design habits creates a unique custom plush offering",
+      "status": "explicit",
+      "evidence_span": "We're combining these two trends to create something truly cool and unique for our customers"
+    },
+    {
+      "id": "P2",
+      "text": "An online toy designer lets users change colors, body parts, decorations, and names",
+      "status": "explicit",
+      "evidence_span": "They can change the colors, they can change the body parts, they can change the decorations, they can write their name on it"
+    },
+    {
+      "id": "P3",
+      "text": "After design, the company physically manufactures and ships the custom plush",
+      "status": "explicit",
+      "evidence_span": "we actually manufacture the toy, physically manufacture the toy and send it to you"
+    },
+    {
+      "id": "P4",
+      "text": "Initial launch targets individuals; later iterations target small businesses and organizations",
+      "status": "explicit",
+      "evidence_span": "Our initial website launch is targeted mostly at individuals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Design-to-manufacture custom plush",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Customer segment rollout",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users create cool, cute, and crazy custom plush toys online that are uniquely theirs",
+      "status": "explicit",
+      "evidence_span": "give users the ability to create cool, cute, and crazy custom plush toys online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create their truly own personal and unique toy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeted mostly at individuals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Q&A pricing excluded (§4.2.5). Market $1.7B and CafePress analogies treated as framing/evidence for P1, not separate premises. Factory video is illustration of P3."
+}

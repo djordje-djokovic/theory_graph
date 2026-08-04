@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Venmo makes it easy and fun to pay and charge friends by linking a credit card and bank account to the phone",
+      "status": "explicit",
+      "evidence_span": "Venmo is a service that makes it really easy and really fun to pay and charge your friends. You get to link a credit card and a bank account to your phone"
+    },
+    {
+      "id": "P2",
+      "text": "Giphy is an iPhone app that lets people hide real money at real-world locations for friends to find by checking in through Foursquare",
+      "status": "explicit",
+      "evidence_span": "Giphy is an iPhone application that lets people hide real money at real-world locations for their friends to find by checking in through Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "Friends do not need the Giphy app to receive a gift; Foursquare friendship plus Venmo delivery is enough",
+      "status": "explicit",
+      "evidence_span": "your friends don't need to have the application to receive a gift from you. So all they need to do is be Foursquare friends with you, and Venmo is going to handle the rest"
+    },
+    {
+      "id": "P4",
+      "text": "Venmo social transactions complement the location check-in interactions that take place on Foursquare",
+      "status": "explicit",
+      "evidence_span": "these social transactions that seem to fit really well and actually complement the types of interactions that take place on Foursquare"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Venmo social payments",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Location money gifts via check-in",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make someone feel special by leaving real money gifts at places for friends to find",
+      "status": "explicit",
+      "evidence_span": "It really does feel nice to make someone feel special"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Businesses and brands can use Giphy to show loyalty, service, and hospitality to customers and their friends",
+      "evidence_span": "What a great way for businesses to show their customers, and more importantly, their customers' friends, about how they think about loyalty, service, and hospitality"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes it really easy and really fun to pay and charge your friends"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hide real money at real-world locations for their friends to find by checking in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Demo UI steps (clues, notes, multi-recipient race) folded into the Giphy offering premise per v1.3.2 §4.1(5). Future Facebook Places support folded as platform extension. Beta launch game and App Store availability treated as traction/launch, not premises. Brand-loyalty future uses recorded as secondary_value rather than premises (§4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1142",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

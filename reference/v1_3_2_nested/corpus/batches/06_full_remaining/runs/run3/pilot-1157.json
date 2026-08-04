@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "No incumbent combines travel-rewards analysis, travel-focused spending insight, and historical offer matching",
+      "status": "explicit",
+      "evidence_span": "there is no company today that analyzes your travel rewards, that is travel-focused on your expenses, and that leverages historical data to figure out which offer is best suited for you"
+    },
+    {
+      "id": "P2",
+      "text": "Superfly dashboard consolidates reward accounts and personal point value over time",
+      "status": "explicit",
+      "evidence_span": "Superfly is a super smart dashboard that organizes all your points in one spot"
+    },
+    {
+      "id": "P3",
+      "text": "Predictive engine identifies card/flight actions that increase rewards and accelerate status",
+      "status": "explicit",
+      "evidence_span": "identify the point in time where a particular card or a particular rewards card or maybe just getting a flight will bump you up to that relevant status"
+    },
+    {
+      "id": "P4",
+      "text": "Booking layer filters destinations and blends Kayak results with personalized offer value",
+      "status": "explicit",
+      "evidence_span": "bring results from Kayak and overlay them with which offer is best suited for you"
+    },
+    {
+      "id": "P5",
+      "text": "Forever-free consumer app funded by partner referral economics",
+      "status": "explicit",
+      "evidence_span": "Our service is free, will forever be free, definitely for the consumer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "White space vs partial competitors",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Rewards intelligence product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free-user referral model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn users into savvy travelers who get more value from rewards",
+      "status": "explicit",
+      "evidence_span": "If you're a savvy traveler and you want to become one, our goal is to help you become one"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "which offer is best suited for you"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "organizes all your points in one spot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create material revenue per user per year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Competitive white-space claim coded as market-condition premise because speaker treats absence of integrated analysis as why Superfly's offer matters. Addressable-market arithmetic excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "FluidDB is a shared database where any application can add any information to anything",
+      "status": "explicit",
+      "evidence_span": "someone could build a shared database for applications where any application could come along and add any information to anything"
+    },
+    {
+      "id": "P2",
+      "text": "Independent related apps storing into FluidDB make unanticipated cross-app queries trivial",
+      "status": "explicit",
+      "evidence_span": "I've combined data in an unanticipated way from three independent but related applications. And those applications are not aware of each other"
+    },
+    {
+      "id": "P3",
+      "text": "Apps can store information alongside related data without asking permission",
+      "status": "explicit",
+      "evidence_span": "none of them had to ask permission to put that information into FluidDB"
+    },
+    {
+      "id": "P4",
+      "text": "FluidDB provides a shared writable object for everything as a platform for the web of things",
+      "status": "explicit",
+      "evidence_span": "FluidDB gives you a shared, writable object for everything. In other words, it's a platform for the web of things"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared writable cross-application database",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Related information becomes more valuable and useful when stored in one shared writable place",
+      "status": "explicit",
+      "evidence_span": "they're choosing to store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Writable social future of data not controlled solely by applications",
+      "evidence_span": "The future of data is a writable future. It's one in which any person or any application can come along and add information to anything without asking for permission"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Single coherent platform theory — one domain. Demo apps (Tickery/TunkRank/We Met At) treated as illustrations of one shared-store mechanism (§4.1.2), not separate premises. Funding anecdote excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

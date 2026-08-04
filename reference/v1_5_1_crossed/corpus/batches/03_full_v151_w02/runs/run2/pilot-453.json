@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-453",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clients expect personalized portfolios and advice, but advisors lack time and tools and dump clients into generic funds",
+      "status": "explicit",
+      "evidence_span": "Clients expect personalized portfolios tailored to their needs, but instead are getting dumped into generic buckets of mutual funds and ETFs"
+    },
+    {
+      "id": "P2",
+      "text": "AI builds personalized portfolios around clients' goals, values, risk, and constraints using quant and machine-learning models",
+      "status": "explicit",
+      "evidence_span": "build personalized portfolios around their clients' values, goals, and dreams"
+    },
+    {
+      "id": "P3",
+      "text": "Portfolio intelligence explains investment decisions so advisors can tell clients the why behind the portfolio",
+      "status": "explicit",
+      "evidence_span": "we provide the portfolio intelligence for them to be able to explain those investment decisions and the why behind their portfolio to the clients"
+    },
+    {
+      "id": "P4",
+      "text": "Automation of management and rebalancing frees advisors to focus on trusted client relationships",
+      "status": "explicit",
+      "evidence_span": "VisAI automates all of the management, rebalancing, and everything"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via financial-institution and Riskalyze partnerships reaches advisors at a low AUM fee",
+      "status": "explicit",
+      "evidence_span": "partnered with Fortune 100 financial institutions and a successful trailblazer in space, Riskalyze, to give us a distribution advantage"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "generic portfolios versus personalized advice demand",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI portfolio construction and explanation",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "advisor distribution and AUM pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalized, explainable portfolios that help advisors deliver better client outcomes while keeping relationships central",
+      "status": "explicit",
+      "evidence_span": "advisors can focus their time on what they do best, building great client relationships"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "advisors don't have the time, tools, or technology to deliver"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making them look smarter and providing a better result"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling direct to investment advisors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo steps (custodian import, sector constraints, value/growth strategies, historical stress) folded into P2 as cascade of portfolio construction. NLG explanation kept separate because speaker frames it as the most important advisor-facing job. Trusted relationships treated as value context, not a premise."
+}

@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-597",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Growth in partners, formats, and access frequency makes inter-company data management hard",
+      "status": "explicit",
+      "evidence_span": "more data sources, more data formats, and increased frequency of data access"
+    },
+    {
+      "id": "P2",
+      "text": "Companies widely use third-party data for better products and services",
+      "status": "explicit",
+      "evidence_span": "91% of companies use third-party data in some shape or form to create better products and services"
+    },
+    {
+      "id": "P3",
+      "text": "Nexla takes care of giving and getting data with easy, secure, and smart operations so teams focus on use",
+      "status": "explicit",
+      "evidence_span": "Nexla is easy to use, secure, and smart"
+    },
+    {
+      "id": "P4",
+      "text": "Ops teams can scale data workflows without coding because of built-in transforms and automated flows",
+      "status": "explicit",
+      "evidence_span": "no coding was required"
+    },
+    {
+      "id": "P5",
+      "text": "In-house pipelines need specialized expertise that is hard to justify, and existing tools fail inter-company needs",
+      "status": "explicit",
+      "evidence_span": "Building such workflows, security, and pipelines as an in-house solution requires a specialized expertise and massive efforts that are hard to justify"
+    },
+    {
+      "id": "P6",
+      "text": "The platform runs across every infrastructure environment",
+      "status": "explicit",
+      "evidence_span": "run in every infrastructure environment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inter-company data burden",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Easy secure smart data ops",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Focus on scaling the business while Nexla scales data operations",
+      "status": "explicit",
+      "evidence_span": "focus on scaling your business while we scale your data operations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data ops challenges are a matter of when, not if"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we scale your data operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two-domain partition: problem/gap vs platform capability. Security, learning/alerts, and demo transforms folded into P3/P4 (§4.1(5)). Cloud-data-ops analogy left as framing (§4.1(4)). Beta trials excluded as traction."
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "coder_session_id": "session_06",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:22:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits remain underserved and still rely on pen-and-paper for scheduling, volunteer tracking, and donations",
+      "status": "explicit",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "id": "P2",
+      "text": "Volunteers are high-value supporters who give service hours and donate more than non-volunteers",
+      "status": "explicit",
+      "evidence_span": "they are also twice as likely to donate and donate 10 times more than non-volunteers"
+    },
+    {
+      "id": "P3",
+      "text": "Automated volunteer hour tracking via geofencing app, kiosk mode, and staff admin check-in",
+      "status": "explicit",
+      "evidence_span": "three different ways for nonprofits to track volunteer hours"
+    },
+    {
+      "id": "P4",
+      "text": "Integrated micro-donations convert volunteers to donors using volunteer engagement data",
+      "status": "explicit",
+      "evidence_span": "integrated micro-donations platform that will allow for nonprofits to automatically convert volunteers to donors"
+    },
+    {
+      "id": "P5",
+      "text": "Architecture uniquely serves nonprofits, volunteers, and corporations with seamless data sharing",
+      "status": "explicit",
+      "evidence_span": "uniquely built to serve the full market, allowing for seamless data sharing between nonprofits, volunteers, and corporations"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription pricing targets nonprofit CRM and adjacent CSR and donation markets",
+      "status": "explicit",
+      "evidence_span": "These clients pay between $25 to $450 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nonprofit volunteer underservice",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Volunteer tracking and donor conversion product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Nonprofit SaaS pricing and market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Nonprofits gain seamless volunteer management and automatic volunteer-to-donor conversion",
+      "status": "explicit",
+      "evidence_span": "seamless volunteer management and a way to automatically convert your volunteers to donors"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Corporations and foundations can quantify community impact and add agency capacity",
+      "evidence_span": "whether you're a corporation looking to quantify your community impact, or your foundation looking to add to the capacity of your agencies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "By leveraging our volunteer data, we can tell nonprofits when to give, how much to give, and what to say"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically convert volunteers to donors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Civic Champs is targeting the $1.7 billion CRM market for nonprofits"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three tracking modes folded into one volunteer-management mechanism (P3) per enumeration rule 1. Micro-donations split as distinct conversion path (P4). Client counts and founder exits excluded as traction/bio. Singleton D3 retained: monthly pricing/market is an independently revisable commercial module."
+}

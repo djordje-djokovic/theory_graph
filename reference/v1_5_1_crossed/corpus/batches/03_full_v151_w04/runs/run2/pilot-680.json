@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-680",
+    "coder_session_id": "session_05",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Radiologists are overwhelmed by a large increase in scan volume, making image misreads a serious patient-risk problem",
+      "status": "explicit",
+      "evidence_span": "Radiologists are simply overwhelmed"
+    },
+    {
+      "id": "P2",
+      "text": "Training more radiologists is very resource intensive in time and money",
+      "status": "explicit",
+      "evidence_span": "training radiologists is very resource intensive, taking lots of time and money"
+    },
+    {
+      "id": "P3",
+      "text": "Deep learning medical software helps find abnormalities and prioritize scans to improve doctor workflow and patient outcomes",
+      "status": "explicit",
+      "evidence_span": "uses artificial intelligence to help radiologists find abnormalities in medical images"
+    },
+    {
+      "id": "P4",
+      "text": "The product must integrate seamlessly into existing radiologist software workflows via vendors",
+      "status": "explicit",
+      "evidence_span": "seamlessly integrate into the workflow of radiologists"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market uses vendor partnerships plus direct hospital sales, with hospitals supplying images to train algorithms",
+      "status": "explicit",
+      "evidence_span": "another channel of sales and distribution. The first being the partnerships, and the second being direct sales to hospitals"
+    },
+    {
+      "id": "P6",
+      "text": "FDA clearance (not approval) through a multi-phase process is required for the medical software",
+      "status": "explicit",
+      "evidence_span": "We're currently through the first phase of our three-phase FDA process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "radiologist overload and misread risk",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI abnormality detection product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "hospital channels and FDA path",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve patient outcomes and radiologist workflow by finding abnormalities in medical images",
+      "status": "explicit",
+      "evidence_span": "help improve both the outcome of patients as well as the workflow of doctors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A misread in a medical image can have major negative health implications"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help radiologists find abnormalities in medical images"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "direct sales to hospitals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Mother anecdote motivates misread risk; volume statistics folded into P1 pain bundle. NLP/EMR mention folded into prioritization workflow capability. Founder credentials excluded. Anti-template: need/product/channel partition justified as separately revisable clinical demand, product integration, and hospital/FDA go-to-market."
+}

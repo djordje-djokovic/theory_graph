@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-438",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:26:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Emergency responders need rapid blood-type confirmation before transfusion despite O-negative scarcity",
+      "status": "explicit",
+      "evidence_span": "they cannot administer them without a rapid confirmation test"
+    },
+    {
+      "id": "P2",
+      "text": "A portable device detects blood type in three minutes anywhere from ambulances to remote clinics",
+      "status": "explicit",
+      "evidence_span": "a portable medical device that detects blood type in three minutes"
+    },
+    {
+      "id": "P3",
+      "text": "Cartridge microfluidics plus device motion and ML/computer vision produce the typed result",
+      "status": "explicit",
+      "evidence_span": "we use microfluidics in the cartridge in order to split the blood evenly in all of the containers"
+    },
+    {
+      "id": "P4",
+      "text": "Device works offline, has autonomy for many tests, and can sync results to the cloud",
+      "status": "explicit",
+      "evidence_span": "the device can do the test offline, has an autonomy for more than 80 tests, and stores information about every test in order to be sent to our cloud later on"
+    },
+    {
+      "id": "P5",
+      "text": "Accuracy meets FDA requirements and commercialization depends on US/EU regulatory clearance",
+      "status": "explicit",
+      "evidence_span": "Commercialization pass for cream is the regulatory one"
+    },
+    {
+      "id": "P6",
+      "text": "B2B model sells hardware, recurring cartridges, and SaaS algorithms via key distributors",
+      "status": "explicit",
+      "evidence_span": "the initial revenue will come from the hardware, the recurring revenue will come from the cartridges, and the software as a service algorithms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Emergency blood typing need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Portable point-of-care typing device",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory path and B2B monetization",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, affordable point-of-care blood typing that enables right transfusions and saves lives",
+      "status": "explicit",
+      "evidence_span": "help us to reduce costs for the healthcare industry, and more important, saving lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allow the right transfusion without having to wait or to give a negative"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "faster, more affordable, and with this, more importantly, we can execute the test anywhere"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "CREAM is the only one that can execute this for the point of care"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Faster/affordable/anywhere treated as performance package of the portable device (P2). Patent and algorithm secrecy folded into mechanism P3. LOIs and hospital validation treated as traction/evidence, not separate premises, except regulatory as commercialization condition (P5). Singleton D1 retained as independently revisable need module."
+}

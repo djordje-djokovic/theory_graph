@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traffic problems, air pollution, and low-quality outdated scooters create demand for a better vehicle",
+      "status": "explicit",
+      "evidence_span": "we've been suffering from traffic problems and air pollution"
+    },
+    {
+      "id": "P2",
+      "text": "Fully electronic clean-energy e-bike with removable aluminum batteries offering up to 200 km range",
+      "status": "explicit",
+      "evidence_span": "Mineral 2.0 is fully electronic, with clean energy, e-bike"
+    },
+    {
+      "id": "P3",
+      "text": "Aluminum batteries are more environmentally friendly than widespread lithium-ion packs",
+      "status": "explicit",
+      "evidence_span": "Compared to the Widespear, the lithium-ion battery, which is more environmentally friendly and way better"
+    },
+    {
+      "id": "P4",
+      "text": "Safety and comfort features include LED visibility, double caliper disc brakes, and a smoother motor",
+      "status": "explicit",
+      "evidence_span": "That's going to enhance the, during the drive, you get more comfortable, more safety"
+    },
+    {
+      "id": "P5",
+      "text": "Adaptive manufacturing enables affordable customization of steering, color, and components",
+      "status": "explicit",
+      "evidence_span": "We are working with adaptive manufacturing to make this possible"
+    },
+    {
+      "id": "P6",
+      "text": "Retail price starts at $1,700 for daily commute and trip use",
+      "status": "explicit",
+      "evidence_span": "our retail price start at $1,700"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Urban scooter problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Electric powertrain and ride",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Custom manufacturing",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Retail price point",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A modern clean-energy e-bike that replaces low-quality scooters for daily commuting",
+      "status": "explicit",
+      "evidence_span": "who wants to replace their old fashioned scooters"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Clean energy and more environmentally friendly batteries versus lithium-ion",
+      "evidence_span": "fully electronic, with clean energy"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "traffic problems and air pollution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully electronic, with clean energy, e-bike"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "adaptive manufacturing to make this possible"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "retail price start at $1,700"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Split aluminum-battery environmental claim from the e-bike electrification claim this run because speaker contrasts battery chemistry as a distinct improvement. Frame material folded into ride/safety feature bundle via P4 context; frame sentence not given its own premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-629",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:06+02:00"
+  }
+}

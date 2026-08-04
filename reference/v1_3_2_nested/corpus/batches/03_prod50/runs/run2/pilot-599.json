@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Millions want to be music artists but lack producer access or money",
+      "status": "explicit",
+      "evidence_span": "There are millions of people around the world that have a burning desire to be a music artist"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile all-in-one marketplace lets users make original songs with producers for under $5 from their phone",
+      "status": "explicit",
+      "evidence_span": "create original songs with award-winning music producers for under $5. all from the palm of their hand"
+    },
+    {
+      "id": "P3",
+      "text": "Beat discovery, recording, video shoot, and social sharing turn friends into fans",
+      "status": "explicit",
+      "evidence_span": "they can share it across all their social networks, including Rekogram's social networks, instantly turning their friends into fans"
+    },
+    {
+      "id": "P4",
+      "text": "Producers with great beats lack artist relationships; artists lack affordable access to those producers",
+      "status": "explicit",
+      "evidence_span": "he doesn't have relationships with artists to sell his production"
+    },
+    {
+      "id": "P5",
+      "text": "Subscription upload fees plus 20% of in-app beat leases/sales with 50% royalties to producers",
+      "status": "explicit",
+      "evidence_span": "when those beats are leased or sold through our platform, we take 20% of the in-app purchase, and we provide 50% of the royalties back to the producer"
+    },
+    {
+      "id": "P6",
+      "text": "Promotion via music-space affiliates, field reps, and celebrity fan callouts",
+      "status": "explicit",
+      "evidence_span": "we also have eight field reps in major markets across the country that are our evangelists"
+    },
+    {
+      "id": "P7",
+      "text": "Original-content platform avoids major-label licensing dependence that competitors have",
+      "status": "explicit",
+      "evidence_span": "The difference between us and our competitors is that we're not relying on major label licensing because we're an original content platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Two-sided access problem",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile production and sharing product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and go-to-market",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Producers earn and aspiring artists get affordable access to create original music",
+      "status": "explicit",
+      "evidence_span": "we make money for producers like Tony, and we provide access and save money for guys like Willie"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Rekogram solves both Tony and Willie's problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring that collaboration and discovery process to the mobile device"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge producers $9.99 a month or $90 a year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Demo connection failures ignored. Competitor user counts/valuations excluded as market color, not premises.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-599",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

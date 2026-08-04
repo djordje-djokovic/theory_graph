@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Space junk already consumes most LEO capacity while launches are set to multiply, raising catastrophic collision risk",
+      "status": "explicit",
+      "evidence_span": "95% of the carrying capacity of low Earth orbit is already taken up by space junk"
+    },
+    {
+      "id": "P2",
+      "text": "Operators still rely on slow manual email-and-script workflows that miss collision warnings",
+      "status": "explicit",
+      "evidence_span": "He gets hundreds of emails a day, and if he misses one of those needles in that haystack, it's going to be a bad day for all of us"
+    },
+    {
+      "id": "P3",
+      "text": "Pathfinder notifies operators, visualizes risk, proposes fuel-aware maneuvers, and can complete decisions in about a minute",
+      "status": "explicit",
+      "evidence_span": "That took him about 60 seconds"
+    },
+    {
+      "id": "P4",
+      "text": "Backend models ingest diverse space data in near real time to predict trajectories and optimize plans under operator constraints",
+      "status": "explicit",
+      "evidence_span": "fed into models that we have developed that predict the trajectories of objects in space"
+    },
+    {
+      "id": "P5",
+      "text": "Gamit extends the safety stack to launch vehicles and payloads",
+      "status": "explicit",
+      "evidence_span": "announce our second commercial product, Gamit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Orbital congestion and manual ops",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pathfinder decision automation",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gamit launch safety",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Autonomous collision avoidance that keeps satellites and orbits usable",
+      "status": "explicit",
+      "evidence_span": "autonomous satellite collision avoidance solution"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "destroy an entire orbital regime and it can make it unusable for generations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "produce optimal plans that not only minimize the risk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making space flight safer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "GPS thought experiment treated as problem framing inside debris risk, not separate value. Hiring CTA excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-276",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:12:00+02:00"
+  }
+}

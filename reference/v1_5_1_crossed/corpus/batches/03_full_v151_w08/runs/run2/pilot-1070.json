@@ -1,0 +1,118 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge volumes of photos are shared daily across services, but finding pictures you like is hard",
+      "status": "explicit",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "id": "P2",
+      "text": "Skyline organizes real-time photos by matching personal interests collected from social networks to photo streams",
+      "status": "explicit",
+      "evidence_span": "Skyline organizes real-time photos"
+    },
+    {
+      "id": "P3",
+      "text": "Interests come from Facebook likes, Twitter searches/hashtags, and planned Foursquare places—not only people",
+      "status": "explicit",
+      "evidence_span": "We connect to your social networks to collect your interests"
+    },
+    {
+      "id": "P4",
+      "text": "Ingests millions of photos/day from Instagram, TwitPic, YFrog and more into personalized skyline streams",
+      "status": "explicit",
+      "evidence_span": "we collect over a million pictures a day from services such as Instagram, TwitPic, and WhyFrog"
+    },
+    {
+      "id": "P5",
+      "text": "Product surfaces: web/apps, ranking/friends filters, location photos, explore, and back-channel screensaver for events",
+      "status": "explicit",
+      "evidence_span": "We are not only launching this as a website, but also as an app, both on iPhone and on Android"
+    },
+    {
+      "id": "P6",
+      "text": "Monetize via interest/location/time-targeted brand ads plus embeddable widgets with revenue share or ad-free fees",
+      "status": "explicit",
+      "evidence_span": "Brands can target an interest, like TechCrunch Disrupt, if they want, combined with location or time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "photo discovery need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "interest-matched real-time photo streams",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "brand targeting and widgets",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyone gets their own real-time skyline of photos matched to their interests",
+      "status": "explicit",
+      "evidence_span": "everybody gets his own skyline"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Matching your personal interest to that stream of real-time photos"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Brands can target an interest"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "UI facets (rank, friends, location, detail, share, explore, back channel) folded as product cascade (§4.1.7). Interest collection sources folded into interest graph premise. API/widget signup launch notes folded into monetization/reach. Singleton D1: discovery problem independently revisable. Anti-template: need, product, monetization separately revisable.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1070",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

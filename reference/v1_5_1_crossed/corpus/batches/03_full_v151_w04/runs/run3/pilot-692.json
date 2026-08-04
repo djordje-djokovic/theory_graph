@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-692",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hiring fails because candidates and employers use wrong signals: hidden jobs, resumes show hard skills while soft-skill mismatch drives turnover, and traditional cognitive tests are too long, costly, and slow",
+      "status": "explicit",
+      "evidence_span": "everyone, both candidates and employers, are making decisions based on the wrong data"
+    },
+    {
+      "id": "P2",
+      "text": "Scoutable's science-based mobile games measure soft skills in about 20 minutes and produce a cognitive fingerprint (e.g. hustle/social/bandwidth) contextualized by role and culture",
+      "status": "explicit",
+      "evidence_span": "our science-based mobile games measure and quantify soft skills"
+    },
+    {
+      "id": "P3",
+      "text": "Employers build predictive models from top performers and match platform players while gating out irrelevant demographic signals",
+      "status": "explicit",
+      "evidence_span": "cross-reference it against everyone on our platform who's played the game"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue via one-time setup for the predictive model plus subscription for filtering inbound candidates or a sourcing fee; games free for individuals",
+      "status": "explicit",
+      "evidence_span": "pay us a one-time setup fee for creating the predictive model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wrong-data hiring mismatch",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "game assessment and predictive matching",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "setup subscription and sourcing fees",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Match perfect-fit talent so companies can build world-class teams",
+      "status": "explicit",
+      "evidence_span": "match perfect fit candidates to top jobs"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Individuals learn about their own unique talents by playing for free",
+      "evidence_span": "free for anyone to download and play to learn more about themselves"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "46% of hires fail"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "talent that is most likely to perform like Aiden on the job"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "filtering inbound candidates against that model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Hidden jobs/soft-skill mismatch/grueling tests folded as one wrong-data hiring problem (§4.1.6). Mini-game trait list folded as feature cascade of the assessment game; Moneyball gating kept inside matching (§4.1.7). Harvard bio excluded. Singleton D1/D3 retained. Anti-template noted."
+}

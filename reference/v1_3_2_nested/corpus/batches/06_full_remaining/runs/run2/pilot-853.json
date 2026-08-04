@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-853",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Busy people need household help but refuse the coordination cost of stitching together many on-demand apps",
+      "status": "explicit",
+      "evidence_span": "all of that takes time and coordination and the mental energy"
+    },
+    {
+      "id": "P2",
+      "text": "Alfred is a $99/month weekly in-person butler service layered on top of on-demand and local providers",
+      "status": "explicit",
+      "evidence_span": "Alfred is actually a service layer. It sits on top of other on-demand and local services"
+    },
+    {
+      "id": "P3",
+      "text": "Customers set automatic recurring preferences; Alfred anticipates needs and coordinates providers in the background",
+      "status": "explicit",
+      "evidence_span": "The magic of Alfred is you don't have to make requests. You set things to be automatic"
+    },
+    {
+      "id": "P4",
+      "text": "Vetted neighborhood Alfreds visit on fixed weekly days so chores can be grouped for scale economies",
+      "status": "explicit",
+      "evidence_span": "they visit you and your neighbors every week on set days, so they group chores, which gives us economies of scale"
+    },
+    {
+      "id": "P5",
+      "text": "Building partnerships enable turning on whole neighborhoods quickly",
+      "status": "explicit",
+      "evidence_span": "we partner with buildings, which allows us to turn on neighborhoods overnight, making us scalable"
+    },
+    {
+      "id": "P6",
+      "text": "In-app payment and key access make household service seamless in one place",
+      "status": "explicit",
+      "evidence_span": "He has in-app seamless payment across all of his services, everything in one place"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "On-demand coordination fatigue",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Automatic weekly Alfred service",
+      "premise_ids": ["P2", "P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Neighborhood density model",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Restore customers' time with automatic background household service",
+      "status": "explicit",
+      "evidence_span": "give you back the most precious resource you have, your time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "economies of scale that we can pass along to you"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Dan needs Alfred"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Alfred is working in the background"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making us scalable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: included seamless payment/key access as part of service UX; dropped separate Alfred-worker pride secondary_value. Retention traction excluded."
+}

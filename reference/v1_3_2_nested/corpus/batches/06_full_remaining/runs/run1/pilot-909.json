@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing voice assistants fail because they do not work with the most popular apps people actually use",
+      "status": "explicit",
+      "evidence_span": "they don't work with the most popular apps out there"
+    },
+    {
+      "id": "P2",
+      "text": "Existing voice assistants also limit their technology to only a few apps",
+      "status": "explicit",
+      "evidence_span": "they limit their technology to only a few apps"
+    },
+    {
+      "id": "P3",
+      "text": "VoiceSphere lets users talk to many popular consumer apps from a personal app feed without leaving the product",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere works with 20 of the most popular apps right from the start"
+    },
+    {
+      "id": "P4",
+      "text": "An API hub IDE lets integrations for new apps be created quickly with a few lines of code",
+      "status": "explicit",
+      "evidence_span": "the API hub is really advanced technology that allows us to integrate more and more apps really fast"
+    },
+    {
+      "id": "P5",
+      "text": "Professionals can reach complex business software data and actions by voice through VoiceSphere",
+      "status": "explicit",
+      "evidence_span": "professionals could reach all the data and functionality of these products just with their voice"
+    },
+    {
+      "id": "P6",
+      "text": "An open enterprise store lets business products with APIs sell VoiceSphere access while VoiceSphere takes a share of each sale",
+      "status": "explicit",
+      "evidence_span": "They can integrate their application and sell the VoiceSphere access to their customers inside our enterprise store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Voice assistant coverage gaps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer app voice layer and API hub",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise store for business APIs",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Talk to everything on your phone — favorite apps and complex software — by voice",
+      "status": "explicit",
+      "evidence_span": "the app that lets you talk to everything on your phone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make professionals' work easier and more efficient via purchased enterprise integrations",
+      "evidence_span": "Professionals can buy the integrations to make their work more easy and efficient"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "allows us to integrate more and more apps really fast"
+    },
+    {
+      "from": "P4",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "We make our API hub open to every business product with an API"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a product that solves both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets you talk to everything on your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets complex software benefit from our technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo app examples (Instagram, SoundCloud, Salesforce) folded into coverage premises (§4.1(5)). 20% take rate kept inside enterprise-store commercial premise with price/partner structure (§4.1(3)). Technical-crew demo interruptions ignored as non-propositional."
+}

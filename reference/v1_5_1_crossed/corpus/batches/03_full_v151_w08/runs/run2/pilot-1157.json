@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers are obsessed with rewards but face fragmented points, status, and hard-to-know personal value",
+      "status": "explicit",
+      "evidence_span": "people are obsessed with rewards"
+    },
+    {
+      "id": "P2",
+      "text": "Dashboard organizes all points in one spot across air, hotel, and car reward cards with balances and risk of loss",
+      "status": "explicit",
+      "evidence_span": "a super smart dashboard that organizes all your points in one spot"
+    },
+    {
+      "id": "P3",
+      "text": "Analyzes spending patterns and projects accrual to recommend cards/offers that raise status sooner",
+      "status": "explicit",
+      "evidence_span": "the key is the technology that we developed to track your value over time and project it forward"
+    },
+    {
+      "id": "P4",
+      "text": "Filters destinations and overlays Kayak results with best-value offers, not just cheapest tickets",
+      "status": "explicit",
+      "evidence_span": "we will go and filter and figure out which destinations are best suited for you, let you know if you're better off paying with points or cash"
+    },
+    {
+      "id": "P5",
+      "text": "Simple signup by account number and PIN aggregates accounts",
+      "status": "explicit",
+      "evidence_span": "dead simple sign-up process where it makes it really easy to add your accounts. Simply put in your account number and pin code"
+    },
+    {
+      "id": "P6",
+      "text": "Free to consumers; monetize via referral fees from airlines and reward cards when users save",
+      "status": "explicit",
+      "evidence_span": "When the user saves, we make money off the referral fee that we get not from the user, but rather from the airlines, the reward cards"
+    },
+    {
+      "id": "P7",
+      "text": "Large unused-points market and travel e-commerce inefficiencies create a bigger opportunity than Mint-like finance apps",
+      "status": "explicit",
+      "evidence_span": "17 to 22 trillion unused points valued at half a trillion dollar and more"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented travel rewards problem",
+      "premise_ids": ["P1", "P7"]
+    },
+    {
+      "id": "D2",
+      "name": "rewards analytics and planning product",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "referral monetization",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help travelers become savvy by organizing points and finding best-suited reward offers",
+      "status": "explicit",
+      "evidence_span": "organizes all your points in one spot, scans all the rewards that are out there, and figure out which offer is best suited for you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "figure out which offer is best suited for you"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scans all the rewards that are out there, and figure out which offer is best suited for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "intelligent suggestions about how to earn more points, get the status faster, or spend the points more wisely"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Balance/snapshot/rank/category spend folded into dashboard cascade (§4.1.7). Competitor typology is framing—not separate premises. Revenue/user math excluded as traction-style sizing detail beyond market premise. Value evidence span is short but verbatim hero line after Clooney framing. Anti-template: problem/market, product, referral biz separately revisable."
+}

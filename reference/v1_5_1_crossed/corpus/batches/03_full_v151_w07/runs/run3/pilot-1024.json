@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1024",
+    "coder_session_id": "session_04",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional databases only store, organize, and look up data rather than understand or predict from it",
+      "status": "explicit",
+      "evidence_span": "storing, organizing, and letting you look things up in your data"
+    },
+    {
+      "id": "P2",
+      "text": "Veritable is a predictive database that learns relationships in tabular data and fills in missing values",
+      "status": "explicit",
+      "evidence_span": "it can predict. missing values based on your data"
+    },
+    {
+      "id": "P3",
+      "text": "Prediction is exposed through a SQL-like predict interface so existing database users need no specialized math or data science",
+      "status": "explicit",
+      "evidence_span": "if you can use SQL, you can use Veritable"
+    },
+    {
+      "id": "P4",
+      "text": "Predictions return confidence intervals so users know how sure the system is",
+      "status": "explicit",
+      "evidence_span": "when Veritable tells you this answer, it gives you back a confidence interval"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lookup-only database limitation",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "predictive database with SQL-like interface",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Application builders get intelligent predictions from their data without hiring data scientists or doing the math",
+      "status": "explicit",
+      "evidence_span": "give you the capability of doing these sorts of things without having to understand all the math"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if we were to make the actual database itself a lot smarter?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you can use SQL, you can use Veritable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Dating/disease/customer/voting examples folded as applications of one predictive mechanism (§4.1.2). Nonparametric Bayesian/MCMC detail kept inside the predictive-DB premise as tech packaging. Yahoo/Yammer SQL-headcount figures excluded as market framing/traction (§4.2). Oracle contrast treated as framing for value, not a separate premise."
+}

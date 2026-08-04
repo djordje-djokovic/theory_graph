@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-849",
+    "coder_session_id": "session_01",
+    "session_case_index": 14,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile apps leave users with phone, email, or branch support that was not designed for mobile-first use",
+      "status": "explicit",
+      "evidence_span": "your only options for support are to leave the app and call an 800 number, send email feedback, or actually go in person to the store or branch"
+    },
+    {
+      "id": "P2",
+      "text": "ShowKit enables real-time visual interactive support inside mobile apps with screen share, draw, navigate, and tap",
+      "status": "explicit",
+      "evidence_span": "We power real-time communication inside of any mobile app"
+    },
+    {
+      "id": "P3",
+      "text": "An SDK/web plugin licenses easy integration into apps and desktop CRMs across iOS, Android, and web",
+      "status": "explicit",
+      "evidence_span": "We've packaged our patent-pending technology into an SDK and platform that we license to companies and developers"
+    },
+    {
+      "id": "P4",
+      "text": "Secure peer-to-peer architecture keeps real-time session data off ShowKit servers while APIs connect backends",
+      "status": "explicit",
+      "evidence_span": "ShowKit uses peer-to-peer technology, so none of your real-time data goes to ShowKit servers"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via cloud partners, studios, and developer tools plus SaaS pricing (free trial then monthly minutes) reaches app companies",
+      "status": "explicit",
+      "evidence_span": "we also partner with cloud services, app development studios, and third-party developer tools"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken mobile support channels",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "in-app visual support SDK",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "partner distribution and SaaS pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies give mobile customers outstanding visual, interactive in-app support",
+      "status": "explicit",
+      "evidence_span": "enhances the mobile customer support experience by making it visual and interactive"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These support solutions were not designed for mobile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's as if we were both standing there looking at your iPad"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distribute ShowKit to a larger number of potential clients through the tools and services they already use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript ends mid contact CTA (quality.truncated=true). Phone/email/branch options folded as one broken-mobile-support problem (§4.1.6). Screen share/draw/navigate/tap demo folded into one in-app communication mechanism (§4.1.7); SDK, CRM plugin, and cross-platform as packaging of that product; P2P security as product condition. Partner channels and $1000/mo packaging folded as one GTM/commercial premise (§4.1.3). Beta company counts and Vypar minutes treated as traction. Singleton D3 retained. Anti-template: problem, product, and distribution/pricing separately revisable."
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1076",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hair and beauty pros lack websites, client tracking, marketing email, online schedules, and business insight, while clients struggle to find stylists in a large offline word-of-mouth industry",
+      "status": "explicit",
+      "evidence_span": "She doesn't have a website. She doesn't track client information or send marketing emails"
+    },
+    {
+      "id": "P2",
+      "text": "StyleSeat gives each professional a website with social Like/Share and the ability to post specials",
+      "status": "explicit",
+      "evidence_span": "with StyleSeek, Glenda gets her own website"
+    },
+    {
+      "id": "P3",
+      "text": "Clients can search local professionals, sort, book online (including last-minute), get reminders, and leave/share recommendations",
+      "status": "explicit",
+      "evidence_span": "I can go to styleseat.com, type in haircut San Francisco, get a search results page"
+    },
+    {
+      "id": "P4",
+      "text": "Pros get schedule access, client CRM, marketing emails, an education center, and inspiration photo streams",
+      "status": "explicit",
+      "evidence_span": "Glenda has direct access to her schedule for the first time. She has all her client information in one place"
+    },
+    {
+      "id": "P5",
+      "text": "Dashboard shows business metrics, revenue goals, page stats, booking load, retail, suggestions, busy/free times, and time-slot monetary values",
+      "status": "explicit",
+      "evidence_span": "We also give her a dashboard with an overview. So she has key information about her business"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium model with free online booking and scheduling makes the platform available to the entire industry",
+      "status": "explicit",
+      "evidence_span": "We have freemium model, free online booking, free scheduling, so we're available for the entire industry"
+    },
+    {
+      "id": "P7",
+      "text": "Large addressable market of beauty/wellness pros and clients open to finding new professionals, now adopting Facebook and smartphones",
+      "status": "explicit",
+      "evidence_span": "There's over 2 million Glendas in the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "offline beauty industry pain",
+      "premise_ids": ["P1", "P7"]
+    },
+    {
+      "id": "D2",
+      "name": "pro tools and client marketplace",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium industry access",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stylists can actively grow their businesses online while clients find and book the right professional",
+      "status": "explicit",
+      "evidence_span": "the first time, Glenda can actively grow her business"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unlock inefficiency by freeing unused marketing capital and redirecting revenue through a more efficient market",
+      "evidence_span": "StyleSeat will unlock $18 billion in inefficiency in the space"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the industry isn't online, and so it's hard to find a stylist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we give her the information as well as the things that she can do to grow her business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free online booking, free scheduling, so we're available for the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Glenda pain list folded as one problem set (§4.1.6); client findability folded into same offline-industry pain. Split website, client booking marketplace, ops/CRM suite, and analytics dashboard as distinct capability jobs. Mobile apps folded into product cascade. Traction/partner/school/credit promo excluded (§4.2). Future schedule optimization noted as roadmap not separate premise. ASR StyleSeek/StyleSeat kept verbatim in spans."
+}

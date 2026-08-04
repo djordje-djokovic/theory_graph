@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cyclists and pedestrians face severe nighttime road fatality risk that current safety gear does not adequately address",
+      "status": "explicit",
+      "evidence_span": "Every six hours, a motorist hits and kills a cyclist. Even worse, every eight minutes, a pedestrian is killed on U.S. streets alone"
+    },
+    {
+      "id": "P2",
+      "text": "Traditional safety vests and lights look unattractive and are functionally limited",
+      "status": "explicit",
+      "evidence_span": "those traditional safety vests make you look a bit like a walking traffic cone"
+    },
+    {
+      "id": "P3",
+      "text": "Combined advanced hardware and luminous software optimize lighting cues from ride data for maximum visibility and communication with drivers",
+      "status": "explicit",
+      "evidence_span": "This truly optimizes lighting to maximize the visibility"
+    },
+    {
+      "id": "P4",
+      "text": "College bookstore retail and brand licensing (including smart helmet partners) get luminous gear to users beyond DTC",
+      "status": "explicit",
+      "evidence_span": "parents will be able to purchase luminous gear at college bookstores across the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Road safety need and gear stigma",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware-software lighting system",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail and licensing channels",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep wearers seen and potentially save their lives",
+      "status": "explicit",
+      "evidence_span": "These keep you seen and could potentially save your life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enhance user experience by coaching journeys with lighting",
+      "evidence_span": "uses that information to enhance your own user experience and coach you through these journeys"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a motorist hits and kills a cyclist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimizes lighting to maximize the visibility"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep their students safe at night"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo feature list (turn/brake/pace) folded into hardware-software premise. Fatality stats treated as problem salience with traditional-gear stigma, not as traction. Anti-template note: need/product/channel partition supported by separately revisable market problem, lighting stack, and licensing retail.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-689",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

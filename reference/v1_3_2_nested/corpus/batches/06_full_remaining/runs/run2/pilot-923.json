@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing channels (Facebook, team sites) do not reach colleges or future employers",
+      "status": "explicit",
+      "evidence_span": "It's certainly not the colleges, it's certainly not the future employers"
+    },
+    {
+      "id": "P2",
+      "text": "GradFly is a visual LinkedIn-style portfolio for high school STEM students' projects",
+      "status": "explicit",
+      "evidence_span": "a visual LinkedIn for high school science, technology, engineering, and math students"
+    },
+    {
+      "id": "P3",
+      "text": "Students upload pictures, video, audio, embeds, and docs that capture the story of a project over time",
+      "status": "explicit",
+      "evidence_span": "upload pictures, videos, audios, embedded content, Google Docs"
+    },
+    {
+      "id": "P4",
+      "text": "College-match algorithm pairs project interests to robust undergraduate programs",
+      "status": "explicit",
+      "evidence_span": "pair her with robust college programs out there that are geared towards robotics"
+    },
+    {
+      "id": "P5",
+      "text": "Commendations and subject badges build portfolio prestige and viral uploading incentives",
+      "status": "explicit",
+      "evidence_span": "what's gonna keep students excited about uploading projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wrong-audience showcase problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "STEM portfolio and matching",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Engagement prestige loops",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Showcase groundbreaking STEM projects to the audiences that matter for school and work",
+      "status": "explicit",
+      "evidence_span": "showcasing their most groundbreaking projects"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enable collaboration and expert help around student projects",
+      "evidence_span": "collaborating with one another, and organizing those projects"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not the colleges, it's certainly not the future employers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more weight and prestige that portfolio has"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D1 and D3 retained. iPad/iPhone apps under development folded into product (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:48:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

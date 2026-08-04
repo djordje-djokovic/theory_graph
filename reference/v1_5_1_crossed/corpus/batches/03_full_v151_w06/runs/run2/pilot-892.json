@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-892",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SIDS anxiety and inadequate home monitors leave parents without reliable breathing/vitals alerts",
+      "status": "explicit",
+      "evidence_span": "the current monitors on the market stink. They're old, they're outdated, and they don't actually tell you if your baby is breathing or not"
+    },
+    {
+      "id": "P2",
+      "text": "A smart sock uses pulse-oximetry technology to send heart rate and oxygen to a parent's smartphone and alert in emergencies",
+      "status": "explicit",
+      "evidence_span": "smart sock that sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "id": "P3",
+      "text": "Flexible silicone-encased electronics make the sock baby-proof and waterproof",
+      "status": "explicit",
+      "evidence_span": "made the electronics completely flexible, and we've encased it in silicone so that it is also waterproof"
+    },
+    {
+      "id": "P4",
+      "text": "The app also surfaces skin temperature, stomach-rollover alerts, and sleep-quality notifications",
+      "status": "explicit",
+      "evidence_span": "we're also doing skin temperature, rollover alerts, so if the baby rolls onto their stomach, and sleep quality"
+    },
+    {
+      "id": "P5",
+      "text": "Multiple pulse-ox sensors maintain readings as an infant's foot grows rapidly in the first year",
+      "status": "explicit",
+      "evidence_span": "using multiple sensors in our Pulseox"
+    },
+    {
+      "id": "P6",
+      "text": "Aggregated infant vitals data will enable health predictions beyond the hospital window",
+      "status": "explicit",
+      "evidence_span": "creating the largest data set of infant health data that's ever been known"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SIDS anxiety and smart-sock monitoring",
+      "premise_ids": ["P1", "P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "infant health data platform",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parents gain peace of mind and can respond to infant emergencies through continuous vitals monitoring",
+      "status": "explicit",
+      "evidence_span": "empower parents and it's gonna improve the health of infants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Building a novel infant health dataset for prediction of illness",
+      "evidence_span": "come up with any predictions from anything from the common cold to things that are more life-threatening"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Getting a reading, and we had to get a reading the entire time"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anything that saves a baby's life is worth it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve the health of infants all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Heart-rate/oxygen core monitoring kept as P2; temperature/rollover/sleep as separate notification capability P4 under enumeration atomicity. Miniaturization vs hospital oximeter folded into P2/P5 mechanism. Pre-sales traction and audio/video/elderly roadmap excluded or treated as vision. Singleton D2 retained as independently revisable data-platform path to value."
+}

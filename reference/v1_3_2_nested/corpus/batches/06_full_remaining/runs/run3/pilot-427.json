@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without trying a molecule out, its behavior is unknown, so better computational prediction is needed for drug design",
+      "status": "explicit",
+      "evidence_span": "there's really no way to know, short of actually trying it out, how a particular molecule is going to behave"
+    },
+    {
+      "id": "P2",
+      "text": "Genesis's PotentialNet-based AI represents molecules as atom-bond graphs and outperforms copy-pasted image/voxel ML for chemical properties",
+      "status": "explicit",
+      "evidence_span": "Evan published a paper called PotentialNet, which is kind of the foundation of our AI platform, which was basically field leading in predicting molecular properties"
+    },
+    {
+      "id": "P3",
+      "text": "AI must be combined with veteran chemistry talent because drug development requires many properties to line up in a huge chemical space",
+      "status": "explicit",
+      "evidence_span": "In addition to our AI platform, we also have a couple other very key competencies. In particular, I want to call out our chemical expertise"
+    },
+    {
+      "id": "P4",
+      "text": "Accurate predictions allow automatic high-speed systematic exploration instead of human-paced ad hoc search",
+      "status": "explicit",
+      "evidence_span": "explore the space more systematically, automatically, kind of sweeping through it at high speed with a computer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wet-lab-only molecular uncertainty",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI platform plus chemistry expertise",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Systematic chemical-space search",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More effective drug development that delivers medicines for underserved diseases",
+      "status": "explicit",
+      "evidence_span": "this is a process that's going to make the drug development industry more effective"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Viable biotech business from developing drugs",
+      "evidence_span": "biotech and developing drugs is perfectly viable as a business model"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Predicting molecular properties via computer is very desirable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're very excited to see what they can do with our technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the drug development industry more effective"
+    },
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "if we had accurate predictions of what a particular molecule in there is going to do if we could explore the space more systematically"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run3 groups AI+chemistry as one capability domain; systematic search as separately revisable operating thesis. Explicit prediction→exploration dependency coded. Truncated opening noted.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-427",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:54:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

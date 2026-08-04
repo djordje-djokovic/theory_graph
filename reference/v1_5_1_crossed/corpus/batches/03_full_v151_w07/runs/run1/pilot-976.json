@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-976",
+    "coder_session_id": "session_02",
+    "session_case_index": 10,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Day-to-day language barriers cannot be solved well enough by machine translation alone",
+      "status": "explicit",
+      "evidence_span": "there must be a better way than machine translation"
+    },
+    {
+      "id": "P2",
+      "text": "Crowdsourced real-time human interpreters deliver live video and conference interpretation globally",
+      "status": "explicit",
+      "evidence_span": "crowdsourcing of real-time human interpreters all around the globe"
+    },
+    {
+      "id": "P3",
+      "text": "Interpreter profiles capture languages, dialects, accents, expertise, and rolling availability with push requests",
+      "status": "explicit",
+      "evidence_span": "they can enter their languages. So we have their languages. We have the level that they speak. But we also, this is something quite new, we collect the dialects and the accents too"
+    },
+    {
+      "id": "P4",
+      "text": "A hybrid professional-plus-crowd ladder with rating and practice aims to cover nearly every spoken language",
+      "status": "explicit",
+      "evidence_span": "this is a hybrid crowdsource kind of solution"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "machine-translation gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "crowdsourced interpreter network",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People can speak with anyone in their native language via real-time human interpretation",
+      "status": "explicit",
+      "evidence_span": "real-time interpreter in your pocket"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Travel and communicate without reverting to simplified global English",
+      "evidence_span": "travel anywhere in the world and be able to speak with anybody regardless of what language they speak"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "big problem with language barriers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "crowdsourcing of real-time human interpreters"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Crisis/tsunami volunteer use treated as application of interpreter network, not separate premise. 3000 interpreters as traction evidence of sourcing mechanism (§4.2). Babel-fish vision recorded as secondary value, not premise (§4.1.4). Profile facets folded into one supply-side matching package (§4.1.7)."
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-590",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online certified payments and installment loans at checkout let residents schedule sure payments and split large move-in or rent amounts over time",
+      "status": "explicit",
+      "evidence_span": "we offer online certified payments, where someone can actually schedule a certified payment"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary resident data and bank-account history enable near-instant credit decisions for rent payments",
+      "status": "explicit",
+      "evidence_span": "we have prioritary data access"
+    },
+    {
+      "id": "P3",
+      "text": "An integrated stack combines payments, lending, compliance, and accounting versus one-off ACH tools or separate loans that still require certified checks",
+      "status": "explicit",
+      "evidence_span": "we put all the pieces of the puzzle together that talk cohesively together from the ground up"
+    },
+    {
+      "id": "P4",
+      "text": "Free for owners, the channel targets management groups with roughly 50–500 properties that control a large share of US rental households",
+      "status": "explicit",
+      "evidence_span": "We're 100% free for our owners"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from loan origination and payment processing fees",
+      "status": "explicit",
+      "evidence_span": "We generate revenue from loan origination as well as payment processing fees"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rent payment and credit product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Owner channel and fee model",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Flexible, trusted rent payments that get owners paid while giving residents payment options",
+      "status": "explicit",
+      "evidence_span": "the owner-operator gets the money"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Pay over time, and the owner-operator gets the money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We sit in the middle between both property and resident"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-demo (truncated=true). Certified payment + installment facets kept as one flexible-payment premise with data-credit as enabling mechanism. Accounting integration mentioned as context for cohesive stack in P3. Market-size figures excluded as framing."
+}

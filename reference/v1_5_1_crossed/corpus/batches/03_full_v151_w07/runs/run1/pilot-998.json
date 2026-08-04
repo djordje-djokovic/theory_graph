@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-998",
+    "coder_session_id": "session_01",
+    "session_case_index": 3,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:15:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People buy brands to display and talk about what they wear, not only for utility",
+      "status": "explicit",
+      "evidence_span": "They want to talk about them. They want others get to know what they have, what they wear"
+    },
+    {
+      "id": "P2",
+      "text": "Multifunctional brand-in tags let users check in brands on photos like Foursquare check-ins",
+      "status": "explicit",
+      "evidence_span": "In a tag brand, you brand in in brands"
+    },
+    {
+      "id": "P3",
+      "text": "iPhone app lets users ask the community what brand an item is via question branding",
+      "status": "explicit",
+      "evidence_span": "ask community what brand it is by making a question branding"
+    },
+    {
+      "id": "P4",
+      "text": "App creates friend and expert polls on try-on photos to speed purchase choice",
+      "status": "explicit",
+      "evidence_span": "Take photos of yourself and create a poll"
+    },
+    {
+      "id": "P5",
+      "text": "Web service aggregates brand loyalty with tagging, wardrobes, wish lists, and social Q&A including Facebook photos",
+      "status": "explicit",
+      "evidence_span": "a powerful web service which brings people together on the basis of their brand's loyalty"
+    },
+    {
+      "id": "P6",
+      "text": "Browser bookmarklet extends tagging beyond the site to other websites",
+      "status": "explicit",
+      "evidence_span": "thanks to wonderful browser BookMarket, you can easily go outside the web service and start tagging to other websites"
+    },
+    {
+      "id": "P7",
+      "text": "Brands pay to communicate with fans and competitors' fans",
+      "status": "explicit",
+      "evidence_span": "brands can communicate with their fans and even with fans of their competitors"
+    },
+    {
+      "id": "P8",
+      "text": "Marketplace auto-attaches store price-list links into brandings from keywords",
+      "status": "explicit",
+      "evidence_span": "Stores provide us with a price list and our system analyze keywords and automatically attach the links to the branding"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "brand display and community discovery",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "web service and bookmarklet platform",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "brand advertising and store marketplace",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help brand-loving consumers show, discover, and choose brands socially",
+      "status": "explicit",
+      "evidence_span": "TechBrand is going to be a big brand for people who love brands"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps you to make the right choice"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings people together on the basis of their brand's loyalty"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Brands will love it. And they will pay us for it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Brand-in, question branding, and try-on polls kept as distinct app jobs under split tie-break but grouped in one consumer-app domain as jointly revised UX. International expansion and investment ask excluded. Team bio excluded. ASR: TagBrand/TechBrand naming noise retained only in verbatim spans."
+}

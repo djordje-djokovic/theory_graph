@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Refresh-cycle e-shower reuses each drop about seven times, cutting roughly 80% energy and 90% water use",
+      "status": "explicit",
+      "evidence_span": "uses every precious drop, not once, but about seven times"
+    },
+    {
+      "id": "P2",
+      "text": "System holds three liters, tops up with fresh hot water, and micro-filters plus UV-purifies for high-volume high-pressure comfort",
+      "status": "explicit",
+      "evidence_span": "We micro-filter it, we purify it with UV light, so you've got a crystal clear experience all the way"
+    },
+    {
+      "id": "P3",
+      "text": "Connected hardware can be sold outright or given free with install/insurance/maintenance if users share savings",
+      "status": "explicit",
+      "evidence_span": "we can sell the hardware like we're doing now for $29.50 a pop, or we can give you the hardware for free"
+    },
+    {
+      "id": "P4",
+      "text": "Shower shrinks required boiler and heating infrastructure by about 80%, enabling cheaper sustainable homes",
+      "status": "explicit",
+      "evidence_span": "you don't need big water systems anymore"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Water-recycling e-shower",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware or shared-savings offer",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Infrastructure reduction",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Save energy and water while upgrading shower comfort",
+      "status": "explicit",
+      "evidence_span": "saving you 80% on energy, 90% on water, giving you a huge comfort upgrade"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make sustainable homes available at very little cost via smaller infrastructure",
+      "evidence_span": "We make sustainable homes available for everyone at very little cost"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Because with our shower, you don't need big water systems anymore"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save about 80% on energy and about 90% on water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share your savings with us"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reducing your infrastructure to near zero"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Transcript opens mid-argument (truncated=true); coded only present claims. Self-cleaning/plug-and-play/device connectivity folded into product. Hotel LOIs treated as traction. Singleton D2/D3 retained as separately revisable commercial and construction-infrastructure modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-737",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

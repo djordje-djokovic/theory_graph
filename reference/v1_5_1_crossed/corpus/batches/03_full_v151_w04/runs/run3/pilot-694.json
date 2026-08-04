@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers struggle to make good-quality coffee at home and spend about $5/day in shops, while single-serve pods are wasteful, expensive, and stale, and home makers show little innovation",
+      "status": "explicit",
+      "evidence_span": "it's kind of hard to make a good quality coffee at home"
+    },
+    {
+      "id": "P2",
+      "text": "The Spin Coffee Maker uses patented centrifugal-force brewing that manages barista-like brew elements without pods, filters, or wasteful materials, and spins out dry grounds for clean disposal",
+      "status": "explicit",
+      "evidence_span": "The Spin Coffee Maker uses patented centrifugal force technology to brew your coffee"
+    },
+    {
+      "id": "P3",
+      "text": "The connected machine and app auto-replenish fresh beans from a marketplace of local coffee roasters via a sensor-triggered bean list",
+      "status": "explicit",
+      "evidence_span": "The beans get ordered automatically from a marketplace for local coffee roasters"
+    },
+    {
+      "id": "P4",
+      "text": "Business model takes margins on machines and a cut of every marketplace bean order",
+      "status": "explicit",
+      "evidence_span": "we're going to make margins on the machines and the beans"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home coffee quality convenience gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "centrifugal Spin maker and bean marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "machine and marketplace margins",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Third-wave quality coffee at home with single-serve convenience and no pod waste, without coffee downtime",
+      "status": "explicit",
+      "evidence_span": "combines the quality of the third wave coffee roasters with the convenience of a single serve pod system"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there is very low innovation in the coffee maker market"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're going to solve the biggest problem in coffee history, coffee downtime"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Home-quality/shop-spend, pod waste/staleness, and low home-maker innovation folded as one problem-set (v1.5.1 §4.1.6). Brew styles/RPM/residue container kept as performance package of centrifugal mechanism (§4.1.8). Singleton D1/D3 retained as separately revisable problem and monetization modules. Anti-template justified."
+}

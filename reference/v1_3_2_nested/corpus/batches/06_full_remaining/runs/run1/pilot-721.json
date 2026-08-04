@@ -1,0 +1,106 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Internet-connected smart toys with technology inside can learn and grow with a child as the child develops",
+      "status": "explicit",
+      "evidence_span": "internet-connected smart toys that learn and grow with a child"
+    },
+    {
+      "id": "P2",
+      "text": "Engagement is interactive, educational, witty, and sustained over weeks and years rather than one-off Q&A",
+      "status": "explicit",
+      "evidence_span": "engaging over the course of weeks and hopefully years, and not just one-off question-answer type engagements"
+    },
+    {
+      "id": "P3",
+      "text": "A parent panel dashboard gives parents engagement metrics and controls such as bedtime settings",
+      "status": "explicit",
+      "evidence_span": "parent panel dashboard. That's a way for them to view some engagement metrics analysis"
+    },
+    {
+      "id": "P4",
+      "text": "A platform around the Dino supports subscription content and features, escaping cyclical one-time toy sales",
+      "status": "explicit",
+      "evidence_span": "allows us to get away from the cyclical nature of the toy business. We can move into a subscription type model"
+    },
+    {
+      "id": "P5",
+      "text": "Dynos retail around $99.99 with strong hardware margins that improve at scale",
+      "status": "explicit",
+      "evidence_span": "the dynos will retail for $99.99. At small units, it costs us around $25 to build a dyno"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Growing educational Cognitoy",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Parent panel controls",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription platform economics",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Kids get fun, educational toy experiences that grow with them",
+      "status": "explicit",
+      "evidence_span": "We're built for kids. We're supposed to be fun and educational"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Parents get visibility and control over how children engage with the toy",
+      "evidence_span": "give parents some control via the parent panel"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fun and educational"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parent panel dashboard"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a platform around the Dino"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Watson prize, Kickstarter, Time Magazine, and retailer talks treated as traction/biography and excluded. Decade-ahead toy vision not coded as premise (v1.3.2 clarification 4). Demo content types folded into educational-engagement premise. Future custom messages folded into parent-panel premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-721",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

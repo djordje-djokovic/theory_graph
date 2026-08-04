@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise workers cannot get firewall-backed work apps done on personal tablets, and MDM locks down the whole device defeating BYOD",
+      "status": "explicit",
+      "evidence_span": "people working within traditional enterprises cannot get their work done today on those devices because the apps they need, like SharePoint, SAP, and Oracle, are all secured behind corporate firewalls"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot is a secure work container on the device where IT manages work while the rest of the device stays personal",
+      "status": "explicit",
+      "evidence_span": "the one place where IT manages and the rest of the device remains personal"
+    },
+    {
+      "id": "P3",
+      "text": "Delivers apps and encrypted documents via existing SSL VPN investments with one-click access, offline viewers, and remote wipe of only WorkSpot",
+      "status": "explicit",
+      "evidence_span": "No new boxes to install in the data center, and he's up and running in minutes"
+    },
+    {
+      "id": "P4",
+      "text": "Collects end-user work activity data and sells Insights/Events analytics while giving access and control for free",
+      "status": "explicit",
+      "evidence_span": "giving access and control for free. What we do is change the revenue equation to charge for end user activity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "BYOD enterprise access problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "personal device work container",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "free access monetized via activity data",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees get seamless secure work on personal devices while IT keeps control without locking the whole device",
+      "status": "explicit",
+      "evidence_span": "simplify Bring Your Own Device, or BYOD, for enterprises"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MDM heavy-handed, locking down the entire device, defeating the whole purpose for BYOD"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "She launches WorkSpot, the one place for work with the rest of the device remaining personal"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "SharePoint/VPN pain and MDM critique folded as one BYOD problem (§4.1.6). Virtual file system, encryption, wipe, native-app launch folded into container/delivery mechanism (§4.1.7). VPN vendor coverage treated as evidence of no-new-boxes claim. Early customers excluded as traction. Anti-template: problem, product, and data monetization separately revisable."
+}

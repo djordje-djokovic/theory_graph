@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-276",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Orbital debris at extreme speeds threatens satellites and can trigger Kessler cascade making orbits unusable",
+      "status": "explicit",
+      "evidence_span": "At those speeds, a small fragment the size of a penny can destroy a multimillion-dollar satellite, not only ending that mission, but they create new debris that, of course, threatens other satellites. In a chain reaction known as Kessler syndrome"
+    },
+    {
+      "id": "P2",
+      "text": "Manual collision-avoidance processes are falling apart under rising launch volume due to human error and delays",
+      "status": "explicit",
+      "evidence_span": "the processes that satellite operators have traditionally used to avoid collisions are falling apart because they're manual and they're prone to human error and delays"
+    },
+    {
+      "id": "P3",
+      "text": "Pathfinder autonomously reduces collision-response time by more than 90% with notifications, maneuver options, and simulations",
+      "status": "explicit",
+      "evidence_span": "Pathfinder, an autonomous satellite collision avoidance solution that reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "id": "P4",
+      "text": "Near-real-time multi-source data and optimization models minimize collision risk while saving fuel to extend satellite life",
+      "status": "explicit",
+      "evidence_span": "fed into optimization models that ingest and consume every constraint a satellite operator has to produce optimal plans that not only minimize the risk, but also extend the satellite life by minimizing fuel usage"
+    },
+    {
+      "id": "P5",
+      "text": "Second product Gamit ensures safety of flight for launch vehicles and onboard payloads",
+      "status": "explicit",
+      "evidence_span": "our second commercial product, Gamit. Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Orbital debris and manual avoidance failure",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Pathfinder autonomous collision avoidance",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Gamit launch safety product",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer spaceflight by preventing satellite collisions and launch hazards",
+      "status": "explicit",
+      "evidence_span": "building technologies that are making space flight safer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if it happens, it can destroy an entire orbital regime and it can make it unusable for generations to come"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo UI steps (notification, history, maneuver pick, 3D viz) folded into Pathfinder mechanism. Customer/satellite counts and agency contracts excluded as traction. Singleton D3 retained: Gamit framed as separately sold second commercial product."
+}

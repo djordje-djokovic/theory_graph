@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-145",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:17:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About 40% of bees die yearly from pesticides, parasites, and disease, threatening pollination-dependent food and beekeepers' honey and pollination businesses",
+      "status": "explicit",
+      "evidence_span": "Every year, we lose about 40% of our bees because of pesticides, parasites, and diseases"
+    },
+    {
+      "id": "P2",
+      "text": "Beekeepers must physically open each hive to assess status, which does not scale across large multi-site operations and often discovers problems too late",
+      "status": "explicit",
+      "evidence_span": "To get an idea of what's going on inside their hives, they have to physically go to every single one of them and open them up to look inside"
+    },
+    {
+      "id": "P3",
+      "text": "Nectar is a beehive management platform using sensors and AI so keepers can remotely track health and behavior and prevent disease",
+      "status": "explicit",
+      "evidence_span": "a beehive management platform using sensors and AI. With Nectar, the beekeepers can remotely follow their hive status in terms of health and behavior in order to improve their decision-making process and really prevent diseases instead of reacting to them"
+    },
+    {
+      "id": "P4",
+      "text": "In-hive sensors translate temperature, humidity, sound, weight, and geolocation signals into a human-readable interface",
+      "status": "explicit",
+      "evidence_span": "The beekeepers install our sensor devices in the hive, and we translate its temperature, humidity, sound frequencies, or really the signals that the bees send each other, the weight of the hive and its geolocation, and translate it into an interface understandable by us humans"
+    },
+    {
+      "id": "P5",
+      "text": "Differentiation is affordable analytics rather than expensive raw data, supporting more profitable apiaries",
+      "status": "explicit",
+      "evidence_span": "We offer affordable analytics instead of expensive raw data"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue is subscription plans with one to three analytic packages targeting crucial hive places",
+      "status": "explicit",
+      "evidence_span": "We offer three different plans with a choice of one, two, or three analytic packages in order to really follow specific places in the hive that are crucial for beekeepers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bee mortality and manual hive inspection limits",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor-AI hive health platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Analytic-package subscription pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give honeybees a voice so beekeepers can keep hives healthy and provide sustainable efficient pollination",
+      "status": "explicit",
+      "evidence_span": "empowering beekeepers to provide sustainable and efficient pollination services"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More profitable apiaries via affordable analytics",
+      "evidence_span": "This will lead our clients to have a more profitable apiary"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Really, that's what makes us different from our competition. We offer affordable analytics instead of expensive raw data"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "by the time the beekeeper discovers that a hive is having an issue, the hive will die"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prevent diseases instead of reacting to them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "because this is what has value for them, this is how we've built our revenue model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Sensor signal list folded into P4 as cascade of the sensing mechanism. Pilot hive-save counts excluded as traction. Singleton D3 retained as pricing module. Anti-template: problem, product, pricing separately revisable."
+}

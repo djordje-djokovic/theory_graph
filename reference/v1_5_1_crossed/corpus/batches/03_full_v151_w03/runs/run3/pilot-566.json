@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-566",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In arid climates, local farming is resource-inefficient and low quality while imports leave consumers choosing seasonal low-quality local produce or expensive air-freighted imports",
+      "status": "explicit",
+      "evidence_span": "local, low quality, fresh produce, which is available, but again, very low quality and seasonal. Or two, extremely expensive, air freighted imports"
+    },
+    {
+      "id": "P2",
+      "text": "IoT-enabled high-tech greenhouses with a triple-play climate management system grow crops in arid climates with high yield and low water use",
+      "status": "explicit",
+      "evidence_span": "developed an IoT-enabled triple-play climate management system that uses mechanical, evaporative, and a high-pressure fogging cooling system"
+    },
+    {
+      "id": "P3",
+      "text": "Controlled greenhouse growing produces premium sweet fruit and plants protected by beneficial insects rather than chemicals",
+      "status": "explicit",
+      "evidence_span": "Our plants are protected by nature, not by chemicals"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is direct to retailers and wholesalers, collapsing a typical five-step distribution channel into two",
+      "status": "explicit",
+      "evidence_span": "going direct to retailers and wholesalers, eliminating what is typically a five-step distribution channel into just two"
+    },
+    {
+      "id": "P5",
+      "text": "A diverse team spanning engineering, CEA operations, private equity, and retail enables execution",
+      "status": "explicit",
+      "evidence_span": "we have a strong and diverse team of engineers, private equity investment professionals, experienced controlled environment agriculture executives, and even retailers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "arid-climate food supply problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "controlled greenhouse growing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "direct retail distribution and team",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh, premium, always-available local produce at materially lower cost than air-freighted imports",
+      "status": "explicit",
+      "evidence_span": "producing a wide variety of crops, sustainably grown, always available, and at a materially lower cost than air-freighted imports"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "National food security, water conservation, and economic diversification via the technology",
+      "evidence_span": "any country can invest in its own food security, water conservation, and economic diversification by deploying this technology"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely expensive, air freighted imports"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainably grown, always available, and at a materially lower cost than air-freighted imports"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "going direct to retailers and wholesalers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.5.1 §4.1.6: arid inefficiency, GCC water/food stats, import dependence, and consumer choice folded as one pain-bundle (P1). §4.1.7–8: triple-play cooling, CO2 dosing, data loop, climate corridor, and yield/water multiples folded into greenhouse mechanism P2. Vision/future-of-agriculture and market-size figures excluded. Singleton D1 retained as independently revisable problem module motivating the offering."
+}

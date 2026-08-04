@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aspiring artists lack access to quality producers or cannot afford a music career",
+      "status": "explicit",
+      "evidence_span": "they either don't have access to quality producers or they can't afford to pursue a career in music"
+    },
+    {
+      "id": "P2",
+      "text": "Rekogram is an all-in-one mobile production marketplace, studio, and social network for original songs with producers for under $5",
+      "status": "explicit",
+      "evidence_span": "Rekogram is an all-in-one mobile production marketplace, a recording studio, and a social network that allows our users to create original songs with award-winning music producers for under $5"
+    },
+    {
+      "id": "P3",
+      "text": "Users discover beats, write and record to them, shoot video, and share to social networks including Rekogram",
+      "status": "explicit",
+      "evidence_span": "Our users can discover beats, they can write songs to those beats, they can record songs to those beats, and they can also shoot a video to that song that they just created"
+    },
+    {
+      "id": "P4",
+      "text": "The marketplace connects producers who lack artist relationships with artists who lack access/affordability",
+      "status": "explicit",
+      "evidence_span": "We're the user-friendly, convenient, and affordable solution that connects producer Tony with aspiring artist Willie"
+    },
+    {
+      "id": "P5",
+      "text": "Producers pay $9.99/month or $90/year to upload; platform takes 20% of leases/sales and returns 50% royalties to producers",
+      "status": "explicit",
+      "evidence_span": "We basically charge producers $9.99 a month or $90 a year to upload our beats to our platform"
+    },
+    {
+      "id": "P6",
+      "text": "Affiliate marketers, field evangelists, and celebrity fan outreach drive adoption",
+      "status": "explicit",
+      "evidence_span": "We currently have 10 affiliate marketing companies out there in the music space that are helping promote our application"
+    },
+    {
+      "id": "P7",
+      "text": "Differentiation is original-content creation without reliance on major-label licensing",
+      "status": "explicit",
+      "evidence_span": "we're not relying on major label licensing because we're an original content platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Access gap for aspiring artists and producers",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile create-and-share studio",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Producer fees and promotion",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone worldwide can awaken their inner musician by creating original songs affordably on a phone",
+      "status": "explicit",
+      "evidence_span": "empowers anyone, regardless of where they live in the world or how much money they have, the ability to awaken their inner musician"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Rekogram breaks down barriers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create original songs with award-winning music producers for under $5"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we make money for producers like Tony, and we provide access and save money for guys like Willie"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Competitor fundraising/valuations and Project Music selection excluded. Fetty Wap anecdote used only as illustration of producer-artist discovery mechanism (P4). Co-founder credentials excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-599",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

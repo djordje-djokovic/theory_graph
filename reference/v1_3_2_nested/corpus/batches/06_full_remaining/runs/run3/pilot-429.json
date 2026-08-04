@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Global partners' infrastructure supplies coverage needed for the subscription business",
+      "status": "explicit",
+      "evidence_span": "leverage the infrastructure of these global partners to get the global coverage of data"
+    },
+    {
+      "id": "P2",
+      "text": "Enterprise and city customers already pay for the data product",
+      "status": "explicit",
+      "evidence_span": "Munich Re, Swisscom, IBM, Siemens as customers"
+    },
+    {
+      "id": "P3",
+      "text": "Need a partner ambitious enough to put emissions and pollution data into everyday decisions",
+      "status": "explicit",
+      "evidence_span": "seeking today a global partner that's ambitious enough to be able to integrate greenhouse gas emissions data and pollution data into everyday business decision making"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Partner-leveraged data coverage",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Paying data customers",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Decision-making integration path",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Show air quality data matters to financial markets as much as to asthma",
+      "status": "explicit",
+      "evidence_span": "prove that air quality data is as relevant to the financial markets as it is to asthmas"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "global coverage of data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "paying for our data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everyday business decision making"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.52
+  },
+  "notes": "Split paying customers from infrastructure as separately revisable commercial proof vs coverage mechanism. Very short truncated source limits confidence.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-429",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:40+02:00"
+  }
+}

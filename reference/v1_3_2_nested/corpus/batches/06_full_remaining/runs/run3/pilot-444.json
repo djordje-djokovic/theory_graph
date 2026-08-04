@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-444",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:07+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current cholera water testing is slow, expert-heavy, and expensive",
+      "status": "explicit",
+      "evidence_span": "This is a long time that takes expertise, and it's expensive"
+    },
+    {
+      "id": "P2",
+      "text": "Portable hardware heats and images while disposable kits supply reagents for toxin-gene amplification",
+      "status": "explicit",
+      "evidence_span": "The hardware acts like the portable laboratory"
+    },
+    {
+      "id": "P3",
+      "text": "Viscosity change after amplification is the measurement that yields accurate field results in under 30 minutes",
+      "status": "explicit",
+      "evidence_span": "that's exactly what we're measuring, is the change in viscosity that's occurring"
+    },
+    {
+      "id": "P4",
+      "text": "Smartphone/web notification layer maps outbreaks for intervention",
+      "status": "explicit",
+      "evidence_span": "somebody can go onto the web, go onto our portal and see where and when cholera is happening"
+    },
+    {
+      "id": "P5",
+      "text": "B2B sales: hardware plus recurring disposables to NGOs and water actors",
+      "status": "explicit",
+      "evidence_span": "We do a B2B sales model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Viscosity detection hardware",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Surveillance portal",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B kit model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accurate affordable field detection that protects communities",
+      "status": "explicit",
+      "evidence_span": "detect cholera accurately and affordably"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Saving lives by rapidly detecting pathogens",
+      "evidence_span": "Rapidly detecting pathogens, saving lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect cholera accurately and affordably"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminate the outbreak before it's too large"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "B2B sales model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Transcript starts mid-sentence; coded only present content (truncated=false; opening fragment unintelligible alone). Pending patents folded into viscosity technique."
+}

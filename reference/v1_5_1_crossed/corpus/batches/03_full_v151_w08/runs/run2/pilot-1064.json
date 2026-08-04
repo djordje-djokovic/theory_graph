@@ -1,0 +1,106 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Charisma is a simple mobile video messenger for fun, spontaneous real-time interaction",
+      "status": "explicit",
+      "evidence_span": "a new one-of-a-kind video messenger app. It's simple. It's mobile. It's fun"
+    },
+    {
+      "id": "P2",
+      "text": "Signup pre-populates profile and friends from Facebook/Twitter so users skip filling profiles",
+      "status": "explicit",
+      "evidence_span": "we pre-populate your profile with your existing data from Facebook and Twitter"
+    },
+    {
+      "id": "P3",
+      "text": "Users can immediately see and video-call people nearby outside their existing social graph",
+      "status": "explicit",
+      "evidence_span": "immediately after you sign up, you would be able to see the people nearby, not only your existing contacts"
+    },
+    {
+      "id": "P4",
+      "text": "Sparks let reluctant users nudge nearby people to call back; interactions are logged",
+      "status": "explicit",
+      "evidence_span": "you can actually send them a spark to encourage them to call you back"
+    },
+    {
+      "id": "P5",
+      "text": "Unlike questionnaire-heavy dating sites, Charisma enables spontaneous location-based real-time calls with open profiles and filters",
+      "status": "explicit",
+      "evidence_span": "You wouldn't be able to do this kind of spontaneous interactions using usual old-school dating sites"
+    },
+    {
+      "id": "P6",
+      "text": "Launch on Apple then Android; ads-based with subscription to remove ads; also useful for calling nearby stores/bars",
+      "status": "explicit",
+      "evidence_span": "They launch on Apple devices, and Android will follow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "nearby video messenger product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "platform monetization and uses",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy spontaneous real-time video interaction with people nearby",
+      "status": "explicit",
+      "evidence_span": "how easy it is to reach people nearby using Charisma"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Charisma is mobile. They launch on Apple devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are initially ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Mobile/location/social/real-time attributes folded with product differentiation vs dating sites as one nearby-messenger mechanism (§4.1.7). Sparks kept as distinct interaction module that could fail separately from direct call. Pre-populate social graph folded as onboarding facet. Stage demos are evidence of product not separate premises. Singleton D2: ads/subscription commercial model separately revisable.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1064",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

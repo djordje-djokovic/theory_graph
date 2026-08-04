@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1028",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A huge underused private bike stock already exists and can be the world's largest rental fleet if connected",
+      "status": "explicit",
+      "evidence_span": "there are over 100 million bikes in the US, and there are over 1 billion in the world. To us, this means the largest bike rental system in the world already exists. We just need to connect it"
+    },
+    {
+      "id": "P2",
+      "text": "An infrastructure-light, location-independent web marketplace matches excess bike supply with traveler and local rental demand",
+      "status": "explicit",
+      "evidence_span": "we've created a web platform where we're taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "id": "P3",
+      "text": "Listings average about half of shop rental prices while owners set their own rates",
+      "status": "explicit",
+      "evidence_span": "Our average price on SpinLister right now is about $20 a day, about half of existing bike rental shop prices"
+    },
+    {
+      "id": "P4",
+      "text": "Rentals are insured up to $5,000 with institutional insurance if something goes wrong",
+      "status": "explicit",
+      "evidence_span": "We insure bicycles up to $5,000. And we have institutional insurance, as well, should anything go wrong in the process of a rental"
+    },
+    {
+      "id": "P5",
+      "text": "The marketplace facilitates owner–renter conversation so listers own personalized customer service",
+      "status": "explicit",
+      "evidence_span": "What we're doing at SpinLister is we're facilitating a conversation. We're letting real people talk about renting out a bicycle that works best for them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle private bike supply",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Peer-to-peer rental marketplace",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Pricing and insurance",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let travelers and locals rent bikes conveniently from individual owners to explore",
+      "status": "explicit",
+      "evidence_span": "we allow individual bike owners to rent out their bikes to travelers and locals looking to explore"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's this huge pool of bicycles that are not being capitalized on"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "about half of existing bike rental shop prices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Listing UI filters, social-proof widgets, and mobile-app roadmap folded into marketplace premise per §4.1(5). Traction city counts excluded. Audience-choice award excluded. Price amount and insurance kept as commercial trust conditions for the same rental offer; grouped in D3 as jointly revisable commercial terms."
+}

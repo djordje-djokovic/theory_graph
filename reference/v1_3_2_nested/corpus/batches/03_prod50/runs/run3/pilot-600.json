@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Salon owners must fill stations with sub-renters to cover expensive leases and focus on growth",
+      "status": "explicit",
+      "evidence_span": "Her $5,000 a month lease was to be offset by five other stylists sub-renting stations"
+    },
+    {
+      "id": "P2",
+      "text": "Word-of-mouth and Craigslist fail to produce vetted, stable sub-renters",
+      "status": "explicit",
+      "evidence_span": "The only resources are word of mouth and Craigslist"
+    },
+    {
+      "id": "P3",
+      "text": "Renly marketplace connects vetted renters/sub-renters with flexible booking terms",
+      "status": "explicit",
+      "evidence_span": "have vetted renters find them"
+    },
+    {
+      "id": "P4",
+      "text": "Sub-renters gain geographic and schedule flexibility across many cities",
+      "status": "explicit",
+      "evidence_span": "offer sub-renters freedom through flexibility"
+    },
+    {
+      "id": "P5",
+      "text": "Grow by seeding supply across service verticals for network effects and retention",
+      "status": "explicit",
+      "evidence_span": "it presented the best opportunity to generate network effect and high retention"
+    },
+    {
+      "id": "P6",
+      "text": "Launch Renly Circle so consumers and pros discover, book, manage, pay, and find space in one place",
+      "status": "explicit",
+      "evidence_span": "one place, one platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lease offset and vetting problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Flexible vetted marketplace",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Renly Circle super-app",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize service-space utilization and give professionals flexible access to credible rental stations",
+      "status": "explicit",
+      "evidence_span": "maximize the usage of existing space"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "One platform for discovering and running any service",
+      "evidence_span": "any service, any time, any place"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "platform that allows you to source credible, vetted, reliable sub-renters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Renly offered an optimal solution for both Stephanie, the sub-renter, and my wife, the owner"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Simply one place, one platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Anti-template: three domains are problem, marketplace core, and platform expansion — separately revisable modules in the pitch. Soft count 6.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-600",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:37:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

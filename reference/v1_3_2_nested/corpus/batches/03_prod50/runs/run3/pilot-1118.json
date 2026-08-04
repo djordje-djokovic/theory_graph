@@ -1,0 +1,77 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "FluidDB is a shared writable database so related app data need not live in unrelated silos",
+      "status": "explicit",
+      "evidence_span": "applications that had related data no longer were forced to store it into unrelated databases"
+    },
+    {
+      "id": "P2",
+      "text": "Independent apps writing to FluidDB enable unanticipated combined queries without mutual awareness",
+      "status": "explicit",
+      "evidence_span": "I've combined data in an unanticipated way from three independent but related applications. And those applications are not aware of each other. They have no knowledge of each other"
+    },
+    {
+      "id": "P3",
+      "text": "Anyone can add information to anything without permission on shared writable objects for everything",
+      "status": "explicit",
+      "evidence_span": "any person or any application can come along and add information to anything without asking for permission"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared writable application data platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Information stored together is more valuable because it is more useful",
+      "status": "explicit",
+      "evidence_span": "store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Data is social — related information lives in the same place",
+      "evidence_span": "It's one in which data is social. where information that is related lives in the same place"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes it more valuable, because it's more useful"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "One-domain theory. Permissionless write + shared objects merged as one writable-platform condition. Soft count at 3.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:42:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

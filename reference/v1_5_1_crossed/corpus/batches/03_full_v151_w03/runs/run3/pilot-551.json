@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-551",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:36:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional cattle weighing is labor-intensive, costly, rarely done, and stressful/injury-prone, causing weight loss",
+      "status": "explicit",
+      "evidence_span": "obtaining weight information is labor-intensive, time-consuming, and expensive, so it's rarely obtained"
+    },
+    {
+      "id": "P2",
+      "text": "Portable 3D-camera software estimates cattle weight automatically as animals pass, ~10x faster and stress-free, with a dashboard recommending sell/feed/health/genetics actions",
+      "status": "explicit",
+      "evidence_span": "Our proprietary software uses a portable 3D camera to estimate the weight of the cattle"
+    },
+    {
+      "id": "P3",
+      "text": "Unlike still-photo apps for small farms or expensive fixed passage scales, the portable camera works for all farm sizes at about R$3,000 hardware and R$1 per animal-month",
+      "status": "explicit",
+      "evidence_span": "Olho do Dono is portable. The 3D camera costs around R$ 3,000 and we charge R$ 1 per animal month"
+    },
+    {
+      "id": "P4",
+      "text": "Platform also recommends products that optimize weight gain and earns a commission on those sales",
+      "status": "explicit",
+      "evidence_span": "Our platform also gives recommendations on products that can optimize weight gain and we make a commission fee on that"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "stressful costly traditional weighing",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "pass-by 3D weight monitoring",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "portable low-cost vs scales and apps",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "weight-gain product commissions",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Farmers grow productivity and profitability while maintaining cow well-being through better weight insight",
+      "status": "explicit",
+      "evidence_span": "increase the beef cattle productivity and profitability while maintaining the well-being of the cow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Less weight, less money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We help farmers to grow their bottom lines"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So we work for all size farms"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommendations on products that can optimize weight gain"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Sell/feed/treat/genetics use-list folded as applications of one weight-insight mechanism. Competitive price comparison kept inside commercial-positioning premise with portability. Paid betas and contact counts excluded as traction. Validation image counts treated as method detail of the camera software, not a separate premise."
+}

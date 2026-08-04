@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users hold cash in P2P apps that benefits the apps, not the users, under inflation",
+      "status": "explicit",
+      "evidence_span": "peer-to-peer apps that are benefiting from cash balances and earning a return, leaving nothing behind for their users"
+    },
+    {
+      "id": "P2",
+      "text": "Millennials and Gen Z want wealth growth but lack time and resources to invest",
+      "status": "explicit",
+      "evidence_span": "want to earn and grow our wealth, but sometimes just lack the resources, time, or energy or resources to invest"
+    },
+    {
+      "id": "P3",
+      "text": "Paybacks can be stock picks from the recipient's favorites instead of cash settlement only",
+      "status": "explicit",
+      "evidence_span": "Your roommate paying you back rent and Apple stock"
+    },
+    {
+      "id": "P4",
+      "text": "Backend cash converts to chosen stock only after accept, with cash or switch options",
+      "status": "explicit",
+      "evidence_span": "comes out of my account as cash and enters her account as cash on the back end. It only converts to stock once she clicks Accept"
+    },
+    {
+      "id": "P5",
+      "text": "Beyond consumer P2P, Stacks can plug into rideshare, registries, and business payment platforms",
+      "status": "explicit",
+      "evidence_span": "Even businesses will be able to plug into Stacks"
+    },
+    {
+      "id": "P6",
+      "text": "Partner brokerage coverage makes users feel safe investing long-term",
+      "status": "explicit",
+      "evidence_span": "we've got you covered. We cover up to 250K of user cash balances and 500K of portfolio investments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unrewarded P2P balances",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stock payback product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Platform extensions and custody",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Create limitless value by turning payments into investments",
+      "status": "explicit",
+      "evidence_span": "create limitless value with every single transaction"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Contribute to peers' wealth visibly as it grows",
+      "evidence_span": "contribute to your peers' wealth and actually see it grow as well"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build generational wealth"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn every payment into an investment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incorporating investments into your payments platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Business/rideshare plug-in coded as a separately revisable distribution module this run because speaker frames it as going beyond P2P. Social feed folded into product value rather than its own premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-356",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:10+02:00"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-733",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Offline retail still dominates commerce, yet brands cannot control in-store execution where purchase decisions happen",
+      "status": "explicit",
+      "evidence_span": "92% of commerce still takes place offline at physical retail stores"
+    },
+    {
+      "id": "P2",
+      "text": "Collaboration via calls, emails, and store visits cannot deliver reliable in-store execution",
+      "status": "explicit",
+      "evidence_span": "in-store execution is key, but hardly happens. Why? Well, because the collaboration is broken"
+    },
+    {
+      "id": "P3",
+      "text": "Ubique gives brands global campaign monitoring, retailers remote execution tools, and store staff focused tasking",
+      "status": "explicit",
+      "evidence_span": "Brands monitor their operations globally, retailers improve their execution remotely, and in-store employees can focus on what really matters"
+    },
+    {
+      "id": "P4",
+      "text": "Object detection automates product facing counts from store imagery in minutes instead of months",
+      "status": "explicit",
+      "evidence_span": "We are able to identify and count only the number of battlefront boxes. The process that you've just seen usually take months. With Ubique, we'll need it in a few minutes"
+    },
+    {
+      "id": "P5",
+      "text": "Sales-plus-merchandising dashboards reveal agreement gaps and enable instant retailer live-chat fixes",
+      "status": "explicit",
+      "evidence_span": "She can instantly notify the retailer through YouBeat live chats"
+    },
+    {
+      "id": "P6",
+      "text": "Business model is SaaS priced per user per company, with a five-day go-live program",
+      "status": "explicit",
+      "evidence_span": "We have a SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken brand-retail execution",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Ubique monitoring and detection",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS go-live commercial model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better in-store execution that raises merchandising ROI and sales",
+      "status": "explicit",
+      "evidence_span": "We've maximized the merchandising return on investment"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Average 25% sales increase for customers",
+      "evidence_span": "We increased sales for our customer by an average of 25%"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "That's why we built Ubique"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in-store execution is key"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improved field efficiency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have the solution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent run: folded crowdsourcing into platform monitoring rather than separate module; attached five-day go-live to SaaS commercial premise. Truncated ending flagged. Traction excluded. Need/product/money triad justified by separately stated SaaS module."
+}

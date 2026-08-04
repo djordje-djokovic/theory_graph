@@ -1,0 +1,142 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing blood analyzers detect only a handful of indications and most customers cannot afford the cost of ownership to cover the tests they need",
+      "status": "explicit",
+      "evidence_span": "These existing blood analyzers can only detect a handful of indications, and most customers can't really pay the cost of ownership"
+    },
+    {
+      "id": "P2",
+      "text": "Eliminating the analyzer by integrating sample prep and a spectrophotometer into a tiny phone-connected device makes testing easier and more affordable",
+      "status": "explicit",
+      "evidence_span": "not with a universal analyzer, but by eliminating the analyzer altogether"
+    },
+    {
+      "id": "P3",
+      "text": "A modular reagent-and-filter design with no pumps or valves lets the test menu change by simply changing reagents",
+      "status": "explicit",
+      "evidence_span": "If you want to change out the application, you just change the reagents in the filters"
+    },
+    {
+      "id": "P4",
+      "text": "ALT and AST liver enzymes are the right first tests because they complement blood-gas analyzer menus and can only be measured spectrophotometrically",
+      "status": "explicit",
+      "evidence_span": "they complement the existing menus of blood gas analyzers, but they could only be measured spectrophotometrically"
+    },
+    {
+      "id": "P5",
+      "text": "Emergency veterinarians are the launch market, running rapid anesthesia and drug screens before admitting patients",
+      "status": "explicit",
+      "evidence_span": "emergency veterinarians could use it to run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "id": "P6",
+      "text": "Device accuracy is validated against reference testing across 100 animal samples and five species (R-squared 0.97 for ALT, 0.99 for AST)",
+      "status": "explicit",
+      "evidence_span": "we achieved an R-squared of 0.97 for ALT and a 0.99 for AST"
+    },
+    {
+      "id": "P7",
+      "text": "The broader rapid chemistry segment has no low-cost competitors, only generic analytes, and no barriers to entry",
+      "status": "explicit",
+      "evidence_span": "it has no low-cost competitors. It has only about 20 analytes that are all generic"
+    },
+    {
+      "id": "P8",
+      "text": "Vertical integration and a single-use disposable model control costs and replace the razor-razorblade model",
+      "status": "explicit",
+      "evidence_span": "This is how we control costs. We're vertically integrated"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blood-testing access problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Analyzer-free modular device",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Veterinary beachhead and validation",
+      "premise_ids": ["P4", "P5", "P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Menu expansion and disposable cost model",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Blood testing becomes easier and more affordable for veterinary and research customers",
+      "status": "explicit",
+      "evidence_span": "making testing easier and more affordable"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Researchers can run liver toxicity studies on small samples without anesthetizing or terminally bleeding animals",
+      "evidence_span": "You don't have to anesthetize the mouse or have a terminal bleed"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "The reason we're working with ALT and AST is because they complement the existing menus of blood gas analyzers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most customers can't really pay the cost of ownership"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "by eliminating the analyzer altogether"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "emergency veterinarians could use it to run rapid screens for anesthesia or drugs"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Market-size figures ($200M veterinary test, $2B rapid chemistry, $15B blood testing) treated as segment framing; the competitive-openness claim P7 is coded for its structural conditions, not the numbers. Cuvette/optic/microchip engineering details folded into the device premises as parts of one measurement mechanism (v1.3.2 clarification 5). P4->P5 coded on the explicit warrant 'The reason we're working with ALT and AST is because'. Singleton D1 retained: the access-cost problem is independently revisable from the device solution.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:36:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

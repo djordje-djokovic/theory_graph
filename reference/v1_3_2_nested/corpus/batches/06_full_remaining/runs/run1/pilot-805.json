@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About one billion existing remote-controlled window and split air conditioners cannot be made smart by typical smart thermostats like Nest",
+      "status": "explicit",
+      "evidence_span": "there are one billion of these kinds of air conditioners all around the world"
+    },
+    {
+      "id": "P2",
+      "text": "Sensible pod attaches to existing ACs to connect them to the internet for app control",
+      "status": "explicit",
+      "evidence_span": "a product that connects to the air conditioner"
+    },
+    {
+      "id": "P3",
+      "text": "Algorithms save large energy (~40%) by setting efficient temperatures and detecting filters, open windows, vacancy, and lifestyle patterns",
+      "status": "explicit",
+      "evidence_span": "We were able to save to our pilot users an average of 40% on the energy"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing is $160 for the first kit and $80 for each additional AC",
+      "status": "explicit",
+      "evidence_span": "The first kit, the basic kit for Sensible costs $160, and then for each additional air conditioner you have in your home or office, it's another $80"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unconnected installed AC base",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smart pod and energy algorithms",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Kit pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make any air conditioner smart and cut energy use and electricity bills",
+      "status": "explicit",
+      "evidence_span": "We make any air conditioner smart"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce CO2 emissions for a greener world",
+      "evidence_span": "we want the world to be greener to reduce co2 emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I couldn't. I searched online. All I could find is smart thermostats like Nest"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save a huge amount of energy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affect your electricity bill"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Wearable roadmap treated as future aspiration, not a premise. Indiegogo success excluded as traction. Singleton pricing domain retained as independently revisable commercial terms. Detection features folded into energy-algorithm premise (v1.3.2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-805",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

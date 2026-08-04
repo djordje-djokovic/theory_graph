@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-903",
+    "coder_session_id": "session_03",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bicycle theft is massive and current locks and trackers are not integrated into a truly smart lock",
+      "status": "explicit",
+      "evidence_span": "Bicycle theft is a huge problem worldwide"
+    },
+    {
+      "id": "P2",
+      "text": "Lock8 combines alarm, security sensors, GPS tracking, and keyless unlocking in one lock",
+      "status": "explicit",
+      "evidence_span": "It has to have an alarm. It has to be secure. And it has to be GPS trackable"
+    },
+    {
+      "id": "P3",
+      "text": "App enables arming, tamper push alerts, locating the lock, notification channels, and sensitivity settings",
+      "status": "explicit",
+      "evidence_span": "if my thief tries to tamper with it, it switches on the alarm. And I will shortly get a push notification"
+    },
+    {
+      "id": "P4",
+      "text": "Users can share or rent bikes/locks for connected mobility without city bike-share infrastructure",
+      "status": "explicit",
+      "evidence_span": "we can share bikes easily with anyone that we want"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "bike theft and weak security tech",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "sensor smart lock and app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "bike sharing and rental network",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bike owners keep bikes safe and can share or rent them with confidence",
+      "status": "explicit",
+      "evidence_span": "you can rent your bike out to whoever you want, and you can rest assured that your bike will be safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bike security tech today is not that advanced"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using incredible technology inside the device, as well as a really advanced app"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "truly disrupt what bicycle sharing is all about"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Theft stats folded into problem. Required smart-lock attributes and anti-tamper sensor list folded as one lock mechanism (§4.1.7); app alerts/locate as delivery surface of that lock. Sharing/rental/connected mobility split as separately claimed path to value. Kickstarter mention excluded as financing/traction. Anti-template: problem, lock product, and sharing GTM separately revisable."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1014",
+    "coder_session_id": "session_06",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Calories and fat labels are insufficient because modern packaged food is chemistry-heavy and same macros can hide very different ingredients",
+      "status": "explicit",
+      "evidence_span": "looking at calories and fat, it's just not enough today"
+    },
+    {
+      "id": "P2",
+      "text": "InnerFood combines a large product catalog, researched ingredient encyclopedia, personalized dietitian logic for medical and cultural concerns, and ingredient analytics tracking",
+      "status": "explicit",
+      "evidence_span": "We've come out with a catalog with over 250,000 products"
+    },
+    {
+      "id": "P3",
+      "text": "Users search or barcode-scan products and see avoid/moderation/safe/special breakdowns with origin, health effects, articles, and discussion",
+      "status": "explicit",
+      "evidence_span": "Shannon can search using a product search, an ingredient search, or use barcode scanning technology"
+    },
+    {
+      "id": "P4",
+      "text": "Aggregated consumption analytics across many users can surface common denominators linked to health outcomes",
+      "status": "explicit",
+      "evidence_span": "take their analytical information, cross-reference it, and actually find out the common denominator"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inadequate nutrition-label transparency",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "personalized ingredient intelligence platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "population ingredient-health analytics",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People know where food comes from, how it is made, and how it affects their personal health so they can choose better",
+      "status": "explicit",
+      "evidence_span": "you will also know exactly where your food comes from, how it's made, and also how it affects your personal health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's actually become more chemistry than biology"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalize the information custom to the user based on their medical concerns and cultural concerns"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the only way to influence someone's behavior is by actually educating them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Catalog, encyclopedia, dietitian personalization, and tracker listed needs folded as one platform package the speaker says they built (§4.1.7); search/scan/alerts as delivery cascade of that platform. Population cross-reference claim kept as separately asserted analytics path. Anti-template: problem, product, and population analytics separately revisable."
+}

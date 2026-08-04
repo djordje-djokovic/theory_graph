@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Organizers and members currently must use five different systems to run and engage a community",
+      "status": "explicit",
+      "evidence_span": "thousands of people have had to sign up for five different systems in order to engage our group"
+    },
+    {
+      "id": "P2",
+      "text": "Cohort consolidates communication, events, members, and transactions into one organizer solution",
+      "status": "explicit",
+      "evidence_span": "Communication management, event management, member management, transaction management, under one umbrella"
+    },
+    {
+      "id": "P3",
+      "text": "Custom application forms let organizers target subsets of members for communications and events",
+      "status": "explicit",
+      "evidence_span": "we give organizers custom application forms. These forms are forms that members fill out when they join the group. This enables organizers to target communication and events at specific subsets of their population"
+    },
+    {
+      "id": "P4",
+      "text": "Advanced ticketing supports multiple ticket types, rates, release dates, and public vs member sales",
+      "status": "explicit",
+      "evidence_span": "you'll be able to create numerous ticket types, student, alumni, employee, charge different rates for every ticket, release them on different dates, and make them available to both members and people from the general public"
+    },
+    {
+      "id": "P5",
+      "text": "Groups can manage multi-tier chapters/subgroups online with full local tools",
+      "status": "explicit",
+      "evidence_span": "Each group can have as many subgroups as they want and as many tiers of subgroups as they need. Each subgroup has all the tools I just described"
+    },
+    {
+      "id": "P6",
+      "text": "Channels curate groups by interest topic for discovery",
+      "status": "explicit",
+      "evidence_span": "This makes it easy for users to find the great groups and events in their interest topic"
+    },
+    {
+      "id": "P7",
+      "text": "Revenue model mixes free groups with channel subscriptions, premium subscriptions, and transaction fees",
+      "status": "explicit",
+      "evidence_span": "We generate revenue by selling subscriptions against our channels in free groups. We generate subscription revenue for our premium groups. And we generate service fees revenue at any time we conduct a transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "All-in-one community software",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hierarchy and discovery",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Catch-all community platform for any type of group organizer and members",
+      "status": "explicit",
+      "evidence_span": "Cohort is the catch-all for all things community"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the single solution that an organizer needs to engage their membership"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We also connect groups to their chapters"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split ticketing and application forms as product conditions that could fail separately from the umbrella claim. Privacy toggles folded into hierarchy/discovery narrative rather than a separate premise. Anti-template: three domains are organizer product, structure/discovery, and money with transcript warrant.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1065",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-432",
+    "coder_session_id": "session_05",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Widespread poor sleep imposes large cognitive, physical, and economic costs",
+      "status": "explicit",
+      "evidence_span": "Nearly half of the Western population reports bad quality of sleep or even lack of it, costing billions of dollars to their employers and to the society"
+    },
+    {
+      "id": "P2",
+      "text": "Wearables with general tips and coaching are not enough to solve sleep deprivation",
+      "status": "explicit",
+      "evidence_span": "providing you wearable devices and trackers and some general tips and coaching on how to change your habits towards better sleep. But that is not enough"
+    },
+    {
+      "id": "P3",
+      "text": "Personalized mobile sleep coaching connects to favorite wearables and is developed with leading sleep researchers",
+      "status": "explicit",
+      "evidence_span": "Nuxo Sleep Coaching, personalized sleep coaching in a mobile phone. You can use it with your favorite wearable device"
+    },
+    {
+      "id": "P4",
+      "text": "App assesses a sleep coaching profile from tracker data and delivers weekly lesson-based habit coaching that improves as it learns",
+      "status": "explicit",
+      "evidence_span": "Based on the data, we assess your sleep coaching profile. And after that, you can continue to coaching directly"
+    },
+    {
+      "id": "P5",
+      "text": "Coaching focuses on circadian/homeostatic rhythms and fixing melatonin onset around the natural circadian rhythm",
+      "status": "explicit",
+      "evidence_span": "We are focusing on mostly fixing your melatonin onset in the nighttime and working around your natural circadian rhythm"
+    },
+    {
+      "id": "P6",
+      "text": "First targeting European employers and consumers via occupational health and life-insurance partners plus App Store coaching purchases",
+      "status": "explicit",
+      "evidence_span": "We are first targeting the European market, which is $15 billion"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly sleep deprivation gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized circadian sleep coaching product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "European employer and consumer GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people sleep better and live a more productive life",
+      "status": "explicit",
+      "evidence_span": "start sleeping better now"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help employers' employees be more proactive at work",
+      "evidence_span": "help your employees live a better life and be more proactive in the workplace"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The effects of sleep deprivation are both cognitive and physical"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized sleep coaching in a mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download the NuxO app now from the App Store and purchase the coaching there"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo social-jet-lag example treated as illustration of profile-based coaching, not a separate premise. Partner names used as GTM evidence inside P6. Team credentials excluded."
+}

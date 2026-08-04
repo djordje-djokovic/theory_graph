@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1010",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fashion lacks personalization of fit, so most fashion still sells in stores on standard models unlike real people",
+      "status": "explicit",
+      "evidence_span": "What's missing in online fashion shopping is personalization. People still don't know how clothes fit when they're buying online"
+    },
+    {
+      "id": "P2",
+      "text": "Shoppers create a true-to-size 3D personal model from two fit questions and try on outfits in-browser without special hardware",
+      "status": "explicit",
+      "evidence_span": "create your own model and try on clothes on that model"
+    },
+    {
+      "id": "P3",
+      "text": "Designers' collections are digitized at scale and offered to retailers via API with pay-as-you-go pricing and no upfront cost",
+      "status": "explicit",
+      "evidence_span": "we offer this collection to the retailers who carry these designers using our API"
+    },
+    {
+      "id": "P4",
+      "text": "Retailers get analytics on consumer sizes and popular styles to optimize operations",
+      "status": "explicit",
+      "evidence_span": "They get access to all the sizes from the consumers. They also get access for the popular styles and the sizes from their clothes"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "online fit uncertainty",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "true-to-size 3D fitting",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "digitize-and-API retailer model",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shoppers see how clothes truly fit online so more fashion commerce moves online",
+      "status": "explicit",
+      "evidence_span": "a new way to shop online"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers increase sales and reduce returns",
+      "evidence_span": "They get increased sales, reduced returns"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "People still don't know how clothes fit when they're buying online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is true to size"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "retailers have no upfront costs. They pay us as they go"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "90% in-store and model-mismatch folded into fit-personalization problem (§4.1.6). Drag-drop, zoom, rotate, side-by-side sizes, and outfit styling folded into true-to-size fitting cascade (§4.1.7). Facebook share as feature of that surface. Mass-customization/digitize-before-manufacture treated as vision framing for platform, not extra premise (§4.1.4). Designer logos as traction. Anti-template: problem, fitting UX, and retailer API economics separately revisable."
+}

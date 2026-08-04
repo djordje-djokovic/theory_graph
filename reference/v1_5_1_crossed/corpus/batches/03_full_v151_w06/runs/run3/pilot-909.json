@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing voice apps fail because they miss popular apps and limit voice to only a few apps",
+      "status": "explicit",
+      "evidence_span": "they don't work with the most popular apps out there. And the second is, they limit their technology to only a few apps"
+    },
+    {
+      "id": "P2",
+      "text": "VoiceSphere works with many of the most popular consumer apps from the start inside one feed without leaving the app",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere works with 20 of the most popular apps right from the start"
+    },
+    {
+      "id": "P3",
+      "text": "An API hub lets new apps be integrated quickly with only a few lines of code",
+      "status": "explicit",
+      "evidence_span": "the API hub is really advanced technology that allows us to integrate more and more apps really fast"
+    },
+    {
+      "id": "P4",
+      "text": "Professionals can voice-access complex business software such as Salesforce inside VoiceSphere",
+      "status": "explicit",
+      "evidence_span": "professionals could reach all the data and functionality of these products just with their voice"
+    },
+    {
+      "id": "P5",
+      "text": "An enterprise store lets business products with APIs sell VoiceSphere integrations while VoiceSphere takes a share of each sale",
+      "status": "explicit",
+      "evidence_span": "They can integrate their application and sell the VoiceSphere access to their customers inside our enterprise store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "consumer voice-to-popular-apps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "API hub extensibility",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise voice and store",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users can talk to all their favorite apps and complex software by voice",
+      "status": "explicit",
+      "evidence_span": "a voice control app that lets you talk to all your favorite apps"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "what makes VoiceSphere really stand apart is how easy it is to integrate new products in VoiceSphere"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "VoiceSphere, the app that lets you talk to everything on your phone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us to integrate more and more apps really fast"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets complex software benefit from our technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two voice-control problems coded as one pain-bundle (P1) per v1.5.1 §4.1. Cross-service Spotify/YouTube fallback folded into P2 as cascade of the popular-apps mechanism. Singleton D2 retained: API hub is independently revisable extensibility. 20% take rate kept as quantitative detail of P5."
+}

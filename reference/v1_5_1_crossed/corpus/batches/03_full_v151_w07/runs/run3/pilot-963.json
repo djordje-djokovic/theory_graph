@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "coder_session_id": "session_05",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users need remote, automatic, effortless wireless power that safely powers multiple devices at a distance, including behind walls and around corners, with regulatory approval",
+      "status": "explicit",
+      "evidence_span": "How do you safely and efficiently power multiple devices and only those devices at a distance?"
+    },
+    {
+      "id": "P2",
+      "text": "KOTA delivers focused wireless power via a charger and small receivers that beacon-find open paths and return power only along those paths, avoiding people and absorbers, without line of sight",
+      "status": "explicit",
+      "evidence_span": "returns the power signal only through the open paths between it and the receiver, powering it and avoiding people or anything that absorbs its energy"
+    },
+    {
+      "id": "P3",
+      "text": "KOTA delivers about one watt within a 30-foot radius, enough to charge phones and power multiple home devices safely",
+      "status": "explicit",
+      "evidence_span": "deliver one watt of power at a 30-foot distance, spanning an entire home, powering multiple devices safely"
+    },
+    {
+      "id": "P4",
+      "text": "KOTA will ship built into devices and phones, as standard batteries, and as dongles for existing devices",
+      "status": "explicit",
+      "evidence_span": "built into devices and phones, built into standard batteries, and as dongles for current devices"
+    },
+    {
+      "id": "P5",
+      "text": "Electronics manufacturers will partner to use KOTA components, design, and technology in their products",
+      "status": "explicit",
+      "evidence_span": "partner with electronics manufacturers to use our components, design, and technology"
+    },
+    {
+      "id": "P6",
+      "text": "Oil and gas needs wireless power to eliminate sparking risk from wired sensors",
+      "status": "explicit",
+      "evidence_span": "oil and gas industry, which has forever sought wireless power to eliminate the risk of disastrous sparking"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "remote wireless power need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "KOTA focused wireless charging",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "electronics manufacturer partnerships",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "oil and gas wireless power",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Devices charge automatically at a distance without removing them from pocket or bag—always on, always ready",
+      "status": "explicit",
+      "evidence_span": "phone charge automatically without taking them out of your pocket or bag"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need wireless power"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this phone is charging wirelessly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable their products to be used to their maximum potential"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminate the risk of disastrous sparking from the multitude of wires powering their sensors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Beacon path-finding, safety-as-Wi-Fi, no-LOS, antenna/efficiency demo, and issued patents folded into the KOTA mechanism (§4.1.1, §4.1.7–8). 1W/30ft kept as performance package of that process but listed as its own quantitative claim only insofar as it is the consumer proof point—retained as P3 attached to same domain. Device/battery/dongle forms are packaging facets of one offering. Medical/retail/IoT treated as vision framing (§4.1.4). Oil/gas is a separately revisable vertical. Financing ask excluded."
+}

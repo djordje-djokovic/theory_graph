@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-925",
+    "coder_session_id": "session_02",
+    "session_case_index": 5,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Busy users want convenient, personalized, delicious restaurant-quality healthy food delivered to home and office",
+      "status": "explicit",
+      "evidence_span": "high quality restaurant food that can be delivered to your home and office"
+    },
+    {
+      "id": "P2",
+      "text": "A setup on health goals and tastes drives weekly personalized menus with cancel/edit, nutrition filters, and preference learning plus meal confirmation texts",
+      "status": "explicit",
+      "evidence_span": "Every single week, he gets a personalized menu that's tailored to just him"
+    },
+    {
+      "id": "P3",
+      "text": "Local restaurant kitchens become suppliers of custom healthy dishes hand-delivered within the hour instead of mass-produced warehouse diet meals",
+      "status": "explicit",
+      "evidence_span": "convert your local restaurant kitchen into a supplier of healthy food that's custom made to your health and taste preferences and hand delivered to you within the hour"
+    },
+    {
+      "id": "P4",
+      "text": "The model attracts a new segment beyond commercial weight-loss and cardboard diet meals",
+      "status": "explicit",
+      "evidence_span": "attracting a new segment of customers who would have never considered signing up for a commercial weight loss plan or eating food out of a cardboard box"
+    },
+    {
+      "id": "P5",
+      "text": "Unit economics combine a monthly subscription fee plus restaurant commissions with no inventory and restaurant partners delivering",
+      "status": "explicit",
+      "evidence_span": "We charge consumers $28 in the form of a monthly subscription fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "personalized healthy delivery need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "menu personalization platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "restaurant kitchen supply network",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D4",
+      "name": "subscription and commission economics",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient, no-hassle healthy, seriously delicious restaurant food delivered to users",
+      "status": "explicit",
+      "evidence_span": "It's convenient, it's no hassle healthy, and it's seriously delicious food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the convenience of a personal assistant with the personalization of a nutritionist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized menu that's tailored to just him"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hand delivered to you within the hour"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's virtually all gross profit"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript opens mid-sentence (truncated=true). Menu personalization cascade (cancel/edit/filters/learning/texts) folded into one platform premise (§4.1.7). Subscription fee and restaurant commissions kept as one commercial package (§4.1.3). Seed raise and launch promo excluded (§4.2). Scale math ($50M) treated as illustration of economics, not a separate premise. Anti-template: need, personalization, restaurant supply, and monetization separately revisable."
+}

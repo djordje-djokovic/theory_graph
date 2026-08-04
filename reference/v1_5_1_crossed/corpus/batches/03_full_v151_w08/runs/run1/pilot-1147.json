@@ -1,0 +1,111 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators need trusted help for hiring, being hired, introductions, and finding experts—hard work done by asking people you trust",
+      "status": "explicit",
+      "evidence_span": "You're looking to hire, you're looking to be hired, you're looking for an introduction, or maybe an expert"
+    },
+    {
+      "id": "P2",
+      "text": "Namesake couples Facebook/Twitter/LinkedIn social graph with real-time infrastructure for publishing, routing, and matching business opportunities",
+      "status": "explicit",
+      "evidence_span": "We take the power of your social graph, meaning Facebook, Twitter, and LinkedIn, and couple it with our real-time infrastructure"
+    },
+    {
+      "id": "P3",
+      "text": "Business stream routes opportunities (e.g., jobs) via smart algorithms, explicit call-outs, and peer forwarding—not mere Twitter/Rolodex",
+      "status": "explicit",
+      "evidence_span": "The core difference is our stream's ability to route business opportunities"
+    },
+    {
+      "id": "P4",
+      "text": "Inline apply/respond and introductions make matching supply and demand happen in real time",
+      "status": "explicit",
+      "evidence_span": "Markets are about matching supply with demand"
+    },
+    {
+      "id": "P5",
+      "text": "Business profiles with declared expertise and endorsements build a trust/expertise graph for commerce",
+      "status": "explicit",
+      "evidence_span": "we're building out the business expertise graph"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "trusted business matching need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "graph-routed opportunity stream",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "expertise endorsement graph",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Community for sharing business opportunities and knowledge—match supply with demand like magic",
+      "status": "explicit",
+      "evidence_span": "a community for sharing business opportunities and knowledge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We ask the people we trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "route business opportunities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the business graph is about trust"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Prior company exits excluded as credentials (§4.2). Hiring demo cascade folded into routing product (§4.1.7). Expertise endorsements split as separately framed trust-graph module. Pitch cut by time on other endorsement types. Singleton D1 and D3 retained as independently revisable need vs trust layer.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1147",
+    "coder_session_id": "session_04",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

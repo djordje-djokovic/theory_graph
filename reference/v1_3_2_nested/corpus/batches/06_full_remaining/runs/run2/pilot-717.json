@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-717",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:05+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Precomputed static-traffic routes leave accuracy on the table versus loop-detector ground truth",
+      "status": "explicit",
+      "evidence_span": "these apps are leaving a lot on the table"
+    },
+    {
+      "id": "P2",
+      "text": "TallyGo's intelligent routing layer uses minute-level data and time-dependent costs per turn arrival",
+      "status": "explicit",
+      "evidence_span": "built the first ever intelligent routing layer for minute level data"
+    },
+    {
+      "id": "P3",
+      "text": "Embeddable navigation is missing, forcing redirect, open-source cobbling, or becoming a nav company",
+      "status": "explicit",
+      "evidence_span": "any company that needs navigation is faced with three really poor options"
+    },
+    {
+      "id": "P4",
+      "text": "Navigation SDK embeds real-time turn-by-turn into existing apps in a few steps",
+      "status": "explicit",
+      "evidence_span": "With TallyGo's Navigation SDK, for the very first time, any company can embed real-time, turn-by-turn navigation"
+    },
+    {
+      "id": "P5",
+      "text": "Fleets need dynamically updating instructions spanning pickups and drop-offs for the day",
+      "status": "explicit",
+      "evidence_span": "a single set of dynamically updating turn-by-turn instructions spanning all of their pickups and drop-offs for the entire day"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Minute-level routing engine",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "SDK for mobility businesses",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time in-app navigation that finds the actual fastest route",
+      "status": "explicit",
+      "evidence_span": "find the actual fastest route"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find the actual fastest route"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "embed real-time, turn-by-turn navigation directly into their existing apps"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Protectable IP mention folded into routing layer premise. Fire department demo is illustration of SDK, not a new premise."
+}

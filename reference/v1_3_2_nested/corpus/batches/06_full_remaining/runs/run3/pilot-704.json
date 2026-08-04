@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-704",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Warehouse inventory control is manual, slow, and inaccurate across hundreds of thousands of warehouses",
+      "status": "explicit",
+      "evidence_span": "The biggest problem in every one of these warehouses is keeping track of inventory. Today, that is a highly manual and incredibly slow process"
+    },
+    {
+      "id": "P2",
+      "text": "iFM automates inventory counting with flying robots using computer vision and robotics as a data-analytics stack",
+      "status": "explicit",
+      "evidence_span": "we automate inventory counting using flying robots. iFM stands for Intelligent Flying Machines. At the core, we are a data analytics company using computer vision and robotics to automate data capture"
+    },
+    {
+      "id": "P3",
+      "text": "Robots fly indoors autonomously at centimeter accuracy without GPS by using computer vision and specialized hardware",
+      "status": "explicit",
+      "evidence_span": "existing drones can only fly autonomously outdoors because they rely on GPS. We are using our computer vision software as well as specialized computing hardware to achieve centimeter accurate indoor autonomous flight"
+    },
+    {
+      "id": "P4",
+      "text": "Offering targets high-bay selective-rack warehouses with robots, relay infrastructure, and real-time analytics",
+      "status": "explicit",
+      "evidence_span": "Today, our solution is geared towards a specific type of warehouse. The fancy term is high bay or selective rack"
+    },
+    {
+      "id": "P5",
+      "text": "Sell hardware with upfront setup/installation fees and software by subscription with data-driven premiums",
+      "status": "explicit",
+      "evidence_span": "we're selling the software on a subscription basis, where as our system collects more information, we can add data-driven premiums"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual inventory accuracy problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Indoor autonomous inventory drones",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Upfront hardware plus SaaS",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make inventory errors a thing of the past",
+      "status": "explicit",
+      "evidence_span": "make inventory errors a thing of the past"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve operational efficiency; large cost savings from less buffer inventory",
+      "evidence_span": "Our mission as a company is to improve the operational efficiency of enterprises"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Companies lose billions of dollars because of inventory errors every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automate inventory counting using flying robots"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "upfront setup fee that takes care of the hardware and installation"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Split indoor autonomy as distinct technical condition within product domain alongside warehouse targeting. Team credentials and customer-test traction excluded. Anti-template triad justified by separately revisable industrial sales model."
+}

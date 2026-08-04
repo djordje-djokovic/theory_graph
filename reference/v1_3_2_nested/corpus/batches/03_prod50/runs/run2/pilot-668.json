@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Marketers are overwhelmed; users are diverse moment-to-moment so static segments waste spend",
+      "status": "explicit",
+      "evidence_span": "Almost all of this is wasted. The reason? Everyone is overwhelmed"
+    },
+    {
+      "id": "P2",
+      "text": "Dynamic soup of all users and content with the individual at the center enables true personalization",
+      "status": "explicit",
+      "evidence_span": "we look at all the information about all users on the site combined with all content in kind of a dynamically changing soup of information with you at the center"
+    },
+    {
+      "id": "P3",
+      "text": "Cold-start capable real-time personalization across verticals and devices",
+      "status": "explicit",
+      "evidence_span": "even brand new cold start users"
+    },
+    {
+      "id": "P4",
+      "text": "Fast on-site setup: URL ingest, choose widgets, optimize goals/rules, go live",
+      "status": "explicit",
+      "evidence_span": "just like that, we're personalizing for Listia on their site in real time"
+    },
+    {
+      "id": "P5",
+      "text": "ML plus fast infrastructure yields 125ms intelligent reactions per impression",
+      "status": "explicit",
+      "evidence_span": "we treat that impression as a cohort of one at that moment"
+    },
+    {
+      "id": "P6",
+      "text": "Usage-based SaaS across media, B2B, and e-commerce customers",
+      "status": "explicit",
+      "evidence_span": "We're a SaaS-based company, and our pricing is usage-based"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Real-time personalization engine",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Usage SaaS go-to-market",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalize every touchpoint, content type, and device after one integration",
+      "status": "explicit",
+      "evidence_span": "You integrate it once you personalize everything every touch point every type of content in every device"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "intelligent real-time reaction immediately"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy for our customers to add new items and new parts of the site that they want to start personalizing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 for pricing. Signal/scan volume stats excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-668",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:28:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

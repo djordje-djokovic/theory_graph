@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-697",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:42+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hobby lasers, 3D printers, and desktop CNCs under $5k fail for hard flat parts that still take hours by hand",
+      "status": "explicit",
+      "evidence_span": "Let's take a look at the types of digital tools that are available for under $5,000"
+    },
+    {
+      "id": "P2",
+      "text": "Wazer digitally cuts glass, metals, stone, ceramics, carbon fiber, and steel automatically from a design",
+      "status": "explicit",
+      "evidence_span": "It cuts any material. It cuts with digital precision"
+    },
+    {
+      "id": "P3",
+      "text": "Compact contained waterjet redesign brings industrial abrasive water cutting to a desktop under $4k",
+      "status": "explicit",
+      "evidence_span": "It's the result of a ground-up redesign of water-cutting technology, with four separate patents pending"
+    },
+    {
+      "id": "P4",
+      "text": "Users load a digital design, press cut, and walk away while the machine finishes the part",
+      "status": "explicit",
+      "evidence_span": "all we've gotta do is press cut and walk away"
+    },
+    {
+      "id": "P5",
+      "text": "Target users span professionals, homeowners, hobbyists, makerspaces, and schools",
+      "status": "explicit",
+      "evidence_span": "whether it's a jeweler designing a necklace, or an artisan creating a custom knife blade, a homeowner redoing the bathroom, or a hobbyist creating a custom bicycle part"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Desktop waterjet cutter",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Maker hard-cutting need",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Makers digitally cut hard materials that other desktop tools cannot",
+      "status": "explicit",
+      "evidence_span": "It's a digital tool that uses water to cut through any material"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring water-cutting technology into ordinary workshops",
+      "evidence_span": "bringing this amazing technology to workshops everywhere"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cut through any material"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's what we're solving with Wazer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Material list treated as one capability enumeration (§4.1(2)). Team engineering credentials excluded."
+}

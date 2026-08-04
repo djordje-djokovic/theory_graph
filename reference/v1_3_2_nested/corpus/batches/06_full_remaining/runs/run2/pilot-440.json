@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-440",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shared rides force microsatellite operators into preset schedules, wrong drop-off orbits, and restrictive multi-customer integration that can delay operations by years",
+      "status": "explicit",
+      "evidence_span": "Adding up all these pain points can lead to two and a half years between when a launch is scheduled and when a satellite is operational"
+    },
+    {
+      "id": "P2",
+      "text": "Customers need dedicated launch timing and destination without compromise, not industry ride-sharing",
+      "status": "explicit",
+      "evidence_span": "what customers need is the experience that you and I know is ride-sharing, where you can call up a ride that takes you where you want to go, when you want to get there, no compromise"
+    },
+    {
+      "id": "P3",
+      "text": "Launching above most of the atmosphere from a high-altitude platform makes individual-customer rockets small enough to be cost-effective",
+      "status": "explicit",
+      "evidence_span": "if you could launch your rocket above 95% of the Earth's atmosphere, you could make it small enough to cost-effectively launch an individual customer"
+    },
+    {
+      "id": "P4",
+      "text": "Regulus is a reusable autonomous balloon platform that launches rockets from 60,000 feet and returns for rapid reuse",
+      "status": "explicit",
+      "evidence_span": "Regulus is a fully reusable and autonomous vehicle that allows us to launch rockets from 60,000 feet in altitude"
+    },
+    {
+      "id": "P5",
+      "text": "Solid-motor lower stages are safe, shelf-stable, and mass manufacturable",
+      "status": "explicit",
+      "evidence_span": "This architecture is safe. It's shelf-stable, and it's mass manufacturable"
+    },
+    {
+      "id": "P6",
+      "text": "A non-cryogenic liquid third stage provides fine-tuned control for precise orbit insertion",
+      "status": "explicit",
+      "evidence_span": "For fine-tuned control, we use a third-stage, non-cryogenic liquid propulsion system"
+    },
+    {
+      "id": "P7",
+      "text": "Dedicated individual launches let satellites begin operating immediately with weeks-scale access to any LEO",
+      "status": "explicit",
+      "evidence_span": "Because we tailor each launch to an individual customer, they can begin operating their satellites immediately"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dedicated vs ride-share need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "High-altitude launch and propulsion",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Immediate tailored orbital delivery",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dedicated microsatellite launches to the desired orbit on the customer's schedule",
+      "status": "explicit",
+      "evidence_span": "dedicated launch service that they've been asking for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "And that's exactly what we do"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing our microsatellite customers with a dedicated launch service"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launch rockets from 60,000 feet in altitude"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can begin operating their satellites immediately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: split solid vs liquid stages; dropped FAA authorization as past validation/traction rather than continuing condition. High-altitude platform services / Mars testbed treated as vision/extension, not premises. Singleton D3 justified as service-delivery condition revisable apart from vehicle design."
+}

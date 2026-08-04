@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "coder_session_id": "session_06",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:13:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shorter attention spans make long textbook study compete poorly with social apps for students' time",
+      "status": "explicit",
+      "evidence_span": "How do you convince a generation that spends eight hours a day on Snapchat and TikTok to spend two hours a day on a textbook"
+    },
+    {
+      "id": "P2",
+      "text": "Photo OCR of textbook pages plus ML generates prioritized flashcard Q&A in seconds",
+      "status": "explicit",
+      "evidence_span": "create flashcards with just a picture of their textbooks"
+    },
+    {
+      "id": "P3",
+      "text": "Messaging-based virtual tutor generates Q&A from a word and extends help to essays and other study tasks",
+      "status": "explicit",
+      "evidence_span": "Milo is a virtual learning assistant that acts as a tutor in your pocket"
+    },
+    {
+      "id": "P4",
+      "text": "Task-specific semantic language models trained on product data run faster than prompt-engineered benchmarks for these learning use cases",
+      "status": "explicit",
+      "evidence_span": "training task-specific behavior in the model itself"
+    },
+    {
+      "id": "P5",
+      "text": "Same models extend beyond students to workplace training and institutional knowledge distillation",
+      "status": "explicit",
+      "evidence_span": "we're able to service workplace and training"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "student attention and study friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Kado and Milo learning products",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "task-specific language models",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "workplace and institutional training",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students learn faster and teachers teach faster through personalized generative-AI learning",
+      "status": "explicit",
+      "evidence_span": "generative AI to help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Seamless workforce upskilling and training resource generation",
+      "evidence_span": "create instant training resources for their employees"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "this is all made possible because we specialize in language"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make learning personalized"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "process that took me two hours in school, now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fantastic, seamless user experience"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamless learning experience for your workforce"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Kado OCR+ML cascade folded into P2; Milo messaging + essay help folded into P3 as one tutor surface. Speed benchmark folded into P4. Beta-user traction and founder bio excluded. Ambassadors treated as data-expansion detail inside P4."
+}

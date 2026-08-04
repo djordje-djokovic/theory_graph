@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetics miss injections and miscalculate dosages amid many sugar-affecting factors",
+      "status": "explicit",
+      "evidence_span": "I missed more than 3,000 other injections and miscalculated more than 6,000 dosages"
+    },
+    {
+      "id": "P2",
+      "text": "Store apps do not remove the hard logging and analysis work diabetics face",
+      "status": "explicit",
+      "evidence_span": "hundreds of apps on the store that want to help diabetics live better, yet all they do is provide us with fancy tools"
+    },
+    {
+      "id": "P3",
+      "text": "Automatic life and vitals collection enables proactive insulin and food guidance like traffic-aware trip timing",
+      "status": "explicit",
+      "evidence_span": "as when you have a scheduled trip and Google Maps will tell you you need to move five minutes earlier because there's traffic"
+    },
+    {
+      "id": "P4",
+      "text": "Device integrations auto-capture glucose and contextual signals such as stress and activity",
+      "status": "explicit",
+      "evidence_span": "compare that to her stress levels, the temperature, insulin, steps, and many others"
+    },
+    {
+      "id": "P5",
+      "text": "Care network gets live updates and unusual-pattern alerts",
+      "status": "explicit",
+      "evidence_span": "alerted if unusual pattern is detected or something is wrong"
+    },
+    {
+      "id": "P6",
+      "text": "Insurers and self-insured employers will pay so the product can be free for diabetics",
+      "status": "explicit",
+      "evidence_span": "they are insurance companies Self-insured employers and many others who want to enhance your productivity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missed-dose diabetes burden",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Auto-sensing proactive guidance",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Caregiver real-time oversight",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Payer-funded free access",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smartest diabetes assistant that reduces management burden before crises",
+      "status": "explicit",
+      "evidence_span": "Spike, the smartest diabetes assistant in the world"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Why can't it be as easy?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Spike proactively provides you with the right insulin tips and reminders with food suggestions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "As for her guardians and doctors, they are informed in real time"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spike is free forever for diabetics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Injection counts used as problem illustration inside P1, not traction. Medtronic/Sanofi excluded as partnership traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-489",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

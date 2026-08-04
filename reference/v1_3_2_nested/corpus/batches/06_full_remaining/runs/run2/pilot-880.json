@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In-car tech ages fast while a billion existing vehicles are left out of new OEM stacks",
+      "status": "explicit",
+      "evidence_span": "aren't you afraid that a year from now, this technology will be completely outdated"
+    },
+    {
+      "id": "P2",
+      "text": "VINLY OBD device plus app catalog brings safety, savings, and fun services to post-1996 cars at set device prices",
+      "status": "explicit",
+      "evidence_span": "The device plugs into your car under the dash"
+    },
+    {
+      "id": "P3",
+      "text": "Same platform sells fleet tracking/custom business apps with device and data plan included yearly",
+      "status": "explicit",
+      "evidence_span": "that's only for $149.99 per year, and that includes the device and includes the data plan"
+    },
+    {
+      "id": "P4",
+      "text": "Developers get a full API/SDK/hardware backpack stack to build across all makes instead of siloed OEM investments",
+      "status": "explicit",
+      "evidence_span": "developers could not build applications for the car without considerable investment. And even with the limited capacity where they can, they're usually siloed within a car manufacturer make and model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Outdated car tech problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "VINLY hardware and apps",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Open developer platform",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connected-car applications and services for consumers, fleets, and developers",
+      "status": "explicit",
+      "evidence_span": "VINLY is a connected car platform that enables building applications and services for your car"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more than one billion vehicles on the road right now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start using apps right away"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable developers to get a huge piece of this market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Price kept with consumer hardware (v1.3.1 #3). Enterprise folded with consumer device as same plug-in platform commercial offer; developer openness as separate module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-880",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:34:50+02:00"
+  }
+}

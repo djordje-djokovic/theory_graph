@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mesh networking shares one user's mobile internet across their devices and the crowd",
+      "status": "explicit",
+      "evidence_span": "mesh networking application that enables you to share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "id": "P2",
+      "text": "Installation yields faster, more reliable mobile internet for participants",
+      "status": "explicit",
+      "evidence_span": "benefit from a faster mobile internet and more reliable mobile internet"
+    },
+    {
+      "id": "P3",
+      "text": "Connectivity quality scales with how many people join the Open Garden network",
+      "status": "explicit",
+      "evidence_span": "Because the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    },
+    {
+      "id": "P4",
+      "text": "Clients run on Android phones and Mac/Windows laptops",
+      "status": "explicit",
+      "evidence_span": "available on Android, Mac, and Windows laptop"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mesh sharing and network effects",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Multi-OS clients",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users obtain shared mobile internet that is faster and more reliable",
+      "status": "explicit",
+      "evidence_span": "faster mobile internet and more reliable mobile internet"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "works by crowdsourcing connectivity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available on Android, Mac, and Windows laptop"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "No premise-premise coded this run (network-effect claim read as value contribution, not explicit prerequisite language beyond topical link). Traction anecdotes excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

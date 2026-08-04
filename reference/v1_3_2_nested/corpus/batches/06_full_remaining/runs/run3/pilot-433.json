@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robotic site scanning plus cloud analysis produces precise assessments of every construction element",
+      "status": "explicit",
+      "evidence_span": "Our robots drive around site, building detailed 3D maps of the environment"
+    },
+    {
+      "id": "P2",
+      "text": "A web interface turns that analysis into color-coded, searchable, risk-ranked views with supporting imagery for stakeholders",
+      "status": "explicit",
+      "evidence_span": "Simple color-coded information that you see here is gray means we don't have enough data to make an assessment"
+    },
+    {
+      "id": "P3",
+      "text": "Sold as B2B SaaS that fits existing scanner workflows and standard industry file formats for large general contractors",
+      "status": "explicit",
+      "evidence_span": "we are taking this to market on a B2B SaaS model, and we seamlessly integrate with existing workflows, including existing laser scanners"
+    },
+    {
+      "id": "P4",
+      "text": "Customers are onboarded on one project and then expanded across the contractor organization",
+      "status": "explicit",
+      "evidence_span": "We onboard them with a single project, and then we grow within their organization"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Robotic mapping and risk UI",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "GC SaaS land-and-expand",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help large general contractors stay on budget and on schedule",
+      "status": "explicit",
+      "evidence_span": "stay on budget and on schedule on your next project"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "this complex information is then simplified and delivered back to the client on an easy-to-use web-based interface"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what's putting your project most at risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stay on budget and on schedule"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ML/registration details folded into P1 capture-and-analyze mechanism. Autodesk and geographic pilots excluded as traction. Team credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-433",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

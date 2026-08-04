@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app conversion is consistently lower than website conversion",
+      "status": "explicit",
+      "evidence_span": "mobile app conversion is consistently lower than our websites"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile A/B testing is blocked by approval processes and users having to download updates, unlike real-time web testing",
+      "status": "explicit",
+      "evidence_span": "on mobile, it's not, because we're constricted by approval processes and users having to download every one of our updates"
+    },
+    {
+      "id": "P3",
+      "text": "PathMap runs real-time mobile A/B tests that split users across interface variants and roll out the winning screen",
+      "status": "explicit",
+      "evidence_span": "PathMap gives you mobile A-B tests in real time"
+    },
+    {
+      "id": "P4",
+      "text": "PathMap heat maps of taps, drags, and swipes reveal interface optimization opportunities",
+      "status": "explicit",
+      "evidence_span": "heat maps so that we can discover opportunities to optimize our interface"
+    },
+    {
+      "id": "P5",
+      "text": "The platform is free for 45 days then moves into a tiered pricing model for all size apps",
+      "status": "explicit",
+      "evidence_span": "absolutely free of charge for 45 days. And at the end of that free trial, we're going to slide you right into our tiered pricing model, which covers all size apps"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile conversion gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile A-B tests and heat maps",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free trial and tiered pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "App makers see their apps through users' eyes and raise mobile conversion",
+      "status": "explicit",
+      "evidence_span": "help you see your app through your users' eyes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we needed to fix this"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mobile app conversion is consistently lower than our websites"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "PathMap gives you mobile A-B tests in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pricing PathMap to meet those same expectations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained: free trial and tiered pricing are a separately revisable commercial module. Heat maps and A-B listed as features of one platform but coded as two mechanisms that could fail independently. App-dev biography excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1022",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

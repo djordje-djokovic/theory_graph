@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robots are constrained by expensive complex actuators and hardware, not by brains, sensors, or software",
+      "status": "explicit",
+      "evidence_span": "They're instead constrained by the hardware"
+    },
+    {
+      "id": "P2",
+      "text": "Everyday inventors need good quality and affordable robot parts to get robots out of research labs",
+      "status": "explicit",
+      "evidence_span": "we need good quality and affordable robot parts"
+    },
+    {
+      "id": "P3",
+      "text": "Servo, joint, and link modular blocks form a versatile fundamental set for building many robot forms",
+      "status": "explicit",
+      "evidence_span": "The servo, the joint, and the link. They've been recreated from first principles and they form the fundamental set"
+    },
+    {
+      "id": "P4",
+      "text": "A phone app enables wireless hardware programming with keyframe recording for rapid prototyping",
+      "status": "explicit",
+      "evidence_span": "phone app to do hardware programming on the fly, record key frames and repeat sequences wirelessly"
+    },
+    {
+      "id": "P5",
+      "text": "A cloud virtual robot builder lets users assemble, program, physics-simulate, share, and order robots in the browser",
+      "status": "explicit",
+      "evidence_span": "assemble and program your robot on the fly, inside of the browser, and test and simulate in a real physics engine"
+    },
+    {
+      "id": "P6",
+      "text": "A tightly integrated joint package combining encoder, motor, transmission, and bearings cuts industrial-equivalent cost by about one-tenth with compactness and weight efficiency",
+      "status": "explicit",
+      "evidence_span": "combine all of that into one little unit, which is tightly, tightly integrated"
+    },
+    {
+      "id": "P7",
+      "text": "Crowdfunding on Indiegogo is the launch channel for early buyers",
+      "status": "explicit",
+      "evidence_span": "launching our crowdfunding campaign on Indiegogo"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hardware constraint and affordable parts",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "modular integrated robot kit",
+      "premise_ids": ["P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "phone app and cloud builder",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Indiegogo crowdfunding launch",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyday inventors can afford and build robots from modular parts",
+      "status": "explicit",
+      "evidence_span": "get robots out of expensive research labs and into the hands of everyday inventors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "It gets us advantages in cost, where we've managed to reduce the cost of an industrial equivalent by about one-tenth"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if more people can afford and access quality hardware, then the pace of innovation can be massively increased"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "just these three unique parts let you build an amazing array of engineering feats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making ModBot easy to use for rapid prototyping"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you like robots and you want to build your own, you can back us today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D4 retained: Indiegogo is a separately revisable launch channel. Camera-dolly/racing-sim/prosthetic price examples folded into modular kit (same-mechanism uses). Cost/compactness/weight folded into P6 as process+performance of the integrated joint. PC-for-robots vision left uncoded as framing."
+}

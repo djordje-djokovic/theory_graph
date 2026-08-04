@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "coder_session_id": "session_02",
+    "session_case_index": 17,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional databases are rigid and force related application data into unrelated silos",
+      "status": "explicit",
+      "evidence_span": "applications that had related data no longer were forced to store it into unrelated databases"
+    },
+    {
+      "id": "P2",
+      "text": "FluidDB is a shared writable database where any application can add any information to anything without permission",
+      "status": "explicit",
+      "evidence_span": "any application could come along and add any information to anything"
+    },
+    {
+      "id": "P3",
+      "text": "Independent apps storing into the same place enable unanticipated combined queries across their data",
+      "status": "explicit",
+      "evidence_span": "I've combined data in an unanticipated way from three independent but related applications"
+    },
+    {
+      "id": "P4",
+      "text": "FluidDB provides a shared writable object for everything—a platform for the web of things",
+      "status": "explicit",
+      "evidence_span": "FluidDB gives you a shared, writable object for everything"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed application databases",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "shared writable FluidDB platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Related information lives together so applications and people can add and combine data without asking permission",
+      "status": "explicit",
+      "evidence_span": "information that is related lives in the same place"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A writable social future of data not owned solely by applications",
+      "evidence_span": "The future of data is a writable future"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combining data from two different databases, is very difficult in the normal world"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tickery/TunkRank/We Met At demos folded as cascade illustrating shared-store mechanism (§4.1.7). Funding/apartment bio excluded (§4.2). Writable-future vision recorded as secondary_value not a premise (§4.1.4)."
+}

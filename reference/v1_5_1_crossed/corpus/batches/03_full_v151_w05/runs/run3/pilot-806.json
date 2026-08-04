@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-806",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security is the leading smart-home demand but most Americans lack home security",
+      "status": "explicit",
+      "evidence_span": "while the majority of Americans, including myself, want to have home security, less than 20% of us actually do"
+    },
+    {
+      "id": "P2",
+      "text": "Existing home security is complicated to install, not portable, overreactive, and decor-obtrusive",
+      "status": "explicit",
+      "evidence_span": "the solutions that are available today are both broken and outdated"
+    },
+    {
+      "id": "P3",
+      "text": "An all-in-one self-install unit with camera, motion detector, and environmental sensors monitors the home",
+      "status": "explicit",
+      "evidence_span": "comes preloaded with a camera, motion detector, and sensors that track your home's environment"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile app and customizable themes let users personalize monitoring and alerts",
+      "status": "explicit",
+      "evidence_span": "being able to customize and make Sentry look and feel as you would want it"
+    },
+    {
+      "id": "P5",
+      "text": "Sentry connects to and controls third-party devices such as Nest, Philips Hue, and Belkin Wemo",
+      "status": "explicit",
+      "evidence_span": "connect and control different devices, including your Nest, Philips Hue light bulb, and a Belkin Wemo smart switch"
+    },
+    {
+      "id": "P6",
+      "text": "Portable solution targets urban dwellers and pet parents who need security that moves with them",
+      "status": "explicit",
+      "evidence_span": "two segments that really popped, which is the urban dweller market as well as pet parents"
+    },
+    {
+      "id": "P7",
+      "text": "Hardware-as-platform monetizes cloud video recording, media archiving, and Android developer apps",
+      "status": "explicit",
+      "evidence_span": "hardware as a platform, where the Sentry unit is just a beginning. We'll also be offering cloud video recording and media archiving services"
+    },
+    {
+      "id": "P8",
+      "text": "Manufacturing and engineering in Taipei with US go-to-market supports consumer electronics product quality",
+      "status": "explicit",
+      "evidence_span": "Our manufacturing and engineering is actually based out of Taipei, the heart of consumer electronics, whereas we're really building our market here in the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken traditional home security",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "All-in-one Sentry device and control",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Portable segments and platform services",
+      "premise_ids": ["P6", "P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple, elegant home monitoring that protects what matters most",
+      "status": "explicit",
+      "evidence_span": "monitoring and control for the modern home to help protect what matters most"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the solutions that are available today are both broken and outdated"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "an all-in-one solution to know and control your home from one single destination"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "having that portability and being able to take this solution on to go with them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Install/portability/alert/decor pains folded as one broken-solutions bundle. Camera/motion/environment sensors are one all-in-one product surface. Kickstarter sales and $299 price as traction/ask framing largely excluded; platform services coded as continuing monetization condition. Touchscreen mention treated as roadmap detail on the control surface, not a separate premise."
+}

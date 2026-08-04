@@ -1,0 +1,76 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Email is insufficient for mobile team work that needs files, talk, and calendaring in one place",
+      "status": "explicit",
+      "evidence_span": "when we're communicating with email, sometimes we have to share files. Sometimes we have to talk to people. Sometimes we want to calendar things"
+    },
+    {
+      "id": "P2",
+      "text": "Zula is a structured team messaging app with files, polls, drive integrations, calendar, search, social invites with deep links, and one-tap conference calling",
+      "status": "explicit",
+      "evidence_span": "build an application using our application, called Zula, that actually does this"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email-for-teams failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Zula structured collaboration",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get team work done with structured communication that reduces email",
+      "status": "explicit",
+      "evidence_span": "we know it really helps us get things done and obviously has way reduced our email"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "All product features including calling folded into one offering premise per §4.1(5) this run; speaker presents them as additions to one messaging stream.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "epistemic_markers": []
+}

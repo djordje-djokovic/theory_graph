@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Grid blackouts are chronic for Nigerian households and businesses",
+      "status": "explicit",
+      "evidence_span": "175 million Nigerians experience blackouts every day"
+    },
+    {
+      "id": "P2",
+      "text": "Generator backup is roughly four times grid cost and undercuts revenue",
+      "status": "explicit",
+      "evidence_span": "costs four times the amount to run a backup generator"
+    },
+    {
+      "id": "P3",
+      "text": "Repurposed Android phones sense local power status for the app",
+      "status": "explicit",
+      "evidence_span": "turn them into power sensors to let our users know when there's power available in their community"
+    },
+    {
+      "id": "P4",
+      "text": "Push notifications and timeline views show current and past outages across followed places",
+      "status": "explicit",
+      "evidence_span": "look through her timeline of current and past push notifications about power"
+    },
+    {
+      "id": "P5",
+      "text": "Users can report downed lines to the power company in-app; non-smartphone users use SMS",
+      "status": "explicit",
+      "evidence_span": "right within the app, she can go ahead and report that to the power company"
+    },
+    {
+      "id": "P6",
+      "text": "Power companies are primary buyers for customer communications",
+      "status": "explicit",
+      "evidence_span": "our main customers are the power companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blackout economics",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Community sensing and reporting",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Utility go-to-market",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time outage communications for users and utilities",
+      "status": "explicit",
+      "evidence_span": "real-time power outage notifications"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "businesses need it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "power sensors to let our users know when there's power available"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communicate directly with their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Reporting-to-utility kept with sensing as one user-facing product module; utility B2B sale is separate. In-app bill pay mentioned as aspiration, not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-874",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

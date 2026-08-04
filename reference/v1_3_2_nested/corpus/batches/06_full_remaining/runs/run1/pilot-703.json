@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses use custom currency (gift cards, promo codes, refund credits) in marketing but payment systems make enabling it hard",
+      "status": "explicit",
+      "evidence_span": "enabling custom currency is actually really hard to do. It's complicated and payment systems aren't set up to do it well"
+    },
+    {
+      "id": "P2",
+      "text": "Merchants running their own online checkout are stuck building custom currency solutions themselves",
+      "status": "explicit",
+      "evidence_span": "if you're one of the 300,000 businesses that run their own online checkout, you're stuck building your own custom currency solution yourself"
+    },
+    {
+      "id": "P3",
+      "text": "GiftBit SaaS provides a web app and API for businesses to have, distribute, and manage their own custom currency",
+      "status": "explicit",
+      "evidence_span": "We have built a web application and a powerful API to enable a business to have, distribute, and manage their own custom currency"
+    },
+    {
+      "id": "P4",
+      "text": "Simple API checkout integration plus marketing tools to control, send, and track currency make it usable by developers and marketers",
+      "status": "explicit",
+      "evidence_span": "GIFBit integrates easily with a merchant's checkout through a simple API integration. It's very easy for developers"
+    },
+    {
+      "id": "P5",
+      "text": "Platform supports creating promotional codes with amount, window, and volume, and can remind/incentivize recipients to spend unused gift value",
+      "status": "explicit",
+      "evidence_span": "using GiftBit, Socks in the Box is actually able to incentivize Rita to come back to their site and spend that money"
+    },
+    {
+      "id": "P6",
+      "text": "Pricing starts at $90/month for 1,000 active codes to be accessible to businesses of any size",
+      "status": "explicit",
+      "evidence_span": "We've priced our product starting at $90 a month to make it accessible to businesses of any size"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard custom-currency problem for online merchants",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "GiftBit currency SaaS platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Accessible monthly code pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let online businesses enable flexible custom currency without building it themselves so they can drive sales",
+      "status": "explicit",
+      "evidence_span": "no one needs to build their own complicated custom currency because they have GiftBit"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're stuck building your own custom currency solution yourself, until now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "GiftBit has built a software as a service platform to solve this problem"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it accessible to businesses of any size"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Prior gift-card reselling and named brand campaigns treated as experience framing/traction, not premises. Shopify/Stripe integrations are roadmap features folded into platform availability, not separate premises (§4.1(5)). Need/product/pricing triad justified.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-703",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-958",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fast-growing software teams waste productivity on mismatched dev/prod environments, long test waits, and build breaks that block the whole team",
+      "status": "explicit",
+      "evidence_span": "our development environments never matched up with our production environments"
+    },
+    {
+      "id": "P2",
+      "text": "Quality platform isolates each push in limbo, spins production-like cloud replicas (including behind firewall), and runs automation tests in massive parallel so broken builds never reach the team",
+      "status": "explicit",
+      "evidence_span": "takes that change and holds it in a limbo state"
+    },
+    {
+      "id": "P3",
+      "text": "Making existing engineers ~20% more effective yields free capacity equivalent to several new hires without recruiting/training cost",
+      "status": "explicit",
+      "evidence_span": "quality can make your development team 20% more effective"
+    },
+    {
+      "id": "P4",
+      "text": "Productized Quality replaces millions spent on internal Google/Facebook-style testing infra so ordinary companies can buy rather than build",
+      "status": "explicit",
+      "evidence_span": "You can now buy the quality product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "environment mismatch tests and build breaks",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "isolated parallel production-like testing",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "internal engineer productivity as free headcount",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "buy not build testing platform",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unleash engineers to write software productively instead of waiting, raging on breaks, or chasing environment bugs",
+      "status": "explicit",
+      "evidence_span": "unleash your engineers and radically change the way that they actually write software"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Happier engineers who are more effective",
+      "evidence_span": "if you make us more effective, you make us much, much happier"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your entire team is blocked from doing work"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "devs don't have to wait for tests"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's six devs you're getting for free"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They want their engineers working on their problems, moving their companies forward"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three standout pains (env mismatch, slow tests, build breaks) folded as one engineering-productivity problem set (§4.1.6). Limbo isolation, prod replicas, and parallel test chunking folded as one Quality platform mechanism (§4.1.7). Customer test-time charts treated as traction evidence for that mechanism. 20% effectiveness and buy-vs-build GTM coded as separately asserted commercial paths. Palantir bio excluded. Four-domain partition; not a need/product/money triad."
+}

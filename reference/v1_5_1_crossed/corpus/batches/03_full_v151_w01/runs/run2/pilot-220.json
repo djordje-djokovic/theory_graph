@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-220",
+    "coder_session_id": "session_01",
+    "session_case_index": 22,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:18:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brands and retailers can grow revenue and acquisition by using authentic video content for insights and commerce",
+      "status": "explicit",
+      "evidence_span": "Vyral helps brands and retailers increase revenue and customer acquisition by leveraging authentic video content such as reviews, unboxing videos, how-to videos, and branded videos for insights and commerce"
+    },
+    {
+      "id": "P2",
+      "text": "In-video search and personalization technologies train machines to watch videos and match millions of YouTube videos to product catalogs",
+      "status": "explicit",
+      "evidence_span": "powered by in-video search and personalization technologies. So essentially, we have trained machines to watch videos. Vyral is able to match millions of videos on YouTube to product catalogs"
+    },
+    {
+      "id": "P3",
+      "text": "Search works across audio, text, and images in many dimensions and can deep-link to relevant clips inside videos",
+      "status": "explicit",
+      "evidence_span": "we can Google inside the video, the audio, text, and images in 11 plus dimensions"
+    },
+    {
+      "id": "P4",
+      "text": "Product is offered as video search bar, APIs, and commerce tools including a Shopify in-video search app to make videos shoppable and searchable",
+      "status": "explicit",
+      "evidence_span": "we offer a video search bar, API tools, and commerce tools to make all your videos shoppable and searchable for both brands and shoppers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Video-driven commerce for brands",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Multi-dimensional in-video search engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Shoppable video tools and Shopify distribution",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase efficacy of shopping decisions via searchable shoppable authentic video for brands and retailers",
+      "status": "explicit",
+      "evidence_span": "we're increasing the efficacy of making shopping decisions for brands and retailers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "not only can we find the four videos, but we can actually take you inside the video and we can actually show you portions of clips"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase revenue and customer acquisition by leveraging authentic video content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can Google inside the video, the audio, text, and images"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all your videos shoppable and searchable for both brands and shoppers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Pitch truncates mid-sentence. Engagement/conversion ROI figures and seed-round ask excluded as traction/financing. Video-type list folded into P1 as facets of authentic video commerce. TikTok mention treated as distribution detail inside P4 packaging. Singletons D1/D3 retained."
+}

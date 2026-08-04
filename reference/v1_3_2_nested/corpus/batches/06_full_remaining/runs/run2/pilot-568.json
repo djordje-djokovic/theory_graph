@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "MENA car buying lacks a centralized platform, has inconsistent illegitimate info, and no standardized pricing",
+      "status": "explicit",
+      "evidence_span": "no centralized platform, inconsistent and illegitimate information, and no standardized pricing in the MENA region"
+    },
+    {
+      "id": "P2",
+      "text": "Photo-based AI estimates value and depreciation and continuously recalibrates to the market",
+      "status": "explicit",
+      "evidence_span": "sees the estimated value of the car and his expected depreciation"
+    },
+    {
+      "id": "P3",
+      "text": "Nationwide aggregation of listings plus AI chatbot Caesar negotiates dealer prices for the buyer",
+      "status": "explicit",
+      "evidence_span": "AI negotiation chatbot, Caesar, automatically contacts every single dealer to ensure that he gets the best deal out there"
+    },
+    {
+      "id": "P4",
+      "text": "WhatsApp flow contacts sellers and books test drives after negotiation",
+      "status": "explicit",
+      "evidence_span": "WhatsApp integration, he simply contacts the seller and books a test drive"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue from dealer/OEM leads, brand BI, and VAS partners like banks and insurance",
+      "status": "explicit",
+      "evidence_span": "three channels of monetization"
+    },
+    {
+      "id": "P6",
+      "text": "Adding leasing options targets low MENA lease penetration alongside buy inventory",
+      "status": "explicit",
+      "evidence_span": "in MENA, it's only 1%. And with women entering the Saudi market, this is a golden opportunity to grow the leasing market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken MENA car discovery",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI search and negotiation product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and leasing expansion",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find the right car at the right time and price through transparent AI-powered search",
+      "status": "explicit",
+      "evidence_span": "right car, at the right time, at the right price"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding a great deal is hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "transparent and AI-powered search engine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "both buying and leasing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Independent run: listing aggregation merged with negotiation. Traction and geo expansion excluded; leasing kept as product condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-568",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

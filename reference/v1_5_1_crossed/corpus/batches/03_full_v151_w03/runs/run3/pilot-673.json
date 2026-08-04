@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-673",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video is split between tightly controlled studio/agency production and wild uncurated UGC; brands need high-impact video at scale from their own communities",
+      "status": "explicit",
+      "evidence_span": "bring these 2 worlds together"
+    },
+    {
+      "id": "P2",
+      "text": "Client studio tools let companies brief filming instructions, invite fans/customers/employees, capture rights-cleared footage, auto-tag/process, and edit via tools or freelancers",
+      "status": "explicit",
+      "evidence_span": "building the tools to enable our clients to engage and create with their own communities"
+    },
+    {
+      "id": "P3",
+      "text": "Subscription model serves media, retail, and large orgs that leverage community and employee creators for authentic, high-performing content",
+      "status": "explicit",
+      "evidence_span": "now we're fully into a subscription model"
+    },
+    {
+      "id": "P4",
+      "text": "Machine learning content search (sentiment, object recognition, transcription) further automates finding and using community footage",
+      "status": "explicit",
+      "evidence_span": "we're coming out of beta in our content search tools so you can now search sentiment analysis object recognition and transcription"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "studio vs uncurated UGC gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "community filming studio tools",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription community video GTM",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies produce high-impact video at scale by engaging fans, customers, and employees as filmers",
+      "status": "explicit",
+      "evidence_span": "produce high-impact video at scale by engaging their own communities of fans, customers, and employees to become the filmers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring these 2 worlds together"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "engage and create with their own communities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create the biggest impact by leveraging the communities that they already train"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "BBC project demo steps and three edit paths folded as feature cascade of one community-production platform. ML search treated as automation extension of that platform. Client counts, revenue, and footage-download growth excluded as traction. Not building a scenic community is positioning within the product premise."
+}

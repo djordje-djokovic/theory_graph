@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unorganized, scattered meeting artifacts leave people unprepared and tasks undone",
+      "status": "explicit",
+      "evidence_span": "sometimes he's unprepared or doesn't get all his stuff done simply because he wasn't organized"
+    },
+    {
+      "id": "P2",
+      "text": "Meeting-centric mobile organization consolidates notes, photos, tasks, and contacts",
+      "status": "explicit",
+      "evidence_span": "puts your notes, photos, follow-up tasks, and contact information in the context of a meeting. Now you go to one place to remember everything"
+    },
+    {
+      "id": "P3",
+      "text": "Google Calendar sync, GPS, shared capture, and post-meeting notifications support the workflow",
+      "status": "explicit",
+      "evidence_span": "you can set up retrace to send you a notification immediately after a meeting, reminding you to record it while it's still fresh in your memory"
+    },
+    {
+      "id": "P4",
+      "text": "After individual adoption, premium services integrate cloud storage, CRMs, and task systems for teams",
+      "status": "explicit",
+      "evidence_span": "offer a premium service which will integrate with existing cloud storage platforms, CRMs, and task management systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Meeting disorganization problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Contextual meeting app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium team expansion",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organize meeting stories so people succeed and work more efficiently",
+      "status": "explicit",
+      "evidence_span": "succeed and be more efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasn't organized"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better prepared for the upcoming meeting"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collaborate and share data about their meetings"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Workforce empowerment framing kept as value, not a premise. $37B waste figure excluded as market framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-932",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:40+02:00"
+  }
+}

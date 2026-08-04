@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:17:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "E-commerce growth left retailers and consumers overburdened with single-use cardboard and polymer packaging, and retailers are seeking reusable alternatives",
+      "status": "explicit",
+      "evidence_span": "replacing all single-use packaging. So think of kind of that cardboard and the polymers you get when you order something online with our smart reusable option"
+    },
+    {
+      "id": "P2",
+      "text": "Direct customers are retailers who receive a fleet of reusable shippers plus software access for fulfilling consumer orders",
+      "status": "explicit",
+      "evidence_span": "our direct customer is the retailers themselves. So we work directly with the retailers. We provide them with a fleet of our shippers and the access to our software"
+    },
+    {
+      "id": "P3",
+      "text": "Company designs its own reusable shippers from upcycled billboard vinyl that is lightweight, durable, and waterproof",
+      "status": "explicit",
+      "evidence_span": "we actually designed our own reusable shippers. So the first fleet of shippers that we're working with actually use upcycled materials, so billboard vinyls"
+    },
+    {
+      "id": "P4",
+      "text": "Network efficiency improves at larger scale by routing shippers to the closest point of need rather than always returning to the original retailer",
+      "status": "explicit",
+      "evidence_span": "It actually works better the bigger it is, because then it allows us to send shippers to the closest place of need, as opposed to back to the original retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Single-use e-commerce packaging waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Upcycled reusable shipper product",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Retailer fleet software and network scale",
+      "premise_ids": ["P2", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make e-commerce supply chains more sustainable and efficient by replacing single-use packaging with smart reusables",
+      "status": "explicit",
+      "evidence_span": "make the supply chain system more sustainable and efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "the more people that buy into the program, the better and more efficient it becomes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers are fed up with it and looking for solutions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "diverting it from the landfill, and it's already naturally lightweight, durable, and waterproof"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We provide them with a fleet of our shippers and the access to our software"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Interview/Q&A format: only entrepreneur answers coded; interviewer prompts excluded per 4.2.5. Named retailer traction and Target accelerator mention excluded as traction/credentials. Singleton D1 and D2 retained as separately revisable problem vs product modules."
+}

@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing braille interfaces are expensive ($5–8k) and limited to a few words at a time because of piezoelectric technology",
+      "status": "explicit",
+      "evidence_span": "it's a $5,000 up to $8,000 keyboard. And where a blind person can read, it's extremely limited to just a few words"
+    },
+    {
+      "id": "P2",
+      "text": "Limited devices contribute to low literacy among blind children",
+      "status": "explicit",
+      "evidence_span": "exactly this leads to low literacy rate among blind children"
+    },
+    {
+      "id": "P3",
+      "text": "Membrane-and-airflow actuating technology deforms each braille dot without mechanical elements, enabling thousands of dots",
+      "status": "explicit",
+      "evidence_span": "We're using a high-performance membrane bonded to an electrical actuator so that through an airflow channel, we can control and deform each braille dot individually"
+    },
+    {
+      "id": "P4",
+      "text": "BlindTap tablet combines a tactile braille screen with a voiceover-controlled touch interface so users can learn, work, and play on one device",
+      "status": "explicit",
+      "evidence_span": "It allows blind users for the first time to learn, work, and play with one single device"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud Braille Converter turns text, documents, and web pages into braille for full-page tactile reading",
+      "status": "explicit",
+      "evidence_span": "we also develop our own cloud-based software, Brow Converter. And here it is. It can convert anything into Brow, like text files, documents, even whole web pages"
+    },
+    {
+      "id": "P6",
+      "text": "Device priced around $500 with go-to-market via website, global distributors, and developing-country institutional demand",
+      "status": "explicit",
+      "evidence_span": "with the affordable price of $500 US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Limited costly braille interfaces",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Tactile tablet and braille conversion",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable price and distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let blind users read full pages and learn, work, and play on one affordable tactile tablet",
+      "status": "explicit",
+      "evidence_span": "allows blind users for the first time to learn, work, and play with one single device"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Social mission to raise literacy and include blind children in modern education",
+      "evidence_span": "we can change the future of millions of children"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "we successfully scaled the technology and produced the world's first tactile display without any mechanical elements"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely limited to just a few words"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "LightUp can output one whole page in braille"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable price of $500 US"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Price and distribution channels kept as one commercial premise per v1.3.1 4.1(3). Kenya 10k request treated as distribution evidence inside P6, not traction-only. Pre-order ask not coded as financing premise. Need/product/money triad justified: access problem, actuating tablet stack, and $500/distribution are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-624",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

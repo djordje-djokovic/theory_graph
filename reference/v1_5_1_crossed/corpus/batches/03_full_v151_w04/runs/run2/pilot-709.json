@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-709",
+    "coder_session_id": "session_02",
+    "session_case_index": 5,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords remain a weak human-linked security point; existing SSO/IAM/password tools require new user habits or heavy IT integrations and often put secrets in the cloud as a single point of failure",
+      "status": "explicit",
+      "evidence_span": "All of these tools put your sensitive information in the cloud, creating a single point of failure"
+    },
+    {
+      "id": "P2",
+      "text": "MyKey authenticates via phone swipe and fingerprint and pushes username, password, and 2FA tokens to the browser, with remote logout from connected devices",
+      "status": "explicit",
+      "evidence_span": "push her username, her password, and even the additional SMS token for two-factor authentication, directly from her phone to her browser"
+    },
+    {
+      "id": "P3",
+      "text": "Admins get a real-time control plane to share, revoke, and grant access, provision accounts with privilege levels, set location/time/IP rules, and rotate passwords on demand or on schedule—without service-provider integrations",
+      "status": "explicit",
+      "evidence_span": "a single ecosystem for sharing, revoking, and granting access"
+    },
+    {
+      "id": "P4",
+      "text": "Initial GTM targets medium-sized companies (10–50 users) with free for first five users then about $4.99 per additional user per month, later moving upmarket with custom integrations and on-prem",
+      "status": "explicit",
+      "evidence_span": "targeting medium-sized companies that have between 10 and 50 users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "password and cloud-access failure modes",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "phone auth and admin access control",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "mid-market pricing and upmarket path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Team digital-workspace access that is secure without being complicated, expensive, or time-consuming",
+      "status": "explicit",
+      "evidence_span": "Security doesn't have to be something complicated, expensive, and time consuming"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over 86% of breaches today are caused by users"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fundamentally changing the way teams manage access to the digital workspace"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MyKey is free for the first five users and then starts at $5, $4.99 per additional user per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Password weakness/adoption barriers/cloud SPOF folded as one problem-set (§4.1.6). Admin visibility/rules/rotation/group provisioning folded as feature cascade of one admin control plane; no-integration kept inside that product claim (§4.1.7). Early-customer counts treated as traction and excluded. Singleton D1/D3 retained. Anti-template: problem, product, and commercial GTM separately revisable."
+}

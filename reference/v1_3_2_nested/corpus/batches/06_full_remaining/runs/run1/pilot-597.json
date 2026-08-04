@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-597",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Managing inter-company data is hard both technically and operationally",
+      "status": "explicit",
+      "evidence_span": "managing inter-company data very hard, both technically and operationally"
+    },
+    {
+      "id": "P2",
+      "text": "Most companies use third-party data to create better products and services",
+      "status": "explicit",
+      "evidence_span": "91% of companies use third-party data in some shape or form to create better products and services"
+    },
+    {
+      "id": "P3",
+      "text": "A data operations platform handles how companies give and get data so they can focus on using it",
+      "status": "explicit",
+      "evidence_span": "data operations platform that takes care of how you give and get the data so that you can focus on how to use the data"
+    },
+    {
+      "id": "P4",
+      "text": "An intuitive UX turns ad hoc engineering data work into a no-code process scalable by an operations team, with security and smart monitoring built in",
+      "status": "explicit",
+      "evidence_span": "Our intuitive user experience turns what was traditionally an ad hoc engineering task into a process that can be scaled with an operations team"
+    },
+    {
+      "id": "P5",
+      "text": "Existing solutions cannot handle inter-company data needs for monitoring, security, and operational scale",
+      "status": "explicit",
+      "evidence_span": "Existing solutions, meanwhile, cannot handle inter-company data with its needs for monitoring, security, and operational scale"
+    },
+    {
+      "id": "P6",
+      "text": "The platform was built to run in every infrastructure environment",
+      "status": "explicit",
+      "evidence_span": "built from the ground up to run in every infrastructure environment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inter-company data challenge",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Data operations platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Infrastructure and competitive gap",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less time integrating data, more time creating business value",
+      "status": "explicit",
+      "evidence_span": "Less time integrating, more time creating business value"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing inter-company data very hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Less time integrating, more time creating business value"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cannot handle inter-company data with its needs for monitoring, security, and operational scale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Security, smart alerts, transforms, and sharing demo folded into P4 per v1.3.2 §4.1(5). 'Data operations will change how we manage thousands of data sources' treated as vision framing, not a premise (§4.1(4)). Trials, public beta, and $30B opportunity excluded as traction/market framing per §4.2. Bio/credentials excluded. Partition is need/product/gap; justified because competitive gap and multi-environment deployment are revisable without changing the UX/platform bundle."
+}

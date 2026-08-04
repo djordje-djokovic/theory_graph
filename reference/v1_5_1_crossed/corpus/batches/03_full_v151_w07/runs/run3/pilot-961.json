@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-961",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customer-service phone calls are terrible because callers wait on hold, must spell name and address, and lose progress when disconnected",
+      "status": "explicit",
+      "evidence_span": "Customer service is terrible. It sucks to wait on hold. It sucks to spell out your name and address. And it really sucks when you get disconnected and have to do it all over again."
+    },
+    {
+      "id": "P2",
+      "text": "NextCaller sends the caller's profile to the answering agent via API at call time so information need not be spelled over the phone",
+      "status": "explicit",
+      "evidence_span": "we send your profile to the answering agent at the time of your call via our API"
+    },
+    {
+      "id": "P3",
+      "text": "Because information exchange saves businesses money, they let profiled callers skip the hold line via priority routing",
+      "status": "explicit",
+      "evidence_span": "Because a sufficient exchange of information saves businesses so much money, they reward you by letting you skip the whole line"
+    },
+    {
+      "id": "P4",
+      "text": "Callers can store billing info and release it with a four-digit PIN to the merchant payment gateway instead of reading a card aloud",
+      "status": "explicit",
+      "evidence_span": "you simply provide your four-digit billing PIN. This releases your billing information from Nextcaller's secure server directly to the third party's payment gateway"
+    },
+    {
+      "id": "P5",
+      "text": "Profiles sell for $0.10 versus ~$0.52 identification cost, yielding over 90% savings for call centers",
+      "status": "explicit",
+      "evidence_span": "We sell our profiles for $0.10. That represents savings of over 90%"
+    },
+    {
+      "id": "P6",
+      "text": "Telco partnerships already identify ~180 million US numbers without requiring end-user signup",
+      "status": "explicit",
+      "evidence_span": "We don't even need anyone to sign up to make Nextcaller work. We've partnered with all the major telcos to provide caller information"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "terrible phone customer service",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "profile API and priority skip-the-line",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "secure billing PIN payments",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "ten-cent profiles and telco identity coverage",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customer service without hold, spelling, or hassle—callers identified and agents answering instead of asking",
+      "status": "explicit",
+      "evidence_span": "No waiting on hold, no more spelling out your information to representatives, just customer service without all the hassle"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Businesses save identification cost on high call volumes",
+      "evidence_span": "that's over $14 billion wasted by businesses every year just to ask you how to spell your name"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "And that's why we created NextCaller, the world's fastest, easiest way to exchange information over the phone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "agents spend less time asking questions and more time answering them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not only is this process clearly much more efficient, it also reduces the probability of human error"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Half of you were just identified by your names, and you didn't say a word"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hold/spell/disconnect pains folded as one problem set (§4.1.6). Widget, agent desktop handoff, and Zendesk/Five9/Salesforce integration folded as cascade of the profile-API mechanism (§4.1.7). Billing PIN split as separately claimed commerce module. $0.10 pricing and telco coverage kept as commercial/coverage package. Market call-volume stats treated as framing for the problem/pricing. Four domains—anti-template: problem, skip-line product, billing, and pricing/coverage separately revisable."
+}

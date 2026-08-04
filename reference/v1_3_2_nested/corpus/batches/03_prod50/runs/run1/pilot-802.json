@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Expanding beyond USA and Canada (e.g., Brazil) adds millions of potential customers for the product",
+      "status": "explicit",
+      "evidence_span": "only for USA and Canada. So you add another country, for example Brazil, you have four more million potential customers for this product"
+    },
+    {
+      "id": "P2",
+      "text": "Later product line of childcare products designed for parents' safety and comfort",
+      "status": "explicit",
+      "evidence_span": "we want also to create later a new line of products, childcare products designed for parents because we think this part of the market has not yet been explored and the safety of parents and their comfort is also very important"
+    },
+    {
+      "id": "P3",
+      "text": "Sell first on Kickstarter at $180, then web stores, then specialized retail such as Baby's Arrest",
+      "status": "explicit",
+      "evidence_span": "The product will be sold on Kickstarter for $180. Then we want to sell it through our web store and different web store. But in the end, we will go to large distribution and sell it in a specialized store like Baby's Arrest, for example"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Geographic expansion and parent childcare line",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Kickstarter to retail channel path",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Childcare products that improve parents' safety and comfort",
+      "status": "inferred",
+      "evidence_span": "the safety of parents and their comfort is also very important at this time of their life"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "childcare products designed for parents"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sell it in a specialized store like Baby's Arrest"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-sentence (truncated). Kickstarter ask excluded as financing; $180 kept as channel price within commercial path (§4.1.3). Wristband design/manufacturing mentioned only as raise use-of-funds, not coded as product premise. Singleton D2: channel path independently revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-802",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

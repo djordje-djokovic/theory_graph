@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High relapse rates are driven by lack of communication and lack of accountability for recovery activities",
+      "status": "explicit",
+      "evidence_span": "address the two key things that cause relapse. One, lack of communication, and two, lack of accountability for your recovery activities"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile platform integrated with wearables tracks geolocation and accelerometer engagement for recovery-plan activities",
+      "status": "explicit",
+      "evidence_span": "Those activities that have a geolocation are tracked by geolocation and also accelerometer"
+    },
+    {
+      "id": "P3",
+      "text": "Shared support-network dashboards, missed-program alerts, and an isolation SOS keep people connected",
+      "status": "explicit",
+      "evidence_span": "You can simply press this button, and it sends everybody in your support network on the application a message to reach out to you"
+    },
+    {
+      "id": "P4",
+      "text": "Non-triggering rewards such as fitness, yoga, and coffee coupons reinforce active recovery",
+      "status": "explicit",
+      "evidence_span": "we provide rewards that don't trigger your technology addiction, but you accrue points to get rewards such as fitness classes, yoga classes, and free coffee coupons"
+    },
+    {
+      "id": "P5",
+      "text": "First sales channel is inpatient treatment centers, then healthcare providers, insurers, and EAPs",
+      "status": "explicit",
+      "evidence_span": "our target addressable market for our first sales channel, which is inpatient treatment centers"
+    },
+    {
+      "id": "P6",
+      "text": "Platform data helps treatment centers with referrals and outcome studies",
+      "status": "explicit",
+      "evidence_span": "data that we also provide to the treatment centers, which are helpful for them for referrals, outcome studies, and other data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Relapse from weak communication and accountability",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Wearable recovery accountability platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Treatment-center channel and outcome data",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep people engaged in recovery to prevent relapse and save lives",
+      "status": "explicit",
+      "evidence_span": "join us on this quest to save lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "So we increase the accountability"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "60% of people with drug and alcohol addiction relapse within the first year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This can literally be a lifesaver"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inpatient treatment programs in California, Arizona, and Washington"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Need/product/channel triad justified: inpatient GTM and center data products are revisable without changing wearable accountability mechanics. Founder recovery biography excluded except as motivation. Early-adopter launch date treated as traction. 60% relapse figure kept inside the causal problem premise, not as a traction metric.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-698",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

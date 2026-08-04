@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data demand now exceeds what computing can handle because servers overheat and slow or drop under load",
+      "status": "explicit",
+      "evidence_span": "For the first time ever, our demand for data is bigger than what technology can handle. And it's not that technology is not there. It is, but we have a new issue. The heat"
+    },
+    {
+      "id": "P2",
+      "text": "Two-phase cooling (liquid to gas) can go below ambient/room temperature unlike today's air or water cooling",
+      "status": "explicit",
+      "evidence_span": "The difference from air cooling or water cooling that's used today, this can allow us to go below ambient. That means we can go below room temperature, and there is no cooling system in the market that can do that today"
+    },
+    {
+      "id": "P3",
+      "text": "Company's in-cooling server is a standard form-factor drop-in for existing data centers with two-phase cooling inside",
+      "status": "explicit",
+      "evidence_span": "this is our server. It's a standard server. You can insert it in any data center today, so you don't have to change a thing. And inside is our magic cooling system"
+    },
+    {
+      "id": "P4",
+      "text": "Lower CPU temperatures accelerate compute and improve energy efficiency (claimed ~50% less time and half the energy)",
+      "status": "explicit",
+      "evidence_span": "By going lower on the CPU, we both accelerate it, so we make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Server heat bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Drop-in two-phase cooled server",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Speed and energy gains",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "World's fastest and most efficient servers that accelerate innovation while cooling heat",
+      "status": "explicit",
+      "evidence_span": "if you want to have the world's fastest and most efficient server to accelerate your innovation, then get in touch with us"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cool down the planet one server at a time",
+      "evidence_span": "Our mission is to cool down the planet one server at a time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this heat is a new problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fridge on the CPU"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "CERN partnership treated as origin story/credential; coded mechanism (two-phase) not the partnership. Pilot-slot ask excluded. Singleton D3: performance claim separately emphasized.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-270",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:35:10+02:00"
+  }
+}

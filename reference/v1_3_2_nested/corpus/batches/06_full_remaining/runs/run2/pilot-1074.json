@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Spends differentiates budgeting as fast, anonymous, proactive, and gamified rather than bank-linked",
+      "status": "explicit",
+      "evidence_span": "First, we're going to make inputs fast, super fast. I want you to be able to whip out your phone and input any expense in under three seconds. Secondly, when it comes to your money, anonymous is a good thing"
+    },
+    {
+      "id": "P2",
+      "text": "Tag suggestions follow the pattern and frequency of the user's spending",
+      "status": "explicit",
+      "evidence_span": "Spends tracks both the pattern and frequency of my top tags and intuitively responds"
+    },
+    {
+      "id": "P3",
+      "text": "Experience points, tokens, achievements, and levels encourage tracking habits",
+      "status": "explicit",
+      "evidence_span": "achievements are ways that we encourage our users to do some great spending habits"
+    },
+    {
+      "id": "P4",
+      "text": "Tokens unlock featured deals matched to spending habits as the primary monetization path",
+      "status": "explicit",
+      "evidence_span": "one of the first ways we're going to make money is by working with companies to get the right deals in front of the right audience"
+    },
+    {
+      "id": "P5",
+      "text": "Subcategory budgets and demographic You-Versus-Them insights deepen tracking beyond a single budget number",
+      "status": "explicit",
+      "evidence_span": "with the You Versus Them feature, I can show you insights like never before"
+    },
+    {
+      "id": "P6",
+      "text": "The product remains free for users",
+      "status": "explicit",
+      "evidence_span": "For users, Spends will always be free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fast anonymous gamified tracking",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Budgets and peer insights",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Deal monetization while free to users",
+      "premise_ids": ["P4", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Know where your money goes by budgeting and tracking in a fun, fast way",
+      "status": "explicit",
+      "evidence_span": "I have no idea where my money goes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fun and fast"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allowed for subcategorization"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Spends Tokens unlock deals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Folded four differentiators into one product stance premise with supporting tag and gamification premises. Free-to-user kept with deals as commercial structure (v1.3.1 §4.1(3)). Web sync folded into product, not coded separately. Singleton D2: budgets/insights module presented as going 'one step farther' beyond input gamification."
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Investment advice technology has not kept up with client expectations for personalization",
+      "status": "explicit",
+      "evidence_span": "Expectations have, however, changed over the past 20 years, and the technology hasn't been able to keep up"
+    },
+    {
+      "id": "P2",
+      "text": "AI platform automates portfolio construction, management, and rebalancing for advisors",
+      "status": "explicit",
+      "evidence_span": "artificial intelligence platform tailored to investment advisors so they can automate portfolio construction and management"
+    },
+    {
+      "id": "P3",
+      "text": "Portfolios are customized to client goals, risk, behavior, structure, and investment strategy",
+      "status": "explicit",
+      "evidence_span": "building a customized portfolio around those constraints"
+    },
+    {
+      "id": "P4",
+      "text": "Portfolio intelligence with proprietary NLG justifies decisions to clients",
+      "status": "explicit",
+      "evidence_span": "proprietary natural language generation model where we can look at how our previous model did to explain and justify those investment decisions"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution partnerships reach over 25,000 advisors at a 20 bp AUM fee sold direct",
+      "status": "explicit",
+      "evidence_span": "distribution advantage to over 25,000 advisors. We have a team of 10. We charge a low AUM fee of 20 basis points, selling direct to investment advisors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lagging personalization technology",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Advisor AI portfolio and intelligence platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Advisor channel and AUM pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalized portfolios advisors can explain while keeping client relationships central",
+      "status": "explicit",
+      "evidence_span": "making them look smarter and providing a better result"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the technology hasn't been able to keep up"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized portfolios around their clients' values, goals, and dreams"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling direct to investment advisors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Singleton D1 retained as independently revisable market-timing assumption. Price and partner distribution folded into one commercial premise per §4.1(3). Team of 10 mentioned only as aside in span; headcount not coded as a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-453",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

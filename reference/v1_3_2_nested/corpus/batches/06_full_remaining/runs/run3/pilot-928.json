@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Attachments stuck in email create waste and slow workflows",
+      "status": "explicit",
+      "evidence_span": "That's a huge waste, and it causes everything to slow down"
+    },
+    {
+      "id": "P2",
+      "text": "Users connect email and cloud services via extension to relocate files as cloud links",
+      "status": "explicit",
+      "evidence_span": "Cloudless instantaneously replaces the file with links to still view and download it"
+    },
+    {
+      "id": "P3",
+      "text": "Repetitive inbound attachments can be auto-filed into designated folders",
+      "status": "explicit",
+      "evidence_span": "every single new email that arrives with a file from these guys is automatically replaced by Cloudless with links to view and download"
+    },
+    {
+      "id": "P4",
+      "text": "Secure share sets recipient-only access from the cloud",
+      "status": "explicit",
+      "evidence_span": "sets access control permissions on it"
+    },
+    {
+      "id": "P5",
+      "text": "Team admin policies plus notification dashboard show ownership and workflow",
+      "status": "explicit",
+      "evidence_span": "Using the event-based notification dashboard that Cloudless has, Liz gains visibility into who owns what data"
+    },
+    {
+      "id": "P6",
+      "text": "Individuals free; pay to govern a claimed group's workflow",
+      "status": "explicit",
+      "evidence_span": "You only pay when you claim a group of people and you govern the data workflow across them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email attachment problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personal file routing and security",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Org visibility and monetization",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users and IT get interconnectivity and visibility across cloud services",
+      "status": "explicit",
+      "evidence_span": "gain better visibility into the workflow around your entire company"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "But this is still a lot of manual work"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "frustrated by the lack of interconnectivity with your cloud services"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This saves Lise a ton of space and keeps her stuff organized"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "visibility into data ownership and workflow across her team"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "P2->P3 coded: manual relocate still too much work, so auto-routing is presented as the next required step. $2B/$77B market claim excluded as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-928",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

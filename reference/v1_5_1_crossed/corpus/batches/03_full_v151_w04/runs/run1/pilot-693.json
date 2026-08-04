@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-693",
+    "coder_session_id": "session_01",
+    "session_case_index": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fish-farm inspection relies on expensive paired divers whose paper notes are imprecise and create regulatory transcription burden",
+      "status": "explicit",
+      "evidence_span": "farm managers only have one solution, which is commercially trained divers"
+    },
+    {
+      "id": "P2",
+      "text": "SeaDrone is a portable, current-capable underwater inspection robot that is intuitive to pilot, easy to maintain, and a fraction of existing solution cost",
+      "status": "explicit",
+      "evidence_span": "an underwater robot that is very intuitive to pilot"
+    },
+    {
+      "id": "P3",
+      "text": "An app-guided inspection workflow stores photos, videos, and comments and one-button uploads cloud reports for farm managers",
+      "status": "explicit",
+      "evidence_span": "upload the entire inspection data to our cloud-based service"
+    },
+    {
+      "id": "P4",
+      "text": "Product line spans Explorer basic, Inspector with subscription service, and Developer for research hacking",
+      "status": "explicit",
+      "evidence_span": "we have our C-Drone Explorer, which is the basic model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fish-farm diver inspection problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Underwater robot and inspection workflow",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Explorer Inspector Developer product line",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer and more efficient fish-farm underwater inspections",
+      "status": "explicit",
+      "evidence_span": "make fish farming both safer and more efficient all at once"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maintaining and inspecting a farm is extremely challenging"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "C-Zone provides better data, so the farm manager can easily make a better decision"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "releasing our Seadrome product line today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Weight/thrusters/gimbal/current-holding folded as robot feature cascade (§4.1.7). Adjacent underboat/oil-gas/dam uses treated as same-mechanism applications. Pain enumeration (cost, safety pairs, paper notes, transcription) folded as one problem-set (§4.1.6). Anti-template: problem, robot+workflow, and SKU line are separately revisable."
+}

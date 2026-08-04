@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ultrasound operator error and incomplete anatomical capture cause widespread fetal misdiagnosis",
+      "status": "explicit",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators"
+    },
+    {
+      "id": "P2",
+      "text": "A vendor-agnostic cloud AI integrates with any ultrasound machine over a standard API",
+      "status": "explicit",
+      "evidence_span": "Biotics AI is a vendor agnostic cloud-based solution that can integrate with any ultrasound machine over a standard API"
+    },
+    {
+      "id": "P3",
+      "text": "The AI validates screening completeness and quality across anatomical views and flags missing regions",
+      "status": "explicit",
+      "evidence_span": "validate the completeness and quality of the screening, ensuring the appropriate capture over 80 different anatomical views and structures"
+    },
+    {
+      "id": "P4",
+      "text": "The AI localizes fetal malformations so abnormalities are noticed and intervention can follow",
+      "status": "explicit",
+      "evidence_span": "Our AI was able to localize this fetal malformation, providing feedback to the obstetrician so that way this abnormality doesn't go unnoticed"
+    },
+    {
+      "id": "P5",
+      "text": "Automated reporting and documentation save clinician time per patient",
+      "status": "explicit",
+      "evidence_span": "automate reporting and documentation and save up to eight minutes per patient on documentation"
+    },
+    {
+      "id": "P6",
+      "text": "Sold to hospitals via hybrid subscription plus volume-based API pricing tied to hospital ROI",
+      "status": "explicit",
+      "evidence_span": "we're selling our solution to hospitals. We're leveraging a hybrid pricing model with a subscription-based charge for baseline subscription costs and a volume-based pricing model for API calls"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Operator-dependent misdiagnosis problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI ultrasound quality and diagnostics",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hospital hybrid pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Earlier, more frequent detection of fetal abnormalities with higher ultrasound efficiency",
+      "status": "explicit",
+      "evidence_span": "detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Operational value for physicians and hospitals through documentation time savings",
+      "evidence_span": "providing value to the patient, physician, and the hospital"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Hospitals are incentivized to leverage our solution because of the valuable ROI"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Time-limited close after commercial model. Singleton D1 and D3 retained as separately revisable need and commercial modules. Family credentials and study percentages excluded per 4.2. Anti-template note: need/product/money cuts follow separately stated modules in the transcript."
+}

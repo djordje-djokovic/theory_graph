@@ -1,0 +1,82 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Gimelist turns emails into Kanban task cards and visual boards inside Gmail",
+      "status": "explicit",
+      "evidence_span": "Gmail's boards give you a visual representation of your email conversations and all of the projects and tasks that follow"
+    },
+    {
+      "id": "P2",
+      "text": "Platform-agnostic architecture extends beyond today's Gmail/G Suite footprint",
+      "status": "explicit",
+      "evidence_span": "platform agnostic model will further expand our potential"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Gmail workspace boards",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Platform-agnostic model",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify teamwork by empowering collaboration and getting work done",
+      "status": "explicit",
+      "evidence_span": "simplify teamwork"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Communicate with stakeholders, collaborate with the team, and get work done",
+      "evidence_span": "we need to communicate with our stakeholders, we need to collaborate with our team, and we need to get work done"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "visual representation of your email conversations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "platform agnostic model will further expand our potential"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Coarse coding: email-to-card and board UX treated as one product mechanism. Market TAM figures excluded. Singleton domains: product vs expansion path separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-428",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:08+02:00"
+  }
+}

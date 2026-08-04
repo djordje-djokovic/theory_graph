@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-932",
+    "coder_session_id": "session_03",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Meeting details, people, content, and follow-ups are scattered across calendars, photos, notebooks, and inboxes, wasting productivity",
+      "status": "explicit",
+      "evidence_span": "Dave's meeting details and content are scattered everywhere"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile app puts notes, photos, follow-up tasks, and contacts in the context of each meeting with calendar sync and collaboration",
+      "status": "explicit",
+      "evidence_span": "It's a mobile app that puts your notes, photos, follow-up tasks, and contact information in the context of a meeting"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is bottom-up individual adoption, then premium team service integrating cloud storage, CRMs, and task systems",
+      "status": "explicit",
+      "evidence_span": "bring value to the individual and drive adoption from the bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "scattered meeting information problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "meeting context mobile app",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "bottom-up then premium enterprise GTM",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People become more productive by remembering and organizing everything about their meetings",
+      "status": "explicit",
+      "evidence_span": "helping you become a more productive person"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Meetings are a waste of time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Now you go to one place to remember everything"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer a premium service which will integrate with existing cloud storage platforms, CRMs, and task management systems"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Agenda/scatter/follow-up pains folded as one meeting-organization problem (§4.1.6). Trace/retrace/succeed demo features folded into meeting-context app (§4.1.7). Anti-template: problem, product, and GTM separately revisable."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-440",
+    "coder_session_id": "session_03",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Microsatellite ride-share launches force customers to compromise on schedule, destination, and capabilities, delaying operations for years",
+      "status": "explicit",
+      "evidence_span": "they must compromise on every aspect of the launch"
+    },
+    {
+      "id": "P2",
+      "text": "A reusable autonomous high-altitude balloon platform launches smaller dedicated rockets from 60,000 feet with solid stages and a liquid third stage for precise orbits",
+      "status": "explicit",
+      "evidence_span": "launch rockets from 60,000 feet in altitude"
+    },
+    {
+      "id": "P3",
+      "text": "Dedicated launches can be provided within weeks to any low-Earth orbit at high launch frequency",
+      "status": "explicit",
+      "evidence_span": "provide a launch within a matter of weeks to any low-Earth orbit and support a very high launch frequency"
+    },
+    {
+      "id": "P4",
+      "text": "FAA authorization for balloon-platform rocket launches establishes a regulatory path",
+      "status": "explicit",
+      "evidence_span": "first and only company to receive authorization from the FAA to launch a high-powered rocket from a reusable balloon platform"
+    },
+    {
+      "id": "P5",
+      "text": "The same high-altitude platform also opens high-altitude platform services alongside orbital launch contracts",
+      "status": "explicit",
+      "evidence_span": "opens the door to a $2.6 billion high-altitude platform services market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ride-share launch compromises",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "high-altitude dedicated launch architecture",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "regulatory path and dual markets",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dedicated microsatellite launch service without ride-share compromises",
+      "status": "explicit",
+      "evidence_span": "dedicated launch service that they've been asking for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Adding up all these pain points can lead to two and a half years"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can begin operating their satellites immediately"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provided a clear regulatory path for us moving forward"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Schedule/destination/integration pains kept as one ride-share problem set. Balloon platform, solid/liquid stages, autonomy, and reuse folded as one launch architecture cascade (v1.5.1). Weeks-to-orbit cadence kept as service claim that could fail independently of vehicle design. Team credentials and backlog traction excluded."
+}

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-565",
+    "coder_session_id": "session_03",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Neotic automates live trading on Collective2 connected to multiple brokers using strategy credentials",
+      "status": "explicit",
+      "evidence_span": "Neotic runs on Collective 2, which is a marketplace for trading strategies and is connected to five other brokers"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary algorithms daily analyze all U.S. stocks, cluster them, and classify winners versus losers with an adaptive ML forecasting model",
+      "status": "explicit",
+      "evidence_span": "analyze daily all U.S. stocks' financial markets data, extract features and labels, group stocks into clusters, and classify them as winners or losers"
+    },
+    {
+      "id": "P3",
+      "text": "Unlike coder-centric competitors, Neotic does not require traders to write code",
+      "status": "explicit",
+      "evidence_span": "they require traders to know how to write codes, while Neotic doesn't"
+    },
+    {
+      "id": "P4",
+      "text": "Customers are acquired via specialized forums, email, AdWords, articles, and broker referrals",
+      "status": "explicit",
+      "evidence_span": "acquire our customers through specialized forums, email campaigns, Google AdWords, publishing articles, and referral by our connected brokers"
+    },
+    {
+      "id": "P5",
+      "text": "Free trial then charges per backtests, forecasts, and automated traders averaging about $400 per user per year",
+      "status": "explicit",
+      "evidence_span": "charge per number of backtest, forecast, and automated traders average $400 per user per year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broker-connected automated live trading",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "no-code adaptive stock ML forecasting",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "forum ads and broker referral acquisition",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "per-usage about $400 annual pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make good returns on equity investments via automated no-code strategy trading",
+      "status": "explicit",
+      "evidence_span": "start making some good returns on your money instead of keeping it under your belt"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start automated orders"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerated machine learning forecasting model, which is adaptive and everyday learning"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "acquire our customers through specialized forums"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Every user is entitled to a free trial"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-demo. Early-adopter counts and board bios excluded. Algorithm feature cascade folded into one forecasting premise. B2B inbound interest treated as traction, not a separate premise."
+}

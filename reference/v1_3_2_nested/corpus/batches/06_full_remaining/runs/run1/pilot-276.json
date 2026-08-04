@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Orbital debris at extreme speeds can destroy satellites and trigger Kessler syndrome that renders orbits unusable",
+      "status": "explicit",
+      "evidence_span": "a small fragment the size of a penny can destroy a multimillion-dollar satellite"
+    },
+    {
+      "id": "P2",
+      "text": "Traditional manual collision-avoidance processes are falling apart under rising launch volume because they are error-prone and slow",
+      "status": "explicit",
+      "evidence_span": "the processes that satellite operators have traditionally used to avoid collisions are falling apart because they're manual and they're prone to human error and delays"
+    },
+    {
+      "id": "P3",
+      "text": "Pathfinder autonomously reduces response time to potential collisions by more than 90% with alerts, options, and analysis",
+      "status": "explicit",
+      "evidence_span": "Pathfinder, an autonomous satellite collision avoidance solution that reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "id": "P4",
+      "text": "Near-real-time multi-source data feeds trajectory and optimization models that minimize collision risk and fuel use",
+      "status": "explicit",
+      "evidence_span": "massive amounts of data from solar radiation pressure to onboard GPS data to radar data ingested in near real time"
+    },
+    {
+      "id": "P5",
+      "text": "Second product Gamit ensures safety of flight for launch vehicles and onboard payloads",
+      "status": "explicit",
+      "evidence_span": "Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Debris and manual ops risk",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pathfinder autonomous avoidance",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gamit launch safety product",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make space flight safer by preventing satellite collisions and protecting orbital regimes",
+      "status": "explicit",
+      "evidence_span": "building technologies that are making space flight safer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Extend satellite life by minimizing fuel used in avoidance maneuvers",
+      "evidence_span": "extend the satellite life by minimizing fuel usage"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "threatens other satellites"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Demo UI steps folded into Pathfinder capability. Customer counts and agency contracts treated as traction not premises. Team bios excluded. Gamit coded as separately announced second product with own path to value (v1.3.2 #5 split warranted).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-276",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:11:00+02:00"
+  }
+}

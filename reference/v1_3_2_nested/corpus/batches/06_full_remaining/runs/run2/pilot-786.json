@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Growing high-quality cannabis at home requires choosing among complex lighting, nutrients, media, and grow enclosures, with advice scattered across unreliable forums",
+      "status": "explicit",
+      "evidence_span": "The barriers to entry are just too high"
+    },
+    {
+      "id": "P2",
+      "text": "Leaf is a Wi-Fi plug-in appliance that auto-calibrates lighting, nutrients, and pH for a chosen seed or clone strain under smartphone control",
+      "status": "explicit",
+      "evidence_span": "leaf is calibrating itself to this specific strain. The light is calibrating its intensity"
+    },
+    {
+      "id": "P3",
+      "text": "A home-appliance design with NASA-informed cannabis LED and full environmental automation lets plants thrive for potency and quality without artisan expertise",
+      "status": "explicit",
+      "evidence_span": "We've created a very precisely controlled environment that allows cannabis plants to thrive and create high-potency, high-quality medicine"
+    },
+    {
+      "id": "P4",
+      "text": "Community growers share live streams, time-lapses, and custom recipes that other users can sync to their units",
+      "status": "explicit",
+      "evidence_span": "we can see what other growers in the community are growing"
+    },
+    {
+      "id": "P5",
+      "text": "Each grow is supported by doorstep supply of nutrients and filters, backed by a partnership with Advanced Nutrients",
+      "status": "explicit",
+      "evidence_span": "sending you directly to your door every grow, nutrients, carbon filters, anything you need to grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "High home-grow barriers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated Leaf appliance",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Community recipes and consumable supply",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Plug-and-plant home growing of high-quality cannabis medicine made easy",
+      "status": "explicit",
+      "evidence_span": "with LEAF, growing your own cannabis has never been easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The barriers to entry are just too high"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically grows cannabis and is controlled by your smartphone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that is the most important part in a high quality cannabis plant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent coding: merged nutrient partnership into the consumables premise (v1.3.1 clarification 3 on price/partner structure for same offer). Environmental control list folded into appliance premises. Beta deposit excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-786",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

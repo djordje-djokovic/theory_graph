@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hiring talented new grads is valuable because they bring energy and hard work at lower cost, lifting the bottom line",
+      "status": "explicit",
+      "evidence_span": "Young and talented students bring a lot of energy and hard work to a company, and they cost a lot less"
+    },
+    {
+      "id": "P2",
+      "text": "Relationships, not famous brand alone, determine whether great students accept offers",
+      "status": "explicit",
+      "evidence_span": "He had known a couple of the people there and had built a relationship with them and they convinced him to come over there"
+    },
+    {
+      "id": "P3",
+      "text": "Traditional networking-based recruiting fails for students who are new to the workforce and poorly connected",
+      "status": "explicit",
+      "evidence_span": "you can't rely on networking and referrals because students usually are not well connected and are new to the workforce"
+    },
+    {
+      "id": "P4",
+      "text": "Campus events create many first meetings, but students remain in the hiring pipeline for years afterward",
+      "status": "explicit",
+      "evidence_span": "schools provide several avenues to meet lots of students at once, from career fairs to information sessions"
+    },
+    {
+      "id": "P5",
+      "text": "Meritful is an SRM that helps recruiting teams sustain multi-year student relationships via ambassadors, challenges, and project feedback",
+      "status": "explicit",
+      "evidence_span": "help companies make the most out of this long cycle by creating a relationship with students"
+    },
+    {
+      "id": "P6",
+      "text": "The product is free for students and priced as a monthly company subscription",
+      "status": "explicit",
+      "evidence_span": "always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Why student hiring and relationships matter",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Meritful SRM and pricing",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Growing companies hire the best students by building relationships with them",
+      "status": "explicit",
+      "evidence_span": "If you want to hire the best students, you need to build a relationship with them"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We built Merrifield to help companies make the most out of this long cycle by creating a relationship with students"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "relationships are the key to hiring great students"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have built just the platform for you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two-domain partition: market/relationship theory vs product+pricing learned together. Feature list (challenges, projects, tracking) folded into P5. Growth-rate statistic treated as framing, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-929",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

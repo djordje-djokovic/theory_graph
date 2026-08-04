@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "coder_session_id": "session_01",
+    "session_case_index": 18,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:19:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mesh networking app shares mobile internet across phone, tablet, and laptop by crowdsourcing connectivity",
+      "status": "explicit",
+      "evidence_span": "OpenGarden is a mesh networking application that enables you to share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "id": "P2",
+      "text": "Installing yields faster and more reliable mobile internet for participants",
+      "status": "explicit",
+      "evidence_span": "you also benefit from a faster mobile internet and more reliable mobile internet"
+    },
+    {
+      "id": "P3",
+      "text": "Network effects improve connectivity as more people join across platforms (Android, Mac, Windows)",
+      "status": "explicit",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "crowdsourced mesh connectivity",
+      "premise_ids": ["P1", "P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Share and improve mobile internet connectivity across nearby devices and users",
+      "status": "explicit",
+      "evidence_span": "share your mobile internet among your phone, tablet, and laptop"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It works by crowdsourcing connectivity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Thin on commercial model; fundraising story and install counts excluded as financing/traction. User anecdotes treated as illustration of P2, not separate premises. Hiring call excluded. Single domain justified: product is one connectivity mechanism. ASR OpenGarden/OpenGallery."
+}

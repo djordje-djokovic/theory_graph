@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:08+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Phones waste most transmitted RF energy that could power the device",
+      "status": "explicit",
+      "evidence_span": "perfectly good energy that could be put to use"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary case antenna harvests and converts that energy into DC returned to the phone",
+      "status": "explicit",
+      "evidence_span": "harvesting antenna that is proprietary that captures that wasted RF energy"
+    },
+    {
+      "id": "P3",
+      "text": "Delivers about 30% more battery life passively",
+      "status": "explicit",
+      "evidence_span": "extend your battery life by 30%"
+    },
+    {
+      "id": "P4",
+      "text": "Case accessory targets users who already buy power products",
+      "status": "explicit",
+      "evidence_span": "over 30% have purchased some sort of product to help them get a little more power"
+    },
+    {
+      "id": "P5",
+      "text": "Later near/far-field chargers and ambient-powered IoT sensors extend the same harvesting approach",
+      "status": "explicit",
+      "evidence_span": "Our next product that we're going to bring to the market is a wireless charger"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Harvesting phone case",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Broader wireless power roadmap",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Passive extra power enabling true mobile battery endurance",
+      "status": "explicit",
+      "evidence_span": "it works passively, and it gives you extra power"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make wireless power ubiquitous",
+      "evidence_span": "make wireless power ubiquitous"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gives you extra power that you need to get from sunup to sundown"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100% mobility"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Roadmap coded as singleton domain because speaker explicitly frames next products and IoT sensors as the larger system beyond the first case. Tesla ubiquity line in secondary_value."
+}

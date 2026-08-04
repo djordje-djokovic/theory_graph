@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Breeders need precise disease-severity phenotyping from field plants to guide next breeding decisions",
+      "status": "explicit",
+      "evidence_span": "the breeder wants to calculate the disease severity of his plant, a highly critical phenotypic trait"
+    },
+    {
+      "id": "P2",
+      "text": "AI/CV trained on field images delivers automated real-time severity, progression, and infection-likelihood scores across capture devices",
+      "status": "explicit",
+      "evidence_span": "Our defensible technology is built with AI, computer vision, and machine learning. So our AI is built with thousands of crop images collected from the field"
+    },
+    {
+      "id": "P3",
+      "text": "Sold to seed (and food) companies via yearly license plus per-image variable fees",
+      "status": "explicit",
+      "evidence_span": "We charge yearly license fee along with a variable fee per image processed by our technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Phenotyping for breeding",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Field AI disease scoring",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "License and per-image pricing",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accurate automated quality-parameter assessment that saves companies millions",
+      "status": "explicit",
+      "evidence_span": "save millions of dollars"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "highly critical phenotypic trait"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accurate, completely automated, in-field and real-time solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "yearly license fee along with a variable fee per image processed"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Truncated open and Q&A excluded. Competitive ImageJ contrast folded into AI capability claim. Customer segment folded into pricing/GTM premise. Need/product/money triad justified.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-482",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "epistemic_markers": []
+}

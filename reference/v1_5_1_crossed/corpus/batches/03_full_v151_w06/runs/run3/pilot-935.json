@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-935",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Streaming economics make it very hard for artists to earn a living from recorded music",
+      "status": "explicit",
+      "evidence_span": "this has made it very hard for artists to make a living today"
+    },
+    {
+      "id": "P2",
+      "text": "Space Bar streams live audio performances to mobile devices worldwide at high bitrate for a low price",
+      "status": "explicit",
+      "evidence_span": "Space Bar streams live audio performances to mobile devices"
+    },
+    {
+      "id": "P3",
+      "text": "Fans can preview local shows free and then enter the venue or pay to join the same show remotely",
+      "status": "explicit",
+      "evidence_span": "check out a couple of five-minute free previews, and if I like what I hear, I can just step into the club"
+    },
+    {
+      "id": "P4",
+      "text": "Live-stream listener data gives bands tour-planning intelligence and helps venues book acts",
+      "status": "explicit",
+      "evidence_span": "It will help them plan their tours. It's business intelligence that will help venues book the hottest new acts"
+    },
+    {
+      "id": "P5",
+      "text": "Launch distribution runs through influential New York clubs and a Backplane partnership for large-artist fan communities",
+      "status": "explicit",
+      "evidence_span": "launch Space Bar from some of the most influential clubs in New York City"
+    },
+    {
+      "id": "P6",
+      "text": "Simple push-button architecture scales so superstars can reach fans worldwide from an iPhone",
+      "status": "explicit",
+      "evidence_span": "beautifully simple architecture that just works so that when superstars take the stage, they can reach out to all of their fans all over the world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "artist income and live-stream product",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "band and venue intelligence",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "club and Backplane distribution",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "scalable broadcast architecture",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fans support artists by listening to live shows anywhere while artists better connect with and monetize fans",
+      "status": "explicit",
+      "evidence_span": "help musicians to better connect with their fans and to build a mobile platform to help those fans that wish to support artists to directly do so"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Business intelligence for bands and venues from live-listenership data",
+      "evidence_span": "business intelligence that will help venues book the hottest new acts"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For 99 cents, it's as though I'm there"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help them plan their tours"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnership with Backplane"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With a push of a button, the artist is live, on the air"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "99-cent price and 256kbps bitrate folded into P2/P3 as quantitative detail of the live-stream offer. Artist/venue/festival market-size enumeration treated as framing, not separate premises. Stream-count poverty stats motivate P1 rather than adding a separate premise. Singletons D2–D4 retained as independently revisable BI, distribution, and scale modules."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-911",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brick-and-mortar retail still drives most sales but stores lack the personalized data and recommendations customers get online",
+      "status": "explicit",
+      "evidence_span": "95% of sales still comes from brick-and-mortar stores"
+    },
+    {
+      "id": "P2",
+      "text": "POS-linked profiles assign customer personalities and send receipt plus recommended products after checkout",
+      "status": "explicit",
+      "evidence_span": "we leverage the point of sales system"
+    },
+    {
+      "id": "P3",
+      "text": "A visual brand dashboard shows performance, growth drivers, declining cohorts, and actionable customer lists with past and likely future purchases",
+      "status": "explicit",
+      "evidence_span": "turn those numbers into a really visual dashboard and an easy way for brands to tell not only how their sales are doing, but what they can do about it"
+    },
+    {
+      "id": "P4",
+      "text": "Initial focus is mid-to-high luxury standalone fashion brands that care about customer experience",
+      "status": "explicit",
+      "evidence_span": "We went after the individual brands in the mid to high luxury tier fashion retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "impersonal brick-and-mortar retail",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "POS personalization and brand dashboard",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "luxury brand beachhead",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "In-store retail becomes personalized so brands know customers and customers get a customized experience",
+      "status": "explicit",
+      "evidence_span": "personalize the retail store experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a customer profile for your customers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These people care about providing the best experience for the customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Online vs in-store personalization gap folded as one problem with 95% brick share as quantitative context (§4.1.6). Receipt recommendations and brand analytics dashboard kept as two product surfaces under one personalization product domain but separate premises (customer-facing vs brand-facing jobs). P&G biography excluded (§4.2). Market-size framing folded into segment beachhead. Anti-template: problem, product, and segment separately revisable."
+}

@@ -1,0 +1,100 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Front-office sales lack transparency because CRM data is incomplete and stale",
+      "status": "explicit",
+      "evidence_span": "if they do put the data in, they don't keep the information current"
+    },
+    {
+      "id": "P2",
+      "text": "Fortuit passively builds a predictive selling model from email/IM/contact activity plus pipeline and surfaces at-risk deals with root-cause timelines",
+      "status": "explicit",
+      "evidence_span": "Fortuita's telling me is at risk"
+    },
+    {
+      "id": "P3",
+      "text": "Free plug-in for reps with no IT involvement answers the shared 'will I make my quarter?' question for reps and managers",
+      "status": "explicit",
+      "evidence_span": "Available free on fortuit.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Opaque sales pipeline",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Passive predictive Fortuit",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free rep-first distribution",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reps and managers know quarter outcome and can control the pipe",
+      "status": "explicit",
+      "evidence_span": "show the manager he's in control"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Empower front office engagement while restoring management control",
+      "evidence_span": "empower the front office to engage with customers as well as give management some semblance of control"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you don't know what's going on, you can't manage it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "know exactly why"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "within five minutes, I was up and running"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "ASR 'Fortuita's' left as verbatim evidence. Need/product/distribution triad justified. Truncation at start flagged.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1059",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:56:00+02:00"
+  }
+}

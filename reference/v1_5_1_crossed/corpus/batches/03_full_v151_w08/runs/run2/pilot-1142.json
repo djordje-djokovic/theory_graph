@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1142",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:04Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Venmo makes it easy and fun to pay and charge friends via linked card/bank on phone",
+      "status": "explicit",
+      "evidence_span": "Venmo is a service that makes it really easy and really fun to pay and charge your friends"
+    },
+    {
+      "id": "P2",
+      "text": "Social peer payments complement real-world check-in experiences like Foursquare",
+      "status": "explicit",
+      "evidence_span": "social transactions that seem to fit really well and actually complement the types of interactions that take place on Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "Giphy hides real money at real-world locations for friends to find by checking in",
+      "status": "explicit",
+      "evidence_span": "lets people hide real money at real-world locations for their friends to find by checking in through Foursquare"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-recipient gifts become a first-to-check-in competition with optional clues and notes",
+      "status": "explicit",
+      "evidence_span": "because I chose more than one recipient, this sort of becomes a game or competition"
+    },
+    {
+      "id": "P5",
+      "text": "Recipients need only be Foursquare friends—Venmo handles payout without requiring Giphy install",
+      "status": "explicit",
+      "evidence_span": "your friends don't need to have the application to receive a gift from you"
+    },
+    {
+      "id": "P6",
+      "text": "Businesses and brands can use location gifts for loyalty, hospitality, and friend acquisition",
+      "status": "explicit",
+      "evidence_span": "imagine how businesses and major brands can benefit from Giphy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Venmo social payments base",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Giphy location money gifts",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "brand location loyalty use",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make paying friends fun by hiding real money gifts at real places for check-in discovery",
+      "status": "explicit",
+      "evidence_span": "hide real money at real-world locations for your friends to find by checking in"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Businesses show loyalty and hospitality to customers and their friends",
+      "evidence_span": "great way for businesses to show their customers, and more importantly, their customers' friends, about how they think about loyalty, service, and hospitality"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "connect to Foursquare and Venmo to get started"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Venmo is going to handle the rest"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hide real money at real-world locations for their friends to find"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "businesses and major brands can benefit from Giphy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cheer-up/employee dinner/French soup use cases folded as applications of one gift mechanism (§4.1.2). $2500 launch scavenger promo excluded. Facebook Places future support folded into check-in channel. Singleton D3: brand GTM is separately revisable. Anti-template: payments base, consumer Giphy, brand use separately revisable."
+}

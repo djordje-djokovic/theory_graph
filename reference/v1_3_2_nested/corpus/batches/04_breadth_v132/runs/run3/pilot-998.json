@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-998",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:41:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People buy brand clothes because they want to talk about them and show what they wear",
+      "status": "explicit",
+      "evidence_span": "They want to talk about them. They want others get to know what they have, what they wear"
+    },
+    {
+      "id": "P2",
+      "text": "Spotting a desirable item on someone creates demand to identify the brand and where to buy it",
+      "status": "explicit",
+      "evidence_span": "It's a common situation when you see somebody, for example, in a cafe wearing with gorgeous shoes, and you realize you want the same one"
+    },
+    {
+      "id": "P3",
+      "text": "The brand-in tag is a Foursquare-style check-in that labels brands on photos",
+      "status": "explicit",
+      "evidence_span": "If you want, it's like in Foursquare, you check in places. In a tag brand, you brand in in brands"
+    },
+    {
+      "id": "P4",
+      "text": "The iPhone app lets the community identify brands from photos and deliver purchase advice through fast polls",
+      "status": "explicit",
+      "evidence_span": "TechBrand's iPhone app helps you to make the right choice"
+    },
+    {
+      "id": "P5",
+      "text": "The web service unites people around brand loyalty with tagging tools, wardrobes, and wish lists, extended across the web by a browser bookmarklet",
+      "status": "explicit",
+      "evidence_span": "It provides them with the tools for tagging brands on their photos and even on photos from social networks like Facebook"
+    },
+    {
+      "id": "P6",
+      "text": "Brands will pay to communicate with their own fans and with competitors' fans",
+      "status": "explicit",
+      "evidence_span": "Brands will love it. And they will pay us for it"
+    },
+    {
+      "id": "P7",
+      "text": "A store marketplace auto-attaches links to brandings by analyzing keywords from store price lists",
+      "status": "explicit",
+      "evidence_span": "Stores provide us with a price list and our system analyze keywords and automatically attach the links to the branding"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Brand display and curiosity",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Brand-tagging product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Brand and store monetization",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Brand lovers satisfy their curiosity and show, identify, and shop the brands around them",
+      "status": "explicit",
+      "evidence_span": "All you need in this situation is just to run our iPhone app and ask community what brand it is by making a question branding"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How to satisfy their curiosity?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will get the right choice. The choice making has never been so fast"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are creating special marketplace for stores which appears in a branding area"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Three domains with an explicit justification, not a habit template: the consumer-behavior premises (D1) are independently testable assumptions about brand display and curiosity; the tag/app/web-service product (D2) revises on product usage; monetization (D3) revises on brand and store willingness to pay — each could fail while the others hold. The bookmarklet is folded into the web-service premise as an extension of the same tagging mechanism per v1.3.2 clarification 5. Investment ask and team experience excluded per 4.2. ASR noise ('brand in', 'BookMarket') normalized silently in premise text. No plainly asserted premise-prerequisite."
+}

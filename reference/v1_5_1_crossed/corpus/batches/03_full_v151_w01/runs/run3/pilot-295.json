@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-295",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:16:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clean-energy transition drives exploding lithium demand for batteries while brine holds most global lithium resources",
+      "status": "explicit",
+      "evidence_span": "brines are the natural resources of lithium, which are present in the form of salt lake, continental brines, and oil field brines, constituting 66% of total global lithium resources"
+    },
+    {
+      "id": "P2",
+      "text": "Solar evaporation extraction is slow, water-intensive, carbon-emitting, and costly, so brine industry lacks efficient tech to meet battery demand",
+      "status": "explicit",
+      "evidence_span": "to just produce one metric ton of lithium, they use up 500,000 gallons of water, releasing 5,000 kilograms of carbon, with a production cost of $6,000"
+    },
+    {
+      "id": "P3",
+      "text": "Nano-mosaic sponge-like absorbents selectively attract lithium and reject other minerals, enabling a two-step direct extraction to battery grade in about 48 hours with far less water, lower cost, and zero carbon",
+      "status": "explicit",
+      "evidence_span": "nano-mosaic absorbents, which are very similar to a sponge. These sponge-like materials are chemically and physically designed to just attract lithium, rejecting all other minerals. So taking advantage of the selectivity, our process is just two-step. extracting lithium within 48 hours and process it into battery grade"
+    },
+    {
+      "id": "P4",
+      "text": "Room-temperature polyphenol absorbents in filter units scale to high throughput lithium extraction for brine and petrochemical operators",
+      "status": "explicit",
+      "evidence_span": "These are made at room temperature from naturally available polyphenols. And here is our filter units, which can treat almost 171 gallons of water per minute, extracting two metric tons of lithium per day"
+    },
+    {
+      "id": "P5",
+      "text": "Current customers are lithium brine and petrochemical operators; tech can extend to other critical mineral extractions such as nickel and cobalt",
+      "status": "explicit",
+      "evidence_span": "Our current customers are lithium brine operators. from lithium industry and petrochemical industries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient brine lithium evaporation",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Selective nano-absorbent direct extraction",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Brine operator customers and mineral extension",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable efficient lithium extraction that meets battery-market demand from brine resources",
+      "status": "explicit",
+      "evidence_span": "aims to provide sustainable energy technology to the global market"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "In the first step, we add nano-mosaic absorbents into the filters. In the second step, we add the brine that contains lithium"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lithium brine industry lack efficient lithium extraction technology to meet the current demands of exploding battery market"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only 30,000 gallons of water is used, with a production cost of $1,000, with zero carbon emission"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offers competitive advantage in terms of cost and efficiency"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Process+performance package (v1.5.1 §4.1.8): 48h, water, cost, zero carbon folded into P3 with the selective absorbent process; industry-lacks-efficient-tech framing folded into P2. Absorption efficiency curve treated as demo evidence of P3. Team credentials and revenue projection excluded. Singleton D3 retained as GTM/customer module."
+}

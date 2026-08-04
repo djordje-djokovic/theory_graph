@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-746",
+    "coder_session_id": "session_04",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Field professionals do site investigation with pen, paper, and markers, producing messy sketches that must be recreated again on desktop CAD—wasted duplicated effort",
+      "status": "explicit",
+      "evidence_span": "he's doing the same thing two or even three times, once or twice on paper and again on the computer"
+    },
+    {
+      "id": "P2",
+      "text": "ArcSight converts freehand iPad sketches into precise geometry in real time with dimensions, recognizing combinations of lines and arcs and predicting tangency",
+      "status": "explicit",
+      "evidence_span": "ArcSight converts his freehand input into perfect, precise geometry"
+    },
+    {
+      "id": "P3",
+      "text": "Users can load blueprints, sketch/measure distances and angles on them, and place photos at locations with sketch/measure on photos so field data stays organized in one exportable digital file",
+      "status": "explicit",
+      "evidence_span": "all the data is well organized, so he doesn't need to remember where the photos were taken anymore"
+    },
+    {
+      "id": "P4",
+      "text": "ArcSight Basic launches free on the App Store; Pro will add advanced features, cloud service, and coworker collaboration/sharing",
+      "status": "explicit",
+      "evidence_span": "we are launching ArcSight Basic at App Store. It will be a totally free download"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "pen-and-paper site investigation waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "real-time sketch geometry and field data organization",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "free Basic and Pro cloud collaboration",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Field professionals capture organized, CAD-ready site data once and eliminate recreating sketches from scratch",
+      "status": "explicit",
+      "evidence_span": "This totally eliminates the need to recreate everything from scratch"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all these professionals have been doing site investigation the same way, with pen and paper"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "he only has one digital file, which he can export to other desktop design software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "professionals can create and organize data, and also to collaborate and share with their coworkers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Messy paper notes and double data entry folded as one field-investigation problem set (v1.5.1 §4.1.6). Blueprint overlay, photos, and export kept as organization cascade of the same field app (§4.1.7) split from core geometry recognition only where photo/blueprint organization is a distinct jobs module—kept with P3 as data-organization path. Industry size framing not a premise. Singleton D1/D3 retained."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "AP requires validation, line-item coding, and accounting entry to control fraud and job costs",
+      "status": "explicit",
+      "evidence_span": "First, the right person or group of people needs to validate that the bill is valid"
+    },
+    {
+      "id": "P2",
+      "text": "Most businesses cannot execute those steps because bills are messy and teams are disconnected",
+      "status": "explicit",
+      "evidence_span": "the vast majority of businesses cannot execute these fundamental steps"
+    },
+    {
+      "id": "P3",
+      "text": "Makers Hub reads bills via spatial mapping, deterministic language models, and one-shot learning from users",
+      "status": "explicit",
+      "evidence_span": "using spatial mapping and proprietary indexing, we start to make sense and reconcile that data"
+    },
+    {
+      "id": "P4",
+      "text": "Smart routing, one-click coding, accounting sync, and flexible payment scheduling complete the workflow",
+      "status": "explicit",
+      "evidence_span": "pay the bill easily, flexibly, with a single click to schedule payments"
+    },
+    {
+      "id": "P5",
+      "text": "Net-term discount detection ensures firms never miss available discounts",
+      "status": "explicit",
+      "evidence_span": "we've extracted net term discount availability that users can capture and assign with a single click"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AP process requirements and failure",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated reading engine",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Workflow through payment",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect disparate AP processes with no manual entry and better collaboration",
+      "status": "explicit",
+      "evidence_span": "connect their disparate account payable processes, to capture all of their data with no manual entry, and to collaborate across the organization"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more than 80 hours a month of manual data entry"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Makers Hub interpretation or reading of this bill"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "greater confidence in his financial operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split capture engine vs workflow/payment as separately revisable product modules. Construction customer anecdote used as illustration, not a segment premise."
+}

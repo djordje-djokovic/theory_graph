@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Miniaturization, cheaper components, smartphone robotics, and cloud robotics enable personal home robots",
+      "status": "explicit",
+      "evidence_span": "miniaturization and advances in rapid manufacturing and commercialization and manufacturing, reduction of costs of components, but mostly smartphone robotics and cloud robotics"
+    },
+    {
+      "id": "P2",
+      "text": "Offloading computation to phones and cloud makes the robot affordable and dynamically upgradable",
+      "status": "explicit",
+      "evidence_span": "takes a computation from the robot into devices you already have, making it much more affordable, and also automatically and dynamically upgradable"
+    },
+    {
+      "id": "P3",
+      "text": "Limited-task robots can enter the home and later combine, unlike unaffordable Swiss-army-knife robots",
+      "status": "explicit",
+      "evidence_span": "set of robots that are much more targeted at limited set of tasks. that can slowly get into the house because they're not affordable, do simple things very well"
+    },
+    {
+      "id": "P4",
+      "text": "Shimmy is a cloud-connected robotic speaker dog whose smarts run on smartphone and cloud",
+      "status": "explicit",
+      "evidence_span": "Shimmy is a robotic speaker dog that doesn't just play the music for you. It actually listens to it and enjoys it as much as you do. And this is a good example of what we call our dumb robot smartphone approach"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud music analysis plus on-device compute creates unique real-time choreography per song",
+      "status": "explicit",
+      "evidence_span": "creates a real-time live choreography for this, which is different every time you play a different song, which is all computed on the Android device"
+    },
+    {
+      "id": "P6",
+      "text": "Face tracking and related phone smarts support functional uses such as best sound aiming",
+      "status": "explicit",
+      "evidence_span": "You can also use smartphone smarts, so to say, to do some functional things. For example, using the camera to track my faces, always pointing towards me and giving me the best sound possible"
+    },
+    {
+      "id": "P7",
+      "text": "Sold at $199, or $149 for early Kickstarter backers",
+      "status": "explicit",
+      "evidence_span": "able to get it to $199. And if you are very quick and early adopters, like most of you are, we started a Kickstarter campaign that today you can get it for the next month for $149"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Enabling tech and task-limited robot strategy",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Shimmy entertainment robot product",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Kickstarter consumer pricing",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable personal robots people enjoy at home",
+      "status": "explicit",
+      "evidence_span": "engaging, affordable, and fun to use robots in the home like this one"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robot in every home and make it a reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robotic speaker dog that doesn't just play the music for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "able to get it to $199"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Face tracking coded as one functional-smartphone-smarts premise with the best-sound example (enumerated uses of phone smarts). Future kitchen/car concepts omitted as speculative roadmap without present conditions.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1030",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

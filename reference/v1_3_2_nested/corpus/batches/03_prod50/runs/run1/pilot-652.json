@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote sports fans feel disconnected from the stadium experience",
+      "status": "explicit",
+      "evidence_span": "he realized, just like millions of others around the world, he was disconnected from the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Vivecast lets fans on connected devices transmit energy/reactions into the stadium",
+      "status": "explicit",
+      "evidence_span": "Vivecast now enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P3",
+      "text": "VibeBoard visualizes aggregated fan energy from app gestures and sensors worldwide",
+      "status": "explicit",
+      "evidence_span": "A VibeBoard is a graphical representation of fan energy"
+    },
+    {
+      "id": "P4",
+      "text": "Sound capture compares remote fan loudness with stadium decibel meters",
+      "status": "explicit",
+      "evidence_span": "you see the average decibel volume from each country around the world"
+    },
+    {
+      "id": "P5",
+      "text": "Unique fan data feeds team CRM activities",
+      "status": "explicit",
+      "evidence_span": "we capture a unique set of data that can feed into your CRM activities"
+    },
+    {
+      "id": "P6",
+      "text": "Connected merchandise via a ~$4 fan chip plus iOS/Android smartware apps",
+      "status": "explicit",
+      "evidence_span": "we have developed a fan chip that can, for $4, just plug into any merchandise you have, making it connected"
+    },
+    {
+      "id": "P7",
+      "text": "Brand sponsors get unique context to carry world cheers in memorable moments",
+      "status": "explicit",
+      "evidence_span": "Vivecast sponsors can carry the cheers from the world during the moments that create lifetime memories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remote fan energy transmission product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Team, merchandise, and sponsor monetization",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the world a stadium by giving remote fans a voice in the game",
+      "status": "explicit",
+      "evidence_span": "giving millions of remote fans a voice in the game"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "transmit their energy straight into the stadium"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with Fan Mode, you can make all fans part of the game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Wembley/Mumbai traction excluded as past performance. Demo Wi-Fi glitches ignored. Fan Mode / Vivecast / Broadcast ASR naming retained only in transcript spans.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

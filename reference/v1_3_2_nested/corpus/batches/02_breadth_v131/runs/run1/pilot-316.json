@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-316",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:32:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plant-parasitic nematodes destroy a large share of crops each year",
+      "status": "explicit",
+      "evidence_span": "farmers lose roughly 12% of their crops every year to plant parasitic nematodes"
+    },
+    {
+      "id": "P2",
+      "text": "Demand for safe, eco-friendly pest control and residue regulation pushes farmers to alternatives",
+      "status": "explicit",
+      "evidence_span": "consumers are demanding safe and eco-friendly pest control used on their foods"
+    },
+    {
+      "id": "P3",
+      "text": "Pheromones control nematode behaviors such as dispersal, enabling directed pest control",
+      "status": "explicit",
+      "evidence_span": "This gives us the power to control nematodes. One such behavior is dispersal"
+    },
+    {
+      "id": "P4",
+      "text": "Ferrocote seed treatment protects young roots by directing parasitic nematodes away",
+      "status": "explicit",
+      "evidence_span": "Ferrocote is a seed treatment that is applied to seeds before they are planted, and it protects the young and vulnerable roots from attack by plant parasitic nematodes"
+    },
+    {
+      "id": "P5",
+      "text": "Nemastim increases effectiveness of beneficial nematodes used as insect biocontrols",
+      "status": "explicit",
+      "evidence_span": "Nemastim makes beneficial nematodes up to 200% more effective"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Crop loss and eco-friendly pest demand",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pheromone nematode products",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eco-friendly nematode control so farmers can grow more food",
+      "status": "explicit",
+      "evidence_span": "Our eco-friendly products control nematodes, so farmers can grow more food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We've taken this technology and used it to create our first two products"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "farmers demanding eco-friendly alternatives"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eco-friendly products control nematodes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Ends mid partner/fundraising ask. Co-founder bio excluded; pheromone mechanism coded. Ferrocote and Nemastim kept separate as distinct product paths."
+}

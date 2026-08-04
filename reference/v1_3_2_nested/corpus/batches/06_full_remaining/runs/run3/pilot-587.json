@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Critical patented dissolvable shell enables dunk-to-finish production parts",
+      "status": "explicit",
+      "evidence_span": "patented Collider invention that is critical to our process"
+    },
+    {
+      "id": "P2",
+      "text": "Orchid offers large speed and cost advantages plus hundreds of potential materials",
+      "status": "explicit",
+      "evidence_span": "five to 60 times faster. three to 125 times less expensive, and has a potential materials catalog of hundreds"
+    },
+    {
+      "id": "P3",
+      "text": "Machine use is cartridge-and-button simple without skilled labor or special ventilation",
+      "status": "explicit",
+      "evidence_span": "snap in the materials cartridge, you press go, and our software will handle the rest"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts with service bureaus and rapid prototyping shops",
+      "status": "explicit",
+      "evidence_span": "If you are a service bureau or a rapid prototyping shop, we'd like you to have a beta"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shell process and machine simplicity",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Beta targeting service bureaus",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "New manufacturing category via dissolvable-shell production parts",
+      "status": "explicit",
+      "evidence_span": "enabling an entirely new category of manufacturing"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Custom prosthetics and similar parts at retail-accessible prices",
+      "evidence_span": "This silicone liner is a perfect fit, and it retails for under $200"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "production quality part"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "service bureau or a rapid prototyping shop"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Opening cut off; quality.truncated true. Kickstarter customer story treated as application evidence inside process, not traction metric premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-587",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:10+02:00"
+  }
+}

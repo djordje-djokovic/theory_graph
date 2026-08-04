@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People should not authenticate via passwords, IDs, or plastic credentials that fail to capture who they are",
+      "status": "explicit",
+      "evidence_span": "you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "Implicit authentication builds a unique digital fingerprint from biometric and behavioral sensor factors via machine learning",
+      "status": "explicit",
+      "evidence_span": "We use biometric and behavioral factors to build a unique digital fingerprint of you"
+    },
+    {
+      "id": "P3",
+      "text": "Authentication works passively across devices without requiring conscious user action",
+      "status": "explicit",
+      "evidence_span": "we use passive factors to identify the human behind the device. So we naturally work cross-device, and we don't require any conscious user action"
+    },
+    {
+      "id": "P4",
+      "text": "Deploy with financial services and technology partners facing account takeover and password-reset burden",
+      "status": "explicit",
+      "evidence_span": "we're working with some of the top financial services and technology companies to evaluate and deploy Unify ID"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "password identity inadequacy",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "passive biometric behavioral fingerprint",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "financial and tech partner deployment",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Authenticate and secure identity by being yourself, online and offline",
+      "status": "explicit",
+      "evidence_span": "the best way to authenticate yourself is to be yourself"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Streamline authentication while reducing fraud and account takeover",
+      "evidence_span": "applications in streamlining authentication, reducing fraud, and preventing account takeover"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are changing the way you authenticate yourself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use that to authenticate and secure your identity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one of our partners has a big problem with account takeover"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Walk, typing, and 100+ attributes folded as feature cascade of one fingerprint ML mechanism (§4.1.7). Market-size figures treated as framing, not premises. Team acquisition bio excluded. Anti-template: problem framing, product mechanism, and partner GTM separately revisable."
+}

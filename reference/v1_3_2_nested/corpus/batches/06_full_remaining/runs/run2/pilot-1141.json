@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Meeting and playing with people online should be as controllable as buying someone a drink in a sports bar",
+      "status": "explicit",
+      "evidence_span": "If you can buy a girl a drink in a sports bar, why can't you buy a girl a game online?"
+    },
+    {
+      "id": "P2",
+      "text": "Game Crush is a fun, inviting, secure place to meet gamers and play online",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure. You can come in, meet gamers, and play them online"
+    },
+    {
+      "id": "P3",
+      "text": "Rich profiles and chat replace anonymous tags and give control over gameplay partners",
+      "status": "explicit",
+      "evidence_span": "There's no way to control your gameplay or who you play with"
+    },
+    {
+      "id": "P4",
+      "text": "Paid play dates let skilled players earn while payers buy gameplay time",
+      "status": "explicit",
+      "evidence_span": "the play date actually makes money playing that game"
+    },
+    {
+      "id": "P5",
+      "text": "Respectful rating and invite flow let play dates screen payers",
+      "status": "explicit",
+      "evidence_span": "she can tell if I'm a good guy or not"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Buy-a-game social premise",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Secure social gaming product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Paid play-date model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A fun, inviting, secure place to meet gamers and play them online with control",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure. You can come in, meet gamers, and play them online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "buy a girl a game online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fun, inviting place to play"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "play date actually makes money playing that game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Zynga/Chat Roulette comparison is positioning, not a condition. P3 evidence cites the status-quo control gap that the profiles address. Beta user count excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1141",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:05+02:00"
+  }
+}

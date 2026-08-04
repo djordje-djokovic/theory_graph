@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:15:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Operator-dependent ultrasound errors and limited ultrasound access cause widespread fetal-abnormality misdiagnosis",
+      "status": "explicit",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators"
+    },
+    {
+      "id": "P2",
+      "text": "Vendor-agnostic cloud AI validates ultrasound screening completeness and quality across many anatomical views and flags missing regions",
+      "status": "explicit",
+      "evidence_span": "validate the completeness and quality of the screening, ensuring the appropriate capture over 80 different anatomical views"
+    },
+    {
+      "id": "P3",
+      "text": "Guided diagnostics localize fetal malformations so abnormalities are not missed and intervention can follow",
+      "status": "explicit",
+      "evidence_span": "Our AI was able to localize this fetal malformation, providing feedback to the obstetrician"
+    },
+    {
+      "id": "P4",
+      "text": "Automated reporting and documentation saves clinician time per patient",
+      "status": "explicit",
+      "evidence_span": "automate reporting and documentation and save up to eight minutes per patient on documentation"
+    },
+    {
+      "id": "P5",
+      "text": "Sold to hospitals via hybrid baseline subscription plus volume-based API pricing",
+      "status": "explicit",
+      "evidence_span": "hybrid pricing model with a subscription-based charge for baseline subscription costs and a volume-based pricing model for API calls"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ultrasound misdiagnosis problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI screening quality and diagnostics",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "hospital hybrid pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect fetal abnormalities earlier with greater frequency and higher efficiency",
+      "status": "explicit",
+      "evidence_span": "helps detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify these problems earlier to prevent tragic outcomes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this abnormality doesn't go unnoticed and that appropriate intervention can be taken"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "valuable ROI we're providing through time savings"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Misdiagnosis and global ultrasound-access claims folded into one need premise. Clinical completeness-rate study treated as evidence for P2, not a separate premise. Team bio and NTAP future reimbursement detail excluded/folded. Pitch ends on time call (truncated=true). Anti-template: need / clinical AI / hospital pricing separately revisable."
+}

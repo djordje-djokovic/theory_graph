@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-434",
+    "session_case_index": 4,
+    "extraction_run": 2
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Volatile weather creates unpredictable food supply and volatile prices that kill businesses; soft commodities are hard to hedge because they resist standardization, exchanges, and create basis risk",
+      "status": "explicit",
+      "evidence_span": "Volatile weather creates unpredictable supply. And unpredictable supply, of course, creates volatile prices. And volatile prices kill businesses"
+    },
+    {
+      "id": "P2",
+      "text": "Index insurance platform with 3000+ highly local indexes matches physical-goods risk and pays out automatically (e.g. within 48 hours) via algo pricing that uses historical sims, futures signals, and portfolio diversification",
+      "status": "explicit",
+      "evidence_span": "Stable has built the world's largest index insurance platform. We have over 3,000 indexes from 40 different countries"
+    },
+    {
+      "id": "P3",
+      "text": "Sell B2B to corporate food clients and reach farmers through aggregators (banks, insurers, co-ops) that already have relationships",
+      "status": "explicit",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators. That might be banks, that might be insurers, it might be co-ops"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Volatile food commodity price risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Local index insurance platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Corporate and aggregator distribution",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Financial confidence for food businesses and farmers by protecting against commodity price risk",
+      "status": "explicit",
+      "evidence_span": "Stable is delivering financial confidence to our clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tools that could help the world's most important industry to manage that risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match the risk, the risk of your physical goods, to a local index, highly, highly targeted"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These people have an existing relationship"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Weather/supply/price/hedging frictions folded as one pain-bundle (rule 6). Auto payout, three-question UX, and three algo layers folded into one index-insurance mechanism (rules 7–8). Anti-template note: problem, product, and channel are separately revisable modules evidenced in transcript."
+}

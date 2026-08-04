@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Strength and gym users lack automatic tracking apps comparable to what runners and cyclists already have",
+      "status": "explicit",
+      "evidence_span": "vMofit is the first solution for the other 70% of the population that prefers to work out at home or in the gym"
+    },
+    {
+      "id": "P2",
+      "text": "App on Android Wear/Apple Watch auto-detects exercises and reps from XYZ motion sensors and confirms calories after sets",
+      "status": "explicit",
+      "evidence_span": "tracks my body on the X, Y, and Z axis using only the built-in motion sensors of the Android Wear and Apple Watch"
+    },
+    {
+      "id": "P3",
+      "text": "Custom exercise training in seconds and indoor cardio tracking extend coverage beyond pre-programmed moves",
+      "status": "explicit",
+      "evidence_span": "it can even track my indoor cardio workouts like my treadmill runs"
+    },
+    {
+      "id": "P4",
+      "text": "Hard motion-tracking problem solved on consumer watches where military-grade sensor attempts failed",
+      "status": "explicit",
+      "evidence_span": "Many have tried and failed to achieve this technology using military grade sensors"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution through influencers, personal trainers' O2O tools, and viral gym communities",
+      "status": "explicit",
+      "evidence_span": "grow in the gym by offering personal trainers an online to offline mechanism"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium plus goal-based product offers monetizes engagement and trainer features",
+      "status": "explicit",
+      "evidence_span": "provide special product offers based on your goals, fitness level, and more"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underserved gym tracking segment",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer-watch motion AI",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gym and influencer distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Freemium offers model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automatic, accurate strength-workout tracking without manual logging friction",
+      "status": "explicit",
+      "evidence_span": "more accurate at calculating calories burned during strength training than heart rate monitors or pedometers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "runners and cyclists have had a plethora of apps"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically identifies my exercises and counts my repetitions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "After one person in the gym has VemoFit, everyone has to have it"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "freemium business model, allowing your favorite personal trainers to create professional routines"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Follower/YouTube metrics treated as bio/traction. Anti-template: problem/tech/GTM/monetization are separately revisable as spoken. ASR name variants left in spans.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-771",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:05:00+02:00"
+  }
+}

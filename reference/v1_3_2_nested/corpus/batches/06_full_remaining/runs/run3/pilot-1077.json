@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "When status reports travel only by email, companies make worse decisions, duplicate work, and lose money because information stays private",
+      "status": "explicit",
+      "evidence_span": "decisions are less informed, work is duplicated, and ultimately, companies lose money because of this"
+    },
+    {
+      "id": "P2",
+      "text": "Managers launch reporting by specifying employees, schedule, and template content in about thirty seconds",
+      "status": "explicit",
+      "evidence_span": "30 seconds, and her life is already easier"
+    },
+    {
+      "id": "P3",
+      "text": "ThinkFuse makes reports more consistent and timely, shares them with the team, and reminds writers so managers are not the harassing party",
+      "status": "explicit",
+      "evidence_span": "the managers don't have to be the bad guy harassing people to write reports, because ThinkFuse does that for them"
+    },
+    {
+      "id": "P4",
+      "text": "Status reports are a shareable communication class that can map changing people-project relationships across the firm—the business graph",
+      "status": "explicit",
+      "evidence_span": "status reports are really designed to be shared. And when you look at them across an entire company, you can start to map the relationships between people and projects"
+    },
+    {
+      "id": "P5",
+      "text": "Users can search people and reports to find specialists, client relationships, and who is in a given office",
+      "status": "explicit",
+      "evidence_span": "by looking across the recently submitted status reports, she can see which of them is working with Acme"
+    },
+    {
+      "id": "P6",
+      "text": "Project follow and centralized recipient lists replace error-prone weekly email copy-paste distribution",
+      "status": "explicit",
+      "evidence_span": "before, Sarah would have to manually copy and paste a long list of email addresses week after week"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cost of private status email",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Collection, reminders, and distribution",
+      "premise_ids": ["P2", "P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Business graph and internal search",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shared understanding that aligns people and resources through accessible, consistent status reports",
+      "status": "explicit",
+      "evidence_span": "more powerful to align people and resources across an organization"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "how ThinkFuse helps you leverage that information"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ThinkView solves this problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making status reports more accessible, by making them more consistent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "each person understanding the entire puzzle and where their pieces fit in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent coding: split recipient-list/follow as its own distribution premise (P6) while keeping search separate. Speaker says 'ThinkView' then 'ThinkFuse'—ASR inconsistency left in spans. Beta praise excluded. Truncated ending.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1077",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

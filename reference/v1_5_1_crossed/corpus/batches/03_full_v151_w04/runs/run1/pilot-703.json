@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-703",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online merchants need flexible custom currency (gift cards, promos, refund credits) but payment systems make building tracking, controls, and associations hard, so mid-market shops must build it themselves",
+      "status": "explicit",
+      "evidence_span": "enabling custom currency is actually really hard to do"
+    },
+    {
+      "id": "P2",
+      "text": "A SaaS web app and API lets merchants create, distribute, control, and track custom currency integrated into checkout for developers and marketers",
+      "status": "explicit",
+      "evidence_span": "a software as a service platform to solve this problem"
+    },
+    {
+      "id": "P3",
+      "text": "Pricing starts at $90/month for 1,000 active codes with usage-based steps, plus checkout integrations such as Shopify Plus and planned Stripe/Braintree",
+      "status": "explicit",
+      "evidence_span": "We've priced our product starting at $90 a month to make it accessible to businesses of any size"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "custom currency build burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Giftbit currency platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "usage pricing and checkout integrations",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Online businesses can run targeted custom-currency marketing without building the infrastructure themselves",
+      "status": "explicit",
+      "evidence_span": "no one needs to build their own complicated custom currency because they have GiftBit"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're stuck building your own custom currency solution yourself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable a business to have, distribute, and manage their own custom currency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accessible to businesses of any size"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Code tracking, spend controls, and gift/promo association difficulties folded as one custom-currency problem (v1.5.1 §4.1.6). Demo create-order/admin/consumer-reminder flows folded as feature cascade of the SaaS platform (§4.1.7). Prior gift-card reselling and beta logos excluded as credentials/traction. Price tiers and payment integrations as one commercial/GTM module. Anti-template: problem, product, and packaging separately revisable."
+}

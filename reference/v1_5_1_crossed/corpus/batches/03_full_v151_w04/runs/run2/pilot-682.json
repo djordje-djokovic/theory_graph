@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:49:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In high-inflation emerging markets, much of the population is unbanked and lacks credit, blocking online purchases",
+      "status": "explicit",
+      "evidence_span": "most of the population in this country is unbanked and also doesn't have access to credit"
+    },
+    {
+      "id": "P2",
+      "text": "Users can pay online on installments in local currency at merchants that accept Bitcoin payments",
+      "status": "explicit",
+      "evidence_span": "our users can pay online on installments in local currency in any of our merchants or the hundreds of thousands of merchants that accept Bitcoin payments worldwide"
+    },
+    {
+      "id": "P3",
+      "text": "Identity verification, social/external data, fraud prevention, and ML scoring approve credit for underbanked users",
+      "status": "explicit",
+      "evidence_span": "With all this information, we build a score to help us give credit to the user"
+    },
+    {
+      "id": "P4",
+      "text": "Users repay via monthly statements using bank accounts or cash at thousands of partner merchant locations",
+      "status": "explicit",
+      "evidence_span": "they can use any of the 16,000 merchant locations that we have partnered with, where they can go and pay in cash"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unbanked online credit gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Bitcoin installment credit product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "cash and bank repayment network",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Underbanked consumers can buy online on affordable local-currency credit installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This makes it very difficult to pay online, but impossible to do it in the most common way to do a payment online, which is on credit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ripio Credit, which is our solution to this problem"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This makes it very convenient for a user to start buying online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ID selfie, social data, external default checks, and fraud system folded into one credit-scoring underwriting mechanism (§4.1.7). Prior BitPagos bio excluded except as context. Merchant network for repayment kept as separately revisable collection module. Anti-template: problem, credit product, and repayment rails separately revisable."
+}

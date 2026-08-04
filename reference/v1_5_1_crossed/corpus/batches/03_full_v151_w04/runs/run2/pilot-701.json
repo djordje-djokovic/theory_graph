@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-701",
+    "coder_session_id": "session_02",
+    "session_case_index": 4,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hospital value is mostly an administrative layer (registration, billing, shared records) that technology can replace so care can be delivered as a connected platform rather than buildings",
+      "status": "explicit",
+      "evidence_span": "you can replace most of these things with technology"
+    },
+    {
+      "id": "P2",
+      "text": "Carbon Health is a patient-and-physician technology platform spanning easy insurance onboarding, condition-organized records, messaging, real charts, and actionable care tasks",
+      "status": "explicit",
+      "evidence_span": "a ubiquitous technology platform that connects us with our doctors"
+    },
+    {
+      "id": "P3",
+      "text": "Care is a seamless hybrid of virtual and in-person visits with automated history-aware intake, clinic handoff with full context, and optional virtual follow-ups",
+      "status": "explicit",
+      "evidence_span": "a seamless hybrid of virtual and in-person care"
+    },
+    {
+      "id": "P4",
+      "text": "Launch via a pilot primary-care clinic in San Francisco, then extend the platform to independent practices nationwide",
+      "status": "explicit",
+      "evidence_span": "we are opening Carbon in our pilot primary care clinic in San Francisco"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hospital admin replaceable by technology",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "connected care platform and hybrid delivery",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "clinic pilot and independent-practice rollout",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Best possible collaborative care through a designed patient-and-doctor experience traditional providers cannot match",
+      "status": "explicit",
+      "evidence_span": "collaborate to give the best possible care to their patients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the world's largest hospital won't be about buildings"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design an experience that would be impossible for the traditional health care providers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available for all independent practices across the country"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Onboarding/records/messaging/Rx/reminders/price-compare treated as feature cascade of one care platform (§4.1.7). Hybrid virtual/in-person kept as distinct delivery module. Udemy bio and mom anecdote excluded except as problem framing folded into platform thesis. 'World's largest hospital' treated as value/vision framing (§4.1.4). Singleton D1/D3 retained. Anti-template: admin thesis, product/care model, and rollout are separately revisable."
+}

@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "New parents suffer intense anxiety about infant safety at home, and SIDS is the number one cause of infant death",
+      "status": "explicit",
+      "evidence_span": "It's the number one cause of infant death, and it's what keeps most moms up at night"
+    },
+    {
+      "id": "P2",
+      "text": "Current baby monitors are old and outdated and do not tell parents whether the baby is breathing",
+      "status": "explicit",
+      "evidence_span": "They're old, they're outdated, and they don't actually tell you if your baby is breathing or not"
+    },
+    {
+      "id": "P3",
+      "text": "A smart sock can send an infant's heart rate and oxygen levels to a parent's smartphone and alert them in an emergency",
+      "status": "explicit",
+      "evidence_span": "It's a smart sock that sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "id": "P4",
+      "text": "The sock is built on pulse-oximetry technology that is safe, proven, and used in hospitals worldwide",
+      "status": "explicit",
+      "evidence_span": "it's safe, it's proven, and it's used all over the world"
+    },
+    {
+      "id": "P5",
+      "text": "The device is baby-proof: completely flexible electronics encased in waterproof silicone",
+      "status": "explicit",
+      "evidence_span": "we've made the electronics completely flexible, and we've encased it in silicone so that it is also waterproof"
+    },
+    {
+      "id": "P6",
+      "text": "The monitor is miniaturized to a fraction of a hospital pulse oximeter while doing everything it does, wirelessly",
+      "status": "explicit",
+      "evidence_span": "it does everything that the home pulse oximeter can do, and it's wireless"
+    },
+    {
+      "id": "P7",
+      "text": "A four-sensor design with nine measurement combinations keeps accurate readings as the infant's foot triples in size during the first year",
+      "status": "explicit",
+      "evidence_span": "With four sensors, we're getting nine different combinations, and we're getting a great reading the whole time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parental anxiety and outdated monitors",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart sock vitals monitoring",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Pulse-ox sensor engineering",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parents are empowered with peace of mind and infant health improves through continuous vitals monitoring",
+      "status": "explicit",
+      "evidence_span": "It's gonna empower parents and it's gonna improve the health of infants all over the world"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Building the largest infant health data set ever known to enable predictions from the common cold to life-threatening conditions",
+      "evidence_span": "creating the largest data set of infant health data that's ever been known"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what keeps most moms up at night"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're getting a great reading the whole time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pre-sales revenue ('close to a quarter million dollars') and delivery date excluded as traction per 4.2.3. Audio/video and elderly-care line extensions are roadmap items, not conditions of the current theory, so uncoded per v1.3.2 clarification 5. Extra vitals (skin temperature, rollover alerts, sleep quality) folded into the monitoring premise P3 as features of one offering (v1.3.2 clarification 5). The infant health data-set aspiration is not required for the sock's value theory, so it is recorded as secondary_value per v1.3.2 clarification 4 rather than as a premise. No premise dependencies plainly asserted.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-892",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:24:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

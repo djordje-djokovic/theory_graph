@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brick-and-mortar still drives most retail sales but lacks the personalized rich data customers get online",
+      "status": "explicit",
+      "evidence_span": "95% of sales still comes from brick-and-mortar stores"
+    },
+    {
+      "id": "P2",
+      "text": "In-store brands see anonymous transactions with no customer personality, so they cannot tell what each shopper wants",
+      "status": "explicit",
+      "evidence_span": "when you walk into a store, how the brands feel is really, quite frankly, a little confused. All of us could be in the same store, and to all of them, it looks like different transactions. But there's no personality behind it"
+    },
+    {
+      "id": "P3",
+      "text": "The product assigns shopper personality via POS so brands can send receipts with recommended products and rich visuals",
+      "status": "explicit",
+      "evidence_span": "we leverage the point of sales system. So that, let's say, when Bruce Wayne is checking out, and you know he's someone who's a business kind of purchaser, and he just cares about his time and the brand, he'll walk in, buy something, we can send him a copy of the receipt, and alongside it, put in all those rich visuals with the recommended products"
+    },
+    {
+      "id": "P4",
+      "text": "A visual dashboard turns retail numbers into growth drivers, customer lists, and per-person sales so brands know what to fix",
+      "status": "explicit",
+      "evidence_span": "we want to turn those numbers into a really visual dashboard and an easy way for brands to tell not only how their sales are doing, but what they can do about it"
+    },
+    {
+      "id": "P5",
+      "text": "Initial market is mid-to-high luxury standalone fashion brands that care about customer experience",
+      "status": "explicit",
+      "evidence_span": "We went after the individual brands in the mid to high luxury tier fashion retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Anonymous in-store retail experience",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "POS personalization and brand dashboard",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Luxury fashion brand beachhead",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personalize the brick-and-mortar retail store experience for customers and brands",
+      "status": "explicit",
+      "evidence_span": "how we're going to personalize the retail store experience"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Give brands actionable insight into who is driving growth or decline",
+      "evidence_span": "not only how their sales are doing, but what they can do about it"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put in all those rich visuals with the recommended products"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These people care about providing the best experience for the customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Singleton D3 retained as separately revisable beachhead/GTM choice. Dashboard UI features (growth drivers, customer lists, profiles) folded into one analytics premise per v1.3.2 4.1(5). $4T/$6B market size framing excluded. P&G biography excluded per 4.2. Netflix/Pandora comparison is framing, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-911",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

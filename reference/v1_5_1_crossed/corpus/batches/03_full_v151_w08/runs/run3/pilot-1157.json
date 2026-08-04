@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "coder_session_id": "session_02",
+    "session_case_index": 20,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers are obsessed with elite status and reward points but struggle to optimize them",
+      "status": "explicit",
+      "evidence_span": "people are obsessed with rewards"
+    },
+    {
+      "id": "P2",
+      "text": "A dashboard organizes air/hotel/car reward balances, personal value, growth, expiry risk, and peer rank",
+      "status": "explicit",
+      "evidence_span": "a super smart dashboard that organizes all your points in one spot"
+    },
+    {
+      "id": "P3",
+      "text": "Deep analysis of spending patterns projects accrual and recommends cards/actions that bump status sooner",
+      "status": "explicit",
+      "evidence_span": "the technology that we developed to track your value over time and project it forward"
+    },
+    {
+      "id": "P4",
+      "text": "Destination and ticket planning overlays points-vs-cash and partner offers for best personal value not just cheapest fare",
+      "status": "explicit",
+      "evidence_span": "let you know if you're better off paying with points or cash"
+    },
+    {
+      "id": "P5",
+      "text": "Huge unused points pool and travel e-commerce inefficiencies create a large addressable opportunity",
+      "status": "explicit",
+      "evidence_span": "17 to 22 trillion unused points valued at half a trillion dollar and more"
+    },
+    {
+      "id": "P6",
+      "text": "Free-for-consumer Mint-like model monetizes via referral fees from airlines and reward cards when users save",
+      "status": "explicit",
+      "evidence_span": "we make money off the referral fee that we get not from the user, but rather from the airlines, the reward cards"
+    },
+    {
+      "id": "P7",
+      "text": "No competitor combines travel-rewards analysis, expense focus, and historical offer matching",
+      "status": "explicit",
+      "evidence_span": "there is no company today that analyzes your travel rewards"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "rewards optimization need",
+      "premise_ids": [
+        "P1",
+        "P7"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "points dashboard analysis and booking",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "market size and referral monetization",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help travelers become savvy by earning more points, getting status faster, and spending points more wisely",
+      "status": "explicit",
+      "evidence_span": "our goal at Superfly is to help you become one"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If Clooney's character is the ultimate savvy traveler, our goal at Superfly is to help you become one"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "figure out which offer is best suited for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When the user saves, we make money off the referral fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Balance/snapshot/rank/sign-up cascade folded into dashboard premise (§4.1.7). Projection/card recommendation kept as core analysis mechanism. Competitor typology folded into gap premise with P1. Enterprise monetization mentioned but free consumer+referrals coded as primary commercial. Three domains—anti-template: need/gap, product, market/monetization separately revisable."
+}

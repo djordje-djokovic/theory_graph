@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastic waste is pervasive including microplastics, yet plastics enable modern products",
+      "status": "explicit",
+      "evidence_span": "We're even finding microplastics in babies in the womb. This is insane. And so why are we producing so much of this stuff? It's because it's absolutely amazing"
+    },
+    {
+      "id": "P2",
+      "text": "Stabilized enzymes packaged inside plastics enable self-degradation after use",
+      "status": "explicit",
+      "evidence_span": "commercializing a breakthrough technology that lets us stabilize enzymes and package them up inside of the plastics so they can self-degrade when we're done with them"
+    },
+    {
+      "id": "P3",
+      "text": "Coated enzymes act like scissors cutting polymer chains from the inside when triggered",
+      "status": "explicit",
+      "evidence_span": "The enzymes act like scissors, cutting up the individual chains so that there's nothing left behind"
+    },
+    {
+      "id": "P4",
+      "text": "Triggering requires water and heat so degradation is on demand, not spontaneous",
+      "status": "explicit",
+      "evidence_span": "degradation is on demand. It requires water and heat. It doesn't happen just on its own"
+    },
+    {
+      "id": "P5",
+      "text": "Drop-in additive uses small enzyme amounts and is readily scalable",
+      "status": "explicit",
+      "evidence_span": "drop-in additive that's readily scalable. Enzymes are incredibly efficient, so we only need to use a little bit"
+    },
+    {
+      "id": "P6",
+      "text": "PLA beachhead ($3.5B, fast-growing) unlocks more compostable product types and favorable end-of-life conditions",
+      "status": "explicit",
+      "evidence_span": "starting with PLA, which is the first compostable plastic. It's a $3.5 billion market, and it's one of the fastest growing segments within the industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Plastic pollution and dependence",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Triggered enzyme additive technology",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "PLA market entry",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make-and-break materials that degrade cleanly after use",
+      "status": "explicit",
+      "evidence_span": "changing the way that we make and break materials so that we can live more harmoniously with nature"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "86% of that is waste"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-degrade when we're done with them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable a wider variety of favorable conditions at the end of life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Warm-water infrastructure merged into the triggered-degradation story rather than a separate ops premise in this run. Team credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-272",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "coder_session_id": "session_02",
+    "session_case_index": 9,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "H-2A seasonal labor is essential for U.S. farms but brings heavy regulation and paperwork requiring person-and-place tracking for compliance",
+      "status": "explicit",
+      "evidence_span": "without this program, farmers can't survive because they have no labor. But being that it's a government program, it's also heavily regulated. And with heavy regulations comes heavy paperwork"
+    },
+    {
+      "id": "P2",
+      "text": "Most farms still track labor with pen and paper, making accurate compliance impractical and audits often find violations",
+      "status": "explicit",
+      "evidence_span": "84% of farms today are still tracking everything with pen and paper. They haven't digitized yet"
+    },
+    {
+      "id": "P3",
+      "text": "AgriTrack digitizes farm labor data (who/what/when/where) via dashboard, field tablet with NFC clock-in, and geotagged phone apps built by a grower for growers",
+      "status": "explicit",
+      "evidence_span": "AgriTrack captures the most vital data that farmers need, which is labor. In other words, who is doing what, when, and where. And we digitize the whole process"
+    },
+    {
+      "id": "P4",
+      "text": "Labor audit reports and automated piece-rate/hourly/overtime payroll calculations keep farms DOL-ready and cut payroll from a day to minutes",
+      "status": "explicit",
+      "evidence_span": "the labor audit report. It's named that way for a reason, because it has everything that's in step with the Department of Labor"
+    },
+    {
+      "id": "P5",
+      "text": "Future modules will extend tracking to food traceability and spray records beyond the labor component",
+      "status": "explicit",
+      "evidence_span": "that is just with the labor component. In the future, there's food traceability modules, spray record modules"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "H-2A compliance paperwork problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Labor digitization apps",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Audit reports and payroll automation",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Expanded farm tracking modules",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Farms collect accurate labor data and stay confidently compliant when DOL audits",
+      "status": "explicit",
+      "evidence_span": "farms can utilize AgriTrack to have confidence in the data that they're collecting, knowing that it's accurate, and that if the Department of Labor comes knocking, they feel okay"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large time savings running payroll anywhere",
+      "evidence_span": "what used to take a day or more to run payroll and do that process is now actually being done in minutes with AgriTrack"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's really difficult to stay compliant when you're recording everything with pen and paper"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AgriTrack helps solve this problem by digitizing the whole process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download that report, give it to them, and they're ready to go"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everything that farmers are going to have to track can be found in AgriTrack"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three apps (dashboard/tablet NFC/phone geotag) folded into P3 as facets of one labor-digitization product. Grower-built origin kept as product positioning within P3. Pilot farm count and ARR excluded as traction. Team bios excluded. truncated=true because speaker ends abruptly out of time."
+}

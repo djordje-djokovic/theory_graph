@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-433",
+    "coder_session_id": "session_02",
+    "session_case_index": 19,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Site robots capture detailed 3D maps that cloud software analyzes into searchable, color-coded, ranked build-quality risk information with images for all stakeholders",
+      "status": "explicit",
+      "evidence_span": "Our robots drive around site, building detailed 3D maps of the environment. This captures the current state of the construction project"
+    },
+    {
+      "id": "P2",
+      "text": "B2B SaaS for multi-billion general contractors integrates with existing workflows, laser scanners, and industry file formats, landing on one project then expanding in-org",
+      "status": "explicit",
+      "evidence_span": "we are taking this to market on a B2B SaaS model, and we seamlessly integrate with existing workflows, including existing laser scanners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Robotic site mapping and risk analytics",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "GC B2B SaaS workflow integration",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help general contractors stay on budget and on schedule by focusing on what puts the project most at risk",
+      "status": "explicit",
+      "evidence_span": "our software will help you stay on budget and on schedule on your next project"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focus your attention on what's putting your project most at risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We onboard them with a single project, and then we grow within their organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Non-rigid registration, color codes, searchable filters, heat maps, and tagged images folded as cascade of one mapping+analytics mechanism (rule 7). Autodesk partnership treated as GTM evidence inside SaaS premise, not a separate premise."
+}

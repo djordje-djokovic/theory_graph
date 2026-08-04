@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-916",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Good ideas get lost across desktop, Dropbox, email, and other repositories",
+      "status": "explicit",
+      "evidence_span": "Is it in my desktop? Is it in my Dropbox? Is it in my inbox? Where is my great idea?"
+    },
+    {
+      "id": "P2",
+      "text": "Docurated discovers files across repositories and decomposes them into reusable page, chart, text, and image components",
+      "status": "explicit",
+      "evidence_span": "discover all of your files across any repository, email, desktop, third parties"
+    },
+    {
+      "id": "P3",
+      "text": "Components are indexed so one search returns the best relevant pages by content and context, improving with use",
+      "status": "explicit",
+      "evidence_span": "Each component is individually indexed and normalized"
+    },
+    {
+      "id": "P4",
+      "text": "Natural language processing labels content topics without manual tagging",
+      "status": "explicit",
+      "evidence_span": "You don't ever have to tag anything. We will analyze your words, we will analyze your ideas, and we will tell you what your content is about"
+    },
+    {
+      "id": "P5",
+      "text": "Users mash up pages visually into collages and export to PowerPoint or PDF regardless of source format",
+      "status": "explicit",
+      "evidence_span": "Each page can be mashed up from any other page, from any other file format"
+    },
+    {
+      "id": "P6",
+      "text": "Collages can be shared via visual email preview or saved for access anywhere",
+      "status": "explicit",
+      "evidence_span": "share your collage with an individual or a group, and they will receive a beautiful, visual email"
+    },
+    {
+      "id": "P7",
+      "text": "Availability to Dropbox users makes the product accessible beyond large enterprises",
+      "status": "explicit",
+      "evidence_span": "If you have a Dropbox account, DocuRated is yours"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cross-repository discovery and search",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "visual collage remix and share",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Dropbox-wide availability",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People find and reuse their best ideas from scattered files in one place",
+      "status": "explicit",
+      "evidence_span": "one place where all of our ideas are at our fingertips"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your best content, your best page, not a file, your best page appears to you in the order of relevance"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "each waiting to be used in a different and new way"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we believe that DocuRated belongs to everyone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Learn-over-time ranking folded into P3 as quantitative/behavioral detail of relevance search. Customer testimonial treated as evidence, not a new premise. $9B enterprise spend left as market framing. Singleton D3 retained as separately revisable distribution/access condition."
+}

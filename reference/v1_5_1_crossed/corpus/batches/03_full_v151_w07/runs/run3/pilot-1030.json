@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1030",
+    "coder_session_id": "session_03",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home robots today are large, expensive, and hard to use; personal robotics needs engaging, affordable, fun robots",
+      "status": "explicit",
+      "evidence_span": "take this kind of robots, large, expensive, very difficult to use, and move them into engaging, affordable, and fun to use robots in the home"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone and cloud robotics move computation off the robot onto devices you already own, making robots cheaper and dynamically upgradable",
+      "status": "explicit",
+      "evidence_span": "smartphone robotics and cloud robotics that takes a computation from the robot into devices you already have, making it much more affordable"
+    },
+    {
+      "id": "P3",
+      "text": "Ship task-targeted robots that do simple things well and can later unite, instead of Swiss-army robots costing hundreds of thousands",
+      "status": "explicit",
+      "evidence_span": "We're going to have a set of robots that are much more targeted at limited set of tasks"
+    },
+    {
+      "id": "P4",
+      "text": "Shimmy is a dumb hardware shell (motors, speakers, power) with music choreography, tracking, and smarts on phone/cloud",
+      "status": "explicit",
+      "evidence_span": "everything that the robot does actually happens on a smartphone app and on the cloud. And the robot is just some motors, high-end speakers, and power"
+    },
+    {
+      "id": "P5",
+      "text": "Consumer price around $199 (Kickstarter $149) with future app/game and multi-robot concepts",
+      "status": "explicit",
+      "evidence_span": "we're able to get it to $199"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "expensive difficult home robots",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smartphone-cloud dumb robot approach",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "consumer price and Kickstarter",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make a robot in every home a reality via affordable personal robotics",
+      "status": "explicit",
+      "evidence_span": "take the promise of a robot in every home and make it a reality"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "revolutionize personal robotics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Whenever you have a new phone or a new device on the cloud, your robot becomes smarter"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're able to get it to $199"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Large/expensive/hard robots as problem. Smartphone/cloud offload, task-targeted strategy, and Shimmy dumb-robot music/face/clap features folded as one mechanism cascade (§4.1.7). $199/Kickstarter as packaging. Miniaturization/manufacturing trends treated as framing inside affordability claim. Three domains—anti-template: problem, product approach, and price separately revisable."
+}

@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-304",
+    "coder_session_id": "session_01",
+    "session_case_index": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cancer patients at home lack monitoring of blood counts and vitals, so infections cause hospitalizations and delayed chemo",
+      "status": "explicit",
+      "evidence_span": "50% of cancer patients undergoing treatment suffer from low white blood cell counts that lead to an infection and a delay in cancer-fighting treatment"
+    },
+    {
+      "id": "P2",
+      "text": "An implanted smart chemo port with optical sensors and ML detects infection early from blood, heart, and vitals and alerts physicians without extra patient burden",
+      "status": "explicit",
+      "evidence_span": "implanted smart port that detects early signs of infection by measuring changes in blood cell counts, heart function, and vitals"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is selling the technology to port manufacturers",
+      "status": "explicit",
+      "evidence_span": "GoToMarket focuses on selling the technology to port manufacturers"
+    },
+    {
+      "id": "P4",
+      "text": "A clear FDA 510(k) path and verified CPT reimbursement codes enable commercialization",
+      "status": "explicit",
+      "evidence_span": "verified CPT codes for reimbursement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home infection monitoring gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart port sensing and alerts",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Port manufacturer sales",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "FDA and reimbursement path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect early signs of infection before symptoms so physicians can deliver life-saving care",
+      "status": "explicit",
+      "evidence_span": "detect early signs of infection before they even had symptoms"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Avoid hospitalizations and save over a billion dollars",
+      "evidence_span": "save over a billion dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Imagine the impact we could have on the quality of life of patients if we could detect early signs of infection before they even had symptoms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our advanced warning alerts physicians to changes in health status so they can take action and deliver life-saving care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "GoToMarket focuses on selling the technology to port manufacturers"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anticipate a 510K for the hardware and the software"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton domains retained: GTM and regulatory are separately revisable from the sensing product. Wearables/lab comparison and ML/EMR cascade folded into P2 (feature cascade). Team, Mayo traction, revenue forecast, and future dialysis/cardiac vision excluded. CPT+FDA kept as one institutional clearance premise; FDA span used on D4→V1 link."
+}

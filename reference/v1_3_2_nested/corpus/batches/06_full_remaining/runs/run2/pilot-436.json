@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People want to garden but usually water wrong and lack clear guidance on what, where, and how to plant",
+      "status": "explicit",
+      "evidence_span": "We are overwatering, we are underwatering, we are just doing it wrong"
+    },
+    {
+      "id": "P2",
+      "text": "Avalo's proprietary sub-irrigation reservoir lets plants self-water efficiently enough for week-long absences",
+      "status": "explicit",
+      "evidence_span": "Plants are actually able to use their own natural pressures to signal and draw that water up"
+    },
+    {
+      "id": "P3",
+      "text": "Subscription coaching with live Grow-team support is tailored to location and season, not generic internet advice",
+      "status": "explicit",
+      "evidence_span": "give you accurate information based on your location as well as your season"
+    },
+    {
+      "id": "P4",
+      "text": "Fully assembled insulated planter ships ready to use with optional vertical and cold-frame accessories",
+      "status": "explicit",
+      "evidence_span": "It has come fully assembled and with soil, which means he doesn't need any tools"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Black-thumb gardening struggle",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Self-watering insulated planter",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Location-aware coaching subscription",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Grow successfully anywhere with easy, guided gardening",
+      "status": "explicit",
+      "evidence_span": "With Avalo, you can grow anything, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of us have a black thumb"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-watering garden"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "coaching subscription, which does include everything"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "10-year warranty treated as confidence claim folded into hardware, not separate commercial premise. Climate protest framing not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-436",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1031",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social feeds are too noisy, so the content people care about gets lost amid low-value posts and invites",
+      "status": "explicit",
+      "evidence_span": "The problem is it's just way too noisy"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile community focused only on sharing and discovering compelling web content, without status updates, check-ins, or game invites",
+      "status": "explicit",
+      "evidence_span": "no status updates, no check-ins, no game invites. It's all about sharing and discovering the most interesting and compelling content"
+    },
+    {
+      "id": "P3",
+      "text": "Connecting existing social networks lets an algorithm surface the best content with friend social context and implicit interests plus serendipity",
+      "status": "explicit",
+      "evidence_span": "it'll analyze all the content that's coming through, and it'll surface the best stuff"
+    },
+    {
+      "id": "P4",
+      "text": "Users can follow tastemaker curators and reshare drips out to chosen networks",
+      "status": "explicit",
+      "evidence_span": "discover, who are the tastemakers? Who are the best curators on UnDrip"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "noisy social consumption",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "noise-free discovery community",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Busy people discover and share the gems of the web without social noise",
+      "status": "explicit",
+      "evidence_span": "helps you discover and share the gems of the web"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the stuff that we most care about gets lost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "noise-free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tweet/Facebook volume and jibba-jabba examples folded into noise problem (§4.1.6). Feed sections, implicit interests, serendipity, and drip reshare folded into discovery algorithm/community cascade (§4.1.7). Chegg bio excluded. Mobile App Store availability as packaging of mobile-community premise. Two domains."
+}

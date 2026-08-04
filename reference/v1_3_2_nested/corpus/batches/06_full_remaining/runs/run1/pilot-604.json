@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In spine surgery, surgeons cannot see screw paths inside vertebrae, and up to 23% of screws are malpositioned with paralysis risk",
+      "status": "explicit",
+      "evidence_span": "up to 23% of all the screws placed during spine surgery are malpositioned, and in some cases, it can even make the patient paralyzed"
+    },
+    {
+      "id": "P2",
+      "text": "Current navigation projects guidance on a distant screen, forcing surgeons to look away from the patient at critical moments",
+      "status": "explicit",
+      "evidence_span": "at the most critical moment, when the surgeon actually drills inside the vertebra, he needs to take his head off the patient and look aside on the distant screen to navigate"
+    },
+    {
+      "id": "P3",
+      "text": "Uncomfortable, non-intuitive navigation is why surgeons rarely use navigation systems",
+      "status": "explicit",
+      "evidence_span": "All the current solutions for navigation are uncomfortable for the surgeons, they're not intuitive, and that is the reason why surgeons are not using navigation systems so often"
+    },
+    {
+      "id": "P4",
+      "text": "The visor projects patient anatomy in real time onto the surgeon's retina with surgical precision and strong depth perception",
+      "status": "explicit",
+      "evidence_span": "we are able to project the patient anatomy in real time directly onto the surgeon's retina with surgical precision and with outstanding depth perception"
+    },
+    {
+      "id": "P5",
+      "text": "Workflow matches existing navigation: marker, pre-op scan, 3D CT model registered to the patient, with accurate tool tracking inside anatomy",
+      "status": "explicit",
+      "evidence_span": "The workflow is the same as all other navigation systems"
+    },
+    {
+      "id": "P6",
+      "text": "Business model integrates the visor into existing surgical navigation and imaging systems via partnerships with global leaders",
+      "status": "explicit",
+      "evidence_span": "Our business model is to integrate the visor into existing surgical navigation systems and medical imaging systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blind screw placement and awkward navigation",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Retinal x-ray-vision visor",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Integration into existing navigation systems",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give surgeons x-ray vision so they can see anatomy through tissue while still looking at the patient",
+      "status": "explicit",
+      "evidence_span": "give surgeons an x-ray vision, so they can see the patient's anatomy through the skin and tissue"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how can we help surgeons use navigation systems and also look at their patient at the same time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "project the patient anatomy in real time directly onto the surgeon's retina"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrate the visor into existing surgical navigation systems"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patented device language folded into visor capability (§4.1(1)/(5)). Market size and clinical-trial timeline excluded as framing/roadmap. Partnerships kept as go-to-market condition. Need/product/channel triad justified.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-604",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:49:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

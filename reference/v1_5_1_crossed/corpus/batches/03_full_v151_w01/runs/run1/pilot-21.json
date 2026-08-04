@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises face costly, slow modernization across large application portfolios as technical debt compounds",
+      "status": "explicit",
+      "evidence_span": "technical debt actually compounds over time"
+    },
+    {
+      "id": "P2",
+      "text": "A continuous modernization platform productizes identifying, cutting, and maintaining technical debt as a repeatable process",
+      "status": "explicit",
+      "evidence_span": "AppFactor is a continuous modernization platform"
+    },
+    {
+      "id": "P3",
+      "text": "Automation discovers apps and dependencies and generates containerized cloud-native deployments without manual code or YAML work",
+      "status": "explicit",
+      "evidence_span": "It generates a Docker file which contains all of the artifacts and dependencies of the application"
+    },
+    {
+      "id": "P4",
+      "text": "Machine learning classifications help identify, contextualize, and optimize application architecture across legacy stacks",
+      "status": "explicit",
+      "evidence_span": "built on top of machine learning classifications that help our users identify, contextualize, and optimize application architecture"
+    },
+    {
+      "id": "P5",
+      "text": "Route to market is through cloud-provider programs that accelerate cloud spend and customer modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "we see work very closely with the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "enterprise technical debt burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "continuous modernization automation",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "cloud provider go-to-market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises automate and accelerate modernization to cut technical debt and free maintenance budget",
+      "status": "explicit",
+      "evidence_span": "automate and simplify and create a repeatable, predictable process in how they transform existing software and technical debt"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of budget across all sectors is actually spent just maintaining that legacy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerate the process and simplify the entire end-to-end journey"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive the adoption of App Factor through those motions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Pitch cut off during differentiation section (truncated=true). Discovery-to-Fargate demo cascade folded into P3. Anti-template: debt problem / product automation / cloud GTM separately revisable."
+}

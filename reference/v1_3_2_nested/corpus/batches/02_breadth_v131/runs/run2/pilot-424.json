@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-424",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:44:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Loyal creators are demonetized under opaque rules and lack anyone to talk to on incumbent platforms",
+      "status": "explicit",
+      "evidence_span": "you also don't feel like you've got anyone to talk to"
+    },
+    {
+      "id": "P2",
+      "text": "Viewers get irrelevant ads and abusive comments instead of a safe way to support creators",
+      "status": "explicit",
+      "evidence_span": "the comment section is filled with what seems to just be abuse hurled at your favorite creator"
+    },
+    {
+      "id": "P3",
+      "text": "Watch is a creator-first, safety-first, social-first video-sharing platform",
+      "status": "explicit",
+      "evidence_span": "Our values are creator-first, safety-first, and social-first"
+    },
+    {
+      "id": "P4",
+      "text": "Scalable Kubernetes infrastructure and a million-upload processing pipeline support growth and attacks",
+      "status": "explicit",
+      "evidence_span": "built our entire back end upon a system called Kubernetes, which allows us to scale down to really, really low amounts of costs"
+    },
+    {
+      "id": "P5",
+      "text": "Moderation, Watchdog human endorsement, and an interestingness algorithm keep content safe and relevant",
+      "status": "explicit",
+      "evidence_span": "moderation piece, which protects users from things like inappropriate content and also areas like copyrights"
+    },
+    {
+      "id": "P6",
+      "text": "Creator Hub shows who the audience is and actionable guidance rather than only graphs",
+      "status": "explicit",
+      "evidence_span": "you'll see exactly who makes up your audience and actionable queries and statements that will help you to be a better creator"
+    },
+    {
+      "id": "P7",
+      "text": "Money comes from Super sub micro-subscriptions and advertising that creators control",
+      "status": "explicit",
+      "evidence_span": "Super sub, which is a creator-driven micro subscription model, and advertising, a more traditional method that the creator controls"
+    },
+    {
+      "id": "P8",
+      "text": "Emerging-market strategy locks exclusive content from highly followed regional creators",
+      "status": "explicit",
+      "evidence_span": "they have signed an agreement with us to say they're posting exclusive content"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Incumbent platform unfairness",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Safe scalable creator product",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Creator monetization and exclusive GTM",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reward and empower creators while giving consumers a more social, safe video experience",
+      "status": "explicit",
+      "evidence_span": "rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "treated in a way that doesn't seem fair"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more social, safe experience for the consumer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creator-driven micro subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent run splits infra scale from moderation/algorithm more than run1, still within one product domain. Soft warning: 8 premises at upper soft bound; exclusivity deal coded as GTM condition not traction count."
+}

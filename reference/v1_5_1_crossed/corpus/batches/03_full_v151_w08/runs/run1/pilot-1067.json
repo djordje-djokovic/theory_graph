@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1067",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sharing and getting local breaking news is weak today: not reliably real-time, accurate, local, or relevant",
+      "status": "explicit",
+      "evidence_span": "sharing and getting news right now kind of sucks"
+    },
+    {
+      "id": "P2",
+      "text": "A location-based mobile and web news desk lets users report and read map-pinned local stories with text, photos, and video",
+      "status": "explicit",
+      "evidence_span": "Me Porter is your local mobile news desk, allowing you to report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "On-scene users can check in as eyewitnesses and add their own accounts and media",
+      "status": "explicit",
+      "evidence_span": "we allow you to check in as an eyewitness"
+    },
+    {
+      "id": "P4",
+      "text": "Badges and press-pass rewards incentivize posting and can be redeemed for tangible prizes",
+      "status": "explicit",
+      "evidence_span": "we have a rewards program that we've built out in the app as well to reward people for posting the news"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization via promoted stories, publisher data syndication, in-app/web ads, and category sponsorships",
+      "status": "explicit",
+      "evidence_span": "we're going to allow people to actually promote their news stories at the top of the search results"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "local breaking news quality gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "location news desk and eyewitness check-in",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "contributor rewards",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "promotion syndication ads sponsorships",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users decide and get local news that matters as it happens on mobile",
+      "status": "explicit",
+      "evidence_span": "allowing you to decide what local news is important"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Getting breaking news is not the best way right now because it may not be real-time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incentivize people for posting news in their local areas"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how we plan to make the big bucks at MePorter"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Not-real-time/accurate/local/relevant folded into one news-quality pain-set. Friend invites and profiles treated as social facets of the news desk rather than separate premises. Promoted stories, syndication, ads, and sponsorships folded as one monetization package (price/channel structure for same offer). Contest/iPhone giveaway excluded as promo."
+}

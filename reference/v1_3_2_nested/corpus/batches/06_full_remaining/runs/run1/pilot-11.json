@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fake certificates and fake credentials are a large problem in parts of the world",
+      "status": "explicit",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "id": "P2",
+      "text": "A blockchain digital issuance platform lets tertiary institutions move from manual to digital credential issuance",
+      "status": "explicit",
+      "evidence_span": "solution for tertiary institutions to transition from manual credential processes to digital processes for issuance of credentials on the blockchain"
+    },
+    {
+      "id": "P3",
+      "text": "A verification platform lets employers, embassies, HR firms, and others verify academic records",
+      "status": "explicit",
+      "evidence_span": "verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records"
+    },
+    {
+      "id": "P4",
+      "text": "A mobile app lets individuals carry academic credentials safely and verifiably anywhere",
+      "status": "explicit",
+      "evidence_span": "mobile app for you, you, you, and you to be able to carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner"
+    },
+    {
+      "id": "P5",
+      "text": "APIs let other systems connect to issue credentials through Akowe",
+      "status": "explicit",
+      "evidence_span": "People can connect to our system to issue credentials from their systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fake-credential problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Blockchain issuance for institutions",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Third-party verification",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Individual credential wallet app",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Academic credentials can be issued and verified digitally in a trustworthy way",
+      "status": "explicit",
+      "evidence_span": "digital issuance platform and verification of academic records using blockchain technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "issuance of credentials on the blockchain"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "verify academic records via our platform"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Customer count and fundraising ask excluded. Issuance vs verification vs wallet treated as separately revisable surfaces; API folded with institutional issuance. Singleton D1 retained as problem framing independently revisable from product modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-11",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

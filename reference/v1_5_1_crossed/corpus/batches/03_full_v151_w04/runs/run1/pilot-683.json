@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-683",
+    "coder_session_id": "session_06",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:53:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Google ignores large shares of e-commerce, travel, and classified pages, so ignored pages cannot drive traffic or revenue",
+      "status": "explicit",
+      "evidence_span": "when a page is ignored by Google, it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "id": "P2",
+      "text": "Combining full-site crawling with server log analysis identifies which pages Google crawls or ignores and why",
+      "status": "explicit",
+      "evidence_span": "Botify is based on advanced web crawling and log files analyzing technologies"
+    },
+    {
+      "id": "P3",
+      "text": "Marketers use the insights to change the site so Google understands it better and traffic rises",
+      "status": "explicit",
+      "evidence_span": "When our customers optimize the way Google understands the website, they increase traffic by 35% in less than six months"
+    },
+    {
+      "id": "P4",
+      "text": "Botify is sold as a monthly SaaS subscription, with an API for custom dashboards",
+      "status": "explicit",
+      "evidence_span": "Botify is now available to all businesses through a monthly SaaS subscription model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Google-ignored pages revenue gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "crawl and log SEO analytics",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "monthly SaaS and API",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Digital marketers control how Google understands their sites to drive more traffic and revenue",
+      "status": "explicit",
+      "evidence_span": "gives digital marketers the power to control how Google understands their websites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "On average, Google ignores 35% of e-commerce website pages"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify content ignored, to understand why pages are ignored, to decide changes, and to monitor the results"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive more revenue on your website, go to botify.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Depth charts and product-category examples folded as feature cascade of crawl+log analysis (§4.1.7). Named customer logos and country counts excluded as traction. Anti-template: problem, analytics product, and SaaS commercial model separately revisable."
+}

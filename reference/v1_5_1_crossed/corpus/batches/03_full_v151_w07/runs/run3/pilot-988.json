@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A mesh networking app shares mobile internet across a user's phone, tablet, and laptop",
+      "status": "explicit",
+      "evidence_span": "enables you to share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "id": "P2",
+      "text": "Crowdsourcing connectivity yields faster and more reliable mobile internet for participants",
+      "status": "explicit",
+      "evidence_span": "works by crowdsourcing connectivity"
+    },
+    {
+      "id": "P3",
+      "text": "Availability on Android, Mac, and Windows plus more users improves collective connectivity",
+      "status": "explicit",
+      "evidence_span": "available on Android, Mac, and Windows laptop"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mesh internet sharing",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get faster, more reliable mobile internet by sharing connectivity in a mesh",
+      "status": "explicit",
+      "evidence_span": "benefit from a faster mobile internet and more reliable mobile internet"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "faster mobile internet and more reliable mobile internet"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Traction stories (HBO hurricane, Japan, India farmers, 2.5M installs), TechCrunch fundraising anecdote, and hiring CTA excluded (§4.2). Crowdsourcing benefit and cross-platform availability treated as packages of one mesh mechanism; network-effect line folded into platform availability premise. Single coherent domain."
+}

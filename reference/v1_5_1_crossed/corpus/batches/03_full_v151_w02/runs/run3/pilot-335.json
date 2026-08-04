@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combustion power plants are inefficient, inflexible, and emit large amounts of CO2",
+      "status": "explicit",
+      "evidence_span": "They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "id": "P2",
+      "text": "A closed-cycle SOFC system with CO2 separation and methanation reaches ~80% electric efficiency, full fuel conversion, pure CO2 output, and reversible power-to-gas",
+      "status": "explicit",
+      "evidence_span": "produces power at a groundbreaking efficiency of 80%. It is fully reversible. It is plug and play, and it even has a carbon negative footprint"
+    },
+    {
+      "id": "P3",
+      "text": "Biogas plants are the first market, earning more from doubled electric efficiency and reversible operation",
+      "status": "explicit",
+      "evidence_span": "Biogas plants are our first target market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Combustion power plant limits",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Closed-cycle SOFC plant",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas plant customers",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decentralized, carbon-negative, highly efficient power generation",
+      "status": "explicit",
+      "evidence_span": "decentralized, carbon negative, and highly efficient power plants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Fivefold income uplift for biogas customers from efficiency and reversible operation",
+      "evidence_span": "they can overall more than fivefold their income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These combustion power plants fail"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when there is not enough solar or wind power in the power grid, we produce renewable power from the biogas while separating pure CO2"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "SOFC + CO2 separation + methanation + efficiency/reversibility/carbon-negative metrics folded as one process+performance package (v1.5.1 §4.1.8). Container tour subsystems treated as implementation detail of P2. Global replacement vision and market-size figures excluded."
+}

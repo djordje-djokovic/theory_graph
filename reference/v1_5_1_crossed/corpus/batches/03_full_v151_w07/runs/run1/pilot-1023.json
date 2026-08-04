@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1023",
+    "coder_session_id": "session_01",
+    "session_case_index": 6,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Person-to-person bill support still largely uses cash and check with last-mile diversion and no co-payer visibility",
+      "status": "explicit",
+      "evidence_span": "Once I give them that money, it may not end up at its intended destination"
+    },
+    {
+      "id": "P2",
+      "text": "PayTap lets multiple people collaborate on a bill with funds going directly to the biller without requiring accounts",
+      "status": "explicit",
+      "evidence_span": "We allow people to collaborate and contribute towards a bill with the money going directly to the biller"
+    },
+    {
+      "id": "P3",
+      "text": "Contributors choose amount and payment method while keeping financial details private and FDIC-insured",
+      "status": "explicit",
+      "evidence_span": "no one gets to see my financial information"
+    },
+    {
+      "id": "P4",
+      "text": "Shared visibility, alerts, recurring payments, and private-mode invites coordinate family and roommate bill payment",
+      "status": "explicit",
+      "evidence_span": "we can collaborate together to make sure everything gets paid, nothing falls between the cracks"
+    },
+    {
+      "id": "P5",
+      "text": "Merchant integrations such as Amazon let groups split purchase cost until fully funded then ship",
+      "status": "explicit",
+      "evidence_span": "you can add an item from Amazon directly into Paytap"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution via web, Facebook, mobile apps and by letting billers and merchants offer PayTap to users",
+      "status": "explicit",
+      "evidence_span": "we're allowing billers and online merchants to offer Paytap to their users so that they can get payments made"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "collaborative direct-to-biller payments",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "merchant purchase splitting",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "biller and multi-channel distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Elegant shared payment that removes stress and hassle by sending money straight to the biller",
+      "status": "explicit",
+      "evidence_span": "we're the definition of elegant organisation for shared payment"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We take out the stress, the steps, and all the hassle involved in making payments"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when everyone has paid their amounts, the money goes off to Amazon"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can get payments made"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Market size $865B treated as context for P2P problem; mechanism coded not the number as traction. Cross-border remittance mention left as market scope framing within value narrative, not a separate premise. Amazon integration split as distinct merchant module."
+}

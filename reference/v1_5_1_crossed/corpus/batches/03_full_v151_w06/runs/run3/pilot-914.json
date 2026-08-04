@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-914",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Insurance brokers cannot legally rebate commissions, so Zenefits instead gives clients free HR, payroll, and benefits software/services funded by those commissions",
+      "status": "explicit",
+      "evidence_span": "it's illegal for them to rebate any portion of that commission to their clients. So I can't give you guys money back, but what I can do is provide a whole lot of services and software for free"
+    },
+    {
+      "id": "P2",
+      "text": "Clients make Zenefits broker of record via a simple carrier/policy signup so Zenefits collects ongoing commissions while plans and pricing stay unchanged",
+      "status": "explicit",
+      "evidence_span": "If you want to add your health insurance benefits to our platform, you make us your broker"
+    },
+    {
+      "id": "P3",
+      "text": "The platform connects existing payroll and benefits systems and mechanizes HR admin such as hiring, payroll setup, immigration checks, and benefits enrollment",
+      "status": "explicit",
+      "evidence_span": "You don't have to re enroll or switch anything you could just connect your existing systems to our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Because ~80% of HR work is administrative, free automation of that work gives employers a reason to switch from traditional brokers and HR outsourcers",
+      "status": "explicit",
+      "evidence_span": "HR is only 20% strategic. Things like who you hire, the kind of culture that you create. 80% of it is administrative"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "commission-funded free HR model",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "connected payroll benefits automation",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "admin-heavy HR switching rationale",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employers get payroll, benefits, and HR admin handled for free, removing administrative headaches",
+      "status": "explicit",
+      "evidence_span": "if we can take all these headaches off your hands, that's got to be something that's got to make sense for you to switch to us. And if we can do all of that for free"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "we do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can start to replace people and paper with software and technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if we can take all these headaches off your hands, that's got to be something that's got to make sense for you to switch to us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Onboarding/payroll/benefits enrollment steps folded as one mechanization cascade of the connected HR platform (§4.1.7). Broker-of-record kept with the free-via-commission commercial theory because commissions fund free software. Billion-dollar aspiration treated as framing. Three domains are commercial model, product automation, and switching rationale—not a need/product/money triad."
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Breaking and consuming local news today is not real-time, accurate, local, or relevant enough",
+      "status": "explicit",
+      "evidence_span": "getting breaking news is not the best way right now because it may not be real-time, it's not necessarily always accurate, it might not be local to you, and it might not be relevant or interesting to what you're looking for"
+    },
+    {
+      "id": "P2",
+      "text": "A location-based mobile desk lets users report, update, and read local stories pinned to a map",
+      "status": "explicit",
+      "evidence_span": "allowing you to report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "Eyewitness check-ins add on-scene accounts and media to stories",
+      "status": "explicit",
+      "evidence_span": "we actually allow you to check in as an eyewitness"
+    },
+    {
+      "id": "P4",
+      "text": "Badges and rewards incentivize posting local news",
+      "status": "explicit",
+      "evidence_span": "we also have a rewards program that we've built out in the app as well to reward people for posting the news"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization via promoted stories, publisher data syndication, ads, and category sponsorships",
+      "status": "explicit",
+      "evidence_span": "we're going to allow people to actually promote their news stories at the top of the search results"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Local news quality gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Location reporting and rewards",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Syndication ads and sponsorships",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users decide and share what local news matters as it happens",
+      "status": "explicit",
+      "evidence_span": "allowing you to decide what local news is important"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sharing and getting news right now kind of sucks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "report, update, and read local news as it happens"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incentivize people for posting news in their local areas"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Web parity of the map/newswire folded into the same product premise as the app. Contest/million-user campaign excluded as GTM stunt. Multiple monetization paths folded into one commercial premise (v1.3.2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1067",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-108",
+    "coder_session_id": "session_05",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing text, video chat, and video-attachment messaging fail to combine convenience with spontaneous personal video",
+      "status": "explicit",
+      "evidence_span": "text, which is very convenient, but not really personal. And also video, like video chat, which is engaging, but it doesn't really allow for you to do it on the fly"
+    },
+    {
+      "id": "P2",
+      "text": "Half-duplex video messages can be broadcast in near real time while recording, or watched later from cloud storage without using device space",
+      "status": "explicit",
+      "evidence_span": "somebody can watch it while you're still recording it"
+    },
+    {
+      "id": "P3",
+      "text": "The consumer app remains free with all features free and completely ad-free",
+      "status": "explicit",
+      "evidence_span": "we want to be a free app with all of our features free. And we want to be completely ad free"
+    },
+    {
+      "id": "P4",
+      "text": "Patent-pending technology can power enterprise and third-party half-duplex messaging use cases",
+      "status": "explicit",
+      "evidence_span": "there's a lot of benefit to our patent-pending technology that can really change and enrich how other applications interact with their users"
+    },
+    {
+      "id": "P5",
+      "text": "Live video messaging supports customer onboarding, teaching, and troubleshooting inside the app",
+      "status": "explicit",
+      "evidence_span": "one person to be able to both onboard users, to be able to teach users about the nuances of our application"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "personal video messaging gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "real-time cloud video messaging product",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise and third-party platform play",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient, spontaneous personal video messaging with the personality of video",
+      "status": "explicit",
+      "evidence_span": "the convenience of text messaging, but the personality of video"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Future lucrative enterprise or third-party messaging platform",
+      "evidence_span": "we're going to find a very powerful and lucrative enterprise play or third-party play"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communication problem with family and friends"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You push the button, you talk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this will be helpful in many other industries as well"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript cuts off mid-sentence on Android beta ask (truncated=true). Advisor bios excluded. Enterprise play kept as both a technology premise and secondary value criterion."
+}

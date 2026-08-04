@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-316",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plant-parasitic nematodes cause large annual crop losses and are hard to control",
+      "status": "explicit",
+      "evidence_span": "farmers lose roughly 12% of their crops every year to plant parasitic nematodes"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers and regulation demand safe, eco-friendly pest control, so farmers need biopesticide alternatives",
+      "status": "explicit",
+      "evidence_span": "consumers are demanding safe and eco-friendly pest control used on their foods"
+    },
+    {
+      "id": "P3",
+      "text": "Nematode pheromone science enables behavioral control such as dispersal",
+      "status": "explicit",
+      "evidence_span": "This gives us the power to control nematodes"
+    },
+    {
+      "id": "P4",
+      "text": "Ferrocote seed treatment protects young roots by telling parasitic nematodes to find other food",
+      "status": "explicit",
+      "evidence_span": "Ferrocote is a seed treatment that is applied to seeds before they are planted, and it protects the young and vulnerable roots from attack by plant parasitic nematodes"
+    },
+    {
+      "id": "P5",
+      "text": "Nemastim makes beneficial insect-infecting nematodes up to 200% more effective as biocontrols",
+      "status": "explicit",
+      "evidence_span": "Nemastim makes beneficial nematodes up to 200% more effective"
+    },
+    {
+      "id": "P6",
+      "text": "Scaling requires commercial partners in agricultural pest control and related markets",
+      "status": "explicit",
+      "evidence_span": "we are seeking commercial partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nematode crop loss and eco-friendly demand",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Pheromone products Ferrocote and Nemastim",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Commercial partner scale-up",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eco-friendly nematode control so farmers can grow more food",
+      "status": "explicit",
+      "evidence_span": "Our eco-friendly products control nematodes, so farmers can grow more food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "farmers demanding eco-friendly alternatives"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help us bring eco-friendly pest control"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have to scale this technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Two products split as distinct mechanisms (parasitic vs beneficial nematodes). Fundraising ask excluded; commercial partners retained as GTM condition. Pitch ends mid-sentence."
+}

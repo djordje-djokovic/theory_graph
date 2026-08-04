@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-281",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lab-centric monthly milk testing is slow, labor-intensive, and leaves farmers without real-time herd health information such as early mastitis detection",
+      "status": "explicit",
+      "evidence_span": "this lab-centric testing is time-consuming, labor-intensive, and often prone to human errors"
+    },
+    {
+      "id": "P2",
+      "text": "A handheld optical milk analyzer with embedded ML captures reagent-free milk quality metrics in about ten seconds",
+      "status": "explicit",
+      "evidence_span": "The hardware can capture the optical data from milk directly without any chemicals"
+    },
+    {
+      "id": "P3",
+      "text": "A portal provides customized herd- and cow-level data visualization for milk quality and health management",
+      "status": "explicit",
+      "evidence_span": "a portal with customized data visual for milk quality and health management"
+    },
+    {
+      "id": "P4",
+      "text": "Remote veterinary support from animal care partners supplies best-practice recommendations",
+      "status": "explicit",
+      "evidence_span": "a remote veterinary support from our animal care partners for best practices and recommendations"
+    },
+    {
+      "id": "P5",
+      "text": "The solution scales across dairy producers, co-ops, and processors along the supply chain",
+      "status": "explicit",
+      "evidence_span": "easily scale up entire supply chain from dairy producers, to dairy co-op and dairy processors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lab-centric milk testing gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "optical analyzer portal and vet support",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "dairy supply chain scale",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time milk quality and animal health management that improves dairy profitability",
+      "status": "explicit",
+      "evidence_span": "improving animal health and profitability, we can really reshape the dairy industry"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Potential extension to feed prediction, pathogen detection, and antibiotic residue detection",
+      "evidence_span": "potentials for other game-changing applications, such as feed prediction, pathogen detection, and antibiotic residue detection"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of real-time information is causing a big problem for industry"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identifies mass status before it spreads among herd and cause major economic losses"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unlocking this critical data, we can power innovation across the entire supply chain"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Speaker's three modules coded as separate capabilities (analyzer, portal, vet support). Mastitis folded into the testing-gap pain bundle rather than a separate premise. Future application list recorded as secondary value."
+}

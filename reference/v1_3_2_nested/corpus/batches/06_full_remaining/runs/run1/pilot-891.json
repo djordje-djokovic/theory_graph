@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robot innovation is now constrained by expensive complex hardware/actuators rather than brains, sensors, or software",
+      "status": "explicit",
+      "evidence_span": "robots are no longer constrained by these parts. They're instead constrained by the hardware"
+    },
+    {
+      "id": "P2",
+      "text": "ModBot's modular servo, joint, and link building blocks can assemble arms, printers, humanoids, and be reconfigured",
+      "status": "explicit",
+      "evidence_span": "ModBot identifies the common building blocks found in all robots. The servo, the joint, and the link"
+    },
+    {
+      "id": "P3",
+      "text": "Phone app enables on-the-fly hardware programming, keyframe recording, and wireless sequence repeat for rapid prototyping",
+      "status": "explicit",
+      "evidence_span": "You can use our phone app to do hardware programming on the fly, record key frames and repeat sequences wirelessly"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud/browser virtual robot builder with physics simulation lets users assemble, program, share, and order designs",
+      "status": "explicit",
+      "evidence_span": "ModBot puts your ideas into the cloud with our virtual robot builder"
+    },
+    {
+      "id": "P5",
+      "text": "Integrated joint packs encoder, motor, transmission, and bearings into one unit at about one-tenth industrial cost with better compactness",
+      "status": "explicit",
+      "evidence_span": "we've managed to reduce the cost of an industrial equivalent by about one-tenth"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hardware cost bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Modular affordable robot parts",
+      "premise_ids": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "App and cloud builder tooling",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Put quality affordable robot parts in everyday inventors' hands to massively speed robot innovation",
+      "status": "explicit",
+      "evidence_span": "get robots out of expensive research labs and into the hands of everyday inventors"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Small businesses can afford to build entire production lines locally",
+      "evidence_span": "Small businesses will be able to afford to build entire production lines locally"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if more people can afford and access quality hardware, then the pace of innovation can be massively increased"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "good quality and affordable robot parts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making ModBot easy to use for rapid prototyping"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Example builds (camera dolly, prosthetic, simulator) folded as uses of modular parts (v1.3.1 #2). PC analogy / robot revolution framing not coded as premises (v1.3.2 #4). Crowdfunding CTA excluded. Explicit affordability->innovation warrant noted in domain-value evidence.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:51:00+02:00"
+  }
+}

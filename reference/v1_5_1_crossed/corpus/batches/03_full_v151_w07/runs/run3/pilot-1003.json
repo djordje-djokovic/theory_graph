@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1003",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Car owners waste time going to shops, arranging rides, and risk being ripped off",
+      "status": "explicit",
+      "evidence_span": "don't waste your time going to a shop, begging friends for a ride, and then hoping and maybe praying that you don't get ripped off"
+    },
+    {
+      "id": "P2",
+      "text": "Customers book online in under 60 seconds with transparent price comparisons, mechanic ratings, seven-day availability, and a mechanic who comes to them",
+      "status": "explicit",
+      "evidence_span": "you can take care of your car problems in less than 60 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Symptom search and on-the-spot inspection via the mechanic mobile app yield a fixed estimate for needed services and parts",
+      "status": "explicit",
+      "evidence_span": "He'll come out, inspect your car. And Mike uses our mobile app"
+    },
+    {
+      "id": "P4",
+      "text": "Integration with the three largest North American parts suppliers plus large labor/parts datasets enables always-fixed fair prices without shady markups",
+      "status": "explicit",
+      "evidence_span": "We are fully integrated with the three largest car parts suppliers in North America"
+    },
+    {
+      "id": "P5",
+      "text": "Independent mechanics with their own tools can perform about 80% of repairs and earn more through the platform while customers save versus shop rates",
+      "status": "explicit",
+      "evidence_span": "all of us mechanics own our own scanners and tools to perform about 80% of all car repairs"
+    },
+    {
+      "id": "P6",
+      "text": "The addressable market is out-of-warranty cars older than five years with large annual repair spend",
+      "status": "explicit",
+      "evidence_span": "Out of warranty, older cars. Making this a $160 billion market opportunity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "shop-based car repair pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile mechanic marketplace",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "fixed fair parts-and-labor pricing",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "older out-of-warranty car market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fair, transparent car repair at your home or office without shop hassle",
+      "status": "explicit",
+      "evidence_span": "This awesome mechanic, Mike, will fix your car at your home, your office, or wherever you are"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mechanics make more than shop wages while customers save",
+      "evidence_span": "When you hire me through your mechanic, you save money, I make more, and everyone wins"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't waste your time going to a shop"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Your Mechanic is the car mechanic that comes to you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give you a fixed, fair price every time. No shady markups, and no last minute surprises"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Out of warranty, older cars"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Booking, transparency UI, come-to-you visit, and symptom/app estimate treated as one mobile-mechanic service surface with mechanic-supply conditions in the same marketplace domain. Parts-integration fixed pricing is a separately revisable commercial mechanism. Airbnb analogy and investor names are framing/traction—not premises. Gift certificate promotion excluded."
+}

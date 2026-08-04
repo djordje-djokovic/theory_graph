@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-849",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile apps leave users stuck with call/email/branch support that forces them out of the app",
+      "status": "explicit",
+      "evidence_span": "your only options for support are to leave the app and call an 800 number, send email feedback, or actually go in person to the store or branch"
+    },
+    {
+      "id": "P2",
+      "text": "SDK/platform enables real-time visual interactive support inside apps (screen share, draw, navigate, tap) across mobile-to-web and mobile-to-mobile",
+      "status": "explicit",
+      "evidence_span": "We power real-time communication inside of any mobile app"
+    },
+    {
+      "id": "P3",
+      "text": "Easy integration (~10 lines) with JavaScript CRM plugin and peer-to-peer so real-time data bypasses ShowKit servers",
+      "status": "explicit",
+      "evidence_span": "It's easy to integrate ShowKit into any mobile app with as few as 10 lines of code"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution via cloud partners, app studios, and developer tools already used by clients",
+      "status": "explicit",
+      "evidence_span": "We also partner with cloud services, app development studios, and third-party developer tools"
+    },
+    {
+      "id": "P5",
+      "text": "Licensing priced from $1,000/month including minutes, with free trial and startup discounts",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at a flat rate of $1,000 a month, which includes 50,000 minutes of call time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken mobile app support channels",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "in-app visual support SDK",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "partner distribution and SaaS pricing",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Visual, interactive real-time support and engagement inside mobile apps",
+      "status": "explicit",
+      "evidence_span": "ShowKit enhances the mobile customer support experience by making it visual and interactive"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These support solutions were not designed for mobile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's as if we were both standing there looking at your iPad"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distribute ShowKit to a larger number of potential clients through the tools and services they already use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Call/email/branch options folded as one mobile-support failure. Screen-share feature cascade kept inside SDK mechanism; P2P security and CRM plugin as integration/trust facets. Telesign engineer bio and 1,200 beta companies excluded as traction/biography. Promo free minutes excluded. Transcript truncates mid-CTA."
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-965",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:41:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Families abroad need remittances for food, medicine, and utilities under a high-friction status quo",
+      "status": "explicit",
+      "evidence_span": "so I can use it for food, medicine, and utility bills"
+    },
+    {
+      "id": "P2",
+      "text": "Regali delivers spendable SMS credits to family phones in Latin America",
+      "status": "explicit",
+      "evidence_span": "send a credit directly to their family cell phone in Latin America"
+    },
+    {
+      "id": "P3",
+      "text": "Senders onboard at mom-and-pop stores or online",
+      "status": "explicit",
+      "evidence_span": "Rosa wants to put food on the table for her sister back in Latin America, all she has to do is visit one of our local mom and pop stores"
+    },
+    {
+      "id": "P4",
+      "text": "Retailer fees enable a $3 flat fee that undercuts alternatives",
+      "status": "explicit",
+      "evidence_span": "a low flat fee of just $3, up to 70% cheaper than any alternative"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Immigrant remittance need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "SMS credit mechanism",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Distribution and flat-fee model",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Revolutionizing global remittances for immigrants supporting family basics",
+      "status": "explicit",
+      "evidence_span": "We are revolutionizing global remittances"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay for all of their family's basic needs back home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unique SMS pin code that she can use to pay for food"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "200 partner mom and pop stores"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Coarser coding: viral transfer treated as detail of P2 gift-card credit rather than its own premise. Anti-template note: need/product/money triad justified—speaker separates status-quo pain, SMS product, and retailer-subsidized fee as independently revisable."
+}

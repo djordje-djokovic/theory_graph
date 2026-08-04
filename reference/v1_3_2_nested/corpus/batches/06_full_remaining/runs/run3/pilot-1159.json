@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Target shoppers seek rarely discounted in-season handbags and accessories",
+      "status": "explicit",
+      "evidence_span": "most coveted handbags and accessories that either never or rarely go on sale"
+    },
+    {
+      "id": "P2",
+      "text": "Players spend credits to enter live sales whose price falls with participation",
+      "status": "explicit",
+      "evidence_span": "if 500 members are participating in the sale, the price will drop by $250 in that same 10-minute span"
+    },
+    {
+      "id": "P3",
+      "text": "Buy Now locks price with a short checkout window before inventory sells out",
+      "status": "explicit",
+      "evidence_span": "She will then have two minutes to check out and purchase her amazing new find"
+    },
+    {
+      "id": "P4",
+      "text": "Markup plus entrance fees fund ~60% gross margins",
+      "status": "explicit",
+      "evidence_span": "Once we cover the $200 cost of the merchandise, this results in a gross margin of about 60%"
+    },
+    {
+      "id": "P5",
+      "text": "PPC, SEO, and referral with monetary incentives acquire users against $50–75 ARPU",
+      "status": "explicit",
+      "evidence_span": "we give them a monetary incentive to do so"
+    },
+    {
+      "id": "P6",
+      "text": "Brands get Groupon-like demand spikes for in-season goods",
+      "status": "explicit",
+      "evidence_span": "We offer luxury brands a similar value proposition by helping to create buzz around their in-season merchandise"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer demand for It bags",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Credit descending sales",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Economics and brand GTM",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accessible in-season fashion via game pricing that also markets brands",
+      "status": "explicit",
+      "evidence_span": "making brands more accessible to consumers and consumers more accessible to brands"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "choose the price they want to pay"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using a game-like element to build buzz"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cost-effective marketing techniques"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Merged brand prop with commercial domain because speaker ties brand buzz to the same sale structure that funds margins. Notify-me email treated as UI detail of sales.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1159",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

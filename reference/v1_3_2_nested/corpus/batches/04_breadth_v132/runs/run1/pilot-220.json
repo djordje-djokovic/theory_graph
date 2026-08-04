@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Authentic video content such as reviews, unboxings, and how-tos can be leveraged by brands and retailers to increase revenue and customer acquisition",
+      "status": "explicit",
+      "evidence_span": "helps brands and retailers increase revenue and customer acquisition by leveraging authentic video content such as reviews, unboxing videos, how-to videos, and branded videos"
+    },
+    {
+      "id": "P2",
+      "text": "Machines can be trained to watch videos and search inside them across audio, text, and images in 11-plus dimensions",
+      "status": "explicit",
+      "evidence_span": "we have trained machines to watch videos"
+    },
+    {
+      "id": "P3",
+      "text": "Millions of YouTube videos can be matched to product catalogs",
+      "status": "explicit",
+      "evidence_span": "Vyral is able to match millions of videos on YouTube to product catalogs"
+    },
+    {
+      "id": "P4",
+      "text": "In-video search takes shoppers inside a video to the exact clips featuring the product attribute they are looking for",
+      "status": "explicit",
+      "evidence_span": "we can actually take you inside the video and we can actually show you portions of clips of video featuring leather seats"
+    },
+    {
+      "id": "P5",
+      "text": "Platform integrations with TikTok and a Shopify in-video search app distribute the product to millions of merchants",
+      "status": "explicit",
+      "evidence_span": "We recently launched our app, in-video search app, on Shopify for 3 million merchants"
+    },
+    {
+      "id": "P6",
+      "text": "A video search bar, API tools, and commerce tools make all videos shoppable and searchable",
+      "status": "explicit",
+      "evidence_span": "we offer a video search bar, API tools, and commerce tools to make all your videos shoppable and searchable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Video content opportunity",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "In-video search technology",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Platform distribution and commerce tools",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Brands and retailers increase revenue and customer acquisition through video commerce",
+      "status": "explicit",
+      "evidence_span": "helps brands and retailers increase revenue and customer acquisition"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Videos become shoppable and searchable for shoppers, improving shopping decisions",
+      "evidence_span": "make all your videos shoppable and searchable for both brands and shoppers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leveraging authentic video content such as reviews, unboxing videos, how-to videos, and branded videos"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can actually show you portions of clips of video featuring leather seats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "on Shopify for 3 million merchants"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.6
+  },
+  "notes": "Transcript ends mid-sentence ('so thank you very much, and this'); truncated per 4.8. Revenue generation, seed round, hiring, engagement and conversion metrics (2x-5x, 38%) excluded as traction per 4.2.3; UC Berkeley Skydeck origin excluded as credential. 'Vyral/Waro/VARL' treated as ASR noise for the venture name. No dependency links coded; none plainly asserted.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-220",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:34:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-790",
+    "coder_session_id": "session_01",
+    "session_case_index": 18,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Children should learn technology early, but existing tech-teaching toys are unsafe or outdated versus timeless play toys",
+      "status": "explicit",
+      "evidence_span": "these toys that teach children about technology are very dangerous to them"
+    },
+    {
+      "id": "P2",
+      "text": "Snap-together electronic cubes with motors and sensors let kids from age five build robots without wires",
+      "status": "explicit",
+      "evidence_span": "kids can snap them together and build their own robots"
+    },
+    {
+      "id": "P3",
+      "text": "An intuitive tablet app lets kids program robots by dragging and dropping blocks instead of writing code",
+      "status": "explicit",
+      "evidence_span": "Kids don't need to write the code. They just need to drag and drop blocks on the iPad"
+    },
+    {
+      "id": "P4",
+      "text": "Kits ship in multiple cube counts and advanced Pro/sensor variants sold via Kickstarter",
+      "status": "explicit",
+      "evidence_span": "we created three different robotics kits with the 9, 15, and 25 cubes"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unsafe outdated tech toys",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "modular cube robots and coding app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "kit SKUs and Kickstarter",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Kids learn technology safely by building and programming their own robots",
+      "status": "explicit",
+      "evidence_span": "change how children learn about technology with this cube"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we should teach them about technology at a very young age"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "kids starting from age of five can build their own robots and program them with a phone or tablet"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are live on Kickstarter"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Thin but complete pitch. Early-learning need and dangerous/outdated toys folded as one problem (§4.1.6). Cube electronics, wireless interconnect, and motor/sensor functions folded as one hardware mechanism; drag-drop app as companion programming module (§4.1.7). Kit sizes/Pro/sensor packs with Kickstarter as packaging/GTM. Child-test love treated as traction. Singleton D1/D3 retained. Anti-template: problem, product, and kit/GTM separately revisable. ASR Robo wonder/Wunderkind left in spans."
+}

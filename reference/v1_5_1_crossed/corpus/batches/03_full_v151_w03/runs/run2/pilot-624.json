@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-624",
+    "coder_session_id": "session_05",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:45:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing braille computer interfaces are expensive ($5–8k) and limited to few words because of bulky piezoelectric technology, contributing to low literacy among blind children",
+      "status": "explicit",
+      "evidence_span": "it's a $5,000 up to $8,000 keyboard. And where a blind person can read, it's extremely limited to just a few words"
+    },
+    {
+      "id": "P2",
+      "text": "Membrane-and-actuator airflow technology deforms each braille dot without mechanical elements, enabling thousands of dots on a tactile display",
+      "status": "explicit",
+      "evidence_span": "We're using a high-performance membrane bonded to an electrical actuator so that through an airflow channel, we can control and deform each braille dot individually"
+    },
+    {
+      "id": "P3",
+      "text": "A tactile tablet with touch-screen voiceover control lets blind users learn, work, and play on one device reading a full page of braille",
+      "status": "explicit",
+      "evidence_span": "It allows blind users for the first time to learn, work, and play with one single device"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud Braille converter turns text, documents, and web pages into braille for the tablet",
+      "status": "explicit",
+      "evidence_span": "It can convert anything into Brow, like text files, documents, even whole web pages"
+    },
+    {
+      "id": "P5",
+      "text": "Affordable ~$500 price with GTM via website, global distributors, and developing-country education channels",
+      "status": "explicit",
+      "evidence_span": "with the affordable price of $500 US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "limited expensive braille interfaces",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "tactile tablet and braille conversion",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "affordable distribution and access",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Open literacy and digital access for blind users, especially children, via an affordable full-page tactile tablet",
+      "status": "explicit",
+      "evidence_span": "we can change the future of millions of children"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Social mission to make schools and modern tech accessible for people with sight loss",
+      "evidence_span": "We are a venture with social mission"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leads to low literacy rate among blind children"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the digital e-reader for blind users"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make BlightApp accessible to developing countries"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we successfully scaled the technology and produced the world's first tactile display without any mechanical elements"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "§4.1.6: cost, few-word limit, piezo tech, and literacy consequence folded as one interface-pain bundle (P1). Demo voiceover/e-book/1900-dot facets folded into tablet mechanism (P3). Price and multi-channel GTM kept one commercial premise (P5) per §4.1.3. Kenya request and 23 distributor agreements treated as traction evidence of P5, not separate premises. ASR brand-name noise left in evidence spans."
+}

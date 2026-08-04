@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1156",
+    "coder_session_id": "session_06",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite hundreds of millions of social-network users, people make only about four valuable new connections per year because networks reinforce existing ties rather than surface hidden valuable people",
+      "status": "explicit",
+      "evidence_span": "four is the number of valuable, on average, valuable connections being made in a given year"
+    },
+    {
+      "id": "P2",
+      "text": "An iPhone app lets users select contacts, request permission, and make, manage, and track introductions on the go",
+      "status": "explicit",
+      "evidence_span": "Somazi's iPhone app allows you to make, manage, and track valuable introductions on the go"
+    },
+    {
+      "id": "P3",
+      "text": "A web service broadcasts real-time needs and opportunities across networks to reach hidden networks of people you know",
+      "status": "explicit",
+      "evidence_span": "Socializing Your Real-Time Needs is a web service that allows you to intelligently connect to the masses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "valuable connection discovery gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile introduction app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "real-time needs broadcast service",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intelligently connect people to people and opportunities they do not yet know but should",
+      "status": "explicit",
+      "evidence_span": "connect intelligently to the people and opportunities that you don't know, but should"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they're not designed to actually discover hidden networks of the people that you should be connected with"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "strengthen your relationships on a one-on-one basis"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage your network and connect with the networks and the hidden networks of the people you already know"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Facebook/Twitter/LinkedIn user counts folded into the four-connections problem framing (one pain-set). Speaker explicitly presents two products (mobile intros vs real-time needs web service) as separately revisable modules—singleton domains retained with that warrant. Super-connector vision kept as value, not an extra premise."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "coder_session_id": "session_05",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Physical-world businesses cannot execute hygienic AP steps because bills are hard and organizational functions are disconnected",
+      "status": "explicit",
+      "evidence_span": "the vast majority of businesses cannot execute these fundamental steps"
+    },
+    {
+      "id": "P2",
+      "text": "Bills can be read and reconciled without manual entry via spatial mapping, deterministic language models, and one-shot learning from user actions",
+      "status": "explicit",
+      "evidence_span": "We extract more than 50,000 data points from every page, the characters, and their relation to one another"
+    },
+    {
+      "id": "P3",
+      "text": "Contextualized bill data enables smart routing only to people who need to review and approve",
+      "status": "explicit",
+      "evidence_span": "we can ensure the smart routing of this bill only to the people in the organization who need to review and opine on it"
+    },
+    {
+      "id": "P4",
+      "text": "Line items can be assigned to customer, job, and accounting codes with one-click suggestions",
+      "status": "explicit",
+      "evidence_span": "a customer and job contextualized suggestion that, if accurate, the user can assign to every line item on the bill with a single click"
+    },
+    {
+      "id": "P5",
+      "text": "Approved bills sync into the accounting system and can be paid flexibly with captured net-term discounts",
+      "status": "explicit",
+      "evidence_span": "a single click approves the bill, auto-creates the associated record in the accounting system"
+    },
+    {
+      "id": "P6",
+      "text": "A fully integrated workflow pushes contextual AP data through collaboration across the organization",
+      "status": "explicit",
+      "evidence_span": "we can push this contextual data thread all the way through the process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AP process pain for physical businesses",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "bill reading and coding",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "accounting sync, payment, and collaboration",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-enriched AP operations that are more effortless, efficient, and confident",
+      "status": "explicit",
+      "evidence_span": "prosecute their AP tasks more effortlessly and more efficiently"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Makershub provides data-enriched accounts payable operations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture all of their data with no manual entry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "greater confidence in his financial operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "v1.5.1: validation/coding/entry/disconnected-functions treated as one AP pain bundle. Spatial mapping/LM/one-shot cascade folded into P2. Customer hours saved treated as traction, not a premise. Singleton D1 retained as separately revisable problem module."
+}

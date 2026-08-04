@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile conversion is lower than web because live testing is blocked by store approvals and forced downloads",
+      "status": "explicit",
+      "evidence_span": "we're constricted by approval processes and users having to download every one of our updates"
+    },
+    {
+      "id": "P2",
+      "text": "PathMap splits live traffic across UI variants and selects the higher-converting screen",
+      "status": "explicit",
+      "evidence_span": "50% of your users will start to see the small button, while 50% of your users will continue to see the big button"
+    },
+    {
+      "id": "P3",
+      "text": "Continuous capture of taps and swipes yields heat maps for redesign",
+      "status": "explicit",
+      "evidence_span": "PathMap was collecting data from each and every user, each tap, drag, tap, and swipe"
+    },
+    {
+      "id": "P4",
+      "text": "Free 45-day access then tiered pricing for every app size",
+      "status": "explicit",
+      "evidence_span": "tiered pricing model, which covers all size apps"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile testing constraints",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Live A-B and heat-map tooling",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Trial-to-paid pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobile apps convert more by testing and seeing real user behavior",
+      "status": "explicit",
+      "evidence_span": "screen that is guaranteed to convert more for us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "huge buzzkill for mobile conversion"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "discover opportunities to optimize our interface"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offered to you for 45 days absolutely free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Anti-template note: need/product/pricing triad justified—conversion constraint, product mechanisms, and commercial offer are separately revisable. Beta signup CTA excluded as ask.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1022",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

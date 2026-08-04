@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-715",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:03:03+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Teams juggle PowerPoint, email, Slack, Dropbox/Drive, and separate present/share tools, which ruins formatting and versions",
+      "status": "explicit",
+      "evidence_span": "Someone uploads it to Dropbox or Google Drive. Someone else has the wrong version of PowerPoint. It totally ruins the formatting"
+    },
+    {
+      "id": "P2",
+      "text": "Slides replaces that stack with one end-to-end create–present–share platform and a new structure for presentations",
+      "status": "explicit",
+      "evidence_span": "We have an entirely new format for how you structure your presentations"
+    },
+    {
+      "id": "P3",
+      "text": "Live embeds, collaboration, team templates, and device-agnostic presenting are delivered inside that single product",
+      "status": "explicit",
+      "evidence_span": "Slides makes it incredibly easy to include live content like this from any service"
+    },
+    {
+      "id": "P4",
+      "text": "Commercial model includes free use plus paid individual, team, and Enterprise firewall offerings",
+      "status": "explicit",
+      "evidence_span": "Everyone can sign up for free and create presentations. We offer plans for individuals and teams"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Multi-tool presentation pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Unified Slides platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium and Enterprise pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy collaborative presentation work that looks great in any setting",
+      "status": "explicit",
+      "evidence_span": "We make it easy to work together on presentations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when you finally finish your presentation and you want to share it online or present live, you need to find yet another tool"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "But we know that presentations don't stop at the editor"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sign up now at Slides.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Live content and templates folded as features of unified platform. Judge Q&A after pitch not coded. 500k users / 13M visitors excluded as traction."
+}

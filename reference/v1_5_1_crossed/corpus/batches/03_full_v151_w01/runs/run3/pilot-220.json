@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-220",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In-video search and personalization match catalog products to moments inside review/unboxing/how-to/branded videos across many multimodal dimensions",
+      "status": "explicit",
+      "evidence_span": "Vyral is able to match millions of videos on YouTube to product catalogs. And we can Google inside the video, the audio, text, and images in 11 plus dimensions"
+    },
+    {
+      "id": "P2",
+      "text": "Shoppers can jump to relevant clips inside videos, increasing efficacy of shopping decisions for brands and retailers",
+      "status": "explicit",
+      "evidence_span": "not only can we find the four videos, but we can actually take you inside the video and we can actually show you portions of clips of video featuring leather seats"
+    },
+    {
+      "id": "P3",
+      "text": "Video search bar, APIs, and commerce tools on TikTok/Shopify make merchant videos shoppable and searchable",
+      "status": "explicit",
+      "evidence_span": "we offer a video search bar, API tools, and commerce tools to make all your videos shoppable and searchable for both brands and shoppers"
+    },
+    {
+      "id": "P4",
+      "text": "Deployments raise page engagement 2–5x and conversion up to ~38%",
+      "status": "explicit",
+      "evidence_span": "We increased page engagement 2x to 5x, and we increased conversion by up to 38%"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-video product intelligence",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Shoppable video commerce tools",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Engagement and conversion lift",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Brands and retailers increase revenue and customer acquisition via authentic video commerce",
+      "status": "explicit",
+      "evidence_span": "helps brands and retailers increase revenue and customer acquisition by leveraging authentic video content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increasing the efficacy of making shopping decisions for brands and retailers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all your videos shoppable and searchable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increased conversion by up to 38%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Review/unboxing/how-to/branded video types folded as content sources for P1. Seed round/hiring excluded. truncated=true — pitch cuts mid-sentence at the end."
+}

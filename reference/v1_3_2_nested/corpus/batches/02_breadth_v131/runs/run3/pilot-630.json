@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:57:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial construction lacks active monitoring for water, mold, and fire risks that drive large preventable losses",
+      "status": "explicit",
+      "evidence_span": "fire damage represents 30% of all the damage that the insurance industry paid out last year for commercial job sites. But there's currently no active fire monitoring solution for most job sites today"
+    },
+    {
+      "id": "P2",
+      "text": "End-to-end job-site sensor networks deliver warning/mitigation, logistics insights, and a lasting building Carfax from the same monitoring system",
+      "status": "explicit",
+      "evidence_span": "Pillar is the first real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    },
+    {
+      "id": "P3",
+      "text": "Easy multi-method mounting and floor-plan-based deployment get networks live quickly on dynamic sites",
+      "status": "explicit",
+      "evidence_span": "we deploy smart sensor networks on job sites. There's multiple mounting methods built in here"
+    },
+    {
+      "id": "P4",
+      "text": "Alerts reach contractors on a dashboard and via smartphone push so they need not learn new software",
+      "status": "explicit",
+      "evidence_span": "All the alerts and notifications go to our main dashboard"
+    },
+    {
+      "id": "P5",
+      "text": "Per-square-foot install plus monthly fees bundle hardware through analytics as hardware-and-software-as-a-service",
+      "status": "explicit",
+      "evidence_span": "it's almost hardware and software as a service. We're bundling hardware, firmware, software, and data analytics into one easy package"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmonitored construction hazards",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Job-site sensor monitoring system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-square-foot HaaS pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less time, less money, and higher build quality through job-site environmental monitoring",
+      "status": "explicit",
+      "evidence_span": "Less time, less money, and with a quality never before seen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of which were preventable or mitigatable if they had a monitoring solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protecting the contractor in case of a mold issue"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incredibly easy to quote"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.3.1: First/Two/Three uses merged into P2 (Carfax included as use of same mechanism). Dollar fee amounts are detail inside the bundled pricing premise."
+}

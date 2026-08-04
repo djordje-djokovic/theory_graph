@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Surgeons drilling spine screws cannot see inside the vertebra and frequently malposition screws",
+      "status": "explicit",
+      "evidence_span": "you cannot really see where the screw goes inside the vertebra"
+    },
+    {
+      "id": "P2",
+      "text": "Screen-based navigation makes OR teams look away from the patient, so surgeons avoid using it",
+      "status": "explicit",
+      "evidence_span": "Not a single person in the OR is actually looking at the patient during the procedure because all the navigated information is projected on a distant screen"
+    },
+    {
+      "id": "P3",
+      "text": "A see-through visor projects a registered 3D anatomy model onto both retinas with depth perception and tracks tools inside the anatomy",
+      "status": "explicit",
+      "evidence_span": "a see-through device that goes beyond the limitation of our eyes and beyond the complications of any other existing technology"
+    },
+    {
+      "id": "P4",
+      "text": "Registration workflow (marker, scan, 3D CT model) matches other navigation systems to ease adoption",
+      "status": "explicit",
+      "evidence_span": "We place a marker on the patient, and then we scan the patient just before the surgery"
+    },
+    {
+      "id": "P5",
+      "text": "Visor is sold by integrating into partners' existing surgical navigation and imaging systems",
+      "status": "explicit",
+      "evidence_span": "we already signed strategic partnership with several global leaders that will eventually sell our system together with their system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Invisible screw path and unused navigation",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Retinal projection visor",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner-integrated distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Surgeons see patient anatomy through skin while looking at the patient during navigation",
+      "status": "explicit",
+      "evidence_span": "see the patient's anatomy through the skin and tissue"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "surgeons are not using navigation systems so often"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true 3D spine model of the patient in a very good depth perception"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrate the visor into existing surgical navigation systems and medical imaging systems"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 folds precision/depth claims into one visor premise. Signed partnerships treated as channel condition (continuing), not mere traction metric.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-604",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:50:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

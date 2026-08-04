@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMBs are surrounded by energy data but rarely use it, so they struggle to make good energy choices",
+      "status": "explicit",
+      "evidence_span": "Businesses are surrounded by energy data, but few of them use it"
+    },
+    {
+      "id": "P2",
+      "text": "Energy bills contain many unused information fields beyond the total cost line",
+      "status": "explicit",
+      "evidence_span": "his energy bill actually contains over 30 unique pieces of information"
+    },
+    {
+      "id": "P3",
+      "text": "One-off consultant reports fade; costs recur without ongoing organized energy data management",
+      "status": "explicit",
+      "evidence_span": "the report sits on a shelf, and then 12 months later, his energy costs have gone up"
+    },
+    {
+      "id": "P4",
+      "text": "Uploading an energy bill is enough for the system to extract, organize, visualize, and analyze energy data",
+      "status": "explicit",
+      "evidence_span": "All they need is an energy bill"
+    },
+    {
+      "id": "P5",
+      "text": "Dashboard surfaces multi-year cost outlook, cost/consumption/carbon views, weather effects, and automated insights",
+      "status": "explicit",
+      "evidence_span": "We automatically create insights that will warn Sean when this is happening"
+    },
+    {
+      "id": "P6",
+      "text": "External benchmarks and supplier price comparisons identify savings opportunities",
+      "status": "explicit",
+      "evidence_span": "We combine Sean's data with external data sources to show him how he's performing against the best in class"
+    },
+    {
+      "id": "P7",
+      "text": "Free bill upload with paid ongoing analysis under about one pound per day per site, plus API for utilities/professionals",
+      "status": "explicit",
+      "evidence_span": "we charge a fee of less than one pound per day per site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB energy-data underuse problem",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Bill-upload analytics and insights",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium and API pricing",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help SMBs cut energy costs and environmental impact by understanding and acting on their energy data",
+      "status": "explicit",
+      "evidence_span": "helping them reduce their costs by thousands and reduce their environmental impacts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make better energy decisions by organizing and analyzing their energy data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "discover the power of your energy data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for free if they have an energy bill"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D3: pricing/API is separately revisable commercial module. Smart-meter/legislation future treated as market context not premises. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-735",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

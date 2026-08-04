@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-593",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People struggle to choose skincare products that match their skin despite available technology",
+      "status": "explicit",
+      "evidence_span": "we couldn't even figure out what to put on our face"
+    },
+    {
+      "id": "P2",
+      "text": "An always-available personal skincare consultant combines human expertise with AI/machine learning",
+      "status": "explicit",
+      "evidence_span": "It is your personal skin care consultant that you can access anytime and is powered by a combination of human expertise and artificial intelligence"
+    },
+    {
+      "id": "P3",
+      "text": "Quiz, photo, and preference inputs map users into 30+ skin types across five dimensions for recommendations",
+      "status": "explicit",
+      "evidence_span": "we've divided people into more than 30 different skin types based on five dimensions"
+    },
+    {
+      "id": "P4",
+      "text": "A human advisor cross-checks AI output and narrows to one product with a checkout link",
+      "status": "explicit",
+      "evidence_span": "it sends all these skin data to a real human advisor who will do a cross-check, validate the system, and then narrow it down to one product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Not knowing what to put on your face",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI plus human skincare consultant",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Achieve better skin and confidence without trial-and-error product hunting",
+      "status": "explicit",
+      "evidence_span": "help more people achieve better skin and gain that confidence without going through all the trials and errors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if we can find a way to potentially match ingredients with someone's skin type"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spend more time looking great and less time wondering how"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-pitch. Demo question/quiz/recommendation cascade folded into the consultant mechanism with human validation as a distinct but co-revised step of the same offering. Conversion/repurchase traction and market-size figures excluded."
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-918",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:02+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Paladores, underground dining, and pop-ups show widespread authentic home dining already exists",
+      "status": "explicit",
+      "evidence_span": "in Havana, Cuba, there are over 1,000 home restaurants called paladores"
+    },
+    {
+      "id": "P2",
+      "text": "EatWith is a community marketplace for authentic dining experiences across homes and unique venues",
+      "status": "explicit",
+      "evidence_span": "EatWith is a community marketplace for authentic dining experiences"
+    },
+    {
+      "id": "P3",
+      "text": "Platform adds eBay/Airbnb-style structure, safety, and trust so the phenomenon scales",
+      "status": "explicit",
+      "evidence_span": "just like eBay did for garage sales and Airbnb did for vacation rentals, is simply put business structure, safety, and trust around this phenomena"
+    },
+    {
+      "id": "P4",
+      "text": "Host verification includes a $1M event guarantee; booking is secure payment with commission included",
+      "status": "explicit",
+      "evidence_span": "Joel is an Eat With verified host, which means that all of his events are protected under the Eat With $1 million guarantee"
+    },
+    {
+      "id": "P5",
+      "text": "Locals as well as tourists book, expanding beyond travel into a new dining category",
+      "status": "explicit",
+      "evidence_span": "This is about disrupting a $1.9 trillion restaurant industry with a whole new dining category"
+    },
+    {
+      "id": "P6",
+      "text": "Hosts can earn extra income while sharing cooking passion",
+      "status": "explicit",
+      "evidence_span": "Eat With lets me do this while earning some extra income"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Authentic dining marketplace",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Traveler and local demand",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Host earning motive",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Diners get authentic local food experiences with interesting people",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hosts earn income while sharing cooking passion",
+      "evidence_span": "earning some extra income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "community marketplace for authentic dining experiences"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Most of the tourists want to meet the locals and to have an authentic dining experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "earning some extra income"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D3 retained: host income motive is a separately revisable supply-side condition. Restaurant-industry dollar figure kept only as category claim warrant, not as a market-size premise."
+}

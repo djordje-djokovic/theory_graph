@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1049",
+    "coder_session_id": "session_03",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing apps find single venues/events but cannot compose places and events that go together for an occasion",
+      "status": "explicit",
+      "evidence_span": "there's not a single product on the market today that can tell you what places and what events go together for your occasion"
+    },
+    {
+      "id": "P2",
+      "text": "Plans start from mood and companions, optional anchor events, review snippets, and Facebook-personalized itineraries",
+      "status": "explicit",
+      "evidence_span": "most people, when planning any social occasion, think of two things. What's my mood and who's coming with me?"
+    },
+    {
+      "id": "P3",
+      "text": "Algorithmically classifies, ranks, and composes live web places/events into itineraries—never hand-curated",
+      "status": "explicit",
+      "evidence_span": "Everything's algorithmically generated. Not a single thing is hand curated"
+    },
+    {
+      "id": "P4",
+      "text": "Itineraries include review snippets, directions, booking/ticket links, and editable plans friends can advise on via Facebook",
+      "status": "explicit",
+      "evidence_span": "You even have relevant information about each place, and you can get directions from place to place to place here, as well as booking links out to OpenTable"
+    },
+    {
+      "id": "P5",
+      "text": "One-tap Facebook event creation from a WIATA plan for inviting others",
+      "status": "explicit",
+      "evidence_span": "What's awesome about making a Facebook event on WIATA is that it's even easier than making a Facebook event on Facebook site itself"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "occasion planning beyond single venues",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "algorithmic itinerary composition",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Facebook event from plan",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personal-concierge planning that solves what to do tonight and removes planning hassle",
+      "status": "explicit",
+      "evidence_span": "It solves the problem of what to do tonight. It also takes all the hassle out of planning it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "WIATA is a lot like having your own personal concierge"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Making plans has never been easier"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's our Facebook event. That happened in less than two seconds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Single-venue gap as problem. Mood/companions/event/Facebook inputs, live algorithmic composition, and review/booking/friend-edit surfaces folded as itinerary product cascade (§4.1.7). Facebook event creation split as distinct social distribution module. Uber tweet promo excluded. Metro expansion as vision framing. Three domains—anti-template."
+}

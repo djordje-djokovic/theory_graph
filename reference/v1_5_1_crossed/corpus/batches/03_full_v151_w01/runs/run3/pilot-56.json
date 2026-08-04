@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-56",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hourly professionals lose large amounts of billable mobile call time because tracking is time-consuming and methods are weak",
+      "status": "explicit",
+      "evidence_span": "roughly 40% of the time, professionals that build by the hour spend talking on a mobile phone goes unbilled"
+    },
+    {
+      "id": "P2",
+      "text": "A third button on the mobile call screen automatically starts tracking the call for billing when pressed",
+      "status": "explicit",
+      "evidence_span": "adding a third button to the mobile call screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unbilled mobile call time",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "one-tap call billing capture",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Capture previously missed mobile client call time for billing professionals",
+      "status": "explicit",
+      "evidence_span": "our app automatically starts tracking that call for billing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you forget to bill those calls"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app automatically starts tracking that call for billing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Downloads/users and seed ask excluded as traction/financing. Target roles (attorneys/consultants/coaches) folded into value audience, not a separate market premise. Both domains are singletons with distinct need vs capture mechanism."
+}

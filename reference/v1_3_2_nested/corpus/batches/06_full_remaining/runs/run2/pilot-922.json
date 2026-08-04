@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Reps juggle many concurrent contracts through drafts, approvals, and signatures that turn chaotic at org scale",
+      "status": "explicit",
+      "evidence_span": "The average rep is juggling about 30 of these at any given time"
+    },
+    {
+      "id": "P2",
+      "text": "Users can request and share documents, get manager approvals, and collect internal and external signatures in one structured workflow",
+      "status": "explicit",
+      "evidence_span": "request and share documents, get manager approvals, and get signatures"
+    },
+    {
+      "id": "P3",
+      "text": "Blockers get automatic links to view history, comment, approve, or sign in one click with team-wide notifications",
+      "status": "explicit",
+      "evidence_span": "approve and sign in just one click"
+    },
+    {
+      "id": "P4",
+      "text": "Executives see deal status in one dashboard instead of chasing email and call updates",
+      "status": "explicit",
+      "evidence_span": "the only way for executives, VPs, and managers to get their hands on this valuable data was through the tedious process of emailing and calling"
+    },
+    {
+      "id": "P5",
+      "text": "Glider fills the painful middle between CRMs and e-signature tools to keep teams closing together",
+      "status": "explicit",
+      "evidence_span": "remember that painful portion in the middle"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contract chaos at scale",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "End-to-end contract workflow",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Management visibility and wedge",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "See how close deals are to closing and keep attention on what needs action",
+      "status": "explicit",
+      "evidence_span": "see how close each of your deals are to closing and keep track of which deals need your immediate attention"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reinvent how people interact with workplace documents",
+      "evidence_span": "reinventing the way that people interact with documents in the workplace"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your contract process very quickly turns into this"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes them dead simple to follow"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see in one place how many deals are off in legal land"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Anti-template note: D1 problem, D2 product workflow, D3 visibility/positioning are separately revisable in the transcript (pain vs builder vs dashboard/wedge).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-922",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:45:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1031",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social media content consumption is too noisy and time-consuming; gems get lost in status updates, game invites, and volume",
+      "status": "explicit",
+      "evidence_span": "The problem is it's just way too noisy"
+    },
+    {
+      "id": "P2",
+      "text": "Undrip is a noise-free mobile community focused only on sharing and discovering compelling web content (Path for links)",
+      "status": "explicit",
+      "evidence_span": "It's all about sharing and discovering the most interesting and compelling content from around the web, noise-free"
+    },
+    {
+      "id": "P3",
+      "text": "Connect existing social accounts; algorithm surfaces best content using habits, friend relationships, and popularity with friend social context",
+      "status": "explicit",
+      "evidence_span": "I can connect my Twitter, my Facebook, my Instagram, my Tumblr, and it'll analyze all the content that's coming through, and it'll surface the best stuff"
+    },
+    {
+      "id": "P4",
+      "text": "Implicit interests plus social context enable serendipity; drip reshare and follow tastemakers mix curators into the feed",
+      "status": "explicit",
+      "evidence_span": "the big value of having social context a big part of the algorithm is that it introduces and allows for an element of surprise"
+    },
+    {
+      "id": "P5",
+      "text": "Product is mobile-first on iPhone/iPad (Android soon) leveraging existing social graph",
+      "status": "explicit",
+      "evidence_span": "probably most importantly, it's all mobile"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "noisy social content overload",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "noise-free discovery algorithm and curation",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "mobile-first distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Discover and share the gems of the web with relevance and serendipity without noise",
+      "status": "explicit",
+      "evidence_span": "helps you discover and share the gems of the web"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The jibba jabba stops here"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What Google did for the web, which is create relevance and order to all the content out there, we're doing for the social web"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're on the iPhone. We're on the iPad. We're in the App Store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Noise/volume/busy pains folded as one problem (§4.1.6). Community slice, feed connect, ranking signals, friend thumbnails, multi-media sections, drip, and tastemaker follow folded as discovery-product cascade (§4.1.7). Mobile-first as distribution premise. Bio/Chegg sale excluded. Three domains—anti-template."
+}

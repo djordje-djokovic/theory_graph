@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1070",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "With millions of photos shared daily, finding pictures you like is hard",
+      "status": "explicit",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "id": "P2",
+      "text": "Skyline matches personal interests from social networks to a large real-time photo stream so each user gets their own skyline",
+      "status": "explicit",
+      "evidence_span": "Matching your personal interest to that stream of real-time photos means everybody gets his own skyline"
+    },
+    {
+      "id": "P3",
+      "text": "Website, iPhone/Android apps, explore, and event back-channel present interest-ranked real-time photo streams",
+      "status": "explicit",
+      "evidence_span": "We are not only launching this as a website, but also as an app, both on iPhone and on Android"
+    },
+    {
+      "id": "P4",
+      "text": "Brands target interest plus location or time with ads; widgets offer revenue share or ad-free monthly fees",
+      "status": "explicit",
+      "evidence_span": "Brands can target an interest, like TechCrunch Disrupt, if they want, combined with location or time"
+    },
+    {
+      "id": "P5",
+      "text": "Services are built on an API with widget and API sign-up opening for broader reach",
+      "status": "explicit",
+      "evidence_span": "all our services are built on our own API"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "photo discovery problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "interest-matched real-time photo product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "interest-targeted ads and widgets",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organize real-time photos the way Google organized websites so people find pictures they like",
+      "status": "explicit",
+      "evidence_span": "Skyline organizes real-time photos. So we'll do real-time photos, what Google did for websites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody gets his own skyline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increases our revenue and our reach"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Facebook/Twitter/Foursquare interest collection and Instagram/TwitPic ingest folded into matching mechanism (§4.1.7). Live demo glitches ignored."
+}

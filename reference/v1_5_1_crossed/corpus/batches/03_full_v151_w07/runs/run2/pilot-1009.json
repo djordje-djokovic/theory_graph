@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1009",
+    "coder_session_id": "session_02",
+    "session_case_index": 4,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "HTML5 and browser stacks have inherent flaws that prevent native-class performant 3D apps",
+      "status": "explicit",
+      "evidence_span": "there are inherent flaws that exist in the browser that make that impossible"
+    },
+    {
+      "id": "P2",
+      "text": "Treating a game engine as an app engine and talking directly to the GPU delivers high-performance 3D/2D across phones, PCs, and consoles in JavaScript",
+      "status": "explicit",
+      "evidence_span": "what if a game engine is an app engine"
+    },
+    {
+      "id": "P3",
+      "text": "Success requires bridging 2D and 3D so the switch is merely a settings option for developers",
+      "status": "explicit",
+      "evidence_span": "we won't succeed unless we build a bridge from the 2D world to the 3D world"
+    },
+    {
+      "id": "P4",
+      "text": "Famo.us gives JavaScript engineers a new tool that can outperform HTML5 and native for web apps",
+      "status": "explicit",
+      "evidence_span": "this gives JavaScript engineers a new tool in their tool belt that they didn't have before"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "HTML5 performance wall",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "game-engine rendering platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Designers and engineers can build performant 3D/2D experiences previously impossible in the browser",
+      "status": "explicit",
+      "evidence_span": "there is a whole new world out there that you didn't know that existed"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inherent flaws that exist in the browser"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "famous is the best"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "if you can solve 3D, you can solve 2D"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Console/device list and GPU bypass folded into game-engine mechanism (§4.1.7). Template gallery aspiration treated as illustration of tool value, not separate premises. Democratize-3D WordPress analogy folded into developer-tool premise. Beta signup excluded as CTA. Two domains."
+}

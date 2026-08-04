@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits remain tech-underserved and rely on pen and paper for volunteer and donation workflows",
+      "status": "explicit",
+      "evidence_span": "Unfortunately, nonprofits continue to be underserved by our tech community"
+    },
+    {
+      "id": "P2",
+      "text": "Civic Champs mobile platform automates volunteer hour tracking and engagement capture with minimal staff effort",
+      "status": "explicit",
+      "evidence_span": "a mobile platform that will fundamentally change how nonprofits operate and engage their supporters"
+    },
+    {
+      "id": "P3",
+      "text": "Integrated micro-donations use volunteer data and matching to convert volunteers into donors at the inspired moment",
+      "status": "explicit",
+      "evidence_span": "solving one of the key missed opportunities of nonprofits, converting volunteers to donors"
+    },
+    {
+      "id": "P4",
+      "text": "Full-market database architecture differentiates from competitors serving only nonprofits, only volunteers, or only corporations",
+      "status": "explicit",
+      "evidence_span": "We have three buckets of competitors. Those that serve nonprofits, those that serve volunteers, and those that serve corporations"
+    },
+    {
+      "id": "P5",
+      "text": "Monthly SaaS fees of $25–$450 monetize nonprofit CRM demand",
+      "status": "explicit",
+      "evidence_span": "These clients pay between $25 to $450 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nonprofit tech gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Volunteer management and donor conversion platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS subscription pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Greater community impact via volunteer engagement and automatic donor conversion",
+      "status": "explicit",
+      "evidence_span": "make a greater impact in our communities"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Serve corporations quantifying impact and foundations building agency capacity",
+      "evidence_span": "corporation looking to quantify your community impact, or your foundation looking to add to the capacity of your agencies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nonprofits continue to be underserved"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically convert your volunteers to donors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay between $25 to $450 a month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run3 folds tracking modalities into the platform premise; competitor architecture kept as differentiation condition. Founder exits and 34-client traction excluded per §4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:39:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

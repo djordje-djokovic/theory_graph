@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1158",
+    "coder_session_id": "session_01",
+    "session_case_index": 7,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customer service is widely poor across airlines, hotels, retail, restaurants, and similar",
+      "status": "explicit",
+      "evidence_span": "Customer service sucks. You all know this. You've seen it on airlines, at hotels, at retail, at restaurants"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers rate individual service interactions on phone in ~30 seconds with comments and social share",
+      "status": "explicit",
+      "evidence_span": "empower people to rate customer service on their cell phones"
+    },
+    {
+      "id": "P3",
+      "text": "Ratings help shoppers choose which salesperson/provider to deal with before an interaction",
+      "status": "explicit",
+      "evidence_span": "before you went down to the car dealership, you could find out something about the people who are selling you the product"
+    },
+    {
+      "id": "P4",
+      "text": "Negative ratings can request a business response; feedback reaches employee and manager",
+      "status": "explicit",
+      "evidence_span": "we could even request a response from Oceanic Airlines"
+    },
+    {
+      "id": "P5",
+      "text": "Business dashboard aggregates ratings, peer comparisons, employee performance, and response inbox",
+      "status": "explicit",
+      "evidence_span": "we will provide a portal, essentially, a dashboard for businesses where they can go in and at a glance see what's going on with their business"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution via app stores, social, location-app integrations, and partner promotion (buttons/signs)",
+      "status": "explicit",
+      "evidence_span": "they will actually promote Tello to their customers and have either buttons they wear or signs at the point of sale"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "bad customer service problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "consumer rating and discovery app",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "business dashboard and partner distribution",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Raise the bar on customer service by shining a bright light via public ratings",
+      "status": "explicit",
+      "evidence_span": "by shining a bright light on it, customer service gets better"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Customer service sucks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in 30 seconds or less, you just provided not only that employee, but also their manager with information"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "compare themselves against other businesses on customer service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Thumbs up/down/comment/Facebook/Twitter demo cascade folded into rating mechanism (§4.1.7). Pre-visit salesperson choice kept as distinct consumer discovery job. 14M businesses and investor credentials excluded as traction/credentials (§4.2). Free consumer app HTML5/Android roadmap folded into distribution. Anti-template: problem, consumer product, business+GTM separately revisable."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1015",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Adults avoid learning new muscle-based activities because they fear public mistakes and lack personalized instruction",
+      "status": "explicit",
+      "evidence_span": "I simply didn't want to learn in a public setting and make mistakes in a public setting"
+    },
+    {
+      "id": "P2",
+      "text": "Millions of Americans want an introductory path to try activities like yoga",
+      "status": "explicit",
+      "evidence_span": "approximately 28 million people are willing to try new things like yoga, but are looking for the right introductory way to get there"
+    },
+    {
+      "id": "P3",
+      "text": "Kenobi uses motion capture (Kinect) on a computer to give individualized coaching of body position versus instructor targets",
+      "status": "explicit",
+      "evidence_span": "uses motion capture technology like the Microsoft Kinect to give you the individualized instruction you need"
+    },
+    {
+      "id": "P4",
+      "text": "Platform hosts high-quality instructor content from poses to full classes with video plus practice mode overlays",
+      "status": "explicit",
+      "evidence_span": "high-quality content that's varying in degrees of difficulty and goes from individual poses all the way up to full classes"
+    },
+    {
+      "id": "P5",
+      "text": "Users can upload and share recorded instructional videos with friends",
+      "status": "explicit",
+      "evidence_span": "Users can easily upload and record their videos"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue share with premium content creators plus Kenobi Lite via webcam for broader distribution",
+      "status": "explicit",
+      "evidence_span": "we partner with premium content creators, such as yoga instructors, to put content on our platform and engage in a revenue share with them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "private motion-capture learning",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "user video sharing",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "creator revenue share and webcam Lite",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build the confidence to learn any new major muscle-movement activity without public embarrassment",
+      "status": "explicit",
+      "evidence_span": "We help you build the confidence required to learn any new activity"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I can fail over and over and over again and never be embarrassed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is also a place of sharing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use a Kenobi Lite, which uses your webcam, to be able to get this out to individual users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-sentence (truncated=true). Hardware requirements folded into Kinect instruction mechanism. Gestural site control treated as UX detail of same platform. Price/partner structure of revenue share + Lite kept as one commercial/GTM premise (§4.1.3)."
+}

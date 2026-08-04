@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-715",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:01:41+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Presentation work is fragmented across desktop apps, email, chat, and file stores, breaking formatting and requiring yet another tool to present or share",
+      "status": "explicit",
+      "evidence_span": "people are creating their presentation in PowerPoint, sharing it via email, having a conversation about it on Slack"
+    },
+    {
+      "id": "P2",
+      "text": "Slides is an end-to-end cloud platform for creating, presenting, and sharing with a new stacked-detail format and collaborative customizable editor",
+      "status": "explicit",
+      "evidence_span": "Slides is an end-to-end platform for creating, presenting, and sharing presentations"
+    },
+    {
+      "id": "P3",
+      "text": "Teams use shared templates and in-editor media libraries so creators focus on content instead of design tooling elsewhere",
+      "status": "explicit",
+      "evidence_span": "This allows Jack to focus on his content instead of designing his slides"
+    },
+    {
+      "id": "P4",
+      "text": "Present live with speaker notes, export offline, or share a link—including richly interactive slides on phones and tablets",
+      "status": "explicit",
+      "evidence_span": "we can choose to either present live from slides.com using speaker notes, export and present offline, or simply share the presentation as a link"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization spans free signup, individual and team plans, and Enterprise behind the corporate firewall for security",
+      "status": "explicit",
+      "evidence_span": "Everyone can sign up for free and create presentations. We offer plans for individuals and teams like Acme, and we're really excited because we just started rolling out Slides for Enterprise"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented presentation workflow",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "End-to-end collaborative presentation platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free-to-enterprise plans",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make it easy for teams to work together on presentations end-to-end",
+      "status": "explicit",
+      "evidence_span": "We make it easy to work together on presentations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is absolutely crazy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've actually changed the way teams work together on presentations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you're ready to create better presentations, sign up now at Slides.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Demo feature list (3D embed, comments, grid) folded into end-to-end platform (v1.3.2 §4.1(5)). User/visitor traction excluded. Pricing/Enterprise singleton retained as separately revisable commercial module. Need/product/money triad justified."
+}

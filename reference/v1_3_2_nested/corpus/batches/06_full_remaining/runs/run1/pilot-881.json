@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:03+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medication adherence means patients taking the right pill at the right time and is a major healthcare cost and outcomes problem",
+      "status": "explicit",
+      "evidence_span": "medication adherence, which basically means patients taking the right pill at the right time"
+    },
+    {
+      "id": "P2",
+      "text": "The smart bottle sends open/close timestamps and amount removed to the cloud and compares usage to the prescribed schedule",
+      "status": "explicit",
+      "evidence_span": "it sends two pieces of data into the cloud. Number one, a timestamp of the open and close of the cap. And number two, a measurement of the amount of medication removed"
+    },
+    {
+      "id": "P3",
+      "text": "Missed doses trigger on-bottle lights/chimes and automated phone or text alerts, optionally to caregivers",
+      "status": "explicit",
+      "evidence_span": "we have on-bottle lights and chimes, and we also have phone or text message alerts as well"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in cellular (CDMA) and normal-bottle UX mean no Wi-Fi/Bluetooth sync or apps; it works from the pharmacy with multi-week battery life",
+      "status": "explicit",
+      "evidence_span": "patients don't have to sync it to Wi-Fi or Bluetooth. It simply works the moment they get it from the pharmacy"
+    },
+    {
+      "id": "P5",
+      "text": "An open API integrates with healthcare partners, and missed-dose feedback enables real-time care alerts beyond reminders",
+      "status": "explicit",
+      "evidence_span": "We've built this solution with an open API so we can easily integrate with all of our health care partners"
+    },
+    {
+      "id": "P6",
+      "text": "Specialty pharma partners distribute high-cost drugs in the bottle; patients get it free and pharma pays for increased adherence and refills",
+      "status": "explicit",
+      "evidence_span": "partner with specialty pharma companies to distribute high-cost drugs in our bottle"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Adherence sensing and intervention",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Effortless cellular bottle UX",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner integration and pharma model",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve medication adherence and patient engagement",
+      "status": "explicit",
+      "evidence_span": "improve medication adherence and patient engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve medication adherence and patient engagement"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're the easiest to set up and the easiest to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AdhereTech will increase adherence. refills, and ultimately revenues for the pharma company"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Bottle design details (flat label surface, hand contours) folded into ease-of-use P4 (§4.1(5)). Trial partners and GE partnership treated as traction (§4.2). Patents in opening line folded into product. Anti-template note: D1/D2/D3 are sensing mechanism, UX connectivity, and B2B go-to-market, each separately revisable in the pitch."
+}

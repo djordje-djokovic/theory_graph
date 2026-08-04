@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ordinary cell phones used as business phones lack business features such as extension dialing, call recording, and time-of-day routing",
+      "status": "explicit",
+      "evidence_span": "It doesn't do extension dialing. It doesn't do call recording. It doesn't even do time of day routing"
+    },
+    {
+      "id": "P2",
+      "text": "A single platform can deliver all telecommunication services and APIs in one system",
+      "status": "explicit",
+      "evidence_span": "2600 Hertz is a one-stop shop where all of these APIs and all of this functionality come in one box, one system"
+    },
+    {
+      "id": "P3",
+      "text": "Mobile is integrated directly with the switch via the Sprint network so calls and business logic route through the switch",
+      "status": "explicit",
+      "evidence_span": "utilizing the Sprint network, we have been able to integrate mobile with our switch directly"
+    },
+    {
+      "id": "P4",
+      "text": "Core-network tie-in enables business mobile capabilities including seamless transfer, presence, non-GPS location, and cloud call recording",
+      "status": "explicit",
+      "evidence_span": "you can do seamless call transfers, presence of lights on the mobile, location tracking without the GPS, which is a huge one, and then cloud call recording"
+    },
+    {
+      "id": "P5",
+      "text": "Native cellular-channel tie-in avoids the poor call quality of over-the-top apps on data networks",
+      "status": "explicit",
+      "evidence_span": "This is an actual tie-in to the cellular network where your mobile call is going over actual phone channel"
+    },
+    {
+      "id": "P6",
+      "text": "Activation and device control are exposed via APIs so customers can attach their own software or systems",
+      "status": "explicit",
+      "evidence_span": "all of this technology, even the activation of the cell phone, is being done via APIs that are exposed to you"
+    },
+    {
+      "id": "P7",
+      "text": "The network can run private telecom networks without internet access for security-sensitive customers",
+      "status": "explicit",
+      "evidence_span": "you can actually set up private telecom networks"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Business phone gap on mobile",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Unified switch and cellular integration",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Open APIs and private networks",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses get real business-phone capabilities on mobile through a switch-tied cellular system",
+      "status": "explicit",
+      "evidence_span": "These switches help their businesses communicate better"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "International calls routed via IP through the switch are much cheaper than carrier rates",
+      "evidence_span": "Since all your calls are now routed through our switch via IP, it's dirt cheap"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Because everything is running through the switch, you can do advanced features"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that is not an actual business phone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrate mobile with our switch directly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can attach your own software and your own systems to activate the cellular devices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Feature list folded into P4 per §4.1(5). D1 singleton: dumb-network business-phone gap is a separately stated market condition. Cheap international as secondary_value.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-941",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

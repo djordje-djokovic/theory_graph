@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1018",
+    "coder_session_id": "session_05",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile search returns seas of web links instead of direct results that help users decide and get tasks done via natural voice interaction",
+      "status": "explicit",
+      "evidence_span": "all you get is a sea of web links, not direct results that help you make a decision immediately"
+    },
+    {
+      "id": "P2",
+      "text": "Maluba is a voice-activated do engine that returns actionable results with call, directions, share, and one-tap event creation into a day timeline",
+      "status": "explicit",
+      "evidence_span": "voice-activated do engine that helps you get tasks done"
+    },
+    {
+      "id": "P3",
+      "text": "All categories are fully usable via touch as well as voice, including hybrid field editing without multi-turn dialogue",
+      "status": "explicit",
+      "evidence_span": "everything you see here is fully accessible through both touch and voice"
+    },
+    {
+      "id": "P4",
+      "text": "Breakthrough natural language technology classifies questions into relevant categories with high accuracy across 18 domains and expands rapidly to new verticals",
+      "status": "explicit",
+      "evidence_span": "breakthrough natural language technology, which classifies your question into the most relevant category with incredibly high accuracy"
+    },
+    {
+      "id": "P5",
+      "text": "An open ecosystem partners with 15+ content providers, targets cross-platform clients, and releases an SDK on the NLP platform",
+      "status": "explicit",
+      "evidence_span": "partnering up with more than 15 different industry-leading content providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "link-based mobile search failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "voice and touch do-engine UX",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "NLP category classification",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "open content and SDK ecosystem",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get tasks done immediately with direct mobile search results instead of web-page hunting",
+      "status": "explicit",
+      "evidence_span": "Siri gets tasks done on your behalf"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not direct results that help you make a decision immediately"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with Maluba, it's that easy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All this is powered by a breakthrough natural language technology"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We want to provide you the best possible experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Sushi/Giants/timeline/share demos folded into do-engine UX cascade (§4.1.7). Future hundreds-of-domains aspiration treated as expansion of NLP vertical claim, not separate vision premise. Android-today/cross-platform later folded into open ecosystem GTM. Facebook-wall stunt excluded."
+}

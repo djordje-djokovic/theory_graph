@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-790",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Children should learn technology young, but existing tech-teaching toys are inadequate or unsafe for that purpose",
+      "status": "explicit",
+      "evidence_span": "these toys that teach children about technology are very dangerous to them. And we want to change it"
+    },
+    {
+      "id": "P2",
+      "text": "Modular cubes embed motors, sensors, and controllers that kids snap together into robots without wires between cubes",
+      "status": "explicit",
+      "evidence_span": "We're embedding different electronics into the cubes. And kids can snap them together and build their own robots"
+    },
+    {
+      "id": "P3",
+      "text": "Kids program robots via an intuitive drag-and-drop app on phone or tablet without writing code",
+      "status": "explicit",
+      "evidence_span": "Kids can program their own robots with a very intuitive programming app on the iPad. Kids don't need to write the code"
+    },
+    {
+      "id": "P4",
+      "text": "Multiple kit tiers (9/15/25 cubes plus Pro and sensor sets) serve different ages and complexity levels",
+      "status": "explicit",
+      "evidence_span": "we created three different robotics kits with the 9, 15, and 25 cubes"
+    },
+    {
+      "id": "P5",
+      "text": "Launch and distribution via Kickstarter to make robotics electronics accessible to kids, parents, and educators",
+      "status": "explicit",
+      "evidence_span": "we are live on Kickstarter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "modular robotics hardware",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "kid programming app",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Kickstarter GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make technology and robotics learning accessible so kids can build and program their own robots",
+      "status": "explicit",
+      "evidence_span": "change how children learn about technology with this cube"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "even a five-year-old child can create their own prototypes of electronics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They just need to drag and drop blocks on the iPad"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring robotics electronics accessible to everyone kids parents Educators"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Bill Gates anecdote and child-testimony traction excluded. Cube function colors folded into P2 mechanism. Wireless cube-to-cube connection folded into P2. Singleton D3 justified as crowdfunding channel."
+}

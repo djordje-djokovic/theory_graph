@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Spine screw placement is done without seeing inside the bone, causing frequent malposition and serious risk",
+      "status": "explicit",
+      "evidence_span": "up to 23% of all the screws placed during spine surgery are malpositioned"
+    },
+    {
+      "id": "P2",
+      "text": "Distant-screen navigation is uncomfortable and non-intuitive, so surgeons underuse it",
+      "status": "explicit",
+      "evidence_span": "All the current solutions for navigation are uncomfortable for the surgeons, they're not intuitive"
+    },
+    {
+      "id": "P3",
+      "text": "Fogmatics visor gives retinal real-time 3D anatomy projection with surgical precision, depth perception, and tool tracking using standard navigation workflow",
+      "status": "explicit",
+      "evidence_span": "With our patented device, we are able to project the patient anatomy in real time directly onto the surgeon's retina"
+    },
+    {
+      "id": "P4",
+      "text": "Commercial path is integrating the visor into incumbents' navigation and imaging systems through strategic partners",
+      "status": "explicit",
+      "evidence_span": "Our business model is to integrate the visor into existing surgical navigation systems and medical imaging systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsafe and unused spine navigation",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "X-ray vision visor",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM integration business model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable surgeons to navigate with x-ray vision while looking at the patient",
+      "status": "explicit",
+      "evidence_span": "help surgeons use navigation systems and also look at their patient at the same time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that is the reason why surgeons are not using navigation systems so often"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see a true 3D spine model of the patient"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sell our system together with their system"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Run3 collapses product demo details into one visor premise including patent mention as IP detail. $900M market framing excluded. Clinical trial/commercialization dates excluded as roadmap.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-604",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:51:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

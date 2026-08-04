@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-961",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customer service calls force hold waits, spelling identity aloud, and restarts after disconnects",
+      "status": "explicit",
+      "evidence_span": "It sucks to wait on hold. It sucks to spell out your name and address. And it really sucks when you get disconnected"
+    },
+    {
+      "id": "P2",
+      "text": "An API sends the caller's profile to the agent at call time via a skip-the-hold widget and priority routing so identity need not be spoken",
+      "status": "explicit",
+      "evidence_span": "we send your profile to the answering agent at the time of your call via our API"
+    },
+    {
+      "id": "P3",
+      "text": "Callers can store billing info and release it to a payment gateway with a four-digit PIN instead of reading cards aloud",
+      "status": "explicit",
+      "evidence_span": "you simply provide your four-digit billing PIN"
+    },
+    {
+      "id": "P4",
+      "text": "Telco partnerships supply caller identity for tens of millions of numbers without requiring user signup",
+      "status": "explicit",
+      "evidence_span": "We've partnered with all the major telcos to provide caller information"
+    },
+    {
+      "id": "P5",
+      "text": "Caller profiles are sold at about ten cents, claimed as over 90% savings versus manual identification cost",
+      "status": "explicit",
+      "evidence_span": "We sell our profiles for $0.10"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "painful phone identity exchange",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "NextCaller profile routing and billing",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "telco identity supply",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "per-profile pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customer service without hold-line spelling hassles, with callers identified as the next caller",
+      "status": "explicit",
+      "evidence_span": "just customer service without all the hassle"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Customer service is terrible"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you never have to spell your name, your email, your address over the phone ever again"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can already identify over half of you"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That represents savings of over 90%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hold/spelling/disconnect folded as one CS problem (§4.1.6). Widget, priority routing, agent desktop, and CRM integrate-in-minutes folded into profile-API cascade (§4.1.7). Billing PIN split as separately claimed commerce module. Founder name jokes and live demo IDs excluded as bio/traction framing. Four domains—not a need/product/money triad."
+}

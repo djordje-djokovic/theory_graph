@@ -1,0 +1,100 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cognitoys put internet technology inside toys so they learn and grow with the child",
+      "status": "explicit",
+      "evidence_span": "putting the technology right inside of it and allowing it to grow with a kid as they get smarter"
+    },
+    {
+      "id": "P2",
+      "text": "Conversations stay witty yet educational, answering kids' questions with lasting interactive content",
+      "status": "explicit",
+      "evidence_span": "creating that sassiness, that wittiness, but also being educational"
+    },
+    {
+      "id": "P3",
+      "text": "Parents get a dashboard for engagement analytics and controls including bedtime",
+      "status": "explicit",
+      "evidence_span": "We also give them some sort of control. such as being able to set a bedtime"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware sells near $100 with strong margins while subscription content/features escape cyclical toy seasonality",
+      "status": "explicit",
+      "evidence_span": "We can move into a subscription type model, sell additional content, or also sell additional features in the future"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smart educational Dino toy",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Parent panel",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware plus subscription model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun educational experiences that keep kids asking questions and laughing",
+      "status": "explicit",
+      "evidence_span": "Get kids laughing. Keep them asking questions and having fun at the same time"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Parents can monitor and control engagement with the toy",
+      "evidence_span": "view some engagement metrics analysis on how a child's actually engaging with a toy"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interactive educational approach"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parent panel dashboard"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a platform around the Dino"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Retail price and COGS folded into one commercial-platform premise with subscription. Competition awards excluded. Decade-ahead vision not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-721",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

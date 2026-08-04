@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-727",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Girls' toys are low-tech and demeaning compared with high-tech toys for boys, despite girls wanting friendship, communication, and better tech",
+      "status": "explicit",
+      "evidence_span": "awesome, high-tech toys like this built for boys and stuff like this made for girls"
+    },
+    {
+      "id": "P2",
+      "text": "Patent-pending mesh-network wearables let girls pair friendship color groups and communicate device-to-device without needing a phone",
+      "status": "explicit",
+      "evidence_span": "Jewelbots patent pending mesh network means Jewelbots is the first wearable device to communicate from device to device"
+    },
+    {
+      "id": "P3",
+      "text": "Open-source Arduino programming lets girls add custom effects and interactions via micro USB",
+      "status": "explicit",
+      "evidence_span": "Jewelbots are completely open source"
+    },
+    {
+      "id": "P4",
+      "text": "COPPA-compliant design enables safe girl-to-girl communication",
+      "status": "explicit",
+      "evidence_span": "Jewelbots are also COPPA compliant"
+    },
+    {
+      "id": "P5",
+      "text": "Hardware sold in multi-packs online with interchangeable charms/bands, plus Cartoon Network and Google Made with Code licensing partnerships",
+      "status": "explicit",
+      "evidence_span": "JewelBots are sold online for $69 for one, $99 for the two-pack, and $139 for the Bestie three-pack"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "gendered toy tech gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mesh wearable friendship and coding",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "pack sales charms and licenses",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Girls get high-tech friendship wearables that empower them toward engineering",
+      "status": "explicit",
+      "evidence_span": "every girl feels empowered to become an engineer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Girls are just as smart and they deserve a lot better"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "girls can code them to do whatever they imagine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interchangeable charms and bands sold separately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Boy/girl toy contrast and friendship/communication research folded as one problem/need premise (v1.5.1 §4.1.6). Pairing colors, proximity glow, secret messages, and weather-code demo folded as feature cascade of the mesh wearable plus coding surface (§4.1.7); COPPA kept as a separately failable safety condition inside the product domain. Sales revenue traction excluded; price packs, charms, and licenses as one commercial module. Founder biography excluded."
+}

@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cloud-updatable card makes topping up and controlling transit tickets easy for consumers",
+      "status": "explicit",
+      "evidence_span": "It's easy to use, and it gives them control"
+    },
+    {
+      "id": "P2",
+      "text": "Phones as sales channels plus seamless legacy integration make it easy for operators to sell tickets",
+      "status": "explicit",
+      "evidence_span": "It also makes it easier for public transport organizations to sell tickets"
+    },
+    {
+      "id": "P3",
+      "text": "First phase monetizes by selling tickets through transit organizations at a percentage",
+      "status": "explicit",
+      "evidence_span": "we will make money along the way by selling tickets"
+    },
+    {
+      "id": "P4",
+      "text": "MyFair compatibility plus open API platform extend one card across cities and non-transit services",
+      "status": "explicit",
+      "evidence_span": "We invite other companies to build services on top of our platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer and operator ticketing ease",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Transit ticket economics",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Multi-service platform card",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One card to rule transit and adjacent access services",
+      "status": "explicit",
+      "evidence_span": "We will make one card to rule them all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simplifying your life from day one in your home city"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take a percentage on those"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everyone to use our card or card space on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Truncated pitch; fewer premises after merging standards+API (v1.3.2 #5). Patents-pending opener not coded as separate IP premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-836",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:07:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

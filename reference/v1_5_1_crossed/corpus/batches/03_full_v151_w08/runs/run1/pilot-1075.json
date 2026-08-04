@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1075",
+    "coder_session_id": "session_02",
+    "session_case_index": 10,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People default to familiar places because they fear a new place will be a bad experience",
+      "status": "explicit",
+      "evidence_span": "we don't want to take the chance and try to go to a new place because we're not sure that we're going to like the experience"
+    },
+    {
+      "id": "P2",
+      "text": "SpotOn builds personalized actionable place recommendations from Facebook and Foursquare social data",
+      "status": "explicit",
+      "evidence_span": "pulling in your existing social network data from Facebook and Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "A social layer surfaces friends' ratings, visits, saves, and who to go with—not anonymous reviewers",
+      "status": "explicit",
+      "evidence_span": "Every single place has a social layer that pulls in reasons why you should go check out a place"
+    },
+    {
+      "id": "P4",
+      "text": "Fun in-app rating of check-ins gathers preference data that improves recommendations for the contributor and others",
+      "status": "explicit",
+      "evidence_span": "we make it really easy for our users to give us a lot of their preference data in a really fun and an engaging way"
+    },
+    {
+      "id": "P5",
+      "text": "Filters and personalized search let users find friend-visited or never-been places with personalized categories",
+      "status": "explicit",
+      "evidence_span": "only show me places that at least one of my friends have been to, or only show me places that I've never been to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "new-place risk aversion",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "social personalized place discovery",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easiest way to go to new places with friends and enjoy the end experience together",
+      "status": "explicit",
+      "evidence_span": "SpotOn is the easiest way to go to new places with your friends"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we don't want to take the chance and try to go to a new place"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find a place that you're enjoying, spend more time actually enjoying the place with your friends"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Map pins, pix view, place detail, activity feed folded as cascade of personalized social discovery product (§4.1.7). Group-recommendation/plan pipeline treated as roadmap vision, not separate premises (§4.1.4). Two domains—problem vs product—not a need/product/money triad."
+}

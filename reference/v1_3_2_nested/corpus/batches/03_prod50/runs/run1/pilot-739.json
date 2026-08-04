@@ -1,0 +1,138 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large organizations rely on more contractors/vendors than full-time employees",
+      "status": "explicit",
+      "evidence_span": "They all have twice as many contractors and vendors doing work for them than they have full-time employees"
+    },
+    {
+      "id": "P2",
+      "text": "Finding contractors via shout-outs, email, and spreadsheets wastes time",
+      "status": "explicit",
+      "evidence_span": "I would literally shout across a room, send emails around looking for recommendations, or resort to the outdated spreadsheets"
+    },
+    {
+      "id": "P3",
+      "text": "Cross-company engagement is fragmented across chat channels and document apps",
+      "status": "explicit",
+      "evidence_span": "multiple team members, multiple departments, chatting through tons of different channels, and tons of different document sharing apps"
+    },
+    {
+      "id": "P4",
+      "text": "Searchable contractor cards make contributor networks accessible company-wide",
+      "status": "explicit",
+      "evidence_span": "she's imported those old spreadsheets, and we've built these contractor cards of everyone. And now they're searchable and accessible by everyone"
+    },
+    {
+      "id": "P5",
+      "text": "Flexible onboarding templates capture rates, availability, and terms via shareable forms",
+      "status": "explicit",
+      "evidence_span": "she can create these super flexible onboarding templates"
+    },
+    {
+      "id": "P6",
+      "text": "Profiles track skills, availability, and internal feedback as retained institutional knowledge",
+      "status": "explicit",
+      "evidence_span": "she can track everything she needs to know about him, from his availability, the original onboarding information, the skills he possesses, and more importantly, the internal feedback"
+    },
+    {
+      "id": "P7",
+      "text": "Dual private/shared project workspace with email-integrated communication thread",
+      "status": "explicit",
+      "evidence_span": "it will create this dual project tracking interface, with one tab private only to the economist"
+    },
+    {
+      "id": "P8",
+      "text": "Auto-request feedback and invoices; approve and pay contributors across many countries",
+      "status": "explicit",
+      "evidence_span": "we will auto-request feedback from all the team members that have worked with Patrick"
+    },
+    {
+      "id": "P9",
+      "text": "SaaS freemium lets companies use the product for free",
+      "status": "explicit",
+      "evidence_span": "we're a SaaS company with a freemium model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contractor-heavy work problem",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Contributor index and onboarding",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Project collaboration and payment",
+      "premise_ids": [
+        "P7",
+        "P8",
+        "P9"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies can onboard, manage, communicate with, and pay large contributor networks in one place",
+      "status": "explicit",
+      "evidence_span": "how we're helping companies like Google, like The Economist, onboard, manage, communicate with, and pay these huge contributor networks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this whole workflow process between companies to outsource parties is a complete mess"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All of their contributor network information, past and future, will be stored in one place"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she can approve the payments and distribute them to up to 80 countries all through Listable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Soft count at 9 after merging email/Outlook detail into P7. Flatmate financing excluded. Workforce-shift stats kept as market thesis within D1 via P1 only.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-739",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:26:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

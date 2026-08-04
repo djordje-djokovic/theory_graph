@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cookie automates fresh multi-tray cooking with a robotic device controlled by a phone cook button",
+      "status": "explicit",
+      "evidence_span": "Cookie delivers that same experience in making home-cooked meals with multiple trays of fresh ingredients"
+    },
+    {
+      "id": "P2",
+      "text": "Primary beachhead is college students who lack time, skill, and home-cooked meal access",
+      "status": "explicit",
+      "evidence_span": "Now I'll be in college next year, along with 20 million other students in the U.S. We'll have limited time and ability to make food"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware stack is tray storage/delivery, induction cooktop, and robotic stirring/manipulation",
+      "status": "explicit",
+      "evidence_span": "a storage and delivery mechanism for food trays, a safe induction cooktop, and of course, the robotic arm"
+    },
+    {
+      "id": "P4",
+      "text": "Foodie app provides recipe store, scheduling, tips, progress, and chef-authored recipe teaching including motion tracing",
+      "status": "explicit",
+      "evidence_span": "Chefs can also use Cookie to create recipes. It's not just about cooking food. Chefs can use Cookie to teach it how they cook"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial offer is ~$4 fresh meals, free app, $600 device or rental subscription, priced vs mid-tier frozen meals",
+      "status": "explicit",
+      "evidence_span": "Our meals compete on price with mid-tier frozen meals, but the difference is that our meals are made with fresh ingredients and real food"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Student meal need",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated cooking robot",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Foodie software and recipe ecosystem",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Fresh meal pricing and device offer",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Push-button home-cooked fresh meals for people who cannot cook conventionally",
+      "status": "explicit",
+      "evidence_span": "So why can't we cook by pushing a button?"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "still continuing to eat right"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automated cooking device"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cook a recipe meal from a recipe database"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "made with fresh ingredients and real food"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Waste/health impact folded into commercial fresh-meal theory rather than separate domain this run.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-807",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:10+02:00"
+  }
+}

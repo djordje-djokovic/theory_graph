@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-684",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected home devices are easy to hack, exposing privacy and the rest of the home network",
+      "status": "explicit",
+      "evidence_span": "these same criminals are hacking your home and the smart devices"
+    },
+    {
+      "id": "P2",
+      "text": "Cujo is a plug-and-play network gateway that inventories devices and blocks threats via cloud threat intelligence and device behavioral models, updating other Cujos in real time",
+      "status": "explicit",
+      "evidence_span": "Cujo is a little smart device, very powerful, that you connect to your network to keep you safe against all kinds of cyber threats"
+    },
+    {
+      "id": "P3",
+      "text": "Cujo is sold for $99 plus an $8.99 monthly fee for business-level protection of every device on the network",
+      "status": "explicit",
+      "evidence_span": "Cujo is for sale for $99 as well as an $8.99 a month fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home smart-device hacking threat",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Cujo network protection gateway",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Device plus subscription pricing",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keeping the home network safe against cyber threats",
+      "status": "explicit",
+      "evidence_span": "the smart way to fight home hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "invade your privacy and your security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep you safe against all kinds of cyber threats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep every single device on your network protected on a business level"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Device inventory, cloud ML behavioral blocking, and real-time fleet updates folded as cascade of one gateway mechanism (§4.1.7). Unit sales traction excluded. Anti-template: threat, product, and pricing are separately revisable."
+}

@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small and retail businesses are underserved because human-only remote monitoring is about 10 times more expensive and limited to niche sites",
+      "status": "explicit",
+      "evidence_span": "traditional human-only solution to remote video monitoring, which is 10 times more expensive than our platform"
+    },
+    {
+      "id": "P2",
+      "text": "Deep-learning active threat detection differentiates them from other surveillance AI applications",
+      "status": "explicit",
+      "evidence_span": "the only ones that we know of who are working on active threat detection"
+    },
+    {
+      "id": "P3",
+      "text": "Real-time detections are routed to a remote monitoring analyst who then contacts the police",
+      "status": "explicit",
+      "evidence_span": "those detections would be sent to a remote monitoring analyst in real time, who would then contact the police"
+    },
+    {
+      "id": "P4",
+      "text": "Security integrators such as March Networks and LatAm players are the testing and go-to-market partners",
+      "status": "explicit",
+      "evidence_span": "we're currently in talks with March Networks to perform testing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Affordable SMB monitoring positioning",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Active threat detection workflow",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Integrator go-to-market",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring affordable modern security surveillance with active threat detection to small and retail businesses",
+      "status": "explicit",
+      "evidence_span": "bring security surveillance technology into the 21st century"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working on active threat detection"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in talks with March Networks to perform testing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged cost and market-access into one commercial premise. Singleton D1 retained as separately revisable SMB cost-positioning module. Board hire and beta signup excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-588",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

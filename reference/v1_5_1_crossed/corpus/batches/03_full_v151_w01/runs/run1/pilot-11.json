@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-11",
+    "coder_session_id": "session_03",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fake certificates and credentials are a large problem",
+      "status": "explicit",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "id": "P2",
+      "text": "Blockchain digital issuance lets tertiary institutions move from manual to digital credential issuance",
+      "status": "explicit",
+      "evidence_span": "a solution for tertiary institutions to transition from manual credential processes to digital processes for issuance of credentials on the blockchain"
+    },
+    {
+      "id": "P3",
+      "text": "Verification platform lets employers, embassies, and HR firms verify academic records",
+      "status": "explicit",
+      "evidence_span": "a verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records to be able to verify academic records via our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile app lets individuals carry academic credentials safely and verifiably",
+      "status": "explicit",
+      "evidence_span": "a mobile app for you, you, you, and you to be able to carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner"
+    },
+    {
+      "id": "P5",
+      "text": "APIs let external systems connect to issue credentials",
+      "status": "explicit",
+      "evidence_span": "We also have APIs. People can connect to our system to issue credentials from their systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fake credential problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Issuance, verification, wallet, and API surfaces",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Verifiable digital academic credentials that institutions issue and others can trust",
+      "status": "explicit",
+      "evidence_span": "digital issuance platform and verification of academic records using blockchain technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "issuing verifiable digital certificates"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Thin short pitch. Issuance, verification, mobile wallet, and API treated as distinct capability premises (canonical pain+capabilities pattern). Customer count and fundraising ask excluded. Singleton D1 retained."
+}

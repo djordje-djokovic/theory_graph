@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consolidating transport providers via API/EDI alone is limited in data quality",
+      "status": "explicit",
+      "evidence_span": "But consolidation alone is limited in terms of data quality"
+    },
+    {
+      "id": "P2",
+      "text": "Platform pairs provider data with real-time tracking from satellites and truck GPS/IoT as software, not hardware",
+      "status": "explicit",
+      "evidence_span": "we pair providers' information with real-time and reliable tracking"
+    },
+    {
+      "id": "P3",
+      "text": "Data science predicts arrival times using external factors and sends smartphone alerts to ops teams",
+      "status": "explicit",
+      "evidence_span": "we use data science to predict times of arrival by taking into account external factors like real-time traffic or events"
+    },
+    {
+      "id": "P4",
+      "text": "Focus is multimodal overseas shipments complementary to continental road freight players",
+      "status": "explicit",
+      "evidence_span": "We focus on multimodal overseas shipments"
+    },
+    {
+      "id": "P5",
+      "text": "Unique tech claims to guarantee data quality and predictability for international shipments",
+      "status": "explicit",
+      "evidence_span": "we have a unique tech to guarantee data quality and predictability for international shipments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Predictive multimodal tracking platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Overseas multimodal market focus",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change supply chains from reactive to predictive with anticipation, reliability, and better customer experience",
+      "status": "explicit",
+      "evidence_span": "We change the supply chain from reactive to predictive"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Secure production lines via alerts to operational teams",
+      "evidence_span": "anticipation, to secure production lines by sending alerts to operational teams"
+    },
+    {
+      "text": "Reduce safety inventories and save millions of euros a year",
+      "evidence_span": "reliability, to reduce safety inventories and save up to several million euros a year"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "predict times of arrival"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Waikio is what they need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-sentence; truncated=true. Bios and onboarded companies excluded. Three customer benefits as secondary_value.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-526",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

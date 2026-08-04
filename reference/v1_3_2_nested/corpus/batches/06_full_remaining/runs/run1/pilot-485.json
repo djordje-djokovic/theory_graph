@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Male fertility is declining and male factors drive a large share of couple infertility, so men should test and freeze sperm",
+      "status": "explicit",
+      "evidence_span": "All men should be thinking about freezing and testing their sperm"
+    },
+    {
+      "id": "P2",
+      "text": "Clinic-based sperm testing and freezing is awkward and clinical, blocking consumer adoption",
+      "status": "explicit",
+      "evidence_span": "the experience today is so awkward and clinical of going to a clinic to do it"
+    },
+    {
+      "id": "P3",
+      "text": "At-home kit with discrete packaging, deposit cup, and buffering medium keeps the sample viable for pickup and clinic processing",
+      "status": "explicit",
+      "evidence_span": "a buffering medium that helps keep the deposit viable for up to 48 hours"
+    },
+    {
+      "id": "P4",
+      "text": "Partner clinics test, analyze, freeze, and run a post-thaw motility check with a personalized fertility report",
+      "status": "explicit",
+      "evidence_span": "we do what's called a post-thaw motility check to make sure that the sample is still viable"
+    },
+    {
+      "id": "P5",
+      "text": "GTM targets men via employers offering fertility benefits, DTC to professionals, and indirect outreach to partners",
+      "status": "explicit",
+      "evidence_span": "We also go direct to consumer. We target men in professional services for the most part"
+    },
+    {
+      "id": "P6",
+      "text": "Offer is about 10% of egg-freezing cost and can be done at home",
+      "status": "explicit",
+      "evidence_span": "Compared to the $10,000 price tag of egg freezing, our product is 10% of that cost and can be done at home"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Male fertility testing need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "At-home kit and clinic freezing",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Channels and relative pricing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Men get a consumer-friendly way to test and freeze sperm at home",
+      "status": "explicit",
+      "evidence_span": "Legacy is the first company focused on the consumer experience of testing and then freezing men's most valuable assets"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the experience today is so awkward and clinical of going to a clinic to do it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when a client makes an order online, this is what they receive at home, and it is discrete packaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our product is 10% of that cost and can be done at home"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Team credentials and $8B TAM excluded. Bundled vs unbundled business-model test noted in notes only, not split into premises beyond pricing. Need/product/channel triad justified: channels and relative price revisable without kit design. 'Legacy will be the norm' vision not premise (§4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-485",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

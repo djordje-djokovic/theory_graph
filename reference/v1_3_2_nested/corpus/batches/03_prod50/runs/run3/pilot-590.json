@@ -1,0 +1,111 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bank/credit-card checkout plus accounting integration shows what is due",
+      "status": "explicit",
+      "evidence_span": "You can pay by your bank account or your credit card. We are highly integrated into accounting solutions"
+    },
+    {
+      "id": "P2",
+      "text": "Differentiating certified scheduled payments and installment loans at checkout",
+      "status": "explicit",
+      "evidence_span": "the two things that we do differently today is we offer online certified payments"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary tenant and bank data enable near-instant rent credit",
+      "status": "explicit",
+      "evidence_span": "we have prioritary data access"
+    },
+    {
+      "id": "P4",
+      "text": "Unified technology covers payments, compliance, lending, and risk unlike fragmented alternatives",
+      "status": "explicit",
+      "evidence_span": "from the foundation we've built the technology"
+    },
+    {
+      "id": "P5",
+      "text": "Sits between property and resident with free-owner, fee-based monetization",
+      "status": "explicit",
+      "evidence_span": "We sit in the middle between both property and resident, so our business model is straightforward"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue from loan origination and payment processing fees",
+      "status": "explicit",
+      "evidence_span": "We generate revenue from loan origination as well as payment processing fees"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Integrated rent payments and credit",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Two-sided property-resident model",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Owner-operators can offer flexible rent payment without certified-check friction",
+      "status": "explicit",
+      "evidence_span": "That takes time and energy out of the day, and it takes scheduling to get the, making sure the leasing agent is there in the office to receive the certified check"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "So we can deliver to you credit within seconds"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver flexible payments"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're 100% free for our owners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Broader merge of product+underwriting into one domain (run3 judgment): speaker presents them as one cohesive puzzle. Cohort targeting treated as detail of P5 rather than separate premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-590",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:25:33+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

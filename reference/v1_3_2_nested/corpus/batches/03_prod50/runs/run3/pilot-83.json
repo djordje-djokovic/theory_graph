@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Prevention requires regular screening before asymptomatic eye disease becomes irreversible",
+      "status": "explicit",
+      "evidence_span": "We don't want to treat patients when it's that bad. We want to prevent it"
+    },
+    {
+      "id": "P2",
+      "text": "AI assistant helps doctors diagnose from retina images in seconds/minutes at higher accuracy",
+      "status": "explicit",
+      "evidence_span": "artificial intelligence assistant that can help doctor to make diagnosis just in a couple of seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Target buyers are optician chains, GPs, and telemedicine companies as first-line eye care",
+      "status": "explicit",
+      "evidence_span": "first customers as optician chains, general practitioners, and telemedicine companies"
+    },
+    {
+      "id": "P4",
+      "text": "Per-image subscription undercuts Dutch screening price points",
+      "status": "explicit",
+      "evidence_span": "starting with only five euros per image"
+    },
+    {
+      "id": "P5",
+      "text": "MVP focuses on diabetic retinopathy; next glaucoma dataset with EyeClinic Rotterdam creates first glaucoma AI screen",
+      "status": "explicit",
+      "evidence_span": "it will be the first glaucoma screening solution in the world"
+    },
+    {
+      "id": "P6",
+      "text": "Retina imaging can later extend to cardio/neuro disease detection and smartphone-camera screening",
+      "status": "explicit",
+      "evidence_span": "regular smartphone camera will become good enough to do your retinoscopy"
+    },
+    {
+      "id": "P7",
+      "text": "Small engineer–doctor team must grow with productization and business development",
+      "status": "explicit",
+      "evidence_span": "collaboration of hardcore software engineers and best of technological doctors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Prevention via screening",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI diagnostic product path",
+      "premise_ids": [
+        "P2",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Customer, pricing, and team scale",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more accurate retina disease screening that prevents late blindness at scale",
+      "status": "explicit",
+      "evidence_span": "help doctor to make diagnosis just in a couple of seconds"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Longer-term window into cardio/neuro health via retina",
+      "evidence_span": "it's like a window into human's health"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "doctors could use some help"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you receive your diagnosis within one minute"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "penetrate Dutch market in the end of this year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Team coded only as causal condition for building the product (explicit collaboration claim); equity raise excluded. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-83",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:33:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

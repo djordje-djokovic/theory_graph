@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Circling for parking is a major urban traffic problem",
+      "status": "explicit",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "Strangers can find and reserve each other's curb spots through a smartphone social network",
+      "status": "explicit",
+      "evidence_span": "these two have never met. But with Curve Karma, Marissa can find and reserve Heather's parking spot"
+    },
+    {
+      "id": "P3",
+      "text": "Karma Credits ($1) fund reservations and split value between giver and platform",
+      "status": "explicit",
+      "evidence_span": "When Heather gives her spot to Marissa, she earns one of those Karma credits worth a dollar, and she can use that Karma credit next time she is looking for parking. The other Karma credit goes to Kirp Karma"
+    },
+    {
+      "id": "P4",
+      "text": "Map publishing, need-a-spot matching, private messaging, GPS nav, and mutual rating constitute the handoff product",
+      "status": "explicit",
+      "evidence_span": "And Marissa can use the built-in navigation feature using GPS to navigate to the spot"
+    },
+    {
+      "id": "P5",
+      "text": "High-demand spots turn over frequently; the platform takes one credit per exchange as revenue",
+      "status": "explicit",
+      "evidence_span": "And because Curb Karma earns a Karma credit for every exchange, we make $400,000 a year in revenue"
+    },
+    {
+      "id": "P6",
+      "text": "Parking pain is global, supporting multi-city expansion",
+      "status": "explicit",
+      "evidence_span": "parking's actually a problem all over the world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Problem and geographic demand",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social matching product",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Credit marketplace economics",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Awesome parking found where and when needed via the network",
+      "status": "explicit",
+      "evidence_span": "Marissa scored an awesome parking spot"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "But what's in it for Heather? Well, Heather can earn something called a Karma Credit"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "end that madness and to disrupt parking"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Curb Karma finds you parking where and when you need it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everybody wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Optional dependency: credits are presented as what makes leavers participate in matching. ASR spellings (Curve/Kirp/Kerb) left in evidence spans.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

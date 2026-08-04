@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Modern ML needs large structured training data while most human-created data is unstructured and scientists spend most time cleaning it",
+      "status": "explicit",
+      "evidence_span": "90% of that data is unstructured, but machines need structured data to learn"
+    },
+    {
+      "id": "P2",
+      "text": "DefineCrowd platform lets data scientists collect, enrich, and structure high-quality training data at scale",
+      "status": "explicit",
+      "evidence_span": "allows data scientists to collect, enrich, and structure high quality training data at scale"
+    },
+    {
+      "id": "P3",
+      "text": "Combines tools, humans in the loop, and machine learning into specialized multi-modal data workflows",
+      "status": "explicit",
+      "evidence_span": "combining tools, humans in the loop, and machine learning into specialized data workflows"
+    },
+    {
+      "id": "P4",
+      "text": "Configurable campaigns set crowd demographics, recording setups, sensors, and cost before submission",
+      "status": "explicit",
+      "evidence_span": "a pipeline assistant is displayed with numbered items that will light up as she's configuring the settings"
+    },
+    {
+      "id": "P5",
+      "text": "Offers SaaS-like scale/control with professional-services quality, beating CrowdFlower/MTurk accuracy and pro-services process opacity",
+      "status": "explicit",
+      "evidence_span": "The fine crowd combines the best of both worlds. The high quality and reach of the professional services combined with the scale and control of the SaaS companies"
+    },
+    {
+      "id": "P6",
+      "text": "Serves Fortune 500 AI players in the US, Japan, and Europe",
+      "status": "explicit",
+      "evidence_span": "We've been partnering and serving the biggest players in AI, mainly Fortune 500 companies in the US, Japan, and Europe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Training data bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human-in-the-loop workflows",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Quality positioning and customers",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Gather more higher-quality training data in less time so machines get smarter",
+      "status": "explicit",
+      "evidence_span": "allowed Anna to gather more data of higher quality in less time"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Accelerate intelligence in machines / teach robots to be smarter",
+      "evidence_span": "we're teaching robots to be smarter"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "machines need structured data to learn"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "high quality training data at scale"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "50% less accurate and take about six months of iterations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Founder credentials largely biographical; excluded except as context. AI market size framing excluded. Workflow config details folded as one configurability premise (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-589",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:31:55+02:00"
+  }
+}

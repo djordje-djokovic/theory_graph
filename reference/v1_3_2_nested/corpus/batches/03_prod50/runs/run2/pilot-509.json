@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Women face male-designed products and shameful/outdated shopping experiences online and in-store",
+      "status": "explicit",
+      "evidence_span": "If you go in-store, you feel intimidated and overwhelmed"
+    },
+    {
+      "id": "P2",
+      "text": "Unbound designs affordable next-gen vibrators, lubricants, and accessories",
+      "status": "explicit",
+      "evidence_span": "We've designed and launched over 50 vibrators, lubricants, and accessories"
+    },
+    {
+      "id": "P3",
+      "text": "Content education fills the pleasure-education void and guides product choice",
+      "status": "explicit",
+      "evidence_span": "offers educational content to guide a woman to the right body-safe product for her"
+    },
+    {
+      "id": "P4",
+      "text": "Palma wearable ring with force/intensity settings and tap-customized patterns",
+      "status": "explicit",
+      "evidence_span": "what makes Palma truly special is the force setting, which allows the user to customize the vibration pattern simply by tapping the surface of the ring"
+    },
+    {
+      "id": "P5",
+      "text": "Body-safe products without carcinogens common in unregulated competitor assortments",
+      "status": "explicit",
+      "evidence_span": "the majority of them contain carcinogens because vibrators are not regulated by the FDA"
+    },
+    {
+      "id": "P6",
+      "text": "Vertical DTC removes distributor margin versus twice-as-expensive integrated brands",
+      "status": "explicit",
+      "evidence_span": "vertically integrated brands like Lilo sell these products, but at twice the price"
+    },
+    {
+      "id": "P7",
+      "text": "Acquire via content, SEO, partnerships, PR, and wholesale placements",
+      "status": "explicit",
+      "evidence_span": "content and SEO, followed closely by partnerships, PR, and opportunistic wholesale, such as Goop and Urban Outfitters"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Category and shopping friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Product line and Palma hero",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable DTC go-to-market",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Elevate products, education, and conversation so female sexuality is accepted",
+      "status": "explicit",
+      "evidence_span": "we must elevate the products, education, and the conversation"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "women are still shamed for enjoying sex"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Palma is the catalyst to that conversation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Unbound's direct-to-consumer business model not only allows a woman to shop from the comfort of her home"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Singleton D1 retained: shopping/shame problem is separately revisable from product SKUs. Orgasm-gap stats treated as warrant for Palma, not separate premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-509",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:27:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

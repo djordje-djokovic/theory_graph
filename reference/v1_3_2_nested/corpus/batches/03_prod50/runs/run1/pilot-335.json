@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combustion power plants are inefficient, inflexible, and emit large amounts of CO2 while still supplying most energy",
+      "status": "explicit",
+      "evidence_span": "These combustion power plants fail. They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "id": "P2",
+      "text": "System combines solid oxide fuel cells, a CO2 separation unit, and a methanation reactor in a new closed-cycle design",
+      "status": "explicit",
+      "evidence_span": "Our technology combines three major building blocks in a new and unique way"
+    },
+    {
+      "id": "P3",
+      "text": "Eliminating combustion and closing the cycle yields 100% fuel conversion and 80% electric efficiency",
+      "status": "explicit",
+      "evidence_span": "we have eliminated the combustion completely. By adding the two components that we showed before to the fuel cells and operating the system in a closed cycle, we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "id": "P4",
+      "text": "Outputs are water and pure CO2 as a valuable product rather than off-gas",
+      "status": "explicit",
+      "evidence_span": "there is no off-gas anymore, but we just produce water and pure CO2, which now becomes a valuable product"
+    },
+    {
+      "id": "P5",
+      "text": "System is reversible: can produce gas (hydrogen or methane) from excess power",
+      "status": "explicit",
+      "evidence_span": "our new system design is reversible, meaning it can also produce gas from excess power"
+    },
+    {
+      "id": "P6",
+      "text": "First market is biogas plants: power when renewables are scarce; store energy and enable negative emissions when surplus",
+      "status": "explicit",
+      "evidence_span": "Biogas plants are our first target market"
+    },
+    {
+      "id": "P7",
+      "text": "Doubling electric efficiency doubles electricity revenue; reversible operation can more than fivefold customer income",
+      "status": "explicit",
+      "evidence_span": "doubling in electric efficiency first of all means doubling revenues from electricity. With the additional revenues from the reversible operation, they can overall more than fivefold their income"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Combustion power failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Closed-cycle SOFC system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas market and customer economics",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decentralized, carbon-negative, highly efficient power generation",
+      "status": "explicit",
+      "evidence_span": "provide the world with decentralized, carbon negative, and highly efficient power plants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-term storage of biogenic CO2 enables negative CO2 emissions",
+      "evidence_span": "Long-term storage of this biogenic CO2, in turn, enables negative CO2 emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "By adding the two components that we showed before to the fuel cells and operating the system in a closed cycle, we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we could not find the power plant we dreamed of"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "groundbreaking efficiency of 80%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Biogas plants are our first target market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "PhD biography excluded except as context for the incomplete-conversion insight already embodied in P3. Container demo details treated as embodiment of P2–P5, not extra premises. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "coder_session_id": "session_05",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "PVA from products like laundry pods breaks into microplastics that re-enter drinking water and food",
+      "status": "explicit",
+      "evidence_span": "these parts will break down into microplastics, flow into the ocean"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary upcycling of agricultural waste into biobased polymer resins replaces PVA with lower water, energy, CO2, and unit cost at scale",
+      "status": "explicit",
+      "evidence_span": "We upcycle these waste using our technology, turn them into biobased polymer"
+    },
+    {
+      "id": "P3",
+      "text": "The biobased resins process on existing plastic manufacturing equipment for easy partner adoption",
+      "status": "explicit",
+      "evidence_span": "processed into these biobased resins. through existing plastic manufacturing equipment"
+    },
+    {
+      "id": "P4",
+      "text": "Partnerships with CPG and packaging leaders (e.g., Unilever, Monosol) commercialize bio-based laundry pods and scale production",
+      "status": "explicit",
+      "evidence_span": "creating the world's first 100% bio-based laundry pod made from beer waste"
+    },
+    {
+      "id": "P5",
+      "text": "The polymer can replace PVA across construction, textiles, cosmetics, and pharmaceuticals beyond laundry pods",
+      "status": "explicit",
+      "evidence_span": "There's a wide range of applications that our polymer can replace"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "PVA microplastic problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "biobased polymer process and drop-in manufacturing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "partner GTM and application markets",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Replace PVA microplastics with affordable bio-based materials for everyday products",
+      "status": "explicit",
+      "evidence_span": "world's first and only solution to replace PVA with bulb-based polymer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large-scale agricultural waste upcycling and CO2/water reduction",
+      "evidence_span": "By 2030, we aim to upcycle 200 million kilos of agricultural waste, replacing 100 kilos of PVA"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you and your children are eating five grams of microplastic every single day"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn them into biobased polymer, which can then be processed into these biobased resins"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale up commercially quickly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.5.1 process+performance package: water/energy/CO2/unit-cost folded into P2. Patents/USDA certification folded as IP detail on the polymer. Bacteria brewing description folded into the same process. Revenue projections excluded. Unilever video clip is third-party speech; partnership claim retained from founder framing."
+}

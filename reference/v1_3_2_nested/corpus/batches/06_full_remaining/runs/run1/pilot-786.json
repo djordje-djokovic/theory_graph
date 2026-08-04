@@ -1,0 +1,125 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home cannabis growing requires too much specialized knowledge and equipment—lighting, nutrients, medium, and grow space—creating prohibitive barriers",
+      "status": "explicit",
+      "evidence_span": "I was baffled by the amount of knowledge required in order to grow high-quality cannabis"
+    },
+    {
+      "id": "P2",
+      "text": "A smartphone-controlled plug-in home appliance can automatically grow cannabis in a beautiful mini-fridge-like form factor",
+      "status": "explicit",
+      "evidence_span": "Leaf is a plug-in plant system that automatically grows cannabis and is controlled by your smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Cannabis-optimized LED lighting plus automated nutrient dosing, pH, climate, and odor control create a precisely controlled grow environment",
+      "status": "explicit",
+      "evidence_span": "It starts off with our custom-built LED, which was created by lead NASA agricultural lighting researchers and tailored specifically for cannabis growth"
+    },
+    {
+      "id": "P4",
+      "text": "A grower community shares live plant streams and syncable custom recipes so users can adopt proven grow settings in one click",
+      "status": "explicit",
+      "evidence_span": "in one click, I can sync his recipe directly to my leaf"
+    },
+    {
+      "id": "P5",
+      "text": "Recurring doorstep delivery of nutrients, carbon filters, and other grow supplies supports each cycle",
+      "status": "explicit",
+      "evidence_span": "sending you directly to your door every grow, nutrients, carbon filters, anything you need to grow"
+    },
+    {
+      "id": "P6",
+      "text": "A strategic partnership with a leading cannabis nutrient company supplies the most important input for high-quality plants",
+      "status": "explicit",
+      "evidence_span": "strategic partnership and investment from the world's leading cannabis nutrient company, Advanced Nutrients"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home-grow knowledge barriers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated Leaf grow appliance",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Community recipe sharing",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Consumables and nutrient partnership",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy home production of high-potency, high-quality cannabis medicine",
+      "status": "explicit",
+      "evidence_span": "allows cannabis plants to thrive and create high-potency, high-quality medicine"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "speaking of nutrients, that is the most important part in a high quality cannabis plant"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The barriers to entry are just too high"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "growing your own cannabis has never been easier"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I can expect some beautiful babakush plants just like Zach"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that is the most important part in a high quality cannabis plant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Enumerated environmental controls folded into P3 as one automation bundle (v1.3.2 clarification 5). Beta deposit ask excluded as financing per 4.2. Singleton D1 and D3 retained: barriers and community recipes are separately revisable from the appliance and supply modules. Nutrients called 'most important' warrants P6 relating to supply quality.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-786",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open Garden crowdsources mesh connectivity so users can share mobile internet across phone, tablet, and laptop",
+      "status": "explicit",
+      "evidence_span": "It works by crowdsourcing connectivity"
+    },
+    {
+      "id": "P2",
+      "text": "Users who install the app get faster and more reliable mobile internet",
+      "status": "explicit",
+      "evidence_span": "when you install our application, you also benefit from a faster mobile internet and more reliable mobile internet"
+    },
+    {
+      "id": "P3",
+      "text": "Network density improves connectivity for all participants",
+      "status": "explicit",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Crowdsourced mesh internet sharing",
+      "premise_ids": ["P1", "P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shared mobile internet that is faster and more reliable",
+      "status": "explicit",
+      "evidence_span": "share your mobile internet among your phone, tablet, and laptop"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "faster mobile internet and more reliable mobile internet"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Platform OS list folded into the core mesh offering (v1.3.2 clarification 5). Install counts, fundraising story, and hiring CTA excluded. Single domain: mesh mechanism and network-effect condition revise together.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

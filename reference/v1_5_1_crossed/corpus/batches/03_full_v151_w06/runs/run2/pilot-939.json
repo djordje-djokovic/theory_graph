@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-939",
+    "coder_session_id": "session_02",
+    "session_case_index": 7,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "temperature": null,
+    "temperature_controlled": false,
+    "model_provider": "cursor-agent",
+    "extracted_at": "2026-08-01T13:09:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fraud is large and growing faster than e-commerce, with costly human review and conversion-killing challenge questions that fail to identify customers",
+      "status": "explicit",
+      "evidence_span": "$20 billion was lost to online fraud"
+    },
+    {
+      "id": "P2",
+      "text": "A real-time identity platform combines social fingerprinting with behavioral and transactional data to score customer authenticity for merchants",
+      "status": "explicit",
+      "evidence_span": "We're a real-time online identity verification platform"
+    },
+    {
+      "id": "P3",
+      "text": "Checkout social sign-in verifies the profile via posts and real-world mappings and can pre-populate checkout forms",
+      "status": "explicit",
+      "evidence_span": "we pre-populate the online checkout form with the customer's data"
+    },
+    {
+      "id": "P4",
+      "text": "Merchants integrate via JavaScript, Magento plugin, and REST API",
+      "status": "explicit",
+      "evidence_span": "we have our JavaScript module, which can be combined with our Magento plugin and also our REST-based API"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing is simple per-transaction pay-as-you-go without annual contracts or monthly minimums",
+      "status": "explicit",
+      "evidence_span": "it's per transaction. You just pay for what you use"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "failing online fraud controls",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "social identity verification platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "per-transaction pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Merchants know who they are doing business with and reduce online fraud without destroying conversions",
+      "status": "explicit",
+      "evidence_span": "knowing who you're doing business with"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring about an end to online fraud"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We give the merchant a score, and that score is all about authenticity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's really like Stripe for fraud"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fraud losses, review burden, and challenge-question conversion destruction folded as one merchant problem set (§4.1.6). Social/behavioral/transactional scoring cascade folded into the identity platform premise; checkout verify+prepopulate kept as checkout UX path within product. Integration options folded as one developer surface. Seed/Telefonica/team excluded (§4.2). Vision that commerce is about knowing counterparties treated as value, not extra premise (§4.1.4). Anti-template: problem, verification product, and pricing separately revisable."
+}

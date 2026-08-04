@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected things are proliferating, with 6 billion in use by year end",
+      "status": "explicit",
+      "evidence_span": "6 billion connected things will be in use till the end of this year"
+    },
+    {
+      "id": "P2",
+      "text": "Checking the phone every minute is a bad way to communicate with technology",
+      "status": "explicit",
+      "evidence_span": "There should be a nicer way to communicate with technology rather than checking your phone every single minute"
+    },
+    {
+      "id": "P3",
+      "text": "Glance Clock pairs a well-designed wall clock with a glanceable display, speaker, and open cloud platform",
+      "status": "explicit",
+      "evidence_span": "Glance Clock is a well-designed wall clock with embedded glanceable display, built-in speaker, and open cloud platform"
+    },
+    {
+      "id": "P4",
+      "text": "Background geometric shapes make information readable at a glance without disruption",
+      "status": "explicit",
+      "evidence_span": "It allows you to read information quickly at a glance without being disrupted from your current tasks"
+    },
+    {
+      "id": "P5",
+      "text": "Open-API integrations connect the clock to wearables, connected devices, and web services",
+      "status": "explicit",
+      "evidence_span": "we have a cloud platform with a lot of integrations that can actually integrate via open APIs"
+    },
+    {
+      "id": "P6",
+      "text": "The cloud decides what, when, and where to display, always relevant to place and situation",
+      "status": "explicit",
+      "evidence_span": "it will display different data, but always relevant for a particular place and the situation"
+    },
+    {
+      "id": "P7",
+      "text": "An Indiegogo campaign launches the clock at an estimated $149 with October shipping",
+      "status": "explicit",
+      "evidence_span": "the estimated price will be just $149 for a single device"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Phone-checking overload",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ambient glanceable clock hardware",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Contextual cloud platform",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Crowdfunding launch at $149",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Information from wearables, devices, and web services appears right at the moment it is needed",
+      "status": "explicit",
+      "evidence_span": "It shows you information from your wearables, connected devices, and web services right at the moment you need it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "checking your phone every single minute"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "read information quickly at a glance"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "always relevant for a particular place and the situation"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$149 for a single device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Run 3 variation on the current Glance Clock transcript: drops the out-of-box setup premise (folded into hardware capability, v1.3.2 4.1(5)) and splits contextual relevance from the analytics claim. Team/accelerator pedigree and 2,000-person community excluded per 4.2; retail plans and added IoT connections treated as roadmap vision (v1.3.2 4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-724",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:19:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

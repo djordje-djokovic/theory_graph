@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developers must buy many devices and hire testers or risk bad App Store reviews",
+      "status": "explicit",
+      "evidence_span": "You have to buy a lot of devices. You have to hire a lot of people. And then, if you don't do it, you're probably going to get bad review in the App Store"
+    },
+    {
+      "id": "P2",
+      "text": "Existing cloud testing asks for unit tests and returns long error logs without the physical device",
+      "status": "explicit",
+      "evidence_span": "they present developers with a very long log with a lot of errors"
+    },
+    {
+      "id": "P3",
+      "text": "NativeTap puts remote real devices on a tablet/desktop so interaction and debugging feel USB-local",
+      "status": "explicit",
+      "evidence_span": "it's as if it was USB connected to your computer"
+    },
+    {
+      "id": "P4",
+      "text": "Efficient multi-device servers, queuing, and racks enable scalable low-cost device access",
+      "status": "explicit",
+      "evidence_span": "fewer data centers, fewer servers, and higher gross margins"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmentation testing burden",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Desk-like remote device access",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Scalable device-farm ops",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Create better apps with greater market reach by testing on real devices affordably",
+      "status": "explicit",
+      "evidence_span": "you create better apps with greater market reach"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save money accessing any device for a fraction of cost",
+      "evidence_span": "You save money. You can access any device anytime you want for a fraction of cost"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't have to now limit your target group simply because you can't afford to purchase all of those devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "access and interact with any real mobile device just with one tap"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one server can support up to 250 devices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Patent I/O tech folded into desk-like access premise. Planned multi-device replication and IoT features folded as extensions of same mechanism.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-761",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

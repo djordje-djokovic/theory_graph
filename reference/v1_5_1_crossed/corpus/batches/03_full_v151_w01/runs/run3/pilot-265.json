@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-265",
+    "coder_session_id": "session_01",
+    "session_case_index": 15,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:16:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most women face hormone-related issues yet lack guidance on whether cyclical hormonal changes are normal, and non-fertility cyclical hormone data barely exists",
+      "status": "explicit",
+      "evidence_span": "80% of us, that's 3.1 billion women, suffer from a hormone-related issue"
+    },
+    {
+      "id": "P2",
+      "text": "Hormones must be tested on specific cycle days, but multi-draw blood tests with multi-day lab waits are inconvenient and costly",
+      "status": "explicit",
+      "evidence_span": "Today's solution of drawing blood and waiting days for your test results is not a convenient or cost efficient solution as you need multiple blood tests per cycle"
+    },
+    {
+      "id": "P3",
+      "text": "Hormona combines a patent-pending non-invasive urine test with a mobile app for at-home hormone understanding without a lab",
+      "status": "explicit",
+      "evidence_span": "Hormona has invented a test that, combined with our mobile app, empowers women to understand their hormones from the comfort of our home"
+    },
+    {
+      "id": "P4",
+      "text": "Focus is three key female hormones that determine an individual hormone pattern, with results in about 15 minutes at much lower cost than blood labs",
+      "status": "explicit",
+      "evidence_span": "we have nailed down the three most important female hormones to test in order to determine a woman's individual hormone pattern"
+    },
+    {
+      "id": "P5",
+      "text": "Cycle-based algorithm tells which hormone to test on which days; pee-dip-scan yields quantitative results the app analyzes",
+      "status": "explicit",
+      "evidence_span": "the unique hormonal algorithm indicates the three testing days per cycle alongside which hormone to test"
+    },
+    {
+      "id": "P6",
+      "text": "Quantitative cycle results connect symptoms to hormone levels and supply planning tips and individualized treatments",
+      "status": "explicit",
+      "evidence_span": "allows women to see their unique hormone pattern. and understand how symptoms connect to their hormone levels. They can also get tips on how to plan their life around their cycle and treatments based on their individual needs"
+    },
+    {
+      "id": "P7",
+      "text": "Regular monitoring enables predictions and earlier detection of menopause timing, fertility issues, and other overlooked hormonal changes, contributing to a women's hormone baseline for medicine",
+      "status": "explicit",
+      "evidence_span": "Hormona can, with time, help to confirm if you're going into menopause, will have problems getting pregnant, or pick up any hormonal changes that may impact your life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blind cyclical hormone care and blood-test friction",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "At-home urine test and cycle app",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Longitudinal hormone baseline and early detection",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower women to understand and act on their hormones from home with convenient accurate affordable testing",
+      "status": "explicit",
+      "evidence_span": "empowers women to understand their hormones from the comfort of our home"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Create the hormonal baseline medicine will work from and narrow the gender data gap",
+      "evidence_span": "Hormona is creating the hormonal baseline that medicine will be working off of"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "The three quantitative test results per cycle allows women to see their unique hormone pattern"
+    },
+    {
+      "from": "P3",
+      "to": "P7",
+      "type": "premise-premise",
+      "evidence_span": "By testing regularly, Hormona can, with time, help to confirm if you're going into menopause"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Who's there to tell us if a change is expected, normal, or abnormal? Today, no one"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "decreased the time it takes for you to get your test results from five days to 15 minutes, and also offering a five times cheaper product"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Regular testing and monitoring of these key hormones will enable better predictions and earlier detections"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Speed/cost vs blood lab folded into P4 as quantitative detail of the urine-test package. Founder illness story folded into problem framing (P1). Menopause/fertility/change-detection list is one monitoring-value premise (P7). Singleton D3 retained as longitudinal baseline mission distinct from the day-to-day test UX."
+}

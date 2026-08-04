@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:19:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People poorly monitor how they spend their most valuable resource—time—across days to lifetimes",
+      "status": "explicit",
+      "evidence_span": "despite the fact that time is our most valuable resource, we don't really monitor it"
+    },
+    {
+      "id": "P2",
+      "text": "Phone sensors passively collect 24/7 activity data turned into actionable insights",
+      "status": "explicit",
+      "evidence_span": "We passively collect data about what you're doing. We turn that data into insights"
+    },
+    {
+      "id": "P3",
+      "text": "Map view shows significant locations and categories without check-ins",
+      "status": "explicit",
+      "evidence_span": "no more checking in. We know exactly where you spent your time and also what category it falls into"
+    },
+    {
+      "id": "P4",
+      "text": "Goals and friend comparisons drive intentional behavioral change against how you want to spend time",
+      "status": "explicit",
+      "evidence_span": "encouraging this kind of behavioral change to help you achieve that goal of living your life more intentionally"
+    },
+    {
+      "id": "P5",
+      "text": "Social view ranks time spent with each friend as a real-world social graph",
+      "status": "explicit",
+      "evidence_span": "a stack ranking of exactly how much time you spent with each of your friends"
+    },
+    {
+      "id": "P6",
+      "text": "Tracking all 168 hours shows tradeoffs that narrow fitness trackers miss; plan to integrate those collectors",
+      "status": "explicit",
+      "evidence_span": "by tracking all 168 hours, Chronos enables you to see those tradeoffs"
+    },
+    {
+      "id": "P7",
+      "text": "Always-on intent-rich data monetizes via experiences and products that help users hit goals, not only ads",
+      "status": "explicit",
+      "evidence_span": "the data we collect 24 hours a day, seven days a week, is extremely valuable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "passive time insights and goals",
+      "premise_ids": ["P1", "P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "intent data monetization",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people live more intentionally by making time use insightful and actionable",
+      "status": "explicit",
+      "evidence_span": "help you live your life more intentionally"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "change my behavior to ultimately do what's most important to me"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer you things that can help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript starts mid-argument and ends mid-sentence (truncated=true). Kronos/Khronos/Chronos ASR variants. Map/goals/social views kept as distinct capability premises under split tie-break but same product domain. Anti-template: two domains product vs monetization."
+}

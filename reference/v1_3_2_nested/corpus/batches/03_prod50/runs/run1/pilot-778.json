@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Respiratory patients struggle with manual medication logging, twice-daily routines, and paper action plans, driving non-adherence and hospitalizations",
+      "status": "explicit",
+      "evidence_span": "it's no wonder that Jillian has a hard time keeping up with the manual logging and routine"
+    },
+    {
+      "id": "P2",
+      "text": "Large respiratory spending is driven by medication non-adherence and ER complications",
+      "status": "explicit",
+      "evidence_span": "half of that is attributed to medication non-adherence"
+    },
+    {
+      "id": "P3",
+      "text": "Wireless inhaler sensors track medication utilization, adherence, and technique in real time with universal fit for controller and rescue",
+      "status": "explicit",
+      "evidence_span": "wireless medication inhaler sensors to track her medication utilization and adherence in real time"
+    },
+    {
+      "id": "P4",
+      "text": "FDA-cleared portable clinical-grade mobile spirometer measures home lung function",
+      "status": "explicit",
+      "evidence_span": "clinical grade and ultra-portable mobile spirometer which measures her lung function from home"
+    },
+    {
+      "id": "P5",
+      "text": "Devices sync to engaging mobile apps and a HIPAA-compliant clinician/stakeholder portal",
+      "status": "explicit",
+      "evidence_span": "Both of these devices sync wirelessly to our highly engaging mobile applications"
+    },
+    {
+      "id": "P6",
+      "text": "Platform correlates adherence with lung function and gives doctors outside-clinic snapshots for tailored plans",
+      "status": "explicit",
+      "evidence_span": "correlation between lung function and controller medication use"
+    },
+    {
+      "id": "P7",
+      "text": "Go-to-market centers on health systems with high-volume pharma and payer channels while offering early consumer access",
+      "status": "explicit",
+      "evidence_span": "our system is set up for high-volume sales channels such as Pharma and Payer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Adherence burden and cost of respiratory illness",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smart inhaler and spirometer system",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B health-system and payer channels",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better pulmonary outcomes through improved medication adherence and home lung-function visibility",
+      "status": "explicit",
+      "evidence_span": "improved adherence, leading to better patient outcomes for pulmonary patients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing asthma does not need to be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smarter tools really are the key to breathing better"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully connected health platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mount Sinai outcome metrics treated as traction evidence of adherence mechanism, not separate premises. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-778",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:27:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-24",
+    "coder_session_id": "session_06",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:18:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Doctors and patients struggle to identify effective treatments and critical illness amid large volumes of past medical data",
+      "status": "explicit",
+      "evidence_span": "doctor is finding very difficult to identify about your critical illness or disease, because you have so much of past data"
+    },
+    {
+      "id": "P2",
+      "text": "An ever-evolving real-time AI decision system recommends medicines and identifies illness from lifestyle, history, and pathology data",
+      "status": "explicit",
+      "evidence_span": "ever-evolving decision-making system which not only just helps you to process your data points"
+    },
+    {
+      "id": "P3",
+      "text": "Genomics and personalized recommendation technologies help prevent upcoming diseases",
+      "status": "explicit",
+      "evidence_span": "prevent the upcoming diseases and illness in the future based on our genomics and personalized recommendation technologies"
+    },
+    {
+      "id": "P4",
+      "text": "NLP and computer vision digitize medication reports, documents, and X-rays to support faster prevention decisions",
+      "status": "explicit",
+      "evidence_span": "digitalize all your medication reports, documents, your X-ray reports"
+    },
+    {
+      "id": "P5",
+      "text": "Hospitals and businesses adopt via direct server integration, upcoming API/SDK, or cloud SaaS",
+      "status": "explicit",
+      "evidence_span": "Businesses and hospitals can use in three ways"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "treatment decision difficulty",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "healthcare AI brain",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "integration and SaaS delivery",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Multifold improvement in hospital quality, drug research, and health decision standards via an AI brain",
+      "status": "explicit",
+      "evidence_span": "artificial intelligence brain that multifolds the quality of hospitals, drug research, and standard of our health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "struggling to find the most effective treatment"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help them to make better technologies and tools for multiple organizations and hospitals and doctors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all their processes more efficient, more scalable, and more better decision-making"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Heavy ASR noise; premise wording lightly normalized, evidence_span verbatim. Banking/finance mention treated as aside, not a separate domain. Team bio and Google comparison excluded. Pitch cut by time warning (truncated=true)."
+}

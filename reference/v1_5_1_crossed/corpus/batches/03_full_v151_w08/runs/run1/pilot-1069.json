@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1069",
+    "coder_session_id": "session_02",
+    "session_case_index": 9,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding desired freemium and premium media across large catalogs and devices remains an unsolved discovery pain",
+      "status": "explicit",
+      "evidence_span": "discovery is still a big unsolved problem"
+    },
+    {
+      "id": "P2",
+      "text": "Discovery quality is fundamentally a data problem more than an algorithm-tuning problem",
+      "status": "explicit",
+      "evidence_span": "discovery is fundamentally a data problem and not an algorithm problem"
+    },
+    {
+      "id": "P3",
+      "text": "Behavioral account-level usage data plus signal from a small set of truly trusted people fuels recommendations",
+      "status": "explicit",
+      "evidence_span": "getting the signal from the noise. So for any product category, there's four to six people that I truly trust"
+    },
+    {
+      "id": "P4",
+      "text": "A weighted social feed for iTunes surfaces important items with sample playback and one-click buy",
+      "status": "explicit",
+      "evidence_span": "a streamlined feed follow system for iTunes"
+    },
+    {
+      "id": "P5",
+      "text": "A secret six-person super-trust VIP list dominates the recommendation experience",
+      "status": "explicit",
+      "evidence_span": "we allow users to create a short VIP list that we call super trust"
+    },
+    {
+      "id": "P6",
+      "text": "Configurable privacy and hide controls let users share selectively without social embarrassment",
+      "status": "explicit",
+      "evidence_span": "different people want different privacy settings, which is crucial to sharing data with us"
+    },
+    {
+      "id": "P7",
+      "text": "Affiliate links on shared discoveries monetize non-users; ads and taste-graph licensing extend revenue",
+      "status": "explicit",
+      "evidence_span": "affiliate sales is our core revenue stream"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "media discovery data problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "trusted social recommendation product",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "affiliate ads and licensing monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Superior quality recommendations and true social discovery for media content",
+      "status": "explicit",
+      "evidence_span": "delivers superior quality recommendations and true social discovery for media content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding what you want, where you want, is an enormous headache"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "show you the most important items from the most important people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are effectively monetizing non-users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Ultimate-recommendation dimensions and feed actions folded as cascade of social discovery product (§4.1.7). Super-trust kept distinct as stated mechanism. Multi-medium expansion (TV/movies/books/devices) treated as vision roadmap not premises (§4.1.4). ARPU figure folded into affiliate commercial premise. Three domains—anti-template: problem/data thesis, product, monetization separately revisable."
+}

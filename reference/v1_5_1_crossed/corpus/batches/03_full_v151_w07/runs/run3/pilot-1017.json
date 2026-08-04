@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1017",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing recommendation systems rely on stranger reviews, non-personalized averages, and widespread fake reviews",
+      "status": "explicit",
+      "evidence_span": "all of these systems are dependent on giving you reviews and recommendations from strangers"
+    },
+    {
+      "id": "P2",
+      "text": "LiveStar surfaces aggregated recommendations from professional critics",
+      "status": "explicit",
+      "evidence_span": "recommended restaurant according to the top 12 critics in San Francisco"
+    },
+    {
+      "id": "P3",
+      "text": "LiveStar gathers friend recommendations, including Q&A via email, SMS, and Facebook with pre-populated surveys for non-users",
+      "status": "explicit",
+      "evidence_span": "LiveStar has a Q&A feature that lets me send a question, a request for some recommendations to friends"
+    },
+    {
+      "id": "P4",
+      "text": "An algorithm measures taste similarity and surfaces recommendations from people with matching taste",
+      "status": "explicit",
+      "evidence_span": "LiveStar algorithmically measures your taste and then compares it to other people"
+    },
+    {
+      "id": "P5",
+      "text": "One app covers restaurants, on-menu items, music, and movies as a multi-category destination",
+      "status": "explicit",
+      "evidence_span": "you can go to LiveStar for restaurants, what to eat when you're at the restaurant, what music to listen to, and what movie to watch"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken stranger-average reviews",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "trusted critic friend and taste sources",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-category recommendation coverage",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast access to high-quality personalized recommendations from trusted sources",
+      "status": "explicit",
+      "evidence_span": "give you access to high-quality reviews from trusted sources"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Clearly, the existing solutions are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provides fast access to high quality sources across a range of common real world scenarios"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're a one-stop destination, and we're constantly adding new categories"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Stranger/average/fake review issues folded as one problem set (§4.1.6). Critic, friend(+Q&A cascade), and similar-taste sources kept as distinct mechanisms within one trusted-sources domain. Keyword refine and menu-item ranking treated as UI cascade of those sources. Date-story framing not coded as separate premises."
+}

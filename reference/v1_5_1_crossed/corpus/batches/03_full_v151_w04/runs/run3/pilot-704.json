@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-704",
+    "coder_session_id": "session_06",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Warehouse inventory tracking is manual, slow, and inaccurate, causing lost items and large dollar losses",
+      "status": "explicit",
+      "evidence_span": "The biggest problem in every one of these warehouses is keeping track of inventory"
+    },
+    {
+      "id": "P2",
+      "text": "Flying robots achieve centimeter-accurate autonomous indoor flight using computer vision without GPS",
+      "status": "explicit",
+      "evidence_span": "fly autonomously indoors with centimeter accuracy without any external systems"
+    },
+    {
+      "id": "P3",
+      "text": "The product packages a robot fleet, on-site infrastructure, and real-time analytics for high-bay selective-rack warehouses",
+      "status": "explicit",
+      "evidence_span": "a fleet of these flying robots, on-site infrastructure to relay the information we collect to the workers, and real-time analytics software"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware is sold with an upfront setup fee while software is sold on subscription with data-driven premiums",
+      "status": "explicit",
+      "evidence_span": "selling the hardware, just like traditional industrial automation equipment, into the warehouses for an upfront setup fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual inventory accuracy problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "indoor autonomous inventory drones",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "hardware fee plus software subscription",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make inventory errors a thing of the past and improve warehouse operational efficiency",
+      "status": "explicit",
+      "evidence_span": "make inventory errors a thing of the past"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Companies lose billions of dollars because of inventory errors every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we automate inventory counting using flying robots"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the software on a subscription basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "400x speed and aisle-time figures folded as performance package of the same inventory-scanning process (§4.1.8). Extra safety-stock cost savings treated as outcome framing of that process, not a separate premise. Team credentials excluded. Anti-template: problem, product system, and commercial model separately revisable."
+}

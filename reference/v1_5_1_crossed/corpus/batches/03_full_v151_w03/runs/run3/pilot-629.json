@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-629",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Asian traffic, air pollution, and low-quality out-of-fashion under-teched scooters create a mobility pain set",
+      "status": "explicit",
+      "evidence_span": "we've been suffering from traffic problems and air pollution. And also, including the scooter market in Asia, they are low quality and out of fashion, and always short of tech"
+    },
+    {
+      "id": "P2",
+      "text": "A fully electronic clean-energy e-bike with removable aluminum batteries can replace gas scooters",
+      "status": "explicit",
+      "evidence_span": "Mineral 2.0 is fully electronic, with clean energy, e-bike"
+    },
+    {
+      "id": "P3",
+      "text": "Product features include long-range battery packs, LED visibility, dual disc brakes, smooth motor, and aluminum-titanium frame",
+      "status": "explicit",
+      "evidence_span": "With four packs of batteries, they can go up to 200 kilometers"
+    },
+    {
+      "id": "P4",
+      "text": "A customization system plus adaptive manufacturing lets buyers choose steering, color, and components",
+      "status": "explicit",
+      "evidence_span": "We have a customization system where you can choose the option of the steering wheel, bike steering wheel"
+    },
+    {
+      "id": "P5",
+      "text": "Target buyers are daily commuters replacing old scooters; retail starts at $1,700",
+      "status": "explicit",
+      "evidence_span": "main road is targeted on the people who use the bike for daily commute, and who wants to replace their old fashioned scooters"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Traffic pollution and poor scooters",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Electric removable-battery e-bike",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Configurable adaptive manufacturing",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Commute replacement at $1,700",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A cleaner, modern, tech-forward electric commute bike replacing gas scooters",
+      "status": "explicit",
+      "evidence_span": "fully electronic, with clean energy, e-bike"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So we want to solve that problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Compared to the Widespear, the lithium-ion battery, which is more environmentally friendly and way better"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have a customization system"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our retail price start at $1,700"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Traffic/pollution/scooter-quality pains coded as one problem set. Lights/brakes/motor/frame treated as feature cascade of the e-bike mechanism with range/battery claim (v1.5.1 §4.1.7). Price and commute ICP kept as one commercial/GTM premise. Gas Menro 1.0 treated as prior path framing, not a separate premise."
+}

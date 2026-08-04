@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-108",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Text lacks personality and video chat lacks on-the-fly convenience; attachment video kills spontaneity",
+      "status": "explicit",
+      "evidence_span": "Most of it is in the form of video attachments"
+    },
+    {
+      "id": "P2",
+      "text": "Glide broadcasts video nearly instantly for live or later cloud playback without filling the device",
+      "status": "explicit",
+      "evidence_span": "When I begin broadcasting, about a second later, you can consume my message on the recipient's end. Now, this is in real time"
+    },
+    {
+      "id": "P3",
+      "text": "Product is a free, ad-free consumer messenger",
+      "status": "explicit",
+      "evidence_span": "we want to be a free app with all of our features free. And we want to be completely ad free"
+    },
+    {
+      "id": "P4",
+      "text": "In-app live video support (GlideBot) can onboard and troubleshoot users and extend to other industries",
+      "status": "explicit",
+      "evidence_span": "integrated into our app a customer support that's a live messenger using our GlideBot 3000"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Messaging problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Glide real-time video",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Live support channel",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Holy-grail messaging: text convenience with video personality",
+      "status": "explicit",
+      "evidence_span": "create the Holy Grail something that had the convenience of text messaging, but the personality of video"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communication problem with family and friends"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "watch it while you're still recording it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal touch"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "GlideBot kept as singleton support module this run because speaker claims cross-industry usefulness. Enterprise future play not premised. Truncated. Advisors/bios excluded."
+}

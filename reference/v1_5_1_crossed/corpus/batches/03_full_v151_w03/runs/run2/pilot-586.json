@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-586",
+    "coder_session_id": "session_02",
+    "session_case_index": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A few-second test with unlimited profiles plus a dashboard enables tracking player health",
+      "status": "explicit",
+      "evidence_span": "testing and an unlimited number of profiles. It comes with a complete dashboard and data management system so you keep better track of your player's health"
+    },
+    {
+      "id": "P2",
+      "text": "Implementation can be as rapid as the test, with schools, a university, a hospital, and an MLB team already onboarding for testing",
+      "status": "explicit",
+      "evidence_span": "implementation of our system is bound to be as rapid as the test itself"
+    },
+    {
+      "id": "P3",
+      "text": "IP covers diagnostic services spanning motor neural disease, infant autism detection, and drug/intoxication detection",
+      "status": "explicit",
+      "evidence_span": "Our IP covers a breadth of diagnostic services ranging from motor neural diseases and detection of autism at infancy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rapid health testing and dashboard",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Rapid institutional implementation",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Broad diagnostic IP roadmap",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A total automated mobile healthcare platform",
+      "status": "explicit",
+      "evidence_span": "We are now one step closer to a total automated mobile health care platform"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's so much information to be gained from just a few second tests"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "implementation of our system is bound to be as rapid as the test itself"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our IP covers a breadth of diagnostic services ranging from motor neural diseases and detection of autism at infancy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-sentence and is truncated; only closing segment available. Partner logos treated as support for rapid-implementation claim, not separate traction premises. Diagnostic applications listed under one IP breadth premise (same mechanism, multiple uses)."
+}

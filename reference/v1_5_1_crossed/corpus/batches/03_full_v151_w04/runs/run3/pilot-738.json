@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-738",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video creators struggle to find fitting music: stock libraries are slow to search, expensive, royalty-confusing, require manual editing, and make videos less unique",
+      "status": "explicit",
+      "evidence_span": "finding music for video sucks"
+    },
+    {
+      "id": "P2",
+      "text": "Patent-pending AI composes original music from scratch using music-theory rules and produces it to a professional standard",
+      "status": "explicit",
+      "evidence_span": "patent-pending software that writes original music completely on its own"
+    },
+    {
+      "id": "P3",
+      "text": "The system delivers unlimited unique tracks that are royalty-free, length/style-customizable, and much cheaper than stock alternatives",
+      "status": "explicit",
+      "evidence_span": "unlimited amount of unique music in a variety of styles that's completely royalty-free, instantly customizable, and far cheaper than the alternatives"
+    },
+    {
+      "id": "P4",
+      "text": "Users pay at download with a free monthly allotment then a per-track fee about 80% cheaper than alternatives",
+      "status": "explicit",
+      "evidence_span": "Users pay at point of download"
+    },
+    {
+      "id": "P5",
+      "text": "Longer-term licensing of the composition technology to platforms that supply music to their users",
+      "status": "explicit",
+      "evidence_span": "we'll also license our technology to companies that themselves want to provide music to their users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "stock music for video pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI music composition engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "download pricing and platform licensing",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Video creators get unique, fitting, affordable soundtrack music on demand",
+      "status": "explicit",
+      "evidence_span": "create an unlimited amount of unique music"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Take Marcianophone's pain and multiply it by the millions of other video creators"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "an artificially intelligent music composer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is about 80% cheaper than what you'd pay elsewhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Stock-library pain facets folded as one problem bundle (v1.5.1 §4.1.6). Compose+produce pipeline and style/length demo treated as one AI mechanism with performance package (unique/royalty-free/customizable/cheap) kept as benefit cascade of that mechanism (§4.1.7–8); patent-pending kept inside the engine premise. Beta traction/Google/Royal Family excluded. Anti-template: problem, product, and commercial model separately revisable."
+}

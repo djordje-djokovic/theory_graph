@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-929",
+    "coder_session_id": "session_01",
+    "session_case_index": 13,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College recruiting is competitive and valuable, but startups/mid-size firms cannot compete with big campus spenders; students choose employers they have relationships with, while LinkedIn-style networking fails because students are poorly connected",
+      "status": "explicit",
+      "evidence_span": "how can a startup or a medium-sized company compete effectively with the big guys on campus"
+    },
+    {
+      "id": "P2",
+      "text": "Campus channels meet many students at once and students stay in pipeline for years, so long-cycle relationship management is the key hiring mechanism",
+      "status": "explicit",
+      "evidence_span": "once you meet students, they're going to be in the pipeline for a number of years before they take a job"
+    },
+    {
+      "id": "P3",
+      "text": "Meritful is an SRM/PaaS where companies invite ambassadors, privately connect promising students, run challenges, review student projects, and track development over years toward offers",
+      "status": "explicit",
+      "evidence_span": "platform as a service for college recruiting teams to build and manage their relationship with students over multiple years"
+    },
+    {
+      "id": "P4",
+      "text": "Free for students; companies pay monthly subscription",
+      "status": "explicit",
+      "evidence_span": "Meriful is always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "campus recruiting relationship gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Meritful student relationship platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "free students monthly company subscription",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Growing companies hire the best university students by building multi-year relationships that big one-off campus visits cannot match",
+      "status": "explicit",
+      "evidence_span": "help companies hire the best students out of universities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "relationships are the key to hiring great students"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a sustainable relationship with students that's directly tied to their recruiting efforts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available at a monthly subscription to companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Competitive campus market, relationship-beats-brand story, and LinkedIn mismatch folded as one recruiting-problem set with long-pipeline campus features (§4.1.6). Ambassador portal, challenges, project showcase, and tracking folded as SRM cascade (§4.1.7). Private beta logos excluded as traction. ASR Meritful/Merriful/Merrifield variants left in spans. Three domains: problem, product, pricing—anti-template justified by separately revisable recruiting gap, SRM product, and subscription packaging."
+}

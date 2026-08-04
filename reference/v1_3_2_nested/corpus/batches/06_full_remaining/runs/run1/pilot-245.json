@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Students' attention is captured by messaging and social apps, making sustained textbook study hard to win",
+      "status": "explicit",
+      "evidence_span": "How do you convince a generation that spends eight hours a day on Snapchat and TikTok to spend two hours a day on a textbook"
+    },
+    {
+      "id": "P2",
+      "text": "Generative AI can help students learn faster and teachers teach faster through personalized learning materials",
+      "status": "explicit",
+      "evidence_span": "We're building generative AI to help students learn faster and help teachers teach faster"
+    },
+    {
+      "id": "P3",
+      "text": "A photo-to-flashcard product uses OCR and ML to generate questions and answers from textbook pages in seconds",
+      "status": "explicit",
+      "evidence_span": "allows students to create flashcards with just a picture of their textbooks"
+    },
+    {
+      "id": "P4",
+      "text": "A messaging-app virtual tutor delivers instant Q&A and extended help such as essay talking points where students already spend time",
+      "status": "explicit",
+      "evidence_span": "Milo is a virtual learning assistant that acts as a tutor in your pocket"
+    },
+    {
+      "id": "P5",
+      "text": "Task-specific language-model behavior trained on product data (not only prompt engineering) enables fast specialized Q&A generation",
+      "status": "explicit",
+      "evidence_span": "instead of usual prompt engineering, this is done by training task-specific behavior in the model itself"
+    },
+    {
+      "id": "P6",
+      "text": "The same models can distill university knowledge repositories and create instant employee training resources",
+      "status": "explicit",
+      "evidence_span": "using our algorithms and our models to distill their knowledge repositories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Student attention and learning need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Kado and Milo generative learning products",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Specialized models and workplace expansion",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students learn faster with a seamless AI-powered learning experience",
+      "status": "explicit",
+      "evidence_span": "help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Workforce upskilling through instant training resources for employees",
+      "evidence_span": "create instant training resources for their employees"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Now, this is all made possible because we specialize in language"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make learning personalized? What if we could make learning addictive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you get flashcards. This was a process that took me two hours in school, now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have a fantastic, seamless user experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Beta-user and resource counts excluded as traction per 4.2. Essay help and other Milo uses folded into P4 as applications of one assistant (v1.3.2 clarifications 2 and 5). Co-founder age/dropout and researcher hire treated as biography, not premises. Singleton D1 retained: attention competition is independently revisable from product and model modules. Anti-template: three domains reflect attention problem, student products, and model/expansion—not a need/product/money triad.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

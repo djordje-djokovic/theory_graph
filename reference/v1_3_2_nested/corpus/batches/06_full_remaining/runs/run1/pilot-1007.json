@@ -1,0 +1,121 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People do not really monitor how they spend time even though time is their most valuable resource",
+      "status": "explicit",
+      "evidence_span": "despite the fact that time is our most valuable resource, we don't really monitor it"
+    },
+    {
+      "id": "P2",
+      "text": "Phone sensors enable entirely passive collection of what users are doing without check-ins",
+      "status": "explicit",
+      "evidence_span": "We passively collect data about what you're doing"
+    },
+    {
+      "id": "P3",
+      "text": "Passive location, goal, and social-time views make time use insightful and actionable for intentional living",
+      "status": "explicit",
+      "evidence_span": "we can make that data insightful and actionable"
+    },
+    {
+      "id": "P4",
+      "text": "Tracking all 168 hours reveals prioritization tradeoffs that narrow fitness-style trackers miss",
+      "status": "explicit",
+      "evidence_span": "by tracking all 168 hours, Chronos enables you to see those tradeoffs"
+    },
+    {
+      "id": "P5",
+      "text": "Always-on intent-rich context enables offering goal-aligned experiences and products, not just ads",
+      "status": "explicit",
+      "evidence_span": "this isn't just targeted ads. We can offer experiences, products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmonitored time problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Passive full-life time insights",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Intent-based offers",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users live more intentionally by seeing and changing how they spend time",
+      "status": "explicit",
+      "evidence_span": "help you live your life more intentionally"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Tackle the largest life regret about who and where time is spent",
+      "evidence_span": "tackling the single largest regret that people have in their lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Chronos passively creates content and enables you to focus on living your life"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we don't really monitor it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you live your life more intentionally"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "things that can help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Transcript opens mid-sentence and cuts off; truncated=true. Map/goal/social UI folded into P3 (v1.3.2 #5). Integrator roadmap folded. Singletons D1/D3 retained as separately revisable modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:41:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

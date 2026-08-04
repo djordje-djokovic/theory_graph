@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-424",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators face unfair treatment on existing platforms including demonetization, shifting upload rules, and lack of support",
+      "status": "explicit",
+      "evidence_span": "you're consistently being demonetized for difficult to diagnose and really hard to change ways"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers face irrelevant ads and abusive comment sections that block support for creators",
+      "status": "explicit",
+      "evidence_span": "you're being inundated with irrelevant and irritating advertising"
+    },
+    {
+      "id": "P3",
+      "text": "A creator-first, safety-first, social-first video-sharing platform rewards creators and improves the consumer experience",
+      "status": "explicit",
+      "evidence_span": "We are a creator-first, video-sharing platform, rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    },
+    {
+      "id": "P4",
+      "text": "Kubernetes-based backend and upload pipeline scale cost-efficiently under traffic spikes and attacks",
+      "status": "explicit",
+      "evidence_span": "we've built our entire back end upon a system called Kubernetes, which allows us to scale down to really, really low amounts of costs"
+    },
+    {
+      "id": "P5",
+      "text": "Moderation plus Watchdog human endorsement protects users from inappropriate and copyrighted content",
+      "status": "explicit",
+      "evidence_span": "we've also built an exciting moderation piece, which protects users from things like inappropriate content and also areas like copyrights"
+    },
+    {
+      "id": "P6",
+      "text": "An interestingness algorithm surfaces relevant, entertaining, and safe posts including new creators",
+      "status": "explicit",
+      "evidence_span": "our interestingness algorithm, which has been a coined phrase from my personal favorite YouTuber, Casey Neistat, which is basically around suggesting relevant, entertaining, and safe posts to the user"
+    },
+    {
+      "id": "P7",
+      "text": "Creator Hub turns analytics into identifiable audience faces and actionable guidance",
+      "status": "explicit",
+      "evidence_span": "on watch, you'll see exactly who makes up your audience and actionable queries and statements that will help you to be a better creator"
+    },
+    {
+      "id": "P8",
+      "text": "Revenue comes from creator-driven Super Sub micro-subscriptions and creator-controlled advertising",
+      "status": "explicit",
+      "evidence_span": "Super sub, which is a creator-driven micro subscription model, and advertising, a more traditional method that the creator controls"
+    },
+    {
+      "id": "P9",
+      "text": "Go-to-market focuses on emerging markets with exclusive content from influential creators",
+      "status": "explicit",
+      "evidence_span": "We are focusing on the emerging markets, South America, Russia, the Middle East, and India"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Creator and consumer platform pain",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Watch platform product and tech",
+      "premise_ids": ["P3", "P4", "P5", "P6", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and emerging-market GTM",
+      "premise_ids": ["P8", "P9"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A safer, more social video home that rewards creators and serves consumers fairly",
+      "status": "explicit",
+      "evidence_span": "rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're consistently being demonetized for difficult to diagnose and really hard to change ways"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are a creator-first, video-sharing platform, rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Super sub, which is a creator-driven micro subscription model, and advertising"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Creator pain folded as one problem-set (P1); consumer pain separate stakeholder job (P2). Platform feature cascade of UI/demo facets folded into P3–P7 as distinct mechanisms (infra, moderation, algorithm, creator analytics). Traction metrics and investor bios excluded per 4.2. Anti-template: pain/product/monetization-GTM are separately revisable modules."
+}

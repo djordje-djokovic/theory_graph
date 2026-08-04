@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Breach cost, not occurrence, is the residual risk firms manage via encryption",
+      "status": "explicit",
+      "evidence_span": "no longer a question of whether a breach will occur, but rather what the cost of this breach will be"
+    },
+    {
+      "id": "P2",
+      "text": "Data stays encrypted at rest, transit, and in-memory DB storage",
+      "status": "explicit",
+      "evidence_span": "data remains encrypted, addressed, in transit, and in memory at the database storage"
+    },
+    {
+      "id": "P3",
+      "text": "Private search returns data to the app for decryption only there",
+      "status": "explicit",
+      "evidence_span": "fetch them back to the application in a private way, and only there the data gets decrypted"
+    },
+    {
+      "id": "P4",
+      "text": "Requires no application changes and never reveals the key",
+      "status": "explicit",
+      "evidence_span": "The key never gets revealed, and no application changes are required"
+    },
+    {
+      "id": "P5",
+      "text": "Real-time Docker encryption plus dynamic re-encryption after queries",
+      "status": "explicit",
+      "evidence_span": "that data set got dynamically re-encrypted"
+    },
+    {
+      "id": "P6",
+      "text": "Oblivious RAM with differential privacy enables efficient secure indexes",
+      "status": "explicit",
+      "evidence_span": "oblivious RAM, with differential privacy in order to ensure an efficient and secure indexing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Breach-cost problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Encrypted searchable database",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Usable never-decrypt security for cloud databases and analytics",
+      "status": "explicit",
+      "evidence_span": "We are a private search engine on top of encrypted data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "never decrypt cloud database solution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Bank IoT demo treated as illustration of analytics-on-ciphertext, not a separate vertical premise. Market $1.6B excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-483",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

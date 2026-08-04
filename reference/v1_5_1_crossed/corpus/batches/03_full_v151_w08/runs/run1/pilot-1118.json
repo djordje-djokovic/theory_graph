@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Applications with related data are forced to store it in unrelated, separately controlled databases",
+      "status": "explicit",
+      "evidence_span": "applications that had related data no longer were forced to store it into unrelated databases"
+    },
+    {
+      "id": "P2",
+      "text": "FluidDB is a shared writable database where any application can add information to shared objects without asking permission",
+      "status": "explicit",
+      "evidence_span": "It's a shared database for applications"
+    },
+    {
+      "id": "P3",
+      "text": "When independent apps store related data in the same place, unanticipated cross-app queries become trivial",
+      "status": "explicit",
+      "evidence_span": "I've combined data in an unanticipated way from three independent but related applications"
+    },
+    {
+      "id": "P4",
+      "text": "FluidDB provides a shared writable object for everything—a platform for the web of things",
+      "status": "explicit",
+      "evidence_span": "FluidDB gives you a shared, writable object for everything"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed application data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "shared writable object database",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Related information lives together so applications and people can add and combine data without permission gates",
+      "status": "explicit",
+      "evidence_span": "they're choosing to store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A writable, social future of data not controlled solely by applications",
+      "evidence_span": "The future of data is a writable future"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "when the information is in the same place, it becomes trivial"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combining data from two different databases, is very difficult in the normal world"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "none of them had to ask permission to put that information into FluidDB"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tickery/TunkRank/We Met At demos treated as evidence of the shared-DB mechanism, not separate product premises. 'Future of data' vision recorded in secondary_value per §4.1.4 rather than as a premise. Funding anecdote excluded. P4 web-of-things scope kept inside the platform domain as the same writable-object mechanism at universal scope."
+}

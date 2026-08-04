@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers forget purchases and lack tools to amass shopping data the way vendors do",
+      "status": "explicit",
+      "evidence_span": "as consumers, well, we kind of forget the last couple of things that we purchase most of the time"
+    },
+    {
+      "id": "P2",
+      "text": "Order-confirmation forwarding populates a consumer shopping account automatically",
+      "status": "explicit",
+      "evidence_span": "forward my order confirmations in my inbox to wowat12.com"
+    },
+    {
+      "id": "P3",
+      "text": "Editing purchases with why/need metadata makes history sliceable and meaningful",
+      "status": "explicit",
+      "evidence_span": "I can start to slice it by when, where, what time, also by what I needed at the time"
+    },
+    {
+      "id": "P4",
+      "text": "Shopify plugin enables automatic capture from many merchant stores",
+      "status": "explicit",
+      "evidence_span": "because it has the application installed, it should automatically appear"
+    },
+    {
+      "id": "P5",
+      "text": "Portable opt-in sharing of selected data drives personalized merchant responses",
+      "status": "explicit",
+      "evidence_span": "data portability exemplified"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer data tools gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-in capture product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Data-out portability",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Meaningful consumer-controlled shopping data that can be leveraged for value back",
+      "status": "explicit",
+      "evidence_span": "make their shopping data more meaningful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Better deals, loyalty, VIP, and search from leveraged data out",
+      "evidence_span": "better deals, loyalty points, VIP programs, and even better search results"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if the consumers had as much leverage with the data as the vendors do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I've shown you a lot of the data in to Schwab"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the real disruptive part of Schwab. And that is data out"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Speaker explicitly elevates data-out as the disruptive module, so it is retained separately from data-in. Twitter/Facebook sharing roadmap not split.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1153",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

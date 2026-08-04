@@ -1,0 +1,120 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The US drug crisis produces continuous toxicology demand, from opioid-withdrawal births to impaired-driving deaths",
+      "status": "explicit",
+      "evidence_span": "Every 25 minutes, a baby is born in opioid withdrawal."
+    },
+    {
+      "id": "P2",
+      "text": "A compact, portable, battery-powered instrument puts a toxicology lab at the point of need",
+      "status": "explicit",
+      "evidence_span": "This compact, portable, battery-powered instrument"
+    },
+    {
+      "id": "P3",
+      "text": "The lab-on-a-chip with recirculating flow makes up to 100 simultaneous measurements from a single drop of saliva",
+      "status": "explicit",
+      "evidence_span": "can make up to 100 simultaneous measurements from a single drop of saliva"
+    },
+    {
+      "id": "P4",
+      "text": "Microfluidics always secures enough sample even when drugs cause dry mouth and strips fail",
+      "status": "explicit",
+      "evidence_span": "With our microfluidics-based approach, we can always get the right amount of sample to run a test."
+    },
+    {
+      "id": "P5",
+      "text": "The platform detects more drugs than competing strips and is the only one detecting fentanyl at recommended cutoff values",
+      "status": "explicit",
+      "evidence_span": "And we can detect more drugs than any of these other platforms."
+    },
+    {
+      "id": "P6",
+      "text": "Launching forensic-first avoids the 10-year, $20 million regulated diagnostic pathway because FDA does not regulate forensic-use drug tests",
+      "status": "explicit",
+      "evidence_span": "The FDA has regulatory discretion and currently chooses not to regulate drug tests labeled for forensic use only."
+    },
+    {
+      "id": "P7",
+      "text": "The beachhead is 18,000 US police departments, a $300 million serviceable market that leapfrogs into other forensic toxicology markets",
+      "status": "explicit",
+      "evidence_span": "we are trying to reach 18,000 police departments in the United States. And that is a $300 million serviceable, obtainable market opportunity."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Drug-crisis testing demand",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Microfluidic testing platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Forensic entry and expansion",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Laboratory-quality toxicology testing available at the point of need",
+      "status": "explicit",
+      "evidence_span": "bringing laboratory quality toxicology testing to the point of need"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P7",
+      "type": "premise-premise",
+      "evidence_span": "This allows us to get a product to market quickly while expanding to those regulated diagnostic testing markets over time."
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everyone knows that the US has a drug problem."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The assay processes automatically using our recirculating flow technique, and the results pop up on screen in less than five minutes."
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our first product is a roadside drug test for law enforcement."
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Finer reading: the portable instrument and the chip/recirculation technique are split because the cartridge chemistry and the reader hardware could fail independently; the two strip-comparison advantages are likewise split (sample acquisition vs panel breadth). FDA-discretion-to-beachhead dependency coded from the explicit 'this allows us' warrant. Pilots, accelerator support, and grant funding excluded as traction; team experience excluded as credentials.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-162",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:34:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

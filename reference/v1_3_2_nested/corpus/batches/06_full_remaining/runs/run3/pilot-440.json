@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-440",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Microsatellite operators on shared launches face long lead times, wrong orbits, and integration restrictions that burn capital while waiting",
+      "status": "explicit",
+      "evidence_span": "while these companies are waiting, they're burning capital, deferring revenue, and adding to a growing backlog of satellites"
+    },
+    {
+      "id": "P2",
+      "text": "Cost-effective dedicated microsatellite launch requires launching above atmospheric drag rather than shrinking a ground rocket",
+      "status": "explicit",
+      "evidence_span": "if you could launch your rocket above 95% of the Earth's atmosphere, you could make it small enough to cost-effectively launch an individual customer"
+    },
+    {
+      "id": "P3",
+      "text": "Regulus is a mobile, reusable, autonomous balloon platform launching from 60,000 feet with rotational stabilization",
+      "status": "explicit",
+      "evidence_span": "Regulus is fully mobile and fits into a standard shipping container"
+    },
+    {
+      "id": "P4",
+      "text": "Rocket stages use solid motors for manufacturable lower stages and non-cryogenic liquid propulsion for precise insertion",
+      "status": "explicit",
+      "evidence_span": "Our first and second stages use a solid motor architecture"
+    },
+    {
+      "id": "P5",
+      "text": "The platform supports high-frequency launches within weeks to any low-Earth orbit for individual customers",
+      "status": "explicit",
+      "evidence_span": "provide a launch within a matter of weeks to any low-Earth orbit and support a very high launch frequency"
+    },
+    {
+      "id": "P6",
+      "text": "FAA authorization for reusable balloon rocket launches clears a regulatory path for the service",
+      "status": "explicit",
+      "evidence_span": "first and only company to receive authorization from the FAA to launch a high-powered rocket from a reusable balloon platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared-launch customer pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "High-altitude dedicated launch system",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "FAA regulatory path",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dedicated no-compromise launch service for microsatellite customers",
+      "status": "explicit",
+      "evidence_span": "fundamentally committed to providing our microsatellite customers with a dedicated launch service that they've been asking for"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Open access to high-altitude platform services beyond rocket launch",
+      "evidence_span": "this opens the door to a $2.6 billion high-altitude platform services market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "And that's exactly what we do. Introducing Leo Aerospace's premier high-altitude launch platform, Regulus"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what customers need is the experience that you and I know is ride-sharing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dedicated launch service they've been asking for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clear regulatory path for us moving forward"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: folded vehicle+service cadence into one high-altitude system domain; FAA kept as singleton institutional module. High-altitude services market recorded as secondary_value rather than premise. Team bios and orbital market-size roadmap excluded."
+}

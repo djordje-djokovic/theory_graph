@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Software built by a grower for growers captures vital farm labor data (who/what/when/where) digitally",
+      "status": "explicit",
+      "evidence_span": "it was built by a grower for growers, by a farmer for farmers. And that makes it one of a kind. The other thing is that AgriTrack captures the most vital data that farmers need, which is labor"
+    },
+    {
+      "id": "P2",
+      "text": "H-2A seasonal labor programs impose heavy paperwork and compliance tracking of person and place",
+      "status": "explicit",
+      "evidence_span": "the H-2A program is a government program that helps U.S. farms get seasonal labor from other countries. And without this program, farmers can't survive because they have no labor. But being that it's a government program, it's also heavily regulated. And with heavy regulations comes heavy paperwork"
+    },
+    {
+      "id": "P3",
+      "text": "Most farms still use pen-and-paper tracking, making DOL compliance hard (high audit violation rates)",
+      "status": "explicit",
+      "evidence_span": "84% of farms today are still tracking everything with pen and paper. They haven't digitized yet. And that's a completely impractical way of doing it, obviously. And it's really difficult to stay compliant when you're recording everything with pen and paper"
+    },
+    {
+      "id": "P4",
+      "text": "Three apps (dashboard, field tablet with NFC clock-in, phone with geotag) digitize labor inputs for managers",
+      "status": "explicit",
+      "evidence_span": "Agritrack accomplishes this in three different apps. One is a dashboard app, which is a high level view of the farm in real time for farmers and managers"
+    },
+    {
+      "id": "P5",
+      "text": "Labor audit report packages DOL-ready compliance documentation for download",
+      "status": "explicit",
+      "evidence_span": "the labor audit report. It's named that way for a reason, because it has everything that's in step with the Department of Labor and what they need if they come and audit a farm"
+    },
+    {
+      "id": "P6",
+      "text": "System calculates complex hour/piece-rate/overtime payroll correctly and much faster",
+      "status": "explicit",
+      "evidence_span": "Good news with AgriTrack is that we handle all that for them, so that they know that when they do payroll, it's accurate"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "H-2A compliance and paper tracking problem",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Grower-built labor digitization product",
+      "premise_ids": ["P1", "P4", "P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Farms gain accurate digitized labor data and DOL-ready compliance confidence",
+      "status": "explicit",
+      "evidence_span": "farms can utilize AgriTrack to have confidence in the data that they're collecting, knowing that it's accurate, and that if the Department of Labor comes knocking, they feel okay"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's really difficult to stay compliant when you're recording everything with pen and paper"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AgriTrack helps solve this problem by digitizing the whole process"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pitch wraps mid-roadmap (future food traceability/spray modules excluded as aspiration). Three apps treated as facets of one digitization product surface (enumeration rule 1), with audit report and payroll as distinct compliance/payroll jobs under the same product domain. Farm count/ARR excluded as traction. truncated=true due to abrupt wrap-up."
+}

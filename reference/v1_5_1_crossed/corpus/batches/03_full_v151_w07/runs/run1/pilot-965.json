@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-965",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional remittances force recipients through agency travel and waits while senders pay high fees such as Western Union charges up to 10%",
+      "status": "explicit",
+      "evidence_span": "They have to pay for a bus to go to an agency, wait online for two hours, then go to another agency to pay their utility bills"
+    },
+    {
+      "id": "P2",
+      "text": "Immigrants send SMS-delivered mobile credit that recipients spend like a gift card on food, medicine, utilities, and tuition",
+      "status": "explicit",
+      "evidence_span": "send a credit directly to their family cell phone in Latin America that could be used to pay for food, medicine, utility bills, even tuition"
+    },
+    {
+      "id": "P3",
+      "text": "Senders can buy online or at 200 partner mom-and-pop stores; recipients get an SMS PIN and can transfer funds onward, making the network viral",
+      "status": "explicit",
+      "evidence_span": "visit us offline at one of 200 partner mom and pop stores"
+    },
+    {
+      "id": "P4",
+      "text": "Contracts give access to 7,200 retail locations in eight countries where retailers pay fees that subsidize a flat $3 customer fee",
+      "status": "explicit",
+      "evidence_span": "we already have the contracts that gives us access to 7,200 retail locations in eight different countries"
+    },
+    {
+      "id": "P5",
+      "text": "Latin America remittance market is large and mostly spent on food and utilities, enabling scale beyond one NYC neighborhood corridor",
+      "status": "explicit",
+      "evidence_span": "scale into the rest of Latin America, which receives $69 billion in remittances each year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "painful high-fee remittances",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS mobile credit remittance",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retail network and flat fee economics",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Latin America remittance market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Immigrants pay for family's basic needs back home via SMS without agency hassle and at much lower fees",
+      "status": "explicit",
+      "evidence_span": "allow immigrants to pay for all of their family's basic needs back home, all via an SMS"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Western Union taxes them up to 10%. That's insane"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unique SMS pin code that she can use to pay for food at the local supermarket"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a low flat fee of just $3, up to 70% cheaper than any alternative"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "64% of that is already being spent on food and utility bills"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Agency bus/wait/utility and WU fee folded as one remittance pain set (§4.1.6). SMS credit, PIN/gift-card spend, onward transfer/virality, and mom-and-pop send folded into product/channel surface. Retailer-fee subsidy of $3 is commercial mechanism with contract footprint. Traction metrics excluded; $3.4B opportunity framing inside market premise. 'Future of remittances'/'social network' aspiration not a separate premise (§4.1.4)."
+}

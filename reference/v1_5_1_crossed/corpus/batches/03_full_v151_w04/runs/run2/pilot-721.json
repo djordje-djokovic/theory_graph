@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-721",
+    "coder_session_id": "session_01",
+    "session_case_index": 22,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Toys have seen little meaningful innovation that lets them learn and grow with a child over years",
+      "status": "explicit",
+      "evidence_span": "There hasn't really been a lot of innovation in the toy industry"
+    },
+    {
+      "id": "P2",
+      "text": "Cognitoys are internet-connected smart dinosaur toys that deliver fun, witty, educational ongoing engagement for kids",
+      "status": "explicit",
+      "evidence_span": "internet-connected smart toys that learn and grow with a child"
+    },
+    {
+      "id": "P3",
+      "text": "A parent panel dashboard shows engagement metrics and parental controls such as bedtime, enabling a content/subscription platform around the dino",
+      "status": "explicit",
+      "evidence_span": "we give parents access to what we're calling the parent panel dashboard"
+    },
+    {
+      "id": "P4",
+      "text": "Retail at $99.99 with hardware margins, Kickstarter/beta then holiday retail launch across large and small retailers",
+      "status": "explicit",
+      "evidence_span": "the dynos will retail for $99.99"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Stagnant growing-with-child toys",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Connected educational dino platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Retail price and launch channels",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun and educational toy experiences that engage kids over time",
+      "status": "explicit",
+      "evidence_span": "We're supposed to be fun and educational"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "where would we like to see toys in a decade"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking the interactive educational approach"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "move into a full launch this holiday season"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Jokes/stories/scavenger hunts and Q&A demo folded as feature cascade of the educational Cognitoy (§4.1.7). Watson contest, Kickstarter raise, and Time honor excluded as traction/credentials. COGS figures kept as pricing/margin detail inside retail commercial premise. Anti-template: innovation gap, toy+parent platform, and retail GTM are separately revisable."
+}

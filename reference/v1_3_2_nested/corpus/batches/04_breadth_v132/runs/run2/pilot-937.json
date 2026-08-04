@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Companies are flying blind on supplier environmental sustainability while scandals keep appearing",
+      "status": "explicit",
+      "evidence_span": "companies have very little information and are flying blind"
+    },
+    {
+      "id": "P2",
+      "text": "Sustainability reporting norms have shifted fast, with Fortune 500 reporting jumping from 20% to 57% in one year",
+      "status": "explicit",
+      "evidence_span": "Fortune 500 companies' sustainability reporting has gone from 20% to 57% just between 2010 and 2011"
+    },
+    {
+      "id": "P3",
+      "text": "One integrated platform handles scorecards, on-the-fly risk analysis, and supplier management for buyers",
+      "status": "explicit",
+      "evidence_span": "the first truly integrated platform that helps companies understand and manage their supply chain sustainability"
+    },
+    {
+      "id": "P4",
+      "text": "Supplier-facing dashboards showing industry-peer standing turn questionnaire burden into improvement incentives",
+      "status": "explicit",
+      "evidence_span": "Right now, suppliers are inundated with questionnaires that they fill out and send back, and they have no idea where they stand. This helps them."
+    },
+    {
+      "id": "P5",
+      "text": "Cross-network visibility of anonymous supplier scores routes business toward more sustainable suppliers",
+      "status": "explicit",
+      "evidence_span": "buyers have access to more sustainable suppliers, and more sustainable suppliers get more business"
+    },
+    {
+      "id": "P6",
+      "text": "Enrolled suppliers pay an annual fee plus a small per-supplier fee",
+      "status": "explicit",
+      "evidence_span": "once suppliers enroll, they pay a annual fee plus a small fee per supplier"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sustainability accountability shift",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Buyer platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Supplier network and economics",
+      "premise_ids": ["P4", "P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buyers know exactly which suppliers to use and avoid environmental-disaster headlines",
+      "status": "explicit",
+      "evidence_span": "they will know exactly which suppliers to use. And they'll know that they won't have to deal with environmental disaster headlines."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers, shareholders, and the media are increasingly paying attention"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand and manage their supply chain sustainability"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more sustainable suppliers get more business"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Folded reading: drill-down analysis, questionnaire scorecards, the unified library, and the remaining feature list are parts of one buyer-platform offering (v1.3.2 clarification 5), giving singleton D2 — retained because the buyer-side product is learned and sold as a unit apart from the supplier-side network dynamics. Fee premise grouped with the supplier network because enrollment and payment are one supplier-side motion. No dependency coded this run: the incentive story is asserted but its warrant overlaps domain membership, and 4.4 says omit when in doubt.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-937",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:29:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

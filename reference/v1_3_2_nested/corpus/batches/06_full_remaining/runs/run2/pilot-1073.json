@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1073",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People at events and bars miss relevant nearby people while obsessing over distant digital contacts",
+      "status": "explicit",
+      "evidence_span": "found yourself obsessively checking your texts, emails, and tweets sent by people thousands of miles away"
+    },
+    {
+      "id": "P2",
+      "text": "Sonar lists nearby venues and ranks people present by relevance using aggregated public profile data",
+      "status": "explicit",
+      "evidence_span": "we give you a list of trending venues nearby. All it takes is one click to see how you're connected to everyone in that venue"
+    },
+    {
+      "id": "P3",
+      "text": "Shared friends, interests, and bios supply social proof for a one-click hyper-targeted meetup message",
+      "status": "explicit",
+      "evidence_span": "Sonar sent a personal, hyper-targeted message to someone in this room with enough social proof to get the conversation started"
+    },
+    {
+      "id": "P4",
+      "text": "Hyperlocal self-expression lets users broadcast what they are about and looking for to people physically present",
+      "status": "explicit",
+      "evidence_span": "a form of digital local self-expression that you can use to share what you're proud of and what you're looking for with the people here"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Failed in-person discovery",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Venue relevance and introductions",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the in-person connection you traveled for instead of leaving it to chance",
+      "status": "explicit",
+      "evidence_span": "Are you guys really going to leave that up to chance?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hyperlocal social CRM that saves time and money",
+      "evidence_span": "save you time and money"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wondering who you should talk to next"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "uncovers the hidden connections that you share with everyone else in this room"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Merged self-expression into the product domain this run (same offering as ranking/intros). Democratize-meatspace vision uncoded. No explicit revenue model in pitch. Singleton D1 market/need assumption separately revisable."
+}

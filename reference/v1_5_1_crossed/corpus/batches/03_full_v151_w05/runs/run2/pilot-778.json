@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-778",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pulmonary patients struggle with manual medication logging, reminders, and bulky clinic spirometry, driving non-adherence, hospitalizations, and poor recall for clinicians",
+      "status": "explicit",
+      "evidence_span": "it's no wonder that Jillian has a hard time keeping up with the manual logging and routine of remembering to take her medication twice daily"
+    },
+    {
+      "id": "P2",
+      "text": "Wireless inhaler sensors plus an FDA-cleared portable clinical-grade spirometer sync to an engaging mobile app that timestamps adherence, technique, and lung-function correlations",
+      "status": "explicit",
+      "evidence_span": "we enable her with wireless medication inhaler sensors to track her medication utilization and adherence in real time"
+    },
+    {
+      "id": "P3",
+      "text": "A HIPAA-compliant clinician portal gives practitioners adherence and spirometry snapshots for care outside the clinic",
+      "status": "explicit",
+      "evidence_span": "we enable access via our HIPAA compliant portal for stakeholders and practitioners"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is primarily B2B through health systems with high-volume channels such as pharma and payers",
+      "status": "explicit",
+      "evidence_span": "our system is set up for high-volume sales channels such as Pharma and Payer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "burdensome respiratory self-management",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart patient devices and clinician portal",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "B2B health-system channels",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved medication adherence and better pulmonary patient outcomes through data-smart respiratory tools",
+      "status": "explicit",
+      "evidence_span": "making respiratory devices data smart to enable improved adherence, leading to better patient outcomes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drugs don't work in patients who don't take them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowering respiratory patients to take control of their treatment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have two major health systems as customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Controller/rescue/spacer/paper plan and bulky spirometer burdens folded as one adherence-management problem (§4.1.6). Inhaler sensors, portable spirometer, app tracking, and FDA clearance folded as patient-device cascade (§4.1.7); clinician portal kept as stakeholder module within product domain. Mount Sinai adherence/ER metrics excluded as traction. Anti-template: problem, connected product, and B2B channels separately revisable."
+}

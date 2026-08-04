@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1193",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:43:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers request gardeners, plumbers, and similar local services and book online",
+      "status": "explicit",
+      "evidence_span": "It could be a gardener, a plumber, an electrician, a personal trainer"
+    },
+    {
+      "id": "P2",
+      "text": "Providers pay only for booked jobs that convert to work",
+      "status": "explicit",
+      "evidence_span": "we're only going to charge businesses if a consumer books the job with them and actually does work"
+    },
+    {
+      "id": "P3",
+      "text": "Social proof, reviews, and background checks are required for consumers to invite workers home",
+      "status": "explicit",
+      "evidence_span": "before they feel comfortable enough bringing somebody into their home"
+    },
+    {
+      "id": "P4",
+      "text": "Media and blog partners embed a configurable widget to offer the provider network",
+      "status": "explicit",
+      "evidence_span": "Every single service on Red Beacon is offered through the widget"
+    },
+    {
+      "id": "P5",
+      "text": "Widget partners receive revenue share and can badge personally recommended providers",
+      "status": "explicit",
+      "evidence_span": "it is a very generous revenue share"
+    },
+    {
+      "id": "P6",
+      "text": "Provider networks are seeded city by city before broader consumer scale",
+      "status": "explicit",
+      "evidence_span": "we stayed in the Bay Area all this time as kind of our learning pilot market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "On-demand local services marketplace",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Provider pay-for-performance model",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner widget distribution",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Market-by-market supply build",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Price-transparent, easy online scheduling of local services",
+      "status": "explicit",
+      "evidence_span": "increase the price transparency and make it very easy to schedule jobs online, which is just incredibly convenient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "request virtually any kind of local service"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "really easy to sign up service providers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale our consumer base"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "officially, Red Beacon is open in Seattle now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Revenue share kept with widget channel (v1.3.1 price+partner structure for same offer). Bootstrapping capital story excluded as financing narrative."
+}

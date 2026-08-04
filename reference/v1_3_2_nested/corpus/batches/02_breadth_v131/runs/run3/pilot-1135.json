@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1135",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:42:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Offline-style loyalty recognition is hard for publishers to deliver online without tools",
+      "status": "explicit",
+      "evidence_span": "We participate in loyalty programs every day offline, but online, it's very difficult"
+    },
+    {
+      "id": "P2",
+      "text": "Game-mechanic status, reputation, and rewards can be configured per publisher",
+      "status": "explicit",
+      "evidence_span": "They can leverage proven techniques from game mechanics to give their users status and reputation"
+    },
+    {
+      "id": "P3",
+      "text": "The system plugs into existing registration and offers widgets or API access",
+      "status": "explicit",
+      "evidence_span": "we plug in directly into your registration system"
+    },
+    {
+      "id": "P4",
+      "text": "Achievement sharing to Facebook/Twitter extends engagement off-site",
+      "status": "explicit",
+      "evidence_span": "I can even share these achievements directly into Facebook or Twitter"
+    },
+    {
+      "id": "P5",
+      "text": "Analytics reveal which valued behaviors occur and where users get stuck",
+      "status": "explicit",
+      "evidence_span": "I can even identify friction points where maybe users are getting lost"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online loyalty gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Rewards platform and distribution",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Publisher analytics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Highly engaged audiences for web publishers",
+      "status": "explicit",
+      "evidence_span": "create highly engaged audiences"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "publishers don't really have the tools to do so"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it really fun and engaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understanding your audience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Social share kept as its own GTM/engagement premise (P4) rather than demo chrome. Page-view traction excluded. Transcript truncates mid-sentence at close; coded content is complete enough (truncated=false)."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-603",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:44:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mental health need is large and existing spend still fails to reach many high-risk groups",
+      "status": "explicit",
+      "evidence_span": "The majority of veterans who were dead by suicide last year weren't in any form of VA care"
+    },
+    {
+      "id": "P2",
+      "text": "Sunrise delivers mobile text group psychotherapy powered by NLP",
+      "status": "explicit",
+      "evidence_span": "a mobile app for text-based group psychotherapy powered by natural language processing"
+    },
+    {
+      "id": "P3",
+      "text": "Moderation dashboards surface only messages needing intervention, raising provider capacity",
+      "status": "explicit",
+      "evidence_span": "increase the efficiency of today's providers by allowing them to focus their time and energy on the users who need help"
+    },
+    {
+      "id": "P4",
+      "text": "Anonymous peer groups plus scheduled therapy combine relatability with clinical safety",
+      "status": "explicit",
+      "evidence_span": "we combine the best parts of all of these solutions by deploying the relatability of groups in an environment kept safe through technology"
+    },
+    {
+      "id": "P5",
+      "text": "Enterprise licensing to institutions with provider infrastructure keeps the tech company lean",
+      "status": "explicit",
+      "evidence_span": "By working with these established providers and getting revenue directly from an institution, we can stay lean as a tech company"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Care access failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Group therapy + NLP safety layer",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B SaaS to provider organizations",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Scale psychotherapy access while reducing toxicity and cost",
+      "status": "explicit",
+      "evidence_span": "greater patient capacity and a reduced cost of care itself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can't solve this problem just by throwing money at it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect complications early and reduce the number of crisis incidences"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deploy with the B2B SaaS enterprise model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "VoIP detail absorbed into group therapy product. Market-size and commitment figures excluded."
+}

@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Startups and mid-sized firms lose campus recruiting contests against big spenders despite student talent's high ROI",
+      "status": "explicit",
+      "evidence_span": "college recruiting has been growing about 15% a year, and big companies are spending a lot of money on campus"
+    },
+    {
+      "id": "P2",
+      "text": "Personal relationships tip student offer decisions even against better-known employers",
+      "status": "explicit",
+      "evidence_span": "relationships are the key to hiring great students"
+    },
+    {
+      "id": "P3",
+      "text": "LinkedIn-style referral recruiting fails for college because students lack workforce networks",
+      "status": "explicit",
+      "evidence_span": "traditional recruiting services don't work well for college recruiting"
+    },
+    {
+      "id": "P4",
+      "text": "Meritful's company portal and ambassadors invite students met at fairs/info sessions into multi-year relationship workflows",
+      "status": "explicit",
+      "evidence_span": "it gets a private company portal and invites a few of its employees to join as company ambassadors"
+    },
+    {
+      "id": "P5",
+      "text": "Challenges, project showcases, and progress insights let companies identify fit and students get expert feedback",
+      "status": "explicit",
+      "evidence_span": "companies can create challenges for students to work on"
+    },
+    {
+      "id": "P6",
+      "text": "Always free for students; companies pay a monthly subscription",
+      "status": "explicit",
+      "evidence_span": "Meriful is always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "College recruiting relationship gap",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Ambassador portal and engagement tools",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Student-free company subscription",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies hire talented students by sustaining recruiting relationships beyond one campus visit",
+      "status": "explicit",
+      "evidence_span": "build a sustainable relationship with students that's directly tied to their recruiting efforts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We built Merrifield to help companies make the most out of this long cycle by creating a relationship with students"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how can a startup or a medium-sized company compete effectively with the big guys on campus"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage the relationships created via Meritful to recruit them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available at a monthly subscription to companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Split portal/ambassadors from challenges/projects as still same product domain (P4+P5) but challenges kept as engagement module within D2. Long-pipeline campus features folded into relationship-gap narrative rather than separate premise. Anti-template: D1 problem / D2 product / D3 pricing justified as separately revisable modules in transcript.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-929",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

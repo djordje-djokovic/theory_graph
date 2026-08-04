@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "coder_session_id": "session_03",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:22:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Designing chemical synthesis routes is a slow, error-prone bottleneck that requires chemists to dig through publications manually",
+      "status": "explicit",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "id": "P2",
+      "text": "AI designs novel multi-step syntheses from commercial starting materials in seconds, ranked by user criteria and backed by lab-tested evidence",
+      "status": "explicit",
+      "evidence_span": "Molecule One leverages artificial intelligence to design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "id": "P3",
+      "text": "Initial focus is the drug-discovery ecosystem, with later expansion to fine chemicals and agrochemistry",
+      "status": "explicit",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS pricing by seats or data points, plus enterprise custom integrations and optional on-premise deployment",
+      "status": "explicit",
+      "evidence_span": "We use SaaS paid by number of seats or data points, and we have an enterprise tier with custom integrations and optional on-premise deployment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "chemical synthesis design bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI synthesis planning software",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "drug-discovery focus and SaaS packaging",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster medicine development by optimizing synthesis pipelines",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster. Cure patients faster"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Why does the drug discovery and development take 12 years"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a process that used to take hours and days can now be done in under a minute"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Input structure, ranking, atom tracing, and lab references folded into one AI synthesis-design mechanism. Patent-pending detail stays inside P2. Partnership trials treated as traction, not premises. Singleton D2 retained as the core independently revisable product module."
+}

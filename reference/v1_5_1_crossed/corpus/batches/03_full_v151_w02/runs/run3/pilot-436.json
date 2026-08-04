@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-436",
+    "coder_session_id": "session_05",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people struggle with home gardening—wrong watering, plant choice/placement/sourcing, fertilizer—and many products use toxic chemicals",
+      "status": "explicit",
+      "evidence_span": "We are overwatering, we are underwatering, we are just doing it wrong. Gardening is really hard"
+    },
+    {
+      "id": "P2",
+      "text": "Fully assembled, portable self-watering garden with built-in insulated reservoir can be brought anywhere without breakdown or tools",
+      "status": "explicit",
+      "evidence_span": "We've created the first fully-assembled, self-watering garden that you can just bring anywhere with you. You never have to break it down"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary sub-irrigation hardware and materials let plants draw water efficiently from a reservoir so users need not water for about a week",
+      "status": "explicit",
+      "evidence_span": "we've created a proprietary piece of hardware, specifically in the water reservoir, and the proprietary materials we're using to make water transfer. immensely efficient"
+    },
+    {
+      "id": "P4",
+      "text": "Coaching app and Grow team give climate-, season-, and location-aware answers plus photo-based proactive troubleshooting",
+      "status": "explicit",
+      "evidence_span": "we have a coaching app to keep you active, engaged and get all your questions answered before you even know that you have them"
+    },
+    {
+      "id": "P5",
+      "text": "Accessories for vertical growing and cold frames enable small-space and year-round outdoor growing",
+      "status": "explicit",
+      "evidence_span": "You can pop in accessories for vertical growing to maximize your space, as well as cold frames, so that way, if you're living in Chicago or New York, you can grow year-round"
+    },
+    {
+      "id": "P6",
+      "text": "Climate-curated planting plans are included with the planter via coaching subscription",
+      "status": "explicit",
+      "evidence_span": "He's using our coaching subscription, which does include everything. He has curated this box based on his climate"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard gardening and toxic inputs problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Self-watering planter and accessories",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Coaching app and climate-curated plans",
+      "premise_ids": ["P4", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make gardening easy so people can grow anything, anywhere",
+      "status": "explicit",
+      "evidence_span": "With Avalo, you can grow anything, anywhere"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Direct positive climate impact from growing food at home",
+      "evidence_span": "Each one of us can actually have a direct positive impact right now by just growing a little bit of food outside"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gardening should not be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the first fully-assembled, self-watering garden that you can just bring anywhere with you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a coaching app to keep you active, engaged and get all your questions answered"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Gardening pain enumeration folded into one problem premise (v1.5.1 #6). Sub-irrigation efficiency and vacation-week reservoir treated as process+performance of P3. Grow-team realtime, climate context, and photo documentation folded into coaching capability P4. Warranty and promo code excluded. Insulation folded into assembled planter P2."
+}

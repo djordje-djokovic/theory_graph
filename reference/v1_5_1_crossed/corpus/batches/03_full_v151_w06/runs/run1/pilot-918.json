@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-918",
+    "coder_session_id": "session_01",
+    "session_case_index": 4,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home restaurants, underground dining, and pop-ups worldwide show a durable human need to share authentic food with others",
+      "status": "explicit",
+      "evidence_span": "this basic human need to share food with others existed in the past, it exists in the present, and it will continue to exist in the future"
+    },
+    {
+      "id": "P2",
+      "text": "EatWith is a community marketplace that wraps business structure, safety, and trust around authentic home dining and makes it bookable worldwide",
+      "status": "explicit",
+      "evidence_span": "simply put business structure, safety, and trust around this phenomena and make it accessible to tens of millions more around the world"
+    },
+    {
+      "id": "P3",
+      "text": "Verified hosts, a $1 million guarantee, ratings/reviews, and secure online payment including commission make bookings safe and simple",
+      "status": "explicit",
+      "evidence_span": "Joel is an Eat With verified host, which means that all of his events are protected under the Eat With $1 million guarantee"
+    },
+    {
+      "id": "P4",
+      "text": "Hosts can pursue cooking passion and meet people while earning extra income",
+      "status": "explicit",
+      "evidence_span": "Eat With lets me do this while earning some extra income"
+    },
+    {
+      "id": "P5",
+      "text": "Demand comes from tourists seeking authentic local meals and from locals booking parties, classes, and social events",
+      "status": "explicit",
+      "evidence_span": "50% of all our booking during our pilot came from locals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "need to share authentic food",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "trusted EatWith marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "host earning and passion",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "tourist and local demand",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Travelers and locals get great food, interesting people, and unforgettable authentic dining experiences",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hosts earn extra income from their passion for cooking and meeting people",
+      "evidence_span": "earning some extra income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "basic human need to share food with others"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "community marketplace for authentic dining experiences"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Creating new dishes, meeting new people"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Most of the tourists want to meet the locals and to have an authentic dining experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Verified host, guarantee, ratings, and payment/commission folded as trust-and-booking package of the marketplace (§4.1.7–8). Restaurant-industry TAM framing excluded. Pilot city expansion treated as launch announcement, not a premise. Four-domain partition; not a need/product/money triad."
+}

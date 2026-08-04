@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-281",
+    "coder_session_id": "session_04",
+    "session_case_index": 16,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lab-centric milk testing is slow, labor-intensive, error-prone, and leaves farmers without real-time herd health information between rare tests",
+      "status": "explicit",
+      "evidence_span": "lab-centric testing is time-consuming, labor-intensive, and often prone to human errors"
+    },
+    {
+      "id": "P2",
+      "text": "Mastitis is hard to detect early, spreads in herds, and drives large dairy losses unless testing is frequent",
+      "status": "explicit",
+      "evidence_span": "Mastitis is hard to detect, unlike COVID, and spreads easily among the herd"
+    },
+    {
+      "id": "P3",
+      "text": "An optical milk analyzer with embedded ML captures reagent-free milk quality metrics such as fat, protein, and somatic cell count in seconds",
+      "status": "explicit",
+      "evidence_span": "optical milk analyzer with embedded machine learning"
+    },
+    {
+      "id": "P4",
+      "text": "A portal with herd- and cow-level dashboards gives continuous milk quality and health visibility",
+      "status": "explicit",
+      "evidence_span": "a portal with customized data visual for milk quality and health management"
+    },
+    {
+      "id": "P5",
+      "text": "Remote veterinary support from animal-care partners supplies best-practice recommendations",
+      "status": "explicit",
+      "evidence_span": "a remote veterinary support from our animal care partners for best practices and recommendations"
+    },
+    {
+      "id": "P6",
+      "text": "The same optical sensing stack can scale across producers, co-ops, and processors and extend to feed, pathogen, and antibiotic-residue uses",
+      "status": "explicit",
+      "evidence_span": "can be easily scale up entire supply chain from dairy producers, to dairy co-op and dairy processors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Delayed milk testing and mastitis risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Field optical analyzer and data portal",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Vet support and supply-chain scale",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automatic on-farm milk testing that improves animal health and dairy profitability",
+      "status": "explicit",
+      "evidence_span": "By providing automatic testing and improving animal health and profitability"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "To stop it, you need to test often and test early. So introduce LabVIEW"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of real-time information is causing a big problem for industry"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings the lab testing technology to the field"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reshape the dairy industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three stated modules split as analyzer, portal, and vet support (rule 2). Reagent-free/low-maintenance/no-training folded into analyzer mechanism. Industry cost figure treated as framing for P2, not a separate premise."
+}

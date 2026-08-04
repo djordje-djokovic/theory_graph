@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-424",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:34:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators on incumbent platforms face unfair demonetization, shifting upload rules, and lack of support",
+      "status": "explicit",
+      "evidence_span": "you're consistently being demonetized for difficult to diagnose and really hard to change ways"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers face irrelevant ads and abusive comment sections that block support for creators",
+      "status": "explicit",
+      "evidence_span": "you're being inundated with irrelevant and irritating advertising"
+    },
+    {
+      "id": "P3",
+      "text": "A creator-first video platform prioritizes creator voice in technology, commercial, and leadership strategy",
+      "status": "explicit",
+      "evidence_span": "We prioritize the creators and we include them with our strategy, whether that's technology strategy, commercial strategy, or leadership"
+    },
+    {
+      "id": "P4",
+      "text": "Kubernetes backend, high-volume processing, moderation, Watchdog endorsement, and interestingness ranking deliver scalable safe discovery",
+      "status": "explicit",
+      "evidence_span": "we've also built an exciting moderation piece, which protects users from things like inappropriate content and also areas like copyrights"
+    },
+    {
+      "id": "P5",
+      "text": "Creator Hub turns analytics into audience faces and actionable guidance for creators",
+      "status": "explicit",
+      "evidence_span": "we're taking numbers and turning them into faces"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue from creator-controlled micro-subscriptions (Super sub) and creator-controlled advertising",
+      "status": "explicit",
+      "evidence_span": "We have two main mechanisms. Super sub, which is a creator-driven micro subscription model, and advertising, a more traditional method that the creator controls"
+    },
+    {
+      "id": "P7",
+      "text": "Growth focuses on emerging markets with exclusive content from influential regional creators",
+      "status": "explicit",
+      "evidence_span": "We are focusing on the emerging markets, South America, Russia, the Middle East, and India"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Creator and consumer platform pain",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Creator-first product and safety stack",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Creator-controlled monetization and emerging-market GTM",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A creator-first video-sharing home that rewards creators and offers a safer social experience for viewers",
+      "status": "explicit",
+      "evidence_span": "rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're consistently being demonetized"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creator-first, video-sharing platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Super sub, which is a creator-driven micro subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Beta session/ranking traction and investor bios excluded. Tech features (scale, moderation, algorithm) kept as one product-safety stack per enumerated-uses guidance; monetization and emerging-market creator deals kept commercial/GTM."
+}

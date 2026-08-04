@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-914",
+    "coder_session_id": "session_03",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Insurance brokers cannot legally rebate commissions, so Zenefits instead gives free HR/payroll/benefits software funded by those commissions",
+      "status": "explicit",
+      "evidence_span": "it's illegal for them to rebate any portion of that commission to their clients. So I can't give you guys money back, but what I can do is provide a whole lot of services and software for free"
+    },
+    {
+      "id": "P2",
+      "text": "Platform connects existing payroll and benefits systems and can become broker of record with a simple online authorization",
+      "status": "explicit",
+      "evidence_span": "You don't have to re enroll or switch anything you could just connect your existing systems to our platform"
+    },
+    {
+      "id": "P3",
+      "text": "Software automates hiring/onboarding paperwork, payroll setup, and benefits enrollment that is mostly administrative HR",
+      "status": "explicit",
+      "evidence_span": "we can start to replace people and paper with software and technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "free HR funded by insurance commissions",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "connect systems and broker-of-record capture",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "automated HR administration",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies get payroll, benefits, and HR admin handled for free while brokers/HR outsourcers are disrupted",
+      "status": "explicit",
+      "evidence_span": "we take on and manage all of your payroll, all of your benefits, all of the associated HR administrative work"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we become the broker of record. And that does two things"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the least amount of work that is physically possible to do for you to hire someone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Free HR-as-service, broker economics, and illegal-rebate constraint folded as one commercial wedge (§4.1). Payroll/benefits connection and BOR letter as distribution/capture mechanism. Onboarding automation as product mechanism. Disruptive-competitor rhetoric treated as value/GTM consequence of those premises. Three-domain partition justified: commission-funded free offering, systems/BOR capture, and admin automation are separately revisable."
+}

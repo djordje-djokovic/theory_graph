@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Adult calorie-counting weight-loss products are not safe for children",
+      "status": "explicit",
+      "evidence_span": "none of these are safe for children. They all involve calorie counting"
+    },
+    {
+      "id": "P2",
+      "text": "Effective Stanford pediatric obesity care is too expensive and schedule-inaccessible for working parents",
+      "status": "explicit",
+      "evidence_span": "But it's $3,500 and has weekday afternoon sessions, so completely not available for working parents"
+    },
+    {
+      "id": "P3",
+      "text": "Curbo delivers a mobile scalable licensed version of that Stanford approach",
+      "status": "explicit",
+      "evidence_span": "we licensed the Stanford program, and we created a mobile, scalable version of their approach"
+    },
+    {
+      "id": "P4",
+      "text": "Red/yellow/green nutritious-value food tracking with slowly reduced goals replaces calorie counting",
+      "status": "explicit",
+      "evidence_span": "we give you goals for how many reds you can eat each day and each week and we reduce those numbers very slowly"
+    },
+    {
+      "id": "P5",
+      "text": "Weekly coaching via the child's preferred channel budgets social events and reduces household food conflict",
+      "status": "explicit",
+      "evidence_span": "gives them very specific feedback on how to budget for a birthday party and how to eat healthier"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium coaching tiers: free tracker, $35 text, $85 live coaching",
+      "status": "explicit",
+      "evidence_span": "We charge $35 a month for text messaging, primarily for teenagers who seem to prefer it. And we charge $85 a month for live coaching"
+    },
+    {
+      "id": "P7",
+      "text": "Distribution via PR/social, health insurers, hospital systems, and schools",
+      "status": "explicit",
+      "evidence_span": "We're talking to hospital systems like Kaiser and Sutter Health who are currently testing our product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Access gap for safe pediatric weight loss",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curbo tracking and coaching system",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and partners",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children lose weight and families eat healthier with less food fighting",
+      "status": "explicit",
+      "evidence_span": "Parents tell us that their entire families are eating healthier and that they're fighting a lot less about food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There were no tools available for me"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable children to eat healthier and to lose weight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help as many kids as we can in our program"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Avatar/challenges/therapy screens treated as supporting detail of the tracking program rather than separate premises in this run. User counts and Facebook beta demand excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-839",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1054",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CodeGuard backs up sites via FTP/SFTP, monitors for changes hourly or daily, and snapshots only when code changes",
+      "status": "explicit",
+      "evidence_span": "we back up your site. Right now, we use FTP or SFTP"
+    },
+    {
+      "id": "P2",
+      "text": "One-button undo/revert restores prior versions for wanted or unwanted changes, including auto-repair when monitoring detects drift",
+      "status": "explicit",
+      "evidence_span": "we offer the ability to undo any changes if you need to"
+    },
+    {
+      "id": "P3",
+      "text": "Git-based version control packaged as easy website protection for non-expert site owners",
+      "status": "explicit",
+      "evidence_span": "Our system is built upon Git, developed by Linus Torvalds"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "change-aware website backups",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "one-button revert and auto-repair",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Git for the masses",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Website protection/time machine so owners can undo damage and keep sites safe without expert ops",
+      "status": "explicit",
+      "evidence_span": "We consider ourselves website protection for the rest of us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We only take a backup if something has changed on your site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if anything happens to your site, whether it was wanted or unwanted, that you want to revert, you can do it with just one button"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we provide it for the masses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Thin but complete pitch. Backup+monitor+change-only snapshots as one mechanism; one-button undo/auto-repair split as the stated key value mechanism; Git-for-masses as packaging/positioning. Beta spots/CTA excluded. Vacation/AdWords malware example is use of revert not separate premise. Three singleton-ish domains justified as separately revisable backup ingest, restore policy, and accessibility positioning."
+}

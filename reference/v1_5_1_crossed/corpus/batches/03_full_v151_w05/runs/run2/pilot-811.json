@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-811",
+    "coder_session_id": "session_03",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Early circuit-board prototyping via overseas fabs is slow, costly iteration that blocks hardware development",
+      "status": "explicit",
+      "evidence_span": "Most designers outsource fabrication to facilities in China, pay a couple hundred dollars, and wait two weeks for delivery"
+    },
+    {
+      "id": "P2",
+      "text": "A desktop printer uses silver nanoparticle ink to create circuit traces, including multi-layer boards, in about an hour",
+      "status": "explicit",
+      "evidence_span": "a printer that can create a circuit board in the time it takes to go get lunch"
+    },
+    {
+      "id": "P3",
+      "text": "The same printer can dispense solder paste and bake boards to populate prototypes after design",
+      "status": "explicit",
+      "evidence_span": "it'll even dispense solder paste and bake the board for you"
+    },
+    {
+      "id": "P4",
+      "text": "Customers buy the printer via pre-order and purchase replacement ink cartridges and substrates online",
+      "status": "explicit",
+      "evidence_span": "our customers will be able to purchase replacement ink cartridges and substrates directly through our website"
+    },
+    {
+      "id": "P5",
+      "text": "Hardware developers from large tech, startups, academia, and hobbyists need faster in-house electronics prototyping",
+      "status": "explicit",
+      "evidence_span": "We've talked to engineers from large tech companies, hardware startups, and the academic and hobbyist community"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "slow PCB prototype pain and users",
+      "premise_ids": ["P1", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "desktop circuit printer capabilities",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "pre-order and consumables",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hardware teams get custom circuits in minutes instead of weeks, faster and cheaper toward manufacturing",
+      "status": "explicit",
+      "evidence_span": "We're not trying to replace mass manufacturing, just help people get there faster and save huge costs along the way"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hardware developers need a faster way to prototype electronics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the choice between lead times of two weeks or just 60 minutes is an easy one to make"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launching the pre-orders this winter"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "China wait-loop and toxic hobby etching folded as one prototyping-pain set (v1.5.1 §4.1.6). Multi-layer insulating sandwich kept inside the silver-ink print mechanism; solder-paste/bake split as separately emphasized post-prototype module (§4.1.7 tie-break). Shenzhen accelerator stay excluded as bio/traction. Anti-template: demand, printer product, and consumables GTM separately revisable."
+}

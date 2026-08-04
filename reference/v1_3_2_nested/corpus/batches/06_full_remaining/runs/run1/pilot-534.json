@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travel planning across Instagram, blogs, flight sites, and Airbnb maps is fragmented and leaves travelers paralyzed with irrelevant options",
+      "status": "explicit",
+      "evidence_span": "Millions of sources and services have made a smooth travel planning process impossible"
+    },
+    {
+      "id": "P2",
+      "text": "Mapify is a personal travel guide platform where travelers access, create, and share visualizations of entire journeys and unify sources in one place",
+      "status": "explicit",
+      "evidence_span": "We have built a platform enabling travelers anywhere to access, create, and share visualizations of entire travel journeys"
+    },
+    {
+      "id": "P3",
+      "text": "Personalization from traveler interests plus community-shared spots drives a relevant feed and destination search",
+      "status": "explicit",
+      "evidence_span": "it'll ask you for at least four things you love about travel"
+    },
+    {
+      "id": "P4",
+      "text": "One-button planner generates itineraries ordering spots by transport and matching Airbnbs and needs like adapters",
+      "status": "explicit",
+      "evidence_span": "Mapify pulls in hundreds of data points and generates a possible way of how your trip could look"
+    },
+    {
+      "id": "P5",
+      "text": "AI content engine matches tags with photos/text and sorts trips by geographic relevance, quality, and personal importance",
+      "status": "explicit",
+      "evidence_span": "an AI content engine we've built matching hundreds of thousands of tags with photos, text, and attachments"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via brand and affiliate partnerships with leading travel brands, starting with European millennial leisure travel",
+      "status": "explicit",
+      "evidence_span": "We are already generating revenue through brand and affiliate partnerships with some of the world's leading travel brands"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented travel planning",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized journey platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affiliate and brand monetization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Curate the most relevant places and personal experiences so travelers can create a whole journey in seconds",
+      "status": "explicit",
+      "evidence_span": "Mapify is your personal travel guide that lets you create your whole travel journey in just a few seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "too many options leave us totally paralyzed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "curate the most relevant places and personal experiences"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generating revenue through brand and affiliate partnerships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Country/photo/tag counts treated as traction. Team/investor credentials excluded. 'Every traveler a global host' treated as platform mechanism within P2/P3, not vision premise. Anti-template: need/product/monetization separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-534",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:32:20+02:00"
+  }
+}

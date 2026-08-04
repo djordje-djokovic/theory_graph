@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-605",
+    "coder_session_id": "session_02",
+    "session_case_index": 6,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people lack internet access despite widespread smartphones, which can be life-or-death and blocks growth",
+      "status": "explicit",
+      "evidence_span": "66% of the world has a smartphone in their hands, but 53% of the population does not have access to internet"
+    },
+    {
+      "id": "P2",
+      "text": "Current efforts to bring internet or offline apps to remote users are not scalable soon enough",
+      "status": "explicit",
+      "evidence_span": "we don't feel that this is scalable. We don't feel that this is going to actually get to a lot of people real soon"
+    },
+    {
+      "id": "P3",
+      "text": "An SDK lets existing apps work offline by connecting phones over Bluetooth mesh networks",
+      "status": "explicit",
+      "evidence_span": "Ridgefire is an SDK that apps integrate onto their own code so they can work offline"
+    },
+    {
+      "id": "P4",
+      "text": "Mesh hopping extends range beyond 330 feet while algorithms limit flooding, message lifetime, and battery drain",
+      "status": "explicit",
+      "evidence_span": "it creates mesh networks, which means that information can hop on devices found in the middle, so the range is increased"
+    },
+    {
+      "id": "P5",
+      "text": "The stack offers Android-to-iOS integration, encryption, and patents",
+      "status": "explicit",
+      "evidence_span": "We are the only ones in the market with Android to iOS integration"
+    },
+    {
+      "id": "P6",
+      "text": "B2B model sells to developers who already have dense user bases rather than building a consumer app",
+      "status": "explicit",
+      "evidence_span": "we're working on a B2B model. We cater to developers that already have this user density"
+    },
+    {
+      "id": "P7",
+      "text": "Pricing charges for monthly active users that use the partner app via the offline technology",
+      "status": "explicit",
+      "evidence_span": "We charge based on monthly active users that use your app thanks to our technology each month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smartphone without internet access",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Bluetooth mesh offline SDK",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "B2B developer distribution",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D4",
+      "name": "MAU-based charging",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Apps keep working offline to connect people and save lives when internet is unavailable",
+      "status": "explicit",
+      "evidence_span": "imagine somebody being trapped in their building after an earthquake or stranded in a tsunami or after a tsunami. and being able to connect with rescue corps"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Developers open and expand markets and revenue by serving offline moments",
+      "evidence_span": "You open up new markets. You open and you blow up existing ones. So that translates into revenue"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It can be the difference between life and death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "apps integrate onto their own code so they can work offline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We cater to developers that already have this user density"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when developers make this revenue, we also make it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Mesh range, flooding/TTL/battery algorithm, and Android-iOS/encryption/patents folded as facets of the offline SDK mechanism (IP detail stays with mechanism). WhatsApp/Uber/broadcast examples treated as applications of one SDK, not separate premises. Raise amount and user-count traction excluded. Closing vision of city-scale standard recorded only via primary value, not as extra premise. Transcript ends mid-sentence."
+}

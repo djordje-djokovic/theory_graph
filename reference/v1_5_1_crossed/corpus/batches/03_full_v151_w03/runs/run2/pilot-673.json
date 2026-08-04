@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-673",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video production is split between tightly controlled studio/agency work and uncurated user-generated content online",
+      "status": "explicit",
+      "evidence_span": "The video landscape is divided on one side we have a tightly controlled industry driven by studios and agencies"
+    },
+    {
+      "id": "P2",
+      "text": "Tools let companies produce high-impact video at scale by engaging their own fans, customers, and employees as filmers—not by building a scenic community",
+      "status": "explicit",
+      "evidence_span": "enabling companies to produce high-impact video at scale by engaging their own communities of fans, customers, and employees to become the filmers"
+    },
+    {
+      "id": "P3",
+      "text": "Clients load filming instructions, invite participants, and receive rights-cleared tagged uploads via an app",
+      "status": "explicit",
+      "evidence_span": "they loaded filming instruction that they wanted their community to capture"
+    },
+    {
+      "id": "P4",
+      "text": "Editing paths include online tools, export to external editors, or a freelance editor network",
+      "status": "explicit",
+      "evidence_span": "there's 3 ways to edit either we have our online edit tools"
+    },
+    {
+      "id": "P5",
+      "text": "Subscription model serves broadcasters, retailers, and large organizations needing community-sourced video",
+      "status": "explicit",
+      "evidence_span": "now we're fully into a subscription model"
+    },
+    {
+      "id": "P6",
+      "text": "ML content search with sentiment, object recognition, and transcription improves discovery of collected footage",
+      "status": "explicit",
+      "evidence_span": "search sentiment analysis object recognition and transcription"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Split video production landscape",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Community filming and editing studio",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise subscription go-to-market",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "High-impact video produced at scale by leveraging clients' own communities",
+      "status": "explicit",
+      "evidence_span": "create the biggest impact by leveraging the communities that they already train who are the most passionate about their brand today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring these 2 worlds together"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "produce high-impact video at scale"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're fully into a subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "BBC demo workflow cascade folded into briefing/capture premise P3; three edit paths kept as one editing module P4. Revenue figures and client counts treated as traction. ML search announced as product capability (P6), not vision."
+}

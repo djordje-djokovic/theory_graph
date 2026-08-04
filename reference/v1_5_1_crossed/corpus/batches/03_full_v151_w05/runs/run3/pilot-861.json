@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-861",
+    "coder_session_id": "session_05",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A multi-sensor device (nine sensors) captures many clinical health metrics in about 60 seconds like a digital thermometer, including cuffless blood pressure",
+      "status": "explicit",
+      "evidence_span": "It's nine integrated sensors and analytics. It's able to track 33 different health metrics. It works just as simple as a digital thermometer, and it takes only 60 seconds to get it done"
+    },
+    {
+      "id": "P2",
+      "text": "The device syncs to mobile devices via Bluetooth or a 3G Wi-Fi cradle and produces a 0–100 health score/grade",
+      "status": "explicit",
+      "evidence_span": "It can communicate to any mobile device via Bluetooth, or it can also talk to a 3G Wi-Fi sanitizing cradle"
+    },
+    {
+      "id": "P3",
+      "text": "Analytics can alert care facilities to undetected abnormalities (e.g., arrhythmia) enabling specialist referral",
+      "status": "explicit",
+      "evidence_span": "our analytic software was able to identify and alert the facility of two abnormalities"
+    },
+    {
+      "id": "P4",
+      "text": "Target markets include elderly care, chronic-disease remote monitoring (state/Medicare reimbursement), hospital discharge/readmission prevention, and consumers",
+      "status": "explicit",
+      "evidence_span": "In addition to elderly care, there are many other markets that we can go into. We can help companies that focus on chronic disease care"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue model combines subscription, OEM/licensing, and eventual data mining",
+      "status": "explicit",
+      "evidence_span": "Through subscription base, OEM and licensing revenue, which in fact we're just about to close such an agreement for China market, and of course eventually data mining"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-sensor health measurement",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "clinical alerting analytics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "care markets and monetization",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower people and caregivers to take control of health through easy preventive monitoring",
+      "status": "explicit",
+      "evidence_span": "empowering you to take control of your health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Avoid pain/suffering and system cost from undetected conditions such as stroke",
+      "evidence_span": "not just the money saved, but the pain and suffering that is avoided by the patient and the family"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Having the ability to track their health has dramatic implication on the quality of the care they're going to receive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A true step forward in preventive care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more individuals want to be empowered to better understand and control their own health"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "33 metrics and named indices folded into one sensor measurement package (§4.1.7/8). Connectivity+score kept with device surface. Pilot case counts and stroke cost figures excluded as traction/impact sizing. Market list treated as one GTM portfolio condition; China OEM mention folded into licensing revenue premise. Singleton D2 retained: alerting analytics presented as separately learnable clinical value path."
+}

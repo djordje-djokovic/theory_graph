@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "coder_session_id": "session_03",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial job sites face water leaks, rapid mold growth, and fire damage with no active fire monitoring for most sites",
+      "status": "explicit",
+      "evidence_span": "no active fire monitoring solution for most job sites today"
+    },
+    {
+      "id": "P2",
+      "text": "Pillar is a real-time end-to-end environmental monitoring solution for job sites that warns, supports logistics, and creates a lasting build record",
+      "status": "explicit",
+      "evidence_span": "first real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    },
+    {
+      "id": "P3",
+      "text": "Smart sensors mount flexibly with magnets, hanging straps, or wrap mounts for dynamic construction environments",
+      "status": "explicit",
+      "evidence_span": "magnets on the back here, so it sticks to any ferrous surface"
+    },
+    {
+      "id": "P4",
+      "text": "Deployment digests floor plans, places sensors, and pushes alerts to a dashboard and smartphones because contractors resist new software",
+      "status": "explicit",
+      "evidence_span": "we push notifications directly to the smartphone"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing is a one-time $0.03 per square foot installation plus $0.02 per square foot per month bundling hardware, firmware, software, and analytics",
+      "status": "explicit",
+      "evidence_span": "$0.03 per square foot one-time installation fee, and $0.02 per square foot per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "job-site water mold and fire damage risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "sensor network monitoring and alerts",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "per-square-foot hardware-software package pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buildings are built with less time, less money, and higher quality through preventable damage monitoring",
+      "status": "explicit",
+      "evidence_span": "Less time, less money, and with a quality never before seen"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Prevent or mitigate billions in contractor and insurer damages",
+      "evidence_span": "most of which were preventable or mitigatable if they had a monitoring solution"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delays the schedule, costs millions of dollars"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "active warning and damage mitigation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bundling hardware, firmware, software, and data analytics into one easy package"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Water/mold/fire listed as one job-site environmental damage problem set (v1.5.1 pain-bundle). Active warning, logistics uses, and Carfax-like record folded as uses of one monitoring mechanism (v1.3.1 same-mechanism uses). Mounting methods and smartphone push folded into deployment mechanism. Anti-template: need/product/pricing triad justified—speaker separately revises damage problem, sensor system, and per-sqft package pricing."
+}

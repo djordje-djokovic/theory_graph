@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Preventable maternal complications and scarce OBGYN capacity make early fetal problem identification harder",
+      "status": "explicit",
+      "evidence_span": "With the increasing shortage of OBGYNs, the growing rate of pregnancy complications, and new legislation negatively impacting maternal diagnostics"
+    },
+    {
+      "id": "P2",
+      "text": "Operator-dependent ultrasound errors leave many fetal malformations misdiagnosed, especially when key views are missing",
+      "status": "explicit",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators"
+    },
+    {
+      "id": "P3",
+      "text": "Cloud AI plugs into any ultrasound vendor through a standard API and checks exam completeness across anatomical structures",
+      "status": "explicit",
+      "evidence_span": "vendor agnostic cloud-based solution that can integrate with any ultrasound machine over a standard API"
+    },
+    {
+      "id": "P4",
+      "text": "Beyond quality control, AI guides diagnostics by localizing malformations for obstetricians",
+      "status": "explicit",
+      "evidence_span": "our solution does not stop at quality control. It actually moves into guided diagnostics"
+    },
+    {
+      "id": "P5",
+      "text": "Extracted exam information automates reporting and cuts documentation time",
+      "status": "explicit",
+      "evidence_span": "because our AI can extract all this valuable information, we were able to automate reporting and documentation"
+    },
+    {
+      "id": "P6",
+      "text": "Hospitals buy via baseline subscription plus per-API volume pricing because of time, callback, malpractice, and reimbursement ROI",
+      "status": "explicit",
+      "evidence_span": "hybrid pricing model with a subscription-based charge for baseline subscription costs and a volume-based pricing model for API calls to our algorithms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Maternal ultrasound care gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Vendor-agnostic AI diagnostics",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hospital subscription and API pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Every pregnant patient gets higher-quality ultrasound diagnostics that catch fetal abnormalities earlier",
+      "status": "explicit",
+      "evidence_span": "every single pregnant patient gets the quality of care that they need"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hospital ROI through efficiency and risk reduction",
+      "evidence_span": "time savings that they're able to receive through increased volume that they can get with patients, reducing the number of patient callbacks"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "our solution does not stop at quality control. It actually moves into guided diagnostics"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes sure that every single pregnant patient gets the quality of care"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps detect fetal abnormalities in ultrasound earlier"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Hospitals are incentivized to leverage our solution because of the valuable ROI"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent re-code: completeness validation bundled into vendor-agnostic cloud premise; guided diagnostics kept distinct because speaker marks the move beyond QC. Truncated by time."
+}

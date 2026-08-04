@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastics are a huge polluting waste stream but also a $600B enabling industry that will not disappear",
+      "status": "explicit",
+      "evidence_span": "They're a $600 billion industry, so they're not going away anytime soon"
+    },
+    {
+      "id": "P2",
+      "text": "Recycling and industrial composting are fragmented, slow, or unavailable, so enzymes must work inside the plastic",
+      "status": "explicit",
+      "evidence_span": "Recycling is great when it works, but it's fragmented, complex, it's laborious, the margins are low"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary coating lets enzymes be embedded in plastics and triggered to degrade from the inside out",
+      "status": "explicit",
+      "evidence_span": "special proprietary coating that acts like PPE and enables us to take these fragile molecules and put them inside the plastics, where they can be triggered to degrade the materials from the inside out"
+    },
+    {
+      "id": "P4",
+      "text": "Materials return to soil; warm-water baths offer scalable infrastructure and optional chemical recycling",
+      "status": "explicit",
+      "evidence_span": "they completely return to the soil at the end of life. We can also break them down and warm water baths"
+    },
+    {
+      "id": "P5",
+      "text": "End-to-end degradation engineering stops microplastics at the source",
+      "status": "explicit",
+      "evidence_span": "we're able to degrade from one end to the other through some clever engineering work that we were able to do, which means we stop microplastics at the source"
+    },
+    {
+      "id": "P6",
+      "text": "Drop-in, low-dose, water-and-heat-triggered additive is readily scalable",
+      "status": "explicit",
+      "evidence_span": "drop-in additive that's readily scalable. Enzymes are incredibly efficient, so we only need to use a little bit, and the degradation is on demand. It requires water and heat"
+    },
+    {
+      "id": "P7",
+      "text": "Starting in PLA opens product design space and eases regulatory/end-of-life constraints",
+      "status": "explicit",
+      "evidence_span": "we've chosen this because it opens up a couple of interesting avenues. The first being an expanded design space for products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Limits of recycling and compostable status quo",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Embedded enzyme degradation system",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "PLA go-to-market beachhead",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Self-degrading plastics that return to the planet without lingering microplastics",
+      "status": "explicit",
+      "evidence_span": "materials like this, with our enzymes inside of them, break down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we haven't been able to use enzymes to do the work directly until now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "degrade the materials from the inside out"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "expanded design space for products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Run2 elevates recycling/compost failure as an explicit premise because the speaker uses it to justify the inside-out enzyme approach. Pilot outreach excluded as ask.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-272",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

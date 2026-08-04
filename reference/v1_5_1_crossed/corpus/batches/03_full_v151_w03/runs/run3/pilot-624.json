@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-624",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing braille interfaces are expensive, limited to a few words, and rely on bulky piezoelectric tech that contributes to low literacy among blind children",
+      "status": "explicit",
+      "evidence_span": "it's a $5,000 up to $8,000 keyboard. And where a blind person can read, it's extremely limited to just a few words"
+    },
+    {
+      "id": "P2",
+      "text": "A high-performance membrane actuator controls and deforms each braille dot without mechanical elements, enabling thousands of dots",
+      "status": "explicit",
+      "evidence_span": "we're using a high-performance membrane bonded to an electrical actuator"
+    },
+    {
+      "id": "P3",
+      "text": "A tactile tablet with braille screen plus touch/voiceover control lets blind users learn, work, and play on one device and output a full braille page",
+      "status": "explicit",
+      "evidence_span": "the first tactile tablet for people with sight loss. It allows blind users for the first time to learn, work, and play with one single device"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud conversion software turns text, documents, and web pages into braille for the tablet",
+      "status": "explicit",
+      "evidence_span": "It can convert anything into Brow, like text files, documents, even whole web pages"
+    },
+    {
+      "id": "P5",
+      "text": "The device is offered at an affordable price of about $500",
+      "status": "explicit",
+      "evidence_span": "with the affordable price of $500 US"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market starts online, scales via global distributors, and expands access in developing countries",
+      "status": "explicit",
+      "evidence_span": "we'll start directly to our website online. Moving forward, we're going to scale to global distributors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Limited braille interface problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Tactile tablet and braille conversion",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable pricing and distribution",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accessible learn/work/play computing for people with sight loss via a full-page tactile braille tablet",
+      "status": "explicit",
+      "evidence_span": "allows blind users for the first time to learn, work, and play with one single device"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Social mission to open modern tech access for millions of blind children",
+      "evidence_span": "we can change the future of millions of children"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "exactly this leads to low literacy rate among blind children"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the digital e-reader for blind users"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how we are going to bring the tablet to the hands of millions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tablet hardware components and 1,900-dot page treated as one device mechanism (§4.1.7). Actuating technology kept with product domain as enabling mechanism. Kenya request and signed agreements treated as GTM evidence within P6, not traction metrics. Team credentials excluded."
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Website operators who are not internet giants lack tools for speed and security that giants buy from CDNs and abuse teams",
+      "status": "explicit",
+      "evidence_span": "for the most part, if you're trying to run a website today, you're left alone without access to any of these tools"
+    },
+    {
+      "id": "P2",
+      "text": "Cloudflare is a free, five-minute DNS-activated performance and security network requiring no hardware, software, or code changes",
+      "status": "explicit",
+      "evidence_span": "We've measured it. It takes about five minutes to set up"
+    },
+    {
+      "id": "P3",
+      "text": "Passing traffic through the global network speeds pages ~30% and stops spam/attackers, including XSS-class threats via deep inspection",
+      "status": "explicit",
+      "evidence_span": "We stop virtually all the spam, attackers, other garbage that are coming to your site"
+    },
+    {
+      "id": "P4",
+      "text": "Even at free pricing, variable costs are already covered per site",
+      "status": "explicit",
+      "evidence_span": "We're covering our variable costs"
+    },
+    {
+      "id": "P5",
+      "text": "Works across arbitrary stacks (Windows, Apache, App Engine, etc.) without lock-in",
+      "status": "explicit",
+      "evidence_span": "you can choose your own stack. Pick whatever your preference is. Use Windows. Use Apache. It doesn't matter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tools gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cloudflare network product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free economics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, safer websites for anyone online",
+      "status": "explicit",
+      "evidence_span": "make the web a faster, safer place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "But that changes today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fast, safe, and secure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only one price point for a service like ours, and that's free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Stack flexibility split as separately revisable compatibility claim. GA helper feature folded into ease product (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1137",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:45+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-761",
+    "coder_session_id": "session_02",
+    "session_case_index": 24,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile fragmentation forces heavy testing spend on devices and people; cloud unit-test services leave developers with long error logs without the device in hand",
+      "status": "explicit",
+      "evidence_span": "spending one third of your total development budget just on testing"
+    },
+    {
+      "id": "P2",
+      "text": "NativeTab puts real devices in a data center and lets developers interact with them lifelike from tablet/mobile/desktop as if on the desk, including debugger/USB-like workflows",
+      "status": "explicit",
+      "evidence_span": "access those devices and interact with them as if they were on your desk"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending low-latency I/O transfer, dense custom servers, demand-driven inventory/queuing, and cooling racks enable scalable multi-device access and higher margins",
+      "status": "explicit",
+      "evidence_span": "patent pending input-output transfer technology that allows lifelike interaction with nearly zero latency"
+    },
+    {
+      "id": "P4",
+      "text": "Roadmap features include replicating touch events across cloud devices without writing unit tests and connecting remote IoT devices for app development",
+      "status": "explicit",
+      "evidence_span": "test on one device and all of those touch events will be replicated on all of the devices in the cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mobile device testing fragmentation",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "remote real-device interaction platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-device replication and IoT access",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Access any real mobile device anytime at a fraction of cost to save time, build better apps, and reach more markets",
+      "status": "explicit",
+      "evidence_span": "You save money. You can access any device anytime you want for a fraction of cost"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're probably going to get bad review in the App Store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interact with real physical device as if it was on your desk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't have to now limit your target group simply because you can't afford to purchase all of those devices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Buy-devices/hire-people/unit-test-log pains folded as one fragmentation testing problem (§4.1.6). Tablet demo multi-touch/debug as feature cascade of remote-device access; infra patents/servers/racks as enabling package of that mechanism (§4.1.1/7–8). Market-size figures excluded as framing. Singleton D1/D3 retained (D3 as separately framed roadmap modules). Anti-template noted."
+}

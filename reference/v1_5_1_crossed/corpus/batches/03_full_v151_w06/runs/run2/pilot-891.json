@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "coder_session_id": "session_05",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robot innovation is no longer constrained by brains, sensors, or software accessibility but by expensive, inaccessible hardware such as complex actuators",
+      "status": "explicit",
+      "evidence_span": "robots are no longer constrained by these parts. They're instead constrained by the hardware"
+    },
+    {
+      "id": "P2",
+      "text": "ModBot recreates versatile common building blocks—servo, joint, and link—so inventors can assemble, disassemble, and rebuild many robot forms affordably",
+      "status": "explicit",
+      "evidence_span": "ModBot identifies the common building blocks found in all robots. The servo, the joint, and the link"
+    },
+    {
+      "id": "P3",
+      "text": "A tightly integrated joint package (encoder, motor, transmission, bearings, driver, networking) cuts industrial-equivalent cost by about one-tenth and improves compactness/weight",
+      "status": "explicit",
+      "evidence_span": "we've managed to reduce the cost of an industrial equivalent by about one-tenth"
+    },
+    {
+      "id": "P4",
+      "text": "Phone-app wireless keyframe programming plus a cloud virtual robot builder with physics simulation and sharing/order lets users prototype and then buy hardware",
+      "status": "explicit",
+      "evidence_span": "You can use our phone app to do hardware programming on the fly, record key frames and repeat sequences wirelessly"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hardware-constrained robot access",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "modular affordable robot parts",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "app and cloud robot builder",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyday inventors and small businesses can affordably access and build quality robots",
+      "status": "explicit",
+      "evidence_span": "we have to get robots out of expensive research labs and into the hands of everyday inventors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if more people can afford and access quality hardware, then the pace of innovation can be massively increased"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we need good quality and affordable robot parts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making ModBot easy to use for rapid prototyping"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Servo/joint/link versatility and example builds (arm, printer, humanoid, dolly) folded as one modular-parts mechanism (§4.1.7). Cost/compactness treated as quantitative package of the integrated joint (§4.1.8). Phone app and VR builder folded as one software prototyping surface. Example price points treated as illustration of affordability, not separate GTM premises. Defense/auto founder bios excluded (§4.2.2)."
+}

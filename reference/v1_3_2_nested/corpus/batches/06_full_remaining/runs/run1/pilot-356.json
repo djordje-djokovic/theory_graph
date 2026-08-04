@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Idle cash in peer-to-peer payment apps earns returns for the apps while inflation erodes users' balances",
+      "status": "explicit",
+      "evidence_span": "those same peer-to-peer apps that are benefiting from cash balances and earning a return, leaving nothing behind for their users"
+    },
+    {
+      "id": "P2",
+      "text": "Young users want to grow wealth but often lack resources, time, or energy to invest",
+      "status": "explicit",
+      "evidence_span": "Millennials, Gen Z, all of us want to earn and grow our wealth, but sometimes just lack the resources, time, or energy or resources to invest"
+    },
+    {
+      "id": "P3",
+      "text": "Peer-to-peer paybacks can be settled in the recipient's chosen stocks instead of only cash",
+      "status": "explicit",
+      "evidence_span": "her top five favorite stocks pop up, and I can choose whatever I wanna pay her in"
+    },
+    {
+      "id": "P4",
+      "text": "Sends move as cash until the recipient accepts, then convert to stock, alternate stock, or cash",
+      "status": "explicit",
+      "evidence_span": "It only converts to stock once she clicks Accept in her Notifications tab"
+    },
+    {
+      "id": "P5",
+      "text": "Public portfolios, trades, and comments make investing social and transparent",
+      "status": "explicit",
+      "evidence_span": "we make all portfolios and trades and transactions public, so you can like and comment on various transactions"
+    },
+    {
+      "id": "P6",
+      "text": "Brokerage-partner coverage protects user cash and portfolio balances",
+      "status": "explicit",
+      "evidence_span": "We cover up to 250K of user cash balances and 500K of portfolio investments using our brokerage partner, Alpaca"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle P2P cash and unmet investing desire",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stock-settled peer payments",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Social transparency and custody safety",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn every peer payment into an investment that builds wealth",
+      "status": "explicit",
+      "evidence_span": "turn every payment into an investment"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make investing less lonely through community conversation",
+      "evidence_span": "make investing less lonely"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build generational wealth"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generate wealth with every single transaction"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "feel 100% safe and confident when investing with us long-term"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Rideshare/registry/business plug-in examples treated as roadmap extensions of the same stock-payment mechanism (§4.1(5)), not separate premises. Team bios and market-size framing excluded. Coverage amounts kept inside custody premise with partner structure (§4.1(3)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-356",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:10+02:00"
+  }
+}

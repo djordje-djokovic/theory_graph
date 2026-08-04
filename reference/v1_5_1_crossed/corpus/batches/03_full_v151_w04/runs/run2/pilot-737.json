@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-737",
+    "coder_session_id": "session_01",
+    "session_case_index": 23,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The e-shower recirculates each drop about seven times via micro-filtration and UV, saving roughly 80% energy and 90% water while delivering high-volume high-pressure comfort",
+      "status": "explicit",
+      "evidence_span": "The Hemwell Z-Shower uses every precious drop, not once, but about seven times"
+    },
+    {
+      "id": "P2",
+      "text": "Unit is self-cleaning, plug-and-play to install/remove, and connected for music streaming and savings tracking",
+      "status": "explicit",
+      "evidence_span": "It's self-cleaning"
+    },
+    {
+      "id": "P3",
+      "text": "Commercial model can sell hardware for $29.50 or give hardware/install/insurance/maintenance free in exchange for sharing savings",
+      "status": "explicit",
+      "evidence_span": "we can sell the hardware like we're doing now for $29.50 a pop, or we can give you the hardware for free"
+    },
+    {
+      "id": "P4",
+      "text": "Smaller boilers and heating systems reduce home infrastructure about 80%, enabling cheaper sustainable construction",
+      "status": "explicit",
+      "evidence_span": "with our shower, you don't need big water systems anymore"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Recirculating e-shower system",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware sale or savings-share model",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Reduced building water infrastructure",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Huge comfort upgrade with large water and energy savings and near-zero infrastructure",
+      "status": "explicit",
+      "evidence_span": "saving you 80% on energy, 90% on water, giving you a huge comfort upgrade"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you've got a crystal clear experience all the way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share your savings with us"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We make sustainable homes available for everyone at very little cost"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-pitch on refresh-cycle mechanism (truncated/thin). Energy/water savings and 15L high-pressure comfort folded as process+performance package of recirculating shower (§4.1.8). Hotel LOIs and certification treated as traction/context. Singleton D2/D3 retained as separately revisable commercial vs construction-infrastructure modules."
+}

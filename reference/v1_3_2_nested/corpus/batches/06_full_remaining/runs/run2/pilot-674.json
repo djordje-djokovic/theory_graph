@@ -1,0 +1,140 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents struggle with five school-related needs: school communication, child safety, instant reports, remote fee payment, and buying daily student supplies",
+      "status": "explicit",
+      "evidence_span": "we have shortlisted five major pain points that a parent faces with regard to their school-going children"
+    },
+    {
+      "id": "P2",
+      "text": "School Bridge provides two-way parent-teacher notifications and instant report cards",
+      "status": "explicit",
+      "evidence_span": "Two-way communication between parents and teachers"
+    },
+    {
+      "id": "P3",
+      "text": "GPS tracking addresses child security",
+      "status": "explicit",
+      "evidence_span": "Third is GPS tracking. It's about the tracking system. So it's about security of the child"
+    },
+    {
+      "id": "P4",
+      "text": "In-app payment gateway lets parents pay fees online without going to school",
+      "status": "explicit",
+      "evidence_span": "You don't have to go to school now. You just do the payments online from our app"
+    },
+    {
+      "id": "P5",
+      "text": "E-commerce for uniforms and stationery delivers daily needs to the home",
+      "status": "explicit",
+      "evidence_span": "e-commerce solution for all the daily needs of the child, which is like buying a uniform"
+    },
+    {
+      "id": "P6",
+      "text": "Initial market is about 30,000 private mid- to upper-high-end Indian schools",
+      "status": "explicit",
+      "evidence_span": "private mid-high and upper high-end schools, which are 30,000 in number"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bundled parent pain diagnosis",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "School Bridge communication and reports",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Child GPS security",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Fees and school commerce",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Private school target segment",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Solve parents' school-related struggles through School Bridge",
+      "status": "explicit",
+      "evidence_span": "how are we actually solving the problem"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "five major pain points that a parent faces"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Two-way communication between parents and teachers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's about security of the child"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "do the payments online from our app"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tremendous potential in this growing Indian education market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Unlike run1, product modules split where GPS, payments, and e-commerce are presented as separately demoed paths to value. Five pains folded into one diagnosis premise (speaker treats as one shortlist). Equity ask excluded. Singletons D2/D3/D6 justified as independently revisable app modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-674",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:13:00+02:00"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-670",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Periodic wired vital-sign rounds wake all patients and leave long unmonitored gaps; cameras alone cannot proactively alert to deterioration",
+      "status": "explicit",
+      "evidence_span": "you wake them all up, irrespective of condition, and because four hours is a long time"
+    },
+    {
+      "id": "P2",
+      "text": "Software with proprietary per-pixel algorithms turns ordinary video cameras into health monitors delivering real-time alerts, vital signs, and optional video on demand",
+      "status": "explicit",
+      "evidence_span": "transform video cameras. We turn them into health monitors"
+    },
+    {
+      "id": "P3",
+      "text": "Clinical studies show algorithms match contact medical-device accuracy for respiration and heart rate including in high-secure mental health settings",
+      "status": "explicit",
+      "evidence_span": "algorithms are as accurate as a contact medical device"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market phases video analytics (in/out of bed activity) then medical-analytics vital signs as a medical device",
+      "status": "explicit",
+      "evidence_span": "first is video analytics. That's the in and out of bed activity"
+    },
+    {
+      "id": "P5",
+      "text": "Platform should free scarce clinician time onto urgent cases and enable step-down care from hospitals to nursing homes and homes",
+      "status": "explicit",
+      "evidence_span": "scarce resource in our healthcare systems are doctors and nurses and their time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "flawed intermittent ward monitoring",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "camera-based vital signs and activity analytics",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "phased video then medical device GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "clinician time and care step-down use",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help doctors and carers save lives with continuous camera-based vital signs, activity, and context alerts",
+      "status": "explicit",
+      "evidence_span": "help doctors save lives and improve healthcare for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "won't ever, on their own, proactively alert you to deterioration"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deterioration with medical accuracy through a camera"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "going to market in two phases"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put that time onto the most urgent situations with the best data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Deal pipeline counts excluded as traction. Demo heart-rate/out-of-bed cascade folded into camera monitoring mechanism. Accuracy studies kept as feasibility condition of the same product. Singleton-like D3/D4 retained as separately revisable GTM phase and care-setting theory."
+}

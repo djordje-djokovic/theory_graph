@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-979",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Local businesses leave spend on the table because a small share of customers drives half of revenue and existing punch-card and mobile loyalty tools are burdensome and not personalized",
+      "status": "explicit",
+      "evidence_span": "15% of their customers, people like me, represent about 50% of their revenue"
+    },
+    {
+      "id": "P2",
+      "text": "Cardify awards personalized VIP points and perks from ordinary credit-card swipes with no punch cards, check-ins, NFC, or phone at the register",
+      "status": "explicit",
+      "evidence_span": "I get points at these local places by simply swiping my credit card"
+    },
+    {
+      "id": "P3",
+      "text": "Merchants can run tailored rewards, VIP access, competitions, and redemptions with zero software or hardware integration on existing POS",
+      "status": "explicit",
+      "evidence_span": "there is zero software integration, zero hardware integration for the business"
+    },
+    {
+      "id": "P4",
+      "text": "Cardify gives merchants real-time in-store CRM: who is present, social profile signals, spend history, and bottom-line impact insights",
+      "status": "explicit",
+      "evidence_span": "Cardify, in real time, will show Fig & Olive who is at their store right now"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with Citigrid Media and Urban Spoon reach about half a million US merchants",
+      "status": "explicit",
+      "evidence_span": "partnership with Citigrid Media and with Urban Spoon, which gets us to about half a million merchants across the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "under-monetized loyalty pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "swipe-based personalized rewards",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "real-time merchant CRM",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "merchant distribution partnerships",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get VIP rewards and perks at favorite places custom-tailored to spend, interests, and identity",
+      "status": "explicit",
+      "evidence_span": "VIP rewards and perks at your favorite places that are custom-tailored towards you based on how much you spend, what you're interested in, and who you are"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Local businesses recognize and engage customers and see loyalty impact on the bottom line",
+      "evidence_span": "real time insights into how Cardify impacts their bottom line"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "85% of their customers are not meeting their maximum potential"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I get points at these local places by simply swiping my credit card"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is pretty much your next generation's CRM system for local businesses"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the most disruptive products is nothing without distribution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merchant revenue skew plus punch-card/app friction folded as one loyalty problem set (§4.1.6). Points, notifications, dedicated business cards, VIP dinner/competitions/seating-pass demos folded into swipe rewards + merchant reward tools (§4.1.7). CRM/presence analytics split as distinct merchant job. Exclusive franchise announcement truncated mid-sentence—not coded. Singleton D3/D4: independently revisable CRM module and distribution partnerships."
+}

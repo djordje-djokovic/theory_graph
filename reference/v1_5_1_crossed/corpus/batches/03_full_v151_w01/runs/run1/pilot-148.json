@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-148",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:12:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most educational content is static and linear because dynamic interactive content is too slow and costly to produce while future learner needs are uncertain",
+      "status": "explicit",
+      "evidence_span": "98% of this content is both static and linear. Only 2% of it is dynamic. The reason for this is it takes such a lot of time and money to produce"
+    },
+    {
+      "id": "P2",
+      "text": "Knowledge AI generates interactive bite-sized e-learning packages vastly faster and plug-and-play ready for any learning environment",
+      "status": "explicit",
+      "evidence_span": "With Knowledge AI, we're able to generate interactive bite-sized e-education, e-learning packages, 100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "id": "P3",
+      "text": "From source material the system generates a cascade of interactives, assessments, glossary, flashcards, quizzes, teacher materials, and export to learning environments",
+      "status": "explicit",
+      "evidence_span": "It's created an interactive video that includes pop-ups of all the key terms, as well as quiz questions"
+    },
+    {
+      "id": "P4",
+      "text": "Knowledge LX generates full learning experiences for any learning goal in near real time via a latent concept space between current understanding and the goal",
+      "status": "explicit",
+      "evidence_span": "With Knowledge LX, we generate full learning experiences for any learning goal in near real-time"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market is knowledge-as-a-service backend integrations while LMS partners provide distribution",
+      "status": "explicit",
+      "evidence_span": "We focus on being the behind-the-scenes, AI-ready solutions provider, while our partners provide distribution through their platforms"
+    },
+    {
+      "id": "P6",
+      "text": "Integrations with major LMS platforms such as Canvas, Google Classroom, Microsoft, and Ilias enable distribution",
+      "status": "explicit",
+      "evidence_span": "We've worked carefully with the teams at Canvas, Google Classroom, Microsoft, and Ilias to launch the first few integrations"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Static content production bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI content and learning-experience generation",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "LMS partner distribution",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Generate real-time interactive learning experiences that match learners' goals far faster and cheaper than static courses",
+      "status": "explicit",
+      "evidence_span": "what if we could generate courses in real time"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Higher completion and retention for educators' learners",
+      "evidence_span": "Educators are reporting a significant increase in completion and retention rates"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "What used to take 40, 50 hours can now be done in just minutes"
+    },
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "our partners provide distribution through their platforms. We've worked carefully with the teams at Canvas, Google Classroom, Microsoft, and Ilias"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it'll take them months, if not years, to develop courses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generate interactive bite-sized e-education, e-learning packages, 100 times faster"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Knowledge as a service is already being used by multiple platforms who can simply plug us in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo list of glossary/flashcards/quizzes/games/teacher materials folded into P3 as feature cascade of Knowledge AI generation. Educator/learner counts, contract ARR, and team exits excluded as traction/credentials. Knowledge AI vs Knowledge LX split as separately presented products. Anti-template: D1 problem, D2 product, D3 channel are independently revisable."
+}

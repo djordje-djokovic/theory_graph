@@ -1,0 +1,93 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cloud HPC orchestration is too hard compared with electricity-like simplicity",
+      "status": "explicit",
+      "evidence_span": "Unfortunately, though, it's not that way today"
+    },
+    {
+      "id": "P2",
+      "text": "CPUsage auto-distributes a configured sandbox across hundreds or thousands of nodes",
+      "status": "explicit",
+      "evidence_span": "We take that instance, and we automatically distribute it and replicate it across hundreds or thousands of compute nodes in the cloud. And then you do the equivalent of simply clicking Start"
+    },
+    {
+      "id": "P3",
+      "text": "Works for virtually any high-performance or high-throughput application at any scale",
+      "status": "explicit",
+      "evidence_span": "distribute virtually any high-performance or high-throughput application across any cloud at any scale"
+    },
+    {
+      "id": "P4",
+      "text": "Custom API builder for command-line applications",
+      "status": "explicit",
+      "evidence_span": "build a custom API specific to your command line application"
+    },
+    {
+      "id": "P5",
+      "text": "Multi-cloud public then private cloud support roadmap",
+      "status": "explicit",
+      "evidence_span": "Today we support Amazon Web Services and over the next few months will add support for other infrastructure such as Microsoft Windows Azure and Google Compute Engine. After that we're going to tackle the private cloud"
+    },
+    {
+      "id": "P6",
+      "text": "Users should plug in any compute app and consume power without caring about config or source",
+      "status": "explicit",
+      "evidence_span": "plug in any compute application, consume as much compute power as you want, without having to think about configuration"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CPUsage distribution product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Compute as a utility: plug in and scale without ops complexity",
+      "status": "explicit",
+      "evidence_span": "vision for compute that looks a lot like electricity"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It really is that simple"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Single domain: roadmap and utility vision treated as part of one platform theory without separate commercial module.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

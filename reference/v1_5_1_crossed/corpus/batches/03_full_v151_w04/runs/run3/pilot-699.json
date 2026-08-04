@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-699",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:50:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises need massive-scale hyper-fast SQL joins that conventional databases cannot deliver in practical time",
+      "status": "explicit",
+      "evidence_span": "enterprises who need massive scale and hyper-fast SQL"
+    },
+    {
+      "id": "P2",
+      "text": "BlazingDB is a GPU-based distributed SQL engine that turns tables into matrices and parallelizes queries across thousands of GPU cores",
+      "status": "explicit",
+      "evidence_span": "a next-generation SQL database on video graphics cards, or GPUs"
+    },
+    {
+      "id": "P3",
+      "text": "The system is fully distributed, self-configuring across cluster hardware/data/usage, and accessible via SQL interfaces and workbench",
+      "status": "explicit",
+      "evidence_span": "It is a fully distributed technology that splits the data and the computation across multiple servers"
+    },
+    {
+      "id": "P4",
+      "text": "Offering includes cloud or on-prem deployment plus a free-for-life community edition for appropriately configured machines",
+      "status": "explicit",
+      "evidence_span": "we're launching a community edition version of a GPU SQL database that is free to use for life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow large-scale SQL analytics",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "GPU distributed SQL engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud on-prem and community edition",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Massively faster SQL analytics for big enterprise datasets",
+      "status": "explicit",
+      "evidence_span": "That 35-hour monstrosity came down to 30 seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it was taking our enterprise database server 35 hours to run"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "BlazingDB unlocks that power for enterprises who need massive scale and hyper-fast SQL"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can deploy it onto the cloud or an appropriately configured on-premise rig"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Benchmark multiples vs Redshift/Postgres/MySQL treated as performance package of the GPU SQL engine (§4.1.8), not separate premises. SQL market-size framing and pilot/customer traction excluded as market context/traction. Anti-template: need, engine, and distribution/edition GTM are separately revisable."
+}

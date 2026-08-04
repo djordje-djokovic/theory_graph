@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Feet suffer fatigue, misalignment, and lack of comfort; people choose style over support",
+      "status": "explicit",
+      "evidence_span": "Here are a couple ways that your feet are not being supported"
+    },
+    {
+      "id": "P2",
+      "text": "Market gap between expensive non-repeatable prescription orthotics and unsupported pillow-like OTC insoles",
+      "status": "explicit",
+      "evidence_span": "On one side, you have orthotics. Prescription orthotics cost around $400"
+    },
+    {
+      "id": "P3",
+      "text": "Base by Weave is a biomechanically engineered custom insole for comfort, alignment, and less fatigue at $75",
+      "status": "explicit",
+      "evidence_span": "Base by Weave, a biomechanically engineered custom insole designed to maximize comfort, promote alignment, and lessen fatigue. And this is available for $75"
+    },
+    {
+      "id": "P4",
+      "text": "Third-party kinematics show reduced hip and knee joint load for better endurance performance",
+      "status": "explicit",
+      "evidence_span": "Base by Weave was seen to significantly reduce the load on your hip and your knee joints"
+    },
+    {
+      "id": "P5",
+      "text": "Smartphone computer-vision scan captures foot curve data for customization",
+      "status": "explicit",
+      "evidence_span": "We've developed some very advanced computer vision to capture curve data"
+    },
+    {
+      "id": "P6",
+      "text": "Proprietary customization engine biomechanically enhances the insole design",
+      "status": "explicit",
+      "evidence_span": "there's the customization engine itself. That's our proprietary secret sauce. That allows us to biomechanically enhance for you"
+    },
+    {
+      "id": "P7",
+      "text": "Cloud path from 3D scan to custom 3D-printable file in five seconds, then SLS additive manufacturing",
+      "status": "explicit",
+      "evidence_span": "We go from 3D scan to custom 3D printable file in five seconds. And that's all done in the cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Foot support market gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Custom Base insole offer",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Scan-to-3D-print system",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Custom insoles that maximize comfort, promote alignment, and lessen fatigue",
+      "status": "explicit",
+      "evidence_span": "maximize comfort, promote alignment, and lessen fatigue"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Add ten active years to people's lives via on-demand body-perfect gear",
+      "evidence_span": "end 10 active years to people's lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There has to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "biomechanically engineered custom insole"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "measure and get functional benefit from a phone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Kickstarter ask truncated at end; quality.truncated=true. Price kept with product offer (P3) per §4.1.3. Weave 100 testing treated as validation color, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-719",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-438",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without rapid confirmation, responders cannot safely use available blood types in emergencies despite O-negative scarcity",
+      "status": "explicit",
+      "evidence_span": "Even though emergency responders have access to all the blood types, they cannot administer them without a rapid confirmation test"
+    },
+    {
+      "id": "P2",
+      "text": "Portable Cream device types blood in three minutes at the point of care, faster and more affordable than lab-only rivals",
+      "status": "explicit",
+      "evidence_span": "portable medical device that detects blood type in three minutes. So it's faster, more affordable, and with this, more importantly, we can execute the test anywhere"
+    },
+    {
+      "id": "P3",
+      "text": "Microfluidic cartridge, mechanical motion, and ML/computer vision produce the result; device works offline and syncs later",
+      "status": "explicit",
+      "evidence_span": "the machine learning and computer vision algorithms will detect the right result"
+    },
+    {
+      "id": "P4",
+      "text": "Commercialization depends on FDA and CE-mark regulatory clearance in the US and EU",
+      "status": "explicit",
+      "evidence_span": "Commercialization pass for cream is the regulatory one. So the first markets for us are United States and European Union"
+    },
+    {
+      "id": "P5",
+      "text": "B2B revenue from hardware, recurring cartridges, and SaaS algorithms via distributors",
+      "status": "explicit",
+      "evidence_span": "Business model for Cream is B2B. So the initial revenue will come from the hardware, the recurring revenue will come from the cartridges, and the software as a service algorithms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Emergency confirmation gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Point-of-care typing device",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory path and B2B model",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Right transfusion on the emergency vehicle or ready at hospital arrival without waiting on O-negative",
+      "status": "explicit",
+      "evidence_span": "the transfusion can be done now on the emergency vehicle, if they already had blood banks, or the hospital can be alerted"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Saving lives and reducing healthcare blood-inventory costs",
+      "evidence_span": "saving lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "important to have the right blood to face emergency situations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "CREAM is the only one that can execute this for the point of care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Commercialization pass for cream is the regulatory one"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split regulatory commercialization as its own condition bundled with B2B (speaker: commercialization path is regulatory). Accuracy/patent folded into device. Team excluded. LOIs as traction of distribution premise not separately coded."
+}

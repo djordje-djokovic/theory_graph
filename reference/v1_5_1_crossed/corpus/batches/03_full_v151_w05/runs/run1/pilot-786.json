@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-786",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home cannabis growing has high knowledge and equipment barriers across lighting, nutrients, grow medium, forums, and ugly tents/rooms",
+      "status": "explicit",
+      "evidence_span": "The barriers to entry are just too high"
+    },
+    {
+      "id": "P2",
+      "text": "Leaf is a smartphone-controlled plug-in appliance that automates LED lighting, nutrient dosing, pH, temperature, humidity, and odor with a home-appliance design",
+      "status": "explicit",
+      "evidence_span": "Leaf is a plug-in plant system that automatically grows cannabis and is controlled by your smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "A grower community lets users view others' plants/live streams and sync custom strain recipes in one click",
+      "status": "explicit",
+      "evidence_span": "in one click, I can sync his recipe directly to my leaf"
+    },
+    {
+      "id": "P4",
+      "text": "Consumables (nutrients, carbon filters, etc.) ship to the door each grow, with a strategic partnership with Advanced Nutrients",
+      "status": "explicit",
+      "evidence_span": "sending you directly to your door every grow, nutrients, carbon filters, anything you need to grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "high barriers to home cannabis growing",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automated Leaf appliance and community recipes",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "consumables supply and nutrient partnership",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easily grow high-potency, high-quality cannabis medicine at home with plug-and-plant automation",
+      "status": "explicit",
+      "evidence_span": "growing your own cannabis has never been easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "baffled by the amount of knowledge required in order to grow high-quality cannabis"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "precisely controlled environment that allows cannabis plants to thrive and create high-potency, high-quality medicine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nutrients, that is the most important part in a high quality cannabis plant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Lighting/nutrients/medium/forum/tent barriers folded as one entry problem (§4.1.6). LED through odor control and calibration demo folded as appliance cascade (§4.1.7); community recipe sync kept as separately demoed social module within product domain. $100 beta deposit treated as launch packaging detail, not financing ask premise. Anti-template: problem, appliance/community, and consumables partnership separately revisable."
+}

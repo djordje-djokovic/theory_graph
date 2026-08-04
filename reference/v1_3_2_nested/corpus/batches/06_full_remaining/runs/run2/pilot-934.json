@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Packing and shipping cost is a hidden, hard-to-determine problem for online retailers and SMB shippers",
+      "status": "explicit",
+      "evidence_span": "This problem is the cost of packing and shipping. Now, why is this such a problem? It's a problem because it's so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "id": "P2",
+      "text": "Customers ship diverse real items, not standard boxes that conventional carrier tools price",
+      "status": "explicit",
+      "evidence_span": "Our customers don't want to know what it costs to ship a box. Our customers are retail shippers"
+    },
+    {
+      "id": "P3",
+      "text": "Without a boxed, crated, or palletized item, carriers refuse quotes and shippers spend hours or days with no comparisons",
+      "status": "explicit",
+      "evidence_span": "None of these guys will give you quotes unless your item is in a box, in a crate, or on a pallet"
+    },
+    {
+      "id": "P4",
+      "text": "One website aggregates markets, converts items to packed dimensions, and returns instant multi-carrier packing and shipping quotes",
+      "status": "explicit",
+      "evidence_span": "we have aggregated all of these different markets into one website"
+    },
+    {
+      "id": "P5",
+      "text": "Fulfillment includes home or office pickup, network drop-off, and same-agent local delivery",
+      "status": "explicit",
+      "evidence_span": "The system facilitates not only these national jobs, but also local delivery"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue is a commission on shipping, packing, insurance, and related providers",
+      "status": "explicit",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to, shipping companies, packing companies, insurance companies, et cetera"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Opaque packing cost for diverse goods",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Aggregated shipping marketplace",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Provider commissions",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make packing and shipping easy with instant quotes and options for almost any item",
+      "status": "explicit",
+      "evidence_span": "make shipping easy for everyone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce real money and time shippers spend getting quotes",
+      "evidence_span": "It costs people real money and real time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "This allows us to provide customers with instant data, instant packing quotes, instant shipping quotes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ship almost any item of almost any size or weight to almost any destination from one website"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collecting a commission from all the service providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Independent run: packed-dimension conversion folded into aggregation premise (v1.3.2 4.1(5)). Kayak analogy not coded as premise. Singleton D3 separately revisable monetization. Credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

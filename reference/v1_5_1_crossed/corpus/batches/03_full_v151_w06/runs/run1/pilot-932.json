@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-932",
+    "coder_session_id": "session_01",
+    "session_case_index": 6,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Meetings waste enormous time because agendas are missing and notes, photos, summaries, and follow-ups are scattered across calendar, photo library, notebook, and email",
+      "status": "explicit",
+      "evidence_span": "Dave's meeting details and content are scattered everywhere"
+    },
+    {
+      "id": "P2",
+      "text": "Retrace is a mobile app that puts notes, photos, follow-up tasks, and contacts in meeting context with calendar sync, collaboration, post-meeting reminders, and prep for follow-ups",
+      "status": "explicit",
+      "evidence_span": "It's a mobile app that puts your notes, photos, follow-up tasks, and contact information in the context of a meeting"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is bottom-up individual adoption like Dropbox/Yammer, then premium team integrations with cloud storage, CRMs, and task systems once adoption thresholds are hit",
+      "status": "explicit",
+      "evidence_span": "bring value to the individual and drive adoption from the bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "scattered unproductive meetings",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "meeting memory mobile app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "bottom-up then premium team GTM",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People become more productive by remembering and organizing everything about their meetings in one place",
+      "status": "explicit",
+      "evidence_span": "helping you become a more productive person"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Meetings are a waste of time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Now you go to one place to remember everything"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collaborate and share data about their meetings and contacts while still delivering tremendous amounts of value and control to the end user"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Agenda-less waste stats and scattered-artifacts pains folded as one meeting-organization problem (§4.1.6). Trace/retrace/succeed demo steps, GPS, social contact enrichment, collaborative notes/photos/tasks, and post-meeting reminders folded as app cascade (§4.1.7). Premium integrations kept with bottom-up GTM as one commercial path. Three domains are problem, product, and GTM—not a need/product/money triad."
+}

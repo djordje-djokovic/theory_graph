@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-675",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People spend most time indoors where unseen pollutants and elevated CO2 (vs outdoors) impair cognition, focus, and performance, while ventilation mostly recirculates air",
+      "status": "explicit",
+      "evidence_span": "we typically have three times the concentrations than outside"
+    },
+    {
+      "id": "P2",
+      "text": "A microfluidic high-density photobioreactor with photosynthetic algae (chlorella), LED lighting, and replaceable cartridges makes fresh air indoors by converting CO2 to oxygen",
+      "status": "explicit",
+      "evidence_span": "the system itself is microfluidic high-density photobioreactor"
+    },
+    {
+      "id": "P3",
+      "text": "The system is wall-mountable and self-sustaining, automatically adjusting to room CO2 and lowering elevated levels toward safer ranges in practical room deployments",
+      "status": "explicit",
+      "evidence_span": "It automatically adjusts the CO2 levels in the room"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts with businesses via direct sales of custom and standard units plus HVAC distribution partners, with later residential expansion",
+      "status": "explicit",
+      "evidence_span": "we're targeting businesses, selling our custom systems as well as standard units"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "indoor CO2 and ventilation problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "algae photobioreactor fresh-air system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "business sales and HVAC partners",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh air made indoors where people need it, supporting healthier cognitive performance",
+      "status": "explicit",
+      "evidence_span": "Our system provides fresh air inside where we need it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "50% decline in cognitive performance"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've created a system that makes fresh air indoors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fresh air in offices and making healthier homes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Indoor pollution/CO2/ventilation treated as one problem-set (§4.1.6). LED/biochip/cartridge/demo performance folded as feature/performance package of one photobioreactor (§4.1.7–8). Stanford bio/credentials excluded. Singleton D1/D3 retained as separately revisable problem and GTM modules. Anti-template: problem, bioreactor, and B2B/HVAC channel are separately revisable."
+}

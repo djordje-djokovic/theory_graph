@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1137",
+    "coder_session_id": "session_05",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Internet giants pay for global CDNs and large security teams for speed and safety, but ordinary websites lack access to those tools",
+      "status": "explicit",
+      "evidence_span": "if you're trying to run a website today, you're left alone without access to any of these tools"
+    },
+    {
+      "id": "P2",
+      "text": "Cloudflare delivers performance and security via a globally distributed network with ~5-minute DNS nameserver setup—no hardware, software, or code changes; works with any stack",
+      "status": "explicit",
+      "evidence_span": "all you do is make one change to your domain's name servers, and suddenly you're on the Cloudflare network"
+    },
+    {
+      "id": "P3",
+      "text": "Benefits include ~30% faster page loads, stopping spam/attacks, HTML rewrite/caching proxy with deep inspection, and one-click Google Analytics upgrades",
+      "status": "explicit",
+      "evidence_span": "We deliver an average of a 30% decrease in page load times to your site when you sign up"
+    },
+    {
+      "id": "P4",
+      "text": "Service is free at the only sensible price point while already covering variable costs per user",
+      "status": "explicit",
+      "evidence_span": "there's really only one price point for a service like ours, and that's free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "tools gap for ordinary sites",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "DNS CDN security network",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "free unit economics",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any website gets giant-class speed and security—make the web faster and safer",
+      "status": "explicit",
+      "evidence_span": "make the web a faster, safer place"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "takes the tools of the biggest service providers and makes them available for anyone with a website online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cloudflare's got your back, and we won't rest until your site is fast, safe, and secure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Even though we haven't charged a single user, We are already making money on each"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Speed and security concerns of giants folded into one access-gap problem for ordinary sites (§4.1.6). DNS onboarding, stack-agnostic network, speed/spam stop, GA button, and XSS demo folded as cascade of one Cloudflare network mechanism (§4.1.7). Free price + covering variable costs kept as commercial premise. Beta traffic metrics excluded as traction (§4.2). Transcript begins mid-sentence."
+}

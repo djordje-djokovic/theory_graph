@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-802",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Geographic expansion beyond USA/Canada (e.g. Brazil) multiplies the addressable customer base for the product",
+      "status": "explicit",
+      "evidence_span": "you add another country, for example Brazil, you have four more million potential customers for this product"
+    },
+    {
+      "id": "P2",
+      "text": "A later product line will be childcare products designed for parents' safety and comfort",
+      "status": "explicit",
+      "evidence_span": "create later a new line of products, childcare products designed for parents"
+    },
+    {
+      "id": "P3",
+      "text": "Wristband design must be improved and manufacturing started from working 3D-printed prototypes to reach market",
+      "status": "explicit",
+      "evidence_span": "improve different things like the design of the wristband, start manufacturing them"
+    },
+    {
+      "id": "P4",
+      "text": "GTM starts on Kickstarter at $180, then web stores, then large specialized retail distribution",
+      "status": "explicit",
+      "evidence_span": "The product will be sold on Kickstarter for $180. Then we want to sell it through our web store and different web store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wristband productization",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D2",
+      "name": "market expansion and product line",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Kickstarter-to-retail GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring a working wristband product to market for customers (and later parent childcare products)",
+      "status": "inferred",
+      "evidence_span": "they are working, but we need to raise some money to get to market"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Parent safety and comfort via future childcare products",
+      "evidence_span": "the safety of parents and their comfort is also very important at this time of their life"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start manufacturing them. Those are some 3D printed prototypes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is why we can really grow"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will go to large distribution and sell it in a specialized store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.35
+  },
+  "notes": "Transcript begins mid-pitch (truncated=true); product purpose before wristband mention is missing. Financing ask excluded except as GTM channel detail in P4. Singletons D1 and D3 justified given sparse separately asserted modules."
+}

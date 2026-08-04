@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-148",
+    "coder_session_id": "session_03",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Educational content is mostly static/linear because dynamic interactive content is too slow and costly to produce",
+      "status": "explicit",
+      "evidence_span": "98% of this content is both static and linear. Only 2% of it is dynamic. The reason for this is it takes such a lot of time and money to produce"
+    },
+    {
+      "id": "P2",
+      "text": "Future learner problems and jobs are uncertain, yet courses still take months or years to develop",
+      "status": "explicit",
+      "evidence_span": "It's no longer clear what problems our learners need to solve tomorrow, nor is it clear what jobs will be available or what we should train them for. And yet, our educational systems are forced to guess because it'll take them months, if not years, to develop courses"
+    },
+    {
+      "id": "P3",
+      "text": "Knowledge AI generates interactive bite-sized e-learning packages ~100x faster and plug-and-play for any learning environment",
+      "status": "explicit",
+      "evidence_span": "generate interactive bite-sized e-education, e-learning packages, 100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "id": "P4",
+      "text": "Knowledge LX generates full learning experiences for any learning goal in near real time",
+      "status": "explicit",
+      "evidence_span": "With Knowledge LX, we generate full learning experiences for any learning goal in near real-time"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market is B2B AI backend integrations into LMS platforms (Canvas, Google Classroom, Microsoft, Ilias)",
+      "status": "explicit",
+      "evidence_span": "We focus on being the behind-the-scenes, AI-ready solutions provider, while our partners provide distribution through their platforms. We've worked carefully with the teams at Canvas, Google Classroom, Microsoft, and Ilias to launch the first few integrations"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Static content and slow course development problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time AI content and learning-experience generation",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "LMS partner distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time generation of interactive learning experiences that tap intrinsic motivation",
+      "status": "explicit",
+      "evidence_span": "a future where we can tap into the learner's intrinsic motivation and generate real-life learning experiences in real time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if we could generate courses in real time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What used to take 40, 50 hours can now be done in just minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partners provide distribution through their platforms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo interactives (glossary, flashcards, quizzes, games, teacher materials) folded into Knowledge AI generation mechanism as feature cascade. Educator/user counts and ARR forecasts excluded as traction. Exoskeleton anecdote treated as illustration of LX value, not a separate product premise. Anti-template note: D1 need / D2 product / D3 channel are separately revisable modules as stated (partner distribution vs generation engines)."
+}

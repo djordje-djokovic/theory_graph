@@ -1,0 +1,92 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CheckPoints is a store-agnostic mobile shopping rewards app earning rewards across 1M+ US stores redeemable on-phone",
+      "status": "explicit",
+      "evidence_span": "the first shopping rewards application that is store agnostic"
+    },
+    {
+      "id": "P2",
+      "text": "Advertisers reach targeted demographics in-aisle with product in hand via a virtual end-cap / product interaction page",
+      "status": "explicit",
+      "evidence_span": "reach consumers of the demographic they're looking for in any store in America where their product is sold"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers scan UPCs at featured products to earn points and unlock interactive advertiser content (coupons, social, apps, recipes, surveys)",
+      "status": "explicit",
+      "evidence_span": "put it over the UPC code, and it's that simple"
+    },
+    {
+      "id": "P4",
+      "text": "Coins from scans feed games for more points; points redeem for 40+ partner rewards delivered often in real time on phone",
+      "status": "explicit",
+      "evidence_span": "Every time a user scans a featured product, they earn a coin"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "consumer scan-and-rewards loop",
+      "premise_ids": [
+        "P1",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "in-store advertiser engagement",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drive in-store product discovery/interaction for advertisers while giving consumers fun extra rewards value",
+      "status": "explicit",
+      "evidence_span": "allows advertisers to drive discovery and interaction in-store while providing a fun and rewarding opportunity for consumers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "earn rewards in over one million stores"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "advertising is reaching the consumer at that most valuable moment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vantage Media bio excluded (§4.2). Interaction-page content types folded as cascade of one advertiser message surface (§4.1.7). Coins/games/rewards cascade folded into consumer loop. Launch partner names are traction—excluded. Singleton D2: advertiser reach module separately revisable from consumer rewards.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1136",
+    "coder_session_id": "session_04",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

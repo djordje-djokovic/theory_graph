@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits are underserved by tech and still rely on pen and paper for scheduling, volunteer tracking, and donations",
+      "status": "explicit",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "id": "P2",
+      "text": "Volunteers should be treated like retail customers because they give huge service hours and donate far more than non-volunteers",
+      "status": "explicit",
+      "evidence_span": "volunteers should be treated no differently than retail customers"
+    },
+    {
+      "id": "P3",
+      "text": "Civic Champs automates volunteer management via geofenced mobile check-in, kiosk mode, and staff admin check-in",
+      "status": "explicit",
+      "evidence_span": "Civic Chance provides automated volunteer management by providing three different ways for nonprofits to track volunteer hours"
+    },
+    {
+      "id": "P4",
+      "text": "An integrated micro-donations platform converts volunteers to donors at the inspired moment using volunteer data for ask timing, amount, and messaging",
+      "status": "explicit",
+      "evidence_span": "launch the integrated micro-donations platform that will allow for nonprofits to automatically convert volunteers to donors"
+    },
+    {
+      "id": "P5",
+      "text": "Architecture uniquely serves nonprofits, volunteers, and corporations with seamless data sharing across the full market",
+      "status": "explicit",
+      "evidence_span": "Civic Champs has a database and technology architecture that's uniquely built to serve the full market, allowing for seamless data sharing between nonprofits, volunteers, and corporations"
+    },
+    {
+      "id": "P6",
+      "text": "Clients pay $25–$450 monthly in a large nonprofit CRM market expandable to adjacent CSR and donation processing",
+      "status": "explicit",
+      "evidence_span": "These clients pay between $25 to $450 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underserved nonprofit volunteer operations",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Volunteer tracking and micro-donation conversion",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Monthly SaaS pricing in nonprofit CRM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Seamless volunteer management that automatically converts volunteers to donors and increases community impact",
+      "status": "explicit",
+      "evidence_span": "seamless volunteer management and a way to automatically convert your volunteers to donors"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help corporations quantify community impact and foundations add agency capacity",
+      "evidence_span": "whether you're a corporation looking to quantify your community impact, or your foundation looking to add to the capacity of your agencies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nonprofits continue to be underserved by our tech community"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically convert volunteers to donors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeting the $1.7 billion CRM market for nonprofits"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three tracking modes folded into one volunteer-management premise (§4.1(5)). Client count and word-of-mouth growth excluded as traction. Team bio/exits excluded. Need/product/pricing triad justified by separate revisability.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:37:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

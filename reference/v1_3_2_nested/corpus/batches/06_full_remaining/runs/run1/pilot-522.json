@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-522",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Biomass cooking causes indoor air pollution that drives serious health harms and deaths in Nigeria",
+      "status": "explicit",
+      "evidence_span": "this causes a lot of indoor air pollution that leads to heart diseases, chronic lung cancer"
+    },
+    {
+      "id": "P2",
+      "text": "Tens of millions of Nigerian households lack access to electricity",
+      "status": "explicit",
+      "evidence_span": "20 million Nigerian households live without access to electricity"
+    },
+    {
+      "id": "P3",
+      "text": "An affordable smokeless cook stove cooks five times faster and self-generates 50 watts of electricity from excess heat",
+      "status": "explicit",
+      "evidence_span": "a clean cook stove that is affordable. It's smokeless. It cooks five times faster than any traditional stove. And it also self-generates 50 watts of electricity"
+    },
+    {
+      "id": "P4",
+      "text": "Waste-derived biomass pellets are much cheaper than charcoal, burn without smoke, and cook faster",
+      "status": "explicit",
+      "evidence_span": "we process it from waste. agricultural waste, household waste, commercial waste. And it's 80% cheaper than charcoal"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution runs through cooperatives, MFIs, and local cooking vendors who keep better margins",
+      "status": "explicit",
+      "evidence_span": "working with existing cooperative societies, MFIs, and also we are using the local cooking food vendors"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue comes from selling stoves and pellets plus after-sales support under a 12-month guarantee",
+      "status": "explicit",
+      "evidence_span": "We sell our products to these target markets and also we provide after-sales support services"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Indoor pollution and energy poverty",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Power stove and pellets",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Vendor channels and after-sales",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clean cooking that protects families' health while generating household electricity",
+      "status": "explicit",
+      "evidence_span": "clean cook solution like PowerStove is the solution to health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Household electricity for phones, banks, TVs, and radios while cooking",
+      "evidence_span": "This electricity can be used to charge mobile phones, to charge mobile power banks, and also your televisions and radio sets"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "You use the pellet and put it in the combustion chamber, and you start the fire"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "indoor air pollution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smokeless. It cooks five times faster"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving them a better solution they can sell"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Proprietary heat-to-electricity circuit folded into the stove premise (§4.1(5)). Competitive price comparisons folded into product value rather than separate premises. Traction metrics, prize ask, revenue targets, and team bios excluded per §4.2. Carbon-certification/export roadmap left as future aspiration, not coded as a current premise (§4.1(4)). Need/product/channel triad justified: vendor margins and after-sales are revisable without changing stove/pellet tech."
+}

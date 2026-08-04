@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-431",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Crowd connectivity can connect IoT devices to the internet more efficiently and cost-effectively",
+      "status": "explicit",
+      "evidence_span": "we could leverage cloud connectivity to connect more efficiently, more cost effectively, the next trillion things to the internet"
+    },
+    {
+      "id": "P2",
+      "text": "All network participants must be rewarded for participating",
+      "status": "explicit",
+      "evidence_span": "if we could first make sure that everyone participating in the network would be rewarded"
+    },
+    {
+      "id": "P3",
+      "text": "Every connection must be safe and secure",
+      "status": "explicit",
+      "evidence_span": "if we could make sure that every connection is safe and secure"
+    },
+    {
+      "id": "P4",
+      "text": "An economic model pays participants nodal cash for moving valuable data via smartphone IoT gateways",
+      "status": "explicit",
+      "evidence_span": "the more data you move, the more value there is in the data you move, the more you earn nodal cash or cryptocurrency"
+    },
+    {
+      "id": "P5",
+      "text": "Rendezvous is a blockchain-based protocol that verifies device identity and can revoke compromised devices",
+      "status": "explicit",
+      "evidence_span": "we created a communication protocol that has security built in. It's called Rendezvous"
+    },
+    {
+      "id": "P6",
+      "text": "Enterprise packaging covers asset tracking, sensor data collection, and connecting things to the internet",
+      "status": "explicit",
+      "evidence_span": "They work for asset tracking, sensor data collection, or simply for connecting your things to the internet"
+    },
+    {
+      "id": "P7",
+      "text": "The solution is 100% software and addresses Industry 4.0 use cases via smartphone and partner distribution",
+      "status": "explicit",
+      "evidence_span": "Nodal is the only solution which is 100% software and that addressed all the use cases in Industry 4.0"
+    },
+    {
+      "id": "P8",
+      "text": "Partnerships with smartphone makers, enterprise networking, and security firms extend the network",
+      "status": "explicit",
+      "evidence_span": "we partnered with amazing companies like HTC, who basically pre-installed our app on their smartphones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Crowd IoT connectivity and rewards",
+      "premise_ids": ["P1", "P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Rendezvous security protocol",
+      "premise_ids": ["P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise packaging and partnerships",
+      "premise_ids": ["P6", "P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A secure, rewarded crowd network that connects IoT things to the internet",
+      "status": "explicit",
+      "evidence_span": "a crowd-sourced connectivity solution to connect the next real things to the internet"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Citizens reclaim ownership of data and earn for helping build a private IoT internet",
+      "evidence_span": "reclaim ownership of their data and of the internet"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "we could do that if we could first make sure that everyone participating in the network would be rewarded"
+    },
+    {
+      "from": "P3",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "And second, if we could make sure that every connection is safe and secure"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect more efficiently, more cost effectively, the next trillion things to the internet"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every connection is safe and secure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting your things to the internet"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Speaker explicitly conditions connectivity on reward and security (P2/P3→P1). FireChat history treated as framing; install/device counts as traction excluded except partnership mechanism (P8). Rendezvous cascade (certificate, trustless, revoke) folded into P5. Uses of enterprise packaging folded under enumeration rule 1 into P6."
+}

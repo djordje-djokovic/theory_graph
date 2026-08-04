@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-300",
+    "coder_session_id": "session_06",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:19:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Produce spoils across long supply chains while synthetic pesticides are being banned and natural wax alternatives are hard to scale",
+      "status": "explicit",
+      "evidence_span": "currently used pesticides are synthetic compounds, which are harmful to human beings and the environment, so they are being banned"
+    },
+    {
+      "id": "P2",
+      "text": "Edible cell-free coatings from microbial fermentation combine fungal biopolymer and natural antimicrobials to regulate gas exchange, delay ripening, and deliver antimicrobials at low dose",
+      "status": "explicit",
+      "evidence_span": "coatings are based on biomolecules produced by non-GMOs, which were isolated from nature"
+    },
+    {
+      "id": "P3",
+      "text": "Coating matches common synthetic fungicide efficacy on citrus, extends shelf life and quality for avocados/berries, and supports zero-residue marketing premium",
+      "status": "explicit",
+      "evidence_span": "as effective as the most commonly used synthetic fungicide in citrus"
+    },
+    {
+      "id": "P4",
+      "text": "Stable cell-free formulation integrates with existing packing machinery without special storage logistics required by living-microbe competitors",
+      "status": "explicit",
+      "evidence_span": "The product integrates seamlessly with existing machinery, so there is no need to invest in special equipment"
+    },
+    {
+      "id": "P5",
+      "text": "Initial GTM targets the most exported LatAm fruit classes: citrus, avocados, and berries",
+      "status": "explicit",
+      "evidence_span": "targeting the most exported fruit classes in Latin America, which are citrus, avocados, and berries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "produce spoilage and pesticide ban",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "fermentation-based edible coatings",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "packing-line adoption and fruit GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect food and reduce waste without compromising human or planetary health",
+      "status": "explicit",
+      "evidence_span": "fight against food waste and food insecurity without compromising human or planetary health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Almost 30% of all food produced is lost or wasted every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "harness the power of microbial fermentation to protect our food"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "market their produce as zero chemical residues, capturing a price premium"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Coating composition and gas-exchange/antimicrobial delivery folded into one mechanism (P2). Citrus/berry/avocado performance treated as validation cascade of that coating (P3). R&D agreements/field tests treated as traction. Transparent/odorless/tasteless and wash-off treated as product facets of P2."
+}

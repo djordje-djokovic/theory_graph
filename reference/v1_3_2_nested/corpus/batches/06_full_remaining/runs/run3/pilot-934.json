@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cost of packing and shipping is obscured in online transactions and hard for retailers to determine",
+      "status": "explicit",
+      "evidence_span": "There's an element of cost in almost any online transaction that's hidden. It's obscured. It's subsidized"
+    },
+    {
+      "id": "P2",
+      "text": "Target users are micro-niche SMB retail shippers of heterogeneous real-world goods",
+      "status": "explicit",
+      "evidence_span": "small and medium-sized businesses that ship a diverse group of goods. We call them micro niches"
+    },
+    {
+      "id": "P3",
+      "text": "Fragmented carrier types will not quote unless freight is boxed, crated, or palletized, blocking comparisons",
+      "status": "explicit",
+      "evidence_span": "The market itself is incredibly fragmented. Every different type of item requires a different type of carrier"
+    },
+    {
+      "id": "P4",
+      "text": "ShipHawk aggregates carriers into one site that ships almost any size or weight to almost any destination",
+      "status": "explicit",
+      "evidence_span": "you can ship almost any item of almost any size or weight to almost any destination from one website"
+    },
+    {
+      "id": "P5",
+      "text": "Real items are converted to packed weights and dimensions for instant packing and multi-carrier quotes",
+      "status": "explicit",
+      "evidence_span": "convert your real item into packed weights and dimensions"
+    },
+    {
+      "id": "P6",
+      "text": "Pickup, network drop-off, and local delivery complete the fulfillment loop in minutes",
+      "status": "explicit",
+      "evidence_span": "schedule a pickup at your home or office. Or you can find a local ShipHawk network location"
+    },
+    {
+      "id": "P7",
+      "text": "Business model is commissions from shipping, packing, and insurance providers",
+      "status": "explicit",
+      "evidence_span": "collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hidden shipping-cost problem",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Multi-carrier quote and fulfillment site",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Commission monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make shipping easy for everyday shippers of awkward real items",
+      "status": "explicit",
+      "evidence_span": "ShipHawk solves a problem that people experience every day"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cut real money and time spent arranging packing and shipping",
+      "evidence_span": "It costs people real money and real time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This allows us to provide customers with instant data, instant packing quotes, instant shipping quotes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard to determine what it costs to pack and ship something"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You get all the carriers and all the options offered by those carriers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collecting a commission from all the service providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run3: split packed-dimension conversion from marketplace aggregation again. Kayak analogy framing only. Anti-template need/product/money justified by independent revisability of quoting failure, product stack, and commission.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

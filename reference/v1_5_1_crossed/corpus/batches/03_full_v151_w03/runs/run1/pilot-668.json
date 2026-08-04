@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-668",
+    "coder_session_id": "session_02",
+    "session_case_index": 16,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Marketers are overwhelmed by data and diversity, so historical cohort/segment personalization wastes spend and misses the present moment",
+      "status": "explicit",
+      "evidence_span": "millions of dollars are spent every single year to get the right information in front of the right people. Almost all of this is wasted"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time ML personalizes for every user including cold-start across verticals, content types, touchpoints, and devices",
+      "status": "explicit",
+      "evidence_span": "we built a platform for every single vertical, across all types of content, across every single touchpoint, and across all devices"
+    },
+    {
+      "id": "P3",
+      "text": "Integration takes minutes and returns intelligent reactions in about 125 ms per user action",
+      "status": "explicit",
+      "evidence_span": "it took minutes to integrate, not months"
+    },
+    {
+      "id": "P4",
+      "text": "Each impression is treated as a cohort of one at that moment via fast infrastructure plus top ML",
+      "status": "explicit",
+      "evidence_span": "we treat that impression as a cohort of one at that moment"
+    },
+    {
+      "id": "P5",
+      "text": "SaaS pricing is usage-based so customers can add items and site areas to personalize easily",
+      "status": "explicit",
+      "evidence_span": "our pricing is usage-based, which means that it's very easy for our customers to add new items and new parts of the site that they want to start personalizing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wasted non-real-time personalization",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time cohort-of-one ML platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Usage-based SaaS pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Serve users the items they love, want to buy, and want to share at the moment they care",
+      "status": "explicit",
+      "evidence_span": "you give them the items they love, the items they want to buy, and the items they want to share"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you give them the items they want and you can target them at the moment they most care about it, you'll succeed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's an intelligent real-time reaction immediately"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you personalize everything every touch point every type of content in every device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Trial CTR/engagement/revenue lifts and never-lost A/B claims excluded as traction. Demo configuration steps folded into the real-time platform mechanism. Google origin story treated as inspiration framing, not a coded credential premise. Transcript truncated mid-closing."
+}

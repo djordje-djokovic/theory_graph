@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-438",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Emergency care needs rapid blood-type confirmation because O-negative is scarce and wrong-type risk blocks transfusion",
+      "status": "explicit",
+      "evidence_span": "they cannot administer them without a rapid confirmation test"
+    },
+    {
+      "id": "P2",
+      "text": "A portable cartridge device detects blood type in three minutes at the point of care using microfluidics and ML/computer vision",
+      "status": "explicit",
+      "evidence_span": "portable medical device that detects blood type in three minutes"
+    },
+    {
+      "id": "P3",
+      "text": "US and EU commercialization depends on FDA and CE-IVDR regulatory clearance",
+      "status": "explicit",
+      "evidence_span": "Commercialization pass for cream is the regulatory one"
+    },
+    {
+      "id": "P4",
+      "text": "B2B model sells hardware, recurring cartridges, and SaaS algorithms through key distributors",
+      "status": "explicit",
+      "evidence_span": "initial revenue will come from the hardware, the recurring revenue will come from the cartridges, and the software as a service algorithms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Emergency blood-type confirmation need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Portable blood typing device",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory commercialization path",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Hardware and cartridge B2B model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable the right transfusion earlier to save lives and cut healthcare blood costs",
+      "status": "explicit",
+      "evidence_span": "saving lives"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce costs for the healthcare industry",
+      "evidence_span": "reduce costs for the healthcare industry"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allow the right transfusion without having to wait or to give a negative"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can execute the test anywhere, from ambulances, emergency helicopters, to small clinics or remote locations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are in the process of securing FDA and CMARC"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is a market that is owned by key distributors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Offline autonomy, accuracy, patent/algorithm secrecy, and hospital validation folded into P2 (feature cascade / IP on mechanism). Lab-only competitor contrast treated as positioning for P2 point-of-care claim. Team bios excluded."
+}

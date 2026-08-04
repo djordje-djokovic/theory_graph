@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many smartphone users lack internet access, creating life-critical and development connectivity gaps",
+      "status": "explicit",
+      "evidence_span": "66% of the world has a smartphone in their hands, but 53% of the population does not have access to internet"
+    },
+    {
+      "id": "P2",
+      "text": "An SDK lets existing apps work offline instead of building a new consumer app",
+      "status": "explicit",
+      "evidence_span": "Ridgefire is an SDK that apps integrate onto their own code so they can work offline"
+    },
+    {
+      "id": "P3",
+      "text": "Bluetooth mesh networking hops messages across devices to extend range beyond a single 330-foot link",
+      "status": "explicit",
+      "evidence_span": "it creates mesh networks, which means that information can hop on devices found in the middle, so the range is increased"
+    },
+    {
+      "id": "P4",
+      "text": "Smart mesh algorithm limits flooding, message lifetime, and battery drain; stack is encrypted, patented, and Android-iOS",
+      "status": "explicit",
+      "evidence_span": "We are the only ones in the market with Android to iOS integration. We are encrypted, and we're patented"
+    },
+    {
+      "id": "P5",
+      "text": "B2B go-to-market sells to developers who already have user density",
+      "status": "explicit",
+      "evidence_span": "we're working on a B2B model. We cater to developers that already have this user density"
+    },
+    {
+      "id": "P6",
+      "text": "Pricing charges on monthly active users that use the app thanks to Bridgefy technology",
+      "status": "explicit",
+      "evidence_span": "We charge based on monthly active users that use your app thanks to our technology each month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Offline connectivity need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Bluetooth mesh SDK",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Developer B2B monetization",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Apps keep working and connecting people without internet, including emergencies",
+      "status": "explicit",
+      "evidence_span": "imagine being able to use WhatsApp or Uber or Snapchat when you don't have access to internet"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Emergency and community connectivity that can save lives",
+      "evidence_span": "improve and save people's lives and hopefully connect full communities and cities"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It can be the difference between life and death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "apps integrate onto their own code so they can work offline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when developers make this revenue, we also make it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision of becoming the offline-comms standard excluded per v1.3.2 clarification 4. Fundraising and user-count traction excluded. ASR Ridgefire/BridgeFlight left in spans. Encryption/patent folded into mesh stack premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-605",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

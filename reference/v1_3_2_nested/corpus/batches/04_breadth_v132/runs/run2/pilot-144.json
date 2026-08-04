@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-144",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:28:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Today's antibody treatment for diabetic retinopathy is a $2,000 monthly eye injection that is complex, risky, and expensive",
+      "status": "explicit",
+      "evidence_span": "This is complex, risky for the patient, and expensive"
+    },
+    {
+      "id": "P2",
+      "text": "Antibody drugs are fundamental to treating disease and a $200 billion market, yet not easy to use or affordable",
+      "status": "explicit",
+      "evidence_span": "Antibody drugs are a $200 billion market and fundamental to treat diseases. But these are not easy to use or affordable"
+    },
+    {
+      "id": "P3",
+      "text": "Monoclonal antibodies cannot cross most tissue barriers, are unstable out of cold chain, and cost heavily to manufacture",
+      "status": "explicit",
+      "evidence_span": "incapability to cross through most tissue barriers on the body, lack of stability out of cold chain, and high manufacturing costs"
+    },
+    {
+      "id": "P4",
+      "text": "These limitations make new antibody drugs impossible to develop for hundreds of diseases",
+      "status": "explicit",
+      "evidence_span": "making impossible the development of new antibody drugs for hundreds of diseases that affect most of the global population"
+    },
+    {
+      "id": "P5",
+      "text": "The AMP platform designs synthetic antibody mimetic proteins that replace monoclonal antibodies with the same biological functions at 40 times smaller size",
+      "status": "explicit",
+      "evidence_span": "designing synthetic antibody mimetic proteins to replace monoclonal antibodies in novel first-in-class therapeutics"
+    },
+    {
+      "id": "P6",
+      "text": "AMPs cross tissue barriers, generate limited immune reactions, target hard-to-reach antigens, and are heat resistant, enabling previously impossible delivery forms",
+      "status": "explicit",
+      "evidence_span": "Our AMPs can cross through tissue barriers, generate limited immune reactions even with no humanization, can target very small and hard to reach antigens, and are heat resistant"
+    },
+    {
+      "id": "P7",
+      "text": "Lead candidates validate the platform in vivo and in cell culture: AMP1 penetrates eye tissue with therapeutic activity, AMP4 fully neutralizes COVID-19 at nanomolar level",
+      "status": "explicit",
+      "evidence_span": "Our AMP4 shown full neutralization capability over the COVID-19 virus on lung cell culture at nanomolar level"
+    },
+    {
+      "id": "P8",
+      "text": "The business out-licenses AMPs to pharmaceutical companies for upfront payments, milestones, and royalties",
+      "status": "explicit",
+      "evidence_span": "Then we out-license our AMPs to pharmaceutical companies, generating revenue from upfront payments, clinical phase and approval milestones, and then royalties over sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Antibody therapy gap",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "AMP platform and validation",
+      "premise_ids": ["P5", "P6", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Out-licensing revenue model",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs",
+      "status": "explicit",
+      "evidence_span": "make antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This limits their use into a very narrow set of applications"
+    },
+    {
+      "from": "P6",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "These advantages gives our AMP platform the ability to develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cannot be done otherwise with the therapeutic alternatives on the market"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will be able to take your treatment in simple eye drops at home, no need for an eye injection"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "royalties over sales of the marketed products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The AMP design recipe (shark CDR3, sea-snail scaffold, AI processes) and the size/function claim are merged into P5 as one platform-design premise; the property list is one capability premise P6 per v1.3.1 clarification 2. P6->P5 reflects the speaker's warrant that these advantages give the platform the ability to develop impossible drugs (recorded against P5 as the platform claim; the delivery-forms list is kept inside P6 as applications of the same capability). D3 singleton: licensing economics revise independently of the science. Clinical-phase timing and licensing date for AMP1 excluded as plans. Vision 'largest portfolio' left uncoded per v1.3.2 clarification 4."
+}

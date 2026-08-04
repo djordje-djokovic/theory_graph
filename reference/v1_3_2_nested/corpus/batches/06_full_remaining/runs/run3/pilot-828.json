@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-828",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The modern web forces fragmented searching and sharing across tabs and single-purpose apps",
+      "status": "explicit",
+      "evidence_span": "we've traded the fluidity and connectedness of surfing for stacks of browser tabs and single-purpose mobile apps"
+    },
+    {
+      "id": "P2",
+      "text": "VIRB weaves third-party services into cards and persistent activity streams that share context",
+      "status": "explicit",
+      "evidence_span": "VIRB automatically organizes my activity into a stream that stays with me"
+    },
+    {
+      "id": "P3",
+      "text": "Shared collections support collaborative planning with notifications, notes, and cross-device sync including mobile deep links",
+      "status": "explicit",
+      "evidence_span": "with just one swipe, I can view all of my previous searches because VIRB syncs my activity and data across devices"
+    },
+    {
+      "id": "P4",
+      "text": "Semantic search and recommendations create contextual bridges across services",
+      "status": "explicit",
+      "evidence_span": "we use data technologies like semantic search and recommendations"
+    },
+    {
+      "id": "P5",
+      "text": "Purpose-built interfaces and interaction paradigms are required to make service weaving usable",
+      "status": "explicit",
+      "evidence_span": "We also design from the ground up new user interfaces and interaction paradigms"
+    },
+    {
+      "id": "P6",
+      "text": "Starting verticals connect services around places, movies, and media",
+      "status": "explicit",
+      "evidence_span": "We're starting by connecting services around places, movies, and media"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented web experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Stream and collection product",
+      "premise_ids": ["P2", "P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Bridges and interaction design",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "An intelligent layer that helps people get things done by surfing services fluidly in one place",
+      "status": "explicit",
+      "evidence_span": "Verb is an intelligent layer over the internet that helps you get things done in one place"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Restore magical fluid surfing across links, services, and devices",
+      "evidence_span": "bring back the magic of surfing, fluidly moving from link to link, service to service, on any screen or device"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "when we can weave together these services"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fragmented web"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get things done in one place"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "contextual bridges across services"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: treated starting places/movies/media focus as a separately stated scope condition. Demo feature laundry list folded into stream/collection premises."
+}

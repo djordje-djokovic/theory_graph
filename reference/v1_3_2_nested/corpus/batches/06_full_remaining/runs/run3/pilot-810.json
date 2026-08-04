@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:42+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Smart home adoption lags because products are a pain out of the box",
+      "status": "explicit",
+      "evidence_span": "a product meant to make our lives simple and better is such a pain to deal with right out of the box"
+    },
+    {
+      "id": "P2",
+      "text": "Switchmate magnetically mounts to existing switches and flips them mechanically for phone automation",
+      "status": "explicit",
+      "evidence_span": "And it mechanically flips the switch up and down"
+    },
+    {
+      "id": "P3",
+      "text": "Avoids electrician installs, multi-bulb chandelier costs, and losing use of the wall switch",
+      "status": "explicit",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    },
+    {
+      "id": "P4",
+      "text": "GTM through pre-orders, manufacturing partner, Amazon/site, then brick-and-mortar",
+      "status": "explicit",
+      "evidence_span": "in 2016, we hope to get into brick-and-mortar retailers"
+    },
+    {
+      "id": "P5",
+      "text": "Large US installed base of light switches including rentals creates automation opportunity",
+      "status": "explicit",
+      "evidence_span": "There's about 120 million homes in the United States alone, a third of them being rentals and condos"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Snap-on lighting automation",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Setup frustration and switch stock",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail launch path",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get extremely simple smart lighting without painful install",
+      "status": "explicit",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mission to make the smart home simple more broadly",
+      "evidence_span": "on a mission to make the smart home simple"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes smart lighting extremely simple"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why this was the case"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will never compromise on making sure we make products that are extremely simple to use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Anti-template: product mechanism, demand/stock context, and channel plan are separately revisable per transcript. $52B market estimate excluded as market-size framing."
+}

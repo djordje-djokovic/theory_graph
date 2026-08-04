@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-558",
+    "coder_session_id": "session_02",
+    "session_case_index": 17,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A cable-driven robot with automated pulleys prints accurately, installs/dismantles easily, and scales across sizes",
+      "status": "explicit",
+      "evidence_span": "we designed and assembled a cable-driven robot, including an automated pulley system"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary concrete mix is stronger, sets faster, is highly flowable with instant layer bonding, and is environmentally friendly",
+      "status": "explicit",
+      "evidence_span": "this mix is two times stronger than the traditional mixes, has 20 times faster setting time, is highly flowable so it can pass easily through the printer"
+    },
+    {
+      "id": "P3",
+      "text": "Cable free-motion printing plate avoids competitor drawbacks of rail frames and mid-site arm placement",
+      "status": "explicit",
+      "evidence_span": "we took these drawbacks of our competitors and developed the cable robot, where the printing plate can move freely throughout the cables"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term GTM is small/medium projects and custom outdoor products at market prices but faster, then single-story houses",
+      "status": "explicit",
+      "evidence_span": "we started taking small and medium construction projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cable-driven construction printer",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Printable high-performance concrete mix",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "SM projects then houses GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build houses fast, safe, and risk-free—including after disasters destroy cities",
+      "status": "explicit",
+      "evidence_span": "giving families homes where natural disasters and wars destroy whole cities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can be easily installed and dismantled on the work site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It has instant layer bonding, which is critical in 3D printing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can print single-story houses by the end of 2019"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-sentence. Strength/setting/flow/bonding/green metrics folded as process+performance package for the concrete mix (v1.5.1 §4.1.8). Competitor comparisons warrant the cable design rather than separate premises. Market-size and strategic-deal traction excluded. Team bios excluded."
+}

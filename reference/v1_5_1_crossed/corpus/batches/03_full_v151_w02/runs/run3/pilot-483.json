@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-483",
+    "coder_session_id": "session_01",
+    "session_case_index": 15,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Breaches are inevitable, so encryption is needed, but existing cloud DB encryption options trade off usability, query support, or true secrecy",
+      "status": "explicit",
+      "evidence_span": "it's no longer a question of whether a breach will occur, but rather what the cost of this breach will be"
+    },
+    {
+      "id": "P2",
+      "text": "A never-decrypt cloud database keeps data encrypted at rest, in transit, and in memory while still supporting private search and queries without app changes",
+      "status": "explicit",
+      "evidence_span": "the first never decrypt cloud database solution"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is direct financial-services and cloud-native deals plus database providers as channel partners",
+      "status": "explicit",
+      "evidence_span": "working with direct engagements with financial services, medium-sized, cloud-native companies, and also database providers as channel partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud data breach and encryption gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Never-decrypt searchable database",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "FS and channel distribution",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "True security with usable private search/query performance so products can differentiate on security",
+      "status": "explicit",
+      "evidence_span": "help you differentiate your products for your clients based on true security"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer this true security with orders of magnitude higher speeds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "database providers as channel partners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "AES/ORAM/differential privacy and dynamic re-encryption folded into P2 as the enabling mechanism package. Oracle/Microsoft competitor contrast folded into P1 usability-security gap. Fundraising ask and pre-revenue status excluded. Demo bank use case treated as illustration of P2."
+}

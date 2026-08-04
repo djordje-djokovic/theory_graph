@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Public data mirrors the real world and reveals what social platforms cannot",
+      "status": "explicit",
+      "evidence_span": "it's a reflection of the real world, and it reveals things that you won't find by looking at Twitter hashtags or Foursquare check-ins"
+    },
+    {
+      "id": "P2",
+      "text": "Public data is effectively inaccessible, scattered across outdated and incompatible formats",
+      "status": "explicit",
+      "evidence_span": "While this data is public, and while it is out there, it's not really accessible"
+    },
+    {
+      "id": "P3",
+      "text": "No search across all public data is possible today",
+      "status": "explicit",
+      "evidence_span": "Doing something as simple as a search across all of this public data is not even possible"
+    },
+    {
+      "id": "P4",
+      "text": "Siloed data hides the relationships and connections between sources",
+      "status": "explicit",
+      "evidence_span": "because this data is locked away in silos, it's impossible to see the relationships and the connections between these sources of public data"
+    },
+    {
+      "id": "P5",
+      "text": "Enigma is building scalable infrastructure for acquiring, indexing, and searching public data at a 100,000-dataset scale",
+      "status": "explicit",
+      "evidence_span": "we're building a scalable infrastructure for acquiring, indexing, and searching public data"
+    },
+    {
+      "id": "P6",
+      "text": "Users can find, manipulate, and discover data they did not know existed",
+      "status": "explicit",
+      "evidence_span": "really let you find and manipulate the data you're looking for"
+    },
+    {
+      "id": "P7",
+      "text": "The web app and API launch with partner institutions that already work with data",
+      "status": "explicit",
+      "evidence_span": "we're launching our web app and API with partners who really share this vision"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "The value and inaccessibility of public data",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Public-data search infrastructure",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Launch partner ecosystem",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can search, question, and connect the world's public data",
+      "status": "explicit",
+      "evidence_span": "really let you find and manipulate the data you're looking for"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Expose a hidden world and redefine the limits of public knowledge",
+      "evidence_span": "really exposing this world that's just been hidden for way too long"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "because this data is locked away in silos, it's impossible to see the relationships"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What public data needs is an infrastructure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find and manipulate the data you're looking for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they're showing us how they're leveraging it in their work and in their thinking"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "100,000-dataset count kept inside the infrastructure premise as scale detail; browser plugin folded into the same discovery capability (v1.3.2 4.1(5)); NYT's strategic-investor status not coded as financing. Singleton D3: partner adoption is an independently revisable go-to-market condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-919",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

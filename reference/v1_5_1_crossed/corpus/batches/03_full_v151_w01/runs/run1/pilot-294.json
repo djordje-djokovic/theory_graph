@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:16:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "PVA in products like laundry pods breaks down into microplastics that re-enter drinking water and food",
+      "status": "explicit",
+      "evidence_span": "these parts will break down into microplastics, flow into the ocean"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary technology upcycles agricultural wastes into biobased polymer resins processable on existing plastic manufacturing equipment",
+      "status": "explicit",
+      "evidence_span": "We upcycle a variety of agriculture waste, ranging from dairy waste to beer waste"
+    },
+    {
+      "id": "P3",
+      "text": "Partners can buy resins and make final products on existing machines, enabling easy adoption and scale",
+      "status": "explicit",
+      "evidence_span": "our partners will purchase our resins, make it into the final product using existing manufacturing machines, very easy for them"
+    },
+    {
+      "id": "P4",
+      "text": "A bacteria-based process like brewing converts inedible biomass (and even plastic waste) into modifiable polymer",
+      "status": "explicit",
+      "evidence_span": "The process is very much like brewing beer, in which we create bacteria that can intake different type of inedible biomass waste"
+    },
+    {
+      "id": "P5",
+      "text": "The biobased material matches PVA-like mechanical properties while using less energy/CO2 and eventually costing 10–30% less at commercial scale",
+      "status": "explicit",
+      "evidence_span": "the mechanical property of our material has a bit similar quality as PVA"
+    },
+    {
+      "id": "P6",
+      "text": "CPG and packaging partners (e.g., Unilever, Monosol) and JDAs provide the route to commercialize laundry-pod and related applications",
+      "status": "explicit",
+      "evidence_span": "creating the world's first 100% bio-based laundry pod made from beer waste"
+    },
+    {
+      "id": "P7",
+      "text": "Initial applications face lighter FDA barriers and higher-paying customers willing to pay a premium versus food-tech routes",
+      "status": "explicit",
+      "evidence_span": "There's no grass FDA regulation for our initial applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "PVA microplastic problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Ag-waste biopolymer process",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner GTM and lighter regulation",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A biobased polymer replacement for PVA that removes microplastics from everyday products",
+      "status": "explicit",
+      "evidence_span": "the world's first and only solution to replace PVA with bulb-based polymer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large-scale agricultural waste upcycling and CO2/water reductions",
+      "evidence_span": "aim to upcycle 200 million kilos of agricultural waste, replacing 100 kilos of PVA"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "which can then be processed into these biobased resins. through existing plastic manufacturing equipment"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's one type of microplastic that we don't talk about a lot, which is called PVA"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn them into biobased polymer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have an easier route to market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Application cascade (pods, construction, textile, cosmetics) folded into resin platform with laundry-pod partnership as GTM. Mechanical/CO2/cost package folded into P5 (rule 8). Revenue projections, awards, and Series A ask excluded. Unilever video clip treated as partner evidence for P6."
+}

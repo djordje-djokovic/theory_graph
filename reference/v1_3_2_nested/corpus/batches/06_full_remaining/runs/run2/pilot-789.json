@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Salon manicures are inconvenient and pricey with limited art; self-painting with non-dominant hands looks poor",
+      "status": "explicit",
+      "evidence_span": "It's also pretty pricey, and there's a limited art selection"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone-controlled NailBot uses HP thermal inkjet to print gallery or camera-roll images onto nails in seconds at 300–1200 DPI",
+      "status": "explicit",
+      "evidence_span": "We are utilizing Hewlett Packard thermal inkjet technology in our early NailBot solutions"
+    },
+    {
+      "id": "P3",
+      "text": "Commercial cartridges will be cosmetic-safe and designs remove with traditional polish remover",
+      "status": "explicit",
+      "evidence_span": "This art is also easily removed with traditional nail polish remover"
+    },
+    {
+      "id": "P4",
+      "text": "Target power users are US tween/teen girls; AR app lets them preview and share designs while hardware ships",
+      "status": "explicit",
+      "evidence_span": "we developed an augmented reality app where they can use the back-facing camera on their smartphone and superimpose images"
+    },
+    {
+      "id": "P5",
+      "text": "Art marketplace with licensed imagery fuels ongoing creative expression and engagement",
+      "status": "explicit",
+      "evidence_span": "we're going to go to licensed art gallery section where we've got some other images"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manicure hassle for girls",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Inkjet NailBot hardware",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Teen AR community and art marketplace",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Instant customized nail art at home for creative self-expression",
+      "status": "explicit",
+      "evidence_span": "We invented the NailBot"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "imagine painting with your non-dominant hands. It's not going to look very good"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that image is going to print directly on Casey's fingernail"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creating our viral social community"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Family/pro roadmap omitted this run as future vision (v1.3.2 #4). Crowdfunding CTA excluded. Girl Scouts partnerships folded into teen GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-789",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:18:00+02:00"
+  }
+}

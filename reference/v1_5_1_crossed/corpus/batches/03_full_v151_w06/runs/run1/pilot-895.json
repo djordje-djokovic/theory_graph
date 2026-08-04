@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-895",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A human personal stylist searches fashion items on the user's behalf and delivers shoppable links to the inbox",
+      "status": "explicit",
+      "evidence_span": "your very own personal stylist, a human being that will be behind the computer searching the item on your behalf"
+    },
+    {
+      "id": "P2",
+      "text": "A fashion social network lets users follow others and shop what they are searching when they have no image to start from",
+      "status": "explicit",
+      "evidence_span": "you can follow people that you like, and you can shop what they're searching and the results"
+    },
+    {
+      "id": "P3",
+      "text": "In-house image recognition plus business rules that override tech failures, with personal styling then community as layered fallbacks so the user is never left down",
+      "status": "explicit",
+      "evidence_span": "If automated fails, you can then counter the personal styling. If the personal styling fails, you can then count on the community"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is affiliate commission of 6% on sales with retailer partners already onboard",
+      "status": "explicit",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "human personal styling search",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "fashion social shopping network",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "tech plus human-community fail-safes",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "affiliate commission model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users always get usable fashion finds because automation, stylists, or community cover each other when one path fails",
+      "status": "explicit",
+      "evidence_span": "our promise is to never let the user down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "check your inbox for links of shoppable items"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you don't know what you're searching for, so you don't have an image to start your search, you can shop what others are searching"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our promise is to never let the user down"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affiliate with commission of 6% on sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Team PhD/credentials excluded (§4.2.2). Future subscription/trends/ads monetization treated as roadmap framing, not separate premises. ASAP verb treated as vision (§4.1.4), not a premise. Image-recognition plus override rules plus human/community layered as one reliability mechanism (§4.1.7). Four-domain partition; not a need/product/money triad."
+}

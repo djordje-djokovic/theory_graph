@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-158",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:41:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security teams cannot easily answer company-wide questions about files, PII exposure, and access locations",
+      "status": "explicit",
+      "evidence_span": "a security team has no easy way to answer any of the questions I ask, especially company-wide"
+    },
+    {
+      "id": "P2",
+      "text": "Users are paid for productivity, so security tools that require human security decisions fail in practice",
+      "status": "explicit",
+      "evidence_span": "people are getting paid for productivity, not security"
+    },
+    {
+      "id": "P3",
+      "text": "Phalanx overlays protection on everyday document actions so unused files stay encrypted without hurting productivity",
+      "status": "explicit",
+      "evidence_span": "If you have 1,000 files on your computer and you're only using one, then you expose that one while 999 files are secured by Phalanx"
+    },
+    {
+      "id": "P4",
+      "text": "Identity-linked encrypted files remain accessible via familiar desktop interactions",
+      "status": "explicit",
+      "evidence_span": "They can double-click files, right-click files, everything that they're used to today"
+    },
+    {
+      "id": "P5",
+      "text": "Visibility map of file access across workspaces supports restriction and feeds existing analytics via API",
+      "status": "explicit",
+      "evidence_span": "SysOs can finally see who's accessing what, where, and how across their workspaces"
+    },
+    {
+      "id": "P6",
+      "text": "Unlike rules-based DLP, identity-based automation deploys in less than a day with no weekly maintenance",
+      "status": "explicit",
+      "evidence_span": "we're deployable in less than a day and requires zero weekly maintenance"
+    },
+    {
+      "id": "P7",
+      "text": "GTM combines scalable per-user mid/large enterprise sales with channel partners for SMBs",
+      "status": "explicit",
+      "evidence_span": "we can also deploy out to SMBs via the channel. So we have channel partners that represent tens of thousands of users under management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Invisible file risk and productivity conflict",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Identity DLP product mechanics",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Dual enterprise-channel distribution",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data loss prevention that secures unused files while humans keep working productively",
+      "status": "explicit",
+      "evidence_span": "cybersecurity that lets humans be human"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "users have to make security decisions, and they pit that against productivity decisions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "999 unused secured files don't impact your productivity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finally have an ability to deploy data loss prevention to their SMB clients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Fresh run: split visibility from encryption access UX; kept deployment speed with identity automation. Risk-reduction metric excluded."
+}

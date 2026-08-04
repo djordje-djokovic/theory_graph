@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Toil from complexity consumes half of developers' weeks and drives attrition costs",
+      "status": "explicit",
+      "evidence_span": "Toil robs 25 million developers of the joy of coding"
+    },
+    {
+      "id": "P2",
+      "text": "Existing monitoring and security stacks bury developers in data outside the editor",
+      "status": "explicit",
+      "evidence_span": "Developers toil in mountains of data, looking for information to fix performance issues, remediate security flaws, and rework broken code"
+    },
+    {
+      "id": "P3",
+      "text": "AppMap puts runtime behavior maps and analysis into the code editor developers already use",
+      "status": "explicit",
+      "evidence_span": "AppMap is in the tool developers love the most, their code editor"
+    },
+    {
+      "id": "P4",
+      "text": "Runtime traces follow execution into data stores and across services for any environment state",
+      "status": "explicit",
+      "evidence_span": "AppMap traces software execution wherever it goes, even into the data stores and across service boundaries"
+    },
+    {
+      "id": "P5",
+      "text": "Built-in analyses find performance and security issues such as N+1 queries and broken access control while coding",
+      "status": "explicit",
+      "evidence_span": "no other tool can find them in the code editor"
+    },
+    {
+      "id": "P6",
+      "text": "Open-source integrations with languages/frameworks and IDE marketplaces with free individual tier drive adoption",
+      "status": "explicit",
+      "evidence_span": "AppMap is open source to integrate with new languages and new communities"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Toil and tool sprawl",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personal observability in the editor",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Open-source and marketplace GTM",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers reduce toil with personal observability that finds issues while they write code",
+      "status": "explicit",
+      "evidence_span": "software developers can see the behavior of their software as they write code"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Shift-left dynamic security and performance analysis disrupt DAST/APM incumbents",
+      "evidence_span": "the only tool to shift dynamic security analysis and performance analysis all the way left into the code editor"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you are lost in toil, you need a map"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal observability, performance, and security analysis to developers when they work"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "from the VS Code and JetBrains marketplaces"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Free tier folded into open-source/marketplace domain. $40B opportunity framing not premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-212",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

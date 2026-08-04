@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-56",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Professionals who bill by the hour leave a large share of mobile call time unbilled because capturing it is time-consuming",
+      "status": "explicit",
+      "evidence_span": "roughly 40% of the time, professionals that build by the hour spend talking on a mobile phone goes unbilled"
+    },
+    {
+      "id": "P2",
+      "text": "A third button on the mobile call screen automatically starts tracking the call for billing",
+      "status": "explicit",
+      "evidence_span": "adding a third button to the mobile call screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unbilled mobile call time",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "one-tap call billing capture",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Attorneys and other professionals capture billable mobile call time they would otherwise lose",
+      "status": "explicit",
+      "evidence_span": "mobile billing solution for attorneys, consultants, life coaches, and anyone that bills for call time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you forget to bill those calls. Over time, this adds up into huge losses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app automatically starts tracking that call for billing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Narrow pitch: downloads/users and seed ask excluded per §4.2. Two singleton domains retained as separately revisable need vs product mechanism."
+}

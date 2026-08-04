@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-53",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mainstream social media exposes kids to predatory algorithms, addictive loops, strangers, compromised data, and inappropriate content, and is not built for them",
+      "status": "explicit",
+      "evidence_span": "social media has some challenges, like predatory algorithms, addictive behavioral loops that reinforce toxic mindsets, strangers and creepers"
+    },
+    {
+      "id": "P2",
+      "text": "Betweened supports kids' digital literacy with kid-friendly creator tools, authentic profiles, and guided socially appropriate communication",
+      "status": "explicit",
+      "evidence_span": "Betweened is a platform that will support kids' digital literacy while providing the entertainment and education, the interaction that they crave"
+    },
+    {
+      "id": "P3",
+      "text": "Parents can turn tools on and off and customize the platform by age, stage, and preferences via a guided curriculum",
+      "status": "explicit",
+      "evidence_span": "we provide parental tools that can be turned on and off, because kids shouldn't have access to all of the tools right off the bat"
+    },
+    {
+      "id": "P4",
+      "text": "Feed content is curated and moderated by developmental experts, includes pause moments, and requires verified parental consent",
+      "status": "explicit",
+      "evidence_span": "it is curated and moderated by experts, by adults trained in developmental psychology and in our editorial guidelines"
+    },
+    {
+      "id": "P5",
+      "text": "Launch starts with curated content to jumpstart engagement and network effects, then adds social features via invitations and brand partnerships",
+      "status": "explicit",
+      "evidence_span": "we're intentionally starting with content for our beta, because this addresses a major pain point for parents, age-appropriate content. But it also ensures that Between is engaging from the start, allowing us to jumpstart network effects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsafe kid social media gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Mindful kid platform and parental controls",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Content-first network growth",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Course-correct social media so kids grow up thoughtful and practiced in how they engage with technology",
+      "status": "explicit",
+      "evidence_span": "Betweened is how we course correct social media for kids around the world, ensuring that the millions of kids, my daughter included, grow up thoughtful and practiced in all that they do"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Deepen emotional bonds by creating together with friends, siblings, and parents",
+      "evidence_span": "creating together not only heightens the learning and the skills that are learned through that, but it also deepens emotional bonds"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Nor should we give kids social media just because the privacy laws say that they're now old enough"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "support kids' digital literacy while providing the entertainment and education"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "jumpstart network effects and data required to build a social graph"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Founder biography and Netflix/PBS credentials excluded unless treated as causal conditions (they are not). Fundraising ask excluded. Creator-tool feature list folded into P2 per §4.1(5). Singleton D1 and D3 retained as separately revisable market-problem and go-to-market modules."
+}

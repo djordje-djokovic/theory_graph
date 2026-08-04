@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-449",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:35:11+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-border remittances suffer lost funds, delays, high cost, and low transparency",
+      "status": "explicit",
+      "evidence_span": "Lost funds, delayed delivery of funds, high cost, low transparency"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile app integrates with employer payroll so employees can send payroll funds cross-border, top up phones, and pay international bills",
+      "status": "explicit",
+      "evidence_span": "integrates with an employer's payroll system and allows employees to send payroll funds cross-border, top up mobile phones, and pay international bills"
+    },
+    {
+      "id": "P3",
+      "text": "Transfers are priced as little as $1 to $4 plus FX, far below typical competitor fees",
+      "status": "explicit",
+      "evidence_span": "We charge as little as $1, where our competitors are charging $5, $15 and up"
+    },
+    {
+      "id": "P4",
+      "text": "Direct central-bank connections and ATM partnerships create instant interoperable payout rails",
+      "status": "explicit",
+      "evidence_span": "We have built a direct connection to the Central Bank of Mexico, which allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "id": "P5",
+      "text": "Combining payroll with a money-service business shifts user behavior and reduces regulatory and customer-acquisition costs",
+      "status": "explicit",
+      "evidence_span": "We combine payroll with money service business, and in so doing, shift user behavior, reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution is through banks, payroll providers, and employers, shifting the payer from employee to employer",
+      "status": "explicit",
+      "evidence_span": "We distribute the products to banks, payroll providers, and direct to employers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Payroll-linked flex pay product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-border payout rails",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Payroll-MSB category and channels",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Remittance pain",
+      "premise_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees get high-transparency, lower-cost cross-border payroll transfers",
+      "status": "explicit",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Recipients keep more of remitted funds as transfer costs fall",
+      "evidence_span": "With each 1% reduction in the cost of international transfers, $6 billion goes into the hands of recipients"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have solved for this problem"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 and D4 retained: rails and problem framing are separately revisable from payroll product and channel model. FDIC-insured wallet detail folded into payroll product. Team bios and financing excluded. Driving cost to zero via VAS treated as vision (§4.1(4))."
+}

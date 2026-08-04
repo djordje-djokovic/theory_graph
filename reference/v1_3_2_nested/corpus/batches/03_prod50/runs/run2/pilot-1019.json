@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conversations fail when people lack timely facts their device could supply",
+      "status": "explicit",
+      "evidence_span": "Wouldn't it be awesome if that device could get me all those facts that I needed and save me in that conversation?"
+    },
+    {
+      "id": "P2",
+      "text": "MindMeld calling app understands speech and auto-pulls related people/place/employer info",
+      "status": "explicit",
+      "evidence_span": "Mindmeld understood what he said and automatically pulled in related information"
+    },
+    {
+      "id": "P3",
+      "text": "Anticipatory engine builds a minute-by-minute conversation model beyond simple voice search",
+      "status": "explicit",
+      "evidence_span": "This goes well beyond simple voice search"
+    },
+    {
+      "id": "P4",
+      "text": "Real-time shared panel for exchanging and archiving surfaced items",
+      "status": "explicit",
+      "evidence_span": "everything's intuitively organized and archived so that you can easily find it later"
+    },
+    {
+      "id": "P5",
+      "text": "Core IP patented; technology intended to power wall panels, glasses assistants, etc.",
+      "status": "explicit",
+      "evidence_span": "whether it's the smart panel on your wall that helps you during your business meetings, or the assistant that lives in your glasses"
+    },
+    {
+      "id": "P6",
+      "text": "Ship iPad voice (then video) app and open developer platform",
+      "status": "explicit",
+      "evidence_span": "MindMeld, will be available in the App Store in October as a voice calling app for the iPad"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "MindMeld anticipatory calling product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Platform and distribution roadmap",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Devices anticipate and deliver the information you need during conversations",
+      "status": "explicit",
+      "evidence_span": "better anticipate the information that you will need"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put relevant information right at your fingertips"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay attention continuously and better anticipate the information that you will need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Patents merged with future-app vision as platform module detail.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1019",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:32:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

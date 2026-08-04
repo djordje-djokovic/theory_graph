@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Single-site recommendations lack timed context, so gift purchases distort later personalization",
+      "status": "explicit",
+      "evidence_span": "Rock Out cannot distinguish between me buying a present for my friend weeks ago to an upcoming concert that I myself am attending"
+    },
+    {
+      "id": "P2",
+      "text": "People have many online and offline identities that silo behavior across sites and apps",
+      "status": "explicit",
+      "evidence_span": "a typical person has at least 10 different identities, online and offline"
+    },
+    {
+      "id": "P3",
+      "text": "Brainify builds a robust dynamic encrypted cross-web profile by mapping and aggregating behaviors across data sources",
+      "status": "explicit",
+      "evidence_span": "we create the most robust, dynamic, and encrypted profile of an individual"
+    },
+    {
+      "id": "P4",
+      "text": "Time-weighted activities let the engine predict current interests and intent as digital DNA",
+      "status": "explicit",
+      "evidence_span": "our engine understands the importance of time"
+    },
+    {
+      "id": "P5",
+      "text": "An API lets any company deliver hyper-relevant experiences across recommendations, mailers, search, and navigation with seamless integration",
+      "status": "explicit",
+      "evidence_span": "Brainify's API allows any company to harness the power of digital DNA and deliver truly hyper-relevant experiences for every user"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed untimed personalization failure",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-silo digital DNA engine",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "API delivery of hyper-relevant experiences",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Truly hyper-relevant personalized digital experiences for each user right now",
+      "status": "explicit",
+      "evidence_span": "deliver a truly hyper-relevant experience for each and every user"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these silos make it nearly impossible for any individual website or app to be able to deliver a personalized experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide our engine the best understanding of your changing interests and intent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage this user's digital DNA to find the best products for this person at this moment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Transcript cuts off mid-CTA ('promo code TCBRAINERS to'). Team credentials and beta integration counts excluded (4.2). Mailers/search/nav uses folded into API premise (4.1(5)). Tier pricing noted as commercial detail inside API offer, not split.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-700",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

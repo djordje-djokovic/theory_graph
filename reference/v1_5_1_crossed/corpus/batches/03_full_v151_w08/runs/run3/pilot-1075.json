@@ -1,0 +1,118 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People default to familiar places because they will not risk new venues without confidence they will like the experience",
+      "status": "explicit",
+      "evidence_span": "we don't want to take the chance and try to go to a new place because we're not sure that we're going to like the experience"
+    },
+    {
+      "id": "P2",
+      "text": "SpotOn personalizes actionable place recommendations from Facebook/Foursquare social data and user ratings/check-ins",
+      "status": "explicit",
+      "evidence_span": "pulling in your existing social network data from Facebook and Foursquare, uses it to build a profile of you to give you personalized and actionable recommendations"
+    },
+    {
+      "id": "P3",
+      "text": "A social layer shows friends' ratings, visits, bookmarks, and who to go with—not anonymous reviewers",
+      "status": "explicit",
+      "evidence_span": "Every single place has a social layer that pulls in reasons why you should go check out a place"
+    },
+    {
+      "id": "P4",
+      "text": "In-app fun rating/contribution of preference data improves recommendations for the user and builds a shared new information layer for everyone",
+      "status": "explicit",
+      "evidence_span": "we make it really easy for our users to give us a lot of their preference data in a really fun and an engaging way"
+    },
+    {
+      "id": "P5",
+      "text": "Filters and search surface personalized top recommendations, bookmarks, friends' loves, and new-vs-visited place views",
+      "status": "explicit",
+      "evidence_span": "with one touch of a button, I can say, only show me places that at least one of my friends have been to"
+    },
+    {
+      "id": "P6",
+      "text": "Pipeline group recommendations and in-app planning turn discovery into shared physical-world experiences",
+      "status": "explicit",
+      "evidence_span": "SpotOn is not about the recommendation. It is about the end experience of being at that bar with your friends"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "new-place risk aversion",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "social personalized recommendations",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "group experience and planning",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easiest way to go to new places with friends and enjoy the end experience together",
+      "status": "explicit",
+      "evidence_span": "the easiest way to go to new places with your friends"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we don't want to take the chance and try to go to a new place"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized and actionable recommendations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the way that friends come together in the physical world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Map/pix/detail UI cascade folded into personalization+social product (§4.1.7). Friend ratings and who-to-go-with are facets of the social layer. Filters/search kept with product as presentation cascade. Group planning kept as separately framed experience module (P6). Singleton D1: risk-aversion problem independently revisable. No monetization module asserted.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1075",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

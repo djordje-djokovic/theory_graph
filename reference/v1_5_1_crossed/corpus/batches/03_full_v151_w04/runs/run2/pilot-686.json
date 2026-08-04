@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-686",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Prior closed-loop neurostimulation was powerful but surgically inaccessible; non-invasive tDCS can make neurostimulation accessible without surgery",
+      "status": "explicit",
+      "evidence_span": "frustrated by the lack of accessibility, and that is due to the surgical nature of this product"
+    },
+    {
+      "id": "P2",
+      "text": "Priming the motor cortex with neurostimulation increases training plasticity, improving athletes' strength and skill gains versus matched controls",
+      "status": "explicit",
+      "evidence_span": "Can you get more out of your training neurologically if you do this first? And it turns out that you can"
+    },
+    {
+      "id": "P3",
+      "text": "Halo Sport is a headphone-form neurostimulation headset with proprietary primer electrodes and app-paired stimulation for workouts, backed by many patents",
+      "status": "explicit",
+      "evidence_span": "the world's first neurostimulation system designed specifically for athletes"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware revenue from headsets plus semi-disposable primers and ear pads, with a free app that can later add paid premium features",
+      "status": "explicit",
+      "evidence_span": "we plan on selling headsets, semi-disposable primers, semi-disposable ear pads"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "accessible non-surgical neurostimulation",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "motor cortex priming and Halo Sport",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "headset and consumables business model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Athletes get greater strength and skill gains from the same training by neuropriming the motor cortex",
+      "status": "explicit",
+      "evidence_span": "the Halo group achieved about 12% gains in leg strength versus a control group"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Future medical applications for stroke-related motor disability",
+      "evidence_span": "Half the people who have had a stroke, suffer from some sort of motor disability, and we can help these people with neurostimulation"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can we make neurostimulation more accessible? Can we do this in a way that didn't require surgery?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You would pair this neuropriming technology with your workout"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Halo is a hardware company and we plan on selling headsets"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Strength/skill study results treated as performance of motor-cortex priming (v1.5.1 §4.1.8). Patents folded into Halo Sport product premise. Founder credentials and partner logos excluded. Stroke use-case recorded as secondary value / future path, not a separate premise. Singleton D1/D3 retained."
+}

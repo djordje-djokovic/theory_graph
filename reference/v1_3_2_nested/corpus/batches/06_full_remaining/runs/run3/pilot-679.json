@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents need a smarter alternative to manual phone scanning because they want kids to socialize independently without hours of scrolling",
+      "status": "explicit",
+      "evidence_span": "I want my son to feel like he can socialize independently of me"
+    },
+    {
+      "id": "P2",
+      "text": "Bark continuously monitors connected social accounts with ML to flag issues and text parents only potential problems plus recommended actions",
+      "status": "explicit",
+      "evidence_span": "Bark is continuously monitoring the connected accounts in the background"
+    },
+    {
+      "id": "P3",
+      "text": "Sold at $9/month per family unlimited, distributed via school and nonprofit affiliates that earn fundraising revenue",
+      "status": "explicit",
+      "evidence_span": "BARC is just $9 per month per family, unlimited children, unlimited connected accounts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent monitoring need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Background ML monitoring product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Family pricing and affiliates",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep children safe online with privacy and family trust",
+      "status": "explicit",
+      "evidence_span": "keep children safe online while allowing them privacy and helping their families build trust"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parents need a smarter solution to help keep their children safe online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If there is an issue detected, you'll receive a text message"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offering their families value, and keeping their student population safe online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Tighter atomicity: detection features, privacy constraint, and psychologist recommendations folded into one product premise. Need/product/money triad justified by separate revisability of affiliate pricing vs monitoring tech vs parent-friction assumption.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-679",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:56:00+02:00"
+  }
+}

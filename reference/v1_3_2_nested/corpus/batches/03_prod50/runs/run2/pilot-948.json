@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Scientists like Robert need millions of compute hours weekly across industries",
+      "status": "explicit",
+      "evidence_span": "in a single work week, they have to perform about 8 million hours of compute"
+    },
+    {
+      "id": "P2",
+      "text": "Today that requires months of tooling to coordinate many cloud instances",
+      "status": "explicit",
+      "evidence_span": "spend months deploying software and writing tools and technologies to make hundreds or thousands of cloud instances work together"
+    },
+    {
+      "id": "P3",
+      "text": "One sandbox plus auto-distribution replaces months with minutes",
+      "status": "explicit",
+      "evidence_span": "you can do it the CPU usage way, and you'll be up and running in just a matter of minutes"
+    },
+    {
+      "id": "P4",
+      "text": "API builder maps CLI args to a firehose submit API for tasks",
+      "status": "explicit",
+      "evidence_span": "launch our CPU usage API builder"
+    },
+    {
+      "id": "P5",
+      "text": "Demonstrated by distributing Blender across 1,000 cloud instances",
+      "status": "explicit",
+      "evidence_span": "distribute that across 1,000 instances in the cloud, building a graphic render farm"
+    },
+    {
+      "id": "P6",
+      "text": "Platform targets large HPC/HTC spend already moving to cloud and PaaS growth",
+      "status": "explicit",
+      "evidence_span": "platform as a service is one of the fastest-growing sectors of the cloud"
+    },
+    {
+      "id": "P7",
+      "text": "Expand from AWS to Azure, Google, then private enterprise cloud",
+      "status": "explicit",
+      "evidence_span": "After that we're going to tackle the private cloud where there's a massive opportunity for platforms to change the way the enterprises compute"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Minutes-not-months HPC platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Market and multi-cloud expansion",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Disrupt cloud HPC/HTC by making scaled distribution simple",
+      "status": "explicit",
+      "evidence_span": "we're disrupting the massive industry of high-performance and high-throughput computing in the cloud"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in a matter of minutes, not months"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's the market that's up for grabs with us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo scale kept as capability illustration of distribution mechanism.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

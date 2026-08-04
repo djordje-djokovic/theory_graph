@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-586",
+    "coder_session_id": "session_01",
+    "session_case_index": 3,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A few-second test with unlimited profiles plus a dashboard tracks player health",
+      "status": "explicit",
+      "evidence_span": "It comes with a complete dashboard and data management system so you keep better track of your player's health"
+    },
+    {
+      "id": "P2",
+      "text": "System implementation is as rapid as the test, with schools, a university, a hospital, and a major league baseball partner already onboard",
+      "status": "explicit",
+      "evidence_span": "implementation of our system is bound to be as rapid as the test itself"
+    },
+    {
+      "id": "P3",
+      "text": "IP covers diagnostics from motor neural disease and infant autism detection to drugs and intoxication on a path to automated mobile healthcare",
+      "status": "explicit",
+      "evidence_span": "Our IP covers a breadth of diagnostic services ranging from motor neural diseases and detection of autism at infancy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "rapid player-health testing dashboard",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "rapid institutional rollout partners",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "broad diagnostic IP roadmap",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A total automated mobile healthcare platform (medically mobile)",
+      "status": "explicit",
+      "evidence_span": "one step closer to a total automated mobile health care platform"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's so much information to be gained from just a few second tests"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we begin testing our methodology on high-performance athletes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Medically mobile, that's our mission"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-pitch and is thin. Diagnostic service list treated as one IP/platform roadmap premise (same-mechanism applications). Partner names kept as evidence of rapid-implementation condition, not traction metrics. Three singleton domains retained as separately revisable product, rollout, and IP-scope modules given sparse text."
+}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-746",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Field professionals doing site investigation still rely on pen-and-paper notes and sketches, then recreate everything on desktop—doing the work two or three times",
+      "status": "explicit",
+      "evidence_span": "he's doing the same thing two or even three times, once or twice on paper and again on the computer"
+    },
+    {
+      "id": "P2",
+      "text": "ArcSight converts freehand iPad sketches into precise geometry in real time with live dimensions, including complex line/arc combinations and tangency prediction",
+      "status": "explicit",
+      "evidence_span": "ArcSight converts his freehand input into perfect, precise geometry"
+    },
+    {
+      "id": "P3",
+      "text": "Users can load blueprints, sketch and measure distances and angles on them, and insert photos at specific locations with sketch/measure on photos",
+      "status": "explicit",
+      "evidence_span": "Chuck can also use ArcSight to load a blueprint. And he can sketch and measure on top of it"
+    },
+    {
+      "id": "P4",
+      "text": "A single digital file exports to desktop design software, eliminating re-entry from scratch",
+      "status": "explicit",
+      "evidence_span": "he only has one digital file, which he can export to other desktop design software"
+    },
+    {
+      "id": "P5",
+      "text": "ArcSight Basic launches free on the App Store; Pro will add advanced features, cloud collaboration and sharing",
+      "status": "explicit",
+      "evidence_span": "launching ArcSight Basic at App Store. It will be a totally free download"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "pen-paper field recreation waste",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "real-time field capture and export",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "free Basic and Pro cloud path",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Field professionals collect organized site data once and skip recreating drawings on the desktop",
+      "status": "explicit",
+      "evidence_span": "This totally eliminates the need to recreate everything from scratch"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all these professionals have been doing site investigation the same way, with pen and paper"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminates the need to recreate everything from scratch. That is a huge time saver"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "totally free download, and it will have everything you just saw today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Blueprint overlay, photo pin, and measure tools treated as distinct capture jobs from freehand geometry conversion (P2 vs P3) under capability split. $200B industry framing is market context folded into pain, not a separate premise. Founder years of experience excluded."
+}

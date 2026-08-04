@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1059",
+    "coder_session_id": "session_05",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CRM fails for pipeline management because sales reps do not enter or keep current data, leaving managers without transparency",
+      "status": "explicit",
+      "evidence_span": "Sales reps don't comply with the corporate policy to put the data in the application"
+    },
+    {
+      "id": "P2",
+      "text": "Fortuit's plugin automatically captures unstructured emails, activities, IMs, and contacts and combines them with the pipeline without IT involvement",
+      "status": "explicit",
+      "evidence_span": "taking all of the unstructured data, all of my emails, activities, IMs, contacts"
+    },
+    {
+      "id": "P3",
+      "text": "A predictive model of how each rep sells forecasts deal success/failure and flags at-risk deals with reasons such as insufficient legal engagement",
+      "status": "explicit",
+      "evidence_span": "build a predictive model about the way I sell that tells me whether I'm gonna succeed or whether I'm gonna fail on certain deals"
+    },
+    {
+      "id": "P4",
+      "text": "Timeline views of all buyer and seller communications let reps triage why deals slip and show managers they are in control",
+      "status": "explicit",
+      "evidence_span": "This is the view of everything going on around this particular sales opportunity"
+    },
+    {
+      "id": "P5",
+      "text": "The engine correctly classifies deals with high accuracy months in advance",
+      "status": "explicit",
+      "evidence_span": "89% correctly classified in terms of the deals three months in advance"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CRM data compliance failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automatic capture and predictive pipe",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Answer whether you will make the quarter by knowing which deals will close and why",
+      "status": "explicit",
+      "evidence_span": "will I make my quarter?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Management gains transparency and control over front-office sales operations",
+      "evidence_span": "the lack of transparency into front office operations, particularly sales"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's garbage in, neatly packaged garbage out"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "go all the way from, you know, I've got a problem with my pipeline, I'm not going to meet my quarter, to know exactly why"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-sentence (truncated). Social/cloud hierarchy framing folded into CRM transparency problem. Capture, prediction, timeline triage, and 89% accuracy treated as one Fortuit engine package with quantitative performance detail (§4.1.8). Free beta availability is distribution detail folded into product availability, not financing. Repair tools mentioned but deferred—not coded."
+}

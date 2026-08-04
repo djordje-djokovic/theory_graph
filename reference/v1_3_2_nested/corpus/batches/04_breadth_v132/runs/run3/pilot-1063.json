@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile invoicing was not being properly addressed by existing invoice solutions",
+      "status": "explicit",
+      "evidence_span": "basically felt that the mobile aspect of it was not being properly addressed"
+    },
+    {
+      "id": "P2",
+      "text": "A cloud-powered tool manages the entire business from one consistent mobile interface",
+      "status": "explicit",
+      "evidence_span": "a fully integrated cloud-powered business management tool with a consistent user interface on all mobile operating systems"
+    },
+    {
+      "id": "P3",
+      "text": "Launch integrations cover QuickBooks, QuickBooks Online, and Xero, with further B2B platforms reaching about 300,000 companies",
+      "status": "explicit",
+      "evidence_span": "our integrations with Soho OS, Xero, and TradeShift will reach about 300,000 companies"
+    },
+    {
+      "id": "P4",
+      "text": "A lack of documentation in mobile invoicing is answered with picture, audio, and geotag attachments",
+      "status": "explicit",
+      "evidence_span": "a lack of documentation, not just in normal invoicing, but in mobile invoicing"
+    },
+    {
+      "id": "P5",
+      "text": "Saved invoices sync instantly to the cloud, archive, and write through to connected platforms",
+      "status": "explicit",
+      "evidence_span": "When you save this, it instantly jumps to our cloud, archives all the data, and if it's connected to another platform, it will write it"
+    },
+    {
+      "id": "P6",
+      "text": "The invoice URL comes back to the device immediately and can be emailed to the customer",
+      "status": "explicit",
+      "evidence_span": "It's going to create and send a URL back to the device. And that URL can be viewed immediately"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium pricing gates storage, payments, and platform attach behind $7 and $10 monthly tiers",
+      "status": "explicit",
+      "evidence_span": "To activate the data storage and enable payment, we ask $7 a month per user. And to to attach to accounting or to another B2B platform, it's $10"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Undocumented, unaddressed mobile invoicing",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cloud invoicing with instant shareable URLs",
+      "premise_ids": [
+        "P2",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Platform integrations and freemium tiers",
+      "premise_ids": [
+        "P3",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easier management of businesses on the go for businesses of all sizes",
+      "status": "explicit",
+      "evidence_span": "develop an easier way to manage businesses on the go for businesses of all sizes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Documented invoices get approved or paid faster",
+      "evidence_span": "cause the invoice to be either approved or paid faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not being properly addressed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely manage your entire business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reach about 300,000 companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Run 3 variation on the current Invoice ASAP transcript: merges the media-attachment feature into the documentation problem domain (P4), keeps integrations and pricing in one business-model domain, and drops the enterprise-OMS premise as roadmap-leaning. Transcript truncated mid-sentence ('That's invoice').",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1063",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:18:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

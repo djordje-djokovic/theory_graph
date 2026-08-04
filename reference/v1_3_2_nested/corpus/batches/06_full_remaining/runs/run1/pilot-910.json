@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-910",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A marketplace lets designers sell professional-level 3D printable files instead of giving them away",
+      "status": "explicit",
+      "evidence_span": "marketplace where designers can sell professional level 3D printable files rather than just giving them away"
+    },
+    {
+      "id": "P2",
+      "text": "Buyers can purchase, download, and manufacture digitized objects at home",
+      "status": "explicit",
+      "evidence_span": "digitized objects that you can purchase, download, and manufacture right from the comfort of your home"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in customization and a network of print shops serve buyers without their own 3D printers",
+      "status": "explicit",
+      "evidence_span": "with our 1,000 3D print shops in our network, you can order something from across the world and literally pick it up from across the street"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from design sales and print profits while printer competition lowers prices",
+      "status": "explicit",
+      "evidence_span": "we generate revenue from the design and profit from the sale of print"
+    },
+    {
+      "id": "P5",
+      "text": "Designers can open a store quickly and earn passive income from their creations",
+      "status": "explicit",
+      "evidence_span": "a designer can open a store on 3DLT and start selling their creations"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "3D design marketplace",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "Print network and customization",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Design and print monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Choose when, where, and how the products you buy are manufactured via 3D printable designs",
+      "status": "explicit",
+      "evidence_span": "We give you the power to choose when, where, and how the products you buy are manufactured"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Designers turn passion into passive income",
+      "evidence_span": "turn their passion into passive income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase, download, and manufacture right from the comfort of your home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "1,000 3D print shops in our network"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lower pricing for you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Vision claims ('change the way you buy everything', 'final frontier', future demand flip) not coded as premises (§4.1(4)); primary value captures the manufacturing-choice criterion. Catalog examples and size customization folded into marketplace/print premises (§4.1(5)). Free-credit promotion and market-size framing excluded. Singletons D2/D3 justified: fulfillment network and take-rate model are separately revisable from the design catalog."
+}

@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-844",
+    "coder_session_id": "session_03",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A fundability score compares a company's data to past successful and unsuccessful capital raises and suggests improvements",
+      "status": "explicit",
+      "evidence_span": "This is a score that looks at a company's data and compares it with the data of companies that have successfully and unsuccessfully raised capital in the past"
+    },
+    {
+      "id": "P2",
+      "text": "The score is built from a large private-offering dataset combining Australian ASSOB data with other U.S. and global databases",
+      "status": "explicit",
+      "evidence_span": "we took the largest data set of small private offerings in the world, which is the Australian Small Scale Offering Board's data set, and we layered in data from other US and global databases"
+    },
+    {
+      "id": "P3",
+      "text": "Signup is free; platform deals pay a 2% success fee via broker-dealer, with optional higher full-service banking fees",
+      "status": "explicit",
+      "evidence_span": "For investors or issuers to sign up on the site, it's free. For any deals that transact on the platform, we take a 2% success fee"
+    },
+    {
+      "id": "P4",
+      "text": "Global deal inventory and investor participation come through partnerships with platforms, brokers, and significant investors",
+      "status": "explicit",
+      "evidence_span": "We've made partnerships with global platforms, deal sourcers, and brokers to bring in deals from multiple countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fundability score and data",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "success-fee capital marketplace",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies improve fundability and connect with investors to raise private capital",
+      "status": "inferred",
+      "evidence_span": "provides the CEO information about what they can do to improve that score"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it'll tell you the ways that you can actually improve your fundability as a company"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They're looking for companies to invest in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript starts mid-pitch on fundability score and ends mid-sentence on JOBS Act market size (truncated=true). Listing volume and named investors treated as traction/context; partnerships kept as marketplace supply condition. Team/quant credentials excluded. Two-domain partition: scoring product vs capital marketplace economics."
+}

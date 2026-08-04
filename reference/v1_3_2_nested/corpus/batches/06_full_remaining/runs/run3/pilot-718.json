@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Password and plastic-ID authentication is inadequate",
+      "status": "explicit",
+      "evidence_span": "you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "Implicit auth uses biometric and behavioral digital fingerprints across devices",
+      "status": "explicit",
+      "evidence_span": "It's called implicit authentication"
+    },
+    {
+      "id": "P3",
+      "text": "Over 100 ML attributes including walking and typing distinguish the rightful user",
+      "status": "explicit",
+      "evidence_span": "we can actually distinguish between my walking and Kurt's walking just from the phone in our pocket"
+    },
+    {
+      "id": "P4",
+      "text": "Works for online auth, fraud reduction, ATO prevention, and offline IoT sensor contexts",
+      "status": "explicit",
+      "evidence_span": "we see this extending for offline use cases as well, for example, with IoT devices"
+    },
+    {
+      "id": "P5",
+      "text": "Top financial and technology partners are evaluating and deploying the technology",
+      "status": "explicit",
+      "evidence_span": "we're working with some of the top financial services and technology companies to evaluate and deploy Unify ID"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken authentication norms",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Implicit behavioral authentication system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise partner deployment",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Be yourself to authenticate online and offline",
+      "status": "explicit",
+      "evidence_span": "the best way to authenticate yourself is to be yourself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fix authentication forever"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If the signals match, you're in"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "problems we're solving for them immediately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "IoT kept inside applications premise as claimed extension of the same passive-sensor mechanism, not a separate product. Cybersecurity/e-commerce dollar markets excluded as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

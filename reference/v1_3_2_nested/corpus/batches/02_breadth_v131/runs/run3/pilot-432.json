@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-432",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bad sleep is common and expensive; trackers alone do not solve it",
+      "status": "explicit",
+      "evidence_span": "Companies such as Sleepio and Fitbit have been trying to solve this problem"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile coaching personalizes plans from wearable/HealthKit data",
+      "status": "explicit",
+      "evidence_span": "we use Apple HealthKit, and then you can choose your device"
+    },
+    {
+      "id": "P3",
+      "text": "Coaching targets circadian rhythm and melatonin onset consistency",
+      "status": "explicit",
+      "evidence_span": "We are focusing on mostly fixing your melatonin onset in the nighttime and working around your natural circadian rhythm"
+    },
+    {
+      "id": "P4",
+      "text": "Employers and life-insurance partners are primary B2B beachheads alongside App Store sales",
+      "status": "explicit",
+      "evidence_span": "with a leading life insurance provider in Finland as well"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sleep problem and tracker gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Circadian coaching product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Employer and insurer GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people sleep better with personalized coaching",
+      "status": "explicit",
+      "evidence_span": "help your employees live a better life and be more proactive in the workplace"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that is not enough"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start sleeping better now"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you're an employer looking to help your employees"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Four-premise coding; weekly lesson UI treated as detail of P2/P3. Founder bios excluded."
+}

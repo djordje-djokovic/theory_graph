@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video creators must soundtrack rapidly growing volumes of YouTube, TV, and film content",
+      "status": "explicit",
+      "evidence_span": "400 hours of video is uploaded to YouTube every single minute, a number that's quadrupled in the past three years. At the same time, 3,000 hours of TV and film is produced every single day. And pretty much all this content needs music"
+    },
+    {
+      "id": "P2",
+      "text": "Stock tracks are time-consuming, costly (~$40), rights-confusing, poorly fit, and overused",
+      "status": "explicit",
+      "evidence_span": "costing around $40 for a three-minute track. The copyright and royalties are really confusing. And it won't fit his video, meaning he has to manually edit it himself. What's more, that same track has been used by thousands of other video creators"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending AI composer generates and produces original music autonomously",
+      "status": "explicit",
+      "evidence_span": "We've spent five years building an artificially intelligent music composer. This is patent-pending software that writes original music completely on its own"
+    },
+    {
+      "id": "P4",
+      "text": "Creators get unlimited unique royalty-free music they can customize instantly at lower cost",
+      "status": "explicit",
+      "evidence_span": "it can create an unlimited amount of unique music in a variety of styles that's completely royalty-free, instantly customizable, and far cheaper than the alternatives"
+    },
+    {
+      "id": "P5",
+      "text": "Retail model: five free tracks per month then about $7 each (~80% cheaper)",
+      "status": "explicit",
+      "evidence_span": "five free tracks every month and then pay around $7 for an additional track. This is about 80% cheaper than what you'd pay elsewhere"
+    },
+    {
+      "id": "P6",
+      "text": "Also license the composer to platforms such as YouTube, Twitch, Instagram, and Vimeo",
+      "status": "explicit",
+      "evidence_span": "license our technology to companies that themselves want to provide music to their users, such as YouTube itself, Twitch, Instagram, Vime, you name it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Stock-music failure for video creators",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI autonomous music composer",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Download fees and platform licensing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cheap, unique, royalty-free AI music tailored to a video's length and style",
+      "status": "explicit",
+      "evidence_span": "If your video is 43 seconds long and you need a song that will be bang on, we'll give you one that's no more, no less"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's a massive pain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "artificially intelligent music composer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "80% cheaper than what you'd pay elsewhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Partition is problem / product / commercial, not a forced desirability-feasibility-viability template; each is separately revisable in the pitch. Beta customer names excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-738",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

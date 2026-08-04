@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1030",
+    "coder_session_id": "session_01",
+    "session_case_index": 7,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Smartphone and cloud robotics move computation off the robot to phones and cloud, making home robots affordable and dynamically upgradable",
+      "status": "explicit",
+      "evidence_span": "smartphone robotics and cloud robotics that takes a computation from the robot into devices you already have, making it much more affordable"
+    },
+    {
+      "id": "P2",
+      "text": "Targeted robots that do a limited set of tasks well can enter homes affordably before later combining into fuller robots",
+      "status": "explicit",
+      "evidence_span": "a set of robots that are much more targeted at limited set of tasks"
+    },
+    {
+      "id": "P3",
+      "text": "Shimmy is a smartphone-powered cloud-connected robotic speaker that listens and choreographs to music in real time",
+      "status": "explicit",
+      "evidence_span": "Shimmy is a robotic speaker dog that doesn't just play the music for you"
+    },
+    {
+      "id": "P4",
+      "text": "Dumb-robot design puts intelligence in the phone app and cloud while the hardware is motors, speakers, and power",
+      "status": "explicit",
+      "evidence_span": "everything that the robot does actually happens on a smartphone app and on the cloud"
+    },
+    {
+      "id": "P5",
+      "text": "Smartphone sensors enable functional behaviors such as face tracking for better sound",
+      "status": "explicit",
+      "evidence_span": "using the camera to track my faces, always pointing towards me and giving me the best sound possible"
+    },
+    {
+      "id": "P6",
+      "text": "Robot can ship at about $199, with early Kickstarter pricing at $149",
+      "status": "explicit",
+      "evidence_span": "we're able to get it to $199"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "smartphone cloud robotics approach",
+      "premise_ids": ["P1", "P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Shimmy music robot product",
+      "premise_ids": ["P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "affordable consumer price",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Engaging, affordable, fun personal robots in every home",
+      "status": "explicit",
+      "evidence_span": "engaging, affordable, and fun to use robots in the home"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it much more affordable, and also automatically and dynamically upgradable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It actually listens to it and enjoys it as much as you do"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're able to get it to $199"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Demo failures and future kitchen/car concepts noted; future apps treated as roadmap vision not premises (§4.1.4). Price and Kickstarter early-adopter discount folded into one commercial premise. truncated=true because pitch cuts off mid multi-shimmy clip."
+}

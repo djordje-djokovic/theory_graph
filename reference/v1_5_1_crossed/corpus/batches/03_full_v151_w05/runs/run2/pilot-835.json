@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-835",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Building camera-connected software is slow and expensive because of local-network issues, fragmented camera SDKs, and laborious per-customer deployment",
+      "status": "explicit",
+      "evidence_span": "local network issues. Cameras, like any local network device, will misbehave"
+    },
+    {
+      "id": "P2",
+      "text": "EverCam exposes a hosted developer web API that handles camera connectivity for end users, works with any internet-connected camera, and makes camera apps as easy to distribute as phone apps",
+      "status": "explicit",
+      "evidence_span": "expose to the software developer a beautiful, modern, hosted web API"
+    },
+    {
+      "id": "P3",
+      "text": "EverCam monetizes with a recurring fee on a per-camera basis",
+      "status": "explicit",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "camera software integration complexity",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "hosted camera developer API",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "per-camera recurring fees",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Software developers can build live-image applications on cameras without wrestling hardware/network complexity, improving customer services",
+      "status": "explicit",
+      "evidence_span": "make these cameras programmable, and thereby to unleash a whole new category of software development based around the live image"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is very, very typical of many camera-related projects"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We try and reduce all of that complexity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Network, fragmentation, and per-customer install pains folded as one camera-dev problem (§4.1.6). Connectivity helper, any-camera guarantee, and app-store ease folded as API platform cascade (§4.1.7). Tunstall 12-month/$1M failure and one-month success treated as evidence, not premises. Android/iOS analogy coded as value framing. Anti-template: problem, API product, and recurring fee separately revisable."
+}

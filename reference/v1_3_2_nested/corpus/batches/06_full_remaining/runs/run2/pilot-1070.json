@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding liked photos among mass social sharing is the core discovery problem",
+      "status": "explicit",
+      "evidence_span": "The question is, how do you find pictures you like? That's where we come in"
+    },
+    {
+      "id": "P2",
+      "text": "Interest profile from Facebook/Twitter (and more) matched to ingested real-time photo services yields a personal skyline",
+      "status": "explicit",
+      "evidence_span": "Matching your personal interest to that stream of real-time photos means everybody gets his own skyline, hence the company name Skylines"
+    },
+    {
+      "id": "P3",
+      "text": "Stream UI supports ranking, friends-only, location, and event usefulness for live news and festivals",
+      "status": "explicit",
+      "evidence_span": "We found that this is really useful for current events"
+    },
+    {
+      "id": "P4",
+      "text": "Available on web, iPhone, and Android with photo detail, sharing, explore, and back channel",
+      "status": "explicit",
+      "evidence_span": "today we launched the website, the iPhone app, the Android app, and the back channel for events"
+    },
+    {
+      "id": "P5",
+      "text": "Brands target interests (optionally with location/time); widgets expand revenue and reach",
+      "status": "explicit",
+      "evidence_span": "We're also working on a widget for brands and side owners, who can include our picture stream on one topic onto their own website"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Photo discovery need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Interest-based real-time skylines",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Apps, surfaces, and brand ads",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personal real-time photo streams organized around your interests",
+      "status": "explicit",
+      "evidence_span": "everybody gets his own skyline"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find pictures you like"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Matching your personal interest"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "same skylines with the same pictures based on your interest"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Widget evidence may say 'We're also working' not 'They're' — verify against transcript.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1070",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:38:40+02:00"
+  }
+}

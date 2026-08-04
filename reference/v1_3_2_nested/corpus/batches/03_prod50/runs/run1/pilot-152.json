@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Antibiotic overuse causes side effects and antimicrobial resistance, a top global health threat",
+      "status": "explicit",
+      "evidence_span": "taking too many antibiotics can pose a danger to our health because of side effects as well as antimicrobial resistance"
+    },
+    {
+      "id": "P2",
+      "text": "Phages are natural precise agents that kill bad bacteria while leaving good bacteria alone",
+      "status": "explicit",
+      "evidence_span": "they're natural and they're precise. They're like precise assassins that kill the bad bacteria, but leave the good bacteria alone"
+    },
+    {
+      "id": "P3",
+      "text": "Precision phage solutions require skin microbiome testing and large sequencing data because one phage serum only works for matching overgrowth cohorts",
+      "status": "explicit",
+      "evidence_span": "if we were going to bring a precision serum or solution to market, we better have a test"
+    },
+    {
+      "id": "P4",
+      "text": "Four-swab discovery kit with room control plus whole genome sequencing (not 16S) profiles bacteria, viruses, fungi, and mites",
+      "status": "explicit",
+      "evidence_span": "unlike others that use only one swab, we have four swabs in the kit"
+    },
+    {
+      "id": "P5",
+      "text": "Proprietary quantitative algorithm categorizes skin microbiome type and informs personalized recommendations and phage serum",
+      "status": "explicit",
+      "evidence_span": "we use a proprietary unique algorithm to categorize your skin microbiome and we also use a spike to be quantitative"
+    },
+    {
+      "id": "P6",
+      "text": "Eight microbiome types map to eight phage serum formulations produced from large strain biobanks via high-throughput screening and bioreactors",
+      "status": "explicit",
+      "evidence_span": "Parallel has defined eight different skin microbiome types and formulated eight different formulations"
+    },
+    {
+      "id": "P7",
+      "text": "Platform starts in skin (dermatologists are top antibiotic prescribers) and can scale to other human-health areas",
+      "status": "explicit",
+      "evidence_span": "We're starting in skin. Why? Dermatologists are actually the number one prescribers of antibiotics across healthcare"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AMR and phage alternative thesis",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P7"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Skin microbiome testing and sequencing",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Custom phage serum manufacturing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Precision phage-based skin solutions matched to the patient's microbiome to reduce antibiotic dependence",
+      "status": "explicit",
+      "evidence_span": "get people off of Accutane and antibiotics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Broader human-health phage platform beyond skin",
+      "evidence_span": "platform that is applicable to many areas of human health"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Phages are microbes that infect bacteria"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Skin Microbiome Discovery Kit and custom phage serums"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "formulated eight different formulations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript truncated mid-sentence on team/credentials; coded only present content (truncated=true). Patents/waitlist/LOI treated as traction/financing-adjacent, not premises. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-152",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

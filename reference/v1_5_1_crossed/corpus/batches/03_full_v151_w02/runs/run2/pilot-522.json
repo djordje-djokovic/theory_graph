@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-522",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:28:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Biomass cooking causes deadly indoor air pollution affecting Nigerian households",
+      "status": "explicit",
+      "evidence_span": "this causes a lot of indoor air pollution that leads to heart diseases, chronic lung cancer"
+    },
+    {
+      "id": "P2",
+      "text": "Many Nigerian households also lack access to electricity",
+      "status": "explicit",
+      "evidence_span": "20 million Nigerian households live without access to electricity"
+    },
+    {
+      "id": "P3",
+      "text": "Affordable smokeless cookstove cooks much faster and self-generates electricity from excess heat",
+      "status": "explicit",
+      "evidence_span": "a clean cook stove that is affordable. It's smokeless. It cooks five times faster than any traditional stove. And it also self-generates 50 watts of electricity"
+    },
+    {
+      "id": "P4",
+      "text": "Good Life biomass pellets from waste are cheaper, smokeless, and cook faster than charcoal",
+      "status": "explicit",
+      "evidence_span": "this pellet, we process it from waste. agricultural waste, household waste, commercial waste. And it's 80% cheaper than charcoal"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via cooperatives, MFIs, and local cooking-fuel vendors with after-sales support",
+      "status": "explicit",
+      "evidence_span": "We are working with existing cooperative societies, MFIs, and also we are using the local cooking food vendors"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue from product sales plus after-sales support under a guarantee",
+      "status": "explicit",
+      "evidence_span": "We sell our products to these target markets and also we provide after-sales support services"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Indoor pollution and electricity poverty",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "PowerStove and biomass pellets",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Vendor channels and sales model",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clean cooking that protects family health while generating household electricity",
+      "status": "explicit",
+      "evidence_span": "clean cook solution like PowerStove is the solution to health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Households save money versus charcoal and gain electricity for phones and appliances",
+      "evidence_span": "So users save money using our product"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100,000 Nigerians die every year as a result of this act"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are removing indoor air pollution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are giving them a better solution they can sell at a better price margin"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Stove performance package (affordable/smokeless/faster/50W) folded into P3 per boundary 8. Pellet attributes folded into P4 as one fuel product. Traction sales figures and prize ask excluded. Health outcomes of biomass cooking folded into one problem-set (P1)."
+}

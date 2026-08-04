@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-712",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Livestock disease creates large economic and public-health risk that is detected too late",
+      "status": "explicit",
+      "evidence_span": "there's a huge economic risk. Just one single virus in 2014 decimated the pig population"
+    },
+    {
+      "id": "P2",
+      "text": "A software platform combines historic and real-time clinical data with genomics into one standard view for animal health analytics",
+      "status": "explicit",
+      "evidence_span": "we bring in historic and real-time data, and then we combine it into one standard format, and finally combine this clinical information with genomics data"
+    },
+    {
+      "id": "P3",
+      "text": "Customers pay an annual subscription for tools and data, with add-ons for collaborative custom projects",
+      "status": "explicit",
+      "evidence_span": "we charge them an annual subscription fee to access our tools and data"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market rides natural network effects between large livestock and pharmaceutical customer-vendor relationships",
+      "status": "explicit",
+      "evidence_span": "We take advantage of a natural network effect from their customer-vendor relationships"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "late livestock disease detection risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "clinical-genomics animal health platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription and livestock-pharma GTM",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Predict, prevent, and precisely manage animal disease for a safer, more sustainable food supply",
+      "status": "explicit",
+      "evidence_span": "predict, prevent, and precisely manage disease in animals to ensure a safer and more sustainable food supply"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$13 billion in losses can be prevented if we were able to catch them early on"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide a comprehensive view of animal health and disease"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're at some of the largest livestock and pharmaceutical companies in the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three software pillars (diagnose, treat, pharma targets), resistance map, and gene-target demos folded as applications/feature cascade of one clinical-genomics platform (§4.1.2/§4.1.7). Precision husbandry treated as vision/roadmap framing, not a premise (§4.1.4). Citizen-science ask excluded as appeal."
+}

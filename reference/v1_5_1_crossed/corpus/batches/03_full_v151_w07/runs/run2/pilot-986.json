@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parking is a major urban problem that causes large shares of traffic as drivers circle for spots",
+      "status": "explicit",
+      "evidence_span": "parking is a big problem"
+    },
+    {
+      "id": "P2",
+      "text": "Curb Karma is a smartphone social network where leavers publish spots and seekers reserve them with map, messaging, navigation, and ratings",
+      "status": "explicit",
+      "evidence_span": "you can participate in a social network for parking"
+    },
+    {
+      "id": "P3",
+      "text": "Karma Credits mediate the exchange: seekers pay two credits, leavers earn one, and Curb Karma keeps one dollar of value",
+      "status": "explicit",
+      "evidence_span": "Marissa needs two Karma Credits to reserve a spot"
+    },
+    {
+      "id": "P4",
+      "text": "The business targets high-demand urban spot exchanges and plans multi-city expansion of that take-rate model",
+      "status": "explicit",
+      "evidence_span": "only about 50,000 of those are considered in high demand"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "urban parking scarcity and circling",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "spot-sharing social app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Karma Credit monetization and city market",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drivers find and reserve parking where and when they need it",
+      "status": "explicit",
+      "evidence_span": "Curb Karma finds you parking where and when you need it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Marissa can find and reserve Heather's parking spot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everybody wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Publish/reserve/map/message/nav/rate demo folded as one parking social-network cascade (§4.1.7). Karma Credit take-rate kept as commercial mechanism; high-demand exchange math as market premise for that model. Free credit promo treated as launch packaging. Anti-template: problem, app matching, and credit economics separately revisable."
+}

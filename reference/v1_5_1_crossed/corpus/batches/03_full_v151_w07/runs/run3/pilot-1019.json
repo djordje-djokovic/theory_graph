@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1019",
+    "coder_session_id": "session_01",
+    "session_case_index": 13,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:18:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Future devices will continuously listen to conversations and anticipate needed information",
+      "status": "explicit",
+      "evidence_span": "the computing devices all around us will pay attention continuously"
+    },
+    {
+      "id": "P2",
+      "text": "MindMeld is a voice/video calling app that understands speech to surface relevant facts during conversations",
+      "status": "explicit",
+      "evidence_span": "the first voice and video calling app that actually understands what you say in order to put relevant information right at your fingertips"
+    },
+    {
+      "id": "P3",
+      "text": "Anticipatory computing engine models the last ~10 minutes of conversation to proactively find web information for the next seconds",
+      "status": "explicit",
+      "evidence_span": "analyzes the last 10 minutes of your conversation to anticipate what you might need in the next 10 seconds"
+    },
+    {
+      "id": "P4",
+      "text": "In-call sharing panel is a real-time shared workspace that archives items for later",
+      "status": "explicit",
+      "evidence_span": "sharing panel in this application is a shared workspace where everything that everyone sees is automatically done in real time"
+    },
+    {
+      "id": "P5",
+      "text": "Nine patents cover the core anticipatory computing IP",
+      "status": "explicit",
+      "evidence_span": "There's nine patents that cover the core IP"
+    },
+    {
+      "id": "P6",
+      "text": "Developer platform will let third parties build new intelligent apps on the engine",
+      "status": "explicit",
+      "evidence_span": "we're opening up our developer platform early next year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "anticipatory conversation engine",
+      "premise_ids": ["P1", "P2", "P3", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "shared in-call workspace",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "third-party developer platform",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make conversations better by putting needed facts at your fingertips during the call",
+      "status": "explicit",
+      "evidence_span": "fundamentally improve how we have conversations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I've got all the facts at my fingertips right now because of MindMeld"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Brett was able to see it instantly on his iPad"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "developers and third parties can build new applications that take advantage of this powerful technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Prior company/PhD bio excluded. Patents folded into engine domain as IP on the mechanism (§4.1.1). Developer platform split per §4.1.5 worked example because speaker presents it as separately enabling third-party apps. Smart wall/glasses vision not coded as premises."
+}

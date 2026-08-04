@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-761",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile fragmentation forces costly device fleets and testers; cloud log-based testing without the device in hand is slow and painful",
+      "status": "explicit",
+      "evidence_span": "mobile fragmentation is now really ruining for mobile app developers"
+    },
+    {
+      "id": "P2",
+      "text": "NativeTap streams real remote physical devices for lifelike multi-touch interaction and USB-like debugging as if the device were on the desk",
+      "status": "explicit",
+      "evidence_span": "access and interact with any real mobile device just with one tap"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending low-latency I/O transfer, dense custom servers, demand-driven inventory/queuing, and cooling racks enable scalable device farms",
+      "status": "explicit",
+      "evidence_span": "patent pending input-output transfer technology that allows lifelike interaction with nearly zero latency"
+    },
+    {
+      "id": "P4",
+      "text": "Planned capabilities include replicating touch events across cloud devices and connecting IoT peripherals to remote device fleets",
+      "status": "explicit",
+      "evidence_span": "you can test on one device and all of those touch events will be replicated on all of the devices in the cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile device testing fragmentation",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Remote real-device interaction platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Multi-device replication and IoT extensions",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Saving money and time to build better apps with broader device reach",
+      "status": "explicit",
+      "evidence_span": "You save money. You can access any device anytime you want for a fraction of cost"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spending one third of your total development budget just on testing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interact with them as if they were on your desk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Your team works much more efficiently"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Tablet/mobile/desktop clients and debugger demo folded into remote-device interaction mechanism (§4.1.7). Server density/racks/queuing kept as infrastructure conditions of that platform. Market-size figures treated as context. Singleton D1/D3 retained: fragmentation problem vs separately framed replication/IoT roadmap modules. Anti-template: problem, core remote-device stack, and extension roadmap are separately revisable."
+}

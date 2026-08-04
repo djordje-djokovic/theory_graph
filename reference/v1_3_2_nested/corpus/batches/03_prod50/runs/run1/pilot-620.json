@@ -1,0 +1,118 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Charging pads force contact, block phone use, and charge only one device per pad section",
+      "status": "explicit",
+      "evidence_span": "You can't use your phone while it's charging. It's kind of ugly. And worst of all, each section of pad can only charge one device at a time"
+    },
+    {
+      "id": "P2",
+      "text": "Magnetic-field bending math enables truly contactless wireless power",
+      "status": "explicit",
+      "evidence_span": "an historic mathematical proof that unlocked the solution to wireless power by the bending of magnetic fields"
+    },
+    {
+      "id": "P3",
+      "text": "Pi charges multiple devices simultaneously at different angles while users keep using them",
+      "status": "explicit",
+      "evidence_span": "We've got five devices now charging simultaneously at different angles from just one pie"
+    },
+    {
+      "id": "P4",
+      "text": "Cases bridge legacy phones and tablets lacking magnetic receivers; Qi phones will not need cases",
+      "status": "explicit",
+      "evidence_span": "We built these cases to enable people with popular legacy devices to be able to charge, as well as to charge your tablets, which don't have magnetic receivers"
+    },
+    {
+      "id": "P5",
+      "text": "Safe magnetic charging is FCC-compliant unlike microwave/ultrasound/laser approaches",
+      "status": "explicit",
+      "evidence_span": "we built Pi around a safe magnetic charging standard"
+    },
+    {
+      "id": "P6",
+      "text": "Patented platform powers multiple devices at any angle, overcoming parallel-only magnetic limits",
+      "status": "explicit",
+      "evidence_span": "our patented platform can power multiple devices at any angle. It's safe, it's affordable, and it's FCC compliant"
+    },
+    {
+      "id": "P7",
+      "text": "Business model sells Pi to consumers and opens the platform to consumer-electronics OEMs",
+      "status": "explicit",
+      "evidence_span": "First, we will sell Pi directly to consumers. We have over 50% gross margins and anticipate a very high lifetime value per customer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contactless multi-device charging tech",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer and OEM go-to-market",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Truly wireless charging that frees users from pads and tangled wires",
+      "status": "explicit",
+      "evidence_span": "So how do we get truly wireless charging?"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "thanks to our incredible team and Leeshan's breakthrough, our patented platform can power multiple devices at any angle"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "introducing Pi, the world's first contactless wireless charging device"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will sell Pi directly to consumers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Price/margins kept inside commercial premise P7 with OEM channel (v1.3.1 §4.1.3). Reservation counts and discount ask excluded as traction/promo.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

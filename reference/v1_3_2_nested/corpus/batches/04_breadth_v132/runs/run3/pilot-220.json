@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-220",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brands and retailers need authentic video content — reviews, unboxing, how-to, branded videos — to drive revenue and customer acquisition",
+      "status": "explicit",
+      "evidence_span": "leveraging authentic video content such as reviews, unboxing videos, how-to videos, and branded videos for insights and commerce"
+    },
+    {
+      "id": "P2",
+      "text": "Trained machines match millions of YouTube videos to product catalogs",
+      "status": "explicit",
+      "evidence_span": "Vyral is able to match millions of videos on YouTube to product catalogs"
+    },
+    {
+      "id": "P3",
+      "text": "In-video search covers audio, text, and images in 11+ dimensions and takes shoppers to the exact clip portions",
+      "status": "explicit",
+      "evidence_span": "we can actually take you inside the video and we can actually show you portions of clips of video featuring leather seats"
+    },
+    {
+      "id": "P4",
+      "text": "The video search bar, API, and commerce tools are distributed where merchants already are, through TikTok integration and a Shopify app",
+      "status": "explicit",
+      "evidence_span": "we offer a video search bar, API tools, and commerce tools to make all your videos shoppable and searchable"
+    },
+    {
+      "id": "P5",
+      "text": "Shoppable, searchable video measurably lifts merchant page engagement and conversion",
+      "status": "explicit",
+      "evidence_span": "Our ROI is very strong. We increased page engagement 2x to 5x, and we increased conversion by up to 38%"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Video-commerce demand and ROI",
+      "premise_ids": ["P1", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "In-video search technology",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Merchant tools and platform distribution",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Brands and retailers increase revenue and customer acquisition through video commerce",
+      "status": "explicit",
+      "evidence_span": "Vyral helps brands and retailers increase revenue and customer acquisition"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase revenue and customer acquisition by leveraging authentic video content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're increasing the efficacy of making shopping decisions for brands and retailers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all your videos shoppable and searchable for both brands and shoppers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Truncated pitch; only present content coded. The merchant toolset and the platform distribution (TikTok, Shopify) are folded into one commercial-offering premise P4 per v1.3.2 clarification 5: the speaker presents the app integrations as where the same tools are sold, not as separately revisable modules. D3 is the resulting singleton with its own path to value through merchant adoption. P5 codes the continuing ROI mechanism, not the metrics themselves, per 4.2; revenue, seed round, and hiring excluded. No plainly asserted premise-prerequisite in this reading; the 'powered by' statement binds the whole offering to the technology and is captured by domain membership in D2 rather than a link."
+}

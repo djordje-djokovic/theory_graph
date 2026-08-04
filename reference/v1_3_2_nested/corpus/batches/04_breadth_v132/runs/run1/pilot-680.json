@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Radiologists are overwhelmed: scan volume is up over 500% while misreads carry major health consequences",
+      "status": "explicit",
+      "evidence_span": "There's been over a 500% increase in the amount of scan volume for radiologists."
+    },
+    {
+      "id": "P2",
+      "text": "Deep-learning software helps radiologists find abnormalities and prioritize the scans they review",
+      "status": "explicit",
+      "evidence_span": "Behold.ai's medical software uses artificial intelligence to help radiologists find abnormalities in medical images."
+    },
+    {
+      "id": "P3",
+      "text": "Computer-recognition technology has matured enough to make this feasible now",
+      "status": "explicit",
+      "evidence_span": "we've seen computer recognition technology become much better"
+    },
+    {
+      "id": "P4",
+      "text": "Vendor partnerships let the software integrate seamlessly into the existing radiologist workflow",
+      "status": "explicit",
+      "evidence_span": "we can seamlessly integrate into the workflow of radiologists"
+    },
+    {
+      "id": "P5",
+      "text": "Sales run through two channels: partnerships and direct sales to hospitals",
+      "status": "explicit",
+      "evidence_span": "The first being the partnerships, and the second being direct sales to hospitals."
+    },
+    {
+      "id": "P6",
+      "text": "Hospital partnerships supply the training images and pilot sites the algorithms need",
+      "status": "explicit",
+      "evidence_span": "Aurora gives us a strong platform to both gather the data to train our algorithms, as well as giving us pilot sites to test out our software."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Radiologist overload",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Deep-learning diagnostic aid",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Clinical integration, channels, and data access",
+      "premise_ids": ["P4", "P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI improves both doctor workflow and patient outcomes in radiology",
+      "status": "explicit",
+      "evidence_span": "helps improve the workflow of doctors, as well as the outcomes of patients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "the ability to train on the plethora of medical images"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Radiologists are simply overwhelmed."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find abnormalities in medical images"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamlessly integrate into the workflow of radiologists"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "FDA phase-one progress treated as regulatory traction and excluded here; the clearance-not-approval remark is noted but not developed by the speaker as an entry condition. Founders' ML/neuroscience background excluded as credentials despite the causal phrasing, judged origin story under 4.2(2). The data-partnership dependency is coded from the explicit 'train on the plethora of medical images' warrant. The mother's misdiagnosis story is motivational framing for the overload problem, not coded separately.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-680",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

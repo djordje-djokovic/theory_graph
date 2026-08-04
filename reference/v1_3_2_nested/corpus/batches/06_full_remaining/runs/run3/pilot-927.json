@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Integrating the house key into the smartphone enables a new access-sharing experience",
+      "status": "explicit",
+      "evidence_span": "Keezy integrates the house key into the smartphone to enable a whole new sharing experience"
+    },
+    {
+      "id": "P2",
+      "text": "Multifamily entry requires controlling both the front door and the apartment door",
+      "status": "explicit",
+      "evidence_span": "you have two doors, the front and the apartment door to pass when you want to enter"
+    },
+    {
+      "id": "P3",
+      "text": "Intercom chip plus apartment lock hardware is plug-and-play and leaves the downstairs door unchanged",
+      "status": "explicit",
+      "evidence_span": "there's no changes at the front door downstairs"
+    },
+    {
+      "id": "P4",
+      "text": "Digital keys can be pre-shared, set temporary, removed anytime, and paired with access monitoring",
+      "status": "explicit",
+      "evidence_span": "you can monitor your doors, who accessed when. And of course, you can share keys with your friends, guests"
+    },
+    {
+      "id": "P5",
+      "text": "Hardware-plus-software package includes brand-partnered lock security",
+      "status": "explicit",
+      "evidence_span": "this consists of hardware and software at no additional cost"
+    },
+    {
+      "id": "P6",
+      "text": "Users retain regular keys or PIN if the phone fails",
+      "status": "explicit",
+      "evidence_span": "you can still use your regular keys or a pin code to enter your apartment in case your battery runs low or your phone gets lost"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smartphone key sharing need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Plug-and-play dual-door package",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Temporary keys and monitoring",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Phone-failure fallback access",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personal always-on digital doorman for remote unlock and guest access",
+      "status": "explicit",
+      "evidence_span": "Keezy is actually a doorman who never sleeps, just like New York"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unlimited keys that always come back for coworking and shared spaces",
+      "evidence_span": "everyone has a key now and there's no more keys to be lost because the key always comes back"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable a whole new sharing experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's plug and play, and it's German engineered"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you're not at home, It opens the door for your guests or friends and keeps unauthorized people outside"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in case your battery runs low or your phone gets lost"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "P1 treated as product thesis condition not pure vision. Indiegogo excluded. Roommate demo illustrates remote unlock, not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-927",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

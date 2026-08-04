@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-697",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:36:31+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Under-$5k digital tools cannot cut hard flat materials well; makers resort to slow hand processes",
+      "status": "explicit",
+      "evidence_span": "If you want to cut something hard and flat, you pretty much have to do it by hand"
+    },
+    {
+      "id": "P2",
+      "text": "Desktop waterjet cutter cuts any material with digital precision, is compact, clean, safe, quiet, and priced under $4,000",
+      "status": "explicit",
+      "evidence_span": "Wazer is the first desktop waterjet cutter"
+    },
+    {
+      "id": "P3",
+      "text": "Technology pressurizes water with abrasive particles to erode material in seconds via ground-up redesign of industrial waterjetting",
+      "status": "explicit",
+      "evidence_span": "we pressurize water. We combine it with abrasive sand-like particles at high velocity"
+    },
+    {
+      "id": "P4",
+      "text": "Diverse makers—jewelers, artisans, homeowners, makerspaces, students—need versatile hard-material cutting",
+      "status": "explicit",
+      "evidence_span": "it's needed by lots of different types of makers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Desktop waterjet product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hard-material cutting gap",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Makers digitally cut hard materials that other desktop tools cannot",
+      "status": "explicit",
+      "evidence_span": "It's a digital tool that uses water to cut through any material"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring water-cutting technology into ordinary workshops",
+      "evidence_span": "bringing this amazing technology to workshops everywhere"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cut through any material"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's what we're solving with Wazer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Four patents pending folded into product capability (§4.1(1)/(5)). Kickstarter $350k treated as traction, excluded. Industrial $100k machines used as contrast framing inside technology premise."
+}

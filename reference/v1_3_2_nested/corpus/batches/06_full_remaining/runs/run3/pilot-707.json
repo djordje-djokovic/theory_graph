@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outbreak response fails when diagnostics are slow: patients backlog for months and infection status stays unknown",
+      "status": "explicit",
+      "evidence_span": "Patients are waiting months to get their results back"
+    },
+    {
+      "id": "P2",
+      "text": "Existing tools trade off portability and sensitivity or cost: dipsticks miss early cases; PCR is sensitive but expensive and not near-patient",
+      "status": "explicit",
+      "evidence_span": "current solutions are insufficient"
+    },
+    {
+      "id": "P3",
+      "text": "FastChip vacuum microwell chemistry amplifies DNA/RNA without external equipment and reads quantitative fluorescence with a smartphone in about an hour",
+      "status": "explicit",
+      "evidence_span": "no external equipment such as pumps, controllers, computers, and valves are necessary"
+    },
+    {
+      "id": "P4",
+      "text": "Trackable GPS/patient/results app plus phased research-to-FDA launch supports decentralized outbreak response",
+      "status": "explicit",
+      "evidence_span": "So this becomes a powerful disease tracking network"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow outbreak testing",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "FastChip kit",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Network and regulatory path",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fight epidemics with rapid accessible molecular diagnostics near the patient",
+      "status": "explicit",
+      "evidence_span": "Our mission is to fight epidemics with rapid molecular diagnostics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Impact millions of lives across Zika and future outbreaks",
+      "evidence_span": "technology that can potentially impact millions of lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Results come out within one hour"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimally deploy the resources in the hotspots"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Merged amplification/readout/vacuum into one mechanism premise (indivisible demo). Tracking+FDA folded as one commercial path. Singletons D2/D3 justified as independently revisable tech vs GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-707",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:35:02+02:00"
+  }
+}

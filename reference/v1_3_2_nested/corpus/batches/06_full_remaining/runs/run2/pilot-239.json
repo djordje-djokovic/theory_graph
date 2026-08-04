@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Patients face stigma, distrust of providers, and multi-month wait lists before depression care",
+      "status": "explicit",
+      "evidence_span": "mental health clinics often have wait lists that are so long that you can't even be added to them"
+    },
+    {
+      "id": "P2",
+      "text": "Finding the right antidepressant and dose can take months or years under trial-and-error prescribing",
+      "status": "explicit",
+      "evidence_span": "A patient with depression or an individual with depression can spend months, if not years, trying to find the right antidepressant and dose that works for them"
+    },
+    {
+      "id": "P3",
+      "text": "Circular RNA in blood is a stable, predictive biomarker usable for diagnosis and treatment monitoring",
+      "status": "explicit",
+      "evidence_span": "use a new biomarker called circular RNA to help diagnose, monitor treatment, and monitor treatment of mental health conditions"
+    },
+    {
+      "id": "P4",
+      "text": "Lab extracts blood RNA, measures circRNA expression by qPCR, and scores diagnosis and drug response via an analytical pipeline",
+      "status": "explicit",
+      "evidence_span": "We're able to extract and purify the RNA from those individuals, and then we use a process called quantitative, circRNA-specific quantitative PCR"
+    },
+    {
+      "id": "P5",
+      "text": "Product enters through primary care, telemedicine, and urgent care workflows",
+      "status": "explicit",
+      "evidence_span": "Primary care, telemedicine, and urgent care"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Barriers to effective depression care",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "circRNA blood assay pipeline",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Clinical channel entry",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more precise depression diagnosis and medication matching",
+      "status": "explicit",
+      "evidence_span": "We're improving patient outcomes and reducing months of trial and error treatment down to days"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "trial and error"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improved patient outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide the patient a better experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "DNA/mRNA/protein inadequacy kept inside problem framing of P1–P2 rather than a separate premise. Mission statement coded as value. Cross-indication platform uses folded into assay premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-239",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

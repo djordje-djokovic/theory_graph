@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-123",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:14:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most organizations have adopted Kubernetes as the backbone orchestrating containers that hold critical data and assets",
+      "status": "explicit",
+      "evidence_span": "90% of all organizations have adopted Kubernetes as part of that digital transformation. Kubernetes has become the de facto solution for organizations who are looking to orchestrate containers"
+    },
+    {
+      "id": "P2",
+      "text": "Kubernetes clusters are increasingly targeted for breaches because compromising them endangers critical organizational data",
+      "status": "explicit",
+      "evidence_span": "Kubernetes clusters are often a target for cybersecurity, and Kubernetes-focused organizations are being targeted more now than ever before"
+    },
+    {
+      "id": "P3",
+      "text": "KSOC is a real-time Kubernetes security platform that delivers automated proactive results and stops incidents immediately rather than waiting",
+      "status": "explicit",
+      "evidence_span": "KSOC is the only real-time solution in our space today that allows for you to get automated results in a proactive way. We don't wait for an incident to happen, we stop it immediately"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Kubernetes cluster attack surface",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time proactive Kubernetes security",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect enterprise Kubernetes clusters by stopping security incidents in real time",
+      "status": "explicit",
+      "evidence_span": "Just like you wouldn't leave your banking information unprotected, don't leave your Kubernetes clusters vulnerable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what happens when this data is compromised"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't wait for an incident to happen, we stop it immediately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Thin booth pitch: founder exits, headcount, investors, and named customers excluded as credentials/traction. Singleton D2 retained as the product mechanism. No detailed capability enumeration present to split."
+}

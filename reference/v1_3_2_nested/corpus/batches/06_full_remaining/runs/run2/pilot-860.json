@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Favorite stores and major sites fail when the shopper has a visual product in mind",
+      "status": "explicit",
+      "evidence_span": "I tried to go to eBay, Amazon, and even Google. And it was very difficult to put in words a visual product"
+    },
+    {
+      "id": "P2",
+      "text": "Guided attribute questions plus personalization return the right item in under 15 seconds",
+      "status": "explicit",
+      "evidence_span": "it personalizes the items and brings it in a very delightful and seamless experience to the user"
+    },
+    {
+      "id": "P3",
+      "text": "Backend scrapes retailers, fingerprints items, and builds a shared ontology",
+      "status": "explicit",
+      "evidence_span": "creating an ontology a common language of all the all the brands and order retailers"
+    },
+    {
+      "id": "P4",
+      "text": "AI picks the next best clarifying question like a short 20-questions game",
+      "status": "explicit",
+      "evidence_span": "the same as in 20 questions game, but only in five questions game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken visual shopping search",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI guided multi-retailer product search",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find and buy the exact product sought in seconds",
+      "status": "explicit",
+      "evidence_span": "When I found a dress, I can buy it on the spot"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spend a lot of time searching for it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find it in less than 15 seconds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Context personalization folded into guided-search premise. Thin on commercial model; no invented pricing domain.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

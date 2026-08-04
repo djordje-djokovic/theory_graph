@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-362",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:53:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Solar vegetation maintenance is a major post-construction cost requiring under-panel, around-I-beam cutting of thick growth",
+      "status": "explicit",
+      "evidence_span": "drive lines limit typical equipment, and that equipment needs to go underneath the panels and around the I-beams"
+    },
+    {
+      "id": "P2",
+      "text": "100% electric rough-cut and offset decks solve solar-site cutting that regular decks cannot",
+      "status": "explicit",
+      "evidence_span": "A regular cutting deck won't do it"
+    },
+    {
+      "id": "P3",
+      "text": "A modular electric robot with quick-attach tools, swappable batteries, and high payload supports many outdoor operations beyond mowing",
+      "status": "explicit",
+      "evidence_span": "The tops can be swapped, enabling dozens of different use cases long term. And batteries can be swapped in five minutes"
+    },
+    {
+      "id": "P4",
+      "text": "Safety and remote-operation features (E-stops, 360 cameras/sensors, audio, lights, heated wipers) support commercial site use",
+      "status": "explicit",
+      "evidence_span": "The robot has six emergency stop buttons, 360-degree cameras and sensors, two-way audio, night lights, and even heated windshield wipers"
+    },
+    {
+      "id": "P5",
+      "text": "Business focuses on robotic vegetation management for solar farms within a broader outdoor-work robotics platform",
+      "status": "explicit",
+      "evidence_span": "we started in snow, we graduated to solar, and we're building an outdoor work robotics platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Solar site cutting constraints",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Electric modular solar-capable robots",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Solar-to-platform commercialization path",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Electric outdoor work robots that maintain solar farms and other outdoor sites sustainably",
+      "status": "explicit",
+      "evidence_span": "building an outdoor work robotics platform"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "huge headache to maintain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "world's first 100% electric rough cut deck"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making outdoor work equipment sustainable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Third pass includes onboard safety/ops feature bundle as one premise (feature list, not split). Financing and competitor win-rate excluded."
+}

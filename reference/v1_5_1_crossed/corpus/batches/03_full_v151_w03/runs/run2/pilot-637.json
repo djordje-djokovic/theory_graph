@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-637",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "African money movement has extremely high transaction costs and multi-day settlement, with fragmented isolated mobile-money wallets blocking cross-network, cross-border, and online payments",
+      "status": "explicit",
+      "evidence_span": "Transaction costs are 15 times higher here, and settlement times can last up to 20 days"
+    },
+    {
+      "id": "P2",
+      "text": "WeCashUp is a universal payment platform with a single API for merchants to accept cash and mobile money (and in 2.0 also cards, bank wallets, and crypto) across currencies",
+      "status": "explicit",
+      "evidence_span": "universal mobile money payment platform that enables online merchants to accept all cash and mobile money wallet online through a single API"
+    },
+    {
+      "id": "P3",
+      "text": "Features include high conversion, blockchain-ledger security, ease for the unbanked, split payments inviting others, and merchant tools to accept/split/disburse/hold/top-up across many countries",
+      "status": "explicit",
+      "evidence_span": "best conversion rate, the highest security system using our blockchain ledger, and ease of transaction processing for the unbanked"
+    },
+    {
+      "id": "P4",
+      "text": "A patented blockchain tunneling interoperability network interconnects payment channels for cross-network, cross-border, and online payments",
+      "status": "explicit",
+      "evidence_span": "first blockchain tunneling network which is a global interoperability network"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization combines a monthly fee and a transaction fee",
+      "status": "explicit",
+      "evidence_span": "charge a monthly fee and a transaction fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "slow costly fragmented African payments",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "universal API and blockchain interoperability",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "monthly plus transaction fees",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Move money fast enough across Africa that life-critical payments (like hospital bills) can be completed in time",
+      "status": "explicit",
+      "evidence_span": "Moving money fast here in Africa is very, very difficult"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reach the next billion through merchants, financial institutions, and mobile-money operators",
+      "evidence_span": "reach the next billion"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "matter of life or death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitate payments for the patient"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge a monthly fee and a transaction fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Personal hospital story treated as illustrating the payment-speed problem, not a separate premise. Feature list largely folded into platform cascade; patents attached to tunneling network. Merchant counts/growth excluded as traction. Anti-template: problem, platform, and pricing separately revisable."
+}

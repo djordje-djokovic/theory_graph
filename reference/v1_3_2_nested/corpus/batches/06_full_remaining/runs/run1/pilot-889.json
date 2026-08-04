@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes care is inadequate because manual logging is tedious, digital tools are incompatible, and no support-network platform exists",
+      "status": "explicit",
+      "evidence_span": "proper care for diabetes is inadequate and in many countries broken due to the following usability and technical problems"
+    },
+    {
+      "id": "P2",
+      "text": "A smart audio-jack cable connects the majority of existing glucometers to smart devices without buying new meters",
+      "status": "explicit",
+      "evidence_span": "this smart cable is compatible with majority of the glucometers in the market, even those in emerging markets"
+    },
+    {
+      "id": "P3",
+      "text": "App workflow color-codes readings, tags meals/meds, and logs contextual factors for interpretable graphs and doctor sharing",
+      "status": "explicit",
+      "evidence_span": "the app color codes some of the readings purple or orange if certain numbers are out of range"
+    },
+    {
+      "id": "P4",
+      "text": "Partner function lets remote family view stats, send encouragement, and set alerts for missed syncs or out-of-range numbers",
+      "status": "explicit",
+      "evidence_span": "I from Taiwan can use any one of my smart devices and view her stats"
+    },
+    {
+      "id": "P5",
+      "text": "Patient-centric platform enables third-party interactions such as insurers and pharmacies",
+      "status": "explicit",
+      "evidence_span": "enabling new forms of interaction with third parties to the patient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken diabetes tooling",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Legacy meter smart cable and app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Support network and third parties",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients regain control of glucose management with usable connected tools",
+      "status": "explicit",
+      "evidence_span": "Health to Sync aggregates glucose data, ultimately giving control back to you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "proper care for diabetes is inadequate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking legacy devices, bringing them to the digital age, and making them smarter"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data availability to the support network"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three problem bullets folded into one broken-care premise. App UI details folded into P3. Family bio motivates but is not coded as a team premise. Indiegogo ask excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

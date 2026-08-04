@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes care tools fail because manual logging is tedious, digital hardware/software are incompatible, and no platform connects patients to their support network",
+      "status": "explicit",
+      "evidence_span": "proper care for diabetes is inadequate and in many countries broken due to the following usability and technical problems"
+    },
+    {
+      "id": "P2",
+      "text": "A smart cable connects existing glucometers to smart devices via the audio jack, compatible with most meters including emerging markets",
+      "status": "explicit",
+      "evidence_span": "this smart cable is compatible with majority of the glucometers in the market, even those in emerging markets"
+    },
+    {
+      "id": "P3",
+      "text": "App color-codes out-of-range readings and lets users tag meals, medication, moods, and foods, then share interpretable graphs with doctors",
+      "status": "explicit",
+      "evidence_span": "the app color codes some of the readings purple or orange if certain numbers are out of range"
+    },
+    {
+      "id": "P4",
+      "text": "Secure cloud partner view lets family/care partners monitor stats, send encouragement, and preset alerts for missed syncs or out-of-range numbers",
+      "status": "explicit",
+      "evidence_span": "I can pre-set notifications that would alert me should grandma forget to sync to test herself or if her numbers are out of whack"
+    },
+    {
+      "id": "P5",
+      "text": "Patient-centric platform enables third-party interactions (insurers, pharmacies) and future API/service partnerships",
+      "status": "explicit",
+      "evidence_span": "HealthiSync also enables a patient-centric platform. enabling new forms of interaction with third parties to the patient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "glucometer sync and patient logging",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "care-partner monitoring and alerts",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "third-party platform and future services",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Aggregated glucose data that gives patients control over diabetes management",
+      "status": "explicit",
+      "evidence_span": "Health to Sync aggregates glucose data, ultimately giving control back to you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "basically solved three issues. One, data tedium. Two, data transferability integrity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "And three, data availability to the support network"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enabling new forms of interaction with third parties to the patient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Three numbered pain points folded into one problem premise (v1.5.1 §4.1.6). App tagging/graphs treated as facets of the patient logging surface with the cable. Partner function kept separate as distinct support-network capability. Geographic launch plans treated as traction/GTM timing, not a separate premise."
+}

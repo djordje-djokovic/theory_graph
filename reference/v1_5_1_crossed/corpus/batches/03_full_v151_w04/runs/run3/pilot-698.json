@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-698",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High first-year relapse is driven by lack of communication and lack of accountability for recovery activities",
+      "status": "explicit",
+      "evidence_span": "address the two key things that cause relapse. One, lack of communication, and two, lack of accountability for your recovery activities"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile platform integrating wearables tracks recovery activities via geolocation and accelerometer and connects the support network with alerts and an isolation SOS",
+      "status": "explicit",
+      "evidence_span": "a mobile platform that integrates with wearables to address the two key things that cause relapse"
+    },
+    {
+      "id": "P3",
+      "text": "Non-triggering rewards such as fitness classes and coffee coupons further engage active recovery",
+      "status": "explicit",
+      "evidence_span": "we provide rewards that don't trigger your technology addiction, but you accrue points to get rewards such as fitness classes, yoga classes, and free coffee coupons"
+    },
+    {
+      "id": "P4",
+      "text": "First sales channel is inpatient treatment centers, then healthcare providers, insurers, and EAPs",
+      "status": "explicit",
+      "evidence_span": "our target addressable market for our first sales channel, which is inpatient treatment centers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "relapse communication and accountability gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "wearable recovery accountability platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "treatment-center then payer GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people stay in recovery and reduce relapse risk",
+      "status": "explicit",
+      "evidence_span": "join us on this quest to save lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "60% of people with drug and alcohol addiction relapse within the first year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This can literally be a lifesaver"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inpatient treatment programs in California, Arizona, and Washington"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two relapse causes kept as one problem-set premise (§4.1.6). Geo check-in, support dashboards, alerts, and SOS folded as feature cascade of one accountability platform (§4.1.7); rewards split as separately framed engagement module. Founder recovery bio excluded. Anti-template noted: problem, product, and GTM separately revisable."
+}

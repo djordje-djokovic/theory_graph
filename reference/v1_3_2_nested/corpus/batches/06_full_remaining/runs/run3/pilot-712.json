@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-712",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:13:58+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Industry spends heavily on new drugs yet still fails to catch livestock outbreaks early enough to prevent large losses",
+      "status": "explicit",
+      "evidence_span": "the industry spends over $20 billion a year developing new drugs and treatments to try to manage these diseases, and it's estimated that $13 billion in losses can be prevented if we were able to catch them early on"
+    },
+    {
+      "id": "P2",
+      "text": "REX standardizes multi-source clinical and genomics data into analytics tools for veterinarians and drug developers",
+      "status": "explicit",
+      "evidence_span": "we built a software platform of data visualization and analytics tools for the industry"
+    },
+    {
+      "id": "P3",
+      "text": "Vets can find efficient diagnostics and treatments; when drugs fail, the platform predicts causal genes and pathways to speed new vaccines/drugs",
+      "status": "explicit",
+      "evidence_span": "by mining our records, livestock veterinarians can then find the most efficient and most effective treatments to cure the disease"
+    },
+    {
+      "id": "P4",
+      "text": "Commercial model is subscription access for large livestock and pharma customers with network effects across their relationships",
+      "status": "explicit",
+      "evidence_span": "We take advantage of a natural network effect from their customer-vendor relationships, and we charge them an annual subscription fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Late detection despite drug spend",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated animal-health data platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Diagnosis, treatment, and pharma R&D uses",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Networked subscription selling",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring precision big-data medicine to animal health to manage disease better",
+      "status": "explicit",
+      "evidence_span": "bring precision medicine to the animal health industry"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're not catching these events until it's far too late"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide a comprehensive view of animal health and disease"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "thereby making drug development faster"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're at some of the largest livestock and pharmaceutical companies in the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Split platform data layer vs use-cases as separately learnable modules this run (diagnostics/treatment/pharma path presented as distinct pillars). Citizen science announcement excluded as non-core pitch ask. Singletons D2/D4 retained."
+}

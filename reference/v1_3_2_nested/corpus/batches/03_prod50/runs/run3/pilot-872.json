@@ -1,0 +1,85 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Catch-22: need credit to build the payment history that creates a score",
+      "status": "explicit",
+      "evidence_span": "It's a fundamental catch-22"
+    },
+    {
+      "id": "P2",
+      "text": "Self Lender reports chosen-term monthly payments to bureaus and returns the money",
+      "status": "explicit",
+      "evidence_span": "Self Lender reports her monthly payment performance to the credit bureaus"
+    },
+    {
+      "id": "P3",
+      "text": "Payment performance data powers exclusive lending and down-payment use of balance",
+      "status": "explicit",
+      "evidence_span": "apply her self-lender balance as a down payment for a car and receive an instant text message approval shortly"
+    },
+    {
+      "id": "P4",
+      "text": "Easy $3/month signup for DIY credit building",
+      "status": "explicit",
+      "evidence_span": "takes less than three minutes, and only costs $3 per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Self Lender credit and lending platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people build credit, save money, and access affordable finance",
+      "status": "explicit",
+      "evidence_span": "platform of choice for building credit, saving money, and getting access to affordable financial products"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Self Lender uses her payment data internally to offer her exclusive lending opportunities"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is life-changing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Single domain end-to-end credit platform.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-872",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:33:33+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Expecting moms lack continuous, convenient, accurate information between sparse prenatal visits",
+      "status": "explicit",
+      "evidence_span": "For many women, the only time there's any sort of peace of mind is during their prenatal checkups"
+    },
+    {
+      "id": "P2",
+      "text": "Medical-grade belly-worn sensor measures unique electrical signals from mom, uterus, and fetus",
+      "status": "explicit",
+      "evidence_span": "each create a unique electrical signal which we can noninvasively measure through the sensor"
+    },
+    {
+      "id": "P3",
+      "text": "Software surfaces contractions, patterns, and broader maternal-fetal parameters without new hardware",
+      "status": "explicit",
+      "evidence_span": "No additional hardware changes are necessary"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is DTC subscription then channel/referral scale, with later FDA reimbursement aiming for standard of care",
+      "status": "explicit",
+      "evidence_span": "Upon securing FDA clearance, we will seek reimbursement"
+    },
+    {
+      "id": "P5",
+      "text": "Crowdsourced longitudinal pregnancy data fuels predictive analytics for clinicians",
+      "status": "explicit",
+      "evidence_span": "This critical data that's been impossible to capture till now will help power our cloud-based machine learning analytics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mom information gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor-plus-software prenatal monitoring",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and clinical reimbursement",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Data network for prediction",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better birth outcomes via reassurance for moms and better information for doctors",
+      "status": "explicit",
+      "evidence_span": "provide doctors with better information to improve birth outcomes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "road to motherhood can be full of uncertainty"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accurate and reliable medical grade product"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Bloom Life to become standard of care"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage pregnancy complications before it's too late"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Merged contraction UI and multi-parameter roadmap into one software premise. Crowdsource ML kept as singleton domain with own clinician-value path.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-625",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

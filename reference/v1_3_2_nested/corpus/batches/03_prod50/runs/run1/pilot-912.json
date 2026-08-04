@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app development is hard, multi-language, expensive, and slow for non-technical users",
+      "status": "explicit",
+      "evidence_span": "mobile application development is hard. It requires knowledge of many programming languages, technologies, and frameworks"
+    },
+    {
+      "id": "P2",
+      "text": "Non-technical users can drag-and-drop components to build mobile apps as easily as PowerPoint",
+      "status": "explicit",
+      "evidence_span": "a non-technical user can drag and drop components and build their own awesome mobile app"
+    },
+    {
+      "id": "P3",
+      "text": "Rich component library (maps, RSS, gallery, social/call actions) with flexible styling beats cookie-cutter identical apps",
+      "status": "explicit",
+      "evidence_span": "The power of App Architect is a library of components"
+    },
+    {
+      "id": "P4",
+      "text": "Apps built are native for best look, feel, and performance",
+      "status": "explicit",
+      "evidence_span": "the apps that are built are native"
+    },
+    {
+      "id": "P5",
+      "text": "Live preview app lets builders test on a real device while editing",
+      "status": "explicit",
+      "evidence_span": "This allows you to test and interact with the application as you're building it live on your mobile device"
+    },
+    {
+      "id": "P6",
+      "text": "Platform starts on iOS with plans to extend to other platforms and a developer marketplace like WordPress for mobile",
+      "status": "explicit",
+      "evidence_span": "we see ourselves. as WordPress for mobile"
+    },
+    {
+      "id": "P7",
+      "text": "Positioning combines template simplicity with deep customization versus pure developer tools or logo-swap templates",
+      "status": "explicit",
+      "evidence_span": "We have the simplicity of templates, but you can customize the app in every single way"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard expensive app-dev problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Visual native builder and preview",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Extensible platform and market positioning",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Non-technical users can create custom native mobile apps quickly and affordably",
+      "status": "explicit",
+      "evidence_span": "non-technical users creating it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "App Architect is a solution to that problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app editor is very easy and flexible"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "WordPress for mobile"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Market size figures treated as context not premises. Soft count 7. Singleton D1: problem framing separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-912",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

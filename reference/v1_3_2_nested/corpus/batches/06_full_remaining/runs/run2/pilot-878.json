@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Tens of millions of small businesses need branding but cannot afford crowdsourced design and produce low-quality DIY brands instead",
+      "status": "explicit",
+      "evidence_span": "Over 80 million small businesses out there want branding, need branding, but can't really afford it"
+    },
+    {
+      "id": "P2",
+      "text": "Taylor's rule-based learning system studies a business and generates fresh, template-free brand designs",
+      "status": "explicit",
+      "evidence_span": "Using thousands of design rules from the simplest color circle to how fonts interact and what industries using what style"
+    },
+    {
+      "id": "P3",
+      "text": "Customers pay about $50 only when thrilled and receive a full print-ready brand kit plus ongoing asset design",
+      "status": "explicit",
+      "evidence_span": "no money exchanges hands until you're completely thrilled with your new design"
+    },
+    {
+      "id": "P4",
+      "text": "The learning system also produces brand and trend insights from the brands it designs",
+      "status": "explicit",
+      "evidence_span": "it can actually understand brand insights, and trend insights, and give that to you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB branding need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Learning design system and $50 offer",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Insights from designed brands",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Small businesses can look as good as Fortune 500 companies with accessible branding",
+      "status": "explicit",
+      "evidence_span": "they can look as good as any Fortune 500 company with Taylor"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "want branding, need branding, but can't really afford it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put an in-house designer in every business across the world for just 50 bucks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brand insights, and trend insights, and give that to you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transparent unpaid process, no-templates, and $50 kit folded into one commercial design offer with the learning engine. Market-takeover claim not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-878",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

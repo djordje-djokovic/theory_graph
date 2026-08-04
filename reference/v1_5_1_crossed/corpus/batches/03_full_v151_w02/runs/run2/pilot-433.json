@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-433",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:25:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Site robots capture detailed 3D maps that cloud software analyzes for precise build-quality statistics on every element",
+      "status": "explicit",
+      "evidence_span": "Our robots drive around site, building detailed 3D maps of the environment"
+    },
+    {
+      "id": "P2",
+      "text": "An easy web interface ranks searchable, color-coded deviations so managers focus on what most risks the project",
+      "status": "explicit",
+      "evidence_span": "what's putting my project most at risk"
+    },
+    {
+      "id": "P3",
+      "text": "B2B SaaS lands multi-billion general contractors on one project and expands, integrating scanners and standard AEC formats",
+      "status": "explicit",
+      "evidence_span": "taking this to market on a B2B SaaS model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Robotic site mapping and analysis",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Risk-ranked construction UI",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "GC land-and-expand SaaS",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help general contractors stay on budget and on schedule",
+      "status": "explicit",
+      "evidence_span": "help you stay on budget and on schedule on your next project"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide precise statistical analysis about every element on site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focus your attention on what's putting your project most at risk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we seamlessly integrate with existing workflows, including existing laser scanners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript appears to start mid-pitch after problem setup (truncated=true). Registration/ML/noise filtering, color coding, heat maps, and photo tags folded into P1–P2 feature cascade. Autodesk partnership and team PhDs treated as traction/credentials. Thin margins ask treated as value framing for GCs."
+}

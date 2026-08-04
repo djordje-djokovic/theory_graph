@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-670",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Periodic wired vital-sign rounds wake all patients and leave long unmonitored gaps where deterioration can be missed",
+      "status": "explicit",
+      "evidence_span": "you wake them all up, irrespective of condition, and because four hours is a long time, and a lot can happen in that space"
+    },
+    {
+      "id": "P2",
+      "text": "Cameras alone cannot proactively alert nurses to patient deterioration",
+      "status": "explicit",
+      "evidence_span": "they won't ever, on their own, proactively alert you to deterioration"
+    },
+    {
+      "id": "P3",
+      "text": "Software with proprietary pixel-signal algorithms turns ordinary video cameras into health monitors delivering real-time alerts, vital signs, and optional video on demand",
+      "status": "explicit",
+      "evidence_span": "We transform video cameras. We turn them into health monitors"
+    },
+    {
+      "id": "P4",
+      "text": "Algorithms deliver medical-grade accuracy for respiration and heart rate comparable to contact medical devices",
+      "status": "explicit",
+      "evidence_span": "our algorithms are as accurate as a contact medical device"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market is phased: video analytics for in/out-of-bed activity first, then medical analytics vital signs as a medical device",
+      "status": "explicit",
+      "evidence_span": "We're going to market in two phases. The first is video analytics. That's the in and out of bed activity of a human being in a room. The second is medical analytics. That's the vital signs"
+    },
+    {
+      "id": "P6",
+      "text": "Scarce clinician time and the need to step care down from hospitals to cheaper settings make camera-based monitoring the right platform",
+      "status": "explicit",
+      "evidence_span": "the scarce resource in our healthcare systems are doctors and nurses and their time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ward monitoring gaps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "camera-to-health-monitor software",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "phased clinical go-to-market",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Put scarce clinician time on the most urgent situations with better data to help save lives and improve care",
+      "status": "explicit",
+      "evidence_span": "help doctors save lives and improve healthcare for everyone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enable step-down care from hospitals to nursing homes and home settings",
+      "evidence_span": "step people down from expensive locations like hospitals to cheaper locations like nursing, care homes, and our own homes"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "four hours is a long time, and a lot can happen in that space"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delivers to the nursing station real-time alerts, vital signs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put that time onto the most urgent situations with the best data"
+    },
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we can give you deterioration with medical accuracy through a camera"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: four patient states and flawed trolley rounds folded as one monitoring-pain bundle with camera inadequacy (P1–P2). Demo heart-rate/breathing/out-of-bed facets folded into camera-monitor mechanism (P3). Clinical-study accuracy kept as validating condition P4. Pipeline deals excluded as traction. Anti-template: ward problem, product accuracy, and phased GTM separately asserted."
+}

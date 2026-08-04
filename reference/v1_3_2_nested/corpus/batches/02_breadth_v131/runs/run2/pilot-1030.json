@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Today's cost and tech trends can move robots from large, expensive, hard-to-use machines to personal home robots",
+      "status": "explicit",
+      "evidence_span": "take this kind of robots, large, expensive, very difficult to use, and move them into engaging, affordable, and fun to use robots in the home"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone and cloud robotics make robots cheaper and automatically smarter as devices upgrade",
+      "status": "explicit",
+      "evidence_span": "mostly smartphone robotics and cloud robotics that takes a computation from the robot into devices you already have, making it much more affordable, and also automatically and dynamically upgradable"
+    },
+    {
+      "id": "P3",
+      "text": "Narrow task robots priced for homes beat expensive do-everything robots",
+      "status": "explicit",
+      "evidence_span": "Swiss army knife kind of robots that do anything from saving princesses to cleaning the house, but unfortunately cost hundreds of thousands of dollars. We're going to have a set of robots that are much more targeted at limited set of tasks"
+    },
+    {
+      "id": "P4",
+      "text": "Dumb robot smartphone approach: hardware is motors/speakers/power; behavior runs on phone app and cloud",
+      "status": "explicit",
+      "evidence_span": "dumb robot smartphone approach. And everything that the robot does actually happens on a smartphone app and on the cloud. And the robot is just some motors, high-end speakers, and power"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud beat/segment/genre data creates live song choreography on the Android device",
+      "status": "explicit",
+      "evidence_span": "taking information from the cloud that has the beats, the segments, where the chorus starts, where the verse starts, what genre the song is. And it creates a real-time live choreography"
+    },
+    {
+      "id": "P6",
+      "text": "Camera face tracking aims the robot for better sound",
+      "status": "explicit",
+      "evidence_span": "using the camera to track my faces, always pointing towards me and giving me the best sound possible"
+    },
+    {
+      "id": "P7",
+      "text": "Target consumer price around $199",
+      "status": "explicit",
+      "evidence_span": "able to get it to $199"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home robotics affordability thesis",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cloud-connected speaker robot",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Consumer price point",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A robot in every home that is engaging, affordable, and fun",
+      "status": "explicit",
+      "evidence_span": "robot in every home and make it a reality"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "engaging, affordable, and fun to use robots in the home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smartphone-powered, cloud-connected robot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "able to get it to $199"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 merges product identity into the dumb-robot architecture premise (fewer than run1). Kickstarter early price treated as detail of the $199 commercial offer rather than a separate channel module. Singleton price domain retained.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1030",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

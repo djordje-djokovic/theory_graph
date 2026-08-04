@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Old dating sites require heavy profile work while time and mood slip away",
+      "status": "explicit",
+      "evidence_span": "you have to fill lots of different questionnaires, upload your pictures, send messages. But meanwhile, time flies by"
+    },
+    {
+      "id": "P2",
+      "text": "Charisma is a mobile, location-based, social, real-time video messenger for contacts and nearby strangers",
+      "status": "explicit",
+      "evidence_span": "For Charisma, Charisma is mobile. They launch on Apple devices, and Android will follow. It's location-based"
+    },
+    {
+      "id": "P3",
+      "text": "Sparks nudge others to initiate calls when users hesitate",
+      "status": "explicit",
+      "evidence_span": "Sparks are like interactions and emotions between people"
+    },
+    {
+      "id": "P4",
+      "text": "Initially ads-based with optional paid ad removal",
+      "status": "explicit",
+      "evidence_span": "initially ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow dating-site friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Nearby video messenger",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Ad-supported monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple, fun, immediate video connection with people here and now",
+      "status": "explicit",
+      "evidence_span": "It's simple. It's mobile. It's fun"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Not so with Charisma"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can actually call them right now"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ads-based with a subscription"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Mobile/location/social/real-time adjectives folded into one product premise per feature-list rule. Anti-template triad noted: friction/product/ads separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1064",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

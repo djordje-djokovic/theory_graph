@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cars idle ~22 hours a day, so sharing unused capacity can replace buying another car",
+      "status": "explicit",
+      "evidence_span": "sit parked 22 hours each day"
+    },
+    {
+      "id": "P2",
+      "text": "Getaround is a P2P marketplace with owner pricing, platform insurance, and commission",
+      "status": "explicit",
+      "evidence_span": "Getaround is a marketplace for peer-to-peer car sharing"
+    },
+    {
+      "id": "P3",
+      "text": "iPhone app plus Car Kit unlock and locate shared cars without physical key handoff",
+      "status": "explicit",
+      "evidence_span": "unlock the car and locate the car, all from your iPhone"
+    },
+    {
+      "id": "P4",
+      "text": "National insurance deal with Berkshire Hathaway supports coverage expansion",
+      "status": "explicit",
+      "evidence_span": "That carrier is Berkshire Hathaway"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle car capacity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "App-enabled P2P marketplace",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Trusted national insurance",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Share cars so renters get instant access and owners earn thousands a year",
+      "status": "explicit",
+      "evidence_span": "as a car owner, you can earn thousands of dollars a year sharing your car"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Path to large CO2 reductions if shared fleet scales",
+      "evidence_span": "CO2 emissions would drop by a whopping 48 billion pounds per year"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "car overpopulation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "rent one instantly from someone nearby"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Super safe insurance provided by Berkshire"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Car Kit folded with app into P3 this run as one hassle-free access mechanism; insurance kept separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1060",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:01:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The video-game and related industries spend the majority of project budgets on costly manual digital media creation",
+      "status": "explicit",
+      "evidence_span": "The $80 billion video game industry spends on average 61% of their project budgets on digital media creation"
+    },
+    {
+      "id": "P2",
+      "text": "Artomatix AI generates controllable, human-like creative content from examples across images and 3D",
+      "status": "explicit",
+      "evidence_span": "you give the computer an example of something you want, and it makes more"
+    },
+    {
+      "id": "P3",
+      "text": "The offering targets video games first, then expands via Artomatix Cloud to other creative industries",
+      "status": "explicit",
+      "evidence_span": "video games are our beachhead"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue model is SaaS",
+      "status": "explicit",
+      "evidence_span": "monetize through a software-as-a-service business model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly manual art production",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Example-based artematics AI",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud GTM and SaaS",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cut digital media creation time and cost in half",
+      "status": "explicit",
+      "evidence_span": "half the time and half the cost of this process"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Relieve artists of repetitive mundane asset work",
+      "evidence_span": "solving the personal pain of the artists themselves"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "as the quality has increased, so have the costs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're a painkiller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Artomatix Cloud, which can address the entire industry, big to small"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Image/3D/controllability treated as one generative-capability premise. IP protection folded in. Singleton D2 kept as core learnable tech module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-775",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

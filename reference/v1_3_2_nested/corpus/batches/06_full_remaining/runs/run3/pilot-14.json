@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robots alone have not fixed downtime that sinks a huge share of industrial turnover",
+      "status": "explicit",
+      "evidence_span": "We've thrown robots and automation at the problem, but downtime is still costing"
+    },
+    {
+      "id": "P2",
+      "text": "CapEx-lite connectivity to machines and sensors unlocks previously untapped line data",
+      "status": "explicit",
+      "evidence_span": "This is an untapped data goldmine until now"
+    },
+    {
+      "id": "P3",
+      "text": "Recommendation-grade ML plus efficiency tracking turns know-how into predictions and actions",
+      "status": "explicit",
+      "evidence_span": "makes predictions and makes recommendations"
+    },
+    {
+      "id": "P4",
+      "text": "Chatbot generative BI compresses weeks of engineering analysis into seconds",
+      "status": "explicit",
+      "evidence_span": "now you can solve it in second"
+    },
+    {
+      "id": "P5",
+      "text": "Cross-customer algorithm improvement creates network effects",
+      "status": "explicit",
+      "evidence_span": "every single action improves our model's algorithms, creating network effects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsolved downtime",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-to-recommendation stack",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Networked learning",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intelligent factories that keep learning and raise productivity",
+      "status": "explicit",
+      "evidence_span": "One that keeps learning with every action"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More sustainable manufacturing alongside efficiency",
+      "evidence_span": "making manufacturing more efficient and more sustainable"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fix the foundation of the real-world economy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn legacy operations into intelligent factories"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keeps learning with every action"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D1/D3 justified. ERP/maintenance integration folded into gateway premise P2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-14",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:52:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

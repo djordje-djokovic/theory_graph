@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medical tourism is dominated by travel agents who leave patients with unvetted doctors, poor outcomes, and low trust",
+      "status": "explicit",
+      "evidence_span": "this industry is dominated by travel agents, individuals who sell flights and hotels, and on occasion, slap on a hip replacement"
+    },
+    {
+      "id": "P2",
+      "text": "Patients travel for care to save money, save time, or gain access to procedures unavailable at home",
+      "status": "explicit",
+      "evidence_span": "there are three main reasons patients travel for medical care"
+    },
+    {
+      "id": "P3",
+      "text": "MedRepublic is an online marketplace connecting American and Canadian patients with English-speaking board-certified top-rated doctors abroad",
+      "status": "explicit",
+      "evidence_span": "an online global health marketplace that enables American and Canadian patients to connect with English-speaking, board-certified, top-rated doctors around the world"
+    },
+    {
+      "id": "P4",
+      "text": "A US Board of Physicians strictly vets doctors; accepted doctors are sorted by ratings, proximity, and responsiveness with transparent pricing",
+      "status": "explicit",
+      "evidence_span": "Each of our doctors go through a strict vetting process led by our U.S. Board of Physicians"
+    },
+    {
+      "id": "P5",
+      "text": "HIPAA-compliant messaging plus marketplace admin of documents, records, and payments lets doctors focus on care",
+      "status": "explicit",
+      "evidence_span": "Metro Public does all the administrative work, collecting documents, records, and payments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Untrusted medical-tourism intermediaries",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Vetted global doctor marketplace",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Compliant care coordination ops",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Transparent, secure, trusted marketplace for world-class international medical care",
+      "status": "explicit",
+      "evidence_span": "create a transparent, secure, and trusted marketplace to facilitate world-class medical care"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large cost savings versus US pricing for the same procedures",
+      "evidence_span": "she saved $140,000, which was just a quarter of the cost that she would have paid had she done the surgeries in the United States"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this lack of expertise, which for patients means unvetted doctors and poor outcomes, leads to a lack of trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We accept just 5% of doctor applicants"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so doctors can do best, do what they do best, offer top-notch medical care"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Founder healthcare guidebook biography treated as origin, not a causal credential condition. Procedure counts and savings averages treated as traction with cost-savings kept as secondary_value from the Janet story. Market-size figures framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-706",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

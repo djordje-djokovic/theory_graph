@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-444",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:07+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Seven-day expert lab workflows leave communities drinking vulnerable water",
+      "status": "explicit",
+      "evidence_span": "this leaves communities vulnerable to the water that they drink"
+    },
+    {
+      "id": "P2",
+      "text": "Easy hardware+kit+phone system detects cholera accurately and affordably in under 30 minutes via viscosity after DNA amplification",
+      "status": "explicit",
+      "evidence_span": "detect cholera accurately and affordably"
+    },
+    {
+      "id": "P3",
+      "text": "App imaging and proprietary algorithms return results with GPS and timestamp; portal aggregates outbreak datasets",
+      "status": "explicit",
+      "evidence_span": "We analyze that with our proprietary algorithms, and from that, we're able to see the result"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware sold once; disposable kits are recurring single-use revenue",
+      "status": "explicit",
+      "evidence_span": "hardware is a single-time purchase and our disposable test kits create the recurring revenue as their single use"
+    },
+    {
+      "id": "P5",
+      "text": "Same IP can swap kit chemistry to detect many diseases beyond cholera",
+      "status": "explicit",
+      "evidence_span": "we change out the chemistry in our disposable test kits, and we can detect for many diseases in many different markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Field detection system",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Kit commerce and platform expansion",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobilize the lab to detect cholera fast and save lives",
+      "status": "explicit",
+      "evidence_span": "Omnivis mobilizes the lab"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detecting four cholera in water, anywhere in the world, in under 30 minutes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect for many diseases in many different markets"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Competitor accuracy/cost contrast folded into P2 accuracy/affordability claim. Team credentials excluded. Chemistry-swap coded because speaker presents multi-disease markets as an explicit path using the same IP."
+}

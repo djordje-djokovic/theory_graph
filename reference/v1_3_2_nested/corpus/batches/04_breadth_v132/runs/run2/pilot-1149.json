@@ -1,0 +1,85 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Siloed organizational knowledge causes repeated work and mistakes",
+      "status": "explicit",
+      "evidence_span": "I found myself repeating work, making mistakes, And the root cause of this was simply because all the knowledge was siloed."
+    },
+    {
+      "id": "P2",
+      "text": "A Q&A-and-wiki hybrid yields an organically growing, easily searchable enterprise knowledge base",
+      "status": "explicit",
+      "evidence_span": "create a really organically growing, really easily searchable knowledge base for the enterprise"
+    },
+    {
+      "id": "P3",
+      "text": "Enterprise trust mechanics — verified corporate email access, endorsement voting, and safe anonymity — fit how companies share",
+      "status": "explicit",
+      "evidence_span": "in the enterprise context certainly there is already an implicit amount of trust within people"
+    },
+    {
+      "id": "P4",
+      "text": "Email-native integration with listserv extraction and intelligent routing meets workers where they already are",
+      "status": "explicit",
+      "evidence_span": "we actually integrate right on top of listservs. We extract relevant content, like questions, and put them in our searchable index."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed-knowledge problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Opsy knowledge platform and reach",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees at companies can share and find organizational knowledge",
+      "status": "explicit",
+      "evidence_span": "help people at companies share knowledge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not being able to know what other people already knew"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Opsy's mission is to help people at companies share knowledge."
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Stricter v1.3.2 clarification-5 reading: wiki crowdsourcing, voting, anonymity, and search are speaker-listed features of one knowledge-platform offering, folded into P2/P3 rather than split. Email integration is kept as a premise because the speaker presents it as an additional integration track ('our story doesn't end there'), but grouped with the platform in one solution domain. Use-case enumeration (engineering, sales, law firms) treated as applications of one mechanism, not coded separately. Funding and waitlist excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:27:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

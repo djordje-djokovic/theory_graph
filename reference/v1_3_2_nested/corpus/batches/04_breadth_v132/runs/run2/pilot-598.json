@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses must protect themselves and properly safeguard customer and user data",
+      "status": "explicit",
+      "evidence_span": "Businesses not only have responsibility to protect themselves, they also need to properly manage and safeguard their customers' and users' data"
+    },
+    {
+      "id": "P2",
+      "text": "Explosive data growth is pushing IT infrastructure into the public cloud",
+      "status": "explicit",
+      "evidence_span": "driving much of the underlying IT infrastructure into the public cloud"
+    },
+    {
+      "id": "P3",
+      "text": "Breaches are inevitable regardless of perimeter defenses",
+      "status": "explicit",
+      "evidence_span": "The bad guys will find a way in, around, or through your walls, and you will get hacked"
+    },
+    {
+      "id": "P4",
+      "text": "Traditional encryption imposes significant performance and functionality restrictions",
+      "status": "explicit",
+      "evidence_span": "They have significant performance and functionality drawbacks"
+    },
+    {
+      "id": "P5",
+      "text": "A patented proxy re-encryption cryptosystem with embedded access controls protects data on-prem and in the cloud",
+      "status": "explicit",
+      "evidence_span": "With our patented proxy re-encryption cryptosystem, NuCypher is able to protect data wherever it goes, both on-prem and in the cloud"
+    },
+    {
+      "id": "P6",
+      "text": "Compliance with standards bodies such as NIST and FIPS supports enterprise adoption",
+      "status": "explicit",
+      "evidence_span": "our technology is compliant with standards bodies like NIST and FIPS"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data risk in the cloud era",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Re-encryption platform and compliance",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Only valid users can read enterprise data, even after a breach",
+      "status": "explicit",
+      "evidence_span": "We're able to guarantee that your data is only accessible by valid users"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will get hacked"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protect data wherever it goes, both on-prem and in the cloud"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Embedded access controls treated as the mechanism inside the single cryptosystem premise (v1.3.1 4.1(2)); NIST/FIPS compliance grouped with the platform it certifies rather than a singleton domain. Vision statement and open-source announcements not coded as premises per v1.3.2 4.1; founding-team credentials excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-598",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:41:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

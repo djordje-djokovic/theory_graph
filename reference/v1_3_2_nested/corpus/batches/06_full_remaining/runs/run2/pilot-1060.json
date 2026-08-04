@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peer-to-peer car sharing is not limited to dense urban Zipcar-style fleets",
+      "status": "explicit",
+      "evidence_span": "The peer-to-peer model is not limited to dense urban areas like Zipcar"
+    },
+    {
+      "id": "P2",
+      "text": "Owners list cars; platform supplies insurance and takes about 40% commission",
+      "status": "explicit",
+      "evidence_span": "Getaround provides insurance and takes a 40% commission"
+    },
+    {
+      "id": "P3",
+      "text": "Ratings, photos, and in-app request-to-key flow make renting from neighbors workable",
+      "status": "explicit",
+      "evidence_span": "Ratings and reviews help me filter for beautiful cars and great people"
+    },
+    {
+      "id": "P4",
+      "text": "Self-install Car Kit enables secure smartphone-only shared access in minutes",
+      "status": "explicit",
+      "evidence_span": "first ever device designed to securely share access to your car using only a smartphone"
+    },
+    {
+      "id": "P5",
+      "text": "Berkshire Hathaway-backed insurance is included with each rental for national scale",
+      "status": "explicit",
+      "evidence_span": "Getaround provides insurance as part of each rental"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "P2P geographic reach",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Marketplace and renter app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware access and insurance",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Redefine car ownership through hassle-free peer-to-peer sharing",
+      "status": "explicit",
+      "evidence_span": "redefine car ownership"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not limited to dense urban areas"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Airbnb for cars"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peer-to-peer car sharing hassle-free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Idle-car problem folded into value/secondary rather than separate premise this run; P1 keeps the geographic disruption claim.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1060",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:00:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

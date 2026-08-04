@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-721",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The toy industry has seen little of the interactive, grow-with-the-child innovation the founders want; Cognitoys put learning technology inside an internet-connected toy",
+      "status": "explicit",
+      "evidence_span": "internet-connected smart toys that learn and grow with a child"
+    },
+    {
+      "id": "P2",
+      "text": "Dino Cognitoys deliver ongoing witty, educational conversation and content (jokes, stories, scavenger hunts) rather than one-off Q&A",
+      "status": "explicit",
+      "evidence_span": "engaging over the course of weeks and hopefully years, and not just one-off question-answer type engagements"
+    },
+    {
+      "id": "P3",
+      "text": "A parent panel shows engagement metrics and controls (e.g. bedtime, future custom messages), enabling subscription/content/feature upsell beyond one-time toy cycles",
+      "status": "explicit",
+      "evidence_span": "parent panel dashboard"
+    },
+    {
+      "id": "P4",
+      "text": "Retail at $99.99 with strong hardware margins, Kickstarter/retail distribution, and holiday full launch after beta units",
+      "status": "explicit",
+      "evidence_span": "the dynos will retail for $99.99"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "grow-with-child connected toy",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "parent panel and subscription platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retail pricing and launch channels",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun and educational toy experiences that keep kids laughing, asking questions, and learning over time",
+      "status": "explicit",
+      "evidence_span": "We're supposed to be fun and educational"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creating that sassiness, that wittiness, but also being educational"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a platform around the Dino"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "move into a full launch this holiday season"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Low toy innovation folded into connected grow-with-child product thesis rather than separate market-size premise (§4.1.4/6). Jokes/stories/hunts as content cascade of one toy (§4.1.7). Watson contest/Kickstarter/Time honors treated as traction/history and excluded. COGS roadmap kept as quantitative detail of retail offer (§4.1.3/8). Singleton D2/D3 retained as parent-platform and GTM modules. Anti-template: toy product, parent/subscription platform, and retail launch separately revisable."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-130",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-border creator payments via Stripe/PayPal/Kajabi-style stacks are territorial, complex, costly, and require technical expertise many entrepreneurs lack",
+      "status": "explicit",
+      "evidence_span": "the process of integrating with multiple payment APIs in different countries is incredibly complex. It is time consuming and leads to higher transaction fees. Even worse, these entrepreneurs and creators often need a high degree of technical expertise"
+    },
+    {
+      "id": "P2",
+      "text": "Mainstack's unified API abstracts multi-provider payments so non-technical creators get global options with no code in minutes",
+      "status": "explicit",
+      "evidence_span": "a unified and robust API ecosystem that abstracts the complexity of integrating with multiple payment platforms, enabling non-technical entrepreneurs and creators to get access to global payment options without writing any single line of code"
+    },
+    {
+      "id": "P3",
+      "text": "No-code suites (websites, storefronts, invoicing, media kit) sit atop payments to showcase work and convert",
+      "status": "explicit",
+      "evidence_span": "we enable them with no-code suites that make it easier for them to showcase their work and receive payments via websites, storefronts, invoicing, Media Kit, and more"
+    },
+    {
+      "id": "P4",
+      "text": "Real-time IP/geolocation routing chooses which payment APIs to call to avoid transaction hiccups across client locations",
+      "status": "explicit",
+      "evidence_span": "sophisticated IP detection system that dynamically, in real time, analyzes Sandra's client's geolocation with other transaction parameters and use this data set to sort of inform which of the payments APS to call"
+    },
+    {
+      "id": "P5",
+      "text": "Single Mainstack account with compliance approval replaces multiple provider accounts for multi-currency checkout",
+      "status": "explicit",
+      "evidence_span": "rather than Sandra creating multiple accounts on several payment platforms, she creates a single account on Mainstack and completes our compliance requirement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-border payment barrier",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified payment API and routing",
+      "premise_ids": ["P2", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "No-code creator suite",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone anywhere can showcase work and get paid by international clients simply and securely",
+      "status": "explicit",
+      "evidence_span": "enabling anyone from anywhere to showcase their work and receive payment from their customers in a simple and highly secure manner starting in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "international payments are a necessity for many entrepreneurs and creators"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get access to global payment options without writing any single line of code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "showcase their work and receive payments via websites, storefronts, invoicing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Customer/volume/country traction and market-size figures excluded. Team credentials excluded. Website vs drag-drop checkout demo folded into P2/P3 capabilities. Price/partner detail for same offer kept with payment abstraction rather than split."
+}

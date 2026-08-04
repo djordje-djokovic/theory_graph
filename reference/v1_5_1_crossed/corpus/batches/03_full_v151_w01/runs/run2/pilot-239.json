@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-239",
+    "coder_session_id": "session_04",
+    "session_case_index": 15,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stigma, distrust of healthcare, long wait lists, and trial-and-error antidepressant prescribing block effective depression treatment",
+      "status": "explicit",
+      "evidence_span": "why don't patients get treatment for depression"
+    },
+    {
+      "id": "P2",
+      "text": "Existing biomarkers (DNA, mRNA, proteins) fail to be simultaneously predictive, stable, and measurable for depression",
+      "status": "explicit",
+      "evidence_span": "there are no good biomarkers that exist today"
+    },
+    {
+      "id": "P3",
+      "text": "Circular RNA in blood is a stable, predictive biomarker usable for diagnosing and guiding mental-health treatment",
+      "status": "explicit",
+      "evidence_span": "use a new biomarker called circular RNA to help diagnose, monitor treatment, and monitor treatment of mental health conditions"
+    },
+    {
+      "id": "P4",
+      "text": "A lab pipeline of circRNA-specific qPCR and analytics profiles patients to predict depression and medication response",
+      "status": "explicit",
+      "evidence_span": "we use a process called quantitative, circRNA-specific quantitative PCR"
+    },
+    {
+      "id": "P5",
+      "text": "Primary care, telemedicine, and urgent care channels need faster, clearer depression diagnostic workflows",
+      "status": "explicit",
+      "evidence_span": "Primary care, telemedicine, and urgent care"
+    },
+    {
+      "id": "P6",
+      "text": "The same circular-RNA platform can extend to early detection in oncology and neurology",
+      "status": "explicit",
+      "evidence_span": "The platform that our company is developing does not only apply to mental health care"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Depression care access and biomarker gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Circular RNA diagnostic platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Care-channel GTM and platform expansion",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Precision medicine for mental health that improves diagnosis and treatment selection and patient outcomes",
+      "status": "explicit",
+      "evidence_span": "bring precision medicine to mental health diagnostics and therapeutics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Biological basis that can help reduce stigma around depression",
+      "evidence_span": "helps remove the stigma that revolves around depression by giving it a biological basis"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "So what we're trying to do with circular genomics is use a new biomarker called circular RNA"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A patient with depression or an individual with depression can spend months, if not years, trying to find the right antidepressant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help clinicians provide precision medicine leading to improved patient outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We can improve their workflow, increase their volume, reduce those wait lists, and provide the patient a better experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Treatment barriers listed as one pain-bundle (P1). DNA/mRNA/protein comparison folded into biomarker-gap premise P2. Clinical trial accuracy percentages treated as evidence of P3/P4 mechanism, not separate premises. Team credentials excluded."
+}

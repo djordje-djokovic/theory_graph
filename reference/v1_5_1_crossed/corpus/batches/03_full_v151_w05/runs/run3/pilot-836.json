@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-836",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers can top up and manage the connected card remotely from phone, hotel, or home city",
+      "status": "explicit",
+      "evidence_span": "They can top up their card while on their way to the bus, while waiting for the bus from the hotel room or even from their home city"
+    },
+    {
+      "id": "P2",
+      "text": "Every phone becomes a ticket sales channel without physical sales infrastructure",
+      "status": "explicit",
+      "evidence_span": "You don't need a physical infrastructure for that. Instead, every phone becomes a sales channel"
+    },
+    {
+      "id": "P3",
+      "text": "The Fidesmo card integrates into existing public-transport infrastructure",
+      "status": "explicit",
+      "evidence_span": "the Videsmo card integrates seamlessly into their existing infrastructure"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization takes a percentage of public-transport ticket sales",
+      "status": "explicit",
+      "evidence_span": "we intend to sell a lot of tickets and take a percentage on those"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution reaches consumers through public transport operators",
+      "status": "explicit",
+      "evidence_span": "The Fidesmo card will reach the hands of the consumers via public transport operators"
+    },
+    {
+      "id": "P6",
+      "text": "MyFair-based contactless standard enables one card to work across many cities",
+      "status": "explicit",
+      "evidence_span": "70% of all contactless ticketing systems in the world are based on MyFair, and we intend to take advantage of that"
+    },
+    {
+      "id": "P7",
+      "text": "An open API platform lets partners add loyalty, hotel-key, and secure-access services on the card",
+      "status": "explicit",
+      "evidence_span": "Fidesmo is, at the core, an API. We invite other companies to build services on top of our platform"
+    },
+    {
+      "id": "P8",
+      "text": "The connected card is managed and updated from the cloud and can move into the phone later",
+      "status": "explicit",
+      "evidence_span": "the connected card that can be managed and updated from the cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Connected transit card product",
+      "premise_ids": ["P1", "P2", "P3", "P8"]
+    },
+    {
+      "id": "D2",
+      "name": "Transit operator distribution and ticketing take-rate",
+      "premise_ids": ["P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Open API partner services",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One connected card that simplifies multi-city transit and related services",
+      "status": "explicit",
+      "evidence_span": "We will make one card to replace them all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "The reason it works everywhere is that it's based on a technology known as MyFair"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this makes life simple for the consumer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our card will reach the hands of the consumers via public transport organizations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will distribute additional services using open APIs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Transcript begins mid-pitch (workflow/IP sentence cut off); coded only present content and set truncated=true. Coffee/hotel/ISP uses folded as one API-platform mechanism (same mechanism, multiple applications). Singleton D3 retained: open API partner layer is framed as independently revisable beyond transit ticketing. Patents-pending opener not coded as a separate premise beyond incomplete fragment."
+}

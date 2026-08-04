@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-school STEM students lack a way to expose groundbreaking projects to colleges and employers beyond Facebook or team sites",
+      "status": "explicit",
+      "evidence_span": "Students are still having trouble exposing their projects, collaborating with one another, and organizing those projects"
+    },
+    {
+      "id": "P2",
+      "text": "GradFly is a visual portfolio platform where STEM students showcase projects with multimedia uploads",
+      "status": "explicit",
+      "evidence_span": "portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "id": "P3",
+      "text": "Projects are searchable by topic and category so others can find a student's work",
+      "status": "explicit",
+      "evidence_span": "you can search through all kinds of projects that Carla's working on"
+    },
+    {
+      "id": "P4",
+      "text": "An algorithm matches students to colleges based on project interests",
+      "status": "explicit",
+      "evidence_span": "We've created an algorithm that pairs the student to a particular college"
+    },
+    {
+      "id": "P5",
+      "text": "Commendations and badges create prestige and keep students uploading projects",
+      "status": "explicit",
+      "evidence_span": "The more a student has commendations, the more weight and prestige that portfolio has"
+    },
+    {
+      "id": "P6",
+      "text": "College-match pages surface school info and real-time social feeds about programs",
+      "status": "explicit",
+      "evidence_span": "you'll find a little bit more information about the school, including a real-time social media feed"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "STEM project portfolio and discovery",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "college matching",
+      "premise_ids": ["P4", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "commendations and badges engagement",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "STEM students leverage projects to reach colleges and high-tech opportunities",
+      "status": "explicit",
+      "evidence_span": "leverage these projects that students are working on to get into schools like MIT, RPI, Caltech, Cooper Union"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "visual LinkedIn for high school science, technology, engineering, and math students showcasing their most groundbreaking projects"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pairs the student to a particular college"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what's gonna keep students excited about uploading projects"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Expose/collaborate/organize listed troubles coded as one high-school STEM visibility pain-bundle in P1. Story-behind-project timeline UI folded into P2 portfolio surface. iPad/iPhone apps under development treated as channel roadmap detail. Singleton D3 retained as independently revisable engagement loop."
+}

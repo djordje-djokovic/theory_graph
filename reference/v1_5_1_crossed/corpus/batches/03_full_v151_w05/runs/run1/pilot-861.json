@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-861",
+    "coder_session_id": "session_03",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People lack easy visibility into health measurements that truly matter for themselves and loved ones",
+      "status": "explicit",
+      "evidence_span": "how much do you really know about measurements that truly matter? Your health. And the health of your loved ones"
+    },
+    {
+      "id": "P2",
+      "text": "A multi-sensor handheld device captures dozens of health metrics in about 60 seconds and syncs via Bluetooth or a connected cradle",
+      "status": "explicit",
+      "evidence_span": "It's nine integrated sensors and analytics. It's able to track 33 different health metrics. It works just as simple as a digital thermometer, and it takes only 60 seconds to get it done"
+    },
+    {
+      "id": "P3",
+      "text": "Analytics can alert care organizations to abnormalities, supporting elderly, chronic disease, hospital discharge, and consumer remote-monitoring uses",
+      "status": "explicit",
+      "evidence_span": "our analytic software was able to identify and alert the facility of two abnormalities"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from subscriptions, OEM/licensing, and eventually data mining",
+      "status": "explicit",
+      "evidence_span": "How do we make money? Through subscription base, OEM and licensing revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lack of actionable health visibility",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-metric sensor and alerts",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription OEM data monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower people and care settings to take control of health through rapid preventive monitoring",
+      "status": "explicit",
+      "evidence_span": "our passion is empowering you to take control of your health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Avoid costly acute events such as strokes for patients and the system",
+      "evidence_span": "imagine not just the money saved, but the pain and suffering that is avoided by the patient and the family"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "measurements that truly matter? Your health"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A true step forward in preventive care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Through subscription base, OEM and licensing revenue"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-address (truncated=true). EKG/SpO2/BP-without-cuff and score/grade demo folded as metric cascade of one handheld sensor product (v1.5.1 §4.1.7). Elderly pilot details treated as evidence of alert analytics; additional verticals kept inside that care-use premise. Pre-order CTA excluded as ask. Anti-template: need, product/alerts, and monetization separately revisable."
+}

@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Family/friends bill support still largely uses cash and check with a last-mile risk that money never reaches the biller",
+      "status": "explicit",
+      "evidence_span": "Once I give them that money, it may not end up at its intended destination"
+    },
+    {
+      "id": "P2",
+      "text": "Contributors lack visibility into whether others have paid their share",
+      "status": "explicit",
+      "evidence_span": "I don't get any visibility if they've paid their part of that bill"
+    },
+    {
+      "id": "P3",
+      "text": "PayTap lets people collaborate on a bill with funds going directly to the biller",
+      "status": "explicit",
+      "evidence_span": "We allow people to collaborate and contribute towards a bill with the money going directly to the biller"
+    },
+    {
+      "id": "P4",
+      "text": "Users can share bills and pay without signing up, choosing amount and payment method while keeping financial details private",
+      "status": "explicit",
+      "evidence_span": "she's able to go to Paytap without signing up for an account"
+    },
+    {
+      "id": "P5",
+      "text": "Alerts, recurring payments, private-mode shares, and FDIC-insured funds support multi-party bill collaboration",
+      "status": "explicit",
+      "evidence_span": "we can set up things like recurring payments"
+    },
+    {
+      "id": "P6",
+      "text": "Merchant integrations (e.g., Amazon) and biller distribution let merchants offer shared checkout",
+      "status": "explicit",
+      "evidence_span": "we're allowing billers and online merchants to offer Paytap to their users so that they can get payments made"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared-bill last-mile problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Direct-to-biller collaboration product",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Biller and merchant distribution",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Elegant shared payments where collaborators contribute and money goes straight to the biller",
+      "status": "explicit",
+      "evidence_span": "we're the definition of elegant organisation for shared payment"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Remove stress, steps, and hassle of multi-party payments",
+      "evidence_span": "We take out the stress, the steps, and all the hassle involved in making payments"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Problem is last mile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "money going directly to the biller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "billers and online merchants to offer Paytap to their users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "$865B market framing excluded. Feature list (alerts, recurring, private mode, FDIC) folded into one collaboration premise where possible; recurring kept in P5 as part of collaboration module. Web/FB/mobile apps as packaging not split.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1023",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

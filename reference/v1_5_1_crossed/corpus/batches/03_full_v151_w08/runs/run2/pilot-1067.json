@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1067",
+    "coder_session_id": "session_01",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:01Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sharing and getting local breaking news sucks: not real-time, accurate, local, or relevant enough",
+      "status": "explicit",
+      "evidence_span": "sharing and getting news right now kind of sucks. There's no great way to break news"
+    },
+    {
+      "id": "P2",
+      "text": "Location-based mobile news desk: map pins, newswire list, categories, text/video/pictures, directions",
+      "status": "explicit",
+      "evidence_span": "your local mobile news desk, allowing you to report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "Eyewitness check-in lets people on-scene add their account and media to a story",
+      "status": "explicit",
+      "evidence_span": "we actually allow you to check in as an eyewitness. Once you check in as an eyewitness, you can tell people what you've seen"
+    },
+    {
+      "id": "P4",
+      "text": "Easy live posting of newsworthy items with category selection",
+      "status": "explicit",
+      "evidence_span": "we make it very easy for you to post it live"
+    },
+    {
+      "id": "P5",
+      "text": "Social profiles, friend invites, and press-pass badges/rewards incentivize posting",
+      "status": "explicit",
+      "evidence_span": "we also have a rewards program that we've built out in the app as well to reward people for posting the news"
+    },
+    {
+      "id": "P6",
+      "text": "Web mirrors the app for searching local news by area",
+      "status": "explicit",
+      "evidence_span": "If you visit meporter.com, all you have to do is search for local news in your area"
+    },
+    {
+      "id": "P7",
+      "text": "Monetize via promoted stories, publisher data syndication, ads, and category corporate sponsors",
+      "status": "explicit",
+      "evidence_span": "we're going to allow people to actually promote their news stories at the top of the search results"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken local breaking-news problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "location citizen-news product",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "promoted stories syndication ads sponsors",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users decide and report what local news matters as it happens",
+      "status": "explicit",
+      "evidence_span": "MePorter solves that by allowing you to decide what local news is important"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting breaking news is not the best way right now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "report, update, and read local news as it happens"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "promote their news stories at the top of the search results"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Map/newswire/categories/media/directions folded as one location news-desk cascade (§4.1.7). Pain list (not real-time/accurate/local/relevant) folded as one problem (§4.1.6). Prize drawings and Million Man launch promo excluded. Four monetization paths folded as one commercial package for local news inventory. Anti-template: problem, product, monetization separately revisable."
+}

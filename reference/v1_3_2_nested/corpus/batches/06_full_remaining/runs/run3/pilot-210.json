@@ -1,0 +1,94 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Employment software is not built for deskless workers or for employers to meet their needs",
+      "status": "explicit",
+      "evidence_span": "employers have no structure or no setup to meet the needs of these deskless workers"
+    },
+    {
+      "id": "P2",
+      "text": "Antil is a text-based two-way support portal with auto FAQ replies, translation, turnover prediction, and auto-populated job data",
+      "status": "explicit",
+      "evidence_span": "Our system enables access to the software, replies to FAQs automatically, translates into over 110 languages, predicts turnover, and populates employee job data automatically"
+    },
+    {
+      "id": "P3",
+      "text": "Mutual trust that reduces turnover requires first providing access to communication between employees and employers",
+      "status": "explicit",
+      "evidence_span": "The mutual trust is the core component of reducing turnover. However, to build trust, we first need to provide access to that communication"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Deskless employment gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Text support portal bridging both sides",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve organizational retention of deskless workers",
+      "status": "explicit",
+      "evidence_span": "improve retention across your organization"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Complete inclusivity of the entire workforce including factory, delivery, and store workers",
+      "evidence_span": "Entel provides a complete inclusivity of the entire workforce"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Current employment solutions are not actually built for these workers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Antil helps both employees and employers"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "to build trust, we first need to provide access to that communication"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Feature list in product sentence kept as one portal premise. Explicit access→trust dependency coded. Analytics Pro treated as part of same portal rather than separate domain.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-210",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

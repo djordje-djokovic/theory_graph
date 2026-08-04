@@ -1,0 +1,132 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The modern retail environment weaponizes hardwired human impulses, so Americans waste 10-20% of disposable income on unwanted impulse buys",
+      "status": "explicit",
+      "evidence_span": "Most of us in America are actually spending between 10 and 20% of our disposable income on these silly purchases we don't need, and most of the time don't even remember making"
+    },
+    {
+      "id": "P2",
+      "text": "Conventional personal-finance advice built on plans, budgets, and spreadsheets does not work",
+      "status": "explicit",
+      "evidence_span": "you must create a plan, you must have a budget, you must stick to that financial diet, you must use spreadsheets and budgets. Well, look at their results. It doesn't work."
+    },
+    {
+      "id": "P3",
+      "text": "Saving has to be redesigned to fit human nature rather than changing people to fit savings",
+      "status": "explicit",
+      "evidence_span": "Instead of changing people or trying to to fit into savings, we've actually changed saving to fit into people."
+    },
+    {
+      "id": "P4",
+      "text": "Users open an FDIC-insured, interest-bearing online piggy bank linked to any external checking account",
+      "status": "explicit",
+      "evidence_span": "In doing so, they create an online piggy bank, a savings account that's FDIC-insured and interest-bearing."
+    },
+    {
+      "id": "P5",
+      "text": "Users anchor their saving to personal goals they care about",
+      "status": "explicit",
+      "evidence_span": "Then, they create goals. And a goal can be anything from an iPad, to a travel vacation, to paying down your student debt"
+    },
+    {
+      "id": "P6",
+      "text": "At the moment of impulse, the app moves the would-be purchase amount into savings and instantly rewards the saver",
+      "status": "explicit",
+      "evidence_span": "throwing it back on the rack and not buying it, but have the amount she was just about to have spent be transferred automatically in that moment into her ImpulseSave savings account"
+    },
+    {
+      "id": "P7",
+      "text": "Optional social sharing turns saving into bragging that reinforces the behavior",
+      "status": "explicit",
+      "evidence_span": "close to 40% of our users choose to share their impulse saves. It's an aspect of bragging."
+    },
+    {
+      "id": "P8",
+      "text": "ImpulseSave re-markets users' own goals back to them through email, progress updates, and behavior- and location-based push notifications",
+      "status": "explicit",
+      "evidence_span": "We do that through email updates and progress updates. We do that through notifications. Push notifications based on your behavior. Push notifications based on your current location."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Why people fail at saving",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Save-at-the-moment product",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Engagement and social reinforcement",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Saving money becomes as easy and instantly gratifying as spending it, so people actually save",
+      "status": "explicit",
+      "evidence_span": "ImpulseSave has actually made it just as easy and as instantly gratifying to save your money as it is to spend it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "It doesn't work. So what we've actually done is we've actually come at this problem from the exact opposite direction."
+    },
+    {
+      "from": "P4",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "They then link that account to their external checking account, wherever they bank, it doesn't matter, so that they can move money out of harm's way whenever they want to."
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Look, people love to save money. And there's no mystery there, right? We all love to save money."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ImpulseSave has actually made it just as easy and as instantly gratifying to save your money as it is to spend it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "talk about exactly why this works so effectively and why, for some of our users, it's actually addictive"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Usage figures (two saves/week, $15 average, $3,000/year) excluded as traction per 4.2. Save-from-anywhere channels (Instagram hashtag, SMS, in-site checkout) folded into the impulse-moment mechanism per v1.3.2 clarification 5; the planned matching-funds incentive folded into the goal-marketing premise. D3 groups two reinforcement loops (social sharing, goal re-marketing) that are revised separately from the core save mechanism.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1013",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:20:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

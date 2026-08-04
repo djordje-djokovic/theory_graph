@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing blood analyzers detect only a handful of indications and most customers cannot afford the cost of ownership",
+      "status": "explicit",
+      "evidence_span": "These existing blood analyzers can only detect a handful of indications, and most customers can't really pay the cost of ownership"
+    },
+    {
+      "id": "P2",
+      "text": "One integrated, modular device replaces the analyzer: centrifuge, spectrophotometer, and reagent-swap flexibility on a phone dongle",
+      "status": "explicit",
+      "evidence_span": "we've integrated the centrifuge, basically the drop of blood sample prep. We've integrated the spectrophotometer, and this also connects to your USB"
+    },
+    {
+      "id": "P3",
+      "text": "The first test is ALT/AST liver enzymes, complementing blood gas analyzer menus and measurable only spectrophotometrically",
+      "status": "explicit",
+      "evidence_span": "And the reason we're working with ALT and AST is because they complement the existing menus of blood gas analyzers, but they could only be measured spectrophotometrically"
+    },
+    {
+      "id": "P4",
+      "text": "The veterinary emergency and critical-care space is the first opportunity, running rapid screens before anesthesia or drugs",
+      "status": "explicit",
+      "evidence_span": "the emergency and critical care alongside the blood gas analyzer is a first opportunity"
+    },
+    {
+      "id": "P5",
+      "text": "UC Davis validation across 100 animal samples and five species achieved R-squared 0.97 for ALT and 0.99 for AST",
+      "status": "explicit",
+      "evidence_span": "We ran 100 animal samples across five different species, and we achieved an R-squared of 0.97 for ALT and a 0.99 for AST"
+    },
+    {
+      "id": "P6",
+      "text": "The rapid chemistry segment beyond liver has no low-cost competitors, only generic analytes, and no barriers to entry",
+      "status": "explicit",
+      "evidence_span": "it has no low-cost competitors. It has only about 20 analytes that are all generic. There's no proprietary antibodies or reagents to go after. And there's no barriers to entry"
+    },
+    {
+      "id": "P7",
+      "text": "Disruption comes from changing the model from razor-razorblade to a single-use disposable, controlled by vertical integration",
+      "status": "explicit",
+      "evidence_span": "we are going to disrupt it by changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Analyzer cost and coverage gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated modular test device",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Veterinary liver-test beachhead",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Menu expansion and disposable economics",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Blood testing made easier and more affordable at the point of care",
+      "status": "explicit",
+      "evidence_span": "InDiagnostics is making testing easier and more affordable, not with a universal analyzer, but by eliminating the analyzer altogether"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "And the reason we're working with ALT and AST is because they complement the existing menus of blood gas analyzers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making testing easier and more affordable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "D1 and D2 are singletons: the market-gap claim is testable independently, and the integrated device is the core separately learnable module whose modularity (reagent swaps, no pumps or valves, self-heating, flexible sample types) is folded in per v1.3.2 clarification 5 as parts of one device. P3->P4 coded on the explicit 'the reason ... is because' warrant. Market-size figures ($200M, $2B, $15B) stay inside their premises as quantitative detail. Research-market and home-monitoring segments are mentioned as later opportunities and folded into the beachhead/expansion premises rather than coded separately."
+}

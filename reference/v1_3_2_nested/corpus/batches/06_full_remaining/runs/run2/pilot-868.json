@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Non-specialists face a multi-role pipeline from question to insight that takes weeks and is expensive",
+      "status": "explicit",
+      "evidence_span": "They can ask a question, but then they need a data engineer to collate the data and clean it, and then a data scientist to analyze the data"
+    },
+    {
+      "id": "P2",
+      "text": "Analytics, payments, and other service data sit in silos that worsen as more services are adopted",
+      "status": "explicit",
+      "evidence_span": "Data is in silos"
+    },
+    {
+      "id": "P3",
+      "text": "Connecting services creates a 360-degree customer view and auto-extracts patterns",
+      "status": "explicit",
+      "evidence_span": "bring in all the data from their payment services, from their marketing channels, social channels, and so on, to create a 360-degree view"
+    },
+    {
+      "id": "P4",
+      "text": "One-click Predictions builds models of influencing factors and scores who will churn",
+      "status": "explicit",
+      "evidence_span": "click the Predictions button"
+    },
+    {
+      "id": "P5",
+      "text": "One-click Segments clusters similar-behavior groups and explains shared features",
+      "status": "explicit",
+      "evidence_span": "click on the Segments button"
+    },
+    {
+      "id": "P6",
+      "text": "SaaS pricing starts at $1,000/month and rises with volume",
+      "status": "explicit",
+      "evidence_span": "SaaS service. We make it super simple for you to use Predictive Insights. And we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data access divide",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Auto unify predict segment",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Volume-based SaaS fee",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify data science so everyone can get predictive insights",
+      "status": "explicit",
+      "evidence_span": "simplifies data science and makes it accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empower their employees to easily mine the data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extract patterns out of it automatically"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable rate of $1,000 per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "This run splits Predictions vs Segments as separately demoed workflows with distinct buttons; still same domain. Economy-of-data-science vision framing not premised. Price+volume one commercial premise."
+}

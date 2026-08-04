@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-706",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:50:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medical tourism is dominated by travel agents who leave patients with unvetted doctors, poor outcomes, and low trust",
+      "status": "explicit",
+      "evidence_span": "this industry is dominated by travel agents"
+    },
+    {
+      "id": "P2",
+      "text": "Patients travel abroad to save money, save wait time, or access procedures unavailable at home",
+      "status": "explicit",
+      "evidence_span": "there are three main reasons patients travel for medical care"
+    },
+    {
+      "id": "P3",
+      "text": "MedRepublic is a marketplace connecting American and Canadian patients to English-speaking, board-certified, top-rated doctors abroad with strict vetting",
+      "status": "explicit",
+      "evidence_span": "an online global health marketplace that enables American and Canadian patients to connect with English-speaking, board-certified, top-rated doctors around the world"
+    },
+    {
+      "id": "P4",
+      "text": "Platform provides transparent pricing, ratings, HIPAA-compliant messaging/files, and handles administrative documents, records, and payments",
+      "status": "explicit",
+      "evidence_span": "Metro Public does all the administrative work, collecting documents, records, and payments"
+    },
+    {
+      "id": "P5",
+      "text": "Launch markets are Mexico, Costa Rica, and the Cayman Islands with dozens of vetted doctors across specialties and destinations",
+      "status": "explicit",
+      "evidence_span": "we are launching with Mexico, Costa Rica, and the Cayman Islands"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Untrusted medical tourism demand",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Vetted global doctor marketplace",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Initial destination launch set",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Transparent, secure, trusted access to world-class medical care abroad",
+      "status": "explicit",
+      "evidence_span": "create a transparent, secure, and trusted marketplace to facilitate world-class medical care"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leads to a lack of trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Each of our doctors go through a strict vetting process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launching with 60 doctors covering 10 specialties in nine destinations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three traveler motivations kept as one demand-side problem-set with industry trust failure (§4.1.6). Vetting steps, algorithm ranking, chat/video/files folded into marketplace mechanism cascade (§4.1.7). Procedure-count/savings traction and family medical biography excluded. Anti-template: demand/trust problem, marketplace product, and launch geography are separately revisable."
+}

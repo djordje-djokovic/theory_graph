@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Breaches are inevitable so organizations must mitigate breach cost; encryption is the most effective measure",
+      "status": "explicit",
+      "evidence_span": "it's no longer a question of whether a breach will occur, but rather what the cost of this breach will be"
+    },
+    {
+      "id": "P2",
+      "text": "Calypso keeps cloud database data encrypted at rest, in transit, and in memory while still allowing search",
+      "status": "explicit",
+      "evidence_span": "the data remains encrypted, addressed, in transit, and in memory at the database storage"
+    },
+    {
+      "id": "P3",
+      "text": "Data decrypts only in the application; the key is never revealed and no application changes are required",
+      "status": "explicit",
+      "evidence_span": "The key never gets revealed, and no application changes are required"
+    },
+    {
+      "id": "P4",
+      "text": "A Docker interceptor encrypts the stream in real time and supports SQL analytics on ciphertext with dynamic re-encryption",
+      "status": "explicit",
+      "evidence_span": "Our Docker intercepts the data stream and encrypts the data in real time before storing it"
+    },
+    {
+      "id": "P5",
+      "text": "Oblivious RAM plus differential privacy yields efficient secure indexing beyond prior encrypted-DB tradeoffs",
+      "status": "explicit",
+      "evidence_span": "we combine cryptography, so oblivious RAM, with differential privacy in order to ensure an efficient and secure indexing of these records"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market targets financial services, cloud-native firms, and database providers as channel partners",
+      "status": "explicit",
+      "evidence_span": "working with direct engagements with financial services, medium-sized, cloud-native companies, and also database providers as channel partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Breach-cost encryption need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Never-decrypt searchable database",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "FS and channel partners",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "True cloud-database security with usable private search and analytics",
+      "status": "explicit",
+      "evidence_span": "first never decrypt cloud database solution"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "private search engine on top of encrypted data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "database providers as channel partners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Pre-revenue, pilots, and raise excluded per 4.2. Team bios excluded except proprietary Harvard crypto treated as technology premise P5. ASR 'addressed' left in evidence_span; premise text corrected to at-rest.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-483",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

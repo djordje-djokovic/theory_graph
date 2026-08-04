@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People default to familiar places because trying somewhere new feels risky",
+      "status": "explicit",
+      "evidence_span": "we don't want to take the chance and try to go to a new place because we're not sure that we're going to like the experience"
+    },
+    {
+      "id": "P2",
+      "text": "SpotOn personalizes place recommendations from Facebook and Foursquare social network data",
+      "status": "explicit",
+      "evidence_span": "pulling in your existing social network data from Facebook and Foursquare, uses it to build a profile of you to give you personalized and actionable recommendations"
+    },
+    {
+      "id": "P3",
+      "text": "Friend ratings and who-to-go-with cues provide trusted social reasons to try a place",
+      "status": "explicit",
+      "evidence_span": "when I see that my coffee lover friend has rated a place four out of four, that means a lot more to me than if a completely random person had rated the place the same exact rating"
+    },
+    {
+      "id": "P4",
+      "text": "User-contributed ratings in SpotOn improve everyone's recommendations via a new shared information layer",
+      "status": "explicit",
+      "evidence_span": "Every piece of data that I contribute to SpotOn adds to this entirely new layer of information that did not exist before"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Risk of new places",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social graph personalization and contribution loop",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how friends come together in the physical world by getting them to great shared experiences",
+      "status": "explicit",
+      "evidence_span": "it's changing the way that friends come together in the physical world"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Easiest way to go to new places with friends",
+      "evidence_span": "SpotOn is the easiest way to go to new places with your friends"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "try to go to a new place"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized and actionable recommendations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.71
+  },
+  "notes": "Filters/UI features folded into personalization offering (v1.3.2). Pipeline group plans not coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1075",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:10+02:00"
+  }
+}

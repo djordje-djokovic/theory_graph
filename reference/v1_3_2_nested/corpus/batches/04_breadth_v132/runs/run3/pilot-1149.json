@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "There is no good enterprise knowledge base; knowledge sits in emails, IMs, and conversations",
+      "status": "explicit",
+      "evidence_span": "It was siloed in emails, IMs, conversations. There was no good knowledge base."
+    },
+    {
+      "id": "P2",
+      "text": "All content is organized around questions rather than segmented wiki documents",
+      "status": "explicit",
+      "evidence_span": "unlike a wiki, which is all segmented into separate documents, all our content is organized around questions"
+    },
+    {
+      "id": "P3",
+      "text": "A voting mechanic lets colleagues endorse the best answers",
+      "status": "explicit",
+      "evidence_span": "We have a voting mechanic that allows people to stand behind and endorse certain answers"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise-grade anonymity lets people ask the seemingly stupid questions that are the most common mistakes",
+      "status": "explicit",
+      "evidence_span": "it allows for people to ask questions that maybe they thought was a little bit stupid but really are important because these are the most common mistakes that are made over and over again"
+    },
+    {
+      "id": "P5",
+      "text": "A fast, powerful search engine retrieves previous answers",
+      "status": "explicit",
+      "evidence_span": "very fast, very powerful search engine that allows people to find previous answers to questions that they have already"
+    },
+    {
+      "id": "P6",
+      "text": "Users can ask and answer directly by email, with listserv content extracted into the searchable index and questions routed to the best candidates",
+      "status": "explicit",
+      "evidence_span": "we allow people to ask questions directly by email, answer them directly by replying to an email"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing enterprise knowledge base",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Question-centered knowledge platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Email integration and routing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees at large companies share knowledge and turn to Opsy first when looking for answers",
+      "status": "explicit",
+      "evidence_span": "Opsy's mission is to help people at companies share knowledge."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not being able to know what other people already knew"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the power of this site is magnified when other people come on and answer questions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put them in our searchable index"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Feature-level reading: the speaker gives each mechanic (voting, anonymity, search) its own enterprise rationale, so they are coded as separate premises here; corporate-email verification is treated as an onboarding detail of the platform rather than its own premise. Singleton D1 (the need) and singleton D3 (the email integration track) each name an independently revisable module. The 'first place people turn' goal is treated as aspiration and not coded as a premise (v1.3.2 clarification 4). Investors and waitlist excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:33:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

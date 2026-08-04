@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-739",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Organizations relying on large contractor/vendor networks lack formal ways to find, engage, and coordinate external workers across channels and document apps",
+      "status": "explicit",
+      "evidence_span": "This whole workflow process between companies to outsource parties is a complete mess and super inefficient"
+    },
+    {
+      "id": "P2",
+      "text": "A searchable internal contractor index with flexible onboarding templates centralizes contributor information for all employees",
+      "status": "explicit",
+      "evidence_span": "All of their contributor network information, past and future, will be stored in one place"
+    },
+    {
+      "id": "P3",
+      "text": "Dual private/shared project tracking with object-based email-integrated communication coordinates teams and contributors on briefs",
+      "status": "explicit",
+      "evidence_span": "it will create this dual project tracking interface"
+    },
+    {
+      "id": "P4",
+      "text": "Auto-requested performance feedback and centralized invoice approval/payment across many countries preserve institutional knowledge and scale payouts",
+      "status": "explicit",
+      "evidence_span": "we will auto-request feedback from all the team members that have worked with Patrick"
+    },
+    {
+      "id": "P5",
+      "text": "Offered as freemium SaaS for companies managing diverse contractor networks as contractor-heavy work becomes mainstream",
+      "status": "explicit",
+      "evidence_span": "we're a SaaS company with a freemium model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contractor workflow chaos",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "index onboard projects and pay",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium SaaS packaging",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies can onboard, manage, communicate with, and pay large contributor networks efficiently",
+      "status": "explicit",
+      "evidence_span": "onboard, manage, communicate with, and pay these huge contributor networks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we had no formalized way to handle this"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitating a new way of working together"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "any company can sign up at our new website, listable.com, and use the product entirely for free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Finding contractors via shout/email/spreadsheet and multi-channel engagement folded as one outsourcing-workflow problem (v1.5.1 §4.1.6). Demo steps for cards/templates/booking folded into index+onboarding and project modules; feedback and invoices kept as a separately emphasized ops/pay capability within the product domain. Logo/customer list and flatmate financing excluded as traction/ask. 2020 workforce stats kept inside freemium GTM as market-timing condition for the packaging premise."
+}

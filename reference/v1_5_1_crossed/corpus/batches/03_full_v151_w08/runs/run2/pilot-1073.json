@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1073",
+    "coder_session_id": "session_01",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "At conferences and crowded venues people miss valuable nearby connections and stare at distant messages instead",
+      "status": "explicit",
+      "evidence_span": "stand by the conference bar eating peanuts, wondering who you should talk to next"
+    },
+    {
+      "id": "P2",
+      "text": "App lists trending nearby venues and shows how you are connected to everyone there",
+      "status": "explicit",
+      "evidence_span": "we give you a list of trending venues nearby. All it takes is one click to see how you're connected to everyone in that venue"
+    },
+    {
+      "id": "P3",
+      "text": "Scours the web, aggregates public profiles, and sorts the room by relevance to you",
+      "status": "explicit",
+      "evidence_span": "Sonar scours the web for people at this venue, then aggregates and synthesizes publicly available profile data, and then sorts the room by who's most relevant to you"
+    },
+    {
+      "id": "P4",
+      "text": "One-click overview of shared interests, friends, and bio for a stranger",
+      "status": "explicit",
+      "evidence_span": "With one click, Sonar gives me an instant overview of Fergus and how we're connected"
+    },
+    {
+      "id": "P5",
+      "text": "Hyper-targeted intro message with social proof to start the conversation in-venue",
+      "status": "explicit",
+      "evidence_span": "you're never more than one click away from a hyper-targeted introduction to the person you want to meet"
+    },
+    {
+      "id": "P6",
+      "text": "Hyperlocal digital self-expression: tell people here that you're here and what you're about",
+      "status": "explicit",
+      "evidence_span": "Sonar's laser-focused on giving you a way to tell people here that you're here and this is what you're about"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "missed in-person connections problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "venue relevance ranking and intros",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "hyperlocal self-expression",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncover hidden connections with people in the same room so meetings aren't left to chance",
+      "status": "explicit",
+      "evidence_span": "uncovers the hidden connections that you share with everyone else in this room"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hyperlocal social CRM that saves time and money",
+      "evidence_span": "powerful, hyperlocal social CRM tool that is going to save you time and money"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's why we built Sonar"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bottled the thousands of connections that I definitely would have missed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "digital local self-expression that you can use to share what you're proud of and what you're looking for"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three-click demo cascade folded into ranking/overview/intro product facets that could fail somewhat independently—kept P2–P5 split as distinct jobs under enumeration rule 2. Democratize meatspace vision folded into value/self-expression rather than extra premise (§4.1.4). Anti-template: problem, matching product, self-expression module separately revisable."
+}

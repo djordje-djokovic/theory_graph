@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Artists struggle to earn from streams while wanting to reach distant fans live",
+      "status": "explicit",
+      "evidence_span": "this has made it very hard for artists to make a living today"
+    },
+    {
+      "id": "P2",
+      "text": "Spacebar mobile platform streams live club performances worldwide with free previews and paid full listens",
+      "status": "explicit",
+      "evidence_span": "Space Bar streams live audio performances to mobile devices"
+    },
+    {
+      "id": "P3",
+      "text": "Listener analytics give bands tour-planning data and venues booking intelligence they lacked",
+      "status": "explicit",
+      "evidence_span": "This is new data that the bands had never seen before"
+    },
+    {
+      "id": "P4",
+      "text": "Club launch network and Backplane partnership supply inventory and big-artist fan communities at scale",
+      "status": "explicit",
+      "evidence_span": "our partnership with Backplane"
+    },
+    {
+      "id": "P5",
+      "text": "One-button live broadcast from phone works for both emerging artists and superstars",
+      "status": "explicit",
+      "evidence_span": "With a push of a button, the artist is live, on the air"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Live stream and broadcast UX",
+      "premise_ids": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Artist economics and intelligence",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Venue and community distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fans hear live music as though they are there and can support artists directly",
+      "status": "explicit",
+      "evidence_span": "For 99 cents, it's as though I'm there"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help musicians better connect with their fans",
+      "evidence_span": "help musicians to better connect with their fans"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "streams live audio performances to mobile devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fans that wish to support artists to directly do so"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reach out to all of their fans all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "99-cent price folded into streaming product commercial condition with previews (v1.3.1 #3). Singleton distribution domain justified by Backplane/club channel as independent module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-935",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:18+02:00"
+  }
+}

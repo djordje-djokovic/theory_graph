@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-206",
+    "coder_session_id": "session_03",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Labor shortages across construction, agriculture, restaurants, and manufacturing create a large economic gap",
+      "status": "explicit",
+      "evidence_span": "There is a labor crisis in the US across the construction, agriculture, restaurant, and manufacturing industries, having a $1 trillion negative impact on the US economy"
+    },
+    {
+      "id": "P2",
+      "text": "Factory automation robots with strain-wave gears, external control boxes, and extreme precision do not fit everyday jobs",
+      "status": "explicit",
+      "evidence_span": "Robotic innovation has focused on factory automation that doesn't translate well to everyday automation. These industrial robots have big external control boxes with difficult-to-manufacture strain wave gears and legacy PLCs"
+    },
+    {
+      "id": "P3",
+      "text": "Ally Arm combines planetary gears, integrated power, novel joint, quick-change actuator, and application skins for affordable everyday automation",
+      "status": "explicit",
+      "evidence_span": "We've opted for proven planetary gears that are 97% efficient and 20% the cost of strain wave gears. We've removed the external control box, and you can power the Ally arm from a standard 110 AC outlet"
+    },
+    {
+      "id": "P4",
+      "text": "Machine vision, imitation learning, and AI let non-experts program by demonstration (microbehaviors)",
+      "status": "explicit",
+      "evidence_span": "With a combination of machine vision, imitation learning, AI, and hardware innovation, we can significantly expand the market for robotic technology and everyday automation"
+    },
+    {
+      "id": "P5",
+      "text": "NVIDIA Isaac collaboration provides edge compute, AI, and simulation tools for developers and non-developers",
+      "status": "explicit",
+      "evidence_span": "We are collaborating with NVIDIA to adopt the Isaac platform for edge compute, AI, and simulation to accelerate our development and provide the best development tools, not just for developers, but anyone"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Everyday automation labor gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Ally Arm hardware and learn-by-showing AI",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, easy-to-train robotics for anyone, anywhere",
+      "status": "explicit",
+      "evidence_span": "enabling robotics for anyone, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We must create the right tool for the right job"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The Ally Arm is the smartest, most affordable, easy-to-service, and simple-to-train robotic arm"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Planetary gears, control-box removal, novel joint, quick-change actuator, and skins folded into one Ally Arm hardware mechanism (feature cascade P3). LOI and monthly services excluded as traction."
+}

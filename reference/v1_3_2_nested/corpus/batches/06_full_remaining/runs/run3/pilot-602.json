@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-602",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "One-third of clothing returns stem from fit, and designers' two-shape training excludes half of women",
+      "status": "explicit",
+      "evidence_span": "How can one third of clothing be returned because it doesn't fit?"
+    },
+    {
+      "id": "P2",
+      "text": "Savitude recommends garments for individual body shape and proportion using design details in each item",
+      "status": "explicit",
+      "evidence_span": "We make recommendations on clothing for an individual body shape and proportion using the design details in an individual garment"
+    },
+    {
+      "id": "P3",
+      "text": "Shape filter combines AI/visual recognition/ML knowledge systems with a UI that captures shopper shape and proportion",
+      "status": "explicit",
+      "evidence_span": "Our IP is scalable very easily. Our AI, visual recognition, machine learning, knowledge-based systems classify assortments"
+    },
+    {
+      "id": "P4",
+      "text": "Personalized boutique subsets make shopping easier than size-only competitors",
+      "status": "explicit",
+      "evidence_span": "we've taken everything in this collection and narrowed it down to what works for her, making her shopping a whole lot easier"
+    },
+    {
+      "id": "P5",
+      "text": "Annual B2B contract with upfront fee and percentage of sales integrates with retailer inventory systems",
+      "status": "explicit",
+      "evidence_span": "annual contract with an upfront fee and a percentage of sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shape-driven returns problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Shape filter recommendations",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Retail share-of-sales contracts",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make dressing well ridiculously easy for women across body shapes",
+      "status": "explicit",
+      "evidence_span": "Savitude is making dressing well ridiculously easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Increase sales, decrease returns, help all women not just idolized few",
+      "evidence_span": "Help women, help all women, and not just the few idolized women"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The solution must include shape"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "perfect for this shopper's body and proportion"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve our retail economics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Merged fit-returns and design-table exclusion into one desirability premise. Patent/IP scalability folded into shape filter (v1.3.1 §4.1(1)). Accessories future expansion uncoded as vision."
+}

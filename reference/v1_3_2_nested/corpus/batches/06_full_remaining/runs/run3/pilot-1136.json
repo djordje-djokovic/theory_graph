@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile replaces search as the channel for introducing consumers to products",
+      "status": "explicit",
+      "evidence_span": "instead of using search, we're using mobile"
+    },
+    {
+      "id": "P2",
+      "text": "A store-agnostic rewards app lets shoppers earn rewards in over one million U.S. stores on iPhone",
+      "status": "explicit",
+      "evidence_span": "consumers can earn rewards in over one million stores throughout the U.S. with just their iPhone"
+    },
+    {
+      "id": "P3",
+      "text": "Advertisers can message shoppers in the aisle with product in hand as a virtual end cap",
+      "status": "explicit",
+      "evidence_span": "So our advertisers are calling it a virtual end cap"
+    },
+    {
+      "id": "P4",
+      "text": "Product scan earns points and opens a flexible advertiser interaction page",
+      "status": "explicit",
+      "evidence_span": "They earn points, and something even more interesting happens. We call it the product interaction page"
+    },
+    {
+      "id": "P5",
+      "text": "Coin play on scans can yield additional redeemable points",
+      "status": "explicit",
+      "evidence_span": "They can play these coins in a variety of gaming ways and see if they're lucky enough to earn additional points"
+    },
+    {
+      "id": "P6",
+      "text": "Partnerships supply redeemable prizes including gift certificates and airline miles",
+      "status": "explicit",
+      "evidence_span": "Amazon gift certificates, CVS, airline miles with a number of airline partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer rewards loop",
+      "premise_ids": ["P2", "P5", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile in-store advertising",
+      "premise_ids": ["P1", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advertisers get in-store discovery while consumers earn extra shopping rewards",
+      "status": "explicit",
+      "evidence_span": "advertisers to drive discovery and interaction in-store while providing a fun and rewarding opportunity for consumers to get just a little bit of extra value"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "this advertising is reaching the consumer at that most valuable moment where they're in the store with the product in hand"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "walking into a store and walking out with rewards"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive foot traffic to your product and have consumers pick it up and check it out"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Consumer rewards vs advertiser mobile reach treated as separately revisable modules. Bio and exit excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1136",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

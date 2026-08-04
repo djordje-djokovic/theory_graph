@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-108",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing text and video options fail personal, spontaneous communication with distant loved ones",
+      "status": "explicit",
+      "evidence_span": "text, which is very convenient, but not really personal"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time half-duplex video messaging lets recipients watch while you still record, with cloud storage for later viewing",
+      "status": "explicit",
+      "evidence_span": "somebody can watch it while you're still recording it"
+    },
+    {
+      "id": "P3",
+      "text": "The consumer product stays free with all features free and completely ad-free",
+      "status": "explicit",
+      "evidence_span": "we want to be a free app with all of our features free"
+    },
+    {
+      "id": "P4",
+      "text": "Patent-pending half-duplex async messaging can enrich third-party apps and enterprise use cases",
+      "status": "explicit",
+      "evidence_span": "patent-pending technology that can really change and enrich how other applications interact with their users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "personal communication gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Glide consumer messaging",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "third-party and enterprise messaging",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Video messaging with text convenience and video personality for spontaneous personal communication",
+      "status": "explicit",
+      "evidence_span": "the convenience of text messaging, but the personality of video"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a communication problem with family and friends"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "somebody can watch it while you're still recording it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "send a half-duplex, asynchronous message instantaneously is powerful"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Text/video/attachment frictions folded into one pain-bundle (v1.5.1 §4.1.6). Cloud storage and live-or-later viewing folded into P2 as facets of one messaging mechanism. Advisor credentials excluded. GlideBot support framed as demo of the messaging tech, not a separate premise. Transcript ends mid-sentence (truncated=true)."
+}

@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-678",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lead, arsenic, mercury and other contaminants pollute water widely, while consumer filters and under-sink RO systems fail to remove small particles efficiently or install easily",
+      "status": "explicit",
+      "evidence_span": "these kind of filters do not clean out any other smaller particles, such as mercury, lead, or even salt"
+    },
+    {
+      "id": "P2",
+      "text": "A four-filter reverse-osmosis purifier with continuous recycling of permeate achieves about 80% efficiency and removes bacteria, viruses, lead, and salt",
+      "status": "explicit",
+      "evidence_span": "we're able to achieve 80% efficiency"
+    },
+    {
+      "id": "P3",
+      "text": "On-device TDS displays and filter meters show inlet/outlet purity and when filters need replacement",
+      "status": "explicit",
+      "evidence_span": "we have two TDS displays"
+    },
+    {
+      "id": "P4",
+      "text": "Wi-Fi smartphone control lets users monitor TDS and share results with friends and family",
+      "status": "explicit",
+      "evidence_span": "your smartphone is actually enabled with the device through Wi-Fi"
+    },
+    {
+      "id": "P5",
+      "text": "Purified water costs about $0.03 versus roughly $0.60 for bottled brands, with filter replacements at $80 per set",
+      "status": "explicit",
+      "evidence_span": "With Watero, it's going to give you $0.03"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market is pre-sale online with a nonprofit donation partnership to families",
+      "status": "explicit",
+      "evidence_span": "we're able to offer this at a pre-sale for $399"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contaminated water and weak filters",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "efficient RO purifier hardware",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "smart monitoring and unit economics",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "presale and nonprofit partnership",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient, efficient purification that provides clean drinkable water",
+      "status": "explicit",
+      "evidence_span": "Our solution is to provide clean water"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Donating purification access to thousands of families via nonprofit partnership",
+      "evidence_span": "donating to thousands of families through our campaign"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10% of the world has a water pollution problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "remove particles such as bacteria, virus, lead, and results pure H2O"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's actually 20 times a lot better than your typical brands here"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnering up with a global nonprofit called Water Is Life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Flint/world contamination and weak filter/RO alternatives folded as one problem set (v1.5.1 §4.1.6). Four-filter recycle RO plus demo TDS performance treated as one process+performance package (§4.1.8); meter UI kept with hardware as instrumentation of that process. Smartphone control and $/gallon economics split as separately revisable modules. Obama/Mariana anecdote and demo theatrics excluded as framing/traction. Anti-template note: four domains are separately revisable modules in the pitch."
+}

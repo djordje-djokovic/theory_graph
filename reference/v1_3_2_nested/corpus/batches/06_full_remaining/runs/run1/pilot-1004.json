@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Apartment search UX is broken: thin listings, dead links, and Craigslist spam/reposts hide unique inventory",
+      "status": "explicit",
+      "evidence_span": "It's a really poor user experience, and we all know that"
+    },
+    {
+      "id": "P2",
+      "text": "Zumper listings are curated directly from brokers, landlords, and property managers rather than scraped",
+      "status": "explicit",
+      "evidence_span": "all the listings you see on the map, these are all curated. They're not scraped"
+    },
+    {
+      "id": "P3",
+      "text": "Neighborhood pages and follow/news-feed search help renters discover areas and tailored listings",
+      "status": "explicit",
+      "evidence_span": "we created Neighborhood Pages"
+    },
+    {
+      "id": "P4",
+      "text": "In-product messaging lets qualified renters share credentials and lets brokers compare applicant profiles",
+      "status": "explicit",
+      "evidence_span": "we created a messaging tool to help with that"
+    },
+    {
+      "id": "P5",
+      "text": "Expansion is bottom-up business development with leading landlords and brokers city by city",
+      "status": "explicit",
+      "evidence_span": "We're doing a lot of business development with the leading landlords and brokers in the States to build this bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken rental search experience",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated listings and discovery UX",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Bottom-up landlord BD",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Search and inquire for an apartment quickly and close without the open-house song and dance",
+      "status": "explicit",
+      "evidence_span": "search for and make an inquiry for an apartment in under three minutes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Brokers and landlords screen interested renters more efficiently",
+      "evidence_span": "the advantage for the broker or landlord is that it's tremendously efficient for them"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Apartment rentals are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inquiry for an apartment in under three minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build this bottom up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Neighborhood page, newsfeed, and messaging kept as one product-discovery module with messaging still inside D2 because speaker presents them as one recap of the product; messaging could have been a singleton but is tightly coupled to closing the listing. Traffic overnight excluded as traction. Zillow IPO mention excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1004",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

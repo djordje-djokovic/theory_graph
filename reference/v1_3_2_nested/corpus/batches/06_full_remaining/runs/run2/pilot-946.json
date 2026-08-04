@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most men do not trust e-commerce fit and still shop for clothes offline",
+      "status": "explicit",
+      "evidence_span": "that's why 93% of men still shop for clothes offline"
+    },
+    {
+      "id": "P2",
+      "text": "Branded matches men to human shoppers using MAIL preference and size data, enabling real-time cart building and feedback",
+      "status": "explicit",
+      "evidence_span": "we start matching him with shoppers according to his brand ID, the data he gave mail"
+    },
+    {
+      "id": "P3",
+      "text": "Shoppers source products beyond first-page search results, including boutiques and obscure brands",
+      "status": "explicit",
+      "evidence_span": "They don't just find stuff that's on page one of Google"
+    },
+    {
+      "id": "P4",
+      "text": "Scheduled pickup returns (return like a man) remove friction so men can try multiple sizes",
+      "status": "explicit",
+      "evidence_span": "select the items he wants to return and choose a time and location where the goods will be collected from him"
+    },
+    {
+      "id": "P5",
+      "text": "Underemployed stylish people form a scalable shopper supply willing to earn by shopping for men",
+      "status": "explicit",
+      "evidence_span": "There's 10.5 million underemployed Americans out there"
+    },
+    {
+      "id": "P6",
+      "text": "Men already shop with trusted companions offline; Branded recreates that companion online",
+      "status": "explicit",
+      "evidence_span": "when Joe shops, he normally takes someone with him, someone he trusts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Men's shopping companion need",
+      "premise_ids": ["P1", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "MAIL-matched marketplace shopping",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Return-like-a-man logistics",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Shopper labor supply",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Average Joe can shop for clothes online with a trusted human shopper and easy returns",
+      "status": "explicit",
+      "evidence_span": "shop like a man and get someone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "So it was obvious to us what we needed to do. Branded is a marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We built Branded for the average Joe"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The way we solve fit for Joe is by giving him the best return service in the industry"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plenty of time to make money by shopping for our men"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Marketplace and MAIL merged into one matching mechanism. Transcript truncated mid-offer code. Team marketplace experience excluded as biography.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-946",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

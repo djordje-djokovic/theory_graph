@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1156",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:22+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Networks fail to surface people you should know beyond existing contacts",
+      "status": "explicit",
+      "evidence_span": "connect intelligently to the people and opportunities that you don't know, but should"
+    },
+    {
+      "id": "P2",
+      "text": "Average valuable connections per year are only about four",
+      "status": "explicit",
+      "evidence_span": "Millions of people in these networks, and we're only making on average four valuable connections in a given year"
+    },
+    {
+      "id": "P3",
+      "text": "Technologies for intelligent connection include a mobile intro tracker and a real-time needs broadcasting web service",
+      "status": "explicit",
+      "evidence_span": "What I've shown you today is two things"
+    },
+    {
+      "id": "P4",
+      "text": "Users can broadcast needs for investors, partners, and talent across multiple networks from one dashboard",
+      "status": "explicit",
+      "evidence_span": "I can broadcast it across multiple networks"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Intelligent connection products",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hidden network gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People connect intelligently to valuable people and opportunities beyond their current reach",
+      "status": "explicit",
+      "evidence_span": "connect intelligently to the people and opportunities that you don't know, but should"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect intelligently"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "four valuable connections in a given year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "This run folds mobile+web into one product platform premise because both are framed as instances of one intelligent-connection technology stack (§4.1(5)). Vision mission statement not dual-coded as premise."
+}

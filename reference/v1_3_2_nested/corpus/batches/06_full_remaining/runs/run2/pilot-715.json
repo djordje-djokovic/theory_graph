@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-715",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:02:52+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Presentations remain one of the last business tools not fully in the cloud, causing version and formatting chaos across tools",
+      "status": "explicit",
+      "evidence_span": "Presentations are one of the last business tools that hasn't fully made it in the cloud"
+    },
+    {
+      "id": "P2",
+      "text": "A new presentation format stacks optional details under main slides so decks stay brief yet deep when needed",
+      "status": "explicit",
+      "evidence_span": "Slides' new format allows you to keep your presentation brief like this by stacking additional details below the main slides"
+    },
+    {
+      "id": "P3",
+      "text": "Fully customizable collaborative editor with comments, team templates, and team media replaces multi-tool workflows",
+      "status": "explicit",
+      "evidence_span": "through a fully customizable editor, we've actually changed the way teams work together on presentations"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in presenting and sharing tools keep decks looking great live, offline, or on any mobile device",
+      "status": "explicit",
+      "evidence_span": "we've also built the best tools for presenting and sharing. Your presentations will look great in whatever the setting"
+    },
+    {
+      "id": "P5",
+      "text": "Individual, team, and firewall-hosted Enterprise plans monetize free creation",
+      "status": "explicit",
+      "evidence_span": "Slides for Enterprise, which takes our product and puts it behind the corporate firewall for additional security"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Non-cloud presentation chaos",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stacked format and collaborative editor",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Present and share anywhere",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Plans and Enterprise security",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Create better presentations together in one cloud platform",
+      "status": "explicit",
+      "evidence_span": "create better presentations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Someone else has the wrong version of PowerPoint. It totally ruins the formatting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Jack has invited two of his colleagues to work together on this presentation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "present from whichever device he has with him"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We offer plans for individuals and teams like Acme"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split create/collaborate vs present/share as separately claimed pillars beyond the editor. Traction and promo discount excluded. Word-of-mouth growth not coded as a theory condition."
+}

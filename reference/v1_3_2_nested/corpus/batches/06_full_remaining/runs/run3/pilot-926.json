@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-926",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Thermostats alone cannot fix room-level HVAC inefficiency and discomfort",
+      "status": "explicit",
+      "evidence_span": "that is only part of the solution"
+    },
+    {
+      "id": "P2",
+      "text": "Networked vents redirect central HVAC air automatically; about four vents optimize a typical home",
+      "status": "explicit",
+      "evidence_span": "The average-sized home will need four KeenVents to optimize its existing HVAC system"
+    },
+    {
+      "id": "P3",
+      "text": "Easy install and survey-based smart cycles avoid failed manual programming",
+      "status": "explicit",
+      "evidence_span": "users will not want to manually program each vent"
+    },
+    {
+      "id": "P4",
+      "text": "System reduces HVAC runtimes up to 30% and removes hot/cold spots",
+      "status": "explicit",
+      "evidence_span": "KeenVent system of four vents reduces HVAC run times by up to 30%"
+    },
+    {
+      "id": "P5",
+      "text": "Web/retail consumer sales plus utility/builder subsidies expand reach",
+      "status": "explicit",
+      "evidence_span": "transition to sell the product through traditional retail outlets like Lowe's and Home Depot"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription and lifetime offers price the same four-vent bundle differently",
+      "status": "explicit",
+      "evidence_span": "sold for $25 with a $4 monthly service fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "KeenVent smart cycle system",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Go-to-market offers",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple intelligent airflow product that boosts comfort and cuts heating/cooling waste",
+      "status": "explicit",
+      "evidence_span": "provide a product, yes, a product, to people with central HVAC systems that can intelligently redirect airflow throughout their home that is both simple to install and easy to use"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "$150–$300 average annual energy savings",
+      "evidence_span": "yield average annual savings for our customers of one hundred and fifty to three hundred dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "intelligently redirect airflow throughout their home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it an extremely enticing value proposition"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Matching non-networked vents folded into commercial offer. Indiegogo pre-order excluded. Price+channel kept together per §4.1(3)."
+}

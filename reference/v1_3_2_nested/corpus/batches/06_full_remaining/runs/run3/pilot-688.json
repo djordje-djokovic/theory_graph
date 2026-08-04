@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Streaming has not kept pace with comedy demand, leaving most comedy content and market untapped",
+      "status": "explicit",
+      "evidence_span": "only about 10% of the comedy that's available and only 1% of the market"
+    },
+    {
+      "id": "P2",
+      "text": "Laughly streams stand-up/spoken word with joke-level transcription powering discovery features",
+      "status": "explicit",
+      "evidence_span": "transcribe every single joke into text"
+    },
+    {
+      "id": "P3",
+      "text": "Artist revenue share plus label distribution is the scaling engine via comedian promotion to fans",
+      "status": "explicit",
+      "evidence_span": "the real trick to actually scaling the business"
+    },
+    {
+      "id": "P4",
+      "text": "Ad-supported free listening with paid tier for ad-free, offline, and exclusives",
+      "status": "explicit",
+      "evidence_span": "everything is ad revenue-based, but for $7.99 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Comedy content scarcity online",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Transcription-powered comedy app",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Comedian-led distribution and pricing",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fans can find and stream the comedy they want",
+      "status": "explicit",
+      "evidence_span": "find my jokes on Laughly for free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Comedians earn from streams while growing reach",
+      "evidence_span": "comedians also benefit because of the revenue share we've built"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "huge problem for all these big fans of comedy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create radio stations based on the subject matter of the joke itself"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive volume and drive scale very quickly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Advisor board and pre-revenue status excluded. Price and ad structure kept as one commercial premise with artist GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-688",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

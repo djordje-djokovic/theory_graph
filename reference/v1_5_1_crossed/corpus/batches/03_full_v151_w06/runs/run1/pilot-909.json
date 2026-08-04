@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:13:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing voice assistants fail because they do not work with the most popular apps people actually use and limit voice tech to only a few apps",
+      "status": "explicit",
+      "evidence_span": "they don't work with the most popular apps out there. And the second is, they limit their technology to only a few apps"
+    },
+    {
+      "id": "P2",
+      "text": "VoiceSphere lets users talk to popular apps from a personal app feed without leaving the VoiceSphere experience",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere, the app that lets you talk to everything on your phone"
+    },
+    {
+      "id": "P3",
+      "text": "API hub IDE lets developers integrate new apps quickly with a few lines of code from starting user requests",
+      "status": "explicit",
+      "evidence_span": "Think of it as an IDE for API integrations in VoiceSphere"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise products with APIs can integrate and sell VoiceSphere access in an enterprise store; VoiceSphere takes 20% of each sale",
+      "status": "explicit",
+      "evidence_span": "They can integrate their application and sell the VoiceSphere access to their customers inside our enterprise store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "consumer voice control across popular apps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "API hub for fast app integrations",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise store monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Talk to favorite apps and complex business software by voice for easier, more efficient work and use",
+      "status": "explicit",
+      "evidence_span": "lets you talk to all your favorite apps and that lets complex software benefit from our technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "VoiceSphere works with 20 of the most popular apps right from the start"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us to integrate more and more apps really fast"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Professionals can buy the integrations to make their work more easy and efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Two stated Siri problems folded into one pain premise. Consumer demos (Instagram, SoundCloud) illustrate P2; Salesforce demo illustrates enterprise path under P4. Demo AV glitches noted but content recoverable."
+}

@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Google ignores large shares of e-commerce, travel, and classified pages so they cannot drive traffic or revenue",
+      "status": "explicit",
+      "evidence_span": "when a page is ignored by Google, it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "id": "P2",
+      "text": "Combining full-site crawling with server log analysis reveals which pages Google crawled versus ignored",
+      "status": "explicit",
+      "evidence_span": "comparing what we have seen with the Botify crawler with what Google discovered on the website"
+    },
+    {
+      "id": "P3",
+      "text": "Marketers use the platform to identify ignored content, understand why, decide changes, and monitor results",
+      "status": "explicit",
+      "evidence_span": "identify content ignored, to understand why pages are ignored, to decide changes, and to monitor the results"
+    },
+    {
+      "id": "P4",
+      "text": "Optimizing how Google understands a site increases traffic by about 35% in under six months",
+      "status": "explicit",
+      "evidence_span": "they increase traffic by 35% in less than six months"
+    },
+    {
+      "id": "P5",
+      "text": "Product is sold as a monthly SaaS subscription to all businesses",
+      "status": "explicit",
+      "evidence_span": "available to all businesses through a monthly SaaS subscription model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Google-ignored pages and lost revenue",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Crawl and log SEO control platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monthly SaaS subscription",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Digital marketers control how Google understands sites to drive more traffic and revenue",
+      "status": "explicit",
+      "evidence_span": "gives digital marketers the power to control how Google understands their websites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our user trusts Botify to identify content ignored, to understand why pages are ignored"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase traffic by 35% in less than six months"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive more revenue on your website"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Singleton D1 and D3 retained: ignored-page problem and SaaS packaging are independently revisable. API and custom dashboards folded into platform capability per §4.1(5). Customer logos and 300-customer refinement treated as traction/product-tuning, not premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-683",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

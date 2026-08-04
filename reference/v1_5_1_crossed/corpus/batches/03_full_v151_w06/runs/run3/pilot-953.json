@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-953",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Music online increases spending, time-in-venue, and brand perception, but licensing popular music is a legal nightmare for product builders",
+      "status": "explicit",
+      "evidence_span": "using music online increases spending, it increases the time in the venue, and it even improves the perception of the brand. But the unfortunate truth is that using music online is a legal nightmare"
+    },
+    {
+      "id": "P2",
+      "text": "Feed.fm provides a legal turnkey way to add popular music via a simple API and JavaScript, iOS, and Unity SDKs, including Shopify and WordPress paths",
+      "status": "explicit",
+      "evidence_span": "We provide a legal turnkey way to add popular music to your website, app, or game"
+    },
+    {
+      "id": "P3",
+      "text": "An on-site/in-app HTML5 player keeps users on the product (no pop-up players or off-site listening) to increase session time",
+      "status": "explicit",
+      "evidence_span": "there's no need for messy pop-up players or the need, God forbid, to send traffic to another site to listen to music"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in analytics and A/B testing infrastructure lets customers measure lift in engagement, retention, and revenues from music",
+      "status": "explicit",
+      "evidence_span": "we also have the necessary analytics and A-B test infrastructure for you to quickly determine if there is lift in engagement, retention, and revenues"
+    },
+    {
+      "id": "P5",
+      "text": "Self-service pricing at $25 per month lets sites, apps, and games stream popular music",
+      "status": "explicit",
+      "evidence_span": "For the price of $25 per month, you can get popular music streaming on your website, app, or game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "music engagement versus legal barrier",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "legal music API player platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "self-service monthly pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "B2B customers increase engagement, retention, and revenues by adding legal music to their products",
+      "status": "explicit",
+      "evidence_span": "we're a B2B play focused on building engagement, retention, and revenues for our customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using music online increases spending, it increases the time in the venue, and it even improves the perception of the brand"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our player is 100% designed to increase session time and therefore engagement on your product"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For the price of $25 per month, you can get popular music streaming on your website, app, or game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Legal pain and music-lift claims folded as one desirability/barrier premise (§4.1.6). API/SDK/Shopify/WordPress and player placement folded as turnkey delivery cascade; analytics treated as measurement package of that offering (§4.1.7–8). A/B lift stats treated as traction evidence, not extra premises (§4.2.3). E-commerce market-size framing excluded. Three domains are problem, product, and pricing—notes anti-template: transcript separately revises legal turnkey delivery vs self-service price point."
+}

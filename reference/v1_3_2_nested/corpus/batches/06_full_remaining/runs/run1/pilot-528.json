@@ -1,0 +1,141 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers face only cattle-class commercial flights or extremely expensive private jets",
+      "status": "explicit",
+      "evidence_span": "There's two options. Be treated like cattle or pay 5,000 euros"
+    },
+    {
+      "id": "P2",
+      "text": "Connecting private pilots with passengers lets them share the cost of a flight",
+      "status": "explicit",
+      "evidence_span": "connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "id": "P3",
+      "text": "The platform handles payments, pricing, matching, flight suggestions, pilot vetting, and insurance",
+      "status": "explicit",
+      "evidence_span": "Online payments, pricing algorithm, smart matching, flight suggestion, pilot vetting, and insurance"
+    },
+    {
+      "id": "P4",
+      "text": "Flight Request lets passengers request a flight that is smartly sent to regional pilots",
+      "status": "explicit",
+      "evidence_span": "the first platform to actually allow you to request a flight to a private pilot easily"
+    },
+    {
+      "id": "P5",
+      "text": "A 2016 regulatory change clarified that private pilots may share costs and advertise flights",
+      "status": "explicit",
+      "evidence_span": "a 2016 regulatory change made it clear for private pilots that they're allowed to share the cost of a flight and also advertise it on light beforehand"
+    },
+    {
+      "id": "P6",
+      "text": "Tailor-made insurance adds €1M extra coverage on Wingly flights",
+      "status": "explicit",
+      "evidence_span": "We developed a tailor-made insurance product that allows us to offer all our customers an extra 1 million euro coverage on all the flights you do"
+    },
+    {
+      "id": "P7",
+      "text": "Wingly takes a 15% plus €4 commission on shared-cost bookings",
+      "status": "explicit",
+      "evidence_span": "Wingly then takes a commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Aviation accessibility gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pilot-passenger marketplace",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory and insurance advances",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Commission take rate",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make private aviation accessible with convenience and pleasure via shared-cost flights",
+      "status": "explicit",
+      "evidence_span": "Wingly makes private aviation accessible to everybody"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Clear win-win for pilots, passengers, and the environment",
+      "evidence_span": "it's a clear win-to-win for our pilots, our passengers, and also the environment"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Be treated like cattle or pay 5,000 euros"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share the cost of a flight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "regulatory and insurance advances"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript truncated mid-CTA ('fly fancy with'); truncated=true. Member/flight growth and €2.5M raise excluded as traction/financing. Empty-seat market sizing treated as opportunity framing. Platform feature list folded into one marketplace ops premise; Flight Request split as separately launched module. Singleton D4: take rate revisable without changing matching.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-528",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:04+02:00"
+  }
+}

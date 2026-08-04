@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-592",
+    "coder_session_id": "session_03",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Organizations struggle to pull multi-source CRM and operational data together to answer simple insight questions",
+      "status": "explicit",
+      "evidence_span": "giant CRM, data from everywhere that they were trying to pull together to get to Insight"
+    },
+    {
+      "id": "P2",
+      "text": "Whiteboarder plus uploader let users model, dynamically link, auto-map, and visualize related datasets without writing code",
+      "status": "explicit",
+      "evidence_span": "answer this quickly and without writing a line of code"
+    },
+    {
+      "id": "P3",
+      "text": "The same linking workflow scales across thousands of stores, tens of millions of customers, and terabytes within about a day",
+      "status": "explicit",
+      "evidence_span": "thousands of stores, tens of millions of customers, and terabytes of data. And we are doing this all in a day's work"
+    },
+    {
+      "id": "P4",
+      "text": "FactGem is easy to use and does not force users to change business logic to fit the technology",
+      "status": "explicit",
+      "evidence_span": "we don't force you to change your business logic to fit a technology solution"
+    },
+    {
+      "id": "P5",
+      "text": "Connecting data relationships is a prerequisite before companies can use AI and machine learning on that data",
+      "status": "explicit",
+      "evidence_span": "They can't get there without first connecting their data and understanding the relationships within it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-source data to insight pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "no-code relationship modeling and upload",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "connected data as AI prerequisite",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get to insight quickly from connected data relationships without writing code",
+      "status": "explicit",
+      "evidence_span": "easy to use and gets you to insight quickly"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "trying to pull together to get to Insight"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "FactGem can do this instantly and without writing any code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting their data and understanding the relationships within it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Whiteboarder/uploader/viz treated as one no-code linking mechanism cascade. Competitor training/consulting contrast folded into ease-of-use premise P4. Market size excluded as framing. Transcript begins mid-sentence."
+}

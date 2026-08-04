@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Over 84% of traffic is rare/one-shot while ~6% weekly regulars drive disproportionate engagement",
+      "status": "explicit",
+      "evidence_span": "more than 84% of a site's traffic visits just once a month or less frequently, with a vast majority only visiting one time ever"
+    },
+    {
+      "id": "P2",
+      "text": "Browser extension and site service credit fan activity, show social co-presence, and protect browsing privacy",
+      "status": "explicit",
+      "evidence_span": "We've got a browser extension that's in private alpha"
+    },
+    {
+      "id": "P3",
+      "text": "Roadmap/business model is loyalty rewards and tangible engagement goods brokered through partner sites",
+      "status": "explicit",
+      "evidence_span": "This is our roadmap. And it's also our business model. We are going to become the loyalty rewards program for the web"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "True-fan traffic math",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "One True Fan product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Web loyalty rewards",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shift publishers from one-shot traffic toward engaging true fans",
+      "status": "explicit",
+      "evidence_span": "They would be far better served by engaging their true fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true fans, small percentage of the overall traffic, but they make up a huge percentage of page views"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one true fan is all about them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "each premier site that we partner with is another opportunity to start brokering those deals"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Truncated. Privacy and Twitter integrations folded into product premise. Need/product/money triad justified.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1148",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "epistemic_markers": []
+}

@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Random whole-paddock fertilizer allocation creates large inefficiency and yield loss",
+      "status": "explicit",
+      "evidence_span": "up to 30% of all fertilizer applied is wasted, resulting in additional yield loss of up to 25%"
+    },
+    {
+      "id": "P2",
+      "text": "Flurosat delivers satellite-guided actionable fertilizer prescription maps",
+      "status": "explicit",
+      "evidence_span": "Flurosat provides precision satellite-guided fertilizer"
+    },
+    {
+      "id": "P3",
+      "text": "Earlier stress visibility and stressor pinpointing via hyperspectral sensing",
+      "status": "explicit",
+      "evidence_span": "pinpoint the stressor behind it"
+    },
+    {
+      "id": "P4",
+      "text": "Platform tools for nitrogen maps, analytics, and management zones feeding the tractor",
+      "status": "explicit",
+      "evidence_span": "uses the zoning tool where the crops that are stressed and healthy are separated into different management zones"
+    },
+    {
+      "id": "P5",
+      "text": "Farm-software integration uses on-farm data competitors lack",
+      "status": "explicit",
+      "evidence_span": "Flurosat integrates with farm management software to provide actionable data that can be used right there on the farm"
+    },
+    {
+      "id": "P6",
+      "text": "Per-hectare annual subscriptions to agronomists; partners as channels",
+      "status": "explicit",
+      "evidence_span": "Annual subscriptions, this is how we sell our product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Precision fertilizer analytics product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Agronomist subscription go-to-market",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Up to three times competitors' productivity uplift for farmers",
+      "status": "explicit",
+      "evidence_span": "this results in up to three times the productivity uplift of our competitors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "actionable prescription maps for fertilizer application"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you're a farmer who wants a 30% productivity uplift"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged channel partners into commercial premise P6. Problem folded into product domain.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-459",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:30:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Replace single-use e-commerce cardboard/polymer packaging with smart reusable shippers",
+      "status": "explicit",
+      "evidence_span": "replacing all single-use packaging. So think of kind of that cardboard and the polymers you get when you order something online with our smart reusable option"
+    },
+    {
+      "id": "P2",
+      "text": "Direct customers are retailers who get a fleet of shippers plus software for consumer orders",
+      "status": "explicit",
+      "evidence_span": "our direct customer is the retailers themselves. So we work directly with the retailers. We provide them with a fleet of our shippers and the access to our software"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers are fed up with cardboard waste and retailers are seeking solutions",
+      "status": "explicit",
+      "evidence_span": "retailers now are waking up to the fact that consumers are fed up with it and looking for solutions"
+    },
+    {
+      "id": "P4",
+      "text": "Own-designed shippers use upcycled billboard vinyl that is lightweight, durable, and waterproof",
+      "status": "explicit",
+      "evidence_span": "the first fleet of shippers that we're working with actually use upcycled materials, so billboard vinyls"
+    },
+    {
+      "id": "P5",
+      "text": "Network efficiency improves with scale by routing shippers to the closest place of need instead of only back to the original retailer",
+      "status": "explicit",
+      "evidence_span": "It actually works better the bigger it is, because then it allows us to send shippers to the closest place of need, as opposed to back to the original retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Reusable packaging demand",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Retailer fleet and upcycled shippers",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Network scale routing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More sustainable and efficient e-commerce supply-chain packaging",
+      "status": "explicit",
+      "evidence_span": "make the supply chain system more sustainable and efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "replacing all single-use packaging"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smart reusable option"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the better and more efficient it becomes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript is truncated mid-interview and includes interviewer turns; only entrepreneur answers coded. Retailer count and named logos excluded as traction. Target accelerator credential excluded. Singleton D3: pooled routing is a separately revisable network mechanism.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

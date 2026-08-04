@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combustion-based plants are inefficient, inflexible, and high-emitting",
+      "status": "explicit",
+      "evidence_span": "highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "id": "P2",
+      "text": "Unique combination of SOFC, CO2 separation, and methanation",
+      "status": "explicit",
+      "evidence_span": "combines three major building blocks in a new and unique way"
+    },
+    {
+      "id": "P3",
+      "text": "Incomplete fuel conversion in prior SOFC systems wasted fuel; closed cycle fixes this to 80% efficiency",
+      "status": "explicit",
+      "evidence_span": "the main reason is incomplete fuel conversion in the fuel cells. This leads to a fuel loss of up to 30%"
+    },
+    {
+      "id": "P4",
+      "text": "No off-gas: water and pure CO2 become products; design is reversible for gas from excess power",
+      "status": "explicit",
+      "evidence_span": "Finally, our new system design is reversible, meaning it can also produce gas from excess power"
+    },
+    {
+      "id": "P5",
+      "text": "Biogas plants are the beachhead for renewable power, negative emissions, and energy storage",
+      "status": "explicit",
+      "evidence_span": "Biogas plants are our first target market"
+    },
+    {
+      "id": "P6",
+      "text": "Efficiency and reversible operation multiply plant operator revenues",
+      "status": "explicit",
+      "evidence_span": "doubling in electric efficiency first of all means doubling revenues from electricity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Power-plant performance problem",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Closed-cycle reversible generator",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas customer value",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decentralized carbon-negative efficient power and gas",
+      "status": "explicit",
+      "evidence_span": "decentralized, carbon negative, and highly efficient power plants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Can help replace fossil plants and remove large CO2 volumes using biogenic resources",
+      "evidence_span": "we can replace all fossil-based power plants"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "This is the main thing that we have changed. In our ovarian units, we have eliminated the combustion completely"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we decided to build it ourselves"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "groundbreaking efficiency of 80%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more than fivefold their income"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "P3 states the diagnosed failure mode that motivates the closed-cycle design; dependency coded to the architecture premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

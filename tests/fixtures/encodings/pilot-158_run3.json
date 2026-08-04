@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-158",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:51:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "PII-laden files create large per-record breach costs, yet teams lack easy company-wide file visibility",
+      "status": "explicit",
+      "evidence_span": "A single piece of personal identifiable information, known as PII, can cost an organization $186 per record"
+    },
+    {
+      "id": "P2",
+      "text": "Traditional DLP is slow to deploy and rules-based, encoding months of potential human error",
+      "status": "explicit",
+      "evidence_span": "When it comes to deploying a traditional data loss prevention tool, 98% of organizations take more than a few weeks"
+    },
+    {
+      "id": "P3",
+      "text": "Phalanx identity-based automation encrypts unused files while users keep familiar access patterns for files in use",
+      "status": "explicit",
+      "evidence_span": "Those 999 unused secured files don't impact your productivity. However, it completely hinders the ability to steal that data"
+    },
+    {
+      "id": "P4",
+      "text": "Workspace-wide file access mapping with geofenced controls and API export to existing monitors is core to the product",
+      "status": "explicit",
+      "evidence_span": "If somebody's opening a file in a country that you don't have an office, you can restrict that from opening"
+    },
+    {
+      "id": "P5",
+      "text": "Sold per user to mid/large enterprises and through channel partners into SMBs",
+      "status": "explicit",
+      "evidence_span": "focus on mid- to large-scale enterprise by doing per-user requirements, so we're scalable with the needs of those security teams, and we can also deploy out to SMBs via the channel"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "File exposure and slow DLP status quo",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Identity encryption and access map",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-seat and channel sales",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect organizational data without making security fight productivity",
+      "status": "explicit",
+      "evidence_span": "Phalanx's mission focuses on the core problem that users have to make security decisions, and they pit that against productivity decisions"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "security isn't useful if it's not used"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets humans be human"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enabling their businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Third pass: deployment-speed claim folded into contrast with traditional DLP (P2) plus identity product (P3) rather than standalone premise."
+}

@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-528",
+    "coder_session_id": "session_01",
+    "session_case_index": 1,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Today private aviation offers only two options: packed commercial flights or paying about 5,000 euros for private jets",
+      "status": "explicit",
+      "evidence_span": "There's two options. Be treated like cattle or pay 5,000 euros"
+    },
+    {
+      "id": "P2",
+      "text": "A marketplace connects private pilots with passengers so they can share flight costs, with the platform handling booking, payments, pricing, matching, vetting, and insurance",
+      "status": "explicit",
+      "evidence_span": "connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "id": "P3",
+      "text": "Flight Request lets passengers request a flight to a private pilot when it is not yet posted",
+      "status": "explicit",
+      "evidence_span": "the first platform to actually allow you to request a flight to a private pilot easily"
+    },
+    {
+      "id": "P4",
+      "text": "A 2016 regulatory change clarified that private pilots may share flight costs and advertise flights beforehand",
+      "status": "explicit",
+      "evidence_span": "a 2016 regulatory change made it clear for private pilots that they're allowed to share the cost of a flight and also advertise it on light beforehand"
+    },
+    {
+      "id": "P5",
+      "text": "A tailor-made insurance product adds about 1 million euro extra coverage on marketplace flights",
+      "status": "explicit",
+      "evidence_span": "We developed a tailor-made insurance product that allows us to offer all our customers an extra 1 million euro coverage"
+    },
+    {
+      "id": "P6",
+      "text": "European private pilots fly with empty seats while planes sit idle much of the time, creating large unused capacity",
+      "status": "explicit",
+      "evidence_span": "in average with 2 to 2.5 empty seats"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cattle or champagne aviation gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "pilot-passenger cost-sharing marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "regulatory and insurance advances",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "empty-seat private pilot supply",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Private aviation becomes accessible by combining convenience with pleasure through shared-cost flights",
+      "status": "explicit",
+      "evidence_span": "A solution that could combine convenience with pleasure"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Win-win for pilots, passengers, and the environment via cheaper shared flights",
+      "evidence_span": "it's a clear win-to-win for our pilots, our passengers, and also the environment"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Wingly makes private aviation accessible to everybody"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share the cost of a flight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "regulatory and insurance advances that bring with them a lot of opportunities"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "As we allow pilots to fly up to three times cheaper"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Platform ops list (payments, pricing, matching, vetting, insurance) folded into marketplace mechanism as feature cascade (v1.5.1 §4.1.7). Commission rate folded as commercial detail of the same offer. Flight Request kept separate as a distinct passenger job. Singleton D1 and D4 retained as independently revisable pain and supply conditions. Member growth and raise excluded as traction."
+}

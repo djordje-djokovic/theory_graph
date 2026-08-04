@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cable-driven 3D construction robot with automated pulleys prints accurately, installs/dismantles easily, and scales across site sizes",
+      "status": "explicit",
+      "evidence_span": "we designed and assembled a cable-driven robot, including an automated pulley system"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary printable concrete is stronger, sets much faster, flows for printing, bonds layers instantly, and is environmentally friendlier",
+      "status": "explicit",
+      "evidence_span": "this mix is two times stronger than the traditional mixes, has 20 times faster setting time"
+    },
+    {
+      "id": "P3",
+      "text": "Free-moving cable print plate avoids competitor drawbacks of rail-frame setup time and center-mounted arms that cannot close buildings",
+      "status": "explicit",
+      "evidence_span": "the printing plate can move freely throughout the cables"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts with SME projects and custom outdoor structures sold at market prices but built faster, scaling toward single-story houses",
+      "status": "explicit",
+      "evidence_span": "These designs will be sold at a price similar to the market, but at a very faster rate"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cable robot printer",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Printable concrete mix",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SME construction sales",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build structures and homes faster, safely, and with less construction risk",
+      "status": "explicit",
+      "evidence_span": "interested in building fast, safe, and risk-free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help house families after disasters and wars destroy cities",
+      "evidence_span": "giving families homes where natural disasters and wars destroy whole cities"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can be easily installed and dismantled on the work site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instant layer bonding, which is critical in 3D printing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "print single-story houses by the end of 2019"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-sentence (truncated). Market-size figures and strategic-partner LOI excluded as framing/traction. Team composition excluded. Concrete singleton retained as separately learnable materials module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-558",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1065",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Organizers and members currently must use multiple separate platforms to run and engage a community",
+      "status": "explicit",
+      "evidence_span": "I've had to use five platforms to stay organized"
+    },
+    {
+      "id": "P2",
+      "text": "A single umbrella platform can provide communication, event, member, and transaction management for organizers",
+      "status": "explicit",
+      "evidence_span": "Communication management, event management, member management, transaction management, under one umbrella"
+    },
+    {
+      "id": "P3",
+      "text": "Hierarchical chapters and multi-tier subgroups can be managed online with local autonomy and global control",
+      "status": "explicit",
+      "evidence_span": "Each group can have as many subgroups as they want and as many tiers of subgroups as they need"
+    },
+    {
+      "id": "P4",
+      "text": "Interest-topic channels curate groups and events so users can discover relevant communities",
+      "status": "explicit",
+      "evidence_span": "Channels are a curated list of groups for a given interest topic"
+    },
+    {
+      "id": "P5",
+      "text": "Most groups are free; revenue comes from channel subscriptions, premium groups, and transaction service fees",
+      "status": "explicit",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    },
+    {
+      "id": "P6",
+      "text": "The platform serves any community type, not only entrepreneurship groups",
+      "status": "explicit",
+      "evidence_span": "Cohort is for any type of community"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-platform community management pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "unified community engagement platform",
+      "premise_ids": ["P2", "P3", "P4", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium and transaction monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organizers get a single solution to engage membership and connect community",
+      "status": "explicit",
+      "evidence_span": "the single solution that an organizer needs to engage their membership"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unify and export entrepreneurship communities globally",
+      "evidence_span": "unify the entire entrepreneurial ecosystem and export entrepreneurship globally"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing those organizations has been incredibly challenging"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cohort connects community"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain-list of five platforms folded as one problem-set (v1.5.1 §4.1.6). Communication/event/member/transaction listed as one umbrella mechanism, not four premises. Channels framed as a new discovery module and kept separate. Singleton D1 and D3 retained as independently revisable problem diagnosis and monetization. Traction (10k signups, named orgs, raise) excluded per §4.2."
+}

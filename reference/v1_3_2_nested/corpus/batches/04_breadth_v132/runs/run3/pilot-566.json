@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-566",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:44:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional farming in arid climates is incredibly inefficient in resource use and production quality",
+      "status": "explicit",
+      "evidence_span": "Traditional farming on such a piece of land is incredibly inefficient"
+    },
+    {
+      "id": "P2",
+      "text": "Import dependence leaves consumers choosing between low-quality seasonal local produce and expensive air-freighted imports",
+      "status": "explicit",
+      "evidence_span": "One, local, low quality, fresh produce, which is available, but again, very low quality and seasonal. Or two, extremely expensive, air freighted imports"
+    },
+    {
+      "id": "P3",
+      "text": "A sustainable, climate-agnostic technology solution of high-tech greenhouses can deliver food security anywhere",
+      "status": "explicit",
+      "evidence_span": "Pure Harvest has developed a sustainable, climate-agnostic technology solution for food security anywhere in the world"
+    },
+    {
+      "id": "P4",
+      "text": "One controlled-environment system — triple-play climate management, full tracking, and CO2 dosing — holds a corridor where almost anything grows and accelerates growth 30%",
+      "status": "explicit",
+      "evidence_span": "within this climate corridor of 16 to 32 degrees, you can grow just about anything, anywhere"
+    },
+    {
+      "id": "P5",
+      "text": "The crops reach world-class sweetness and resist disease and pests through beneficial insects, not chemicals",
+      "status": "explicit",
+      "evidence_span": "Our plants are protected by nature, not by chemicals"
+    },
+    {
+      "id": "P6",
+      "text": "The solution delivers 7-10x the yield on one-seventh the water, one hour from 85% of the UAE population",
+      "status": "explicit",
+      "evidence_span": "7 to 10 times the yield using 1 7th of the water. And it's grown just one hour from 85% of the population of the UAE"
+    },
+    {
+      "id": "P7",
+      "text": "Going direct to retailers and wholesalers compresses a five-step distribution channel into two",
+      "status": "explicit",
+      "evidence_span": "eliminating what is typically a five-step distribution channel into just two"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Arid agriculture and import gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Controlled-environment growing system",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Direct retailer channel",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh, premium, locally grown produce, sustainably grown and always available at materially lower cost than imports",
+      "status": "explicit",
+      "evidence_span": "producing a wide variety of crops, sustainably grown, always available, and at a materially lower cost than air-freighted imports"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Any country can invest in its own food security, water conservation, and economic diversification",
+      "evidence_span": "Envision a world where any country can invest in its own food security, water conservation, and economic diversification"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We import over 85% of our fresh produce"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's scoring 9.4. World class is 8 to 10"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we'll access the market going direct to retailers and wholesalers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The climate corridor, tracking, and CO2 dosing are merged into one controlled-environment growing premise P4: the speaker presents them as one integrated system ('all controlled from one brain'), so the 30% acceleration is quantitative detail of the same mechanism. The team claim is excluded as credentials here: although the speaker says 'we'll do so because', the named qualifications are biographical rather than an operational condition of the theory. D3 singleton: channel strategy revises independently. Production ramp-up plans excluded per 4.2. No plainly asserted premise-prerequisite."
+}

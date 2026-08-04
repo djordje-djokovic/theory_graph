@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Food industry faces weather-driven supply and price volatility that conventional soft-commodity hedging poorly covers",
+      "status": "explicit",
+      "evidence_span": "Volatile weather creates unpredictable supply. And unpredictable supply, of course, creates volatile prices. And volatile prices kill businesses"
+    },
+    {
+      "id": "P2",
+      "text": "Platform matches a business's physical goods risk to one of 3000+ local indexes across 40 countries",
+      "status": "explicit",
+      "evidence_span": "We have over 3,000 indexes from 40 different countries"
+    },
+    {
+      "id": "P3",
+      "text": "Payouts are automatic in 48 hours based on pre-agreed index triggers",
+      "status": "explicit",
+      "evidence_span": "our platform plays out automatically in 48 hours"
+    },
+    {
+      "id": "P4",
+      "text": "Sales via corporate B2B and farmer aggregators with existing relationships",
+      "status": "explicit",
+      "evidence_span": "for farmers, obviously huge cost of acquisition problem, we go through aggregators"
+    },
+    {
+      "id": "P5",
+      "text": "Behind a three-question UI, algos price risk using huge simulations, futures signals, and diversification",
+      "status": "explicit",
+      "evidence_span": "deliberately, unbelievably simple for our clients, but behind the scenes, incredibly complex"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Commodity price risk problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Targeted index insurance product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Aggregator and corporate channels",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Algo pricing with simple UX",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy tools for the food industry to manage price risk and gain financial confidence",
+      "status": "explicit",
+      "evidence_span": "So we're talking about tools that could help the world's most important industry to manage that risk"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "volatile prices kill businesses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "highly, highly targeted"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "existing relationship"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our algos are pricing that automatically"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Basis-risk detail folded into P1 problem premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-434",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:34:10+02:00"
+  }
+}

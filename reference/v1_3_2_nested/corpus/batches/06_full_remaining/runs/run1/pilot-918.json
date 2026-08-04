@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-918",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:35:51+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home and underground dining phenomena worldwide reflect a lasting need to share food with others",
+      "status": "explicit",
+      "evidence_span": "this basic human need to share food with others existed in the past, it exists in the present, and it will continue to exist in the future"
+    },
+    {
+      "id": "P2",
+      "text": "A community marketplace puts business structure, safety, and trust around authentic dining experiences",
+      "status": "explicit",
+      "evidence_span": "simply put business structure, safety, and trust around this phenomena and make it accessible to tens of millions more around the world"
+    },
+    {
+      "id": "P3",
+      "text": "Verified hosts' events are protected under a $1 million guarantee",
+      "status": "explicit",
+      "evidence_span": "all of his events are protected under the Eat With $1 million guarantee"
+    },
+    {
+      "id": "P4",
+      "text": "Guests book via secure online payment that includes the marketplace commission",
+      "status": "explicit",
+      "evidence_span": "make the secure payment online. The payment already includes the itwith commission"
+    },
+    {
+      "id": "P5",
+      "text": "Demand comes from tourists seeking local authenticity and from locals for social/corporate events",
+      "status": "explicit",
+      "evidence_span": "50% of all our booking during our pilot came from locals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Marketplace trust and payments",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Shared-food dining demand",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Diners get authentic local food experiences with interesting people",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hosts earn income while sharing cooking passion",
+      "evidence_span": "earning some extra income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "community marketplace for authentic dining experiences"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Most of the tourists want to meet the locals and to have an authentic dining experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "$1.9T restaurant disruption and billion-dollar capture treated as vision/market aspiration (§4.1(4)), not premises. Pilot traction cities noted as evidence not coded as premises."
+}

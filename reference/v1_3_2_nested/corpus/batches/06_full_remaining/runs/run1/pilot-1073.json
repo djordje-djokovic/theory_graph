@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1073",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "At conferences and crowded venues people fail to identify who nearby is worth meeting",
+      "status": "explicit",
+      "evidence_span": "only to stand by the conference bar eating peanuts, wondering who you should talk to next"
+    },
+    {
+      "id": "P2",
+      "text": "Sonar finds people at a venue, aggregates public profile data, and ranks who is most relevant",
+      "status": "explicit",
+      "evidence_span": "Sonar scours the web for people at this venue, then aggregates and synthesizes publicly available profile data, and then sorts the room by who's most relevant to you"
+    },
+    {
+      "id": "P3",
+      "text": "One click shows shared connections and interests plus a bio, enabling a hyper-targeted introduction with social proof",
+      "status": "explicit",
+      "evidence_span": "you're never more than one click away from a hyper-targeted introduction to the person you want to meet"
+    },
+    {
+      "id": "P4",
+      "text": "The app is a hyperlocal medium for telling people present who you are and what you are looking for",
+      "status": "explicit",
+      "evidence_span": "Sonar's laser-focused on giving you a way to tell people here that you're here and this is what you're about"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missed nearby connections at venues",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Relevance ranking and introductions",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Hyperlocal self-expression",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncover hidden connections so you can meet the right person in the room instead of leaving it to chance",
+      "status": "explicit",
+      "evidence_span": "uncovers the hidden connections that you share with everyone else in this room"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save time and money as a hyperlocal social CRM",
+      "evidence_span": "hyperlocal social CRM tool that is going to save you time and money"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wondering who you should talk to next"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bottled the thousands of connections that I definitely would have missed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "digital local self-expression that you can use to share what you're proud of and what you're looking for"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "'Democratize the meatspace' treated as vision framing, not a premise (v1.3.2 §4.1(4)). Three-click demo steps folded into ranking+intro capability. No explicit monetization module stated beyond CRM benefit. Singleton D1 and D3 retained: venue connection-failure assumption and self-expression positioning are separately revisable from the ranking engine."
+}

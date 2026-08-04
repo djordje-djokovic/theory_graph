@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "On average Google ignores 35–55% of pages on e-commerce, travel, and classified sites",
+      "status": "explicit",
+      "evidence_span": "On average, Google ignores 35% of e-commerce website pages. Travel, 45%. Classified, it's even worse. 55% of pages are ignored"
+    },
+    {
+      "id": "P2",
+      "text": "Ignored pages cannot drive traffic or revenue",
+      "status": "explicit",
+      "evidence_span": "when a page is ignored by Google, it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "id": "P3",
+      "text": "Botify crawls entire sites and matches results to Google traces in server logs",
+      "status": "explicit",
+      "evidence_span": "Botify is based on advanced web crawling and log files analyzing technologies"
+    },
+    {
+      "id": "P4",
+      "text": "SEO users identify ignored strategic pages, diagnose causes such as depth, and monitor fixes",
+      "status": "explicit",
+      "evidence_span": "when a content is too far from the home page, it's very unlikely to be crawled by Google"
+    },
+    {
+      "id": "P5",
+      "text": "Improving Google's understanding of the site lifts traffic ~35% within six months",
+      "status": "explicit",
+      "evidence_span": "When our customers optimize the way Google understands the website, they increase traffic by 35% in less than six months"
+    },
+    {
+      "id": "P6",
+      "text": "Offering is a monthly SaaS subscription open to all businesses",
+      "status": "explicit",
+      "evidence_span": "monthly SaaS subscription model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unindexed pages kill traffic",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Crawl-log analytics for SEO control",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS packaging",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get noticed by Google and drive more website revenue",
+      "status": "explicit",
+      "evidence_span": "get noticed by Google, And drive more revenue on your website"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "when a page is ignored by Google, it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "any revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "control how Google understands their websites"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available to all businesses through a monthly SaaS subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Depth-correlation chart treated as illustration of diagnosis capability inside P4, not a separate premise. API mentioned as platform extension and folded in.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-683",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

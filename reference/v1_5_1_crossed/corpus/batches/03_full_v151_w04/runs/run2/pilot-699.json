@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-699",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises need massive-scale, hyper-fast SQL because traditional databases take prohibitively long on large joins",
+      "status": "explicit",
+      "evidence_span": "it was taking our enterprise database server 35 hours to run"
+    },
+    {
+      "id": "P2",
+      "text": "A GPU-based distributed SQL engine turns tables into matrices and parallelizes computation across thousands of GPU cores",
+      "status": "explicit",
+      "evidence_span": "take a table in a database and turn it into a matrix"
+    },
+    {
+      "id": "P3",
+      "text": "Server-side software deploys on cloud or on-prem with interfaces that connect existing code, workbenches, and SQL analysts",
+      "status": "explicit",
+      "evidence_span": "You can deploy it onto the cloud or an appropriately configured on-premise rig"
+    },
+    {
+      "id": "P4",
+      "text": "A free community edition broadens access while enterprise pilots serve large-data companies",
+      "status": "explicit",
+      "evidence_span": "we're launching a community edition version of a GPU SQL database that is free to use for life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "slow enterprise SQL at scale",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "GPU distributed SQL engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "community edition and enterprise pilots",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises get massive-scale, hyper-fast SQL analytics on GPUs",
+      "status": "explicit",
+      "evidence_span": "unlocks that power for enterprises who need massive scale and hyper-fast SQL"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that 35-hour monstrosity came down to 30 seconds"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our next generation SQL database engine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "process millions of rows a second on your laptop"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Benchmark multiples vs Redshift/Postgres/MySQL folded as performance package of the GPU SQL process (§4.1.8). Distributed self-configuration and SQL-accessibility claims folded into the engine/deployment mechanism. Pilot counts excluded as traction. Anti-template: need, engine, and distribution/edition GTM separately revisable."
+}

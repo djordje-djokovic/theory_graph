@@ -1,0 +1,142 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "City leaders make decisions in the dark despite huge service budgets",
+      "status": "explicit",
+      "evidence_span": "when it comes to decision-making local governments tap in the dark"
+    },
+    {
+      "id": "P2",
+      "text": "Municipal data is trapped in legacy silos, Excel files, and paper, making manual aggregation slow and costly",
+      "status": "explicit",
+      "evidence_span": "The problem is the data is trapped in silos. Cities have many different legacy systems. Sometimes data is scattered across Excel files or only exists on paper"
+    },
+    {
+      "id": "P3",
+      "text": "The platform turns data from any legacy system into reports and actionable insights",
+      "status": "explicit",
+      "evidence_span": "We take data from any existing legacy system and produce reports and actionable insights that governments can use to reach their goals"
+    },
+    {
+      "id": "P4",
+      "text": "The platform is modular and aligned with city services",
+      "status": "explicit",
+      "evidence_span": "The Politea platform is modular and aligned with the city services, ranging from childcare to fire departments to infrastructure"
+    },
+    {
+      "id": "P5",
+      "text": "A data bridge installed on client servers queries legacy databases daily and digitizes paper records as a service",
+      "status": "explicit",
+      "evidence_span": "The data bridge is a standalone part of our software that is installed on the client server. We connect it to the databases of the legacy systems and run queries on a daily basis"
+    },
+    {
+      "id": "P6",
+      "text": "Politea meets European localization requirements that US GovTech rivals cannot",
+      "status": "explicit",
+      "evidence_span": "US-based GovSec startups, they just can't meet European localization requirements. Politeca does all of it."
+    },
+    {
+      "id": "P7",
+      "text": "Regionally distributed on-site sales teams, modular pricing below procurement thresholds, and political networks drive adoption",
+      "status": "explicit",
+      "evidence_span": "We do that by running regionally distributed sales teams to convince customers on site. Our modular pricing helps winning contracts below procurement thresholds. And we scale through political networks and social proof."
+    },
+    {
+      "id": "P8",
+      "text": "A SaaS model charges a one-time setup fee and an annual license fee",
+      "status": "explicit",
+      "evidence_span": "We run a software as a service business model with a one-time setup fee and an annual license fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Decision-making in the dark",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Governance platform and data bridge",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Sales motion and SaaS pricing",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "City leaders get reports and actionable insights to reach their goals",
+      "status": "explicit",
+      "evidence_span": "produce reports and actionable insights that governments can use to reach their goals"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Data-empowered decisions improve millions of citizens' lives",
+      "evidence_span": "all city leaders across Europe make data-empowered decisions, improving the life of millions of their citizens"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We solved that problem"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tap in the dark"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reports and actionable insights"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "winning contracts below procurement thresholds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run 3 returns to the three-domain partition (localization moat folded back into the platform domain, matching run 1). 50 leads / 3 paying cities excluded as traction; EUR 1.6B market framing uncoded; team credentials excluded per 4.2; childcare module folded into modularity (v1.3.2 4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-487",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:04:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

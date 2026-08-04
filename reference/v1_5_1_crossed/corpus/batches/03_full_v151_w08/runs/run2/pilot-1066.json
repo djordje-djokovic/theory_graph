@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1066",
+    "coder_session_id": "session_06",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personal computing interfaces should be tailored to individuals rather than one design for billions of users",
+      "status": "explicit",
+      "evidence_span": "personal computing interfaces. tailored to the individual as opposed to a single solution needing to appease two billion users"
+    },
+    {
+      "id": "P2",
+      "text": "Lumiere enhances and extends the user's existing operating system rather than replacing it",
+      "status": "explicit",
+      "evidence_span": "not a replacement for any sort of operating system, rather to embrace, extend, and enhance the system of choice"
+    },
+    {
+      "id": "P3",
+      "text": "Clean, user-sortable workspaces replace confusing icon streams so users know where windows and taskbar items go",
+      "status": "explicit",
+      "evidence_span": "we have a clean delineation of these spaces so you can understand and sort them yourself just by pulling them around"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "individualized interface vision",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "OS-enhancing workspace UI",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Light up Windows with interfaces tailored to how each person works",
+      "status": "explicit",
+      "evidence_span": "a way to light up your windows, Lumiere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tailored to the individual"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "embrace, extend, and enhance the system of choice of two billion people"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Pitch truncated mid-sentence; cloud sync/SQL/NLP mentioned as not fully shown and not coded as separate premises. Industry-consensus innovation claim treated as framing. Thin product content: only OS-enhancement positioning and workspace delineation clearly asserted as conditions."
+}

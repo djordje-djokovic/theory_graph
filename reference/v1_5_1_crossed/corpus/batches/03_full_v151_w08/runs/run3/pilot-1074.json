@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Gen Y often spends without knowing where their money goes",
+      "status": "explicit",
+      "evidence_span": "I have no idea where my money goes"
+    },
+    {
+      "id": "P2",
+      "text": "Expense input under three seconds with pattern/frequency-ranked tags keeps logging proactive and fast",
+      "status": "explicit",
+      "evidence_span": "input any expense in under three seconds"
+    },
+    {
+      "id": "P3",
+      "text": "App never asks for credit card, bank information, or even a name",
+      "status": "explicit",
+      "evidence_span": "We'll never ask you for your credit card or bank information, not even your name"
+    },
+    {
+      "id": "P4",
+      "text": "Gamification—experience points, tokens, achievements, and leveling—makes tracking fun and rewarding",
+      "status": "explicit",
+      "evidence_span": "we're going to make it fun and rewarding"
+    },
+    {
+      "id": "P5",
+      "text": "Users can create subcategory budgets that track totals and breakdowns for tagged spend areas",
+      "status": "explicit",
+      "evidence_span": "allowed for subcategorization"
+    },
+    {
+      "id": "P6",
+      "text": "You Versus Them compares a user's spending to demographic peers for actionable insights",
+      "status": "explicit",
+      "evidence_span": "with the You Versus Them feature, I can show you insights like never before"
+    },
+    {
+      "id": "P7",
+      "text": "Spends Tokens unlock partner deals; companies pay to put the right deals in front of the right audience",
+      "status": "explicit",
+      "evidence_span": "working with companies to get the right deals in front of the right audience"
+    },
+    {
+      "id": "P8",
+      "text": "Spends is always free for users, with web backup of the mobile account",
+      "status": "explicit",
+      "evidence_span": "For users, Spends will always be free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "untracked Gen Y spending problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "fast anonymous gamified tracking product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "deal marketplace and free-user model",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun, fast budgeting and money tracking for a generation that otherwise does not watch where cash goes",
+      "status": "explicit",
+      "evidence_span": "solve the problem of budgeting and tracking your money. Not like everybody else, but fun and fast"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I have no idea where my money goes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fun and fast"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Spends will always be free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Four differentiation claims split where separately failable; XP/tokens/achievements/levels folded as gamification cascade (§4.1.7). Proactive spending philosophy folded into fast-input premise. Web dashboard treated as backup facet of the product."
+}

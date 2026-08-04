@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A modified capture camera gathers geometric and photorealistic data that can be cleaned of construction material and rendered in multiple occupancy scenarios",
+      "status": "explicit",
+      "evidence_span": "We start by capturing geometric and photorealistic data using this camera"
+    },
+    {
+      "id": "P2",
+      "text": "Constructed spaces stream to web and iPad, and end users can edit lighting, furniture, materials, and layouts in real time",
+      "status": "explicit",
+      "evidence_span": "every single space that we construct is both streamed through the web and then also onto the iPad"
+    },
+    {
+      "id": "P3",
+      "text": "Commercial real estate marketing spends heavily on hand-measured floor plans and print materials people do not want",
+      "status": "explicit",
+      "evidence_span": "$30 billion a year is spent on commercial real estate marketing services"
+    },
+    {
+      "id": "P4",
+      "text": "Success requires engineering depth across hardware, photography, lighting, vision, graphics, and design",
+      "status": "explicit",
+      "evidence_span": "building engineering competencies across hardware, photography, lighting, computer vision, computer graphics, and design"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Capture-to-editable 3D spaces",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "CRE marketing spend and waste",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Cross-discipline 3D engineering",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "3D virtual experiences replace 2D floor plans for communicating about real estate",
+      "status": "explicit",
+      "evidence_span": "Now that you've seen the space in 3D, would you ever want to go back and look at a 2D floor plan?"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "practical application of virtual reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the way that we communicate about real estate"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in order to do this, you've got to build a world-class engineering team"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Truncated at start. End-user editing folded into streaming product P2 (v1.3.2 §4.1(5)) rather than split. Adjacent interior-design/architecture opportunities treated as vision/expansion framing. Paying customers noted as traction only.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-920",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

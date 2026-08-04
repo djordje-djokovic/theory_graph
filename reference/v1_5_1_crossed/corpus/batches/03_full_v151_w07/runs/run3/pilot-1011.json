@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1011",
+    "coder_session_id": "session_05",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastic gift cards end up lost, stolen, or forgotten, leaving large unspent value that hurts consumers and retailers",
+      "status": "explicit",
+      "evidence_span": "your gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile app stores and backs up gift cards in the cloud with merchant select, code entry, balance verification, and barcode/numeric/scratch redemption",
+      "status": "explicit",
+      "evidence_span": "manage all your gift card needs right from your mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "Users can send personalized gift cards to friends via Facebook, email, or text with merchant suggestions and event notifications",
+      "status": "explicit",
+      "evidence_span": "seamlessly integrated with Facebook for convenience around sending gift cards to friends and family"
+    },
+    {
+      "id": "P4",
+      "text": "Users can regift unwanted cards to friends",
+      "status": "explicit",
+      "evidence_span": "you can regift unwanted cards to your friends"
+    },
+    {
+      "id": "P5",
+      "text": "Open APIs will let retailers and developers push cards into the wallet and build on the platform",
+      "status": "explicit",
+      "evidence_span": "enabling both retailers and developers to leverage our open APIs and build on top of our platform"
+    },
+    {
+      "id": "P6",
+      "text": "Launch distribution includes over 200 national retail partners",
+      "status": "explicit",
+      "evidence_span": "secured over 200 national retail partners to launch with our app"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lost plastic gift card problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile gift card wallet",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "open retailer developer platform",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "national retail partner distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Gift cards become fun, social, and always available on your phone instead of lost plastic",
+      "status": "explicit",
+      "evidence_span": "We're making gift cards fun, and we're making gift cards social"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers reduce unspent/forgotten card leakage",
+      "evidence_span": "that's bad for consumers, but it's really bad for retailers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's $20 billion in unspent gift cards every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Why would you carry your gift card like this when all you need is your phone?"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allow retailers to push gift cards to your gift wallet on your phone"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making us the largest mobile gift card store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Upload/backup/balance/redemption/scratch folded as one wallet surface (§4.1.7). Send and regift kept as distinct consumer jobs. Open API framed as near-future platform module—retained as separately revisable. Funding and free-card giveaways excluded as financing/promo."
+}

@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-362",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:43:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outdoor maintenance relies on gasoline/diesel equipment amid a long-term labor shortage",
+      "status": "explicit",
+      "evidence_span": "traditional equipment is gasoline or diesel powered, and there's a long-term labor shortage"
+    },
+    {
+      "id": "P2",
+      "text": "Solar sites need vegetation cut under panels around I-beams with decks that handle long thick vegetation",
+      "status": "explicit",
+      "evidence_span": "equipment needs to go underneath the panels and around the I-beams. And a special cutting deck is needed"
+    },
+    {
+      "id": "P3",
+      "text": "Electric rough-cut and offset cutting decks are purpose-built for thick solar-farm vegetation under panels",
+      "status": "explicit",
+      "evidence_span": "100% electric grass-cutting deck that is able to offset, and it can offset up to six feet to get underneath those panels"
+    },
+    {
+      "id": "P4",
+      "text": "Hydraulics-driven modular platform with quick-attach tops, swappable batteries, and heavy load capacity supports many outdoor jobs",
+      "status": "explicit",
+      "evidence_span": "Our in-house hydraulics platform drives the grass cutting deck and the snow plow attachment today. And long term, it can do dozens of different use cases"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial model centers on robotic vegetation management for solar farms as the launch use case",
+      "status": "explicit",
+      "evidence_span": "We launched SolarCuts in mid-2022"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Outdoor and solar maintenance constraints",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Electric modular cutting robots",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SolarCuts launch offering",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable electric robotic outdoor work equipment, starting with solar vegetation management",
+      "status": "explicit",
+      "evidence_span": "Join us in making outdoor work equipment sustainable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "massive 1,000-acre solar farms were a huge headache to maintain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100% electric rough cut deck"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robotic vegetation management for solar farms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Fresh partition: general outdoor electrification problem kept with solar site constraints; platform vs solar decks as product domain; SolarCuts as offering domain. $9M agreements excluded as traction."
+}

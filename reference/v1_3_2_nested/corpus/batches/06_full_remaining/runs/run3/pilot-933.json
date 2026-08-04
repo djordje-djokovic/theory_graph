@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Doctors rely on static reference tools and ad-hoc texts because they cannot systematically share clinical experience",
+      "status": "explicit",
+      "evidence_span": "we have no way to share our experience"
+    },
+    {
+      "id": "P2",
+      "text": "SharePractice is a collaborative reference where verified doctors upvote treatments, comment, follow experts, and write prescriptions from structured clinical detail",
+      "status": "explicit",
+      "evidence_span": "share practice structures and shares doctor's experience"
+    },
+    {
+      "id": "P3",
+      "text": "In-product sharing to doctor contacts virally onboards peers while storing structured answers in the reference tool",
+      "status": "explicit",
+      "evidence_span": "Viral model is baked right in, and it's working beautifully"
+    },
+    {
+      "id": "P4",
+      "text": "A proprietary medical ontology is required to reconcile terminological variance across medical databases",
+      "status": "explicit",
+      "evidence_span": "In order to account for all the variance in medical terminology, SharePractice built a proprietary medical ontology"
+    },
+    {
+      "id": "P5",
+      "text": "The platform uniquely records why physicians choose one therapy over others for analytics buyers",
+      "status": "explicit",
+      "evidence_span": "only SharePractice knows why"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Clinical experience gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Ontology-backed collaborative reference",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Treatment-rationale data asset",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients get better care because SharePractice puts collective doctor experience in every clinician's pocket",
+      "status": "explicit",
+      "evidence_span": "share practice puts a million doctors in every doctor's pocket"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "In order to account for all the variance in medical terminology, SharePractice built a proprietary medical ontology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making bad decisions because we have no way to share our experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "benefit of all of that experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting data that doesn't exist anywhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cross-border cure speculation treated as vision, not premise. Contact-book growth mechanic kept inside viral P3. Singletons D1 and D3 retained as separately revisable modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-933",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:31:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

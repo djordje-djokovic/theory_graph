@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-449",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:47:32+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remittance users face lost funds, delays, high cost, and low transparency",
+      "status": "explicit",
+      "evidence_span": "Lost funds, delayed delivery of funds, high cost, low transparency"
+    },
+    {
+      "id": "P2",
+      "text": "Employer-payroll integration lets employees send cross-border funds, top up phones, and pay international bills from a mobile wallet",
+      "status": "explicit",
+      "evidence_span": "Each pay period, a portion of my income flows over into this wallet and allows me to send funds abroad"
+    },
+    {
+      "id": "P3",
+      "text": "Low upfront fees plus FX undercut competitors charging $5–$15+",
+      "status": "explicit",
+      "evidence_span": "I'm only going to be charged $1, which is only 20% of the industry average for sending funds abroad"
+    },
+    {
+      "id": "P4",
+      "text": "Partnerships with central banks and ATM networks create banking interoperability for payouts",
+      "status": "explicit",
+      "evidence_span": "We're creating that interoperability by building partnerships"
+    },
+    {
+      "id": "P5",
+      "text": "Payroll-plus-MSB model reduces regulatory and acquisition costs and can shift paying party to the employer",
+      "status": "explicit",
+      "evidence_span": "We also shift the payer from the employee to the employer"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market is through banks, payroll providers, and direct employers",
+      "status": "explicit",
+      "evidence_span": "We distribute the products to banks, payroll providers, and direct to employers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Payroll wallet and pricing",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Interoperable payout partnerships",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Channel and category economics",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Remittance problems",
+      "premise_ids": [
+        "P1"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees get high-transparency, lower-cost cross-border payroll transfers",
+      "status": "explicit",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Recipients keep more of remitted funds as transfer costs fall",
+      "evidence_span": "With each 1% reduction in the cost of international transfers, $6 billion goes into the hands of recipients"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have solved for this problem"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Value-added services driving transfer cost toward zero coded as vision/roadmap (§4.1(4)/(5)), not separate premises. Juan demo verification is demo evidence, not a premise."
+}

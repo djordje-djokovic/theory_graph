@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:46:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The huge blood testing market is spread over thousands of applications",
+      "status": "explicit",
+      "evidence_span": "The blood testing market is huge. It's about $90 billion. The big problem is that it's spread over thousands of applications"
+    },
+    {
+      "id": "P2",
+      "text": "Existing analyzers detect only a handful of indications and most customers cannot pay the cost of ownership",
+      "status": "explicit",
+      "evidence_span": "These existing blood analyzers can only detect a handful of indications, and most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "id": "P3",
+      "text": "Eliminating the analyzer — a disposable device that hooks to a phone and returns results on screen — makes testing easier and more affordable",
+      "status": "explicit",
+      "evidence_span": "It takes a drop of blood, and the device hooks up to your phone with a dongle, a USB-C dongle, and you get the results on the screen"
+    },
+    {
+      "id": "P4",
+      "text": "The device is simple and modular: no pumps, no valves, and applications change by swapping reagents in the filters",
+      "status": "explicit",
+      "evidence_span": "It's simple. It doesn't have pumps. It doesn't have valves"
+    },
+    {
+      "id": "P5",
+      "text": "The first test is ALT/AST liver enzymes, complementing blood gas analyzer menus and measurable only spectrophotometrically",
+      "status": "explicit",
+      "evidence_span": "they complement the existing menus of blood gas analyzers, but they could only be measured spectrophotometrically"
+    },
+    {
+      "id": "P6",
+      "text": "Emergency veterinarians are the beachhead, running rapid screens for anesthesia or drugs before admitting patients",
+      "status": "explicit",
+      "evidence_span": "we're launching this into the veterinary space, where emergency veterinarians could use it to run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "id": "P7",
+      "text": "UC Davis validation across 100 animal samples and five species achieved R-squared 0.97 for ALT and 0.99 for AST",
+      "status": "explicit",
+      "evidence_span": "We ran 100 animal samples across five different species, and we achieved an R-squared of 0.97 for ALT and a 0.99 for AST"
+    },
+    {
+      "id": "P8",
+      "text": "The rapid chemistry segment beyond liver has no low-cost competitors and no barriers to entry, inviting menu expansion",
+      "status": "explicit",
+      "evidence_span": "it has no low-cost competitors. It has only about 20 analytes that are all generic"
+    },
+    {
+      "id": "P9",
+      "text": "Disruption comes from changing the model from razor-razorblade to a single-use disposable, with vertical integration controlling costs",
+      "status": "explicit",
+      "evidence_span": "we are going to disrupt it by changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented, unaffordable blood testing",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated phone-based test device",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Veterinary liver-test beachhead",
+      "premise_ids": ["P5", "P6", "P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Menu expansion and disposable economics",
+      "premise_ids": ["P8", "P9"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Blood testing made easier and more affordable at the point of care",
+      "status": "explicit",
+      "evidence_span": "InDiagnostics is making testing easier and more affordable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "And the reason we're working with ALT and AST is because they complement the existing menus of blood gas analyzers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making testing easier and more affordable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The problem framing is split into market fragmentation (P1) and analyzer inadequacy (P2) because they could fail separately: the market could stay fragmented while affordable broad-menu analyzers emerged, and vice versa. Device feature details (self-heating, sample-type flexibility, cuvette optics, microchip, two spare cuvettes) are folded into P3/P4 per v1.3.2 clarification 5. P5->P6 rests on the explicit 'the reason ... is because' warrant. Home-monitoring and research segments are folded into the expansion narrative rather than coded as separate premises. Market-size figures stay inside premises as quantitative detail."
+}

@@ -1,0 +1,77 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The founding team has the skills needed to take the product global, including gaming, VAT taxation, Revolut launch experience, and tax-free advisors",
+      "status": "explicit",
+      "evidence_span": "our team has the necessary skills to bring this product to a global level"
+    },
+    {
+      "id": "P2",
+      "text": "Innovat delivers tax-free, stress-free outcomes for travelers",
+      "status": "inferred",
+      "evidence_span": "join Innovat and get your tax-free, stress-free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Team capability for global rollout",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Tax-free traveler offer",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Travelers get tax-free, stress-free service from Innovat",
+      "status": "explicit",
+      "evidence_span": "join Innovat and get your tax-free, stress-free"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring this product to a global level"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tax-free, stress-free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.25
+  },
+  "notes": "Transcript opens mid-pitch and ends mid-CTA; thin_transcript and truncated. Team credentials coded because speaker presents them as necessary for the theory ('necessary skills to bring this product to a global level') per §4.2.2 exception. Product mechanism almost entirely missing; P2 inferred from closing value claim only.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-430",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:07+02:00"
+  }
+}

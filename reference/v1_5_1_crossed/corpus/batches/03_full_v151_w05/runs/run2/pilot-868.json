@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "coder_session_id": "session_01",
+    "session_case_index": 23,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inside companies a data divide and siloed SaaS data make question-to-insight slow, multi-role, and expensive",
+      "status": "explicit",
+      "evidence_span": "there's a data divide inside companies between people who have the skills to mine data and everybody else"
+    },
+    {
+      "id": "P2",
+      "text": "PatternEQ unifies data across services and automatically extracts influencing factors, builds predictive models, and scores customers",
+      "status": "explicit",
+      "evidence_span": "Pattern EQ unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "id": "P3",
+      "text": "One-click segmentation clusters similar customer groups and explains shared features",
+      "status": "explicit",
+      "evidence_span": "you click on the Segments button. And what it's doing behind the scenes is clustering your data to find groups that behave similarly"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS pricing starts at $1,000 per month scaling with volume, with beta signup as the entry channel",
+      "status": "explicit",
+      "evidence_span": "we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "data divide and silos",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "auto predictive analytics product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "volume SaaS and beta GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Non-data-scientists get deep predictive insights without a multi-week specialist pipeline",
+      "status": "explicit",
+      "evidence_span": "simplifies data science and makes it accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "From question to insight, it can take several weeks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get deep insights that typically require you to be a data scientist"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "experience the power of data science yourself by signing up for beta access"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Skill divide, engineer/scientist/programmer pipeline, cost, and Mixpanel/Stripe silos folded as one problem set (§4.1.6). Unify connectors, Predictions factor models, and churn scoring folded as one auto-analytics mechanism; Segments as related clustering capability in same product (§4.1.7). Nino demo outcomes as applications of the mechanism. Singleton D1/D3 retained. Anti-template: problem, product, and pricing/GTM separately revisable. ASR PatternEQ/PatternIQ left in spans."
+}

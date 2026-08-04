@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-872",
+    "coder_session_id": "session_02",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Millions of Americans face a catch-22 where building credit requires already having credit, leaving many unscored or subprime",
+      "status": "explicit",
+      "evidence_span": "in order to build or establish credit, first, you need credit. It's a fundamental catch-22"
+    },
+    {
+      "id": "P2",
+      "text": "Self Lender lets users choose a monthly amount and term, reports payments to credit bureaus, and returns the savings at term end",
+      "status": "explicit",
+      "evidence_span": "Self Lender enables our users to build positive payment history, the most important factor in determining your credit score"
+    },
+    {
+      "id": "P3",
+      "text": "Signup is fast and low-cost at about three minutes and $3 per month",
+      "status": "explicit",
+      "evidence_span": "Signing up with Self Lender is easy, takes less than three minutes, and only costs $3 per month"
+    },
+    {
+      "id": "P4",
+      "text": "Payment data enables exclusive lending offers such as cheaper auto loans, including applying Self Lender balance as a down payment",
+      "status": "explicit",
+      "evidence_span": "Self Lender uses her payment data internally to offer her exclusive lending opportunities"
+    },
+    {
+      "id": "P5",
+      "text": "Serving people without loyalty to mainstream banks creates long-term platform relationships for credit building and affordable products",
+      "status": "explicit",
+      "evidence_span": "By helping people who currently do not have loyalty to mainstream financial institutions, SelfLender has the opportunity to build profitable, long-term relationships"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "credit access problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "credit-builder product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "lending marketplace and relationships",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build credit, save money, and gain access to affordable financial products",
+      "status": "explicit",
+      "evidence_span": "the new revolutionary way to bill credit, save money, and gain access to affordable financial products"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Not having credit is expensive and very limiting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build positive payment history, the most important factor in determining your credit score"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "become the platform of choice for building credit, saving money, and getting access to affordable financial products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ASR 'bill credit' kept in value evidence_span verbatim. Lifetime savings market-sizing rhetoric not coded as a separate premise. Singleton D1 justified as separately revisable problem condition."
+}

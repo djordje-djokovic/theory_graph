@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video is the fastest-growing format and consumption is soaring",
+      "status": "explicit",
+      "evidence_span": "Today, video is the fastest growing format, with over 500 million people tuning into Facebook alone to watch video. So video consumption is going through the roof"
+    },
+    {
+      "id": "P2",
+      "text": "Studio/agency control and uncurated UGC must be brought together for a new production process",
+      "status": "explicit",
+      "evidence_span": "bring these 2 worlds together"
+    },
+    {
+      "id": "P3",
+      "text": "Companies engage their own fans, customers, and employees as filmers to produce at scale",
+      "status": "explicit",
+      "evidence_span": "engaging their own communities of fans, customers, and employees to become the filmers"
+    },
+    {
+      "id": "P4",
+      "text": "Offering is tooling for clients' own communities rather than building a scenic marketplace community",
+      "status": "explicit",
+      "evidence_span": "We're not building a scenic community. Instead, we're building the tools to enable our clients to engage and create with their own communities"
+    },
+    {
+      "id": "P5",
+      "text": "Filming instructions plus automatic processing and flexible editing produce usable client content",
+      "status": "explicit",
+      "evidence_span": "the script means that the BBC actually received the content they need"
+    },
+    {
+      "id": "P6",
+      "text": "In-app terms clear usage rights for online and broadcast reuse",
+      "status": "explicit",
+      "evidence_span": "all the video that's uploaded can then be used by the BBC, whether it's online or even in the broadcast shows"
+    },
+    {
+      "id": "P7",
+      "text": "Subscription model monetizes ongoing studio use",
+      "status": "explicit",
+      "evidence_span": "now we're fully into a subscription model"
+    },
+    {
+      "id": "P8",
+      "text": "ML search across sentiment, objects, and transcription increases content leverage",
+      "status": "explicit",
+      "evidence_span": "leveraging all of the content and the data that we're collecting to invest in machine learning"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Two-world video production opportunity",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Community production tooling and rights",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6",
+        "P8"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription revenue model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Biggest brand impact by leveraging communities already passionate about the brand",
+      "status": "explicit",
+      "evidence_span": "create the biggest impact by leveraging the communities that they already train who are the most passionate about their brand today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "produce high-impact video at scale"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "engage and create with their own communities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully into a subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "ASR 'scenic'/'train' left verbatim in spans. Edit-path enumeration kept inside processing premise per v1.3.1.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-673",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-451",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Analysts waste a large share of the workday hunting market research across many portals",
+      "status": "explicit",
+      "evidence_span": "The average analyst spends 19 percent of their day researching"
+    },
+    {
+      "id": "P2",
+      "text": "A web platform tells analysts which paid or free reports contain the data they need",
+      "status": "explicit",
+      "evidence_span": "Tell T4 what you're looking for, T4 tells you what reports contain the data you need, whether they come from a paid source, like Gartner, or a free source, like the US Census Bureau"
+    },
+    {
+      "id": "P3",
+      "text": "UX is a unified industry classification much more granular than NAICS",
+      "status": "explicit",
+      "evidence_span": "UX is T4's Unified Industry Classification System, a method of classifying industries that is 10 times more granular than NAICS"
+    },
+    {
+      "id": "P4",
+      "text": "Tom is a human-in-the-loop process that aggregates complete industry research and indexes quantitative data in reports",
+      "status": "explicit",
+      "evidence_span": "Tom is T4's proprietary, human-in-the-loop indexing process. Tom ensures that we aggregate a complete set of market research within each industry and index the quantitative data within each report"
+    },
+    {
+      "id": "P5",
+      "text": "SmartAssist search maps queries to UX filters and surfaces the few exact reports needed in seconds",
+      "status": "explicit",
+      "evidence_span": "The SmartAssist search translates the query into the UX indexing filters"
+    },
+    {
+      "id": "P6",
+      "text": "Sold as SaaS licenses to consulting, investing, strategy, and sales/marketing analysts at a per-user annual price",
+      "status": "explicit",
+      "evidence_span": "investors, strategy, sales and marketing analysts who can access T4 through a SaaS license charging up to 2,000 dollars per user per year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Analyst research-time problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "UX/Tom indexed research platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS license pricing to analysts",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Analysts quickly find comprehensive industry data instead of hours of portal search",
+      "status": "explicit",
+      "evidence_span": "A web platform lets analysts quickly find comprehensive industry data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "This is possible because UX and Tom enabled T4 to comprehensively index granular data"
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "UX and Tom enabled T4 to comprehensively index granular data that AI does not have the capability to process"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "average analyst spends 19 percent of their day researching"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "quickly find comprehensive industry data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "One twentieth of what analysts are currently paid to search"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Prototype customer/M&A traction excluded. Anti-template: research pain, indexing product, and SaaS pricing are separately revisable modules stated in the pitch."
+}

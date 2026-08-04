@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-307",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:26:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Exploding online attacks are fueled by data brokers who post and sell personal information",
+      "status": "explicit",
+      "evidence_span": "one of their biggest sources of information about us is data brokers posting and selling our information online"
+    },
+    {
+      "id": "P2",
+      "text": "Automated opt-out software removes a user's information from hundreds of broker websites",
+      "status": "explicit",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "id": "P3",
+      "text": "Patented search technology finds more profiles than anyone, including Google, across 228 data brokers and counting",
+      "status": "explicit",
+      "evidence_span": "our patented search technology finds more profiles than anyone, including Google"
+    },
+    {
+      "id": "P4",
+      "text": "The service is sold as a premium SaaS to both consumers and businesses",
+      "status": "explicit",
+      "evidence_span": "We have a premium SaaS model, and we sell both to consumers and to businesses"
+    },
+    {
+      "id": "P5",
+      "text": "A free exposure report scan wins over competitors' customers by revealing profiles competitors missed",
+      "status": "explicit",
+      "evidence_span": "many of our competitors' customers switch over to Optery after running one of our free exposure report scans"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data-broker privacy threat",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Opt-out software capability",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS commercial model and acquisition",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People stop the compromise of their privacy and security by removing their data from broker sites",
+      "status": "explicit",
+      "evidence_span": "compromising our privacy and security in the process. But today, we're putting a stop to this"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A future personal data rights management platform puts users in control of their data with all companies",
+      "evidence_span": "It's the foundation for a comprehensive personal data rights management platform that will put all of you in control of your data"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These companies have treated our data as their own, compromising our privacy and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Anybody here can sign up for their free scan"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "D1 is a singleton: the broker-threat problem claim is testable on external facts and revises independently of the product. The 'three things' differentiator list is folded into the capability premises per v1.3.2 clarification 5: screenshots and broker coverage are features of the same opt-out software; the 95-profiles figure is quantitative detail inside P3. The platform vision is recorded as a secondary value criterion per v1.3.2 clarification 4 rather than a premise. User and customer counts excluded as traction per 4.2. No premise-prerequisite plainly asserted."
+}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-671",
+    "coder_session_id": "session_06",
+    "session_case_index": 8,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CDN-based large-audience video streaming introduces high latency while existing real-time streams do not scale to enough concurrent viewers",
+      "status": "explicit",
+      "evidence_span": "a content delivery network based solution that results in an awful lot of latency"
+    },
+    {
+      "id": "P2",
+      "text": "A scalable real-time streaming platform reaches millions of concurrent viewers with under half a second latency via proprietary algorithms including an interactive transport protocol",
+      "status": "explicit",
+      "evidence_span": "we can stream to millions of concurrent viewers with under half a second of latency"
+    },
+    {
+      "id": "P3",
+      "text": "The product is licensed through APIs and SDKs for Android, iOS, web, and desktop with fast customer integration",
+      "status": "explicit",
+      "evidence_span": "we license our product to our customers through our API's and SDK's"
+    },
+    {
+      "id": "P4",
+      "text": "Optional proximity multicast peer-to-peer algorithms further reduce cost and address bandwidth constraints at scale",
+      "status": "explicit",
+      "evidence_span": "proximity multicast, which is a series of peer-to-peer algorithms that help to further reduce cost"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market use cases include one-to-many broadcast, expanded group chat, and group broadcast to millions",
+      "status": "explicit",
+      "evidence_span": "the one to many alternative where we talked about the Chelsea game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Latency versus scale streaming tradeoff",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Scalable real-time streaming platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Broadcast and interactive use cases",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reaching very large audiences with innovative low-latency video that drives interactivity and engagement",
+      "status": "explicit",
+      "evidence_span": "reach really large audiences and do so in a very innovative way with very low latency to drive interactive interaction and engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what you're experiencing is latency that results from your video stream"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scalable real time video streaming platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive interactivity and engagement in the streams they're creating"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Process+performance of low-latency scalable delivery folded into P2 (§4.1.8). Multicast framed as optional add-on module kept separate. Paying customers/pilots treated as traction evidence not premises; e-sports/AR/OTT roadmap treated as vision (§4.1.4). Team bios excluded. Singleton D1/D3 retained as problem and GTM modules."
+}

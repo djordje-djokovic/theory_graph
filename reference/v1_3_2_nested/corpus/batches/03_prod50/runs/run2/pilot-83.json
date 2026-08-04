@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without regular diabetic retina screening, blindness risk rises sharply while doctor supply stays flat",
+      "status": "explicit",
+      "evidence_span": "If you don't screen your retina regularly, the risk of getting eye complications, which causes blindness, goes up to 90%"
+    },
+    {
+      "id": "P2",
+      "text": "Drag-and-drop retina photo through CNNs yields faster, higher-accuracy diagnosis than the traditional referral path",
+      "status": "explicit",
+      "evidence_span": "accuracy is above 95%"
+    },
+    {
+      "id": "P3",
+      "text": "Training corpus of ~250k retina images underpins the assistant",
+      "status": "explicit",
+      "evidence_span": "we've collected previously 250,000"
+    },
+    {
+      "id": "P4",
+      "text": "Sell subscriptions to first-line eye care (opticians, GPs, telemedicine) at ~€5/image vs ~€25 market screening",
+      "status": "explicit",
+      "evidence_span": "comparing to the lowest price on Dutch market today is 25 euros per screening"
+    },
+    {
+      "id": "P5",
+      "text": "Few global AI ophthalmology competitors; Europe positioning with disease and hardware breadth differences",
+      "status": "explicit",
+      "evidence_span": "we're the only one at this stage in Europe"
+    },
+    {
+      "id": "P6",
+      "text": "Rotterdam Eye Hospital collaboration funds and validates glaucoma screening data and standard-setting",
+      "status": "explicit",
+      "evidence_span": "Rotterdam Eye Hospital is going to invest in our common project 350,000 euros and validate our solution"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Diabetic screening bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "CNN diagnostic accuracy and data",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Pricing, competition, and hospital partnership",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more accurate retina disease screening that prevents late blindness at scale",
+      "status": "explicit",
+      "evidence_span": "help doctor to make diagnosis just in a couple of seconds"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Longer-term window into cardio/neuro health via retina",
+      "evidence_span": "it's like a window into human's health"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "doctors could use some help"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you receive your diagnosis within one minute"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "penetrate Dutch market in the end of this year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Hospital €350k is partnership/validation condition for glaucoma module, not a financing ask for the venture equity round (equity ask excluded separately). Soft count 6.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-83",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:32:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

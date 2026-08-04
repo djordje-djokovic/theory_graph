@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-522",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Charcoal, firewood, and kerosene cooking create deadly indoor air pollution for Nigerian households",
+      "status": "explicit",
+      "evidence_span": "100,000 Nigerians die every year as a result of this act"
+    },
+    {
+      "id": "P2",
+      "text": "Many households also lack electricity access",
+      "status": "explicit",
+      "evidence_span": "live without access to electricity"
+    },
+    {
+      "id": "P3",
+      "text": "Power stove is affordable, smokeless, cooks much faster, and generates electricity via a proprietary heat circuit",
+      "status": "explicit",
+      "evidence_span": "proprietary circuit in-built that converts the excess heat while you cook to be able to generate electricity"
+    },
+    {
+      "id": "P4",
+      "text": "Good Life pellets from waste are far cheaper than charcoal, smokeless, and cook faster",
+      "status": "explicit",
+      "evidence_span": "burns without smoke, so we are removing indoor air pollution"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market uses cooperatives, MFIs, and informal fuel vendors without destroying their margins",
+      "status": "explicit",
+      "evidence_span": "We are not destroying their market. We are giving them a better solution they can sell at a better price margin"
+    },
+    {
+      "id": "P6",
+      "text": "Unit economics include product sales plus after-sales under a 12-month guarantee, cheaper than rival stoves",
+      "status": "explicit",
+      "evidence_span": "our stove is cheaper at $52 compared to $70"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Health and electricity gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stove and pellet system",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Inclusive local distribution and offer",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "No family should suffer miscarriage or child pneumonia from cooking smoke",
+      "status": "explicit",
+      "evidence_span": "No woman should be able to have miscarriage because she's preparing meal for her family"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Generate kitchen electricity while cooking",
+      "evidence_span": "in your kitchen, you can be generating electricity from your home"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solution to health"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "removing indoor air pollution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better solution they can sell"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Competitive price folded into commercial P6 with after-sales (§4.1(3)). Traction and prize ask excluded. Anti-template note: health need, product system, and vendor channel are separately revisable."
+}

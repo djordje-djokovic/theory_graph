@@ -1,0 +1,121 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large comedy fandom exists but streaming only carries a small fraction of comedy content and market share",
+      "status": "explicit",
+      "evidence_span": "you only have about 10% of the comedy that's available and only 1% of the market"
+    },
+    {
+      "id": "P2",
+      "text": "Laughly is a purpose-built spoken-word/stand-up streaming app with a growing comedian catalog",
+      "status": "explicit",
+      "evidence_span": "the first of its kind built from the ground up streaming app focused on stand-up comedy"
+    },
+    {
+      "id": "P3",
+      "text": "Spoken Word Project transcription enables profanity filtering and subject-matter comedy radio stations",
+      "status": "explicit",
+      "evidence_span": "we have a technology which allows us to transcribe every single joke into text"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue share with comedians plus label distribution turns artists into promoters who drive scale",
+      "status": "explicit",
+      "evidence_span": "we share revenue with them for every single stream, so these guys are promoting these apps for us"
+    },
+    {
+      "id": "P5",
+      "text": "Free ad-supported tier plus $7.99 subscription for ad-free, offline, and exclusive content",
+      "status": "explicit",
+      "evidence_span": "everything is ad revenue-based, but for $7.99 a month, you get ad-free, you get offline play, and you get access to exclusive content"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Comedy streaming gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Spoken-word streaming tech",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Artist share and freemium",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give comedy fans abundant streamed stand-up and spoken-word content",
+      "status": "explicit",
+      "evidence_span": "huge problem for all these big fans of comedy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Comedians benefit from revenue share when they promote their material",
+      "evidence_span": "the comedians also benefit because of the revenue share we've built"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "What that allows us to do is it allows us to, for example, search for profanity"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "streaming hasn't caught up"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "built from the ground up to focus on streaming comedy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive volume and drive scale very quickly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Profanity filter and topic radio treated as uses of one transcription capability (v1.3.1 §4.1(2)). Catalog size and celebrity booth appearances excluded as traction. Need/product/GTM triad justified by artist-promotion economics revisable separately from Spoken Word tech.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-688",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

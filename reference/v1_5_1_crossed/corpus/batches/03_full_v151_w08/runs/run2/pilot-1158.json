@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1158",
+    "coder_session_id": "session_02",
+    "session_case_index": 7,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customer service is poor across airlines, hotels, retail, restaurants, and similar venues",
+      "status": "explicit",
+      "evidence_span": "Customer service sucks"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile rating app lets people thumbs-up/down service workers with comments and social share in about 30 seconds",
+      "status": "explicit",
+      "evidence_span": "empower people to rate customer service on their cell phones"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers can check individual service workers' ratings before choosing whom to deal with",
+      "status": "explicit",
+      "evidence_span": "before you went down to the car dealership, you could find out something about the people who are selling you the product"
+    },
+    {
+      "id": "P4",
+      "text": "Businesses get a dashboard aggregating ratings, employee performance, peer comparison, and customer response requests",
+      "status": "explicit",
+      "evidence_span": "we will provide a portal, essentially, a dashboard for businesses"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via app stores, social promotion, and location-app integrations expands reach",
+      "status": "explicit",
+      "evidence_span": "started conversations with other location-based apps for integrating this functionality into those apps"
+    },
+    {
+      "id": "P6",
+      "text": "Airline, hotel, restaurant, and retail partners promote Tello to customers at the point of service",
+      "status": "explicit",
+      "evidence_span": "partners, and we've already started a bunch of conversations with airlines and hotels and restaurant chains and retailers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "bad customer service problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "consumer rating and discovery",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "business dashboard",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "app and partner distribution",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shining a light on service interactions so customer service gets better",
+      "status": "explicit",
+      "evidence_span": "by shining a bright light on it, customer service gets better"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Customer service sucks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in 30 seconds or less, you just provided not only that employee, but also their manager with information"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "at a glance see what's going on with their business"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they will actually promote Tello to their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Airline/hotel/retail venue list folded into one service-sucks pain (§4.1.6). Thumbs/comment/share/response-request cascade of rating app (§4.1.7). Business dashboard split as separately claimed B2B module. Investor/t-shirt promo excluded (§4.2). 14M businesses treated as catalog scope of rating product."
+}

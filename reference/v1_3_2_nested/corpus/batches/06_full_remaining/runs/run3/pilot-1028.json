@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connecting existing underused private bikes creates an infrastructure-light global rental system",
+      "status": "explicit",
+      "evidence_span": "the largest bike rental system in the world already exists. We just need to connect it"
+    },
+    {
+      "id": "P2",
+      "text": "Web marketplace lets owners list bikes and renters find nearby options at prices averaging about half of shops",
+      "status": "explicit",
+      "evidence_span": "we've created a web platform where we're taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "id": "P3",
+      "text": "Safety and trust via listing review, insurance to $5,000, and facilitated owner-renter communication",
+      "status": "explicit",
+      "evidence_span": "We have enough rules in place to make it safe. We insure bicycles up to $5,000"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Connect idle bike supply",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "SpinLister marketplace",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Trust and insurance",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help travelers and locals explore by renting bikes from individuals",
+      "status": "explicit",
+      "evidence_span": "rent out their bikes to travelers and locals looking to explore"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We just need to connect it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "meeting it with the demand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it safe"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Price half-of-shops folded into marketplace premise. Insurance and review/comms as one trust module. Traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1028",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "epistemic_markers": []
+}

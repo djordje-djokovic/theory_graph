@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peers learn far more from each other than from video content or professors",
+      "status": "explicit",
+      "evidence_span": "peers learn seven times more from each other than they do from any video content, anything hands down from the professors"
+    },
+    {
+      "id": "P2",
+      "text": "Most educational technology is built top-down, and Facebook/Blackboard fail for finding courses and classmates",
+      "status": "explicit",
+      "evidence_span": "99% of all educational technology is built for top down"
+    },
+    {
+      "id": "P3",
+      "text": "Study Hall connects classmates via a study-buddy recommendation algorithm, course pages, notes sharing, and live study sessions",
+      "status": "explicit",
+      "evidence_span": "We've actually built the first algorithm in the world that recommends people with whom you should study"
+    },
+    {
+      "id": "P4",
+      "text": "A peer-to-peer marketplace lets students list and buy books and study materials",
+      "status": "explicit",
+      "evidence_span": "We built a peer-to-peer marketplace"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with online learning platforms can extend distribution beyond campus pilots",
+      "status": "explicit",
+      "evidence_span": "We can partner with online universities where people go watch videos"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Peer learning need versus top-down edtech",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart classmate connection platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace and online partnerships",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students connect with classmates and make academic life easier through peer-to-peer learning",
+      "status": "explicit",
+      "evidence_span": "the smartest platform to connect with your classmates and make your academic life easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capturing the power of peer-to-peer learning"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect with your classmates, find your peers, and study in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you want the rest of my study guide, it's for sale on my Marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "University pilots and honor-society member counts excluded as traction. Demo UI features (notes drag-drop, gamification ratings, books) folded into the core platform premise (v1.3.2 §4.1(5)). Marketplace kept separate because speaker frames it as the monetization answer. Singleton D2: recommendation-and-course platform is the independently learnable product module."
+}

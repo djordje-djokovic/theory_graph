@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-14",
+    "coder_session_id": "session_05",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Manufacturing downtime and nearshoring demand require turning legacy plants into intelligent factories",
+      "status": "explicit",
+      "evidence_span": "downtime is still costing industrial players over 11% of their yearly turnover"
+    },
+    {
+      "id": "P2",
+      "text": "Ali Gateway connects most industrial machinery, sensors, and PLCs and pulls process, machine, and health data as a factory source of truth",
+      "status": "explicit",
+      "evidence_span": "connect to over 90% of industrial machinery categories, sensors, and PLCs"
+    },
+    {
+      "id": "P3",
+      "text": "Machine learning detects irregular activity or failure and recommends probable causes and courses of action",
+      "status": "explicit",
+      "evidence_span": "We tell factories what's the probable cause and what's the recommended course of action"
+    },
+    {
+      "id": "P4",
+      "text": "An Ali AI assistant with generative BI answers operational questions from productivity data in seconds",
+      "status": "explicit",
+      "evidence_span": "we built a chatbot. We call it the Ali AI Assistant"
+    },
+    {
+      "id": "P5",
+      "text": "Every customer action improves shared model algorithms via network effects across the platform",
+      "status": "explicit",
+      "evidence_span": "every single action improves our model's algorithms, creating network effects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manufacturing downtime and nearshoring pressure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "gateway data and intelligent recommendations",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Ali AI assistant",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-powered factory operations that respond quickly, efficiently, and more sustainably to market demand",
+      "status": "explicit",
+      "evidence_span": "making manufacturing more efficient and more sustainable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's urgent that we fix the foundation of the real-world economy now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn legacy operations into intelligent factories"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "problems that would have taken two weeks to solve"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Efficiency-module metrics folded into the intelligent-recommendation mechanism (P3). Revenue/productivity traction excluded. Singleton D3 retained: chatbot is framed as a separately built decision surface."
+}

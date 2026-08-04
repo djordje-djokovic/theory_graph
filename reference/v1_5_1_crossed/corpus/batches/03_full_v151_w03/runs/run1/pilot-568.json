@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-568",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding a great car deal in MENA is hard because there is no centralized platform, information is inconsistent or illegitimate, and pricing is not standardized",
+      "status": "explicit",
+      "evidence_span": "there's no centralized platform, inconsistent and illegitimate information, and no standardized pricing in the MENA region"
+    },
+    {
+      "id": "P2",
+      "text": "An AI search engine identifies cars from photos, estimates value and depreciation with market-adjusted pricing, and aggregates listings across websites nationwide",
+      "status": "explicit",
+      "evidence_span": "SEAS condenses the entire search process into one transparent and AI-powered search engine"
+    },
+    {
+      "id": "P3",
+      "text": "An AI negotiation chatbot contacts dealers to secure best prices, then WhatsApp integration helps buyers contact sellers and book test drives",
+      "status": "explicit",
+      "evidence_span": "our AI negotiation chatbot, Caesar, automatically contacts every single dealer to ensure that he gets the best deal out there"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization combines OEM/dealer lead sales, brand business-intelligence tools, and partnerships with banks, insurance, and other car services",
+      "status": "explicit",
+      "evidence_span": "We work with OEMs and certified dealers to send them leads on their featured cars"
+    },
+    {
+      "id": "P5",
+      "text": "In-app leasing options alongside buy listings will grow MENA leasing from very low penetration with brand-partnered model inventory",
+      "status": "explicit",
+      "evidence_span": "you'll be able to lease cars through the C-SAP"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented MENA car search",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI search and negotiation",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "lead BI and services monetization",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "in-app leasing expansion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buyers get the right car at the right time at the right price across buying and leasing",
+      "status": "explicit",
+      "evidence_span": "you can get the right car, at the right time, at the right price"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding a great deal is hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finds all the best deals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "three channels of monetization"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see both buying and leasing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three MENA search failures folded as one pain bundle. Photo ID/pricing/aggregation folded into search engine; Caesar negotiation kept as distinct deal-making module (speaker stresses competitors lack it). Leasing treated as separately revisable product extension. App-rank/lead traction and team bios excluded. Transcript cuts mid-leasing launch sentence but core claim is present."
+}

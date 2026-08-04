@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-892",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "New parents leave hospital support for an anxious, manual-free home with a newborn",
+      "status": "explicit",
+      "evidence_span": "going home and really kind of being all by yourself and having to just figure it out"
+    },
+    {
+      "id": "P2",
+      "text": "SIDS, the number one cause of infant death, is the fear that keeps most mothers up at night",
+      "status": "explicit",
+      "evidence_span": "It's the number one cause of infant death, and it's what keeps most moms up at night"
+    },
+    {
+      "id": "P3",
+      "text": "Current monitors are outdated and cannot tell parents whether the baby is breathing",
+      "status": "explicit",
+      "evidence_span": "They're old, they're outdated, and they don't actually tell you if your baby is breathing or not"
+    },
+    {
+      "id": "P4",
+      "text": "A smart sock built on safe, proven hospital pulse-oximetry sends heart rate and oxygen levels to the parent's smartphone with emergency alerts",
+      "status": "explicit",
+      "evidence_span": "It's a smart sock that sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "id": "P5",
+      "text": "Fully flexible electronics encased in silicone make the device baby-proof and waterproof",
+      "status": "explicit",
+      "evidence_span": "we've made the electronics completely flexible, and we've encased it in silicone so that it is also waterproof"
+    },
+    {
+      "id": "P6",
+      "text": "The monitor shrinks hospital-grade pulse oximetry to 1/80th the size, wireless, doing everything the home unit does",
+      "status": "explicit",
+      "evidence_span": "which is 180th the size. And it does everything that the home pulse oximeter can do, and it's wireless"
+    },
+    {
+      "id": "P7",
+      "text": "Four sensors yielding nine combinations keep a great reading the whole time as the infant's foot triples in size",
+      "status": "explicit",
+      "evidence_span": "With four sensors, we're getting nine different combinations, and we're getting a great reading the whole time"
+    },
+    {
+      "id": "P8",
+      "text": "Skin temperature, rollover alerts, and sleep-quality notifications keep parents informed because infants cannot say what is wrong",
+      "status": "explicit",
+      "evidence_span": "we're also doing skin temperature, rollover alerts, so if the baby rolls onto their stomach, and sleep quality"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent anxiety and failing monitors",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart-sock vitals monitoring",
+      "premise_ids": ["P4", "P8"]
+    },
+    {
+      "id": "D3",
+      "name": "Infant-grade engineering",
+      "premise_ids": ["P5", "P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parents are empowered and infant health improves through real-time vitals monitoring and alerts",
+      "status": "explicit",
+      "evidence_span": "It's gonna empower parents and it's gonna improve the health of infants all over the world"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P7",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "we had to get a reading the entire time. innovatively came up with a new solution of using multiple sensors in our Pulseox"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anything that saves a baby's life is worth it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can alert you in case of an emergency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're getting a great reading the whole time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "The proven-technology claim is folded into P4: the speaker presents the hospital pulse-ox pedigree as the credibility basis of the same sock mechanism, not a separately revisable module. P7->P6 is coded on the 'had to ... came up with a new solution' warrant: the miniaturized monitor only holds up across the foot's first-year growth if the multi-sensor reading works. Pre-sales revenue excluded as traction per 4.2; the dataset and elderly-care ambitions are roadmap/vision items left uncoded per v1.3.2 clarifications 4-5. BLE connectivity is a feature detail of the same product, folded in."
+}

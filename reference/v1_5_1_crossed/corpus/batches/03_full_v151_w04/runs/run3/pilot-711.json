@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-711",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Talk media (podcasts/radio) remain long, non-interactive, and poorly suited to mobile-first ADD-generation creators unlike music, photos, and video",
+      "status": "explicit",
+      "evidence_span": "They're long. They're not interactive. They don't really cater to the ADD generation, the mobile-first content creators"
+    },
+    {
+      "id": "P2",
+      "text": "Pundit is a social network for bite-sized talk shows where users invite friends or followers to participate in short audio conversations",
+      "status": "explicit",
+      "evidence_span": "social network for voice experiences, where users can start bite-sized talk shows about their favorite topics and invite their friends or followers to participate"
+    },
+    {
+      "id": "P3",
+      "text": "Every piece of content is capped short (max ~30 seconds) with automatic noise reduction, voice engineering, filters, and background music",
+      "status": "explicit",
+      "evidence_span": "every piece of content on Pundit is short and sweet"
+    },
+    {
+      "id": "P4",
+      "text": "Pundit Voice Box enables private disappearing voice messages (24 hours)",
+      "status": "explicit",
+      "evidence_span": "send private voice messages that disappear in 24 hours"
+    },
+    {
+      "id": "P5",
+      "text": "Creators can share talks on other social platforms and natively embed them on any website, including web join without the app",
+      "status": "explicit",
+      "evidence_span": "creators can share their Pundit talks on other social platforms and natively embed them on any website"
+    },
+    {
+      "id": "P6",
+      "text": "Brands and top creators can create and distribute audio content on the platform",
+      "status": "explicit",
+      "evidence_span": "brands and top-notch creators to create and distribute awesome audio content"
+    },
+    {
+      "id": "P7",
+      "text": "Expansion to Android and Asian/Middle Eastern markets where voice interaction is already dominant",
+      "status": "explicit",
+      "evidence_span": "releasing our Android version and launching in Asian and Middle Eastern markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "talk media lag for mobile social",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "bite-sized social voice product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "creator distribution and brand use",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Android and regional expansion",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make talk lightweight, interactive, and fun like Snapchat did for photos",
+      "status": "explicit",
+      "evidence_span": "making talk more lightweight, interactive, and fun"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "talk media have the same problem. They're long. They're not interactive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create short, insanely fun audio content"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share their Pundit talks on other social platforms"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "voice interaction is already a dominant behavior"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Voice-filter demos folded into short-content production mechanism (P3). Engagement rate and Comic-Con fan counts excluded as traction. Voice Box split as separately framed private-messaging module. Singleton D1/D4 retained as independently revisable problem framing and market expansion."
+}

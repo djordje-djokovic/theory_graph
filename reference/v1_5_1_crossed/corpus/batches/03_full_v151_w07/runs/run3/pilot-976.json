@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-976",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Day-to-day language barriers (work, doctor, etc.) are poorly served by machine translation alone",
+      "status": "explicit",
+      "evidence_span": "we had A big problem with language barriers"
+    },
+    {
+      "id": "P2",
+      "text": "Crowdsourcing real-time human interpreters worldwide solves live language gaps",
+      "status": "explicit",
+      "evidence_span": "it's crowdsourcing of real-time human interpreters all around the globe"
+    },
+    {
+      "id": "P3",
+      "text": "Interpreter profiles capture languages, levels, dialects/accents, expertise, and availability for matching",
+      "status": "explicit",
+      "evidence_span": "we collect the dialects and the accents too"
+    },
+    {
+      "id": "P4",
+      "text": "A hybrid of professional and crowdsourced talent can cover nearly all spoken languages",
+      "status": "explicit",
+      "evidence_span": "this is a hybrid crowdsource kind of solution"
+    },
+    {
+      "id": "P5",
+      "text": "Current product surfaces include live real-time video and conference interpreting",
+      "status": "explicit",
+      "evidence_span": "a product for live video, live real-time video, and conferences"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "language barrier problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "crowdsourced interpreter network",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "live video and conference product",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People can communicate in their native languages anywhere via on-demand human interpreters",
+      "status": "explicit",
+      "evidence_span": "you can travel anywhere in the world and be able to speak with anybody regardless of what language they speak"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Crisis-response volunteer interpreting as an additional use of the network",
+      "evidence_span": "we saw an opportunity for a use of Battleverse, which was crisis response"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there must be a better way than machine translation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "crowdsourcing of real-time human interpreters all around the globe"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "product for live video, live real-time video, and conferences"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Daily language-barrier contexts folded as one problem (§4.1.6). Profile dialect/accent/expertise/availability and trainee-to-professional ladder folded as cascade of one interpreter network (§4.1.7). Babel-fish vision kept as primary value wording rather than an extra premise (§4.1.4). Interpreter count treated as traction detail of the crowdsourcing mechanism (§4.2). Singleton D3 retained: live video/conference product surface separately revisable from network supply."
+}

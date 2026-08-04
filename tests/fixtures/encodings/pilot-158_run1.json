@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-158",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:31:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing cyber tools force users to trade security actions against getting work done",
+      "status": "explicit",
+      "evidence_span": "Existing cyber solutions make humans responsible for security actions, when in reality, security actions often get in the way of getting a job done"
+    },
+    {
+      "id": "P2",
+      "text": "Security overlays everyday document actions inside environments users already use",
+      "status": "explicit",
+      "evidence_span": "focusing on the everyday actions users take with their documents, and then we overlay that into the existing environments that they're already in"
+    },
+    {
+      "id": "P3",
+      "text": "Identity tied to individually encrypted files exposes only the file in active use",
+      "status": "explicit",
+      "evidence_span": "tying identity to individualized encrypted files"
+    },
+    {
+      "id": "P4",
+      "text": "A digital map shows who accesses what files where, portable via API to monitoring systems",
+      "status": "explicit",
+      "evidence_span": "Phalanx provides a digital map of every file across every existing workspace"
+    },
+    {
+      "id": "P5",
+      "text": "Identity-based automation deploys in under a day with zero weekly maintenance",
+      "status": "explicit",
+      "evidence_span": "Phalanx is an identity-based solution that leverages automation. And that means we're deployable in less than a day and requires zero weekly maintenance"
+    },
+    {
+      "id": "P6",
+      "text": "Per-user enterprise sales plus channel partners reach mid-large enterprises and SMBs",
+      "status": "explicit",
+      "evidence_span": "dual-pronged go-to-market strategy where we focus on mid- to large-scale enterprise by doing per-user requirements"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Security versus productivity conflict",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Identity-encrypted files and visibility",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise and SMB channel GTM",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cybersecurity that lets people work productively while data stays protected",
+      "status": "explicit",
+      "evidence_span": "We have cybersecurity that lets humans be human"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This approach is key because it reduces the attack surface"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "battle between security and productivity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those 999 unused secured files don't impact your productivity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not only are we securing their data, we're actually enabling their businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "60% risk-reduction traction excluded. Singleton D1 retained as the problem condition. Channel clause completed in P6 evidence via per-user enterprise claim; SMB channel asserted in same GTM sentence cluster."
+}

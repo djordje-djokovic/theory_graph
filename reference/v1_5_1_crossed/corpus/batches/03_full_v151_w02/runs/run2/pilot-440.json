@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-440",
+    "session_case_index": 5,
+    "extraction_run": 2
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Microsatellite ride-share launches force compromises on schedule, destination orbit, and integration, adding up to ~2.5 years before satellites are operational while capital burns",
+      "status": "explicit",
+      "evidence_span": "Adding up all these pain points can lead to two and a half years between when a launch is scheduled and when a satellite is operational"
+    },
+    {
+      "id": "P2",
+      "text": "Reusable autonomous high-altitude balloon platform Regulus launches a smaller dedicated solid/liquid rocket from 60,000 feet, enabling weeks-to-orbit dedicated microsatellite launches to any LEO at high frequency",
+      "status": "explicit",
+      "evidence_span": "Regulus is a fully reusable and autonomous vehicle that allows us to launch rockets from 60,000 feet in altitude"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ride-share launch compromises for microsats",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "High-altitude dedicated launch platform",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dedicated microsatellite launch when and where customers need, without ride-share compromise",
+      "status": "explicit",
+      "evidence_span": "providing our microsatellite customers with a dedicated launch service that they've been asking for"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "High-altitude platform services market beyond orbital launch",
+      "evidence_span": "this opens the door to a $2.6 billion high-altitude platform services market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what customers need is the experience that you and I know is ride-sharing, where you can call up a ride that takes you where you want to go, when you want to get there, no compromise"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Leo Aerospace can provide a launch within a matter of weeks to any low-Earth orbit and support a very high launch frequency"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Preset schedules/orbit drop-off/integration restrictions folded as one ride-share pain-bundle (rule 6). Balloon ascent, rotational control, solid stages, liquid third stage, and autonomous recovery folded as feature cascade of Regulus dedicated-launch mechanism (rule 7). NASA/Air Force/HAPS uses treated as applications of same platform, not extra premises."
+}

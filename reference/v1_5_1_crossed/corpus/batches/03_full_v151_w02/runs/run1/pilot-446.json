@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-446",
+    "coder_session_id": "session_01",
+    "session_case_index": 6,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Companies cannot easily track where data goes across vendors or meet privacy compliance obligations",
+      "status": "explicit",
+      "evidence_span": "there is no easy way to track what's happening with all of that data, and there's no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "id": "P2",
+      "text": "A vendor privacy intelligence layer scores vendors' practices, lawsuits, and policies from a proprietary dataset",
+      "status": "explicit",
+      "evidence_span": "Osano provides a 360-degree view of each vendor's privacy practices"
+    },
+    {
+      "id": "P3",
+      "text": "A managed cookie-consent solution makes websites compliant across many countries with one line of code",
+      "status": "explicit",
+      "evidence_span": "fully managed cookie consent solution, so that with one line of code, websites can immediately become compliant with the laws of 40 different countries"
+    },
+    {
+      "id": "P4",
+      "text": "A developer API lets builders embed data privacy into applications and workflows",
+      "status": "explicit",
+      "evidence_span": "offers a developer API so that developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "id": "P5",
+      "text": "A large free-compliance user base creates an upsell path as vendor of record",
+      "status": "explicit",
+      "evidence_span": "we are already their compliance vendor of record"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Privacy tracking and compliance gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Vendor privacy intelligence",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Cookie consent compliance",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Developer privacy API",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D5",
+      "name": "Free-to-paid compliance funnel",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make data privacy compliance easy for companies",
+      "status": "explicit",
+      "evidence_span": "makes it easy for companies to identify which vendors are best to work with, to comply with laws like GDPR"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it easy for companies to identify where they have risk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with that one line of code, their website automatically becomes compliant"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are already their compliance vendor of record"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Canonical split: one compliance pain-bundle + distinct capability premises (vendor intel, cookie consent, API) per v1.5.1 §4.1.6. Lawsuits/legislation/policy tracking folded into P2. OneTrust contrast and user counts treated as positioning/traction. Team bios and promo code excluded."
+}

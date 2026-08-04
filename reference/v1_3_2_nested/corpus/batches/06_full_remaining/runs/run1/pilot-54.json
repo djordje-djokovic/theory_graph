@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aviation must decarbonize to meet net-zero goals, and electric flight starting from light aircraft is the path",
+      "status": "explicit",
+      "evidence_span": "we are convinced aviation will be electric"
+    },
+    {
+      "id": "P2",
+      "text": "Hydrogen balances energy efficiency and aircraft range/speed/payload better than batteries or SAF for their aircraft",
+      "status": "explicit",
+      "evidence_span": "hydrogen in the middle has good enough energy efficiency and a good enough aircraft performance"
+    },
+    {
+      "id": "P3",
+      "text": "Demonstrated hydrogen-to-propeller powertrain integrated into an aircraft ready for test flight",
+      "status": "explicit",
+      "evidence_span": "an 85 kilowatt powertrain from hydrogen tanks to a propeller"
+    },
+    {
+      "id": "P4",
+      "text": "Scalable powertrain architecture enables a 6–8 passenger pressurized business jet matching existing missions without direct emissions",
+      "status": "explicit",
+      "evidence_span": "comparable performance without the direct emissions"
+    },
+    {
+      "id": "P5",
+      "text": "Aircraft integration includes tank placement and thermal management around the powertrain",
+      "status": "explicit",
+      "evidence_span": "how to integrate the tanks below the cabin of an aircraft, and how to integrate thermal management system"
+    },
+    {
+      "id": "P6",
+      "text": "Working with European airports to ready hydrogen supply for the jet",
+      "status": "explicit",
+      "evidence_span": "we're working with 50 of them to bring hydrogen for our aircraft"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hydrogen-electric aircraft technology",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Airport hydrogen readiness",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Business aviation missions with comparable performance and without direct emissions",
+      "status": "explicit",
+      "evidence_span": "comparable performance without the direct emissions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Potential large-scale CO2 reduction contribution as platforms scale",
+      "evidence_span": "possible CO2 reduction contribution possible of 350 megaton of CO2 equivalent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "That's why we are choosing hydrogen at Beyond Aero to develop our first aircraft"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully electric thanks to hydrogen technology"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "airports for them to be ready for our jet"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "LOIs excluded as traction. Long-run regional/commercial scale as vision framing not premise. Battery/SAF comparison folded into hydrogen choice.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-54",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

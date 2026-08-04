@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People avoid trying new places because they are unsure they will like the experience",
+      "status": "explicit",
+      "evidence_span": "we don't want to take the chance and try to go to a new place because we're not sure that we're going to like the experience"
+    },
+    {
+      "id": "P2",
+      "text": "SpotOn builds personalized actionable recommendations from existing Facebook and Foursquare social data",
+      "status": "explicit",
+      "evidence_span": "Spot on cuts through the noise by pulling in your existing social network data from Facebook and Foursquare, uses it to build a profile of you to give you personalized and actionable recommendations"
+    },
+    {
+      "id": "P3",
+      "text": "Each place has a social layer of friends' ratings and activity, not random reviewers",
+      "status": "explicit",
+      "evidence_span": "Every single place has a social layer that pulls in reasons why you should go check out a place. So, for example, seven of my friends have rated this place very highly. These are my friends. These are not random people. These are not Yelp reviewers that I don't care about"
+    },
+    {
+      "id": "P4",
+      "text": "In-app fun rating of check-ins improves personalization and creates a shared preference data layer for all users",
+      "status": "explicit",
+      "evidence_span": "we make it really easy for our users to give us a lot of their preference data in a really fun and an engaging way"
+    },
+    {
+      "id": "P5",
+      "text": "Filters and search surface friend-visited places, never-been places, bookmarks, and personalized categories",
+      "status": "explicit",
+      "evidence_span": "with one touch of a button, I can say, only show me places that at least one of my friends have been to, or only show me places that I've never been to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fear of trying new places",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social personalization engine",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Discovery filters and search",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easiest way to go to new places with friends and enjoy the end experience together",
+      "status": "explicit",
+      "evidence_span": "SpotOn is the easiest way to go to new places with your friends"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "End experience of being out with friends, not merely recommendations",
+      "evidence_span": "Spot On is not about the recommendation. It is about the end experience of being at that bar with your friends and having a good time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're not sure that we're going to like the experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized and actionable recommendations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I'm in the mood for something completely new"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Group recommendation / make-a-plan pipeline treated as vision roadmap, not premises (v1.3.2). Pix view folded into social recommendation offering. Anti-template: D1/D2/D3 map to need, personalization, and discovery UX as separately revisable modules in the pitch.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1075",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:10+02:00"
+  }
+}

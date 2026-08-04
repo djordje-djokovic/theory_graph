@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:13:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robot innovation is now constrained by expensive complex hardware (actuators/joints), not brains, sensors, or software",
+      "status": "explicit",
+      "evidence_span": "robots are no longer constrained by these parts. They're instead constrained by the hardware"
+    },
+    {
+      "id": "P2",
+      "text": "ModBot modular servo, joint, and link building blocks are versatile, reconfigurable parts for building many robot forms affordably",
+      "status": "explicit",
+      "evidence_span": "ModBot identifies the common building blocks found in all robots. The servo, the joint, and the link"
+    },
+    {
+      "id": "P3",
+      "text": "Phone app enables on-the-fly hardware programming, keyframe recording, and wireless sequence repeat for rapid prototyping",
+      "status": "explicit",
+      "evidence_span": "You can use our phone app to do hardware programming on the fly, record key frames and repeat sequences wirelessly"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud virtual robot builder lets users assemble, program, simulate in a physics engine, share, and order hardware",
+      "status": "explicit",
+      "evidence_span": "You can assemble and program your robot on the fly, inside of the browser, and test and simulate in a real physics engine"
+    },
+    {
+      "id": "P5",
+      "text": "Tightly integrated joint unit combines encoder, motor, transmission, and bearings at roughly one-tenth industrial cost with compactness",
+      "status": "explicit",
+      "evidence_span": "we've managed to reduce the cost of an industrial equivalent by about one-tenth"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "affordable modular robot hardware",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "phone and cloud prototyping tools",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Quality affordable robot parts that get robots out of labs into everyday inventors' hands and accelerate innovation",
+      "status": "explicit",
+      "evidence_span": "get robots out of expensive research labs and into the hands of everyday inventors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "good quality and affordable robot parts"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making ModBot easy to use for rapid prototyping"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cost/compactness treated as quantitative/performance package of the integrated joint (v1.5.1 §4.1.8), not separate premises. Example builds (arm, dolly, prosthetic) treated as applications of one modular kit. Crowdfunding launch excluded as traction."
+}

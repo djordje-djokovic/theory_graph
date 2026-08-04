@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-130",
+    "coder_session_id": "session_04",
+    "session_case_index": 4,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:12:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-border payment platforms are territorial and poorly tailored for global creator and entrepreneur payouts",
+      "status": "explicit",
+      "evidence_span": "Stripe, PayPal, Payoneer, all building cross-border payments that are territorial and not tailored to these needs"
+    },
+    {
+      "id": "P2",
+      "text": "Integrating multiple country payment APIs is complex, slow, fee-heavy, and requires technical expertise that bars most digital entrepreneurs",
+      "status": "explicit",
+      "evidence_span": "integrating with multiple payment APIs in different countries is incredibly complex"
+    },
+    {
+      "id": "P3",
+      "text": "A unified API ecosystem abstracts multi-provider payment complexity so non-technical users can accept global payments without code",
+      "status": "explicit",
+      "evidence_span": "abstracts the complexity of integrating with multiple payment platforms, enabling non-technical entrepreneurs and creators to get access to global payment options without writing any single line of code"
+    },
+    {
+      "id": "P4",
+      "text": "No-code suites for websites, storefronts, invoicing, and media kits convert users by letting them showcase work and get paid in one place",
+      "status": "explicit",
+      "evidence_span": "we enable them with no-code suites that make it easier for them to showcase their work and receive payments via websites, storefronts, invoicing, Media Kit, and more"
+    },
+    {
+      "id": "P5",
+      "text": "A single Mainstack account plus compliance approval grants intermediary access to multiple payment providers",
+      "status": "explicit",
+      "evidence_span": "she creates a single account on Mainstack and completes our compliance requirement"
+    },
+    {
+      "id": "P6",
+      "text": "Real-time IP/geolocation detection chooses which payment API to call to avoid transaction hiccups",
+      "status": "explicit",
+      "evidence_span": "sophisticated IP detection system that dynamically, in real time, analyzes Sandra's client's geolocation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-border payment barriers for creators",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified payment API and routing",
+      "premise_ids": ["P3", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "No-code showcase and monetization suite",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone anywhere can showcase work and receive secure global customer payments in minutes",
+      "status": "explicit",
+      "evidence_span": "enabling anyone from anywhere to showcase their work and receive payment from their customers in a simple and highly secure manner starting in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "which is why we have created Mainstack"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "international payments are a necessity for many entrepreneurs and creators like Sandra to reach their full potential"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get access to global payment options without writing any single line of code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "showcase their work and receive payments via websites, storefronts, invoicing, Media Kit, and more"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "No-code suite items folded as one top-of-funnel mechanism (enumeration rule 1). Traction metrics (9k customers, volume, countries) excluded per 4.2. Singleton D3 retained: speaker frames no-code suite as distinct conversion strategy versus payments-only competitors."
+}

@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-838",
+    "coder_session_id": "session_06",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing water heaters waste water, are hard to temperature-control, inefficient, and fail when heating elements get hot",
+      "status": "explicit",
+      "evidence_span": "Existing hot water heating technology doesn't save water. It's difficult to control the temperature. It's not energy efficient and the things inside that get really hot to heat the water break when they get really hot"
+    },
+    {
+      "id": "P2",
+      "text": "Electronic controls heat water instantly via water's own resistance without heating elements or burners",
+      "status": "explicit",
+      "evidence_span": "using electronic controls and the natural resistance of the water itself to heat the water instantly without any heating elements or burners"
+    },
+    {
+      "id": "P3",
+      "text": "Wi-Fi iOS controls enable temperature presets, usage reports, and utility peak-demand power limits",
+      "status": "explicit",
+      "evidence_span": "our electronic controls are natural for Wi-Fi connectivity. So through our iOS app on the front page, you can actually adjust temperature settings and presets"
+    },
+    {
+      "id": "P4",
+      "text": "Model 1 can augment existing heaters as booster, extender, or turbocharger applications",
+      "status": "explicit",
+      "evidence_span": "The Model 1 is the only product that you can install in your existing hot water system that will augment its performance"
+    },
+    {
+      "id": "P5",
+      "text": "Booster, extender, and turbocharger create a new retrofit market beyond replacement heaters",
+      "status": "explicit",
+      "evidence_span": "these three new applications, we've created a whole brand new market"
+    },
+    {
+      "id": "P6",
+      "text": "Claimed savings include major reductions in household hot-water energy and water use",
+      "status": "explicit",
+      "evidence_span": "The Model 1 will save 24% of the energy you use and 20% of the water"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken conventional water heating",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Electronic instant HeatWorks heater",
+      "premise_ids": ["P2", "P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Retrofit booster extender turbocharger market",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reliable luxurious hot water with proactive water and energy savings",
+      "status": "explicit",
+      "evidence_span": "proactively save water and energy while getting a reliable and luxurious water heating experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "Instant water heating saves water, 99 plus percent energy efficient saves energy"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Existing hot water heating technology doesn't save water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Instant water heating saves water, 99 plus percent energy efficient saves energy, and the technology is extremely reliable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "install in your existing hot water system that will augment its performance"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Four conventional heater problems folded as one pain bundle. Instant heating, efficiency, and reliability treated as process/performance package of the electronic mechanism; Wi-Fi controls kept as separately revisable connected-product module. Booster/extender/turbocharger are three applications of one retrofit capability—kept as one augment premise plus one new-market premise. Blue Rhino bio and Kickstarter traction excluded. Body-mass/motion shower vision treated as illustrative future UX, not a separate current premise. Singleton D1 retained."
+}

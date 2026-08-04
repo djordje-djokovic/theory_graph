@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Subscription model depends on global data coverage via partners' infrastructure",
+      "status": "explicit",
+      "evidence_span": "global coverage of data required to validate and to perpetuate our subscription model"
+    },
+    {
+      "id": "P2",
+      "text": "Paying customers already include major corporates and cities in DE/CH/UK",
+      "status": "explicit",
+      "evidence_span": "20 other cities across Germany, Switzerland, and the UK who are already paying for our data"
+    },
+    {
+      "id": "P3",
+      "text": "Ambition is embedding GHG and pollution data in routine business decisions for markets",
+      "status": "explicit",
+      "evidence_span": "integrate greenhouse gas emissions data and pollution data into everyday business decision making"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Subscription data coverage",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Decision-grade air quality data",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Air quality data relevant to financial markets and health alike",
+      "status": "explicit",
+      "evidence_span": "air quality data is as relevant to the financial markets as it is to asthmas"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "paying for our data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "business decision making"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Thin truncated pitch; only closing claims coded. Multidisciplinary team roster excluded under §4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-429",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:10+02:00"
+  }
+}

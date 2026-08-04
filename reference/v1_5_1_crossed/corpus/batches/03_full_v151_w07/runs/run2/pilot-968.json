@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-968",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:19:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ultrasonic audio signals can pair phone and computer to confirm login only when devices are close, without audible cues",
+      "status": "explicit",
+      "evidence_span": "our unique patent-pending technology, which connects the two devices using audio signals"
+    },
+    {
+      "id": "P2",
+      "text": "Proximity authentication can replace username/password entirely for seamless login (e.g. VPN)",
+      "status": "explicit",
+      "evidence_span": "Our technology can actually replace the entire login process and make it completely seamless"
+    },
+    {
+      "id": "P3",
+      "text": "Each session generates a unique encrypted key in the audio signal so only the nearby phone can confirm",
+      "status": "explicit",
+      "evidence_span": "generates a unique key for each session and encodes this key into the audio signal"
+    },
+    {
+      "id": "P4",
+      "text": "Browser-based, platform-agnostic design needs no new user or data-center hardware",
+      "status": "explicit",
+      "evidence_span": "Because we can run entirely in the browser, that makes us completely platform agnostic"
+    },
+    {
+      "id": "P5",
+      "text": "Location geofencing can restrict where large transactions or logins are allowed",
+      "status": "explicit",
+      "evidence_span": "let your customers perform large transactions only from their home or their office"
+    },
+    {
+      "id": "P6",
+      "text": "No-hardware simple implementation yields a cost-effective IAM product for banks and enterprises in a large growing market",
+      "status": "explicit",
+      "evidence_span": "we can provide our customers a very superior and cost-effective product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ultrasonic proximity login",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "browser platform-agnostic delivery",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "geofenced access policies",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "enterprise IAM economics",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncompromising security with a fun, seamless login experience people love",
+      "status": "explicit",
+      "evidence_span": "provides uncompromising security and an unbelievable user experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we do not compromise on security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our setup process is as simple as our authentication process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sleek login can also provide identity and access management like never before"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "superior and cost-effective product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript starts mid-pitch (truncated=true). Sleek/Flick naming ASR noise. Bank PoC treated as traction, not premise. $12B market folded into enterprise economics premise. Patents pending attached to ultrasonic mechanism."
+}

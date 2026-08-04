@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-925",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional diet meal delivery is mass-produced with preservatives and arrives looking unappetizing, which fails busy people who want healthy personalized food",
+      "status": "explicit",
+      "evidence_span": "It's mass produced in a regional warehouse. It's loaded with preservatives so it can survive a multi-day track"
+    },
+    {
+      "id": "P2",
+      "text": "Healthy Out uses data and a platform so local restaurant kitchens supply personalized healthy meals to health/taste prefs with weekly menus, filters, learning, and SMS confirm, hand-delivered within the hour",
+      "status": "explicit",
+      "evidence_span": "convert your local restaurant kitchen into a supplier of healthy food that's custom made to your health and taste preferences and hand delivered to you within the hour"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers pay $28 monthly subscription plus ~$16 restaurant commissions (~$44/user/month) with no inventory or own delivery network because restaurants deliver",
+      "status": "explicit",
+      "evidence_span": "We charge consumers $28 in the form of a monthly subscription fee. And then on average, we get $16 worth of restaurant commissions"
+    },
+    {
+      "id": "P4",
+      "text": "The offering attracts a new segment who would never sign up for commercial weight-loss plans or cardboard-box diet food",
+      "status": "explicit",
+      "evidence_span": "attracting a new segment of customers who would have never considered signing up for a commercial weight loss plan or eating food out of a cardboard box"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken diet meal delivery",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "restaurant-powered personalized healthy meals",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription and commission economics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "new healthy-eating customer segment",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Busy users get convenient, no-hassle healthy, seriously delicious restaurant food personalized and delivered",
+      "status": "explicit",
+      "evidence_span": "It's convenient, it's no hassle healthy, and it's seriously delicious food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "far superior ability to attract and retain customers over those diet meal delivery guys"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "custom made to your health and taste preferences and hand delivered to you within the hour"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's $44 per user per month. That's virtually all gross profit"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're making a market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Setup prefs, weekly menu, nutrition filters, learning recommendations, and SMS confirm/cancel/swap folded as personalization cascade of the restaurant-platform mechanism (§4.1.7). Inventory-light restaurant delivery folded into unit-economics premise with price. Seed raise excluded (§4.2.1). Four-domain partition; not a need/product/money triad—D4 is segment-creation, not channel pricing alone."
+}

@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users lack real control over images, content, and data that persist forever online",
+      "status": "explicit",
+      "evidence_span": "control of our images, control of our content, control of our data, control of our entire digital life history"
+    },
+    {
+      "id": "P2",
+      "text": "Unlike perimeter tools, Social Fortress stays with data on any app or device worldwide",
+      "status": "explicit",
+      "evidence_span": "You need Jason Bourne standing with your data no matter where it goes, anywhere in the world, on any device, on any platform, and on any application"
+    },
+    {
+      "id": "P3",
+      "text": "It covers enterprise and consumer applications including chat and email in real time",
+      "status": "explicit",
+      "evidence_span": "works for the enterprise, it works for mobile, it works for the consumer, and it works real time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Digital control problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-app data protection",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Control of your data across applications and devices",
+      "status": "explicit",
+      "evidence_span": "They're in control of their data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "out of control"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Social Fortress brings Jason Bourne to all your messages, all your photos"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Ease-of-use mother anecdote folded into platform capability rather than a separate premise. Team/investor bios and early-access partners excluded per §4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1027",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:28:10+02:00"
+  }
+}

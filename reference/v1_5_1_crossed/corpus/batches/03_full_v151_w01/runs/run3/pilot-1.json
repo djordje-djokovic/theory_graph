@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing blood analyzers cover only a handful of indications and customers cannot afford cost of ownership for the tests they need",
+      "status": "explicit",
+      "evidence_span": "These existing blood analyzers can only detect a handful of indications, and most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "id": "P2",
+      "text": "A tiny phone-connected disposable integrates centrifuge sample prep and spectrophotometry, eliminating the analyzer",
+      "status": "explicit",
+      "evidence_span": "eliminating the analyzer altogether. We've done that by integrating into this tiny device, we've integrated the centrifuge, basically the drop of blood sample prep. We've integrated the spectrophotometer, and this also connects to your USB"
+    },
+    {
+      "id": "P3",
+      "text": "ALT and AST liver enzyme tests complement blood-gas analyzer menus and require spectrophotometric measurement",
+      "status": "explicit",
+      "evidence_span": "the reason we're working with ALT and AST is because they complement the existing menus of blood gas analyzers, but they could only be measured spectrophotometrically"
+    },
+    {
+      "id": "P4",
+      "text": "Emergency veterinary use for rapid anesthesia and drug screens is the first go-to-market",
+      "status": "explicit",
+      "evidence_span": "we're launching this into the veterinary space, where emergency veterinarians could use it to run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "id": "P5",
+      "text": "Modular reagent/filter swaps expand the analyte menu without redesigning the device",
+      "status": "explicit",
+      "evidence_span": "If you want to change out the application, you just change the reagents in the filters"
+    },
+    {
+      "id": "P6",
+      "text": "A single-use disposable model replaces the razor–razor-blade analyzer economics",
+      "status": "explicit",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    },
+    {
+      "id": "P7",
+      "text": "Vertical integration of design and assembly controls manufacturing cost",
+      "status": "explicit",
+      "evidence_span": "This is how we control costs. We're vertically integrated. We've designed everything"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Analyzer coverage and ownership cost problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated phone blood-test device",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Veterinary emergency launch market",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Disposable model and cost control",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easier, more affordable blood testing without a traditional analyzer",
+      "status": "explicit",
+      "evidence_span": "making testing easier and more affordable, not with a universal analyzer, but by eliminating the analyzer altogether"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making testing easier and more affordable, not with a universal analyzer, but by eliminating the analyzer altogether"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "emergency veterinarians could use it to run rapid screens for anesthesia or drugs"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D1 and D3 retained: customer pain and veterinary launch are separately revisable from the device stack. Demo workflow and UC Davis R-squared treated as traction/demo detail, not premises. Home-dog and research-mouse uses folded into veterinary/research path as applications of the same ALT/AST offering. Rapid-chemistry expansion folded into menu-expansion (P5) rather than a separate market premise."
+}

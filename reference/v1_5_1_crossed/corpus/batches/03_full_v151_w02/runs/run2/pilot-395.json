@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-395",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Carbon nanotube mesh filters' conductivity and surface area shrink electrochemical metal purification to coffee-cup scale",
+      "status": "explicit",
+      "evidence_span": "shrink a process that used to require the size of a cubic football field down to the size of a coffee cup"
+    },
+    {
+      "id": "P2",
+      "text": "Charged nanotube filters precipitate metals from liquid solution as solid materials, separating bulk from rare earth elements",
+      "status": "explicit",
+      "evidence_span": "delivering a charge across the mesh of carbon nanotube filters to try and precipitate metals contained in a liquid solution as solid materials"
+    },
+    {
+      "id": "P3",
+      "text": "Low-abundance rare earth and battery metals lack a competitive purification process like that used for copper and nickel",
+      "status": "explicit",
+      "evidence_span": "for low abundance metals like the rare earth ones that are used in all of the electronics sitting in your pockets or perhaps on your wrists, there is no such competitive process"
+    },
+    {
+      "id": "P4",
+      "text": "Metal supply is concentrated in few countries that use materials in-house, creating price and access risk for manufacturers",
+      "status": "explicit",
+      "evidence_span": "while there's a globally distributed need for these materials, the supply of them is focused in a small number of countries"
+    },
+    {
+      "id": "P5",
+      "text": "Short-term: reclaim metals from manufacturing effluent; long-term: digest disassembled device components into primary elements",
+      "status": "explicit",
+      "evidence_span": "our short-term goal is to try to improve fabrication efficiencies in manufacture"
+    },
+    {
+      "id": "P6",
+      "text": "Filters in series recover individual metals at high purity from mixed metal waste streams",
+      "status": "explicit",
+      "evidence_span": "we take these carbon nanotube filters, assemble them in series, and we can introduce a mixed metal waste solution at the top of the filter stack and individually recover those metals"
+    },
+    {
+      "id": "P7",
+      "text": "Target customers are large electronics and EV manufacturers securing metal supply chains",
+      "status": "explicit",
+      "evidence_span": "if you're a large company like Apple or Google or Tesla, you care a lot about this problem"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Concentrated metal supply risk",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Nanotube electrochemical recovery process",
+      "premise_ids": ["P1", "P2", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Manufacturing and afterlife reclaim use cases",
+      "premise_ids": ["P5", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Return control of the metal supply chain to manufacturers via reclaimed metals",
+      "status": "explicit",
+      "evidence_span": "returns control of the metal supply chain to the manufacturer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "American innovation not limited by metal supply",
+      "evidence_span": "American innovation isn't limited by supply of metals, but by the imaginations of the innovators"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "China reduced the supply of rare earth elements to the global markets"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "individually recover those metals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help them digest those individual components and reclaim the individual metals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Process performance (purity/recovery, cobalt/nickel capability) folded into process premises per v1.5.1 process+performance package. Industry-lacks-process claim kept as distinct rare-earth gap (P3) because it is the motivating unmet condition for the invention, not mere framing of the same process metrics."
+}

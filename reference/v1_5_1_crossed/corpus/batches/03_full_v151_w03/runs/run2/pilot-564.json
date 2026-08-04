@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-564",
+    "coder_session_id": "session_02",
+    "session_case_index": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large pre-consumer food waste and rising protein shortage are twin problems a conversion process can address together",
+      "status": "explicit",
+      "evidence_span": "1.4 billion tons of food is wasted every year, 40% before it's touched human hands"
+    },
+    {
+      "id": "P2",
+      "text": "A hatchery-to-incubator insect process converts food waste into edible-insect protein powder and fertilizer",
+      "status": "explicit",
+      "evidence_span": "Natransa produces the next generation protein from a specific edible insect by converting food waste into fertilizer"
+    },
+    {
+      "id": "P3",
+      "text": "Companies pay to dispose of food waste while the venture also sells protein powder and fertilizer",
+      "status": "explicit",
+      "evidence_span": "Companies pay us to get rid of their food waste. So we get revenue by taking our raw material and by selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "id": "P4",
+      "text": "The production system uses minimal water and land, zero grain, and near-zero carbon emissions versus other protein sources",
+      "status": "explicit",
+      "evidence_span": "It needs minimal water and land, requires zero grain, and almost produces zero carbon emission"
+    },
+    {
+      "id": "P5",
+      "text": "The insect protein powder has higher protein, calcium, and phosphorus than regular meat",
+      "status": "explicit",
+      "evidence_span": "Our product has two times more protein, 100 times more calcium, and four times more phosphorus than regular meat"
+    },
+    {
+      "id": "P6",
+      "text": "Initial go-to-market is pet protein via influencers and pet-shop B2B partners",
+      "status": "explicit",
+      "evidence_span": "To grow our B2C customers, we work with influencers and we also have pet shops as our B2B partners"
+    },
+    {
+      "id": "P7",
+      "text": "Human alternative-protein path targets athletes, renal/cancer patients, and people allergic to regular meat",
+      "status": "explicit",
+      "evidence_span": "We first target three initial customer segments. One is athletes who already use whey protein additional to their diet. And there are renal and cancer patients"
+    },
+    {
+      "id": "P8",
+      "text": "Competing alternatives (plant-based, artificial meat, crickets) are costlier, less nutritious, or not scalable",
+      "status": "explicit",
+      "evidence_span": "There are other alternatives, but they are cost prohibitively expensive to compare with regular meat"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Food waste and protein shortage",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Insect conversion process and product performance",
+      "premise_ids": ["P2", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Pay-to-take waste plus sell powder and fertilizer",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Pet then human customer path",
+      "premise_ids": ["P6", "P7"]
+    },
+    {
+      "id": "D5",
+      "name": "Alternative protein competitive gaps",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable next-generation protein from food-waste-fed edible insects",
+      "status": "explicit",
+      "evidence_span": "we can convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Healthier, more sustainable protein for humans as long-term vision",
+      "evidence_span": "producing much healthier and more sustainable protein sources for humans"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if somehow we can convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Natransa produces the next generation protein from a specific edible insect by converting food waste into fertilizer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This technology makes our revenue model revolutionary"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We launched our first product in May for reptile, fish and bird"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There are other alternatives, but they are cost prohibitively expensive to compare with regular meat"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This technology makes our revenue model revolutionary"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Hatchery/incubator/filter/dry-grind steps folded into one process premise; water/land/grain/carbon and nutrition metrics kept as process+performance package with that process (v1.5.1 §4.1.8) via co-membership in D2. Waste-fee plus dual product sales coded as one revenue model. Traction, grants, accelerators, team bios, and Q&A tasting excluded. P1 waste+protein shortage treated as one problem set."
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-605",
+    "coder_session_id": "session_01",
+    "session_case_index": 6,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many smartphone users lack internet access, which can be life-critical and blocks social and economic growth; mega-app and village-internet efforts are not seen as scalable soon",
+      "status": "explicit",
+      "evidence_span": "66% of the world has a smartphone in their hands, but 53% of the population does not have access to internet"
+    },
+    {
+      "id": "P2",
+      "text": "An SDK lets existing apps work offline by connecting phones via Bluetooth mesh networks with smart routing that avoids flood, stale messages, and battery drain",
+      "status": "explicit",
+      "evidence_span": "Ridgefire is an SDK that apps integrate onto their own code so they can work offline"
+    },
+    {
+      "id": "P3",
+      "text": "Differentiation includes Android-to-iOS integration, encryption, and patents",
+      "status": "explicit",
+      "evidence_span": "We are the only ones in the market with Android to iOS integration"
+    },
+    {
+      "id": "P4",
+      "text": "B2B sells to developers with user density (messaging, rideshare, emergency broadcast) rather than building a consumer mega-app",
+      "status": "explicit",
+      "evidence_span": "we're working on a B2B model. We cater to developers that already have this user density"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing charges on monthly active users who use the app thanks to the offline technology",
+      "status": "explicit",
+      "evidence_span": "We charge based on monthly active users that use your app thanks to our technology each month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "offline smartphone connectivity gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Bluetooth mesh offline SDK",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "developer MAU-based B2B",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People and apps stay connected without internet, improving and saving lives in critical moments",
+      "status": "explicit",
+      "evidence_span": "versatile products that improve and save people's lives"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Developers open new markets and revenue by being present in high-need offline moments",
+      "evidence_span": "You open up new markets. You open and you blow up existing ones. So that translates into revenue"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It can be the difference between life and death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connects phones directly using their Bluetooth antennas"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "By being there in the moments where people really, really need an app"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mesh hop, range, flood/battery algorithm folded into one SDK mechanism (feature cascade). Encryption/patents kept as IP detail attached to that mechanism per v1.3.1. Use-case list (WhatsApp/Uber/broadcast) treated as applications of the same SDK, not separate premises. Raise and user-count traction excluded. Anti-template note: need, technology, and B2B monetization are separately revisable in the transcript. Truncated mid-vision sentence."
+}

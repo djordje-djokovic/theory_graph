@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Multiple desktops and consoles create hardware clutter, duplicate licenses, and painful cross-device access",
+      "status": "explicit",
+      "evidence_span": "That's a lot of hardware clutter. It's a pain in the butt to upgrade the software across all these devices"
+    },
+    {
+      "id": "P2",
+      "text": "Pocket-sized Tango delivers mainstream PC computing including office, CAD, and mid-core gaming",
+      "status": "explicit",
+      "evidence_span": "Tango has a computing power as that of a mainstream PC"
+    },
+    {
+      "id": "P3",
+      "text": "$89 docking stations hold bulky connectors, fan, and heat sink so the PC is fanless, ventless, and ~200g",
+      "status": "explicit",
+      "evidence_span": "we have been able to outsource the cooling job to the docking station"
+    },
+    {
+      "id": "P4",
+      "text": "Device is user-upgradable with off-the-shelf RAM and hard drives; ODM relationship supports volume production",
+      "status": "explicit",
+      "evidence_span": "We ensure Tango to be user-upgradable"
+    },
+    {
+      "id": "P5",
+      "text": "Retail partners (Best Buy, Amazon) and BYOD enterprise fit provide distribution paths",
+      "status": "explicit",
+      "evidence_span": "We have relationship with Best Buy and Amazon and other large retailers whom we'll partner to distribute the product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Multi-device clutter problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pocket PC and dock cooling design",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail and enterprise distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hands-free, hassle-free PC mobility by carrying one device between docks",
+      "status": "explicit",
+      "evidence_span": "Tango gives you mobility that's hands-free and hassle-free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save money on hardware and software licenses by replacing multiple PCs and consoles",
+      "evidence_span": "Tango can save you money on hardware. by replacing multiple PCs and gaming consoles with inexpensive docking stations"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I no longer need many devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I can carry Tango in my pocket and simply connect it to any dock"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partner to distribute the product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Patent-pending cooling detail folded into dock premise. Market-size stats excluded as framing. Kickstarter ask excluded. Need/product/channel triad justified by separately revisable clutter assumption, docked PC design, and retail/BYOD GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-852",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

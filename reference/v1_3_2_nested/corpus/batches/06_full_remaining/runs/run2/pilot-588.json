@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Human-only remote video monitoring is too expensive for most small and retail businesses and is limited to special use cases like car dealerships and construction lots",
+      "status": "explicit",
+      "evidence_span": "their market is limited because they're so expensive to special customer use cases like car dealerships and construction lots"
+    },
+    {
+      "id": "P2",
+      "text": "Active threat detection including identity concealment and weapons across frames is the core platform capability",
+      "status": "explicit",
+      "evidence_span": "our platform is picking up the fact that Danny is wearing a mask"
+    },
+    {
+      "id": "P3",
+      "text": "Their solution is about 10 times cheaper than traditional human-only remote video monitoring",
+      "status": "explicit",
+      "evidence_span": "traditional human-only solution to remote video monitoring, which is 10 times more expensive than our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Detections are escalated in real time to a remote monitoring analyst who contacts police",
+      "status": "explicit",
+      "evidence_span": "sent to a remote monitoring analyst in real time, who would then contact the police"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with North American and South American security integrators enable testing and distribution",
+      "status": "explicit",
+      "evidence_span": "we've also generated a lot of interest from South American security integrators as well"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cost barrier for SMB monitoring",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time threat detection and escalation",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Integrator distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Small and retail businesses get affordable remote video monitoring with active threat response",
+      "status": "inferred",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10 times more expensive than our platform"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sent to a remote monitoring analyst in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interest from South American security integrators"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Mask/gun demo folded into one active-threat capability premise (v1.3.2 #5). Open beta free months not a premise. Vision closing not coded as premise (v1.3.2 #4). Singleton D3: channel module separately learnable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-588",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:00+02:00"
+  }
+}

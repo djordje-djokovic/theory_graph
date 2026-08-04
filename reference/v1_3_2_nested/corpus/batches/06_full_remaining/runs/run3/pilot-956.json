@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Furniture buyers face high risk because they cannot visualize products in their own rooms",
+      "status": "explicit",
+      "evidence_span": "today, furniture shopping is high risk"
+    },
+    {
+      "id": "P2",
+      "text": "Existing 3D modeling solutions are commercial tools that are too difficult, expensive, or slow for homeowners",
+      "status": "explicit",
+      "evidence_span": "They're commercial solutions, so much so that less than 1% of homeowners use these 3D model solutions"
+    },
+    {
+      "id": "P3",
+      "text": "Inside Maps lets homeowners create usable 3D room models from a short smartphone scan processed into photorealistic WebGL scenes",
+      "status": "explicit",
+      "evidence_span": "create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P4",
+      "text": "Retailers connected to those home models can upsell accessories, reach new customers, and lower returns",
+      "status": "explicit",
+      "evidence_span": "It will help them upsell to new accessories. It will also help them reach new customers, and it will lower their returns"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Homeowner 3D visualization gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smartphone home modeling product",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Retailer economics from in-home showrooms",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Disrupt furniture shopping by making the home the ideal place to try furniture in 3D",
+      "status": "explicit",
+      "evidence_span": "disrupt the way we shop for furniture"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your home becomes the ideal place to shop for furniture"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect retailers with homeowners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Capture sensors, point-cloud GPU pipeline, structural detection, and collaboration UI folded into monolithic product premise P3 (v1.3.2 §4.1(5)). Market-size revolution claim treated as framing. Singletons D2/D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

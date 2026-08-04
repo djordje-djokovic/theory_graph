@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-600",
+    "coder_session_id": "session_02",
+    "session_case_index": 13,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Salon and other service owners need credible vetted sub-renters; word-of-mouth and Craigslist are ineffective and drive costly turnover",
+      "status": "explicit",
+      "evidence_span": "finding sub-renters in a niche vertical remains incredibly inefficient. The only resources are word of mouth and Craigslist"
+    },
+    {
+      "id": "P2",
+      "text": "Service professionals face geographic lease limits and operational stress from high renter turnover",
+      "status": "explicit",
+      "evidence_span": "service coverage limitations due to a lease's geography. And number two, the operational stress resulting from high renter, sub-renter turnover"
+    },
+    {
+      "id": "P3",
+      "text": "A marketplace lets owners list spaces and sub-renters find flexible hourly-to-monthly vetted rentals across industries",
+      "status": "explicit",
+      "evidence_span": "Introducing Renly, a marketplace for renters and sub-renters"
+    },
+    {
+      "id": "P4",
+      "text": "Supply-side focus across beauty and expanding verticals drives network effects and retention",
+      "status": "explicit",
+      "evidence_span": "we decided to focus on the supply side because it was the most challenging to scale"
+    },
+    {
+      "id": "P5",
+      "text": "Being industry-agnostic across the service industry, not niche competitors, is key to long-term success",
+      "status": "explicit",
+      "evidence_span": "being industry agnostic is the key to our long-term success"
+    },
+    {
+      "id": "P6",
+      "text": "Renly Circle lets consumers and pros discover, book, manage, pay, and find space for services in one platform",
+      "status": "explicit",
+      "evidence_span": "as a consumer, can discover, book, Manage, pay, or provide any service you want. No more jumping from Yelp to Google Calendar to Square"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient vetted sub-renter sourcing",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Flexible space marketplace",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Supply-first multi-vertical expansion",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "One platform for any service",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize usage of existing service space and give sub-renters flexible freedom",
+      "status": "explicit",
+      "evidence_span": "Our mission at Renly is to maximize the usage of existing space"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Sub-renters gain freedom through flexibility across cities and rental periods",
+      "evidence_span": "We also offer sub-renters freedom through flexibility"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why isn't there a platform that allows you to source credible, vetted, reliable sub-renters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "just have to create a listing and have vetted renters find them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best opportunity to generate network effect and high retention"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Simply one place, one platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Owner and sub-renter pain facets coded as one service-space problem set plus explicit two common problems kept together in D1. Listing/search/book demo cascade folded into marketplace premise. Listing counts, margins, and TAM excluded as traction/market sizing. Uber/Airbnb analogies treated as framing for industry-agnostic strategy, not separate premises."
+}

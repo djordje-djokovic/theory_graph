@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-210",
+    "coder_session_id": "session_05",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Deskless workers are poorly served by employment systems while employers lack structure to meet their needs, driving expensive turnover",
+      "status": "explicit",
+      "evidence_span": "Current employment solutions are not actually built for these workers"
+    },
+    {
+      "id": "P2",
+      "text": "A two-way SMS support portal gives workers access without another app, auto-replies to FAQs, translates widely, and populates job data",
+      "status": "explicit",
+      "evidence_span": "Antil delivers through the most accessible technology out there, text messaging"
+    },
+    {
+      "id": "P3",
+      "text": "Auto-resolution resolves the large majority of inbound worker questions from tagged phrases and stored answers",
+      "status": "explicit",
+      "evidence_span": "our auto-resolution feature resolves over 95% of the inbound questions automatically"
+    },
+    {
+      "id": "P4",
+      "text": "Employer analytics surface workplace health, engagement, and turnover risk using sentiment and psychometric analysis",
+      "status": "explicit",
+      "evidence_span": "advanced analytics showing you the workplace health score"
+    },
+    {
+      "id": "P5",
+      "text": "Next-generation product integrates via application, API, and existing HR platforms like SAP and messaging apps",
+      "status": "explicit",
+      "evidence_span": "integration into the existing HR platforms like SAP and messaging applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "deskless workforce support gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS worker support portal",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "employer analytics and HR integrations",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Higher retention by connecting deskless workers and employers with accessible two-way support",
+      "status": "explicit",
+      "evidence_span": "Our goal is to improve retention across your organization"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when these workers are not heard, they just leave"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Employees with Antil get more connectivity, more access, more education, and more engagement"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "visibility into the workforce in a way that they have never seen before"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "FAQ auto-reply/translate/job-data features folded into SMS portal (P2); auto-resolution kept separate as a distinct automation module speaker emphasizes. Message-volume/adoption traction excluded. Anti-template: worker need / SMS product / employer analytics-GTM separately revisable."
+}

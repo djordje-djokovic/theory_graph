@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-954",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:39:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Reality-TV finishing is extremely labor-intensive",
+      "status": "explicit",
+      "evidence_span": "one minute of the final product takes up to 17 hours of post-production"
+    },
+    {
+      "id": "P2",
+      "text": "Teams chase feedback through email, calendars, calls, and spreadsheets",
+      "status": "explicit",
+      "evidence_span": "And if you're sophisticated, then we're talking about color-coded spreadsheets"
+    },
+    {
+      "id": "P3",
+      "text": "A viewing-room workflow captures timestamped feedback and exports markers into NLEs",
+      "status": "explicit",
+      "evidence_span": "we've made it very, very easy to collect timestamp feedback"
+    },
+    {
+      "id": "P4",
+      "text": "Browser-based hosting model is easy for IT departments to accept",
+      "status": "explicit",
+      "evidence_span": "IT departments specifically love us because it's browser-based, and we leverage existing hosting infrastructure"
+    },
+    {
+      "id": "P5",
+      "text": "Project-based pricing works for teams of all sizes",
+      "status": "explicit",
+      "evidence_span": "project based pricing that's friendly to teams of all sizes"
+    },
+    {
+      "id": "P6",
+      "text": "Adobe native integration and MPAA guidelines open Hollywood studio use",
+      "status": "explicit",
+      "evidence_span": "we're announcing our native integration with Adobe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Post-production pain",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Timestamped review product",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Adoption via IT, pricing, and studio standards",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A communication and project management tool for video professionals",
+      "status": "explicit",
+      "evidence_span": "First Cut Pro is a communication and project management tool for video professionals"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Instead of doing emails and back and forth, all Paul needs to do is drop in a link"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the viewing room is the sole focus is on the video itself and to give feedback on it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bringing post-production out of the Stone Age"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.1: collection and actionable export treated as one indivisible review mechanism (speaker demo of one product motion). Singleton avoided by placing Adobe/MPAA with commercial adoption. User counts excluded."
+}

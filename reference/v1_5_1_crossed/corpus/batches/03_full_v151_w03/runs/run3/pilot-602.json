@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-602",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clothing returns are driven by fit failure because design and recommendation ignore body shape beyond a few templates",
+      "status": "explicit",
+      "evidence_span": "one third of clothing be returned because it doesn't fit"
+    },
+    {
+      "id": "P2",
+      "text": "Shape-filter technology recommends garments using body shape and proportion plus garment design details via AI vision and a shopper UI",
+      "status": "explicit",
+      "evidence_span": "We make recommendations on clothing for an individual body shape and proportion using the design details in an individual garment"
+    },
+    {
+      "id": "P3",
+      "text": "A patent-pending knowledge base classifies body shape and clothing using fashion domain aesthetics principles",
+      "status": "explicit",
+      "evidence_span": "Our patent pending knowledge base classifies body shape and clothing to provide our proprietary recommendations"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise implementation plugs into retailers' inventory systems with annual fee plus percentage of sales",
+      "status": "explicit",
+      "evidence_span": "Our enterprise implementation fits easily into our customers' inventory management system"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market targets boutiques and department stores as retail customers",
+      "status": "explicit",
+      "evidence_span": "We're talking to boutiques and department stores"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fit and shape returns problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Shape filter recommendation technology",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail enterprise commercial model",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Making dressing well easy while increasing sales and decreasing returns for retailers",
+      "status": "explicit",
+      "evidence_span": "Savitude is making dressing well ridiculously easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Helping all women, not only idolized body types, shop with better fit confidence",
+      "evidence_span": "Help women, help all women, and not just the few idolized women"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of clothing be returned because it doesn't fit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommendations on clothing for an individual body shape and proportion"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Savitude does improve our retail economics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "AI/visual recognition/UI facets folded into shape-filter mechanism P2; patents folded as IP detail on that mechanism (§4.1.1). Future accessories expansion treated as vision, not premise. Founder bio excluded. Price+contract structure kept with enterprise offer (§4.1.3)."
+}

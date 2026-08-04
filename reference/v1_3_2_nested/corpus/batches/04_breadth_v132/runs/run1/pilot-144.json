@@ -1,0 +1,137 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetic retinopathy affects 37% of 600 million diabetics and today's only treatment is a $2,000 monthly eye injection that is complex, risky, and expensive",
+      "status": "explicit",
+      "evidence_span": "37% will develop diabetic retinopathy, an eye condition that causes vision loss and blindness"
+    },
+    {
+      "id": "P2",
+      "text": "Monoclonal antibodies cannot cross most tissue barriers, lack stability out of cold chain, and carry high manufacturing costs, confining antibody drugs to a narrow set of applications",
+      "status": "explicit",
+      "evidence_span": "their incapability to cross through most tissue barriers on the body, lack of stability out of cold chain, and high manufacturing costs"
+    },
+    {
+      "id": "P3",
+      "text": "Synthetic antibody mimetic proteins can replace monoclonal antibodies in novel first-in-class therapeutics",
+      "status": "explicit",
+      "evidence_span": "designing synthetic antibody mimetic proteins to replace monoclonal antibodies in novel first-in-class therapeutics"
+    },
+    {
+      "id": "P4",
+      "text": "The AMP platform fuses CDR3 regions from single-domain shark antibodies to a synthetic sea-snail conoprotein scaffold using molecular and AI processes",
+      "status": "explicit",
+      "evidence_span": "uses CDR3 regions from single-domain shark antibodies fused to a synthetic conoprotein scaffold from a sea snail"
+    },
+    {
+      "id": "P5",
+      "text": "AMPs keep monoclonal biological functions while crossing tissue barriers, generating limited immune reaction without humanization, targeting hard-to-reach antigens, and resisting heat",
+      "status": "explicit",
+      "evidence_span": "Our AMPs can cross through tissue barriers, generate limited immune reactions even with no humanization, can target very small and hard to reach antigens, and are heat resistant"
+    },
+    {
+      "id": "P6",
+      "text": "These AMP properties enable antibody drugs in previously impossible formats such as aerosols, eye drops, viral delivery, and trans-thermal release",
+      "status": "explicit",
+      "evidence_span": "like antibody drugs in aerosol, in eye drops, viral delivery, or trans-thermal release"
+    },
+    {
+      "id": "P7",
+      "text": "Lead candidate AMP1 for diabetic retinopathy has shown in vivo eye tissue penetration and therapeutic activity, enabling treatment as eye drops at home",
+      "status": "explicit",
+      "evidence_span": "Our AMP1 on in vivo testing shown proven capabilities for eye tissue penetration and therapeutic activity on the back of the eye"
+    },
+    {
+      "id": "P8",
+      "text": "Out-licensing AMPs to pharmaceutical companies generates revenue from upfront payments, milestones, and royalties",
+      "status": "explicit",
+      "evidence_span": "we out-license our AMPs to pharmaceutical companies, generating revenue from upfront payments, clinical phase and approval milestones, and then royalties"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmet need in antibody drugs",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic antibody mimetic platform",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "AMP1 diabetic retinopathy candidate",
+      "premise_ids": ["P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Out-licensing model",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Antibody drugs become as affordable, accessible, and easy to use as common pharmaceutical drugs for patients worldwide",
+      "status": "explicit",
+      "evidence_span": "make antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "These advantages gives our AMP platform the ability to develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Antibody drugs are a $200 billion market and fundamental to treat diseases"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the ability to develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will be able to take your treatment in simple eye drops at home, no need for an eye injection"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we out-license our AMPs to pharmaceutical companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Founder credentials (17 years in biotech, prior launches, academic co-founder) excluded per 4.2.2 as not made causal. Portfolio vision ('largest portfolio of antibody drugs for unserved therapeutic needs') left uncoded per v1.3.2 clarification 4. 'Narvao/Narbal' treated as ASR noise for the venture name. Singletons: D3 (AMP1 is a separately revisable lead candidate with its own clinical and licensing path) and D4 (the out-licensing model could change while the platform stands); reasons stated per singleton rule. P5->P6 coded on the explicit warrant 'These advantages gives our AMP platform the ability to'.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-144",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

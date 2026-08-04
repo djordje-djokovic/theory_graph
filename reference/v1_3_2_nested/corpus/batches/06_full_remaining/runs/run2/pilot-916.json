@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises and individuals lose ideas scattered across many file locations",
+      "status": "explicit",
+      "evidence_span": "there isn't a company out there that has not lost a good idea"
+    },
+    {
+      "id": "P2",
+      "text": "The system strips discovered files into individually usable indexed components",
+      "status": "explicit",
+      "evidence_span": "we strip away the file, and we strip away the file formatting. So all that's left are individual components"
+    },
+    {
+      "id": "P3",
+      "text": "One search term surfaces the best page by relevance that learns which content you reuse",
+      "status": "explicit",
+      "evidence_span": "The more you use a piece of content after searching for it, the easier it will be for you to get to it"
+    },
+    {
+      "id": "P4",
+      "text": "Natural language processing labels content topics so users never have to tag",
+      "status": "explicit",
+      "evidence_span": "You don't ever have to tag anything. We will analyze your words, we will analyze your ideas"
+    },
+    {
+      "id": "P5",
+      "text": "Visual collage mashups can be exported and shared with a visual preview email",
+      "status": "explicit",
+      "evidence_span": "they will receive a beautiful, visual email, a visual preview of your collage"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scattered lost-idea problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Component index search and NLP",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Visual collage share and export",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find and reuse best ideas visually across repositories without format friction",
+      "status": "explicit",
+      "evidence_span": "You never have to worry about the file format again"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding ideas is a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your best content will always bubble up on top"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All of your ideas are in a visual, beautiful collage"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "NLP split from search this run because speaker enumerates it as a distinct 'Brains' capability with its own no-tagging claim. Dropbox freemium line treated as CTA, not coded. Testimonial excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-916",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

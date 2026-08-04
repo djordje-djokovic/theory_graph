@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "News/tweet-driven market moves harm investors who lack algorithmic tools",
+      "status": "explicit",
+      "evidence_span": "This can easily be prevented with simple algorithms"
+    },
+    {
+      "id": "P2",
+      "text": "Democratize algo trading via three phases: create strategy, backtest, automate",
+      "status": "explicit",
+      "evidence_span": "creating a strategy, backtesting your strategy, and then automation"
+    },
+    {
+      "id": "P3",
+      "text": "Plain-English bespoke rules can combine indicators from news/social/markets",
+      "status": "explicit",
+      "evidence_span": "making it as easy to use as possible and relatable in plain English language"
+    },
+    {
+      "id": "P4",
+      "text": "Users can backtest with a proprietary Turing-complete language before going live",
+      "status": "explicit",
+      "evidence_span": "allows users to backtest before they go forth with a strategy"
+    },
+    {
+      "id": "P5",
+      "text": "Bring-your-own-broker architecture keeps the platform brokerage-agnostic",
+      "status": "explicit",
+      "evidence_span": "you can bring your own broker"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium-to-day-trader packaging targets mass retail investors",
+      "status": "explicit",
+      "evidence_span": "start from free all the way to day trader with other materials and tailored packages"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Algo access inequality",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "English-language strategy toolchain",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail pricing ladder",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyday non-coding investors reclaim alpha via accessible algorithmic trading",
+      "status": "explicit",
+      "evidence_span": "reclaim your alpha"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "democratizing algorithmic trading"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy-to-use quantitative tools for everyday non-coding investors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start from free all the way to day trader"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "ASR 'broker diagnostic' interpreted as broker-agnostic. Soft count 6. Truncated opening.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-450",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:38:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

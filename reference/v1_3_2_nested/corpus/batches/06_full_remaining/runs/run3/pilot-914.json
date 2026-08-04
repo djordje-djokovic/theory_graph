@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Insurance commissions cannot be rebated, so value must be delivered as free services",
+      "status": "explicit",
+      "evidence_span": "I can't give you guys money back, but what I can do is provide a whole lot of services and software for free on my platform"
+    },
+    {
+      "id": "P2",
+      "text": "Free platform runs payroll, benefits, and HR admin funded by those commissions",
+      "status": "explicit",
+      "evidence_span": "We do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "id": "P3",
+      "text": "Broker-of-record change collects commissions without altering client plans or cards",
+      "status": "explicit",
+      "evidence_span": "Nothing changes about your plans. Nothing changes about your pricing. Your insurance cards all stay the same"
+    },
+    {
+      "id": "P4",
+      "text": "Existing systems connect in seconds with two-way payroll sync",
+      "status": "explicit",
+      "evidence_span": "We import all the information. It takes about 30 seconds"
+    },
+    {
+      "id": "P5",
+      "text": "Hiring flow auto-generates docs, collects payroll/tax/bank data, verifies eligibility, and enrolls benefits",
+      "status": "explicit",
+      "evidence_span": "we walk them through a process where we get them enrolled in your health insurance plan and your 401k"
+    },
+    {
+      "id": "P6",
+      "text": "Administrative HR share makes free outsourcing rational",
+      "status": "explicit",
+      "evidence_span": "if we can take all these headaches off your hands, that's got to be something that's got to make sense for you to switch to us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Free broker-funded HR suite",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "System connect and hire automation",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Switching rationale",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Disruptive free HR and benefits platform that clients switch to",
+      "status": "explicit",
+      "evidence_span": "we are going to mess stuff up for two very large industries by redefining what it is that insurance brokers do for their clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "we collect all of the commission revenue on the account going forward"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer for free"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mechanize it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why wouldn't you switch to us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "P3->P2: broker-of-record is presented as what enables commission-funded free service. Industry disruption framing kept as value wording, not a vision premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-914",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

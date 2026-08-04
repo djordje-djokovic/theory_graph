@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Patients realized they could trust international doctors once connected beyond travel-agent packaging",
+      "status": "explicit",
+      "evidence_span": "Once patients realized they could trust international doctors, interest grew"
+    },
+    {
+      "id": "P2",
+      "text": "Empowered consumers travel for cheaper, faster, or otherwise inaccessible care",
+      "status": "explicit",
+      "evidence_span": "we are entering into an era of an empowered consumer"
+    },
+    {
+      "id": "P3",
+      "text": "MedRepublic marketplace surfaces curated vetted doctors with algorithmically ranked profiles and transparent prices",
+      "status": "explicit",
+      "evidence_span": "she views a curated selection of doctors that offer the procedure"
+    },
+    {
+      "id": "P4",
+      "text": "Only about 5% of doctor applicants pass US Board-led vetting",
+      "status": "explicit",
+      "evidence_span": "We accept just 5% of doctor applicants"
+    },
+    {
+      "id": "P5",
+      "text": "End-to-end HIPAA communication and administrative coordination complete the care transaction",
+      "status": "explicit",
+      "evidence_span": "participants are able to live chat, video conference, as well as share important medical files"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Empowered cross-border care demand",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated vetted doctor inventory",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Secure coordination workflow",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Trusted transparent access to world-class medical care abroad",
+      "status": "explicit",
+      "evidence_span": "transparent, secure, and trusted marketplace to facilitate world-class medical care"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Material cost savings versus domestic US care",
+      "evidence_span": "saving patients an average of 68%"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create a better solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "curated selection of doctors that offer the procedure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer top-notch medical care"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Average 68% savings kept as secondary_value criterion. Empowered-consumer line coded as demand condition rather than pure vision because it is tied to the three traveler needs.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-706",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The vision system finds berries and determines ripeness with human-equivalent accuracy",
+      "status": "explicit",
+      "evidence_span": "Built on a robust dataset, Traptics Robot can find berries and determine ripeness with equivalent accuracy as people."
+    },
+    {
+      "id": "P2",
+      "text": "A patented gripper with soft food-safe silicone belts and mechanical compliance extracts berries delicately across sizes and shapes",
+      "status": "explicit",
+      "evidence_span": "our patented gripper delicately extracts the produce from the plant"
+    },
+    {
+      "id": "P3",
+      "text": "The system runs in real time on a tractor in real fields and is robust to dust, rain, wind, and vibration",
+      "status": "explicit",
+      "evidence_span": "It is robust to dust, dirt, rain, wind, vibrations, and the other aspects of the tough farm environment."
+    },
+    {
+      "id": "P4",
+      "text": "All computation is local, with no internet or off-site compute required",
+      "status": "explicit",
+      "evidence_span": "it does all this locally. No internet, no off-site compute."
+    },
+    {
+      "id": "P5",
+      "text": "Year-round strawberry harvest is a better target than low-value weeding or seasonal apple harvesting",
+      "status": "explicit",
+      "evidence_span": "Traptic focuses on year-round strawberry harvest."
+    },
+    {
+      "id": "P6",
+      "text": "No change in the growing process is required, giving a smooth deployment path",
+      "status": "explicit",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment."
+    },
+    {
+      "id": "P7",
+      "text": "Robots-as-a-service at 23 cents per pound undercuts current picking spend, with machine, tractor, and driver included",
+      "status": "explicit",
+      "evidence_span": "We pick strawberries, and growers will pay us 23 cents per pound. This is slightly less than the current spend."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Berry-picking robot technology",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Strawberry market focus and deployment",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Robots-as-a-service economics",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automated strawberry picking that saves the world's food production system by doing the work people do not want to do",
+      "status": "explicit",
+      "evidence_span": "Our robots are saving the world's food production system by automating the work people don't want to do."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Then it plans a path to grab it, and our software commands the robot arm to move the gripper to the berry."
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our system does all this in real time while hanging off the back of a tractor and moving continuously over real strawberry fields."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment."
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "growers will pay us 23 cents per pound"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Gripper patents stay inside the gripper mechanism premise per v1.3.1 clarification 1. The master-plan revenue ladder (3B/20B/200B) is a vision/market-ownership claim, not coded as a premise per v1.3.2 clarification 4. Grower testing partnerships (Nature Ripe, Driscolls) treated as traction/validation and excluded here. Singleton D3 retained: the per-pound service price is a standalone commercial model that could be revised while the technology stood. Partition borders product/market/money; justification per 4.5(5): picking technology, deployment conditions, and service pricing are each tested separately (field trials, grower process fit, per-pound economics).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-452",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:21:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

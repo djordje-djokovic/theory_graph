@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:35:21+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Designing chemical synthesis is highly inefficient and error-prone because chemists manually dig through scientific publications",
+      "status": "explicit",
+      "evidence_span": "Designing how to synthesize a given molecule is highly inefficient and prone to errors"
+    },
+    {
+      "id": "P2",
+      "text": "AI designs novel synthesis routes from commercially available molecules within seconds, ranked by user criteria and backed by lab-tested evidence",
+      "status": "explicit",
+      "evidence_span": "Molecule One leverages artificial intelligence to design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "id": "P3",
+      "text": "Deep learning on prior experiments proposes viable transformations assembled into multi-step pathways",
+      "status": "explicit",
+      "evidence_span": "It utilizes information about previous experiments to find out what kinds of transformations between different molecules are viable"
+    },
+    {
+      "id": "P4",
+      "text": "Competitor tools do not use AI on chemical datasets for synthesis planning and struggle to generalize to novel molecules",
+      "status": "explicit",
+      "evidence_span": "Software of our competitors does not utilize AI to leverage chemical datasets for synthesis planning and often has trouble generalizing to novel molecules"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is SaaS by seats or data points, plus enterprise custom integrations and optional on-premise deployment",
+      "status": "explicit",
+      "evidence_span": "We use SaaS paid by number of seats or data points, and we have an enterprise tier with custom integrations and optional on-premise deployment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI synthesis planning engine",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Synthesis design bottleneck",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS and enterprise pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Chemists design viable syntheses in seconds so medicines can be made faster",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cure patients faster by optimizing synthesis pipelines",
+      "evidence_span": "Cure patients faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "'Future of chemical synthesis' treated as vision (§4.1(4)), not a premise. Patent-pending detail folded into AI engine (§4.1(1)/(5)). Partnerships and trials coded as traction, not premises. Anti-template: engine, problem/competition context, and commercial model are separately revisable."
+}

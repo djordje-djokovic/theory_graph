@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-502",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:02:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without centralized coordination, shippers cannot reliably fill trucks and truckers are empty or idle most of the time",
+      "status": "explicit",
+      "evidence_span": "The truckers are empty or idle 93% of the time. Why? Again, because there's no centralized coordination or flexibility in the current system"
+    },
+    {
+      "id": "P2",
+      "text": "Lorry redirects and reassigns trucks when delays, weather, or port issues arise so journeys stay coordinated end-to-end",
+      "status": "explicit",
+      "evidence_span": "if your truck is delayed or for some reason it's raining at the port and you can't load, we'll redirect the truck"
+    },
+    {
+      "id": "P3",
+      "text": "Operations teams get visualized loading, journey, and offload data with dashboards and live tracking for cargo owners",
+      "status": "explicit",
+      "evidence_span": "we're providing our car owners with further visibility through dashboards and tracking mechanisms where you can see where your trucks are at any given stage live"
+    },
+    {
+      "id": "P4",
+      "text": "Word-of-mouth adoption among major commodity movers and transporters grows the network without paid marketing",
+      "status": "explicit",
+      "evidence_span": "All of this is by word of mouth, and we've done no PR or marketing. It's all referrals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle trucks and unreliable contracting",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Flexible redirect and visibility systems",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Referral-led network growth",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Power flexible, coordinated African logistics so goods cost less",
+      "status": "explicit",
+      "evidence_span": "Lorry is powering African logistics"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's no flexibility or centralized coordination in the system"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Any point of the journey, we're there"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "from the transporter side, we have 10% week over week growth"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Referral growth coded as continuing GTM condition (mechanism), not the week-over-week number alone. ASR 'car owners' kept in evidence_span. Revenue run-rate excluded. Commodity-category focus folded into problem/product rather than separate domain this run."
+}

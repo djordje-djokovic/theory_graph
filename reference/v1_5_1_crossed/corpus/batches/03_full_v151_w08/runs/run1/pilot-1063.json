@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1063",
+    "coder_session_id": "session_02",
+    "session_case_index": 8,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile aspects of invoice and business management are not properly addressed for businesses of all sizes",
+      "status": "explicit",
+      "evidence_span": "the mobile aspect of it was not being properly addressed"
+    },
+    {
+      "id": "P2",
+      "text": "A cloud-powered business management tool with a consistent UI across mobile operating systems manages the business on the go",
+      "status": "explicit",
+      "evidence_span": "fully integrated cloud-powered business management tool with a consistent user interface on all mobile operating systems"
+    },
+    {
+      "id": "P3",
+      "text": "Deep integrations with QuickBooks, Xero, and leading B2B platforms connect the app to existing accounting workflows",
+      "status": "explicit",
+      "evidence_span": "fully integrated with as many accounting platforms as possible and integrated with the leading B2B platforms"
+    },
+    {
+      "id": "P4",
+      "text": "Picture, audio, and geotag attachments document deliveries and work to speed invoice approval or payment",
+      "status": "explicit",
+      "evidence_span": "we added the features of picture, audio file, so you can record a greeting"
+    },
+    {
+      "id": "P5",
+      "text": "Saving an invoice instantly archives to the cloud, writes to connected platforms, and returns a shareable URL",
+      "status": "explicit",
+      "evidence_span": "When you save this, it instantly jumps to our cloud, archives all the data"
+    },
+    {
+      "id": "P6",
+      "text": "Free unlimited invoices/estimates with paid tiers for storage/payments ($7) and accounting/B2B attach ($10)",
+      "status": "explicit",
+      "evidence_span": "The app itself is free. You can send unlimited invoices and sales estimates"
+    },
+    {
+      "id": "P7",
+      "text": "Enterprise-ready sales orders support OMS-style uses beyond simple invoices",
+      "status": "explicit",
+      "evidence_span": "we've made this enterprise ready"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mobile invoicing gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "cloud mobile app and attachments",
+      "premise_ids": [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "accounting and B2B integrations",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "freemium pricing and enterprise OMS",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "An easier way to manage businesses on the go for businesses of all sizes",
+      "status": "explicit",
+      "evidence_span": "develop an easier way to manage businesses on the go for businesses of all sizes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the mobile aspect of it was not being properly addressed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using just Invoice ASAP in the back end, you can completely manage your entire business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully integrated with QuickBooks, QuickBooks Online, and Xero"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The app itself is free. You can send unlimited invoices and sales estimates"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Ends mid-sentence on invoice (§4.8 truncated=true). Invoice line-item demo folded into cloud app cascade (§4.1.7). Media attachments kept as stated differentiator. Payment-button-not-ready treated as near-term product detail folded into attachment/payment path, not a separate premise. New Orleans shout-out excluded."
+}

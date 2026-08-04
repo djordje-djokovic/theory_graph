@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unbanked populations without credit cannot pay online the usual credit way in high-inflation countries",
+      "status": "explicit",
+      "evidence_span": "impossible to do it in the most common way to do a payment online, which is on credit"
+    },
+    {
+      "id": "P2",
+      "text": "Ripio Credit enables online installment payments in local currency via Bitcoin-accepting merchants",
+      "status": "explicit",
+      "evidence_span": "our users can pay online on installments in local currency"
+    },
+    {
+      "id": "P3",
+      "text": "Facebook signup plus ID selfie KYC feeds ML scoring with social, external, and fraud checks",
+      "status": "explicit",
+      "evidence_span": "give us some personal information and two photos to verify your identity"
+    },
+    {
+      "id": "P4",
+      "text": "ML plus external default checks and fraud prevention produce a credit score used to approve credit",
+      "status": "explicit",
+      "evidence_span": "With all this information, we build a score to help us give credit to the user"
+    },
+    {
+      "id": "P5",
+      "text": "Payment flow converts to pesos and presents installment choices with interest disclosure",
+      "status": "explicit",
+      "evidence_span": "we offer him different payment options. One installment for 700 pesos, three installments for 273"
+    },
+    {
+      "id": "P6",
+      "text": "Monthly statement repayment can be bank transfer or cash at 16,000 partner locations across LatAm",
+      "status": "explicit",
+      "evidence_span": "if they have a bank account, they can pay this with their bank account. But if they haven't, they can use any of the 16,000 merchant locations"
+    },
+    {
+      "id": "P7",
+      "text": "Acceptance spans Ripio network merchants plus worldwide Bitcoin virtual merchants (Expedia, Steam, etc.)",
+      "status": "explicit",
+      "evidence_span": "hundreds of thousands of virtual merchants that have become worldwide, like Expedia, Microsoft, Dell, or Steam"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online credit gap for unbanked",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "KYC and credit scoring",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Installment checkout and conversion",
+      "premise_ids": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Cash/bank collection and merchant acceptance",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable unbanked emerging-market consumers to shop online on affordable local-currency credit installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no online shopping, no purchasing Netflix, or buying that video game"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "approve this credit to our user and being able to start paying online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this makes it very convenient for a user to start buying online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Team credentials (Dinero Mail/Mercado Libre) treated as biographical support for P4 rather than a separate premise this run. Singleton D1 justified as independent problem module. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

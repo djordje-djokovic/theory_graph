@@ -1,0 +1,78 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fake certificates ordered cheaply create a large credential-trust problem",
+      "status": "explicit",
+      "evidence_span": "you can actually order a diploma for just 10 bucks"
+    },
+    {
+      "id": "P2",
+      "text": "Tertiary institutions issue blockchain credentials through Akowe instead of manual processes",
+      "status": "explicit",
+      "evidence_span": "transition from manual credential processes to digital processes for issuance of credentials on the blockchain"
+    },
+    {
+      "id": "P3",
+      "text": "Third parties verify academic records on the same platform; individuals hold them in a mobile wallet; systems connect via APIs",
+      "status": "explicit",
+      "evidence_span": "We've also built out a verification platform that allows employers, embassies, HR firms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fake diploma problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Blockchain credential ecosystem",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Academic credentials are digitally issued and verifiable",
+      "status": "explicit",
+      "evidence_span": "digital issuance platform and verification of academic records using blockchain technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Fake certificates, fake credentials are a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "issuance of credentials on the blockchain"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Verification, wallet, and APIs folded into one ecosystem premise as speaker-listed surfaces of the same blockchain credential offering (v1.3.2 clarification 5). Fundraising excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-11",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

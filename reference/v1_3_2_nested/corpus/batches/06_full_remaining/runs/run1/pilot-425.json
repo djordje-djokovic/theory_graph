@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Africa faces a shortage of developers, with less than 1% of school children leaving school with basic computer science knowledge",
+      "status": "explicit",
+      "evidence_span": "Less than 1% of African school children leave school with basic knowledge of computer science"
+    },
+    {
+      "id": "P2",
+      "text": "A gamified app teaches programming fundamentals via game puzzles and graphical programming blocks that are easy and intuitive for kids",
+      "status": "explicit",
+      "evidence_span": "bBlocky lets children learn the fundamentals of computer programming through game puzzles"
+    },
+    {
+      "id": "P3",
+      "text": "The app works fully offline so it remains usable where internet penetration is low",
+      "status": "explicit",
+      "evidence_span": "our application works fully offline, ensuring inclusivity in regions where internet penetration is very low"
+    },
+    {
+      "id": "P4",
+      "text": "Augmented reality lessons make learning more interactive than competitors focused on US/Europe desktop or internet-dependent tools",
+      "status": "explicit",
+      "evidence_span": "It leverages the cutting-edge augmented reality technology to make the learning process much more fun and very interactive"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from an in-app toy store for characters plus branded-character placements for companies",
+      "status": "explicit",
+      "evidence_span": "Our primary source of revenue is in-app toy store, where we allow our users to purchase different game characters in our toy store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "African CS education gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Offline gamified AR learning app",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "In-app and branded character revenue",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children become creators of technology by learning coding fundamentals in a fun, accessible way",
+      "status": "explicit",
+      "evidence_span": "These children need not only be passive consumers of technology, but also become creators and innovators of it"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Inclusivity for regions with low internet penetration expands who can learn",
+      "evidence_span": "ensuring inclusivity in regions where internet penetration is very low"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shortage of developers, the real architect of this digital economy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "learn the fundamentals of computer programming through game puzzles"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase different game characters in our toy store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Download counts and market growth rates treated as traction/framing. Course feature list (algorithms, free roaming, coins) folded into the core gamified-learning premise (v1.3.2 #5). Singleton D1 retained: the education-gap diagnosis is separately revisable from the product. Global-app claim treated as positioning detail inside product/market, not a separate vision premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-425",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:16:00+02:00"
+  }
+}

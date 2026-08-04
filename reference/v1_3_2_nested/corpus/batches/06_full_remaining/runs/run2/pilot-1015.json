@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1015",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:52+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Learners hesitate to try new activities like yoga in public for fear of embarrassment and injury without coaching",
+      "status": "explicit",
+      "evidence_span": "without the personalized instruction that I need, I worry that I'll end up in traction"
+    },
+    {
+      "id": "P2",
+      "text": "Large pool of Americans wants an introductory path into new activities",
+      "status": "explicit",
+      "evidence_span": "28 million people are willing to try new things like yoga, but are looking for the right introductory way to get there"
+    },
+    {
+      "id": "P3",
+      "text": "Kenobi uses Kinect-style motion capture on a web app to coach major muscle-movement activities privately",
+      "status": "explicit",
+      "evidence_span": "uses motion capture technology like the Microsoft Kinect to give you the individualized instruction you need to learn any major muscle movement-based activity"
+    },
+    {
+      "id": "P4",
+      "text": "Practice mode overlays live body tracking against instructor target pose",
+      "status": "explicit",
+      "evidence_span": "I need to match my dots to the blue dots"
+    },
+    {
+      "id": "P5",
+      "text": "Platform hosts instructor content and lets users upload/share instructional videos with friends",
+      "status": "explicit",
+      "evidence_span": "Users can easily upload and record their videos"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via revenue share with premium creators and webcam-based Kenobi Lite acquisition",
+      "status": "explicit",
+      "evidence_span": "also use a Kenobi Lite, which uses your webcam, to be able to get this out to individual users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Kinect coaching experience",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Private learning demand",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Content marketplace and Lite",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Learners build confidence to learn new muscle-movement activities with private personalized instruction",
+      "status": "explicit",
+      "evidence_span": "We help you build the confidence required to learn any new activity"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give you the individualized instruction you need"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build the confidence required to learn any new activity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is a place where instructors can come and provide high-quality content"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Truncated pitch. Gestural site control treated as UX detail of the same product, not a separate premise (§4.1(5))."
+}

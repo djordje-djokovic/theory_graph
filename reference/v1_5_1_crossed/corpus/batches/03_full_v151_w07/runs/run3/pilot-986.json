@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:17:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Circling for parking causes major urban traffic and agitation",
+      "status": "explicit",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "Curb Karma is a smartphone social network that finds and reserves parking where and when needed",
+      "status": "explicit",
+      "evidence_span": "Curb Karma finds you parking where and when you need it"
+    },
+    {
+      "id": "P3",
+      "text": "Leavers earn a $1 Karma Credit; seekers spend two credits, with one credit going to Curb Karma",
+      "status": "explicit",
+      "evidence_span": "Marissa needs two Karma Credits to reserve a spot"
+    },
+    {
+      "id": "P4",
+      "text": "App publishes spots on a map, matches seekers, connects parties with private messaging and GPS navigation",
+      "status": "explicit",
+      "evidence_span": "Heather and Marissa can stay in touch using built-in messaging without revealing any personal contact information"
+    },
+    {
+      "id": "P5",
+      "text": "Capturing a small share of high-demand urban spot exchanges yields city-scale then multi-city revenue",
+      "status": "explicit",
+      "evidence_span": "over half a million exchanges would be captured and powered by Curb Karma"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "social parking match and handoff",
+      "premise_ids": ["P1", "P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Karma Credit economics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "high-demand city expansion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "End parking madness by matching leavers and seekers to awesome spots",
+      "status": "explicit",
+      "evidence_span": "end that madness and to disrupt parking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Marissa scored an awesome parking spot"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everybody wins"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our plan is to expand to cities all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "ASR Curb/Curve/Kerb/Kirp/Kube naming noise; spans verbatim. Publish/reserve/message/nav folded as one handoff UX. Free promo credits excluded as launch gimmick. Rating thumbs-up folded into handoff completion."
+}

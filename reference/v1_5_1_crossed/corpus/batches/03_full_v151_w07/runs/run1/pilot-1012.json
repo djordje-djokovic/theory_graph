@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1012",
+    "coder_session_id": "session_04",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing competitive programming sites focus on textbook algorithms rather than real-world ML, AI, and distributed-systems problems",
+      "status": "explicit",
+      "evidence_span": "sites like ACM and Topcoder focus on a small set of textbook algorithms"
+    },
+    {
+      "id": "P2",
+      "text": "HackerRank offers varied real-world challenges across difficulty levels that are dynamically ranked by how many users solve them",
+      "status": "explicit",
+      "evidence_span": "we're going to have a variety of challenges classified into 10 levels of difficulty"
+    },
+    {
+      "id": "P3",
+      "text": "Companies contribute real datasets and problems so challenges mirror production work",
+      "status": "explicit",
+      "evidence_span": "we are inviting companies to give us real data sets or problems that they're actually working on"
+    },
+    {
+      "id": "P4",
+      "text": "In-browser coding, compile/test across languages, bot-versus-bot play, and archived code snippets support competition and learning",
+      "status": "explicit",
+      "evidence_span": "you can compile and code right inside our interface and start working on it"
+    },
+    {
+      "id": "P5",
+      "text": "The platform centralizes the world's interesting hacker problems into one competitive arena",
+      "status": "explicit",
+      "evidence_span": "We are building the largest collection of the world's most interesting problems for hackers to solve"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "textbook-only competitive programming gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "real-world challenge platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "centralized problem collection ambition",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hackers compete on real-world problems in an online arena of the world's best talent",
+      "status": "explicit",
+      "evidence_span": "building the competitive lead for hackers to solve real world problems"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in the real world, you work on things ranging from machine learning to artificial intelligence to distributed systems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "to make the experience as real as possible"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are building that incredibly powerful room online at HackerRank"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "ML classifier, anti-chess bots, and archive-learning features folded as cascade of one real-world challenge platform (§4.1.7). HN signup/game counts excluded as traction (§4.2). Stripe/Netflix contest stats treated as market framing for centralization claim. Singleton D3 retained: collection/centralization ambition stated as platform thesis beyond current challenge UX."
+}

@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-448",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:01:06+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Using large public clouds requires costly DevOps to manage servers; hosting apps means tedious, error-prone VM, networking, and SSL setup",
+      "status": "explicit",
+      "evidence_span": "Every year, businesses spend billions of dollars in engineering costs just to manage servers on AWS"
+    },
+    {
+      "id": "P2",
+      "text": "Render is a fully automated cloud: push to Git and it builds, deploys, secures, scales, load-balances, and alerts without managing servers",
+      "status": "explicit",
+      "evidence_span": "Render is a completely automated cloud provider. Render lets you deploy anything from a simple static site to complex application clusters"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in service discovery, private networking, load balancing, managed SSDs with backups/restores, and infra defined in one Git-pushed file",
+      "status": "explicit",
+      "evidence_span": "every Render service gets built-in service discovery, private networking, and load balancing"
+    },
+    {
+      "id": "P4",
+      "text": "Render combines Heroku-like ease with more flexibility and much lower price than stagnated managed clouds",
+      "status": "explicit",
+      "evidence_span": "Just two gigabytes of RAM costs $250 a month on Heroku compared to $25 a month on Render"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Painful AWS/server management",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated Git-to-production cloud",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Ease plus lower managed-cloud pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Deploy and host apps faster without managing servers, saving engineering cost",
+      "status": "explicit",
+      "evidence_span": "you can do it faster than on any other cloud and without managing servers at all"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Best of both worlds: amazing ease of use with tremendous flexibility",
+      "evidence_span": "Amazing ease of use combined with tremendous flexibility"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hosting them was agonizing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Simply push your code to Git. We automate everything from there"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to save big on engineering costs, automate your cloud hosting"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Three launch innovations folded into automated-cloud premise per §4.1(5) with price/positioning as separate commercial module. Stripe bio and MoM revenue traction excluded. PaaS/IaaS market-size vision not coded as premises."
+}

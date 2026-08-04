@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor CO2 commonly reaches several times outdoor concentrations and is linked to large drops in cognitive performance",
+      "status": "explicit",
+      "evidence_span": "we typically have three times the concentrations than outside"
+    },
+    {
+      "id": "P2",
+      "text": "Conventional ventilation cannot supply true fresh air without costly heating, cleaning, and cooling of outdoor air",
+      "status": "explicit",
+      "evidence_span": "the only way to get fresh air is from outside"
+    },
+    {
+      "id": "P3",
+      "text": "Photosynthetic chlorella biochips in a microfluidic photobioreactor absorb CO2 and produce oxygen indoors under LED control",
+      "status": "explicit",
+      "evidence_span": "Our biochips have photosynthetic algae, chlorella, that, similar to trees, absorb CO2 and produce oxygen"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts with businesses via direct sales plus HVAC distribution, with later residential expansion",
+      "status": "explicit",
+      "evidence_span": "partnering with distributions such as HVAC"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Elevated indoor CO2 problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Microfluidic algae bioreactor",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Commercial then residential GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make fresh air indoors to improve indoor air quality",
+      "status": "explicit",
+      "evidence_span": "improving indoor air quality by making fresh air"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Healthier offices, homes, and hospital settings",
+      "evidence_span": "fresh air in offices and making healthier homes"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "false feeling of safety inside"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes a lot more fresh air"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeting businesses, selling our custom systems"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Cartridges, wall-mount, and cover options folded into the single bioreactor premise (v1.3.2 feature list). Singleton D2 retained as independently learnable hardware mechanism. Anti-template note: need/product/channel triad is warranted by separately revisable HVAC GTM vs bioreactor tech.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-675",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

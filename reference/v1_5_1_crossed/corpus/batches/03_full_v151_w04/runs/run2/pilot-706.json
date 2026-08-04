@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-706",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medical tourism is dominated by travel agents who lack clinical expertise, yielding unvetted doctors and poor trust",
+      "status": "explicit",
+      "evidence_span": "this industry is dominated by travel agents, individuals who sell flights and hotels, and on occasion, slap on a hip replacement"
+    },
+    {
+      "id": "P2",
+      "text": "Patients travel for care to save money, save time, or gain access to procedures unavailable at home",
+      "status": "explicit",
+      "evidence_span": "three main reasons patients travel for medical care. The first is to save money"
+    },
+    {
+      "id": "P3",
+      "text": "An online marketplace connects American and Canadian patients with English-speaking, board-certified, top-rated doctors abroad",
+      "status": "explicit",
+      "evidence_span": "an online global health marketplace that enables American and Canadian patients to connect with English-speaking, board-certified, top-rated doctors around the world"
+    },
+    {
+      "id": "P4",
+      "text": "Doctors undergo strict physician-board vetting with a low acceptance rate, HIPAA-compliant communication, and marketplace-handled admin and payments",
+      "status": "explicit",
+      "evidence_span": "Each of our doctors go through a strict vetting process led by our U.S. Board of Physicians"
+    },
+    {
+      "id": "P5",
+      "text": "Launch destinations begin with Mexico, Costa Rica, and the Cayman Islands with transparent pricing",
+      "status": "explicit",
+      "evidence_span": "we are launching with Mexico, Costa Rica, and the Cayman Islands"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "untrusted medical tourism intermediaries",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "vetted global doctor marketplace",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "initial destination launch set",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Transparent, secure, trusted access to world-class medical care abroad",
+      "status": "explicit",
+      "evidence_span": "create a transparent, secure, and trusted marketplace to facilitate world-class medical care"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this lack of expertise, which for patients means unvetted doctors and poor outcomes, leads to a lack of trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect with English-speaking, board-certified, top-rated doctors around the world"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launching with 60 doctors covering 10 specialties in nine destinations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three traveler motivations kept as one demand problem-set (§4.1.6). Profile sorting, chat, video, files, and admin work folded into marketplace/vetting mechanism. Procedure counts and savings averages excluded as traction. Family medical bio excluded. Singleton D3 retained as separately revisable geographic launch module."
+}

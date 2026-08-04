@@ -1,0 +1,141 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social media content consumption is extremely noisy so gems people care about get lost",
+      "status": "explicit",
+      "evidence_span": "The problem is it's just way too noisy. Over 400 million tweets and over 4 billion Facebook posts every single day"
+    },
+    {
+      "id": "P2",
+      "text": "Undrip is a community focused only on sharing and discovering interesting web content—no status updates, check-ins, or game invites",
+      "status": "explicit",
+      "evidence_span": "no status updates, no check-ins, no game invites. It's all about sharing and discovering the most interesting and compelling content from around the web, noise-free"
+    },
+    {
+      "id": "P3",
+      "text": "Connects Twitter, Facebook, Instagram, Tumblr and analyzes feeds to surface the best content",
+      "status": "explicit",
+      "evidence_span": "With UNDRIP, I can connect my Twitter, my Facebook, my Instagram, my Tumblr, and it'll analyze all the content that's coming through, and it'll surface the best stuff"
+    },
+    {
+      "id": "P4",
+      "text": "Social context under each item shows friends who shared it; interactions flow back to originating networks",
+      "status": "explicit",
+      "evidence_span": "under every single piece of content, you'll see thumbnails. Those are my friends. Those are people who I know. I value their opinion"
+    },
+    {
+      "id": "P5",
+      "text": "Algorithm uses consumption habits, friend relationships, and popularity signals for relevance while allowing serendipity; interests are implicit",
+      "status": "explicit",
+      "evidence_span": "The UNDRIP algorithm will analyze my consumption habits. It'll analyze the relationships I have with my friends. It'll analyze the global, the local popularity"
+    },
+    {
+      "id": "P6",
+      "text": "Users can follow tastemaker curators whose shares mix into the ranking feed, and reshare via Drip",
+      "status": "explicit",
+      "evidence_span": "a user can start to explore and learn about some of the other users on UnDrip and decide if they want to follow their content"
+    },
+    {
+      "id": "P7",
+      "text": "Product is mobile-first on iPhone and iPad with Android coming",
+      "status": "explicit",
+      "evidence_span": "probably most importantly, it's all mobile. We're on the iPhone. We're on the iPad. We're in the App Store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Noisy social content problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Noise-free sharing community",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Graph-connected ranking and social context",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Mobile clients",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Discover and share the gems of the web in a noise-free mobile community",
+      "status": "explicit",
+      "evidence_span": "Undrip is a mobile community that helps you discover and share the gems of the web"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Create relevance and order for the social web like Google did for the web",
+      "evidence_span": "What Google did for the web, which is create relevance and order to all the content out there, we're doing for the social web"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "way too noisy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "noise-free"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "surface the best stuff"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's all mobile"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Soft count 7; founder bio excluded. Path-for-links analogy not separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1031",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:39:40+02:00"
+  }
+}

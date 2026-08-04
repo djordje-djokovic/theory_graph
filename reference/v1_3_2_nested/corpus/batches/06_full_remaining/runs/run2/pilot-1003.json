@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shop-based car repair wastes time and risks rip-offs for owners of older out-of-warranty cars",
+      "status": "explicit",
+      "evidence_span": "Out of warranty, older cars"
+    },
+    {
+      "id": "P2",
+      "text": "Your Mechanic is an on-demand mechanic marketplace: book online, compare transparent prices, choose rated mechanics seven days a week at your location",
+      "status": "explicit",
+      "evidence_span": "Your Mechanic is the car mechanic that comes to you"
+    },
+    {
+      "id": "P3",
+      "text": "Parts-supplier integration and large labor/parts datasets lock a fixed price; mechanics diagnose via app when the issue is unclear",
+      "status": "explicit",
+      "evidence_span": "This price that you see here is fixed by us, always"
+    },
+    {
+      "id": "P4",
+      "text": "Mechanics bring their own tools for most repairs and earn more than shop wages while customers pay less",
+      "status": "explicit",
+      "evidence_span": "When you hire me through your mechanic, you save money, I make more, and everyone wins"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Repair pain for older cars",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "On-demand booking and pricing",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Mechanic economics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Take care of car problems in less than 60 seconds with a mechanic who comes to you",
+      "status": "explicit",
+      "evidence_span": "you can take care of your car problems in less than 60 seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't waste your time going to a shop"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "boom, total transparency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everyone wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Merged market size into pain premise. Symptom tool folded into pricing/ops bundle. Billion-dollar company aspiration not coded as premise (v1.3.2 #4).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1003",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:01+02:00"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-954",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:36:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Reality-TV post can require up to 17 hours of work per finished minute",
+      "status": "explicit",
+      "evidence_span": "one minute of the final product takes up to 17 hours of post-production"
+    },
+    {
+      "id": "P2",
+      "text": "Email, calendars, calls, and spreadsheets are the status-quo coordination stack",
+      "status": "explicit",
+      "evidence_span": "sifting through emails with long threads where someone hits reply all, scheduling meetings on calendars, long phone calls with people in multiple time zones"
+    },
+    {
+      "id": "P3",
+      "text": "Link-based viewing rooms collect timestamped stakeholder feedback on the cut",
+      "status": "explicit",
+      "evidence_span": "all Paul needs to do is drop in a link, and he creates a viewing room"
+    },
+    {
+      "id": "P4",
+      "text": "Review digests make feedback assignable and exportable into editing software timelines",
+      "status": "explicit",
+      "evidence_span": "Paul could come in and say, OK, that's an important one we've got to turn into an edit. He can then immediately assign it to his editor"
+    },
+    {
+      "id": "P5",
+      "text": "Browser-based product using existing hosting requires little IT work",
+      "status": "explicit",
+      "evidence_span": "it's browser-based, and we leverage existing hosting infrastructure"
+    },
+    {
+      "id": "P6",
+      "text": "Project-based pricing serves small teams affordably with upside for larger clients",
+      "status": "explicit",
+      "evidence_span": "make it affordable for small teams while keep on producing upsides for larger clients"
+    },
+    {
+      "id": "P7",
+      "text": "Native Adobe integration plus forthcoming MPAA compliance reach studio buyers",
+      "status": "explicit",
+      "evidence_span": "by our next update, we will have met all standard and guidelines for the Motion Picture Association of America"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Labor and coordination friction in post",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Viewing room to NLE export workflow",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "IT-light adoption, pricing, and studio access",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Post-production teams manage collaboration and feedback in one tool",
+      "status": "explicit",
+      "evidence_span": "collaborate and manage projects together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "collection is one part. You've got to make it actionable in some way"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "part of the problem is a lot of teams are running around"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our markers actually show up directly in the timeline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "IT departments specifically love us because it's browser-based"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three domains: pain, review product, and commercial/studio adoption. Adobe+MPAA folded into adoption rather than a singleton. MPAA treated as institutional access detail on studio GTM, not a separate premise from Adobe announcement."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-739",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Organizations rely on more contractors and vendors than full-time employees, but finding, engaging, and collaborating with them via shouts, emails, spreadsheets, and scattered document apps is messy and inefficient",
+      "status": "explicit",
+      "evidence_span": "This whole workflow process between companies to outsource parties is a complete mess and super inefficient"
+    },
+    {
+      "id": "P2",
+      "text": "Listable provides a searchable internal contractor index with flexible onboarding templates and forms shared by link",
+      "status": "explicit",
+      "evidence_span": "All of their contributor network information, past and future, will be stored in one place, accessible by all of their employees"
+    },
+    {
+      "id": "P3",
+      "text": "Projects create a dual private/shared tracking interface with object-based email-integrated communication across team and contributors",
+      "status": "explicit",
+      "evidence_span": "it will create this dual project tracking interface"
+    },
+    {
+      "id": "P4",
+      "text": "After projects, Listable auto-requests internal feedback and contributor invoices, then supports approving and distributing payments across many countries",
+      "status": "explicit",
+      "evidence_span": "we will auto-request feedback from all the team members that have worked with Patrick"
+    },
+    {
+      "id": "P5",
+      "text": "SaaS freemium model so any company can sign up and use Listable for free",
+      "status": "explicit",
+      "evidence_span": "we're a SaaS company with a freemium model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contractor vendor workflow mess",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "onboard manage communicate and pay contributors",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium SaaS access",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies can efficiently onboard, manage, communicate with, and pay large contributor and contractor networks in one place",
+      "status": "explicit",
+      "evidence_span": "onboard, manage, communicate with, and pay these huge contributor networks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we had no formalized way to handle this"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitating a new way of working together"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "any company can sign up at our new website, listable.com, and use the product entirely for free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Find/engage/collaborate pains folded as one contributor-workflow problem set (v1.5.1 §4.1.6). Index/onboarding, dual project UI/comms, and feedback/pay kept as distinct product modules that could fail separately. Future-of-work stats treated as framing, not premises. Singleton D1/D3 retained as separately revisable."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1053",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses run on messy reply-all email threads; throwing email away fails—email must become more productive, collaborative, and social",
+      "status": "explicit",
+      "evidence_span": "Businesses almost all run on these kind of reply all threads. And it's totally stupid"
+    },
+    {
+      "id": "P2",
+      "text": "A loop is a smart mailing list with a name and email address, used via email and backed by SaaS",
+      "status": "explicit",
+      "evidence_span": "The loop is a smart mailing list easy to search, easy to share, easy to create"
+    },
+    {
+      "id": "P3",
+      "text": "Loops are created by CCing an address—no IT, downloads, or learning curve because it is just email",
+      "status": "explicit",
+      "evidence_span": "There was no IT help desk request. No one had to download anything. No one had to learn anything, because it's just email"
+    },
+    {
+      "id": "P4",
+      "text": "Web interface provides searchable threads, attachments, history, related-loop suggestions, digests, and open company follow",
+      "status": "explicit",
+      "evidence_span": "web interface has all the threads, all the content, all the attachments. It has great search"
+    },
+    {
+      "id": "P5",
+      "text": "Email-native loops are intrinsically viral (footer, partners, customers) enabling freemium without forcing behavior change",
+      "status": "explicit",
+      "evidence_span": "email lists are just intrinsically viral, which is part of what got us interested in the idea in the first place"
+    },
+    {
+      "id": "P6",
+      "text": "Customers pay for branding, custom domains, admin, and integrations (Google Apps, Dropbox, Salesforce)",
+      "status": "explicit",
+      "evidence_span": "customers have told us they'll pay for customization"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken reply-all workplace email",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "email-native loops and web search",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "viral freemium and paid customization",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make workplace email more productive, collaborative, and social without changing user behavior",
+      "status": "explicit",
+      "evidence_span": "make email more productive, so you waste less time in it, more collaborative, and more social"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the email problem is so big, it's just bugged us for years and years"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't ask for behavior changes, because it's just email"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The thing about virality is it makes the freemium model really easy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Transcript truncated mid-CTA. Reply-all pain as problem. Loop definition, email creation, and web search/suggestion/digest features folded as one product cascade (§4.1.7). Virality + freemium paid customization as commercial package. Team/investor bios excluded. Three domains—anti-template: problem, email-native product, and freemium GTM separately revisable."
+}

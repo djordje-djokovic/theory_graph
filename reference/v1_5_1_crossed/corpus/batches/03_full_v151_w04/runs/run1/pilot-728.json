@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-728",
+    "coder_session_id": "session_03",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Industrial robotic arms are expensive, hard to use, and not safe enough for broader non-factory applications",
+      "status": "explicit",
+      "evidence_span": "they're expensive, they're difficult to use, and quite frankly, not that safe"
+    },
+    {
+      "id": "P2",
+      "text": "Cassie delivers industrial-arm capabilities at roughly laptop price (~10× cheaper), with precision motion in a meter envelope and swappable end attachments",
+      "status": "explicit",
+      "evidence_span": "Casio has the capabilities of an industrial arm, but the price of a laptop"
+    },
+    {
+      "id": "P3",
+      "text": "Training is by guiding the arm through motions or using simple app/device interfaces without needing advanced degrees",
+      "status": "explicit",
+      "evidence_span": "We've made Casio incredibly easy to train"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in proximity sensing on every surface detects humans from any point on the arm to make operation around people safer",
+      "status": "explicit",
+      "evidence_span": "It can detect a human up to 20 inches away in any direction from any point on the arm"
+    },
+    {
+      "id": "P5",
+      "text": "Positioned as a developer platform with APIs that let web-level programmers code for the arm across many applications",
+      "status": "explicit",
+      "evidence_span": "we've made Cassia a developer platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "industrial arm adoption barriers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cheap trainable safe arm hardware",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "developer platform APIs",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Robotic arms become personal, ubiquitous tools beyond factories",
+      "status": "explicit",
+      "evidence_span": "make robotic arms as ubiquitous as computers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robotic arms can be used for so much more"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solves all three problems"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you can build a website, you can code for Cassia"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript ends mid-sentence at launch CTA; coded only present content (quality.truncated=true). Expense/difficulty/safety folded as one barrier premise (v1.5.1 §4.1.6). Specs, carbon-fiber/muscles, and attachments folded into the cheap industrial-capability product; train-by-demo and proximity skin kept as separately emphasized ease and safety modules within the hardware domain. Biomedical/wheelchair/maker application stories treated as uses of the same democratized arm (fold per §4.1.2), not separate premises. 800 applications treated as traction evidence for the developer-platform condition. ASR name variants Casio/Cassia/Cassie left in spans; normalized to Cassie in premise text."
+}

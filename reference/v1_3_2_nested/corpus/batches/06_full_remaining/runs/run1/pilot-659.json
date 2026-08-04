@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-659",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:36:11+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "App provides turn-by-turn directions from home to the fan's parking spot using ticket and parking pass context",
+      "status": "explicit",
+      "evidence_span": "get turn-by-turn directions from her house to her parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "Friends can pin tailgates on the map so users get the fastest route to the group",
+      "status": "explicit",
+      "evidence_span": "her friends have pinned their tailgate on the paranoid fan map, giving Whitney the fastest route to their location"
+    },
+    {
+      "id": "P3",
+      "text": "Meet Me shows friends' exact locations for painless stadium meetups",
+      "status": "explicit",
+      "evidence_span": "Whitney can use the Meet Me feature to see exactly where her friends are"
+    },
+    {
+      "id": "P4",
+      "text": "Live geofence chat lets fans within two miles of the 50-yard line share photos, video, and info",
+      "status": "explicit",
+      "evidence_span": "live geofence chat stream that allows fans within two miles of the 50-yard line to share photos, video, information"
+    },
+    {
+      "id": "P5",
+      "text": "IBM SoftLayer deployment and Ticketmaster API integration enable stadium-scale use and in-app ticket purchase",
+      "status": "explicit",
+      "evidence_span": "We're also excited to announce an official API integration with Ticketmaster"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Game-day location and meetup features",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stadium geofence chat",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Stadium infra and Ticketmaster",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fans get their time back and enjoy game day instead of searching",
+      "status": "explicit",
+      "evidence_span": "We're giving fans back what's most valuable to them, their time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spends more time enjoying her experience and less time looking for one"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deploy this technology at every stadium in the world"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce the many pain points of the fan experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Navigation/tailgate/Meet Me folded as one location-coordination bundle revisable together; geofence chat kept separate as distinct social module. Session-time engagement metrics excluded as traction. 'Stadium of tomorrow' framing is vision (§4.1(4))."
+}

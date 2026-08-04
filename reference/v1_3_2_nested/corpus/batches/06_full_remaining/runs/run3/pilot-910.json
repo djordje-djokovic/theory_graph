@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-910",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Marketplace where designers sell professional 3D printable files for passive income",
+      "status": "explicit",
+      "evidence_span": "designers can sell professional level 3D printable files rather than just giving them away on sites like Thingiverse"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers buy, customize, download, and print at home or via networked print shops worldwide",
+      "status": "explicit",
+      "evidence_span": "Once purchased, you can view the file in your library. You can also download the design and print real shoes from your own 3D printer"
+    },
+    {
+      "id": "P3",
+      "text": "Revenue from designs and print sales; competing print shops commoditize price downward",
+      "status": "explicit",
+      "evidence_span": "we generate revenue from the design and profit from the sale of print"
+    },
+    {
+      "id": "P4",
+      "text": "Direct designer collaboration can fast-track new products when the catalog lacks an item",
+      "status": "explicit",
+      "evidence_span": "Don't see what you want? You can work directly with our designers to fast-track the innovation to new products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Printable design marketplace",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Design-and-print monetization",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Power to choose when, where, and how purchased products are manufactured",
+      "status": "explicit",
+      "evidence_span": "give you the power to choose when, where, and how the products you buy are manufactured"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manufacture right from the comfort of your home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lower pricing for you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Print-shop network folded into consumer fulfillment P2. Visionary market-ownership lines not premised. Singleton pricing domain retained."
+}

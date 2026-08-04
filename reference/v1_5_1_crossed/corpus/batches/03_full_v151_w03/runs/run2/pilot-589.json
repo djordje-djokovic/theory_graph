@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-589",
+    "coder_session_id": "session_05",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:45:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Machines need large volumes of structured training data, but most human-created data is unstructured and data scientists spend most of their time cleaning it",
+      "status": "explicit",
+      "evidence_span": "90% of that data is unstructured, but machines need structured data to learn"
+    },
+    {
+      "id": "P2",
+      "text": "A platform combines tools, humans in the loop, and machine learning into specialized workflows to collect, enrich, and structure high-quality training data at scale",
+      "status": "explicit",
+      "evidence_span": "combining tools, humans in the loop, and machine learning into specialized data workflows"
+    },
+    {
+      "id": "P3",
+      "text": "Configurable multi-modal campaigns (crowd demographics, recording setups, sensors) let data scientists gather more higher-quality data in less time",
+      "status": "explicit",
+      "evidence_span": "allowed Anna to gather more data of higher quality in less time"
+    },
+    {
+      "id": "P4",
+      "text": "The offering combines professional-services quality/reach with SaaS scale and process control versus pure crowd or pure services alternatives",
+      "status": "explicit",
+      "evidence_span": "The fine crowd combines the best of both worlds. The high quality and reach of the professional services combined with the scale and control of the SaaS companies"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market partners with large AI players, mainly Fortune 500 companies across the US, Japan, and Europe",
+      "status": "explicit",
+      "evidence_span": "We've been partnering and serving the biggest players in AI, mainly Fortune 500 companies in the US, Japan, and Europe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unstructured training-data problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "human-in-the-loop data workflows",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise AI customer base",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accelerate machine intelligence by solving the structured training-data problem so robots become smarter and more useful",
+      "status": "explicit",
+      "evidence_span": "we're accelerating intelligence in machines"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "machines need structured data to learn"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collect, enrich, and structure high quality training data at scale"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnering and serving the biggest players in AI"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "§4.1.6: Empire State data volume, unstructured share, and 80% cleaning time folded into one data-problem premise (P1). Demo crowd/recording/sensor steps folded into configurable workflow capability (P3). Founder credentials and AI market-size projection excluded. Voice-assistant failure vignette is framing for usefulness, not a separate product premise."
+}

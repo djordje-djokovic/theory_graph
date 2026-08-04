@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1031",
+    "coder_session_id": "session_04",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social media content streams are too noisy, so the gems people care about get lost among status updates, invites, and low-value posts",
+      "status": "explicit",
+      "evidence_span": "The problem is it's just way too noisy"
+    },
+    {
+      "id": "P2",
+      "text": "Undrip is a community dedicated only to sharing and discovering compelling web content—no status updates, check-ins, or game invites",
+      "status": "explicit",
+      "evidence_span": "no status updates, no check-ins, no game invites"
+    },
+    {
+      "id": "P3",
+      "text": "Connecting existing social accounts lets an algorithm surface the best content using social context, consumption habits, and popularity signals",
+      "status": "explicit",
+      "evidence_span": "it'll analyze all the content that's coming through, and it'll surface the best stuff"
+    },
+    {
+      "id": "P4",
+      "text": "Interests and tastemaker following are inferred implicitly to allow relevant discovery plus serendipity",
+      "status": "explicit",
+      "evidence_span": "It's all implicit"
+    },
+    {
+      "id": "P5",
+      "text": "The product is mobile-first on iPhone and iPad with Android forthcoming",
+      "status": "explicit",
+      "evidence_span": "it's all mobile. We're on the iPhone. We're on the iPad"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "noisy social content problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "noise-free social discovery feed",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "mobile app distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Discover and share the gems of the web in a noise-free, socially contextual mobile feed",
+      "status": "explicit",
+      "evidence_span": "helps you discover and share the gems of the web"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the stuff that we most care about gets lost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sharing and discovering the most interesting and compelling content from around the web, noise-free"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "probably most importantly, it's all mobile"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tweet/Facebook noise and lost gems folded as one problem (§4.1.6). Feed analysis, friend thumbnails, video/photo sections, drip reshare, and tastemaker follow folded as cascade of one discovery community (§4.1.7). Chegg acquisition biography excluded (§4.2). Three domains—anti-template: mobile distribution separately revisable from ranking algorithm."
+}

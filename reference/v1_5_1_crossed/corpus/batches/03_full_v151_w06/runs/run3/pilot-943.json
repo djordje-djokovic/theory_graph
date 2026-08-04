@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "coder_session_id": "session_06",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile teams need to communicate but email is insufficient for getting work done together",
+      "status": "explicit",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "id": "P2",
+      "text": "Zula provides a structured team messaging stream as the base for collaboration",
+      "status": "explicit",
+      "evidence_span": "we started off with a very standard messaging stream, a structured messaging stream"
+    },
+    {
+      "id": "P3",
+      "text": "Teams can share files in-stream with Dropbox and Google Drive integration and a shared-file view",
+      "status": "explicit",
+      "evidence_span": "mini Dropbox, which is actually also integrated into Dropbox and Google Drive"
+    },
+    {
+      "id": "P4",
+      "text": "Dynamic in-post polls let teams gather answers inside the conversation",
+      "status": "explicit",
+      "evidence_span": "I put out a poll as part of my post, a dynamic poll, which is part of the post"
+    },
+    {
+      "id": "P5",
+      "text": "Calendar events can be created for the whole team from the stream",
+      "status": "explicit",
+      "evidence_span": "we can create a calendar event, calendar integration, boom. The whole team gets it"
+    },
+    {
+      "id": "P6",
+      "text": "Long-lived streams are searchable so prior conversation content can be found later",
+      "status": "explicit",
+      "evidence_span": "you want to search the stream"
+    },
+    {
+      "id": "P7",
+      "text": "People are invited from contacts and social networks via deep links straight into the conversation",
+      "status": "explicit",
+      "evidence_span": "They get a deep link, which takes them directly to this conversation"
+    },
+    {
+      "id": "P8",
+      "text": "One-tap conference calling starts a synchronous call for the stream without phone numbers",
+      "status": "explicit",
+      "evidence_span": "we have one tap conference calling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "structured team messaging core",
+      "premise_ids": ["P1", "P2", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "in-stream business tools",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "invitation and deep-link onboarding",
+      "premise_ids": ["P7"]
+    },
+    {
+      "id": "D4",
+      "name": "one-tap conference calling",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Teams get work done with structured mobile communication that reduces email",
+      "status": "explicit",
+      "evidence_span": "reducing email and moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "structured way of communicating as a team"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "business tools to really get things done together as a team"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When I invite someone to this conversation, they come straight here"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I need to actually have a synchronous conversation"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "File share, poll, and calendar split as distinct in-stream jobs-to-be-done under enumeration atomicity. Call recording folded into P8 as cascade of the conference-call mechanism. Six-month dogfooding traction excluded per §4.2. Singletons D3 and D4 retained as independently revisable invite and sync-call modules."
+}

@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Vendors unilaterally collect and leverage tracking data while consumers lack equivalent leverage",
+      "status": "explicit",
+      "evidence_span": "Those with the vendors are the only ones that can be amassing and leveraging and tracking the data that's out there"
+    },
+    {
+      "id": "P2",
+      "text": "Forwarding order confirmations captures purchase history into the consumer's Schwope account",
+      "status": "explicit",
+      "evidence_span": "all I need to do is forward my order confirmations in my inbox to wowat12.com"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers augment purchase records with why/need context for mindful shopping and taste signaling",
+      "status": "explicit",
+      "evidence_span": "augmenting the basic purchase data, the stuff that's like the what, the how much sort of thing, with the why"
+    },
+    {
+      "id": "P4",
+      "text": "A Shopify application makes the product data-compatible with tens of thousands of stores",
+      "status": "explicit",
+      "evidence_span": "application with Shopify stores that makes us instantly data compatible with tens of thousands of stores"
+    },
+    {
+      "id": "P5",
+      "text": "Consumers can port selected shopping history outbound as a personal RFP for personalized deals and loyalty value",
+      "status": "explicit",
+      "evidence_span": "the customer can take all that they've amassed and leverage it back for something of value in return, better deals, loyalty points, VIP programs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer data asymmetry",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Purchase capture and enrichment",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Data-out personal RFP",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers make shopping data meaningful and regain leverage over vendors",
+      "status": "explicit",
+      "evidence_span": "building tools for consumers to help them make their shopping data more meaningful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Opt-in data portability yields personalized merchant offers",
+      "evidence_span": "It's all opt-in and transparent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if the consumers had as much leverage with the data as the vendors do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make their shopping data more meaningful"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage it back for something of value in return"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Data-out / personal RFP coded as a premise because the speaker frames it as the disruptive value path, not mere aspiration. Social sharing roadmap folded into enrichment/GTM rather than split. ASR names (Schwab/Schwelp) left in spans.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1153",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

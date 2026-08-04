@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-874",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Chronic unpredictable blackouts in places like Nigeria force households and businesses into costly backup generation and daily disruption",
+      "status": "explicit",
+      "evidence_span": "it costs four times the amount to run a backup generator than it costs to get power from the grid"
+    },
+    {
+      "id": "P2",
+      "text": "Low-cost Android phones in proprietary cases act as community power sensors that push outage/restore notifications (and SMS for non-smartphones)",
+      "status": "explicit",
+      "evidence_span": "we take low-cost Android phones, just like this, and we turn them into power sensors to let our users know when there's power available in their community"
+    },
+    {
+      "id": "P3",
+      "text": "Users can report infrastructure issues (e.g., downed lines) to the power company from the app",
+      "status": "explicit",
+      "evidence_span": "right within the app, she can go ahead and report that to the power company"
+    },
+    {
+      "id": "P4",
+      "text": "Primary customers are power companies using the platform for customer communication, with a pilot at Ibaden Power Company",
+      "status": "explicit",
+      "evidence_span": "our main customers are the power companies, and they can use our platform to communicate directly with their customers"
+    },
+    {
+      "id": "P5",
+      "text": "Future monetization includes in-app bill pay/receive and a data play atop the communications platform",
+      "status": "explicit",
+      "evidence_span": "we're also looking at how we can have our users pay for their power bills as well as receive their power bills within the app. And of course, there's a data play as well"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unpredictable blackout burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "phone sensors and outage alerts",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "utility customers and bill data",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time power outage/availability notifications so users and utilities can adapt with more predictability",
+      "status": "explicit",
+      "evidence_span": "We provide real-time power outage notifications"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "imagine what businesses could adapt to with a little more predictability"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she'll get a push notification that the power has been restored"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can use our platform to communicate directly with their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Household disruption list (cook/charge/iron/AC/TV) folded into blackout pain-bundle with generator cost. Sensor hardware + push/SMS notifications treated as one sensing/comms mechanism; in-app outage reporting split as distinct user action path. Market-size and phone-penetration figures excluded. Anti-template note: problem, product, and utility GTM/monetization asserted as separately revisable."
+}

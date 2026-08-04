@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open Garden is a mesh networking app that shares mobile internet among phone, tablet, and laptop by crowdsourcing connectivity",
+      "status": "explicit",
+      "evidence_span": "OpenGarden is a mesh networking application that enables you to share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "id": "P2",
+      "text": "Installing the app also yields faster and more reliable mobile internet for the user",
+      "status": "explicit",
+      "evidence_span": "you also benefit from a faster mobile internet and more reliable mobile internet"
+    },
+    {
+      "id": "P3",
+      "text": "The product is available on Android, Mac, and Windows, and network quality improves as more people join",
+      "status": "explicit",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "crowdsourced mesh internet sharing",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "multi-platform network effects",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get shared, faster, more reliable mobile internet through a public mesh network",
+      "status": "explicit",
+      "evidence_span": "share your mobile internet among your phone, tablet, and laptop"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It works by crowdsourcing connectivity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Thin traction/fundraising thank-you pitch. Seed raise, press, install counts, and hiring CTA excluded (§4.2). User hurricane/Japan/India stories treated as anecdotal evidence of the mesh mechanism, not separate premises. Singleton D2 retained: multi-platform adoption/network-effect condition separately revisable from core mesh sharing."
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-591",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The credit-fix process can deliver large score gains for users",
+      "status": "explicit",
+      "evidence_span": "can deliver dramatic increases to your credit score"
+    },
+    {
+      "id": "P2",
+      "text": "Process data yields psychographic, behavioral, and historical credit signals for segments and personas",
+      "status": "explicit",
+      "evidence_span": "The data we get from this process is unique. We're getting psychographic, behavioral, and historical credit data"
+    },
+    {
+      "id": "P3",
+      "text": "Automated action financially engineers credit improvement beyond commoditized score information",
+      "status": "explicit",
+      "evidence_span": "going beyond information to action, we're able to financially engineer improvement for our users"
+    },
+    {
+      "id": "P4",
+      "text": "Improved users become a channel for referred and owned financial products",
+      "status": "explicit",
+      "evidence_span": "Because we help users improve their credit score, they look to us for the financial services that they need"
+    },
+    {
+      "id": "P5",
+      "text": "Money is made by matching users to financial products via referrals, then proprietary products",
+      "status": "explicit",
+      "evidence_span": "make money by referring them, by matching them to the right financial products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Score improvement and unique data",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Financial services referral model",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Financially engineer credit improvement so users reach financial goals",
+      "status": "explicit",
+      "evidence_span": "financially engineer improvement for our users"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Next-generation automated consultative financial services for Americans stuck in transactional relationships",
+      "evidence_span": "building the next generation of automated consultative financial services"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Because we help users improve their credit score, they look to us"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dramatic increases to your credit score"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "matching them to the right financial products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two-domain partition this run: market 'stuck transactional' claim treated as value framing/secondary rather than a separate premise. Traction metrics excluded. Credit 2.0 vision uncoded."
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-449",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:23:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-border remittances suffer lost funds, delays, high cost, and low transparency",
+      "status": "explicit",
+      "evidence_span": "Lost funds, delayed delivery of funds, high cost, low transparency"
+    },
+    {
+      "id": "P2",
+      "text": "SendMe integrates with employer payroll so employees can send payroll funds cross-border, top up phones, and pay international bills",
+      "status": "explicit",
+      "evidence_span": "integrates with an employer's payroll system and allows employees to send payroll funds cross-border, top up mobile phones, and pay international bills"
+    },
+    {
+      "id": "P3",
+      "text": "Transfers are high-transparency and lower-cost, charging as little as $1",
+      "status": "explicit",
+      "evidence_span": "a solution that is high transparency, lower cost. We charge as little as $1"
+    },
+    {
+      "id": "P4",
+      "text": "FDIC-insured employer-linked wallets hold payroll portions for outbound sends",
+      "status": "explicit",
+      "evidence_span": "that balance is held at a financial institution and is FDIC-insured, which puts employers at ease"
+    },
+    {
+      "id": "P5",
+      "text": "Direct central-bank and ATM-network connections enable instant or cash pickup delivery in Mexico",
+      "status": "explicit",
+      "evidence_span": "We have built a direct connection to the Central Bank of Mexico, which allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "id": "P6",
+      "text": "Combining payroll with money-service business shifts payer to employers and cuts regulatory and CAC costs",
+      "status": "explicit",
+      "evidence_span": "We combine payroll with money service business, and in so doing, shift user behavior, reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "id": "P7",
+      "text": "Distribution is through banks, payroll providers, and direct to employers, beachheading US–Mexico corridors",
+      "status": "explicit",
+      "evidence_span": "We distribute the products to banks, payroll providers, and direct to employers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remittance pain and cost",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Payroll-linked SendMe product rails",
+      "premise_ids": ["P2", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Payroll-MSB model and distribution",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cheaper, transparent cross-border payroll transfers for employees with international family",
+      "status": "explicit",
+      "evidence_span": "What we've created is a solution that is high transparency, lower cost"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We're creating that interoperability by building partnerships"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Lost funds, delayed delivery of funds, high cost, low transparency"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows employees to send payroll funds cross-border"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shift the payer from the employee to the employer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pain enumeration (lost/delayed/cost/transparency) folded into one problem-set (P1). Cross-border send, phone top-up, and bill pay treated as facets of one flex-pay offer (P2); ATM pickup folded into delivery rails with central-bank connection (P5). Price and FX package kept with commercial premise P3. Founder bios excluded."
+}

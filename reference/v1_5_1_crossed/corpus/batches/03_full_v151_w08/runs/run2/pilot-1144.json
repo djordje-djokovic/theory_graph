@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1144",
+    "coder_session_id": "session_03",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers can confront service managers with their social reach via a cheer, or escalate to a public gripe if unresolved",
+      "status": "explicit",
+      "evidence_span": "I would love that we solve this problem right here, and I send a cheer"
+    },
+    {
+      "id": "P2",
+      "text": "Gripe captures what happened, photos, and an explicit ask for resolution, then spreads via Facebook and Twitter followers",
+      "status": "explicit",
+      "evidence_span": "hit Start a Gripe. We ask you what happened"
+    },
+    {
+      "id": "P3",
+      "text": "Merchants are emailed a permanent gripe URL and can claim/resolve it so public links flip from complaint to positive outcome",
+      "status": "explicit",
+      "evidence_span": "when the customer marks the gripe as resolved, the top of this screen becomes green"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "in-person social clout leverage",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "viral gripe-to-resolution loop",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get complaints resolved and turn complainers into happy customers",
+      "status": "explicit",
+      "evidence_span": "take every gripe and have it be resolved"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "uncompromised attention"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make complainers into customers, and customers into happy customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-demo and ends abruptly (truncated). Cheer/gripe/viral/merchant-resolve treated as one resolution product with in-person clout as separately revisable opener. Influencer-respect framing recorded as value-adjacent pitch, not extra premise."
+}

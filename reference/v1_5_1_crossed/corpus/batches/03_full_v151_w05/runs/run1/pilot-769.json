@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video ads targeted only on user data and reach are often irrelevant to content, so providers, brands, and users all lose",
+      "status": "explicit",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "id": "P2",
+      "text": "A patented recognition engine detects faces, objects, logos, music, gender, age, and emotion in video to enable content-aware ad targeting beyond user data",
+      "status": "explicit",
+      "evidence_span": "Our engine able to detect today faces, objects, logos, music, gender, age, and even emotion to better target advertising"
+    },
+    {
+      "id": "P3",
+      "text": "The engine matches ads to the exact second metadata appears for pre-roll, mid-roll, or second-screen delivery, with campaign management for operators and brands",
+      "status": "explicit",
+      "evidence_span": "we're able to match on the right second the relevant advertising that can be shown in pre-roll or mid-roll or second cream solution"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from selling recognition data plus campaign management to digital TVs/operators, online platforms, media companies, and brands",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "irrelevant user-data video ads",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "content recognition targeting engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "data and campaign monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant video ads that improve engagement/ROI by matching advertising to indexed video content",
+      "status": "explicit",
+      "evidence_span": "organize the world of video content by indexing every element of the video to create endless engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody is losing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Relevancy data bring the power of the content on top of the user data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable any programmatic party to use our solution as part of a new standard marketing solution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Provider/brand/user losses folded as one irrelevance problem (§4.1.6). Multi-signal detection list and patent folded into one engine premise (§4.1.7/§4.1.1); second-matching and campaign UI as delivery cascade of that engine. BMW/Fox CTR lifts excluded as traction. Team bios excluded. Anti-template: problem, engine, and monetization separately revisable."
+}

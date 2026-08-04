@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Voice control products fail on popular consumer apps and also wall off the technology to only a few apps",
+      "status": "explicit",
+      "evidence_span": "All of them have two big problems. And the first one is, they don't work with the most popular apps out there. And the second is, they limit their technology to only a few apps"
+    },
+    {
+      "id": "P2",
+      "text": "VoiceSphere lets users voice-control many popular apps from a personal feed without leaving the app",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere, the app that lets you talk to everything on your phone"
+    },
+    {
+      "id": "P3",
+      "text": "API hub tooling makes new app integrations fast with only a few lines of code",
+      "status": "explicit",
+      "evidence_span": "Think of it as an IDE for API integrations in VoiceSphere"
+    },
+    {
+      "id": "P4",
+      "text": "The same hub opens to enterprise products so professionals can voice-access business data and actions",
+      "status": "explicit",
+      "evidence_span": "We make our API hub open to every business product with an API"
+    },
+    {
+      "id": "P5",
+      "text": "Enterprise store sells integrations to professionals and VoiceSphere takes about 20% of each sale",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere gets a share of every sale. we will receive 20% of the price"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken voice-control coverage",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer voice app and API hub",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise store monetization",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Talk to favorite apps and complex software by voice in one control layer",
+      "status": "explicit",
+      "evidence_span": "a voice control app that lets you talk to all your favorite apps and that lets complex software benefit from our technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "allows us to integrate more and more apps really fast"
+    },
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We make our API hub open to every business product with an API"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solves both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "talk to everything on your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make their work more easy and efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: merged two voice-assistant failure modes into one problem premise; folded Salesforce demo into enterprise access. Revenue share kept with enterprise store commercial module."
+}

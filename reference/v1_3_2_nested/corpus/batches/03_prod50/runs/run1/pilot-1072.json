@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Friends' social influence drives product discovery better than solitary need-based search",
+      "status": "explicit",
+      "evidence_span": "friends do help friends discover products"
+    },
+    {
+      "id": "P2",
+      "text": "Showing real people looking at real products signals popularity like a mall",
+      "status": "explicit",
+      "evidence_span": "the first thing you will see is real people looking at real products. This visual proof of people looking at products, just like the hustle and bustle of a mall, gives us a sense of popularity of the products"
+    },
+    {
+      "id": "P3",
+      "text": "Aspirational brands are curated into a daily personalized store from user and friend likes",
+      "status": "explicit",
+      "evidence_span": "Sneak Peek works with aspirational brands in apparel, accessories, premium foods, and hospitality space. to curate a selection for you. We use what you and your friends like on Sneak Peek to create a store every single day just for you"
+    },
+    {
+      "id": "P4",
+      "text": "Each product view shows which friends have already peeked",
+      "status": "explicit",
+      "evidence_span": "Every single time you see a product on Sneak Peek, you also get to see which of your friends have peeked or looked at that product before"
+    },
+    {
+      "id": "P5",
+      "text": "Limited daily peeks intelligently drop price until someone buys, creating urgency",
+      "status": "explicit",
+      "evidence_span": "every peek drops the price for everyone peeking. It drops it intelligently until someone buys. A user gets a limited number of peeks in a day"
+    },
+    {
+      "id": "P6",
+      "text": "In-product social proof and friend advice move users from discovery to one-click purchase",
+      "status": "explicit",
+      "evidence_span": "This adds the social proof we all need to move us from discovery to purchase"
+    },
+    {
+      "id": "P7",
+      "text": "Works on web, inside Facebook, and on tablets",
+      "status": "explicit",
+      "evidence_span": "Sneak Peek works on sneakpeek.com. It works inside the comforts of Facebook, so you never have to leave Facebook to use Sneak Peek. It also works on a tablet of your choice"
+    },
+    {
+      "id": "P8",
+      "text": "Long-term brand partnerships deliver impulse sales and social engagement",
+      "status": "explicit",
+      "evidence_span": "For our brands, we form long-term partnerships, and we help them deliver meaningful sales, which are mostly impulse, and we help them deliver meaningful engagement on social channels"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social discovery experience",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Peek pricing game mechanics",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Channels and brand partnerships",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Social commerce that moves people from friend-driven discovery to purchase",
+      "status": "explicit",
+      "evidence_span": "move us from discovery to purchase"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Meaningful impulse sales and social engagement for partner brands",
+      "evidence_span": "help them deliver meaningful sales, which are mostly impulse, and we help them deliver meaningful engagement on social channels"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When I find a friend that I trust, then I'm more likely to buy a product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "game mechanics, such as competition and urgency, really drive sales"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we form long-term partnerships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Soft count at 8. Pilot peek counts and $10 credit excluded as traction/promo. Brand value coded secondary.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1072",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

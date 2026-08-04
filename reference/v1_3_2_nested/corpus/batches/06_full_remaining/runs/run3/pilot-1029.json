@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peer learning dominates professor and video learning, but nearly all edtech is top-down",
+      "status": "explicit",
+      "evidence_span": "peers learn seven times more from each other than they do from any video content"
+    },
+    {
+      "id": "P2",
+      "text": "There is no easy academic way on Facebook or Blackboard to connect with your actual classmates",
+      "status": "explicit",
+      "evidence_span": "There's nowhere in the world right now where you can simply connect with your classmates"
+    },
+    {
+      "id": "P3",
+      "text": "Study Hall recommends study buddies and puts courses, classmates, professors, notes, and live sessions in one place",
+      "status": "explicit",
+      "evidence_span": "Our smart platform also has all of your courses in one place"
+    },
+    {
+      "id": "P4",
+      "text": "Students can sell and buy books and study guides through an in-platform marketplace",
+      "status": "explicit",
+      "evidence_span": "she can even list it for sale"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue and scale paths include the peer marketplace and partnerships with online learning platforms",
+      "status": "explicit",
+      "evidence_span": "How could we make money? Two more slides. We built a peer-to-peer marketplace"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing peer academic graph",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Study Hall peer platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace monetization path",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect classmates for peer-to-peer learning that makes academic life easier",
+      "status": "explicit",
+      "evidence_span": "platform to connect with your classmates and make your academic life easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capturing the power of peer-to-peer learning"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "study in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peer-to-peer marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Marketplace listing appears both as product feature (P4) and monetization answer (P5); P5 is the commercial module. School pilots/honor society excluded as traction. Pitch ends mid-monetization explanation (truncated). Gamification folded into platform."
+}

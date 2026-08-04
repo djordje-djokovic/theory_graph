@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Voice assistants do not work with the popular apps where users spend time",
+      "status": "explicit",
+      "evidence_span": "they don't work with the most popular apps out there"
+    },
+    {
+      "id": "P2",
+      "text": "Voice assistants also confine the technology to only a few apps",
+      "status": "explicit",
+      "evidence_span": "they limit their technology to only a few apps"
+    },
+    {
+      "id": "P3",
+      "text": "VoiceSphere starts with many popular apps in a personal feed so users can talk to them without leaving",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere works with 20 of the most popular apps right from the start"
+    },
+    {
+      "id": "P4",
+      "text": "API hub IDE enables very fast integration of additional consumer apps",
+      "status": "explicit",
+      "evidence_span": "with a few lines of code, I'm gonna get the latest stories from TechCrunch's RSS feed and display them right to the user"
+    },
+    {
+      "id": "P5",
+      "text": "Professionals can voice-operate complex business software such as Salesforce through VoiceSphere",
+      "status": "explicit",
+      "evidence_span": "what you see there is my business contacts from salesforce.com with all the data connected to them"
+    },
+    {
+      "id": "P6",
+      "text": "Open enterprise store lets API products sell VoiceSphere access with VoiceSphere taking a sales share",
+      "status": "explicit",
+      "evidence_span": "They can integrate their application and sell the VoiceSphere access to their customers inside our enterprise store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Voice coverage failures",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer VoiceSphere and API hub",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise voice integrations",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Talk to everything on your phone — consumer apps and complex software — by voice",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere, the app that lets you talk to everything on your phone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make professional work easier and more efficient via enterprise integrations",
+      "evidence_span": "Professionals can buy the integrations to make their work more easy and efficient"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "allows us to integrate more and more apps really fast"
+    },
+    {
+      "from": "P4",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "We make our API hub open to every business product with an API"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a product that solves both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "talk to everything on your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets complex software benefit from our technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: split the two voice-assistant failure modes again; kept Salesforce demo as enterprise-access premise distinct from store monetization. 20% take rate folded into store commercial premise."
+}

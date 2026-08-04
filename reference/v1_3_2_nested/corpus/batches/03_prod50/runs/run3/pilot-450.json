@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Only 7% can code while machines lead markets, so non-coding investors need accessible algo tools",
+      "status": "explicit",
+      "evidence_span": "Where does that leave everybody else?"
+    },
+    {
+      "id": "P2",
+      "text": "StratiX democratizes algorithmic trading for everyday non-coding investors",
+      "status": "explicit",
+      "evidence_span": "StratiX is democratizing algorithmic trading"
+    },
+    {
+      "id": "P3",
+      "text": "Workflow covers strategy creation, backtesting, and automation in one product",
+      "status": "explicit",
+      "evidence_span": "broken down into three phases, creating a strategy, backtesting your strategy, and then automation"
+    },
+    {
+      "id": "P4",
+      "text": "Plain-English multi-source rules plus in-house Turing-complete scripting enable expressive strategies",
+      "status": "explicit",
+      "evidence_span": "Our language is Turing-complete"
+    },
+    {
+      "id": "P5",
+      "text": "Broker-agnostic connectivity and unique ease/autonomy/testing bundle differentiate the offering",
+      "status": "explicit",
+      "evidence_span": "essentially the only one in our space"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Democratizing algo trading need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "No-code quant toolchain",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyday non-coding investors reclaim alpha via accessible algorithmic trading",
+      "status": "explicit",
+      "evidence_span": "reclaim your alpha"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "democratizing algorithmic trading"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy-to-use quantitative tools for everyday non-coding investors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Pricing tiers merged into differentiation rather than separate commercial domain this run. Soft count 5. Truncated start.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-450",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:39:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

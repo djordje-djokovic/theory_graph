@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-591",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "An automated credit-fix process can deliver large credit-score improvements quickly",
+      "status": "explicit",
+      "evidence_span": "our process is powerful and can deliver dramatic increases to your credit score"
+    },
+    {
+      "id": "P2",
+      "text": "Unique psychographic, behavioral, and historical credit data enables financial user segments and personas",
+      "status": "explicit",
+      "evidence_span": "We're getting psychographic, behavioral, and historical credit data"
+    },
+    {
+      "id": "P3",
+      "text": "Going beyond commoditized credit information to action financially engineers improvement for users",
+      "status": "explicit",
+      "evidence_span": "By going beyond information to action, we're able to financially engineer improvement for our users"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization refers users to needed financial products and later builds own products",
+      "status": "explicit",
+      "evidence_span": "We'll make money by referring them, by matching them to the right financial products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Automated credit improvement",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Financial product matching monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Helping Americans become credit confident through automated consultative financial services",
+      "status": "explicit",
+      "evidence_span": "It's time to get credit confident"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "financially engineer improvement for our users"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "matching them to the right financial products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Transcript opens mid-argument (truncated=true). Traction/NPS/user counts excluded. Annie score example treated as illustration of P1 mechanism not a traction premise. Market-size figures excluded."
+}

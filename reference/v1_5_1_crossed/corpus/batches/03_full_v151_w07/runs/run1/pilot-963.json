@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "coder_session_id": "session_03",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wireless power must remotely, safely, and efficiently power multiple devices at a distance, including behind walls, with FCC approval",
+      "status": "explicit",
+      "evidence_span": "How do you safely and efficiently power multiple devices and only those devices at a distance?"
+    },
+    {
+      "id": "P2",
+      "text": "KOTA uses a charger plus small receivers with beacon-guided path-focused power delivery (~1W at 30 feet) as safe as Wi-Fi",
+      "status": "explicit",
+      "evidence_span": "A Kota-enabled receiver device would send out regularly a beacon signal that travels the environment and finds ways, paths, to the charger"
+    },
+    {
+      "id": "P3",
+      "text": "Works without line of sight; charger retargets continuously so power follows moving receivers",
+      "status": "explicit",
+      "evidence_span": "Kota works without line of sight, powering devices behind walls and around corners without interfering with electronic equipment"
+    },
+    {
+      "id": "P4",
+      "text": "Ship as built-into devices/batteries and as dongles; partner with electronics OEMs (and interim industrial markets like oil/gas)",
+      "status": "explicit",
+      "evidence_span": "Kota will come to the market in several forms, built into devices and phones, built into standard batteries, and as dongles for current devices"
+    },
+    {
+      "id": "P5",
+      "text": "Core patents issued; FCC certification in final stages enabling go-to-market",
+      "status": "explicit",
+      "evidence_span": "We have four core patents have been issued by the US Patent Office"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "remote multi-device wireless power challenges",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "beacon path-focused KOTA delivery",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM forms patents and certification",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Devices charge automatically without leaving pocket/bag—a world always on and ready",
+      "status": "explicit",
+      "evidence_span": "have your phone charge automatically without taking them out of your pocket or bag"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need wireless power"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "And this phone is charging wirelessly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partner with electronics manufacturers to use our components, design, and technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Challenge questions folded as one wireless-power problem set (§4.1.6). Charger/receiver, 1W/30ft, beacon pathing, NLOS, retargeting, transmitter count efficiency folded as mechanism cascade (§4.1.7). OEM form factors + industrial bridge as GTM; patents/FCC as enabling commercial condition (§4.1.1). Capital ask excluded. Three domains—anti-template."
+}

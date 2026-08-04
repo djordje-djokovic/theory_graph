@@ -1,0 +1,141 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Eye disease is asymptomatic until late; regular retina screening of risk groups (especially diabetics) is required to prevent blindness",
+      "status": "explicit",
+      "evidence_span": "The only way to achieve it is to do regular screening"
+    },
+    {
+      "id": "P2",
+      "text": "Diabetic patient volumes far outpace ophthalmologist capacity",
+      "status": "explicit",
+      "evidence_span": "the number of doctors, of termological doctors who help them, are still the same"
+    },
+    {
+      "id": "P3",
+      "text": "CNN AI assistant diagnoses from retina photos in about a minute at >95% accuracy vs ~91% human average",
+      "status": "explicit",
+      "evidence_span": "Convolutional neural networks do all of the job, and you receive your diagnosis within one minute"
+    },
+    {
+      "id": "P4",
+      "text": "Model trained on large collected retina image sets (hundreds of thousands)",
+      "status": "explicit",
+      "evidence_span": "to build and train our solution, we've collected previously 250,000"
+    },
+    {
+      "id": "P5",
+      "text": "First customers are optician chains, GPs, and telemedicine via per-image subscription far below current Dutch screening prices",
+      "status": "explicit",
+      "evidence_span": "subscription model based on how much images they use monthly, starting with only five euros per image"
+    },
+    {
+      "id": "P6",
+      "text": "Partnership with EyeClinic Rotterdam will annotate 100k+ glaucoma images to launch a first-of-kind glaucoma AI screen",
+      "status": "explicit",
+      "evidence_span": "collect and annotate together with them more than 100,000 specialized images for glaucoma screening"
+    },
+    {
+      "id": "P7",
+      "text": "Longer vision extends from eye disease to cardiovascular/neurological signals in the retina and eventual smartphone retinoscopy",
+      "status": "explicit",
+      "evidence_span": "it gives us opportunity to discover cardiovascular diseases and neurological diseases also"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Screening capacity gap in eye care",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI retina diagnosis product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription GTM and glaucoma expansion",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Retina-as-window health roadmap",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more accurate retina disease screening that prevents late blindness at scale",
+      "status": "explicit",
+      "evidence_span": "help doctor to make diagnosis just in a couple of seconds"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Longer-term window into cardio/neuro health via retina",
+      "evidence_span": "it's like a window into human's health"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "doctors could use some help"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you receive your diagnosis within one minute"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "penetrate Dutch market in the end of this year"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "window into human's health"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Financing ask ($550K) excluded. Awards/program selection excluded as traction. Soft count 7. Singleton D4: long-horizon expansion separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-83",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:31:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

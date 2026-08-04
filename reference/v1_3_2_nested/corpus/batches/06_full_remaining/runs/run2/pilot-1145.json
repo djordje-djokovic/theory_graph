@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Partner alarms fragment co-sleepers' sleep and leave the woken partner groggy; couples want a fix",
+      "status": "explicit",
+      "evidence_span": "There are two fundamental problems with the way we wake up. One, I get my sleep continually disrupted and fragmented, leaving me with less and poor-quality sleep. And two, my boyfriend is woken up in the most ineffective way possible, leaving him feeling groggy all day"
+    },
+    {
+      "id": "P2",
+      "text": "LarkUp wakes via a silent wristband nudge paired with a phone app set like a normal alarm and docked as a nightstand clock",
+      "status": "explicit",
+      "evidence_span": "You do the same thing just with our Lark app. Set it for the time, and then you just stick it onto your Lark dock. This sits on your nightstand, and it becomes your nighttime alarm clock"
+    },
+    {
+      "id": "P3",
+      "text": "Wake tech feels natural and is substantially more peaceful than a regular alarm, avoiding the adrenaline jolt",
+      "status": "explicit",
+      "evidence_span": "It's two and a half times more peaceful than a regular alarm"
+    },
+    {
+      "id": "P4",
+      "text": "Wristband is styled to be beautiful, simple, and comfortable with no on-band UI",
+      "status": "explicit",
+      "evidence_span": "make it beautiful, simple, comfortable, of a wristband"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Co-sleeper wake problems",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "LarkUp hardware and app wake system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Couples sleep better together with a silent natural wake-up",
+      "status": "explicit",
+      "evidence_span": "you can sleep better together, live better together, and be happy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're ruining each other's sleep"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "LarkUp is a silent and completely natural-feeling wake-up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Effectiveness/peacefulness and form-factor folded into one product-tech domain. Patent/expert credentials folded into P3 mechanism (v1.3.1 IP rule).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1145",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:28:10+02:00"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-861",
+    "coder_session_id": "session_04",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Dyno uses nine integrated sensors and analytics to capture about 33 health metrics in ~60 seconds like a digital thermometer, via Bluetooth or a 3G/Wi-Fi cradle",
+      "status": "explicit",
+      "evidence_span": "It's nine integrated sensors and analytics. It's able to track 33 different health metrics"
+    },
+    {
+      "id": "P2",
+      "text": "Analytics produce a 0–100 health score and grade and can alert care facilities to abnormalities (e.g. arrhythmia)",
+      "status": "explicit",
+      "evidence_span": "our analytic software was able to identify and alert the facility of two abnormalities"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market spans elderly care, chronic-disease/remote monitoring, hospital discharge/readmission, and consumer self-tracking",
+      "status": "explicit",
+      "evidence_span": "In addition to elderly care, there are many other markets that we can go into"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue via subscriptions, OEM/licensing, and eventually data mining",
+      "status": "explicit",
+      "evidence_span": "Through subscription base, OEM and licensing revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-metric sensor device and alerts",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "care and consumer market paths",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription OEM licensing model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower people and caregivers to take control of health through fast preventive monitoring that avoids costly acute events",
+      "status": "explicit",
+      "evidence_span": "empowering you to take control of your health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "System cost savings from prevented strokes and similar events",
+      "evidence_span": "how much it can save the system"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A true step forward in preventive care"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Having the ability to track their health has dramatic implication on the quality of the care they're going to receive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How do we make money?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "EKG/SpO2/BP-without-cuff and other metrics folded as one 33-metric device mechanism (§4.1.7); score/grade and clinical alerting kept as analytics package of that device. Multiple end markets coded as one GTM portfolio premise (speaker lists paths, not separately sold products). Stroke cost stats as value evidence. Opening may be mid-intro but pitch body is complete. Anti-template: device/analytics, markets, and monetization separately revisable."
+}

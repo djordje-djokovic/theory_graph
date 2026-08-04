@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-716",
+    "coder_session_id": "session_03",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Periodic audits, noisy scanners, and permissive firewalls leave a persistent gap between fast development workflows and application security",
+      "status": "explicit",
+      "evidence_span": "security audits cannot be performed each time your code is changed"
+    },
+    {
+      "id": "P2",
+      "text": "Runtime in-app monitoring of critical functions blocks attacks by logic blueprints rather than patterns, reducing false positives",
+      "status": "explicit",
+      "evidence_span": "Screen is a security solution that protects your application at runtime"
+    },
+    {
+      "id": "P3",
+      "text": "Installs like a normal dependency and presents debugger-like attack detail, user-protection signals, and backtraces in a simple developer dashboard",
+      "status": "explicit",
+      "evidence_span": "installing screen is not different from installing any other dependency in your application"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing starts at $99/month and scales by hosts, with support for Python, Rails, and Node.js",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at only $99 per month and scales as you grow with the number of hosts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dev-security tooling gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "runtime protection product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "host-based pricing and language coverage",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers can protect applications simply without the traditional security-tool gap",
+      "status": "explicit",
+      "evidence_span": "we make application security simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Security is left behind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Screen blocks the attack immediately"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable all developers to protect their application"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Audit/scanner/firewall failure modes folded as one security-gap problem (v1.5.1 §4.1.6). Logic-based blocking, SQLi blueprint, account-takeover signals, and dashboard detail folded as cascade of the runtime product (§4.1.7). Attack-count and beta-user traction excluded. Language availability kept with pricing as commercial packaging. Anti-template: problem, product, and packaging separately revisable."
+}

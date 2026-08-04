@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fish farms are essential as wild stocks are exploited, but submerged nets and moorings are hard to inspect and structural failures drive escapes",
+      "status": "explicit",
+      "evidence_span": "At 60%, structural failures are the single biggest cause of fish escapes"
+    },
+    {
+      "id": "P2",
+      "text": "The only current solution is expensive paired divers who take imprecise paper notes that managers must later digitize for regulators",
+      "status": "explicit",
+      "evidence_span": "these divers can be extremely expensive, costing $1,000 a day"
+    },
+    {
+      "id": "P3",
+      "text": "SeaDrone is an intuitive, easy-to-maintain portable underwater robot that costs a fraction of existing solutions and holds ground in strong currents",
+      "status": "explicit",
+      "evidence_span": "an underwater robot that is very intuitive to pilot. It's very easy to maintain. It costs a fraction of existing solutions"
+    },
+    {
+      "id": "P4",
+      "text": "An app guides inspection tasks, auto-stores media, fills forms, and one-button uploads to cloud so managers see farm-wide status and can file reports",
+      "status": "explicit",
+      "evidence_span": "I just need to press one button, Then I can upload the entire inspection data to our cloud-based service"
+    },
+    {
+      "id": "P5",
+      "text": "The robot reaches about 100 meters depth for anchors and deep structures divers cannot easily inspect",
+      "status": "explicit",
+      "evidence_span": "the sea drone can go to the 100-meter depth"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly imprecise diver inspections",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Portable underwater inspection robot",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud inspection workflow for managers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make fish farming safer and more efficient with better inspection data for decisions",
+      "status": "explicit",
+      "evidence_span": "make fish farming both safer and more efficient all at once"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maintaining and inspecting a farm is extremely challenging"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "C-Drone only weighs five kilograms, so it's extremely portable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "since the C-Zone provides better data, so the farm manager can easily make a better decision"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Adjacent markets (underboat, oil/gas, dams) treated as vision/expansion framing (4.1(4)). Explorer/Inspector/Developer SKUs folded as product-line detail (4.1(5)). $200B aquaculture projection treated as market framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-693",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

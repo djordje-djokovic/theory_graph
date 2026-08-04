@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-444",
+    "coder_session_id": "session_05",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lab cholera detection in water takes about seven days, requires expertise, is expensive, and leaves communities vulnerable",
+      "status": "explicit",
+      "evidence_span": "It takes seven days to detect four cholera in water"
+    },
+    {
+      "id": "P2",
+      "text": "Hardware, disposable test kit, and smartphone together detect cholera in water anywhere in under 30 minutes accurately and affordably",
+      "status": "explicit",
+      "evidence_span": "detecting four cholera in water, anywhere in the world, in under 30 minutes"
+    },
+    {
+      "id": "P3",
+      "text": "Portable hardware heats for DNA amplification and uses microscope lenses; kit reagents amplify cholera toxin gene; viscosity change is measured (patented)",
+      "status": "explicit",
+      "evidence_span": "When the test kit and the hardware come together, we amplify for the cholera toxin gene"
+    },
+    {
+      "id": "P4",
+      "text": "Smartphone/web portal maps where and when cholera occurs so responders can eliminate outbreaks early",
+      "status": "explicit",
+      "evidence_span": "We're able to see where and when cholera has happened and notify people so that they can come in and eliminate the outbreak before it's too large"
+    },
+    {
+      "id": "P5",
+      "text": "B2B model: one-time hardware purchase and recurring single-use disposable kits; chemistry swaps enable other pathogen markets",
+      "status": "explicit",
+      "evidence_span": "our hardware is a single-time purchase and our disposable test kits create the recurring revenue as their single use"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow expensive cholera water testing",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Handheld viscosity DNA cholera assay",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware-plus-kit B2B model",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Rapidly detect pathogens to mobilize the lab and save lives",
+      "status": "explicit",
+      "evidence_span": "Rapidly detecting pathogens, saving lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this leaves communities vulnerable to the water that they drink"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put the power of the lab in the palm of your hand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we change out the chemistry in our disposable test kits, and we can detect for many diseases"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript opens mid-sentence. Lab-process enumeration folded into P1 time/cost problem. Heating, imaging, viscosity measurement folded as one assay mechanism (P3). LOIs and market-size figures excluded. Multi-disease chemistry swap kept inside commercial/product extensibility of P5."
+}

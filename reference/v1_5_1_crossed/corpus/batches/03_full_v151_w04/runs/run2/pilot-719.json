@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-719",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:51:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Feet suffer fatigue, misalignment, and lack of comfort, with a gap between expensive corrective orthotics and unsupported off-the-shelf insoles",
+      "status": "explicit",
+      "evidence_span": "On one side, you have orthotics. Prescription orthotics cost around $400"
+    },
+    {
+      "id": "P2",
+      "text": "A biomechanically engineered custom insole at about $75 maximizes comfort, promotes alignment, and lessens fatigue",
+      "status": "explicit",
+      "evidence_span": "a biomechanically engineered custom insole designed to maximize comfort, promote alignment, and lessen fatigue. And this is available for $75"
+    },
+    {
+      "id": "P3",
+      "text": "Smartphone computer-vision scan plus a customization engine produces a 3D-printable insole file in seconds via cloud additive manufacturing",
+      "status": "explicit",
+      "evidence_span": "We go from 3D scan to custom 3D printable file in five seconds"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile on-demand ordering and measurement is the distribution platform for body-perfect gear starting with insoles",
+      "status": "explicit",
+      "evidence_span": "a company that makes 3D-printed, body-perfect gear from a smartphone"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "orthotic comfort and support gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "scan-to-print custom insole system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "smartphone on-demand gear platform",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Custom supportive comfort that can add active years to people's lives",
+      "status": "explicit",
+      "evidence_span": "to end 10 active years to people's lives"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce load on hip and knee joints for endurance performance",
+      "evidence_span": "significantly reduce the load on your hip and your knee joints"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There has to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "designed to maximize comfort, promote alignment, and lessen fatigue"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "order from a phone, but also measure and get functional benefit from a phone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Foot fatigue/misalignment/comfort and orthotic-vs-OTC gap folded as one problem-set (§4.1.6). Scan, customization engine, and SLS printing folded as one scan-to-print mechanism (§4.1.7); $75 kept inside product commercial detail. Kickstarter ask excluded. Transcript ends mid-CTA. Anti-template: problem, product system, and platform GTM separately revisable."
+}

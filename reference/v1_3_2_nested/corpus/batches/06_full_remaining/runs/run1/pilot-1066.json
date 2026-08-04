@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1066",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personal computing interfaces should be tailored to the individual rather than one OS design for billions of users",
+      "status": "explicit",
+      "evidence_span": "imagine a world of personal computing interfaces. tailored to the individual as opposed to a single solution needing to appease two billion users"
+    },
+    {
+      "id": "P2",
+      "text": "Lumiere embraces, extends, and enhances the user's existing OS rather than replacing it",
+      "status": "explicit",
+      "evidence_span": "What we're suggesting is not a replacement for any sort of operating system, rather to embrace, extend, and enhance the system of choice of two billion people"
+    },
+    {
+      "id": "P3",
+      "text": "Clean, user-sortable workspaces and related UI make Windows task switching predictable versus convoluted icon streams",
+      "status": "explicit",
+      "evidence_span": "we have a clean delineation of these spaces so you can understand and sort them yourself just by pulling them around"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Personalized computing need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Lumiere Windows enhancement",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Light up Windows with clearer personal workspaces and interface control",
+      "status": "explicit",
+      "evidence_span": "a way to light up your windows, Lumiere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tailored to the individual as opposed to a single solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "embrace, extend, and enhance the system of choice"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript ends mid-sentence (truncated). Cloud sync/SQL/NLP feature list treated as vision framing and folded into workspace capability rather than separate premises (§4.1(4–5)). Founder Microsoft bio excluded. Thin on commercial model."
+}

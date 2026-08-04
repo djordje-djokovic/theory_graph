@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-595",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Listener sends data over audio sold as a service per device per year across many devices",
+      "status": "explicit",
+      "evidence_span": "We send data over audio. We sell data over audio as a service per device per year"
+    },
+    {
+      "id": "P2",
+      "text": "Ultrasonic transmission enables local mobile authentication and identification even in airplane mode for ticketing and access",
+      "status": "explicit",
+      "evidence_span": "identifying your mobile device, then having authentication for the moment of access"
+    },
+    {
+      "id": "P3",
+      "text": "Data moves audio-to-mobile, mobile-to-mobile/device, and embedded in devices such as cars for proximity messaging, ID, authentication, and connectivity",
+      "status": "explicit",
+      "evidence_span": "Audio to mobile devices, like playing silently or being embedded into broadcast television"
+    },
+    {
+      "id": "P4",
+      "text": "Protocol is simpler/more flexible than alternatives and sends far more data across more devices than competing audio tech (including Android-only Google)",
+      "status": "explicit",
+      "evidence_span": "no other protocol as simple, as flexible, or as powerful as Listener"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "audio data-as-a-service monetization",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "ultrasonic multi-path device connectivity",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Identify and connect devices via the internet of sound for in-venue, in-car, and at-home proximity use cases",
+      "status": "explicit",
+      "evidence_span": "identifying and connecting devices better. We are leading and pioneering the internet of sound"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sell data over audio as a service per device per year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ultrasonic data transmission in a live environment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Transcript opens mid-pitch and cuts mid-sentence. Device-count pace excluded as traction. Ticketing fraud metrics treated as evidence of authentication mechanism, not separate premises. Four transmission modes folded as uses of one audio protocol."
+}

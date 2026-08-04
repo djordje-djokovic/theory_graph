@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-893",
+    "coder_session_id": "session_06",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Seniors face walker-related falls from forgotten brakes and steep ramps, with high injury costs and lasting fear",
+      "status": "explicit",
+      "evidence_span": "steep ramps and forgetfulness is what causes walk-related fall injuries"
+    },
+    {
+      "id": "P2",
+      "text": "A smart walker uses pressure sensors, encoders, and accelerometers to perceive intention and environment and actuate brakes",
+      "status": "explicit",
+      "evidence_span": "capable of perceiving user intention, the environment around us, and actuating appropriately to minimize the risk of injuries"
+    },
+    {
+      "id": "P3",
+      "text": "Sitting automatically engages brakes; descending ramps applies gradual braking for stability",
+      "status": "explicit",
+      "evidence_span": "when a senior sits on the walker, automatically brakes kicks in and prevents a fall from happening"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is licensing the technology to walker manufacturers for factory integration",
+      "status": "explicit",
+      "evidence_span": "license it to walker manufacturers. They integrate it into their walkers as they leave the factory"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "senior walker fall risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart braking walker",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM licensing GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Seniors avoid walker-related falls and keep a higher quality of life",
+      "status": "explicit",
+      "evidence_span": "safeguard seniors from falls, leading them to a higher quality of life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce fall-related healthcare expenses",
+      "evidence_span": "help seniors reduce fall-related injuries, alleviate healthcare expenses"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "walk-related fall injuries, it can cost on average of $17,500"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "apply gradual brakes, slowing them down, giving them that immediate support and stability"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license it to walker manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Forgetfulness and steep-ramp pains folded as one fall-risk bundle in P1. Sensor array and sit/ramp brake behaviors treated as one smart-walker mechanism with P3 detailing the two actuation modes of that mechanism (could be seen as cascade; kept P3 as the concrete safety behaviors claimed). Baby-boom market sizing left as framing. Singletons D1 and D3 retained as separately revisable problem and licensing modules. Anti-template: need/product/channel justified by distinct revisability of fall problem, device mechanism, and OEM license path."
+}

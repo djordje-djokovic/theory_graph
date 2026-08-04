@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Venmo social payments from linked cards/banks fit and complement Foursquare-style real-world check-in interactions",
+      "status": "explicit",
+      "evidence_span": "these social transactions that seem to fit really well and actually complement the types of interactions that take place on Foursquare"
+    },
+    {
+      "id": "P2",
+      "text": "Giphy is an iPhone app that hides real money at locations for friends to find by checking in, with clues, notes, and optional multi-recipient races",
+      "status": "explicit",
+      "evidence_span": "Giphy is an iPhone application that lets people hide real money at real-world locations for their friends to find by checking in through Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "Friends need not install Giphy; Foursquare friendship and Venmo complete delivery",
+      "status": "explicit",
+      "evidence_span": "your friends don't need to have the application to receive a gift from you"
+    },
+    {
+      "id": "P4",
+      "text": "Businesses and major brands can leave complimentary offers at check-ins to demonstrate loyalty and hospitality",
+      "status": "inferred",
+      "evidence_span": "imagine how businesses and major brands can benefit from Giphy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social payment plus check-in gift product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Business and brand check-in offers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make friends feel special with meaningful real-money gifts tied to places",
+      "status": "explicit",
+      "evidence_span": "they get a meaningful message from you with real money out of the blue"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Loyalty, service, and hospitality signaling for businesses",
+      "evidence_span": "loyalty, service, and hospitality"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make someone feel special"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "thanking you for being a loyal customer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Borderline call: business/brand use coded as a go-to-market condition (P4) because the speaker presents it as how brands benefit, not pure vision framing. If treated as aspiration only, P4 would drop. Singleton D2 retained as separately revisable B2B module. Demo feature list folded into P2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1142",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:56:00+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A store-agnostic shopping rewards app lets consumers earn rewards across over one million U.S. stores with an iPhone",
+      "status": "explicit",
+      "evidence_span": "the first shopping rewards application that is store agnostic"
+    },
+    {
+      "id": "P2",
+      "text": "Advertisers can reach targeted consumers in any store while the shopper is in the aisle with the product in hand",
+      "status": "explicit",
+      "evidence_span": "While that consumer is in the aisle and has their product in hand, they can deliver that marketing message"
+    },
+    {
+      "id": "P3",
+      "text": "Scanning a product UPC earns points and opens an HTML5 product interaction page for advertiser messages",
+      "status": "explicit",
+      "evidence_span": "put it over the UPC code, and it's that simple. They earn points"
+    },
+    {
+      "id": "P4",
+      "text": "Consumers redeem points for prizes through rewards partnerships delivered on the phone",
+      "status": "explicit",
+      "evidence_span": "We have over 40 partnerships in the rewards area that the user can redeem for"
+    },
+    {
+      "id": "P5",
+      "text": "Scanning featured products earns coins that can be played in games for additional points",
+      "status": "explicit",
+      "evidence_span": "Every time a user scans a featured product, they earn a coin"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Store-agnostic consumer rewards",
+      "premise_ids": ["P1", "P4", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "In-aisle advertiser reach",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advertisers drive in-store discovery and interaction while consumers get extra rewards value",
+      "status": "explicit",
+      "evidence_span": "allows advertisers to drive discovery and interaction in-store while providing a fun and rewarding opportunity for consumers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "This is the opportunity for the advertiser to reach out to the consumer with any sort of message"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing a fun and rewarding opportunity for consumers to get just a little bit of extra value"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows advertisers to drive discovery and interaction in-store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Founder bio and exit excluded per 4.2. Launch-partner names treated as traction. Product-interaction delivery modes folded into P3 per v1.3.2 clarification 5.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1136",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

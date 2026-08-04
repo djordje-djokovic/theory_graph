@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "H-2A and labor-law compliance force farms to track person-and-place data across production, labor, and sprays",
+      "status": "explicit",
+      "evidence_span": "with heavy regulations comes heavy paperwork. And everything in a farm has to be tracked"
+    },
+    {
+      "id": "P2",
+      "text": "Pen-and-paper tracking still dominates and correlates with high DoL violation rates",
+      "status": "explicit",
+      "evidence_span": "the Department of Labor says that 70% of their audits result in some type of violation within the agricultural sector"
+    },
+    {
+      "id": "P3",
+      "text": "AgriTrack digitizes labor capture via manager dashboard, NFC tablet inputs, and geotagged phone clock-ins",
+      "status": "explicit",
+      "evidence_span": "One is a dashboard app, which is a high level view of the farm in real time for farmers and managers"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in labor audit reporting and complex piece-rate/overtime payroll logic keep farms audit- and pay-ready",
+      "status": "explicit",
+      "evidence_span": "Good news with AgriTrack is that we handle all that for them, so that they know that when they do payroll, it's accurate"
+    },
+    {
+      "id": "P5",
+      "text": "Product credibility comes from being designed inside-out by a fifth-generation grower",
+      "status": "explicit",
+      "evidence_span": "built from the inside out, meaning that it was built by a grower for growers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Regulated farm labor paperwork",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AgriTrack compliance apps",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Digitized labor records that keep farms compliant and payroll accurate",
+      "status": "explicit",
+      "evidence_span": "if the Department of Labor comes knocking, they feel okay"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large time savings running payroll anywhere",
+      "evidence_span": "being done in minutes with AgriTrack, and they can do it anywhere"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stay compliant when you're recording everything with pen and paper"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "confidence in the data that they're collecting"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Three apps folded into one digitization premise. Sales bio excluded except grower-built claim. Truncation at wrap-up noted lightly but pitch mostly complete (truncated=false).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

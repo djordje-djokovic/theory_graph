@@ -1,0 +1,118 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "New businesses need logos, cards, websites, and social pages but face costly crowdsourcing or low-quality DIY",
+      "status": "explicit",
+      "evidence_span": "a few of the first things you'll need are a logo, then some business cards, a website, some social pages"
+    },
+    {
+      "id": "P2",
+      "text": "Taylor turns a computer into a graphic designer via thousands of design rules matched to business inputs and visual references",
+      "status": "explicit",
+      "evidence_span": "Taylor is a learning system that turns your computer into a graphic designer"
+    },
+    {
+      "id": "P3",
+      "text": "Designs are template-free with very large option space; payment happens only after the customer is thrilled",
+      "status": "explicit",
+      "evidence_span": "The whole process is completely transparent. And no money exchanges hands until you're completely thrilled with your new design"
+    },
+    {
+      "id": "P4",
+      "text": "About $50 buys logo, card, letterhead, and brand book, then ongoing offline and online asset design as a service",
+      "status": "explicit",
+      "evidence_span": "for $50, you have just received your very own logo, business card, letterhead, even your very own brand book"
+    },
+    {
+      "id": "P5",
+      "text": "Learning from designed brands yields brand and trend insights for customers",
+      "status": "explicit",
+      "evidence_span": "using the thousands of brands it actually designs, it can actually understand brand insights, and trend insights"
+    },
+    {
+      "id": "P6",
+      "text": "Roughly 80 million small businesses needing affordable branding define a large addressable need",
+      "status": "explicit",
+      "evidence_span": "Over 80 million small businesses out there want branding, need branding, but can't really afford it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB branding affordability need",
+      "premise_ids": ["P1", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "Learning design engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Fifty-dollar brand service",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Brand insight layer",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Small businesses get great, accessible branding competitive with large companies",
+      "status": "explicit",
+      "evidence_span": "we want to make that accessible"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can't really afford it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in-house designer in every business across the world for just 50 bucks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for $50, you have just received your very own logo"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brand insights, and trend insights, and give that to you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Industry takeover and promo codes excluded. Need statement and 80M scale kept as one desirability domain. Anti-template note: D1 need / D2 engine / D3 commercial package / D4 insights are separately revisable modules in the pitch.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-878",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

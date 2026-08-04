@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-272",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastics are essential and large-scale but mostly become waste, including microplastics",
+      "status": "explicit",
+      "evidence_span": "7.3 billion tons of plastic have been produced since the 1950s, and 86% of that is waste"
+    },
+    {
+      "id": "P2",
+      "text": "Recycling and industrial composting are fragmented, slow, or infrastructure-limited alternatives",
+      "status": "explicit",
+      "evidence_span": "Recycling is great when it works, but it's fragmented, complex, it's laborious, the margins are low, it's a hard sell. So we made compostable plastics. Well, that's great, right? Well, sort of. Yeah, they break down, but you need industrial compost to do that, and those pieces of infrastructure are not all that available"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary coating stabilizes enzymes so they can be packaged inside plastics and triggered to self-degrade",
+      "status": "explicit",
+      "evidence_span": "We take enzymes and wrap them in our special proprietary coating that acts like PPE and enables us to take these fragile molecules and put them inside the plastics, where they can be triggered to degrade the materials from the inside out"
+    },
+    {
+      "id": "P4",
+      "text": "Degradation works across plastics, returns material to soil, works in warm water baths, and can support chemical recycling; engineered end-to-end degradation stops microplastics",
+      "status": "explicit",
+      "evidence_span": "We can do this with a wide variety of different plastics, and they completely return to the soil at the end of life. We can also break them down and warm water baths"
+    },
+    {
+      "id": "P5",
+      "text": "Drop-in additive is scalable, low enzyme dose, and on-demand (needs water and heat)",
+      "status": "explicit",
+      "evidence_span": "We're developing a drop-in additive that's readily scalable. Enzymes are incredibly efficient, so we only need to use a little bit, and the degradation is on demand. It requires water and heat"
+    },
+    {
+      "id": "P6",
+      "text": "Starting market is PLA compostable plastics to expand design space and ease end-of-life regulatory burdens",
+      "status": "explicit",
+      "evidence_span": "We're starting with PLA, which is the first compostable plastic. It's a $3.5 billion market, and it's one of the fastest growing segments within the industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Plastic waste and weak end-of-life options",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Enzyme-in-plastic self-degradation additive",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "PLA entry market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Plastics that self-degrade on demand so materials can live more harmoniously with nature",
+      "status": "explicit",
+      "evidence_span": "changing the way that we make and break materials so that we can live more harmoniously with nature"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stopping microplastics at the source via end-to-end degradation",
+      "evidence_span": "we're able to degrade from one end to the other through some clever engineering work that we were able to do, which means we stop microplastics at the source"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "86% of that is waste. 6.3 billion tons of plastic on our land, oceans, air"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stabilize enzymes and package them up inside of the plastics so they can self-degrade when we're done with them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we unlock some of the regulatory burdens, and we enable a wider variety of favorable conditions at the end of life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Warm-water bath, soil return, chemical recycling, and microplastics-stopping engineered as performance package of the same enzyme-degradation mechanism (P4). Nature/Science publications treated as evidence, not premises. Team credentials and seed round excluded."
+}

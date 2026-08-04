@@ -1,0 +1,76 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Professionals forget to bill mobile calls because capturing that time is time-consuming and poorly supported",
+      "status": "explicit",
+      "evidence_span": "you forget to bill those calls. Over time, this adds up into huge losses"
+    },
+    {
+      "id": "P2",
+      "text": "A third button on the mobile call screen auto-starts tracking the call for billing",
+      "status": "explicit",
+      "evidence_span": "We've solved this problem by adding a third button to the mobile call screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbilled mobile call time",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "One-tap call billing button",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Capture billable mobile call time for attorneys and other hourly professionals",
+      "status": "explicit",
+      "evidence_span": "mobile billing solution for attorneys, consultants, life coaches, and anyone that bills for call time with clients on their mobile phone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "roughly 40% of the time, professionals that build by the hour spend talking on a mobile phone goes unbilled"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app automatically starts tracking that call for billing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Seed raise and ARR targets excluded as financing. Download/user counts excluded as traction. Narrow two-premise theory.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-56",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

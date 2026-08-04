@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-704",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Warehouse inventory tracking today is highly manual, slow, and inaccurate, so items get lost",
+      "status": "explicit",
+      "evidence_span": "keeping track of inventory. Today, that is a highly manual and incredibly slow process. And beyond that, it doesn't even ensure accuracy"
+    },
+    {
+      "id": "P2",
+      "text": "Flying robots with computer vision and robotics automate indoor inventory data capture at centimeter accuracy without GPS",
+      "status": "explicit",
+      "evidence_span": "Our flying robots are able to fly autonomously indoors with centimeter accuracy without any external systems"
+    },
+    {
+      "id": "P3",
+      "text": "The offering is a fleet of flying robots, on-site infrastructure, and real-time analytics software for high-bay selective-rack warehouses",
+      "status": "explicit",
+      "evidence_span": "Our product consists of three things, a fleet of these flying robots, on-site infrastructure to relay the information we collect to the workers, and real-time analytics software"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware is sold upfront like industrial automation equipment, with software on subscription and data-driven premiums",
+      "status": "explicit",
+      "evidence_span": "We are selling the hardware, just like traditional industrial automation equipment, into the warehouses for an upfront setup fee that takes care of the hardware and installation. At the same time, we're selling the software on a subscription basis, where as our system collects more information, we can add data-driven premiums"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual warehouse inventory problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Flying robots and analytics system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware fee and software subscription",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make inventory errors a thing of the past and improve warehouse operational efficiency",
+      "status": "explicit",
+      "evidence_span": "make inventory errors a thing of the past"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cost savings by reducing the need to hold extra buffer inventory",
+      "evidence_span": "generating about $4 million in cost savings because these companies don't have to hold extra inventory anymore"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Companies lose billions of dollars because of inventory errors every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we automate inventory counting using flying robots"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the software on a subscription basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team credentials and pilot tests with big companies excluded as bio/traction. Product's three components folded into one offering premise (v1.3.2 §4.1(5)); high-bay targeting folded into that offering. Partition is need/product/money triad; justified because hardware+subscription pricing is revisable without changing indoor autonomy, and the manual-inventory problem is a separate market assumption. Singleton D1 and D3 retained as independently learnable modules."
+}

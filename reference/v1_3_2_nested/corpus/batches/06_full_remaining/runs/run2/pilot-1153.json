@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer shopping data is one-sided today in favor of vendors",
+      "status": "explicit",
+      "evidence_span": "we think that it's one-sided"
+    },
+    {
+      "id": "P2",
+      "text": "Email-forwarded receipts and store plugins feed purchases into a consumer-owned history",
+      "status": "explicit",
+      "evidence_span": "forward my order confirmations in my inbox"
+    },
+    {
+      "id": "P3",
+      "text": "Annotating purchases with needs and stories enables taste signaling and mindful shopping",
+      "status": "explicit",
+      "evidence_span": "What we're doing here as we're posting what we're buying and what we talk about when we're buying is taste signaling"
+    },
+    {
+      "id": "P4",
+      "text": "Shopify compatibility connects tens of thousands of merchant stores",
+      "status": "explicit",
+      "evidence_span": "instantly data compatible with tens of thousands of stores"
+    },
+    {
+      "id": "P5",
+      "text": "Selective sharing of history with chosen brands returns personalized results and deals",
+      "status": "explicit",
+      "evidence_span": "I can choose what part of my data, how far back in my data that I'm sharing. with the stores in order for them to give me really cool personalized results"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "One-sided data problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ingest and annotate purchases",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Personal RFP outbound",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers gain vendor-like leverage from their own shopping data",
+      "status": "explicit",
+      "evidence_span": "consumers had as much leverage with the data as the vendors do"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's definitely something wrong with this picture"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make their shopping data more meaningful"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized results"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Analytics mashup (weather) treated as planned feature of enrichment, not a separate premise. Retailer 'powered by' interest treated as GTM evidence not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1153",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

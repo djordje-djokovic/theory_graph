@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-435",
+    "coder_session_id": "session_03",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing online formats let people learn from content but do not enable socialization like in-person events",
+      "status": "explicit",
+      "evidence_span": "people can learn from great content, but they can't socialize"
+    },
+    {
+      "id": "P2",
+      "text": "A virtual-event platform places customized avatars in a shared venue where people move and talk in real time",
+      "status": "explicit",
+      "evidence_span": "You appear inside of a venue"
+    },
+    {
+      "id": "P3",
+      "text": "Distributed communities need a way to bring members across cities and countries into the same virtual room",
+      "status": "explicit",
+      "evidence_span": "no way to bring them together into the same room"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from organization monthly venue fees plus a share of ticket sales and virtual sponsorship",
+      "status": "explicit",
+      "evidence_span": "charging organizations a monthly fee to have access to our venues"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "missing online event socialization",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "avatar venue platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "venue subscription and event monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Virtual events that combine great content learning with real socialization and connections",
+      "status": "explicit",
+      "evidence_span": "a product that gives the two benefits of why we are all here at this event online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The world is missing a product that gives the two benefits"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can move around and actually talk to people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we also take a percentage of ticket sales and virtual sponsorship"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Livestream/webinar/AMA list folded into one missing-socialization pain. Multi-hour stay treated as traction/demo evidence, not a premise. Singleton D2/D3 retained as independently revisable product and monetization modules."
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-706",
+    "coder_session_id": "session_05",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:58Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medical tourism is dominated by travel agents who leave doctors unvetted, producing poor outcomes and lack of trust",
+      "status": "explicit",
+      "evidence_span": "this industry is dominated by travel agents, individuals who sell flights and hotels, and on occasion, slap on a hip replacement"
+    },
+    {
+      "id": "P2",
+      "text": "Patients travel abroad to save money, save wait time, or gain access to procedures unavailable at home",
+      "status": "explicit",
+      "evidence_span": "three main reasons patients travel for medical care. The first is to save money"
+    },
+    {
+      "id": "P3",
+      "text": "MedRepublic is an online marketplace connecting American and Canadian patients with English-speaking, board-certified, top-rated doctors abroad",
+      "status": "explicit",
+      "evidence_span": "online global health marketplace that enables American and Canadian patients to connect with English-speaking, board-certified, top-rated doctors around the world"
+    },
+    {
+      "id": "P4",
+      "text": "Doctors undergo strict U.S. Board of Physicians vetting (accepting ~5%) and are ranked by ratings, proximity, and responsiveness with transparent pricing",
+      "status": "explicit",
+      "evidence_span": "Each of our doctors go through a strict vetting process led by our U.S. Board of Physicians"
+    },
+    {
+      "id": "P5",
+      "text": "HIPAA-compliant chat/video/file sharing plus marketplace admin of documents, records, and payments lets doctors focus on care",
+      "status": "explicit",
+      "evidence_span": "Using our HIPAA-compliant communication center, participants are able to live chat, video conference, as well as share important medical files"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "untrusted medical tourism intermediaries",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "vetted global doctor marketplace",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A transparent, secure, trusted marketplace for world-class medical care abroad",
+      "status": "explicit",
+      "evidence_span": "create a transparent, secure, and trusted marketplace to facilitate world-class medical care"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of expertise, which for patients means unvetted doctors and poor outcomes, leads to a lack of trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect with English-speaking, board-certified, top-rated doctors around the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three traveler motives kept as one demand bundle (P2). Procedure savings and beta procedure counts excluded as traction. Family guidebook biography motivates trust expertise but is not coded as a premise."
+}

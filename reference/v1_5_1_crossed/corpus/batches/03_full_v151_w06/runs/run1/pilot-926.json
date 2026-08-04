@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-926",
+    "coder_session_id": "session_02",
+    "session_case_index": 13,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Homes with central HVAC waste energy and suffer hot/cold rooms because outdated vents cannot redirect airflow by occupancy",
+      "status": "explicit",
+      "evidence_span": "The same household has an average of two to four rooms that are overheated or overcooled at various times"
+    },
+    {
+      "id": "P2",
+      "text": "User-installed wireless KeenVents automatically redirect HVAC airflow in unoccupied rooms to maximize comfort and efficiency",
+      "status": "explicit",
+      "evidence_span": "a wirelessly networked home air vent that maximizes the comfort and efficiency of a home's central heating and cooling system by automatically redirecting the air"
+    },
+    {
+      "id": "P3",
+      "text": "A Lifestyle Survey programs each vent's smart cycle so users avoid manual programming, with online account services like weather alerts",
+      "status": "explicit",
+      "evidence_span": "Customers will complete this short questionnaire with details about their home and habits"
+    },
+    {
+      "id": "P4",
+      "text": "Smart cycle cuts HVAC runtime by up to 30% and yields material annual energy savings",
+      "status": "explicit",
+      "evidence_span": "reduces HVAC run times by up to 30%"
+    },
+    {
+      "id": "P5",
+      "text": "GTM starts with e-commerce then retail plus partner subsidies from builders, HVAC suppliers, and utilities",
+      "status": "explicit",
+      "evidence_span": "leverage e-commerce partnerships to sell the KeenVent directly to consumers via the web"
+    },
+    {
+      "id": "P6",
+      "text": "Four-vent systems are sold via subscription with monthly service fee or a higher lifetime price, plus matching non-networked vents",
+      "status": "explicit",
+      "evidence_span": "A four KeenVents system will be sold for $25 with a $4 monthly service fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inefficient HVAC room imbalance",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart vent product and programming",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "channels and pricing models",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Homeowners get more comfort and lower heating/cooling bills through intelligent airflow redirection",
+      "status": "explicit",
+      "evidence_span": "maximizes the comfort and efficiency of a home's central heating and cooling system"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is not only uncomfortable, but terribly energy inefficient"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminates uncomfortable hot or cold spots throughout the home"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely enticing value proposition"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Energy bill and room imbalance folded as one HVAC problem (§4.1.6). Runtime reduction and dollar savings treated as performance package of the smart-cycle mechanism (§4.1.8) with P4 quantifying that package. Channel cascade (e-com→retail→partners) one GTM premise; subscription vs lifetime one commercial package (§4.1.3). Indiegogo preorder as launch packaging, not financing-ask premise. Anti-template: problem, product, and GTM/pricing separately revisable."
+}

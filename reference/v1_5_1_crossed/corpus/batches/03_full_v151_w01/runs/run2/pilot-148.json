@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-148",
+    "coder_session_id": "session_02",
+    "session_case_index": 5,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most educational content is static and linear because dynamic content is too slow and costly to produce while future learner needs are unknown",
+      "status": "explicit",
+      "evidence_span": "98% of this content is both static and linear. Only 2% of it is dynamic. The reason for this is it takes such a lot of time and money to produce"
+    },
+    {
+      "id": "P2",
+      "text": "Knowledge AI generates interactive bite-sized e-learning packages ~100x faster and plug-and-play ready for any learning environment",
+      "status": "explicit",
+      "evidence_span": "generate interactive bite-sized e-education, e-learning packages, 100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "id": "P3",
+      "text": "Knowledge LX generates full learning experiences for any learning goal in near real-time via a concept latent space between current understanding and the goal",
+      "status": "explicit",
+      "evidence_span": "With Knowledge LX, we generate full learning experiences for any learning goal in near real-time"
+    },
+    {
+      "id": "P4",
+      "text": "Knowledge acts as behind-the-scenes AI backend while LMS partners (Canvas, Google Classroom, Microsoft, Ilias) provide distribution",
+      "status": "explicit",
+      "evidence_span": "We focus on being the behind-the-scenes, AI-ready solutions provider, while our partners provide distribution through their platforms"
+    },
+    {
+      "id": "P5",
+      "text": "Institutions see large cost/time cuts and educators report higher completion and retention from the generated content",
+      "status": "explicit",
+      "evidence_span": "Institutions are reporting that it's 100x reduction in cost and time to produce this type of educational content. Educators are reporting a significant increase in completion and retention rates"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Static content production bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI content and LX generation",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner LMS distribution",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Cost and learning outcomes",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time generated learning experiences that match learners' goals and intrinsic motivation",
+      "status": "explicit",
+      "evidence_span": "a future where we can tap into the learner's intrinsic motivation and generate real-life learning experiences in real time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what if we could generate courses in real time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generate full learning experiences for any learning goal in near real-time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partners provide distribution through their platforms"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significant increase in completion and retention rates"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo interactives (video, glossary, flashcards, quizzes, games, teacher materials) folded into P2 as feature cascade of one generation mechanism. Educator/ARR counts and team exits excluded as traction/credentials. Exoskeleton story treated as illustrative validation of P3, not a separate premise. Singleton D1/D3/D4 retained as separately revisable need, GTM, and outcome claims."
+}

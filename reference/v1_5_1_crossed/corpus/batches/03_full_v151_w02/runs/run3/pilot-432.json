@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-432",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Widespread poor sleep imposes large cognitive, health, and employer costs that wearables and generic tips do not solve",
+      "status": "explicit",
+      "evidence_span": "Nearly half of the Western population reports bad quality of sleep or even lack of it"
+    },
+    {
+      "id": "P2",
+      "text": "Personalized mobile sleep coaching, built with sleep researchers and usable with existing wearables, improves sleep via circadian-aligned habits",
+      "status": "explicit",
+      "evidence_span": "personalized sleep coaching in a mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market targets employers via occupational health partners and direct consumer app purchases",
+      "status": "explicit",
+      "evidence_span": "building the product with the leading and the biggest occupational health care provider in Finland"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sleep deprivation costs",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized sleep coaching app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Employer and consumer channels",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people sleep better and be more productive",
+      "status": "explicit",
+      "evidence_span": "start sleeping better now"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Employers help employees live better and be more proactive at work",
+      "evidence_span": "help your employees live a better life and be more proactive in the workplace"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The effects of sleep deprivation are both cognitive and physical"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focusing on mostly fixing your melatonin onset in the nighttime and working around your natural circadian rhythm"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download the NuxO app now from the App Store and purchase the coaching there"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Profile assessment, weekly lessons, habits, and HealthKit integration folded into P2 coaching mechanism. Sleepio/Fitbit contrast folded into P1 insufficiency claim. Team credentials and market-size figures excluded. Anti-template note: need, coaching product, and employer channel are separately revisable in the pitch."
+}

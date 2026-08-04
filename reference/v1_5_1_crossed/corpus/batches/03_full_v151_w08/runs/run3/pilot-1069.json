@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Discovering the right freemium/premium media content across many devices remains an unsolved, severe pain",
+      "status": "explicit",
+      "evidence_span": "discovery is still a big unsolved problem"
+    },
+    {
+      "id": "P2",
+      "text": "Discovery is fundamentally a data problem—getting good behavioral and social trust data matters more than tuning algorithms",
+      "status": "explicit",
+      "evidence_span": "discovery is fundamentally a data problem and not an algorithm problem"
+    },
+    {
+      "id": "P3",
+      "text": "Ultimate recommendations combine social actions, object-level similarity from listening, wider social consensus, and trusted critics, then let users buy by price/accessibility",
+      "status": "explicit",
+      "evidence_span": "It's a social action as an implicit recommendation, instant gratification, it's object level similarity based on what you actually listen to"
+    },
+    {
+      "id": "P4",
+      "text": "iTunes feed-follow product: weighted actions, VIP super-trust list (max six), privacy settings, hide/curate, and social publish with affiliate monetization of non-users",
+      "status": "explicit",
+      "evidence_span": "a streamlined feed follow system for iTunes"
+    },
+    {
+      "id": "P5",
+      "text": "Expand beyond music destination site to TV/movies/books and wherever users consume content across devices",
+      "status": "explicit",
+      "evidence_span": "We're going to expand to more mediums, more channels"
+    },
+    {
+      "id": "P6",
+      "text": "Multiple viable revenue streams: affiliate sales core, advertising, and licensing a depersonalized taste graph",
+      "status": "explicit",
+      "evidence_span": "we are a data startup with multiple viable revenue streams"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "media discovery data problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "social recommendation product",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "affiliate ads and licensing model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Superior quality recommendations and true social discovery for media content",
+      "status": "explicit",
+      "evidence_span": "delivers superior quality recommendations and true social discovery for media content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "And all this fuels what we believe to be the ultimate recommendation"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "discovery is still a big unsolved problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "show you the most important items from the most important people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affiliate sales is our core revenue stream"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Feed features (VIP list, privacy, hide, social publish, action weighting) folded as cascade of one iTunes social-discovery product (§4.1.7). Behavioral+social data kinds folded into data-problem premise. Channel expansion kept as separately revisable multi-medium condition. Singleton D3: monetization module independently revisable. Netflix-prize study excluded as bio/method (§4.2). Anti-template: problem, product, and monetization separately revisable per speaker framing.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1069",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

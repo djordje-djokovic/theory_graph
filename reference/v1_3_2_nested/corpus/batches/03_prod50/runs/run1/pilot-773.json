@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor growers' profits depend on controlling every growing condition",
+      "status": "explicit",
+      "evidence_span": "being able to control those conditions means being able to control your profits"
+    },
+    {
+      "id": "P2",
+      "text": "Raw sensor and notebook data do not interoperate or guide decisions",
+      "status": "explicit",
+      "evidence_span": "this is raw data. It doesn't talk to each other, and it doesn't tell Tom anything. It's virtually useless for Tom"
+    },
+    {
+      "id": "P3",
+      "text": "AgriList aggregates sensor sync, document upload, and manual entry in one place",
+      "status": "explicit",
+      "evidence_span": "AgriList can automatically sync with any hardware he has in the equipment, like sensors. He can upload documents. And he can even enter data manually"
+    },
+    {
+      "id": "P4",
+      "text": "Dashboard, graphs, and task manager surface harvest/seed work and yield risks",
+      "status": "explicit",
+      "evidence_span": "Agoralyst also acts as a task manager, showing Tom what he has to do on a day-to-day basis"
+    },
+    {
+      "id": "P5",
+      "text": "Recommendations on time-varying electricity rates cut lighting energy cost",
+      "status": "explicit",
+      "evidence_span": "AgriList goes a step further and provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings"
+    },
+    {
+      "id": "P6",
+      "text": "Sold as subscription priced per acre per month to indoor/greenhouse growers",
+      "status": "explicit",
+      "evidence_span": "Our private beta was released at a subscription price at $1,000 per acre per month"
+    },
+    {
+      "id": "P7",
+      "text": "Indoor hydroponic growth is expanding because it uses far less land and water",
+      "status": "explicit",
+      "evidence_span": "more and more growers are moving indoors because of how efficient it is to grow hydroponically. It takes 10 times less land and 20 times less water to grow indoors hydroponically"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Operations data platform for indoor farms",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Subscription and indoor-grow market",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Indoor farmers take control of operations and cut guesswork to grow profitably",
+      "status": "explicit",
+      "evidence_span": "a platform that helps indoor farmers take control of their operations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help feed the world more sustainably and efficiently",
+      "evidence_span": "We want to help feed the world"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all of Tom's data talks to each other, eliminating the guesswork from decision making"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription price at $1,000 per acre per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "ASR variants AgriList/Agoralyst/Agilis treated as same product. Six greenhouse traction excluded; subscription price coded as commercial condition.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-773",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

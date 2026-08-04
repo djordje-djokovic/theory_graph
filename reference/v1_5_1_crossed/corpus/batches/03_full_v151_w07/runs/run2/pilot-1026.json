@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1026",
+    "coder_session_id": "session_04",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:17:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People in emerging markets need a mouthpiece to send messages and communicate beyond constrained SMS costs",
+      "status": "explicit",
+      "evidence_span": "giving billions of people in the world a mouthpiece to send messages and communicate"
+    },
+    {
+      "id": "P2",
+      "text": "SEIA is a chat application that currently solves an SMS communication problem for non-smartphone users",
+      "status": "explicit",
+      "evidence_span": "We are solving an SMS problem right now"
+    },
+    {
+      "id": "P3",
+      "text": "Monetization is advertising treated as useful information where people lack access to where-to-get-what guidance",
+      "status": "explicit",
+      "evidence_span": "we monetize with advertisement"
+    },
+    {
+      "id": "P4",
+      "text": "Longer-term SEIA becomes a platform bringing internet-like services (Yelp, iTunes, shopping) to non-smartphones",
+      "status": "explicit",
+      "evidence_span": "SEA as a platform that is going to bring internet access to people to have Stuff like Yelp, iTunes, shopping on their non-smartphones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "emerging-market messaging need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS chat product",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "informational advertising monetization",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "non-smartphone services platform",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Billions of leapfrogged mobile users gain messaging and eventual internet-like services on non-smartphones",
+      "status": "explicit",
+      "evidence_span": "bringing people who have leapfrogged the PCH into mobile, 5.4 billion people, to now have access to a platform"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving billions of people in the world a mouthpiece"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are solving an SMS problem right now"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in emerging economies, don't have access to information"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring internet access to people to have Stuff like Yelp, iTunes, shopping on their non-smartphones"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Thin transcript; download/SMS-backlog figures treated as traction evidence of demand (§4.2) not separate premises. Platform vision coded as an asserted future condition for value (speaker frames SEIA as becoming the platform). Fundraising ask excluded. Singletons retained: product, ads, and platform roadmap separately revisable on sparse text."
+}

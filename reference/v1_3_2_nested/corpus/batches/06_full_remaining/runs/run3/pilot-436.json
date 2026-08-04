@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home gardening demand is high but success is blocked by watering mistakes, toxic inputs, and confusing product choices",
+      "status": "explicit",
+      "evidence_span": "most of these products actually have toxic chemicals, which is not only bad for you, but it's also bad for the environment"
+    },
+    {
+      "id": "P2",
+      "text": "Portable fully assembled self-watering garden with efficient reservoir removes daily watering burden",
+      "status": "explicit",
+      "evidence_span": "We're breaking the rules on how you water your plants"
+    },
+    {
+      "id": "P3",
+      "text": "App-based coaching and Grow team use garden photos and account context to answer and preempt questions",
+      "status": "explicit",
+      "evidence_span": "we can actually troubleshoot and give him advice before he even knows that he needs it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Gardening difficulty and toxicity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Self-watering Avalo planter",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Coaching and proactive support",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easier gardening so people crush it as gardeners",
+      "status": "explicit",
+      "evidence_span": "you are going to crush it as a gardener"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Personal climate impact through home-grown food",
+      "evidence_span": "direct positive impact right now by just growing a little bit of food outside"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gardening should not be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "never ever have to worry that your plants are getting what they need"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get all your questions answered before you even know that you have them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Accessories folded into planter premise. Fewer premises to avoid feature over-split.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-436",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

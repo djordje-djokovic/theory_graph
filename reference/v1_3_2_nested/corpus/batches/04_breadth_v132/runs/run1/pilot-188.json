@@ -1,0 +1,104 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stool and urine are data-rich health signals that are flushed away unused",
+      "status": "explicit",
+      "evidence_span": "data-rich stool and urine. It's absolute gold, yet it's flushed away every day"
+    },
+    {
+      "id": "P2",
+      "text": "Trulu is the world's first and only commercially available toilet seat that optically scans output",
+      "status": "explicit",
+      "evidence_span": "the world's first and only commercially available toilet seat that optically scans your output"
+    },
+    {
+      "id": "P3",
+      "text": "Every analyzed session trains the AI to discern more conditions",
+      "status": "explicit",
+      "evidence_span": "with each additional plop, we are able to train our AI to be better and better at discerning things"
+    },
+    {
+      "id": "P4",
+      "text": "Monitoring is passive, with nothing to charge or wear",
+      "status": "explicit",
+      "evidence_span": "You don't need to recharge it. You don't need to wear it. You just go about your business"
+    },
+    {
+      "id": "P5",
+      "text": "Senior-community nurses no longer have to manually track residents' toileting",
+      "status": "explicit",
+      "evidence_span": "nurses love it because they no longer have to toilet talk and manually track the residents"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Optical output scanning with learning AI",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Senior-care monitoring workflow",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Daily, effortless health insight from what the body flushes away",
+      "status": "explicit",
+      "evidence_span": "It's like a crack team of doctors looking into your toilet bowl every day"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We've analyzed more than 1.2 million toilet sessions. And with each additional plop, we are able to train our AI"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optically scans your output"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no longer have to toilet talk and manually track the residents"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.6
+  },
+  "notes": "Thin pitch. Installation counts (40+ communities) and 1.2M sessions treated as traction per 4.2, with the learning mechanism coded instead; 'number one in the next frontier' is positioning, uncoded (v1.3.2 4.1(4)); investor name-drops excluded. Singleton D2: the senior-care workflow is a separately revisable application of the same device.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-188",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

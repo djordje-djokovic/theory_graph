@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-432",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:26:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Widespread poor sleep imposes large cognitive, physical, and economic costs",
+      "status": "explicit",
+      "evidence_span": "Nearly half of the Western population reports bad quality of sleep or even lack of it, costing billions of dollars to their employers and to the society"
+    },
+    {
+      "id": "P2",
+      "text": "Wearables with generic tips are not enough to solve sleep deprivation",
+      "status": "explicit",
+      "evidence_span": "providing you wearable devices and trackers and some general tips and coaching on how to change your habits towards better sleep. But that is not enough"
+    },
+    {
+      "id": "P3",
+      "text": "Nuxo provides personalized mobile sleep coaching usable with existing wearable data",
+      "status": "explicit",
+      "evidence_span": "personalized sleep coaching in a mobile phone. You can use it with your favorite wearable device"
+    },
+    {
+      "id": "P4",
+      "text": "Coaching is developed with leading sleep researchers around circadian and homeostatic rhythms",
+      "status": "explicit",
+      "evidence_span": "actually developed with leading sleep researchers in the field"
+    },
+    {
+      "id": "P5",
+      "text": "App assesses a sleep profile then delivers weekly lesson-based habit coaching that improves with more user data",
+      "status": "explicit",
+      "evidence_span": "Based on the data, we assess your sleep coaching profile"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market targets European employers and consumers via occupational health and life-insurance partners",
+      "status": "explicit",
+      "evidence_span": "We are first targeting the European market, which is $15 billion"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sleep deprivation costs and gaps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Research-based personalized coaching product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "European employer and partner GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People sleep better through personalized coaching, helping employers get more productive employees",
+      "status": "explicit",
+      "evidence_span": "start sleeping better now"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The effects of sleep deprivation are both cognitive and physical"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized sleep coaching in a mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help your employees live a better life and be more proactive in the workplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Profile→lessons→habits cascade folded into P5 as one coaching mechanism. Melatonin/circadian research detail folded into P4. Team credentials excluded except that coaching is researcher-developed (P4). Singleton D3: European employer/partner GTM is independently revisable."
+}

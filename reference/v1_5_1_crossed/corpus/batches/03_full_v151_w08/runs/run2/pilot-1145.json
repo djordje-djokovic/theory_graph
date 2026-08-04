@@ -1,0 +1,105 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most Americans sleep with a partner and partner sleep habits cause widespread relationship tension and ruined sleep",
+      "status": "explicit",
+      "evidence_span": "Over 75% of Americans sleep with someone else in the room"
+    },
+    {
+      "id": "P2",
+      "text": "Conventional alarms disrupt the sleeper's partner and wake the sleeper ineffectively, leaving grogginess",
+      "status": "explicit",
+      "evidence_span": "two fundamental problems with the way we wake up"
+    },
+    {
+      "id": "P3",
+      "text": "LarkUp is a silent, natural-feeling wake-up using a Lark wristband plus smartphone/app/dock alarm",
+      "status": "explicit",
+      "evidence_span": "LarkUp is a silent and completely natural-feeling wake-up"
+    },
+    {
+      "id": "P4",
+      "text": "Minimal buttonless styled wristband designed for comfort; phone handles time/snooze UI",
+      "status": "explicit",
+      "evidence_span": "no buttons, no clasps, no screens, just something you put on and forget about"
+    },
+    {
+      "id": "P5",
+      "text": "Patented up technology with sleep expert/engineers is effective across sleep phases and more peaceful than regular alarms by avoiding adrenaline jolts",
+      "status": "explicit",
+      "evidence_span": "The patented up technology was developed with a Harvard sleep expert"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "couples sleep disruption problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "silent wristband wake-up system",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help couples sleep better together with a peaceful wake-up that lets the partner sleep in",
+      "status": "explicit",
+      "evidence_span": "we help couples sleep better together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "By circumventing this, Lark Up creates a peaceful and natural-feeling wake-up"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ruining each other's sleep day in and day out"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best of all, she gets to sleep in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Survey stats folded into couples-sleep problem. App/dock/wristband setup cascade folded into LarkUp product (§4.1.7). Peacefulness/adrenaline mechanism kept with patented tech as quantitative/performance package of same wake-up (§4.1.8). Pre-order price/promo excluded as financing/traction (§4.2). Sleep-revolution vision not coded as premise (§4.1.4).",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1145",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

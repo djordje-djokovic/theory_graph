@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nearshoring creates an urgent need for factories in new markets to meet a surge of production demand",
+      "status": "explicit",
+      "evidence_span": "they need to get ready now"
+    },
+    {
+      "id": "P2",
+      "text": "Ali Gateway with built-in protocols and ERP/maintenance integration is the factory data source of truth",
+      "status": "explicit",
+      "evidence_span": "this device becomes Ali's central source of truth"
+    },
+    {
+      "id": "P3",
+      "text": "Unlike monitoring software, Ali predicts failures and recommends actions from factory know-how",
+      "status": "explicit",
+      "evidence_span": "We're not a monitoring solution. We're an intelligent being"
+    },
+    {
+      "id": "P4",
+      "text": "Shared model improvement from each action benefits every customer",
+      "status": "explicit",
+      "evidence_span": "creating network effects that ultimately benefit every single customer"
+    },
+    {
+      "id": "P5",
+      "text": "Ali AI Assistant with generative BI lets operators solve questions that used to take weeks",
+      "status": "explicit",
+      "evidence_span": "problems that would have taken two weeks to solve"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nearshore capacity readiness",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Intelligent factory stack",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Platform network effects",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-powered factories that respond quickly to market demands with higher efficiency",
+      "status": "explicit",
+      "evidence_span": "make factories respond quickly to market demands, making manufacturing more efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they need to get ready now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ali-enabled factories"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "benefit every single customer on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Vision world with Ali-enabled factories used as value wording support; not a separate premise (v1.3.2 #4).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-14",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:51:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

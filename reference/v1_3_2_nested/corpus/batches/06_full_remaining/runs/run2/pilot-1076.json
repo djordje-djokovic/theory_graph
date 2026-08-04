@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hair industry is offline so clients struggle to find stylists and professionals lack digital tools",
+      "status": "explicit",
+      "evidence_span": "the industry isn't online, and so it's hard to find a stylist"
+    },
+    {
+      "id": "P2",
+      "text": "Stylists lack websites, CRM, email marketing, online schedules, and business measurement",
+      "status": "explicit",
+      "evidence_span": "She doesn't have a website. She doesn't track client information or send marketing emails. She doesn't have daily access to her schedule"
+    },
+    {
+      "id": "P3",
+      "text": "Professionals get a branded website with social share buttons and specials to grow via client sharing",
+      "status": "explicit",
+      "evidence_span": "Glenda gets her own website. So for the first time, she can actually control her visibility online"
+    },
+    {
+      "id": "P4",
+      "text": "Clients search, sort, book online including last-minute, and get reminders plus review prompts",
+      "status": "explicit",
+      "evidence_span": "type in haircut San Francisco, get a search results page with a bunch of professionals in my area"
+    },
+    {
+      "id": "P5",
+      "text": "Dashboard, education, photo inspiration, and busy/free specials help professionals grow revenue",
+      "status": "explicit",
+      "evidence_span": "we give her a dashboard with an overview. So she has key information about her business"
+    },
+    {
+      "id": "P6",
+      "text": "Mobile apps extend the platform to iPhone, Android, and iPad",
+      "status": "explicit",
+      "evidence_span": "we have an iPhone app, an Android app, and an iPad app that are pending approval in the iTunes store"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium free booking and scheduling opens the product to the whole industry",
+      "status": "explicit",
+      "evidence_span": "freemium model, free online booking, free scheduling, so we're available for the entire industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Offline stylist discovery and ops gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Client marketplace and pro growth tools",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium access",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring hair professionals online so they can be found, booked, and grow",
+      "status": "explicit",
+      "evidence_span": "bringing this $40 billion industry online starting today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard to find a stylist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Glenda can actively grow her business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available for the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Independent run: mobile apps kept as delivery premise. Future optimization and $18B inefficiency treated as vision framing (4.1(4)). Traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1076",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

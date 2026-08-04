@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-356",
+    "coder_session_id": "session_06",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:29:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Idle cash in P2P apps earns returns for the apps, not users, while inflation erodes balances",
+      "status": "explicit",
+      "evidence_span": "it's those same peer-to-peer apps that are benefiting from cash balances and earning a return, leaving nothing behind for their users"
+    },
+    {
+      "id": "P2",
+      "text": "Younger users want to grow wealth but lack time or resources to invest",
+      "status": "explicit",
+      "evidence_span": "Millennials, Gen Z, all of us want to earn and grow our wealth, but sometimes just lack the resources, time, or energy or resources to invest"
+    },
+    {
+      "id": "P3",
+      "text": "Stacks turns peer-to-peer paybacks into stock transfers that build wealth each transaction",
+      "status": "explicit",
+      "evidence_span": "the first peer-to-peer payment designed to generate wealth with every single transaction"
+    },
+    {
+      "id": "P4",
+      "text": "Backend holds cash until recipient accepts, then converts to chosen stock with cash alternative",
+      "status": "explicit",
+      "evidence_span": "It only converts to stock once she clicks Accept in her Notifications tab"
+    },
+    {
+      "id": "P5",
+      "text": "Social public portfolios and transactions make investing less lonely and more transparent",
+      "status": "explicit",
+      "evidence_span": "we make all portfolios and trades and transactions public, so you can like and comment on various transactions"
+    },
+    {
+      "id": "P6",
+      "text": "Brokerage partnership covers substantial cash and portfolio balances for user safety",
+      "status": "explicit",
+      "evidence_span": "We cover up to 250K of user cash balances and 500K of portfolio investments using our brokerage partner, Alpaca"
+    },
+    {
+      "id": "P7",
+      "text": "Platform can extend beyond P2P into rideshare, registries, and business payment integrations",
+      "status": "explicit",
+      "evidence_span": "we go beyond just peer-to-peer payments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle P2P cash and invest-access gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Stock payback product and social investing",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Custody coverage and platform extensions",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Every payment becomes an investment that brings new users into the markets",
+      "status": "explicit",
+      "evidence_span": "allowing anyone to turn every payment into an investment"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving nothing behind for their users"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generate wealth with every single transaction"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "users feel 100% safe and confident when investing with us long-term"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Old stock-transfer frictions folded as contrast into simplicity claim of P3/P4 rather than separate premises. Team finance bios excluded. Vision uses (rideshare/registry) coded as expansion condition P7 because speaker presents them as part of the wealth-growth theory."
+}

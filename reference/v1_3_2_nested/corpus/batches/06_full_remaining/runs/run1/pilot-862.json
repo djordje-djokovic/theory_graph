@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding and booking fishing charters online requires many phone calls and is hard and time-consuming",
+      "status": "explicit",
+      "evidence_span": "Finding and booking fishing charters online is hard and time consuming"
+    },
+    {
+      "id": "P2",
+      "text": "Charter captains lack a proper way to market their businesses online",
+      "status": "explicit",
+      "evidence_span": "you don't have a way to market your business properly"
+    },
+    {
+      "id": "P3",
+      "text": "Marketplace lets customers find, book, compare, and review charters while captains get free profiles and availability management",
+      "status": "explicit",
+      "evidence_span": "customers can easily find, book, and compare, and review fishing charters. And captains get a free profile"
+    },
+    {
+      "id": "P4",
+      "text": "Post-trip reviews form a community that helps anglers choose better",
+      "status": "explicit",
+      "evidence_span": "we collect all these reviews into a community that's on Fishing Booker and that helps anglers make better choices"
+    },
+    {
+      "id": "P5",
+      "text": "Search acquisition costs about $40 per booking against about $125 earned (~300% ROAS)",
+      "status": "explicit",
+      "evidence_span": "it costs us about $40 to get one person to book a fishing trip through our website. We earn about $125, which is a return on advertising spend of about 300%"
+    },
+    {
+      "id": "P6",
+      "text": "Seven-day customer service and 100% verified, interviewed captains differentiate the marketplace",
+      "status": "explicit",
+      "evidence_span": "we have seven-day customer service. All of our captains are 100% verified, and we interview each of them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Two-sided charter booking friction",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Verified charter marketplace and reviews",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Search unit economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anglers easily book quality fishing charters; captains get customers more easily",
+      "status": "explicit",
+      "evidence_span": "customers can easily find, book, and compare, and review fishing charters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding and booking fishing charters online is hard and time consuming"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get customers more easily"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we use mostly search to acquire customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-pitch (truncated=true). Market-size and $250k bookings treated as traction/framing per §4.2. Passionate-angler bio excluded. Deposit booking UI features folded into marketplace premise per §4.1(5). Singleton D3: search CAC/ROAS is a separately revisable acquisition module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-862",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

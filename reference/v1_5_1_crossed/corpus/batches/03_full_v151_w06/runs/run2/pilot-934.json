@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "coder_session_id": "session_04",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:45Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Packing and shipping cost for diverse real retail items is hard to determine; carrier quotes require boxes/crates/pallets and the market is fragmented across parcel, freight, courier, and more",
+      "status": "explicit",
+      "evidence_span": "it's so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "id": "P2",
+      "text": "ShipHawk aggregates fragmented shipping markets so shippers can move almost any item size/weight to almost any destination from one site",
+      "status": "explicit",
+      "evidence_span": "we have aggregated all of these different markets into one website"
+    },
+    {
+      "id": "P3",
+      "text": "The system converts real items into packed weights and dimensions to give instant packing and multi-carrier shipping quotes with service options",
+      "status": "explicit",
+      "evidence_span": "we're going to convert your real item into packed weights and dimensions"
+    },
+    {
+      "id": "P4",
+      "text": "Users can schedule pickup, drop at ShipHawk network locations, or get local delivery facilitated by the same agent network, then pay and print labels",
+      "status": "explicit",
+      "evidence_span": "you get to schedule a pickup at your home or office. Or you can find a local ShipHawk network location"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue is commissions from shipping, packing, insurance, and other service providers sent business",
+      "status": "explicit",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-carrier packing and shipping marketplace",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "commission on service providers",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make packing and shipping easy, fast, and transparent for retail shippers of diverse real items",
+      "status": "explicit",
+      "evidence_span": "help us make shipping easy for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instant packing quotes, instant shipping quotes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Fragmented carrier types and quote frictions folded into one problem premise (v1.5.1 §4.1.6). Kayak analogy treated as framing, not a premise. Founder experience excluded as team narrative rather than a market condition."
+}

@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CRM yields garbage-in/garbage-out because sales reps skip data entry or let it go stale, leaving management without real pipeline transparency",
+      "status": "explicit",
+      "evidence_span": "it's garbage in, neatly packaged garbage out"
+    },
+    {
+      "id": "P2",
+      "text": "Fortuit's plugin automatically captures emails, IMs, contacts, and activities and combines them with the pipeline into a predictive model of how the rep sells",
+      "status": "explicit",
+      "evidence_span": "it was taking all of the unstructured data, all of my emails, activities, IMs, contacts, putting that information, combining it with my sales pipeline to build a predictive model about the way I sell"
+    },
+    {
+      "id": "P3",
+      "text": "The engine flags at-risk deals with reasons (e.g., legal not engaged) and a communication timeline so reps can triage and repair the pipe",
+      "status": "explicit",
+      "evidence_span": "What it's telling me is why this deal might not close"
+    },
+    {
+      "id": "P4",
+      "text": "Free Fortuit beta for sales reps installs without IT involvement in minutes",
+      "status": "explicit",
+      "evidence_span": "I downloaded the Fortuit plug-in, let it run, and within five minutes, I was up and running. No IT involvement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CRM compliance and transparency failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Predictive pipeline triage engine",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "IT-free free plugin distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Answer whether the rep or team will make the quarter and show managers the rep is in control",
+      "status": "explicit",
+      "evidence_span": "will I make my quarter?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Give management transparency and control over front-office sales operations",
+      "evidence_span": "the lack of transparency into front office operations, particularly sales"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you don't know what's going on, you can't manage it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "go all the way from, you know, I've got a problem with my pipeline, I'm not going to meet my quarter, to know exactly why"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Available free on fortuit.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript opens mid-argument (truncated). 89% predictive accuracy treated as traction evidence of the engine, not a separate premise. Repair-tool laundry list folded into triage premise (§4.1(5)). Need/product/distribution triad justified: free no-IT install revisable without changing the predictive engine.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1059",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

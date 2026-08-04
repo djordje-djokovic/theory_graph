@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-965",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional remittances force recipients into agency visits, long waits, separate bill-pay trips, and high Western Union fees",
+      "status": "explicit",
+      "evidence_span": "They have to pay for a bus to go to an agency, wait online for two hours, then go to another agency to pay their utility bills"
+    },
+    {
+      "id": "P2",
+      "text": "Immigrants send SMS-usable credit to family phones in Latin America to pay for food, medicine, utilities, and tuition like a gift card",
+      "status": "explicit",
+      "evidence_span": "hardworking immigrants can send a credit directly to their family cell phone in Latin America"
+    },
+    {
+      "id": "P3",
+      "text": "Senders reach Regali online or at partner mom-and-pop stores that trigger instant SMS pins for recipients",
+      "status": "explicit",
+      "evidence_span": "Our customers can visit us online or can visit us offline at one of 200 partner mom and pop stores"
+    },
+    {
+      "id": "P4",
+      "text": "Recipients can transfer part of funds to other family or friends, building a viral social network on remittances",
+      "status": "explicit",
+      "evidence_span": "transfer part of those funds to a family member or another friend"
+    },
+    {
+      "id": "P5",
+      "text": "Contracts covering thousands of retail locations across countries plus retailer fees subsidize a low flat customer fee",
+      "status": "explicit",
+      "evidence_span": "we already have the contracts that gives us access to 7,200 retail locations in eight different countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "costly remittance agency friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS mobile credit remittance product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "retail contracts and subsidized flat fee",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Immigrants can pay for family's basic needs back home via SMS without agency friction",
+      "status": "explicit",
+      "evidence_span": "We allow immigrants to pay for all of their family's basic needs back home, all via an SMS"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Western Union taxes them up to 10%"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "send a credit directly to their family cell phone in Latin America"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a low flat fee of just $3, up to 70% cheaper than any alternative"
+    },
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "each of these retailers pay us a fee. which allow us to subsidize how much we charge our customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Agency bus/wait/bill-pay and Western Union fee folded as one remittance problem (§4.1.6). SMS credit, store/online send, and viral transfer folded as remittance product cascade; retail contracts+fee subsidy kept as commercial/supply module with explicit enablement link. Growth metrics excluded (§4.2). Anti-template: problem, product, and retail economics separately revisable."
+}

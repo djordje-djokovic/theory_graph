@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High school STEM students lack a way to showcase garage and classroom projects to colleges and employers",
+      "status": "explicit",
+      "evidence_span": "Students are still having trouble exposing their projects"
+    },
+    {
+      "id": "P2",
+      "text": "A portfolio platform lets students upload multimedia projects searchable by interest and category",
+      "status": "explicit",
+      "evidence_span": "a portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "id": "P3",
+      "text": "An algorithm matches students to college programs based on project interests like robotics",
+      "status": "explicit",
+      "evidence_span": "We've created an algorithm that pairs the student to a particular college"
+    },
+    {
+      "id": "P4",
+      "text": "Commendations and badges create prestige and keep students uploading projects",
+      "status": "explicit",
+      "evidence_span": "The more a student has commendations, the more weight and prestige that portfolio has"
+    },
+    {
+      "id": "P5",
+      "text": "The high-school-to-college segment of education software is underserved versus college-to-job tools",
+      "status": "explicit",
+      "evidence_span": "very little is being done in the high school to college market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Exposure gap for STEM projects",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Student portfolio product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help STEM students leverage projects for college admission and high-tech internships",
+      "status": "explicit",
+      "evidence_span": "leverage these projects that students are working on to get into schools"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Students are still having trouble exposing their projects"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the best portfolio platform for science, tech, engineering, and math students"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Video interviewee quotes treated as pitch evidence of the exposure problem. Credentials excluded. Market $8B figure not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:47:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

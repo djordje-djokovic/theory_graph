@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:38:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Good search is rare because search is still too difficult to implement",
+      "status": "explicit",
+      "evidence_span": "It's still pretty rare to find websites with good search"
+    },
+    {
+      "id": "P2",
+      "text": "The typical three-part search setup forces every index change to be made in three separate places",
+      "status": "explicit",
+      "evidence_span": "every time we wanted to modify the index, we had to change the system in three separate places"
+    },
+    {
+      "id": "P3",
+      "text": "ThriftDB is one system combining the database, the search index, and the web server",
+      "status": "explicit",
+      "evidence_span": "ThriftDB is just combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P4",
+      "text": "ThriftDB handles objects natively because every company represents its data as objects with attributes",
+      "status": "explicit",
+      "evidence_span": "So objects are so important that we designed ThriftDB to handle objects natively"
+    },
+    {
+      "id": "P5",
+      "text": "Users get fast, scalable search with attribute filtering right out of the box",
+      "status": "explicit",
+      "evidence_span": "With ThriftDB, you get fast, scalable search right out of the box"
+    },
+    {
+      "id": "P6",
+      "text": "Adding an attribute now means uploading a new schema — no downtime, far less development time",
+      "status": "explicit",
+      "evidence_span": "Now we just upload a new schema, and that's it. It's really cut down our development time at Octopart"
+    },
+    {
+      "id": "P7",
+      "text": "The same backend technology can search electronic parts, blog posts, and comments across unrelated sites",
+      "status": "explicit",
+      "evidence_span": "we're using the same backend technology to search for electronic parts on Octopart, blog posts on TechCrunch, and comments on Hacker News"
+    },
+    {
+      "id": "P8",
+      "text": "Distribution is an on-demand cloud service with a free beta",
+      "status": "explicit",
+      "evidence_span": "launching it today as a on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Search implementation pain",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified one-system architecture",
+      "premise_ids": ["P3", "P6", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Object-native search quality",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Cloud service delivery",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any company gets powerful search that is extremely simple to implement and use",
+      "status": "explicit",
+      "evidence_span": "It's a really powerful tool that's also extremely simple to use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "search is still too difficult to implement. And that's why we built ThriftDB"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we designed it from the ground up to make search really simple to implement"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can take advantage of all the attribute information"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can sign up for the beta. It's free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The objects premise merges the world-claim and the design response into one condition because the speaker binds them in a single sentence; with them merged, no premise-premise dependency is coded. The multi-app demonstration is kept as its own premise P7 in this run: the one-backend-for-unrelated-sites claim is a generality condition that could fail while the single-site architecture still works, and it groups with the architecture in D2. D4 singleton: cloud delivery/free-beta pricing revises independently. '15 million parts' and '3 million posts' are scale detail inside the demonstrations, not separate premises."
+}

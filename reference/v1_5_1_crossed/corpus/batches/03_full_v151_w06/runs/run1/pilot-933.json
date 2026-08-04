@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-933",
+    "coder_session_id": "session_02",
+    "session_case_index": 14,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Doctors make bad decisions because reference tools ignore clinical experience and there is no structured way to share experience with peers",
+      "status": "explicit",
+      "evidence_span": "Good doctors, like me and Mark, wind up making bad decisions because we have no way to share our experience"
+    },
+    {
+      "id": "P2",
+      "text": "SharePractice ranks treatments by doctor votes with clinically relevant dosing and peer comments so doctors can decide and contribute in seconds",
+      "status": "explicit",
+      "evidence_span": "these treatments are actually ranked by doctors upvoting and downvoting these treatments"
+    },
+    {
+      "id": "P3",
+      "text": "A viral invite flow shares a structured treatment question to doctor contacts and pulls new users into the reference tool",
+      "status": "explicit",
+      "evidence_span": "Share Practice generates the email for you"
+    },
+    {
+      "id": "P4",
+      "text": "A proprietary medical ontology unifies messy medical terminology across databases so collaboration stays coherent",
+      "status": "explicit",
+      "evidence_span": "SharePractice built a proprietary medical ontology that took multiple databases"
+    },
+    {
+      "id": "P5",
+      "text": "The platform collects unique why-this-treatment data valuable in a large analytics market",
+      "status": "explicit",
+      "evidence_span": "we're getting data that doesn't exist anywhere"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unshared clinical experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "crowdsourced treatment reference",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "unique prescribing analytics data",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients get better treatment because doctors carry collective peer experience in their pocket",
+      "status": "explicit",
+      "evidence_span": "share practice puts a million doctors in every doctor's pocket"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unique why-prescribed analytics data for the analytics market",
+      "evidence_span": "we're getting important information on the most valuable customer in a $10 billion analytics market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have no way to share our experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you're going to get the best treatment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only SharePractice knows why"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Reference-tool inadequacy and peer-texting pain folded as one experience-sharing problem (§4.1.6). Ranking/dosing/comments cascade folded into the reference product; viral share split as GTM/growth mechanism baked into product. Ontology kept as separately claimed feasibility condition. Global collaboration vision partly as value. Anti-template: problem, clinical product+ontology, and analytics data separately revisable."
+}

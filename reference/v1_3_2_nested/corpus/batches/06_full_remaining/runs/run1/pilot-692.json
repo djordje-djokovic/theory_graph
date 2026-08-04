@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hiring fails often because candidates and employers decide on the wrong data: hidden jobs, soft-skill mismatch, and resumes that only show hard skills",
+      "status": "explicit",
+      "evidence_span": "everyone, both candidates and employers, are making decisions based on the wrong data"
+    },
+    {
+      "id": "P2",
+      "text": "Cognitive assessments of soft skills are the most accurate job-performance predictors but are long, expensive, and slow, so almost no one uses them",
+      "status": "explicit",
+      "evidence_span": "these tests are long and grueling, they're expensive, and they can take days or weeks to administer and get results"
+    },
+    {
+      "id": "P3",
+      "text": "Scoutable's 20-minute science-based mobile games quantify soft skills into a cognitive fingerprint and match candidates to top-performer profiles",
+      "status": "explicit",
+      "evidence_span": "In just 20 minutes, our science-based mobile games measure and quantify soft skills to match perfect fit candidates to top jobs"
+    },
+    {
+      "id": "P4",
+      "text": "Companies pay a setup fee for a top-performer predictive model plus subscription filtering or sourcing fees; games are free for candidates",
+      "status": "explicit",
+      "evidence_span": "Companies like Cloud Co pay us a one-time setup fee for creating the predictive model based on their top performers, and then a subscription for filtering inbound candidates against that model, or a sourcing fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wrong-data hiring failure",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Game-based soft-skill matching",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Setup fee plus subscription/sourcing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help companies build world-class teams by matching perfect-fit soft-skill talent",
+      "status": "explicit",
+      "evidence_span": "how we help companies build world-class teams"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Candidates learn about their own unique talents",
+      "evidence_span": "free for anyone to download and play to learn more about themselves and their own unique talents"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "46% of hires fail"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match perfect fit candidates to top jobs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Moneyball for hiring"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.89
+  },
+  "notes": "Mini-game examples and hustle/social/bandwidth score labels folded into the game-matching premise (§4.1(5)). Diversity-for-predictors framing folded into matching. Harvard bio excluded. Need/product/money triad justified: pricing pack revisable without changing game science; soft-skill measurement gap is separately revisable from general wrong-data claim but kept with P1 as one market domain. Singleton D2 and D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-692",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

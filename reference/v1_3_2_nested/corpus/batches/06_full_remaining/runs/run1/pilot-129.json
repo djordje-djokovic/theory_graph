@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-129",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rapid satellite growth makes spectrum noisier and threatens consistent Earth–space communications",
+      "status": "explicit",
+      "evidence_span": "it's becoming much noisier. It's the spectrum noise and the consistency of communication that MagnaStar is addressing"
+    },
+    {
+      "id": "P2",
+      "text": "Current spectrum obtainment, coordination, and rights-protection processes use outdated ~25-year-old technology",
+      "status": "explicit",
+      "evidence_span": "using technology that's 25 years old for the legacy space industry rather than infrastructure for the modern space sector"
+    },
+    {
+      "id": "P3",
+      "text": "247X simulates when multiple satellites will be co-linear and potentially interfere in Earth–space signal paths",
+      "status": "explicit",
+      "evidence_span": "We simulate how multiple satellites, when they will be in a co-linear event and potentially interfere with one another from their signal communications in between Earth and space"
+    },
+    {
+      "id": "P4",
+      "text": "Simulation is embedded in coordination infrastructure that automates operator workflows to expedite coordination and protect spectrum rights",
+      "status": "explicit",
+      "evidence_span": "We embed that simulation technology into coordination infrastructure in order to expedite the process of how satellite operators work together"
+    },
+    {
+      "id": "P5",
+      "text": "The platform monitors ITU filings and near-real-time interference risk for operators and regulators in one software application",
+      "status": "explicit",
+      "evidence_span": "monitoring in near real-time to ensure consistent communications between Earth and space"
+    },
+    {
+      "id": "P6",
+      "text": "Operators can run multiple uplink, downlink, or inter-satellite interference simulations for real-time passes or long-term coordination agreements",
+      "status": "explicit",
+      "evidence_span": "I can go ahead and run multiple simulations at a time, which is currently non-existent within the existing technology"
+    },
+    {
+      "id": "P7",
+      "text": "A future spectrum exchange depends on validated non-interference while subleasing spectrum under coordination agreements",
+      "status": "explicit",
+      "evidence_span": "This spectrum exchange can only come to fruition as we have validated that it will not cause interference as we're subleasing spectrum and the coordination agreements are still being adhered to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Noisy outdated spectrum coordination",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "247X simulation and coordination platform",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Spectrum exchange pathway",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clear, consistent Earth–space communications through eased spectrum simulation and coordination",
+      "status": "explicit",
+      "evidence_span": "bring relief to the space sector"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Establish clear pathways of communications among operators and with regulators",
+      "evidence_span": "we establish clear pathways of communications for existing satellite operators between Earth and space"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We embed that simulation technology into coordination infrastructure"
+    },
+    {
+      "from": "P4",
+      "to": "P7",
+      "type": "premise-premise",
+      "evidence_span": "This spectrum exchange can only come to fruition as we have validated that it will not cause interference"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "without clear communications, the entire space sector becomes in jeopardy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easing the complexities of space spectrum"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building this to be a spectrum exchange"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "LOIs, pre-purchases, and military contract excluded as traction. Demo UI features folded into platform premises (§4.1(5)). Spectrum exchange kept as separately revisable future module with explicit prerequisite dependency on validated non-interference. ITU delegate credential not coded as causal premise."
+}

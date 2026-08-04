@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Buildinc cable robot moves a print plate with multiple motorized cables for on-site 3D printing in variable footprints",
+      "status": "explicit",
+      "evidence_span": "four motors connected to four cables to move this printing plate in the middle of the printer"
+    },
+    {
+      "id": "P2",
+      "text": "Specialized concrete mix is flowable, fast-setting, strong, layer-bonding, and eco-friendly for the printer",
+      "status": "explicit",
+      "evidence_span": "highly flowable so it can pass easily through the printer"
+    },
+    {
+      "id": "P3",
+      "text": "Design overcomes rail-based and center-arm competitors that are slow to set up or cannot enclose buildings",
+      "status": "explicit",
+      "evidence_span": "we took these drawbacks of our competitors and developed the cable robot"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term revenue from small/medium and custom printed products while building toward house-scale printing and a MENA construction partnership",
+      "status": "explicit",
+      "evidence_span": "we started taking small and medium construction projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cable-driven print system",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Engineered printable concrete",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Construction project GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how houses are built toward fast, safe construction",
+      "status": "explicit",
+      "evidence_span": "Building is changing the way houses are built"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can give accurate results, can be easily installed and dismantled"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "environmental-friendly mix"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building fast, safe, and risk-free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Opening truncated before full problem statement. Dubai 25% target treated as market framing, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-558",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

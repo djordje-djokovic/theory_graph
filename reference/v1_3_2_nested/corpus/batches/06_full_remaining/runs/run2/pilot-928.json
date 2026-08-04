@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Heavy cloud users still have email as a silo that traps attachments",
+      "status": "explicit",
+      "evidence_span": "Large amounts of data are moving into email and just sitting there"
+    },
+    {
+      "id": "P2",
+      "text": "Cloudless moves email files into connected cloud apps, replaces them with links, automates routing, and applies secure access controls",
+      "status": "explicit",
+      "evidence_span": "move these files directly into other cloud services and keep them associated with the context of the original email"
+    },
+    {
+      "id": "P3",
+      "text": "Cross-application policies and admin visibility keep team data consistently handled",
+      "status": "explicit",
+      "evidence_span": "sets policies across the cloud applications that they use so that she can make sure that data is being consistently handled"
+    },
+    {
+      "id": "P4",
+      "text": "Free for individuals; paid when claiming and governing a group",
+      "status": "explicit",
+      "evidence_span": "completely free for individual users. You only pay when you claim a group of people"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email as content silo",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected workflow product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium group governance",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Secure connected enterprise-cloud data workflow",
+      "status": "explicit",
+      "evidence_span": "create a secure connected enterprise cloud and control the data workflow across many applications"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's a huge waste, and it causes everything to slow down"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data is moving seamlessly from one application to another"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You only pay when you claim a group of people and you govern the data workflow across them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Manual move, auto-route, and secure share folded into one capability premise (v1.3.2 feature-list rule). Anti-template: silo/product/pricing separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-928",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

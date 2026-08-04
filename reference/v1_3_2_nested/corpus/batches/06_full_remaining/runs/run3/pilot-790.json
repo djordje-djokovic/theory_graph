@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Tech-teaching toys for children are dangerous and should be replaced with a safer approach",
+      "status": "explicit",
+      "evidence_span": "And these toys that teach children about technology are very dangerous to them. And we want to change it"
+    },
+    {
+      "id": "P2",
+      "text": "Programmable snap-cube robotics kit with phone/tablet control lets kids from age five build and program robots",
+      "status": "explicit",
+      "evidence_span": "programmable robotics kit for kids of all ages. So kids starting from age of five can build their own robots and program them with a phone or tablet"
+    },
+    {
+      "id": "P3",
+      "text": "Seeing creations become alive instantly motivates kids to learn what is inside technology",
+      "status": "explicit",
+      "evidence_span": "They love how they're. creations become alive instantly. They see the results, and they're getting motivated"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dangerous tech toys problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Snap-cube robots and motivation loop",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make technology accessible so children learn by building robots",
+      "status": "explicit",
+      "evidence_span": "let's make technology accessible for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we want to change it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They want to learn about technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Cube electronics, wireless connection, and drag-drop app folded into one kit premise as one offering (v1.3.2 §4.1(5)). Child-test love used as mechanism evidence for motivation, not as traction metric. Kickstarter excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-790",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

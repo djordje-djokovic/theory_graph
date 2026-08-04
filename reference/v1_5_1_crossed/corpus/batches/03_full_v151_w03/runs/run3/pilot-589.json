@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-589",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Machines need large volumes of structured training data while most human-created data is unstructured and data scientists spend most of their time cleaning it",
+      "status": "explicit",
+      "evidence_span": "90% of that data is unstructured, but machines need structured data to learn"
+    },
+    {
+      "id": "P2",
+      "text": "A platform combines tools, humans in the loop, and machine learning into specialized workflows to collect, enrich, and structure high-quality training data at scale",
+      "status": "explicit",
+      "evidence_span": "combining tools, humans in the loop, and machine learning into specialized data workflows"
+    },
+    {
+      "id": "P3",
+      "text": "The offering combines professional-services quality with SaaS scale and process control versus CrowdFlower/Mechanical Turk or traditional services",
+      "status": "explicit",
+      "evidence_span": "The fine crowd combines the best of both worlds"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market focuses on Fortune 500 AI players in the US, Japan, and Europe",
+      "status": "explicit",
+      "evidence_span": "partnering and serving the biggest players in AI, mainly Fortune 500 companies in the US, Japan, and Europe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Structured training-data bottleneck",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human-in-the-loop data workflows",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise AI customers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accelerating machine intelligence by solving the training-data problem",
+      "status": "explicit",
+      "evidence_span": "we're accelerating intelligence in machines"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "machines need structured data to learn"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collect, enrich, and structure high quality training data at scale"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "serving the biggest players in AI"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Crowd-settings/recording/biometric demo cascade folded into P2 as one workflow mechanism (§4.1.7). Founder credentials and market-size projection excluded. Singleton D1 and D3 retained as separately revisable problem and GTM modules."
+}

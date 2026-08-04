@@ -1,0 +1,85 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Proprietary per-manufacturer software locks interactive lesson content into the platform and the classroom",
+      "status": "explicit",
+      "evidence_span": "your content is locked not only into your platform, but it's locked into the classroom"
+    },
+    {
+      "id": "P2",
+      "text": "Downloadable software replicated in the browser runs on any device and supports simultaneous multi-user interaction without installs",
+      "status": "explicit",
+      "evidence_span": "we have managed to replicate downloadable software and put it in browser"
+    },
+    {
+      "id": "P3",
+      "text": "In-browser equation and graphing tools make computer-based math practical, ending the calculator monopoly",
+      "status": "explicit",
+      "evidence_span": "Texas Instruments, your monopoly on graphing in the classroom is over"
+    },
+    {
+      "id": "P4",
+      "text": "Publishing turns any lesson into content a million people can open, interact with, embed, or download offline",
+      "status": "explicit",
+      "evidence_span": "a million people can look at this simultaneously, interact with it, they each have a local copy they can work with"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lesson lock-in",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Browser learning platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive lessons usable on any device, by anyone, anywhere",
+      "status": "explicit",
+      "evidence_span": "it means it works on any device that has a browser"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can't access it from home. Teachers can't access it from home."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is truly interactive content."
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Folded reading per v1.3.2 clarification 5: device reach and simultaneous collaboration are presented as the two direct consequences of one browser-based mechanism, so they sit in a single premise; publish/sharing is grouped into the same platform domain because the speaker demos it as a feature of the same software rather than a standalone product. Funding announcement and alpha codes excluded; the publisher-built demo lesson treated as validation. Two domains: the lock-in need versus the browser platform that answers it.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1056",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

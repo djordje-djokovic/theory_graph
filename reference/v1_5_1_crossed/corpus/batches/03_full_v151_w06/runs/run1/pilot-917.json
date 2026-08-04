@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-917",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open-source users face bugs and missing features with hard-to-get support while developers lack incentive or priority to fix them",
+      "status": "explicit",
+      "evidence_span": "all this software has two properties in common, which is bugs and missing features"
+    },
+    {
+      "id": "P2",
+      "text": "Users can place paid incentives on issue pages with two clicks via integrations into major issue trackers",
+      "status": "explicit",
+      "evidence_span": "allows you to pay or get paid directly from an issue page"
+    },
+    {
+      "id": "P3",
+      "text": "Multiple users can crowdfund one issue, and developers can request incentives or list issues for crowdfunding in one click",
+      "status": "explicit",
+      "evidence_span": "many users can place incentives on one issue"
+    },
+    {
+      "id": "P4",
+      "text": "The service takes a 6% fee on successful incentives and shares fees with issue-system hosters",
+      "status": "explicit",
+      "evidence_span": "we take a 6% fee for each successful incentive"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution aim is panels on every bug/feature/support page, later extending beyond open source to app stores",
+      "status": "explicit",
+      "evidence_span": "have our panel on every book page, every feature request, and in every support system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "open-source support mismatch",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "issue-page incentive and crowdfunding",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "fee and hoster monetization",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "ubiquitous issue-system distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get paid support/fixes for software issues and developers get paid to improve them",
+      "status": "explicit",
+      "evidence_span": "place incentives for on demand software support"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with two clicks, a user can place an incentive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turns an issue system into a profit center"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "adding a monetization element to the entire open source market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Bugs+missing features+hard support coded as one pain-bundle (P1). Named tracker integrations (Mantis/Jira/etc.) folded into P2. ASR 'book' for bug left in evidence spans verbatim. App-store next focus folded into P5 distribution vision as stated expansion of the same panel strategy. Singletons retained for pricing and distribution modules."
+}

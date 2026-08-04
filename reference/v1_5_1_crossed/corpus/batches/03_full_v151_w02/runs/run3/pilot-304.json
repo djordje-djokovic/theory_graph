@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-304",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home cancer patients lack monitoring of blood counts and vitals, so infections cause hospitalizations and delayed chemo",
+      "status": "explicit",
+      "evidence_span": "there was no way to keep track of changes in his blood cell counts and his vitals"
+    },
+    {
+      "id": "P2",
+      "text": "An implanted smart chemo port with microelectronics and optical sensors measures blood cells, heart function, and vitals in the body",
+      "status": "explicit",
+      "evidence_span": "implanted smart port that detects early signs of infection by measuring changes in blood cell counts, heart function, and vitals"
+    },
+    {
+      "id": "P3",
+      "text": "Machine learning on longitudinal port data alerts physicians to health-status changes before symptoms via EMR-integrated API",
+      "status": "explicit",
+      "evidence_span": "our software uses machine learning to look for changes in health status before symptoms emerge"
+    },
+    {
+      "id": "P4",
+      "text": "The port gathers monitoring data with no additional burden on patients versus wearables or clinic labs",
+      "status": "explicit",
+      "evidence_span": "NextGenPort gathers a data package that has no additional burden on the patients"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market sells the technology to port manufacturers",
+      "status": "explicit",
+      "evidence_span": "GoToMarket focuses on selling the technology to port manufacturers"
+    },
+    {
+      "id": "P6",
+      "text": "FDA 510K and verified CPT reimbursement codes provide a commercialization path",
+      "status": "explicit",
+      "evidence_span": "verified CPT codes for reimbursement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home monitoring gap for cancer patients",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart port sensing and physician alerts",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "manufacturer GTM and regulatory path",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Early infection detection that lets physicians act before symptoms and avoid hospitalizations",
+      "status": "explicit",
+      "evidence_span": "detect early signs of infection before they even had symptoms"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hospitalization cost savings for the health system",
+      "evidence_span": "Plus, save over a billion dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Current methods of monitoring patients at home are missing critical health information"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "advanced warning alerts physicians to changes in health status so they can take action"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clear roadmap to our FDA submission and anticipate a 510K"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Infection/hospitalization pain kept as one bundle (v1.5.1). Optical sensing and ML alerting split as separately failable hardware vs software/workflow. Wearable/lab comparisons folded into P4. Anti-template: need, product, and manufacturer/regulatory GTM presented as separately revisable. Team credentials and revenue forecast excluded."
+}

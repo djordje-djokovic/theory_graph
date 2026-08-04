@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1024",
+    "coder_session_id": "session_02",
+    "session_case_index": 14,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional databases only store, organize, and look up data rather than understanding or predicting from it",
+      "status": "explicit",
+      "evidence_span": "storing, organizing, and letting you look things up in your data"
+    },
+    {
+      "id": "P2",
+      "text": "A predictive database that SQL-familiar developers can query with a predict-style interface fills missing values and surfaces relationships",
+      "status": "explicit",
+      "evidence_span": "a predictive database that lets you, if you know how to talk to a database"
+    },
+    {
+      "id": "P3",
+      "text": "The same learning works across application domains such as profiles, disease-symptom links, customer-product links, and survey/voting patterns",
+      "status": "explicit",
+      "evidence_span": "It also works across application domains"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lookup-only databases",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "predictive database platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Application builders get prediction and relationship understanding without hiring data scientists or doing the math themselves",
+      "status": "explicit",
+      "evidence_span": "doing these sorts of things without having to understand all the math"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the actual database itself a lot smarter"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you can use SQL, you can use Veritable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Dating demo is illustration of missing-value prediction, folded into predictive DB premise. Nonparametric Bayesian/MCMC named as enabling tech package of that mechanism (§4.1.8). Oracle contrast and SQL-headcount stats as framing/traction. No separate pricing module asserted. Two domains."
+}

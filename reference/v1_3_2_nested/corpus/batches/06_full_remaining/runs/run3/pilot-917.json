@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open-source users face bugs and missing features without easy support because priorities and knowledge diverge from developers",
+      "status": "explicit",
+      "evidence_span": "mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "id": "P2",
+      "text": "Users place paid incentives from integrated issue-page panels across major trackers",
+      "status": "explicit",
+      "evidence_span": "with two clicks, a user can place an incentive"
+    },
+    {
+      "id": "P3",
+      "text": "Many users can crowdfund one issue; developers can request incentives from a changed panel",
+      "status": "explicit",
+      "evidence_span": "with one click, they can reach out and ask for an incentive or list the issue for crowdfunding"
+    },
+    {
+      "id": "P4",
+      "text": "Integrations cover major issue systems such as Mantis, Jira, Track, and Bugzilla",
+      "status": "explicit",
+      "evidence_span": "integrations for all the major issue systems, like Mantis, Jira, Track, and Bugzilla"
+    },
+    {
+      "id": "P5",
+      "text": "A 6% success fee plus hoster revenue share funds the marketplace",
+      "status": "explicit",
+      "evidence_span": "take a 6% fee for each successful incentive"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Open-source support gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Incentive panel and integrations",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace fees",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "On-demand paid support and feature work through issue incentives",
+      "status": "explicit",
+      "evidence_span": "place incentives for on demand software support"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Issue hosters gain a profit center from the integration",
+      "evidence_span": "turns an issue system into a profit center"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "support can be hard to get"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay or get paid directly from an issue page"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "6% fee for each successful incentive"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Merged bug/support and mismatch into one problem premise. Split integration coverage from crowdfunding UX as separately learnable distribution vs product mechanism. App-store expansion excluded as future focus.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-917",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:27:10+02:00"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-446",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Firms think they share with ~40 vendors but actually share with ~750 and cannot easily track or comply",
+      "status": "explicit",
+      "evidence_span": "The average company thinks they share data with about 40 different companies. But in fact, they share with an astounding 750"
+    },
+    {
+      "id": "P2",
+      "text": "Osano scores vendors on privacy practices using a proprietary multi-thousand-vendor dataset",
+      "status": "explicit",
+      "evidence_span": "Osano assigns an objective score to each vendor, making it easy for companies to identify where they have risk"
+    },
+    {
+      "id": "P3",
+      "text": "One-line managed cookie consent enforces multi-country compliant dialogues in native languages",
+      "status": "explicit",
+      "evidence_span": "with one line of code, websites can immediately become compliant with the laws of 40 different countries"
+    },
+    {
+      "id": "P4",
+      "text": "A developer API embeds privacy into apps and workflows",
+      "status": "explicit",
+      "evidence_span": "Asono offers a developer API so that developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "id": "P5",
+      "text": "Osano aims at the 90% of companies not served by expensive hard-to-use incumbents",
+      "status": "explicit",
+      "evidence_span": "Osana was targeting the 90 percent of companies who are not served by the expensive point solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hidden vendor sharing risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Privacy compliance product suite",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Mass-market vs OneTrust wedge",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy identification of vendor privacy risk and compliance with GDPR-class laws",
+      "status": "explicit",
+      "evidence_span": "makes it easy for companies to identify which vendors are best to work with, to comply with laws like GDPR, California's privacy law"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Data privacy and compliance used to be a complicated manual process. Osano makes it easy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "OneTrust is expensive and it's hard to use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "GDPR era-ending line treated as institutional framing this run, not a separate premise; P1 carries the compliance-need condition. Lawsuit/policy browsing folded into vendor scoring (§4.1(5)). User-count traction and team bios excluded. Singletons D1/D3 justified."
+}

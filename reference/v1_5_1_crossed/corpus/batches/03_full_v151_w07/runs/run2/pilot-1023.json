@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1023",
+    "coder_session_id": "session_02",
+    "session_case_index": 6,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Helping family or friends pay bills via cash and check creates last-mile diversion risk and no visibility into co-payers",
+      "status": "explicit",
+      "evidence_span": "Once I give them that money, it may not end up at its intended destination"
+    },
+    {
+      "id": "P2",
+      "text": "People can share a bill and contribute toward it with money going directly to the biller without requiring accounts",
+      "status": "explicit",
+      "evidence_span": "collaborate and contribute towards a bill with the money going directly to the biller"
+    },
+    {
+      "id": "P3",
+      "text": "Merchant integrations such as Amazon let groups split purchases with funds released when everyone has paid",
+      "status": "explicit",
+      "evidence_span": "you can add an item from Amazon directly into Paytap"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution via web, Facebook, and mobile apps plus billers and merchants offering PayTap to users",
+      "status": "explicit",
+      "evidence_span": "we're allowing billers and online merchants to offer Paytap to their users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "shared bill last-mile problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "direct-to-biller collaboration",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "biller and app distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Family and friends collaboratively pay shared bills without stress, steps, or diversion risk",
+      "status": "explicit",
+      "evidence_span": "We take out the stress, the steps, and all the hassle involved in making payments"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Problem is last mile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "money going directly to the biller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "billers and online merchants to offer Paytap to their users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cash/check hassle, diversion, and co-payer blindness folded as one problem (§4.1.6). No-account flow, payment methods, FDIC/privacy, alerts, recurring, and private mode folded into collaborative direct-pay cascade (§4.1.7). Amazon split kept as merchant module within product domain. P2P alternatives contrast is value framing. Anti-template: problem, product, and distribution separately revisable."
+}

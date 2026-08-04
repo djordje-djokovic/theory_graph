@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bicycle theft is a large worldwide problem with major insurance damage",
+      "status": "explicit",
+      "evidence_span": "Bicycle theft is a huge problem worldwide, with over 5.7 billion euros of stolen bicycles every year"
+    },
+    {
+      "id": "P2",
+      "text": "Existing keyless locks and tracking devices have not been integrated into one smart lock",
+      "status": "explicit",
+      "evidence_span": "There are some keyless locks, and then there are some tracking devices. But they haven't been integrated really"
+    },
+    {
+      "id": "P3",
+      "text": "A truly smart lock needs alarm, security, GPS trackability, and a keyless mechanism",
+      "status": "explicit",
+      "evidence_span": "It has to have an alarm. It has to be secure. And it has to be GPS trackable"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-sensor suite detects saw/drill, impact, torch/cold spray, light intrusion, and cable cuts",
+      "status": "explicit",
+      "evidence_span": "we added a vibration switch"
+    },
+    {
+      "id": "P5",
+      "text": "Built-in GPS tracker locates the bike if stolen",
+      "status": "explicit",
+      "evidence_span": "if your bicycle actually gets stolen, we have a tracker, a GPS tracker that no other bicycle lock has"
+    },
+    {
+      "id": "P6",
+      "text": "App enables alarm, push/email/SMS alerts, and locates the lock",
+      "status": "explicit",
+      "evidence_span": "if my thief tries to tamper with it, it switches on the alarm. And I will shortly get a push notification"
+    },
+    {
+      "id": "P7",
+      "text": "Owners can share or rent bikes (and rent locks) for connected mobility without city infrastructure",
+      "status": "explicit",
+      "evidence_span": "if you want to make money with your bike, you can rent your bike out to whoever you want"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bike theft and unintegrated locks",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smart lock sensors and tracking",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Bike sharing and rental layer",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Secure bikes with a keyless smart lock that alarms, tracks, and enables sharing",
+      "status": "explicit",
+      "evidence_span": "how can we make a truly smart lock that we could use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Bicycle theft is a huge problem worldwide"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Lock8 is truly revolutionary"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can share bikes easily with anyone that we want"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D3 retained: sharing/rental is presented as a distinct value path beyond theft prevention. Sensor list treated as one anti-tamper mechanism (P4).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-903",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-526",
+    "coder_session_id": "session_02",
+    "session_case_index": 24,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Multimodal overseas shipment visibility consolidates transport-provider API/EDI data with independent satellite/GPS/IoT tracking because consolidation alone is limited in data quality",
+      "status": "explicit",
+      "evidence_span": "consolidation alone is limited in terms of data quality. So we pair providers' information with real-time and reliable tracking"
+    },
+    {
+      "id": "P2",
+      "text": "Data science predicts arrival times using external factors (traffic/events) and sends smartphone alerts to ops teams when delays exceed a threshold",
+      "status": "explicit",
+      "evidence_span": "we use data science to predict times of arrival by taking into account external factors like real-time traffic or events. And we send alerts to operational teams directly to their smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Analytics objectify carrier/shipment performance with the goal of reducing transit time and financed inventory",
+      "status": "explicit",
+      "evidence_span": "the analytics feature objectifies performance. The goal is to reduce, as much as possible, the transit time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Multimodal tracking data consolidation",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Predictive ETA alerts",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Transit performance analytics",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shift supply chains from reactive to predictive—anticipation, reliability (lower safety inventory), and proactive customer information",
+      "status": "explicit",
+      "evidence_span": "We change the supply chain from reactive to predictive"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It consolidates multiple transport providers into one single stream"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anticipation, to secure production lines by sending alerts to operational teams"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reliability, to reduce safety inventories and save up to several million euros a year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-sentence (truncated). Tracking vs predictive alerts vs analytics split as distinct value mechanisms (enumeration rule 2). Hardware disclaimer folded into software tracking premise. Traction/customer counts excluded."
+}

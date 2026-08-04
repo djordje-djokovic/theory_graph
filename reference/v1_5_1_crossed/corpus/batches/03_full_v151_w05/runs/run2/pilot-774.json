@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-774",
+    "coder_session_id": "session_02",
+    "session_case_index": 2,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A cloud-based phone system replaces legacy desk phone hardware with software",
+      "status": "explicit",
+      "evidence_span": "Airco is a cloud-based phone system that replaces really the legacy phone system"
+    },
+    {
+      "id": "P2",
+      "text": "The system connects with CRM, help desk, BI, and other business tools so customer conversations stay recorded in the tools companies already use",
+      "status": "explicit",
+      "evidence_span": "Airco connects with all the tools companies are using"
+    },
+    {
+      "id": "P3",
+      "text": "The phone system is simple enough that anyone can set it up anywhere and talk to customers",
+      "status": "explicit",
+      "evidence_span": "Airco is simple to set up, can be set up by anyone in the world"
+    },
+    {
+      "id": "P4",
+      "text": "An integrations marketplace lets Airco and partners build dozens of integrations on top of the phone system",
+      "status": "explicit",
+      "evidence_span": "the first phone system in the world creating their marketplace. We have now created more than 50 integrations"
+    },
+    {
+      "id": "P5",
+      "text": "Recording and unifying conversation data across tools lets teams know the customer and improve daily work",
+      "status": "explicit",
+      "evidence_span": "having you be able to know your customer, record all the conversation, and be able to improve your daily work"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cloud phone system product",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "voice integrations marketplace",
+      "premise_ids": ["P2", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses can run customer conversations on a modern phone system that keeps context in their existing tools",
+      "status": "explicit",
+      "evidence_span": "serving 4,000 businesses with their phone system every day to make them work with their customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We replace that. We make it a software"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are creating an ecosystem for voice"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Battlefield update pitch is traction- and fundraising-heavy; headcount, countries, ARR, and raise amounts excluded per 4.2. Coded continuing product mechanisms around cloud phone + marketplace integrations."
+}

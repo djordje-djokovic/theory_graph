@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About 40% of bees die yearly from pesticides, parasites, and disease, threatening food pollination and a $20B beekeeping industry",
+      "status": "explicit",
+      "evidence_span": "Every year, we lose about 40% of our bees because of pesticides, parasites, and diseases"
+    },
+    {
+      "id": "P2",
+      "text": "Manual hive-by-hive inspection at commercial scale is overwhelming, so problems are found too late",
+      "status": "explicit",
+      "evidence_span": "they have to physically go to every single one of them and open them up to look inside. Now, take this and scale it to a thousand hive operation spread around several locations. It quickly becomes overwhelming and inefficient"
+    },
+    {
+      "id": "P3",
+      "text": "Sensor and AI beehive management platform lets keepers remotely track hive health and behavior to prevent disease",
+      "status": "explicit",
+      "evidence_span": "beehive management platform using sensors and AI. With Nectar, the beekeepers can remotely follow their hive status in terms of health and behavior in order to improve their decision-making process and really prevent diseases instead of reacting to them"
+    },
+    {
+      "id": "P4",
+      "text": "In-hive sensors translate temperature, humidity, bee sound signals, weight, and geolocation into a human interface",
+      "status": "explicit",
+      "evidence_span": "install our sensor devices in the hive, and we translate its temperature, humidity, sound frequencies, or really the signals that the bees send each other, the weight of the hive and its geolocation, and translate it into an interface understandable by us humans"
+    },
+    {
+      "id": "P5",
+      "text": "Differentiation is affordable analytics rather than expensive raw data",
+      "status": "explicit",
+      "evidence_span": "We offer affordable analytics instead of expensive raw data"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue comes from three plans bundling one to three analytic packages on crucial hive places",
+      "status": "explicit",
+      "evidence_span": "We offer three different plans with a choice of one, two, or three analytic packages in order to really follow specific places in the hive that are crucial for beekeepers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bee mortality and inspection failure",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor-AI hive monitoring platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Analytic-package subscription plans",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More profitable apiaries through healthier hives and better beekeeper decisions",
+      "status": "explicit",
+      "evidence_span": "This will lead our clients to have a more profitable apiary"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Sustainable and efficient pollination services via empowered beekeepers",
+      "evidence_span": "empowering beekeepers to provide sustainable and efficient pollination services"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "beekeepers are struggling to keep their bees alive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prevent diseases instead of reacting to them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is how we've built our revenue model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Hive-save counts and connected-hive traction excluded; queen-issue detection treated as illustration of the monitoring mechanism inside D2 notes rather than a separate premise. Mission/pollination sustainability captured as secondary value.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-145",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

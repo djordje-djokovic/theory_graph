@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Furniture shopping is high risk because buyers cannot see how items will look in their own home; existing 3D tools are too hard, expensive, or slow for homeowners (<1% use)",
+      "status": "explicit",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "id": "P2",
+      "text": "Inside Maps lets anyone create a home 3D model with a smartphone by guided wall photos plus IMU data, then place catalog furniture, measure, collaborate with sticky notes, and share browser links",
+      "status": "explicit",
+      "evidence_span": "the only homeowner-friendly solution that allows anyone to create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Multi-image point clouds processed in minutes on GPU cloud detect structure and render photorealistic WebGL models including color/texture/materials",
+      "status": "explicit",
+      "evidence_span": "we're able to do this in a few minutes using GPU compute power on the cloud"
+    },
+    {
+      "id": "P4",
+      "text": "Business connects retailers with homeowners so retailers upsell, reach new customers, and lower returns",
+      "status": "explicit",
+      "evidence_span": "Our business opportunity is to connect retailers with homeowners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "risky furniture visualization gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smartphone home 3D modeling",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retailer-homeowner connection",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Home becomes the ultimate showroom so people can shop furniture confidently seeing items in their own space",
+      "status": "explicit",
+      "evidence_span": "your home becomes the ultimate showroom, that your home becomes the ideal place to shop for furniture"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard to see how something that you choose online or even in a retail store will look in your own home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "takes a sofa from the Crate and Barrel catalog and puts it in her living room"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make them more money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hard/expensive/slow commercial 3D tools folded into the homeowner problem (§4.1.6). Capture, place furniture, measure, design boards, email/sticky collaboration folded as app cascade (§4.1.7); photoreal GPU reconstruction kept as enabling tech of that model. Top-10 retailer deal treated as traction evidence for retailer GTM premise. $50B market framing excluded. Three domains; not a need/product/money triad."
+}

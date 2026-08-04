@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-714",
+    "coder_session_id": "session_06",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People need advice, jobs, and opportunities beyond the limits of their social graphs and beyond today's narrow bots",
+      "status": "explicit",
+      "evidence_span": "even the most well-connected of us are severely limited in our reach via our social graphs"
+    },
+    {
+      "id": "P2",
+      "text": "Sensei is one messenger contact that matches users to humans via NLP understanding of need and a match-and-dispatch algorithm",
+      "status": "explicit",
+      "evidence_span": "Sensei is one contact with the experience of millions of people"
+    },
+    {
+      "id": "P3",
+      "text": "Cross-platform anonymous-by-default chats include ratings and tipping as a transactional conversation marketplace",
+      "status": "explicit",
+      "evidence_span": "It's a conversation marketplace in which users transact and chat commerce"
+    },
+    {
+      "id": "P4",
+      "text": "Availability spans major messengers and is expanding globally into Line, WeChat, and Skype",
+      "status": "explicit",
+      "evidence_span": "Sensei is going global, launching in line, WeChat, and Skype in beta"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "limited social-graph human help",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "human match messenger marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "cross-platform global messenger presence",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Chat with awesome humans you do not know for advice, referrals, opportunities, and jobs",
+      "status": "explicit",
+      "evidence_span": "We need to chat with awesome humans that we don't know"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what we really need is human conversation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sensei will match you with an awesome human to chat with"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sensei is also available in Kik, Telegram, and in text message"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "NLP, match/dispatch, real-time indexing, anonymity, ratings, and tipping folded as facets of one conversation-marketplace mechanism where tightly chained; tipping/rating kept inside marketplace commercial surface (§4.1.7). Community size/response-time metrics excluded as traction. Anti-template: need, marketplace product, and messenger GTM separately revisable."
+}

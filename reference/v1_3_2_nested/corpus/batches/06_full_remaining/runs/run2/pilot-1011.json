@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Gift cards are lost, stolen, or forgotten, creating large unspent balances bad for consumers and retailers",
+      "status": "explicit",
+      "evidence_span": "$20 billion in unspent gift cards every year? And that's because your gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "id": "P2",
+      "text": "App uploads plastic cards to a cloud-backed phone wallet with balance verification and barcode or scratch redemption",
+      "status": "explicit",
+      "evidence_span": "Uploading a card to GIFT is simple"
+    },
+    {
+      "id": "P3",
+      "text": "Users buy and send personalized gift cards via Facebook, email, or text with merchant suggestions and event notifications",
+      "status": "explicit",
+      "evidence_span": "seamlessly integrated with Facebook for convenience around sending gift cards to friends and family"
+    },
+    {
+      "id": "P4",
+      "text": "Recipients on any phone type can open and use cards; unwanted cards can be regifted",
+      "status": "explicit",
+      "evidence_span": "we're unveiling a special feature today where you can regift unwanted cards to your friends"
+    },
+    {
+      "id": "P5",
+      "text": "National retail partners plus future open APIs let retailers and developers build on the wallet",
+      "status": "explicit",
+      "evidence_span": "enabling both retailers and developers to leverage our open APIs and build on top of our platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unspent plastic gift card problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social mobile gift wallet",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retail partners and open platform",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify gift-card life by managing, sending, receiving, and redeeming from a phone",
+      "status": "explicit",
+      "evidence_span": "GIFT is here to simplify your life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make gift cards fun and social",
+      "evidence_span": "We're making gift cards fun, and we're making gift cards social"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lost, stolen, or forgotten"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage all your gift card needs right from your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "largest mobile gift card store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Independent run: partners and open APIs one distribution premise. Funding and giveaways excluded. Personalization engine inside send flow.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1011",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

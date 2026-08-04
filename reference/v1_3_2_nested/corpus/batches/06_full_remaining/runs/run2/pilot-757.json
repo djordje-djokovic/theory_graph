@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Building machine learning products is hard and expensive due to PhDs, hardware, and data access",
+      "status": "explicit",
+      "evidence_span": "building machine learning startups is hard and expensive. Hiring PhDs, hardware, getting access to data, all of this stuff takes resources"
+    },
+    {
+      "id": "P2",
+      "text": "AI product for customer service supports high message volumes and can handle most incoming volume for some companies",
+      "status": "explicit",
+      "evidence_span": "some companies are using this software, this AI software, to support more than 80% of all of their incoming message volume"
+    },
+    {
+      "id": "P3",
+      "text": "Cutting-edge research is accelerated into practical contact-center product reality",
+      "status": "explicit",
+      "evidence_span": "further accelerate the adoption of cutting-edge research and making it into a practical product reality, in our case, inside a contact center"
+    },
+    {
+      "id": "P4",
+      "text": "AI helps individual agents and their managers inside contact centers",
+      "status": "explicit",
+      "evidence_span": "AI and machine learning is helping individual agents inside the contact center. It's helping their managers do a better job on the whole"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard ML productization",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Contact-center agent assist",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better experiences by combining human and machine intelligence seamlessly",
+      "status": "explicit",
+      "evidence_span": "combining the best of human and machine intelligence in a seamless experience, we can really help create better experiences"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it into a practical product reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowering their customer service agents in the trenches to be more effective"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Million-dollar check and office headcount excluded. Messaging platforms folded into agent-assist value path rather than separate GTM domain. 80% volume figure used as capability condition, not pure traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-757",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

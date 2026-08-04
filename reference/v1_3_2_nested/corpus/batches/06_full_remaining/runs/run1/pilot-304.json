@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-304",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cancer patients at home between treatments lack monitoring of blood counts and vitals, so infections cause hospitalizations and delay chemo",
+      "status": "explicit",
+      "evidence_span": "50% of cancer patients undergoing treatment suffer from low white blood cell counts that lead to an infection and a delay in cancer-fighting treatment"
+    },
+    {
+      "id": "P2",
+      "text": "Current at-home monitoring methods miss critical health information",
+      "status": "explicit",
+      "evidence_span": "Current methods of monitoring patients at home are missing critical health information"
+    },
+    {
+      "id": "P3",
+      "text": "NextGen Port is an implanted smart chemo port that detects early infection signs by measuring blood cell counts, heart function, and vitals via microelectronics and optical sensors",
+      "status": "explicit",
+      "evidence_span": "NextGen Port is the first of its kind implanted smart port that detects early signs of infection by measuring changes in blood cell counts, heart function, and vitals"
+    },
+    {
+      "id": "P4",
+      "text": "Between treatments, machine-learning software watches longitudinal data for health-status changes before symptoms emerge",
+      "status": "explicit",
+      "evidence_span": "our software uses machine learning to look for changes in health status before symptoms emerge"
+    },
+    {
+      "id": "P5",
+      "text": "Findings reach physicians through an API integrated with electronic medical records so they can act before hospitalization",
+      "status": "explicit",
+      "evidence_span": "We analyze the longitudinal data and pass the findings on to physicians through an API integrated with their electronic medical records"
+    },
+    {
+      "id": "P6",
+      "text": "Unlike wearables and clinic lab tests, the implanted port gathers blood and vitals data continuously without extra patient burden",
+      "status": "explicit",
+      "evidence_span": "Wearables can't track blood and they have low levels of patient engagement. Lab tests can measure blood, but require patients to drive to clinic"
+    },
+    {
+      "id": "P7",
+      "text": "Go-to-market is selling the technology to port manufacturers with a clear FDA 510(k) and reimbursement roadmap",
+      "status": "explicit",
+      "evidence_span": "GoToMarket focuses on selling the technology to port manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missed at-home infection risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart port sensing and ML alerts",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Port-manufacturer GTM and regulatory path",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Early detection of infection risk at home so physicians can deliver life-saving care before hospitalization",
+      "status": "explicit",
+      "evidence_span": "detect early signs of infection before they even had symptoms"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save over a billion dollars by avoiding preventable hospitalizations",
+      "evidence_span": "save over a billion dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Our advanced warning alerts physicians to changes in health status so they can take action and deliver life-saving care"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "up to 50% of hospitalizations can be avoided with early detection"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detects early signs of infection by measuring changes in blood cell counts, heart function, and vitals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the technology to port manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Patents/CPT/FDA details folded into GTM-regulatory premise (§4.1(1)/(5)). Future dialysis/cardiac platform extensions not coded as separate premises (vision/roadmap). Team credentials and accelerator investments excluded. Singleton D3 justified as separately revisable commercialization module."
+}

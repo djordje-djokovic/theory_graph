@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Depression care is blocked by stigma, distrust, wait lists, and trial-and-error prescribing without good biomarkers",
+      "status": "explicit",
+      "evidence_span": "The big problem in mental health care is that there are no good biomarkers that exist today"
+    },
+    {
+      "id": "P2",
+      "text": "Circular RNA is stable and predictive enough to measure in blood for mental-health precision medicine",
+      "status": "explicit",
+      "evidence_span": "It's a better way to help clinicians provide precision medicine leading to improved patient outcomes"
+    },
+    {
+      "id": "P3",
+      "text": "Company lab builds a molecular circRNA profile from blood to assess depression and likely medication response",
+      "status": "explicit",
+      "evidence_span": "We can create a molecular profile of these circular RNAs and their expression changes, and we can run it through our analytical pipeline"
+    },
+    {
+      "id": "P4",
+      "text": "Primary care, telemedicine, and urgent care channels need faster depression diagnosis workflows",
+      "status": "explicit",
+      "evidence_span": "All of these channels struggle with treating patients in a timely manner and have very difficult times working through the clinical diagnosis of depression"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken depression care pathway",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "circRNA molecular profiling",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring precision medicine to mental health diagnostics and therapeutics",
+      "status": "explicit",
+      "evidence_span": "bring precision medicine to mental health diagnostics and therapeutics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce clinic wait lists and improve patient experience in high-volume channels",
+      "evidence_span": "improve their workflow, increase their volume, reduce those wait lists, and provide the patient a better experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Circular RNAs are a biomarker. They're stable, predictive, and can be measured in bodily fluids, including your blood"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "struggle with treating patients in a timely manner"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "precision medicine leading to improved patient outcomes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Two-domain partition: care-pathway frictions (including channel pain) vs biomarker platform. Channel list treated as part of care-pathway module rather than separate GTM singleton.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-239",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

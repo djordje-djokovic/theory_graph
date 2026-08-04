@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-724",
+    "coder_session_id": "session_02",
+    "session_case_index": 7,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Managing a digital life across many apps and connected devices by constantly checking a phone is a poor way to get timely information",
+      "status": "explicit",
+      "evidence_span": "There should be a nicer way to communicate with technology rather than checking your phone every single minute"
+    },
+    {
+      "id": "P2",
+      "text": "Glance Clock is a wall clock with glanceable geometric display, speaker, and open cloud platform that shows relevant data from wearables, connected devices, and web services",
+      "status": "explicit",
+      "evidence_span": "a well-designed wall clock with embedded glanceable display, built-in speaker, and open cloud platform"
+    },
+    {
+      "id": "P3",
+      "text": "Glance Cloud integrates via open APIs, analyzes what/when/where to show, and can tailor data by clock location after simple phone pairing",
+      "status": "explicit",
+      "evidence_span": "Glance Cloud will analyze this data and understand what information, when, and where to display"
+    },
+    {
+      "id": "P4",
+      "text": "Market entry via Indiegogo then web pre-orders and retail at about $149, with interchangeable frames for home or office",
+      "status": "explicit",
+      "evidence_span": "the estimated price will be just $149 for a single device"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "phone-checking information overload",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "glanceable clock and cloud integrations",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "crowdfund retail pricing and frames",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Needed information read quickly at a glance without disrupting current tasks",
+      "status": "explicit",
+      "evidence_span": "read information quickly at a glance without being disrupted from your current tasks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "checking your phone every single minute"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shows you information from your wearables, connected devices, and web services right at the moment you need it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will go to retail after the successful shipping"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Sleep/weather/calendar demo uses folded as applications of one glanceable integration mechanism (§4.1.2/7). Team bios and community count excluded. Singleton D1/D3 retained. Anti-template: problem, product/cloud, and GTM pricing are separately revisable."
+}

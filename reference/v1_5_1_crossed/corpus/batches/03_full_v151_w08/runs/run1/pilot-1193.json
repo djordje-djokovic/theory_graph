@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "RedBeacon lets consumers request local services and book online with price quotes and appointment times for transparency and convenience",
+      "status": "explicit",
+      "evidence_span": "a website where you can request virtually any kind of local service"
+    },
+    {
+      "id": "P2",
+      "text": "Charge service providers only when a consumer books and work is done—full pay-for-performance eases marketplace chicken-and-egg",
+      "status": "explicit",
+      "evidence_span": "we're only going to charge businesses if a consumer books the job with them and actually does work"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers need richer trust info before booking: friends/family, references, web ratings/reviews, background checks—so product must be more social",
+      "status": "explicit",
+      "evidence_span": "consumers actually needed a lot more information than we thought they would before they'll book a job online"
+    },
+    {
+      "id": "P4",
+      "text": "Geographic expansion beyond Bay Area pilot (e.g., Seattle) with high-quality provider acquisition",
+      "status": "explicit",
+      "evidence_span": "we're starting a geographic expansion"
+    },
+    {
+      "id": "P5",
+      "text": "Embeddable widget distributes the provider network to any site with customizable occupations/look and generous revenue share",
+      "status": "explicit",
+      "evidence_span": "creating an embeddable widget which basically makes our high-quality service provider network available to any website"
+    },
+    {
+      "id": "P6",
+      "text": "Partner media sites can mark recommended providers and get dashboards of requests/jobs/revenue",
+      "status": "explicit",
+      "evidence_span": "this is an advertiser or this is a service provider that we personally recommend"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "local services booking marketplace",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "geo expansion",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "widget distribution partnerships",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy, transparent online booking of local services with trusted providers",
+      "status": "explicit",
+      "evidence_span": "increase the price transparency and make it very easy to schedule jobs online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "that's why we think it was really easy to sign up service providers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incredibly convenient"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Red Beacon is open in Seattle now"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes our high-quality service provider network available to any website"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "TC50 winner/fundraising/bootstrap lesson mostly traction/process—bootstrap coded only insofar as product-iteration framing; funding excluded (§4.2). Three lessons: pay-for-performance, trust info, and scale readiness—last is process not premise. Widget customization demo cascade folded into widget premise. Media partner names are traction evidence for widget GTM. Singleton D2: geo expansion independently revisable module. Anti-template: marketplace core, geo, widget GTM separately revisable.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1193",
+    "coder_session_id": "session_04",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

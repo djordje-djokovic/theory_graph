@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-424",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:22:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators face unfair demonetization, shifting upload rules, and lack of support on existing platforms",
+      "status": "explicit",
+      "evidence_span": "you're consistently being demonetized for difficult to diagnose and really hard to change ways"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers face irrelevant ads and abusive comment sections that block support for creators",
+      "status": "explicit",
+      "evidence_span": "you're being inundated with irrelevant and irritating advertising"
+    },
+    {
+      "id": "P3",
+      "text": "Watch is a creator-first video-sharing platform that includes creators in technology, commercial, and leadership strategy",
+      "status": "explicit",
+      "evidence_span": "We are a creator-first, video-sharing platform, rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    },
+    {
+      "id": "P4",
+      "text": "Kubernetes backend, high-volume processing, moderation plus Watchdog human endorsement, and an interestingness algorithm deliver scalable, safe, relevant content",
+      "status": "explicit",
+      "evidence_span": "we've built our entire back end upon a system called Kubernetes, which allows us to scale down to really, really low amounts of costs"
+    },
+    {
+      "id": "P5",
+      "text": "Creator Hub turns analytics into faces with actionable guidance for creators",
+      "status": "explicit",
+      "evidence_span": "on watch, you'll see exactly who makes up your audience and actionable queries and statements that will help you to be a better creator"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue via creator-driven Super Sub micro-subscriptions and creator-controlled advertising",
+      "status": "explicit",
+      "evidence_span": "We have two main mechanisms. Super sub, which is a creator-driven micro subscription model, and advertising, a more traditional method that the creator controls"
+    },
+    {
+      "id": "P7",
+      "text": "Go-to-market focuses on emerging markets with exclusive content from influential creators",
+      "status": "explicit",
+      "evidence_span": "We are focusing on the emerging markets, South America, Russia, the Middle East, and India"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Creator and consumer platform unfairness",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Creator-first platform product and tech",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and emerging-market GTM",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reward and empower creators while giving consumers a more social, safe video experience",
+      "status": "explicit",
+      "evidence_span": "rewarding and empowering creators while creating a more social, safe experience for the consumer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you've worked for years building up a loyal audience, and yet you're being treated in a way that doesn't seem fair"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are a creator-first, video-sharing platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Super sub, which is a creator-driven micro subscription model, and advertising"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Creator pain facets folded into P1; consumer pains into P2. Kubernetes/pipeline/moderation/algorithm treated as one scalable safe-platform tech package (feature cascade of the platform backend). UI demo details folded into product premises. Traction, Channel 4, and investor bios excluded. Anti-template note: problem / product / money partition justified as separately revisable unfairness diagnosis, product stack, and monetization+GTM."
+}

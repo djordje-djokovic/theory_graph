@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Music being treated as free has crushed artist income from streams",
+      "status": "explicit",
+      "evidence_span": "assuming music is or should be free. And this has made it very hard for artists to make a living today"
+    },
+    {
+      "id": "P2",
+      "text": "Spacebar streams unique live performances to phones with paid access and one-button artist broadcast",
+      "status": "explicit",
+      "evidence_span": "There is more live music happening around the world in any given week than in all the catalog of Spotify. This is original, unique content"
+    },
+    {
+      "id": "P3",
+      "text": "Stream data doubles as business intelligence for tours and venue booking",
+      "status": "explicit",
+      "evidence_span": "It's business intelligence that will help venues book the hottest new acts"
+    },
+    {
+      "id": "P4",
+      "text": "Influential clubs and Backplane communities are the go-to-market channel for inventory and scale",
+      "status": "explicit",
+      "evidence_span": "launch Space Bar from some of the most influential clubs in New York City"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Artist living and fan support",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Live streaming platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Clubs and Backplane",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect musicians with fans through a mobile platform for direct support and remote live listening",
+      "status": "explicit",
+      "evidence_span": "help musicians to better connect with their fans and to build a mobile platform to help those fans that wish to support artists to directly do so"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard for artists to make a living today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Space Bar streams live audio performances to mobile devices"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when superstars take the stage, they can reach out to all of their fans all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Merged preview/price/architecture into live-stream product. BI kept with product as same listenership mechanism. Market-size framing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-935",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:05+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-924",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:04+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Priorities come from inbox, mind, and meetings and must be captured in one place to decide well",
+      "status": "explicit",
+      "evidence_span": "your inbox has priorities, but so do they come out of your mind, and they come out of meetings. You have to get them all in one place"
+    },
+    {
+      "id": "P2",
+      "text": "Email clients alone and task managers alone cannot solve priority management",
+      "status": "explicit",
+      "evidence_span": "email clients have not been able to solve this problem alone, and task managers have not been able to solve this problem alone"
+    },
+    {
+      "id": "P3",
+      "text": "The Handle habit requires capture, triage, plan, and do until important work is complete",
+      "status": "explicit",
+      "evidence_span": "We call this the handle habit"
+    },
+    {
+      "id": "P4",
+      "text": "A priority engine with mobile capture and a keyboard handlebar enables fast email and priority triage",
+      "status": "explicit",
+      "evidence_span": "we've created a unique element we call the handlebar"
+    },
+    {
+      "id": "P5",
+      "text": "An importance-ordered priority list with calendar blocking and task-linked context supports focused execution without context switching",
+      "status": "explicit",
+      "evidence_span": "Handle's priority list is ordered by importance with must dos at the top"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Handle habit method",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Priority engine product",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Getting the must-do priorities done and doing what feels most important",
+      "status": "explicit",
+      "evidence_span": "getting all the must do things you have to do done that day"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We call this the handle habit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting all the must do things you have to do done that day"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Demo command list (archive, unsubscribe, push to reader, etc.) folded into handlebar triage (§4.1(5)). Family/dinner disruption language treated as value outcome, not premises. Bio/Menlo credentials excluded."
+}

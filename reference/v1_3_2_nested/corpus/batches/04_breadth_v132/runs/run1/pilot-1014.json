@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Food has become more chemistry than biology, with additives linked to harm",
+      "status": "explicit",
+      "evidence_span": "in present day, it's actually become more chemistry than biology"
+    },
+    {
+      "id": "P2",
+      "text": "Calories and fat on the nutrition label are no longer enough to judge a food",
+      "status": "explicit",
+      "evidence_span": "looking at calories and fat, it's just not enough today"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers cannot understand the ingredient lists on packages",
+      "status": "explicit",
+      "evidence_span": "She could barely even pronounce half the stuff in there"
+    },
+    {
+      "id": "P4",
+      "text": "A catalog of over 250,000 products and an encyclopedia of 15,000 professionally researched ingredients back the platform",
+      "status": "explicit",
+      "evidence_span": "We've come out with a catalog with over 250,000 products. We've also created a really huge encyclopedia with 15,000 professionally researched ingredients"
+    },
+    {
+      "id": "P5",
+      "text": "A built-in nutritionist personalizes information to each user's medical and cultural concerns",
+      "status": "explicit",
+      "evidence_span": "a nutritionist and dietitian built into our platform that will actually personalize the information custom to the user based on their medical concerns and cultural concerns"
+    },
+    {
+      "id": "P6",
+      "text": "A food tracker analyzes consumed ingredients with advanced analytics",
+      "status": "explicit",
+      "evidence_span": "a food tracker to actually analyze the components of the food, which are the ingredients, in an advanced analytics form"
+    },
+    {
+      "id": "P7",
+      "text": "Healthcare improves only by educating people to change their behavior",
+      "status": "explicit",
+      "evidence_span": "the only way to adjust people's healthcare is by influencing their behavior. And the only way to influence someone's behavior is by actually educating them and teaching them right choices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nutrition-label opacity",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ingredient data and personalization platform",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Education-driven health thesis",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People know where their food comes from, how it is made, and how it affects their personal health",
+      "status": "explicit",
+      "evidence_span": "you will also know exactly where your food comes from, how it's made, and also how it affects your personal health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Aggregated consumption data could surface common denominators of disease",
+      "evidence_span": "take their analytical information, cross-reference it, and actually find out the common denominator of what may be leading the cause of breast cancer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's just not enough today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalize the information custom to the user"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "educating them and teaching them right choices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Barcode scanning, Disqus discussions, scraped articles, and MyPlate charting folded as features of the platform premises (v1.3.2 4.1(5)); 'worldwide leader' claim treated as vision (4.1(4)); product and ingredient counts kept as detail inside the data-asset premise. Singleton D3: the behavior-change thesis is a separately revisable causal assumption, not a data asset.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1014",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

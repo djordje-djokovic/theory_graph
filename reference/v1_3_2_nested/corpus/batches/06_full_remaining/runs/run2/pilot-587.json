@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Patented shell dissolves in hot water to yield production-quality parts",
+      "status": "explicit",
+      "evidence_span": "That shell material dissolves away, leaving a production quality part"
+    },
+    {
+      "id": "P2",
+      "text": "Process replaces slow CNC and costly molds across materials including metal, rubber, and silicone",
+      "status": "explicit",
+      "evidence_span": "CNCing this part would have taken a week. Collider got it to a green state in a matter of hours"
+    },
+    {
+      "id": "P3",
+      "text": "Orchid prints quickly in a two-shoebox build volume from snap-in cartridges with software handling the run",
+      "status": "explicit",
+      "evidence_span": "Orchid prints at vertical target speeds of 36 centimeters per hour, and our build volume is about the size of two shoeboxes"
+    },
+    {
+      "id": "P4",
+      "text": "No skilled labor or special ventilation; press go after plugging in",
+      "status": "explicit",
+      "evidence_span": "there's no skilled labor or special ventilation required"
+    },
+    {
+      "id": "P5",
+      "text": "First customers are service bureaus and rapid prototyping shops, then medical and automotive manufacturers",
+      "status": "explicit",
+      "evidence_span": "initially targeting service bureaus and rapid prototyping shops, and then we'll look to companies that can benefit from rapid iteration, like medical and automotive manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Orchid dissolvable-shell printing",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Vertical GTM sequence",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Production-quality custom parts faster and cheaper than CNC or molds",
+      "status": "explicit",
+      "evidence_span": "leaving a production quality part"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "five to 60 times faster"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lease a beta today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Truncated opening. Speed/cost comparative claims kept with process. Patent detail folded into shell premise (§4.1(1)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-587",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:40+02:00"
+  }
+}

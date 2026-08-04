@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-210",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:13:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Deskless workers lack employment systems built for their safety, payment, and help needs, and employers lack structure to meet those needs",
+      "status": "explicit",
+      "evidence_span": "Current employment solutions are not actually built for these workers"
+    },
+    {
+      "id": "P2",
+      "text": "Two-way support delivered via text messaging gives deskless workers easy phone access without another app",
+      "status": "explicit",
+      "evidence_span": "Antil delivers through the most accessible technology out there, text messaging"
+    },
+    {
+      "id": "P3",
+      "text": "Auto-resolution replies to FAQs using keyword capture, resolving most inbound questions automatically across many languages",
+      "status": "explicit",
+      "evidence_span": "our auto-resolution feature resolves over 95% of the inbound questions automatically"
+    },
+    {
+      "id": "P4",
+      "text": "Managers can run surveys/campaigns and get summarized results while managing frontline conversation threads",
+      "status": "explicit",
+      "evidence_span": "Managers can also set up a survey or run a campaign and we will summarize the results for you"
+    },
+    {
+      "id": "P5",
+      "text": "Advanced analytics (workplace health score, sentiment/psychometrics) surface disengagement and turnover risk before workers leave",
+      "status": "explicit",
+      "evidence_span": "advanced analytics showing you the workplace health score"
+    },
+    {
+      "id": "P6",
+      "text": "Next product generation integrates via application, API, and existing HR platforms like SAP and messaging apps",
+      "status": "explicit",
+      "evidence_span": "integration into the existing HR platforms like SAP and messaging applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "deskless worker support gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS two-way support portal",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "turnover analytics",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "HR platform integrations",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bridge employees and employers to improve deskless-worker retention and connection",
+      "status": "explicit",
+      "evidence_span": "Our goal is to improve retention across your organization"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Inclusive connectivity and access for the entire deskless workforce",
+      "evidence_span": "Entel provides a complete inclusivity of the entire workforce"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when these workers are not heard, they just leave"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creating a bridge between them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pinpoint the driving forces behind those potential turnover"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communicate out of people in a complementary way"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Worker pain facets (safety/payment/help) folded into one need premise with employer-side gap. Listed portal capabilities (FAQ/languages/job data) treated as cascade of SMS portal plus split survey and analytics modules where framed as distinct (Intel Pro). Traction metrics excluded. Predicts turnover folded into P5 analytics."
+}

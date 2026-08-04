@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "On-time payment history is the most important credit-score component, but building it requires prior credit",
+      "status": "explicit",
+      "evidence_span": "in order to build or establish credit, first, you need credit. It's a fundamental catch-22"
+    },
+    {
+      "id": "P2",
+      "text": "Millions lack scores or have subprime credit, making credit expensive and limiting",
+      "status": "explicit",
+      "evidence_span": "one in four Americans do not have a credit score. And 100 million Americans have subprime credit"
+    },
+    {
+      "id": "P3",
+      "text": "Self Lender credit-builder: choose monthly amount and term; payments reported to bureaus; principal returned at end",
+      "status": "explicit",
+      "evidence_span": "Self Lender enables our users to build positive payment history, the most important factor in determining your credit score"
+    },
+    {
+      "id": "P4",
+      "text": "Signup is quick and costs $3 per month",
+      "status": "explicit",
+      "evidence_span": "Signing up with Self Lender is easy, takes less than three minutes, and only costs $3 per month"
+    },
+    {
+      "id": "P5",
+      "text": "Internal payment data unlocks exclusive lending offers such as lower-rate auto loans",
+      "status": "explicit",
+      "evidence_span": "Self Lender uses her payment data internally to offer her exclusive lending opportunities"
+    },
+    {
+      "id": "P6",
+      "text": "Self-lender balance can apply as a one-click car down payment with instant approval path",
+      "status": "explicit",
+      "evidence_span": "with one click, Delores can apply her self-lender balance as a down payment for a car"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Credit-building catch-22 problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Credit-builder savings product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Exclusive lending and down-payment bridge",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build credit, save money, and gain access to affordable financial products",
+      "status": "explicit",
+      "evidence_span": "the new revolutionary way to bill credit, save money, and gain access to affordable financial products"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Self Lender uses her payment data internally to offer her exclusive lending opportunities"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Not having credit is expensive and very limiting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build positive payment history"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use her new credit score to save money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Lifetime savings market math excluded as rhetoric. Credit-union prior art mentioned as model warrant inside P3. §4.1.3: $3/mo with signup ease one commercial premise. ASR bill/build left verbatim in value span.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-872",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:33:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

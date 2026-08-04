@@ -1,0 +1,143 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Workers spend a large fraction of hours on email, and email dominates smartphone time",
+      "status": "explicit",
+      "evidence_span": "You actually spend 28% of your working hours just dealing with your emails every day"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone email still looks like 1980s desktop email with subject lines, metadata, and signatures",
+      "status": "explicit",
+      "evidence_span": "Subject lines, metadata, mailberry signatures. You can't really tell the difference"
+    },
+    {
+      "id": "P3",
+      "text": "Parsing engine turns inbox mail into a bubble conversation view with optional original view",
+      "status": "explicit",
+      "evidence_span": "reformat all your emails into this conversation view so that you can mail like what you do, like text messaging. And you can always switch back to the original view by tapping the bubble"
+    },
+    {
+      "id": "P4",
+      "text": "@mentions assign tasks that appear in a tasks tab for the mentioned person",
+      "status": "explicit",
+      "evidence_span": "mention someone with an at symbol to assign a task. For example, at Jason sent me the deck. And when Jason opens mail time, he will see this mail and also the tasks mentioned in this tab"
+    },
+    {
+      "id": "P5",
+      "text": "Participants can be added or removed like managing a group chat",
+      "status": "explicit",
+      "evidence_span": "You can remove someone from the mail or add someone. As easy as what to do, like managing a group chat"
+    },
+    {
+      "id": "P6",
+      "text": "Length warnings push users to keep emails short enough to read",
+      "status": "explicit",
+      "evidence_span": "Mailtime just told me that it's too long, didn't read. So I should probably get back and make it shorter"
+    },
+    {
+      "id": "P7",
+      "text": "No email content is stored in the cloud; cloud only triggers push on inbox changes",
+      "status": "explicit",
+      "evidence_span": "we don't touch any content. with our cloud. So with our MilkTime Cloud, we just listen to what changes made in your inbox, and then send you a push notification"
+    },
+    {
+      "id": "P8",
+      "text": "First account free; additional accounts $0.99",
+      "status": "explicit",
+      "evidence_span": "free to connect with first email account. We will charge you only $0.99 if you want to connect more email account"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email time and legacy format problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Chat-style mail and collaboration tools",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud-light security model",
+      "premise_ids": [
+        "P7"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Account freemium pricing",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smartphone email that works like messaging",
+      "status": "explicit",
+      "evidence_span": "design email for your smartphone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "email is the most important thing on your smartphone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mail like what you do, like text messaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So it's super safe"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge you only $0.99 if you want to connect more email account"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 splits @mention tasks from participant management (separately failable UI modules) and drops the open-email GTM premise as closer to competitive positioning than a stated value condition. Promo unlimited accounts before tomorrow excluded as event offer.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-866",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

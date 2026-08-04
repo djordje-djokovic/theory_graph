@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-306",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A large share of marketing budgets is wasted on ineffective advertising creative",
+      "status": "explicit",
+      "evidence_span": "25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "id": "P2",
+      "text": "Computer vision turns design elements into data that reveal which creative features drive sales",
+      "status": "explicit",
+      "evidence_span": "OmniKey uses computer vision to quantify design elements into data points"
+    },
+    {
+      "id": "P3",
+      "text": "Generative AI creates personalized ads from those real-time marketing insights",
+      "status": "explicit",
+      "evidence_span": "generate personalized content based on real-time marketing data"
+    },
+    {
+      "id": "P4",
+      "text": "After customer approval, ads launch automatically across ad networks via proprietary platform integrations",
+      "status": "explicit",
+      "evidence_span": "they're automatically launched across all the different platforms"
+    },
+    {
+      "id": "P5",
+      "text": "Brand control is preserved through dashboard approval, creator finishing, and brand-asset guidelines",
+      "status": "explicit",
+      "evidence_span": "OmniKey lets customers harness the power of state-of-art machine learning and generative AI while staying in control"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wasted marketing creative spend",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "data-driven creative analytics and generation",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "approval, brand control, and multi-platform launch",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-generated advertising content that actually drives sales and conversions",
+      "status": "explicit",
+      "evidence_span": "drive your sales to the moon with AI-generated content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Content is the most important factor for growth"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The content we generate actually delivers conversions, actually delivers results because it's backed by real-time marketing data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Once and only once customers explicitly approve the ads are the ads launched"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo feature list (faces, emojis, video length, etc.) folded into P2 as cascade of the analytics mechanism. Creator marketplace and DAM folded into brand-control premise. Revenue and customer counts excluded as traction."
+}

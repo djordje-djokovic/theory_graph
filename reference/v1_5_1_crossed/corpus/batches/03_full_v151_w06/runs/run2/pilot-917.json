@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-917",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open-source and free software is ubiquitous but full of bugs and missing features, and support is hard because users lack time/skill to patch while developers dislike unpaid bug work—a knowledge/priority mismatch",
+      "status": "explicit",
+      "evidence_span": "all this software has two properties in common, which is bugs and missing features"
+    },
+    {
+      "id": "P2",
+      "text": "Integrations on major issue trackers let users place paid incentives on issues in two clicks (multi-user crowdfunding) and let developers request incentives or list for crowdfunding in one click",
+      "status": "explicit",
+      "evidence_span": "allows you to pay or get paid directly from an issue page"
+    },
+    {
+      "id": "P3",
+      "text": "Company takes 6% on successful incentives and shares a fee with issue-system hosters, turning trackers into profit centers",
+      "status": "explicit",
+      "evidence_span": "we take a 6% fee for each successful incentive"
+    },
+    {
+      "id": "P4",
+      "text": "Same incentive panel can expand beyond open source to Apple and Google app stores",
+      "status": "explicit",
+      "evidence_span": "Our next focus would be the Apple and Google app stores"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "open source support mismatch",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "issue-page incentive crowdfunding",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "six percent and hoster fees",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "app store expansion path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get the support or improvements they need and developers get paid for fixing issues",
+      "status": "explicit",
+      "evidence_span": "get the support you really need or where it's easy to get something improved"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Add monetization to the open-source market",
+      "evidence_span": "adding a monetization element to the entire open source market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay or get paid directly from an issue page"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turns an issue system into a profit center"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not at all limited to open source"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "OS ubiquity examples folded as framing; bugs/missing features + hard support + developer mismatch as one problem (§4.1.6). Tracker integrations, user incentive flow, and developer ask/list folded as one issue-page mechanism (§4.1.7). Market-size ambition framing excluded. ASR 'book' for bug left in spans where present. Four-domain partition; not a need/product/money triad."
+}

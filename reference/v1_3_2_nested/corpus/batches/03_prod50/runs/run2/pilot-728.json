@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robotic arms should expand beyond factory car assembly to many applications",
+      "status": "explicit",
+      "evidence_span": "when you think about robotic arms, you probably picture a factory, probably assembling cars. But robotic arms can be used for so much more"
+    },
+    {
+      "id": "P2",
+      "text": "Casio is priced like a laptop while matching industrial capability",
+      "status": "explicit",
+      "evidence_span": "Casio has the capabilities of an industrial arm, but the price of a laptop"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware delivers kilogram-scale reach, sub-mm precision, carbon fiber, and strong onboard compute",
+      "status": "explicit",
+      "evidence_span": "Cassia can move over one kilogram anywhere within a one-meter work envelope with sub-millimeter precision. She has a carbon fiber frame, brushless DC muscles, and more raw processing power than most of the computers in this room"
+    },
+    {
+      "id": "P4",
+      "text": "End-effector swapping makes the arm infinitely customizable",
+      "status": "explicit",
+      "evidence_span": "Casio is infinitely customizable. You can transform Casio into a completely different tool just by swapping the attachments at the end"
+    },
+    {
+      "id": "P5",
+      "text": "Training requires no advanced degree—guide-and-playback or consumer devices suffice",
+      "status": "explicit",
+      "evidence_span": "You generally need an advanced degree just to get started. We've made Casio incredibly easy to train"
+    },
+    {
+      "id": "P6",
+      "text": "Built-in whole-surface human proximity sensing makes the arm safe around people",
+      "status": "explicit",
+      "evidence_span": "We've built this into every surface of Cassia's housing. This makes her the safest robustic arm that has ever been made"
+    },
+    {
+      "id": "P7",
+      "text": "Sub-$5,000 pricing is the adoption tipping point across industries",
+      "status": "explicit",
+      "evidence_span": "a sub $5,000 arm is the holy grail of robotics. This is the tipping point where massive adoption across a range of industries becomes inevitable"
+    },
+    {
+      "id": "P8",
+      "text": "API developer platform removes hardware-skill barriers for builders",
+      "status": "explicit",
+      "evidence_span": "Our APIs cut the complexity, so if you can build a website, you can code for Cassia"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Personal industrial arm product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P7"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ease of use and safety",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Software developer platform",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Democratized personal robotic arms for makers and new applications",
+      "status": "explicit",
+      "evidence_span": "tools that are industrial and expensive becoming personal, ubiquitous, democratized"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Casio has the capabilities of an industrial arm, but the price of a laptop"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't need any special skills to get started"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've made Cassia a developer platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Soft count at 8. Separated SRI price tipping point as commercial adoption condition. Truncated ending noted.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-728",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

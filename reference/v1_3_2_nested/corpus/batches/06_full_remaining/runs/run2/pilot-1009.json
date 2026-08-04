@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1009",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:12:09+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After trying to make HTML5 performant, the team concluded browser flaws block demos like theirs at this time",
+      "status": "explicit",
+      "evidence_span": "after a year and a half, we actually realized that it's not possible at this given time"
+    },
+    {
+      "id": "P2",
+      "text": "Game engineers already solved 2D/3D performance; Famo.us invents by asking whether a game engine can be an app engine",
+      "status": "explicit",
+      "evidence_span": "There's another industry of engineers who've already solved performance in both 3D and 2D, game engineers"
+    },
+    {
+      "id": "P3",
+      "text": "Implementation bypasses inefficient browser layers for a direct GPU conversation that ports to every GPU device",
+      "status": "explicit",
+      "evidence_span": "we found a way to bypass all of the inefficient things that exist in any browser, the stuff that's holding HTML5 back"
+    },
+    {
+      "id": "P4",
+      "text": "Success requires bridging 2D and 3D so switching is merely a settings option, democratizing 3D development like WordPress",
+      "status": "explicit",
+      "evidence_span": "we won't succeed unless we build a bridge from the 2D world to the 3D world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "HTML5 performance dead end",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Game-engine-based GPU runtime",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "2D–3D bridge for democratized building",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Order-of-magnitude better tool for JS web-app builders stuck on HTML5",
+      "status": "explicit",
+      "evidence_span": "a tool so powerful that I actually think that we can change them, not by a little bit, but by an order of magnitude"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they're beating their heads up against the wall"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is what JavaScript can do"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you start using Famo.us, it's merely an options click in our settings menu"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "2D–3D bridge coded as stated success condition (not pure vision). Console/cross-platform list folded into GPU abstraction. Plato's cave framing not coded. Thin commercial detail reflected in confidence."
+}

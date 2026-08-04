@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise workers cannot get work done on personal tablets because needed apps sit behind corporate firewalls, and MDM locks down the whole device",
+      "status": "explicit",
+      "evidence_span": "people working within traditional enterprises cannot get their work done today on those devices because the apps they need, like SharePoint, SAP, and Oracle, are all secured behind corporate firewalls"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot is a container where IT manages work while the rest of the personal device remains personal",
+      "status": "explicit",
+      "evidence_span": "the one place where IT manages and the rest of the device remains personal"
+    },
+    {
+      "id": "P3",
+      "text": "Existing authentication unlocks WorkSpot so users get apps and documents with one-click firewall traversal via SSL VPN",
+      "status": "explicit",
+      "evidence_span": "We just did it in one click and seconds, traversing through a live SSL VPN"
+    },
+    {
+      "id": "P4",
+      "text": "A virtual file system with per-document encryption enables offline viewing and remote wipe of only WorkSpot",
+      "status": "explicit",
+      "evidence_span": "We've built a complete virtual file system within WorkSpot so that Stacey can view any document offline"
+    },
+    {
+      "id": "P5",
+      "text": "Platform extends to launch native apps from within WorkSpot",
+      "status": "explicit",
+      "evidence_span": "architected WorkSpot to be a platform that can be extended to support things like native apps"
+    },
+    {
+      "id": "P6",
+      "text": "IT deploys using existing security/app investments with integrations to major SSL VPN providers and no new data-center boxes",
+      "status": "explicit",
+      "evidence_span": "deliver a BYOD solution using his existing and leveraging his existing investments in security and apps"
+    },
+    {
+      "id": "P7",
+      "text": "End-user work activity data powers Insights and Events apps for IT (UX, problem detection, audit/compliance)",
+      "status": "explicit",
+      "evidence_span": "We take that big data and we've created two big apps for IT, Insights and Events"
+    },
+    {
+      "id": "P8",
+      "text": "Access and control are free; revenue comes from charging for end-user activity data",
+      "status": "explicit",
+      "evidence_span": "giving access and control for free. What we do is change the revenue equation to charge for end user activity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "personal-device work container with secure access",
+      "premise_ids": ["P1", "P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "IT deploy on existing VPN investments",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D3",
+      "name": "end-user activity data monetization",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplified enterprise BYOD: personal seamless work experience with secure IT control",
+      "status": "explicit",
+      "evidence_span": "We simplify Bring Your Own Device, or BYOD, for enterprises"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a very personal, seamless, and immersive user experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No new boxes to install in the data center, and he's up and running in minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Demo cascade (SharePoint, document download, email, wipe) folded into P2–P4 as one mobile virtualization mechanism (v1.5.1 §4.1.7). Insights/Events kept with the data-monetization commercial module. Patent-pending mobile virtualization treated as IP detail on the UX mechanism."
+}

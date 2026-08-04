@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional hot water wastes water waiting, is inefficient, hard to control, and unreliable",
+      "status": "explicit",
+      "evidence_span": "you probably waste 5 to 10 gallons of water or more"
+    },
+    {
+      "id": "P2",
+      "text": "Fully electronic heating using water's resistance delivers instant, highly efficient, reliable hot water",
+      "status": "explicit",
+      "evidence_span": "Instant water heating saves water, 99 plus percent energy efficient saves energy, and the technology is extremely reliable"
+    },
+    {
+      "id": "P3",
+      "text": "Connected controls let users and utilities manage temperature and peak power",
+      "status": "explicit",
+      "evidence_span": "electronic controls are natural for Wi-Fi connectivity"
+    },
+    {
+      "id": "P4",
+      "text": "Model 1 can augment existing heaters as booster, extender, or turbocharger",
+      "status": "explicit",
+      "evidence_span": "install in your existing hot water system that will augment its performance"
+    },
+    {
+      "id": "P5",
+      "text": "Retrofit installs also provide backup hot water when the main heater fails",
+      "status": "explicit",
+      "evidence_span": "when you install a Model 1 in any one of those three applications, you have a backup water heater"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wasteful conventional heating",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "HeatWorks electronic heater",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Retrofit and backup use cases",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Save water and energy while enjoying reliable luxurious hot water",
+      "status": "explicit",
+      "evidence_span": "save water and energy while getting a reliable and luxurious water heating experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "staggering problem because we all have to do it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "99 plus percent energy efficient"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can still have hot water"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Backup-heater benefit kept with retrofit domain as part of the same install-module theory. Pre-order CTA ignored.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-838",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:34:40+02:00"
+  }
+}

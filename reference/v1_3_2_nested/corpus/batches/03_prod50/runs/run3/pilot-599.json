@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aspiring musicians cannot access or afford quality producers",
+      "status": "explicit",
+      "evidence_span": "don't have access to quality producers or they can't afford to pursue a career in music"
+    },
+    {
+      "id": "P2",
+      "text": "Rekogram combines marketplace, mobile studio, and social network for sub-$5 original songs",
+      "status": "explicit",
+      "evidence_span": "all-in-one mobile production marketplace, a recording studio, and a social network"
+    },
+    {
+      "id": "P3",
+      "text": "End-to-end flow: discover beats, write, record, shoot video, and share instantly",
+      "status": "explicit",
+      "evidence_span": "discover beats, they can write songs to those beats, they can record songs to those beats, and they can also shoot a video"
+    },
+    {
+      "id": "P4",
+      "text": "Platform connects beat producers seeking artists with artists seeking affordable production",
+      "status": "explicit",
+      "evidence_span": "connects producer Tony with aspiring artist Willie"
+    },
+    {
+      "id": "P5",
+      "text": "Producer subscription plus revenue share on beat leases/sales",
+      "status": "explicit",
+      "evidence_span": "charge producers $9.99 a month or $90 a year to upload our beats to our platform. And when those beats are leased or sold through our platform, we take 20% of the in-app purchase"
+    },
+    {
+      "id": "P6",
+      "text": "Original content model does not depend on major-label licensing",
+      "status": "explicit",
+      "evidence_span": "we're an original content platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Artist-producer access gap",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile creation platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Producer monetization model",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Awaken anyone's inner musician via affordable mobile collaboration",
+      "status": "explicit",
+      "evidence_span": "awaken their inner musician"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "breaks down barriers and empowers anyone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all from the palm of their hand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we make money for producers like Tony"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Affiliate/celebrity GTM collapsed into notes this run as promotional evidence rather than a separately asserted continuing condition; soft count 6.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-599",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

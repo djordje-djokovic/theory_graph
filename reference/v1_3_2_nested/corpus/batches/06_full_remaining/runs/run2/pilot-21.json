@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise application portfolios are large and modernization via system integrators is too expensive and too slow to scale",
+      "status": "explicit",
+      "evidence_span": "there's never just one application. The portfolio often contains multiple applications, dozens, hundreds"
+    },
+    {
+      "id": "P2",
+      "text": "Crumbling infrastructure, architecture, code, and dependency pillars from accumulating technical debt create a compounding maintenance burden",
+      "status": "explicit",
+      "evidence_span": "these pillars start to crumble as technical debt starts to accumulate"
+    },
+    {
+      "id": "P3",
+      "text": "AppFactor productizes continuous modernization so customers automate a repeatable process to identify, cut, and maintain technical debt",
+      "status": "explicit",
+      "evidence_span": "allowing customers to automate and simplify and create a repeatable, predictable process"
+    },
+    {
+      "id": "P4",
+      "text": "The platform inventories environments, flags candidates such as end-of-life OS apps, and auto-generates containerized cloud-native deployments without manual YAML or code changes",
+      "status": "explicit",
+      "evidence_span": "There is no code. There is no YAML configuration. There is no configuration of all of the manual, tedious tasks"
+    },
+    {
+      "id": "P5",
+      "text": "Machine-learning classifications help architects and engineers modernize Linux, Windows, Java, and .NET legacy apps as everyday work",
+      "status": "explicit",
+      "evidence_span": "It's built on top of machine learning classifications that help our users identify, contextualize, and optimize application architecture"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution partners with cloud providers whose programs accelerate cloud spend and customer modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "We fit into programs that they have that allow us to accelerate cloud revenue spend for the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scale of legacy modernization pain",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Productized automation and ML",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud-provider GTM motions",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Significant modernization velocity that frees budget eroded by legacy maintenance",
+      "status": "explicit",
+      "evidence_span": "Our customers today are realizing significant modernization velocity"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of budget across all sectors is actually spent just maintaining that legacy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This really is not just a project. It's a routine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive the adoption of App Factor through those motions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent coding: value anchored on modernization velocity rather than 'get ahead of continuum' phrasing. Dollar market totals excluded as framing. Truncated before differentiation. Singleton D3 retained for separately revisable GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

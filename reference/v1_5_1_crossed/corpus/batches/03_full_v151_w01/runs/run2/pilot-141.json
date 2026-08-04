@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-141",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Once a Web3 game has traction, its game economy becomes a real economy that can crash",
+      "status": "explicit",
+      "evidence_span": "as soon as you build a web 3 game Your game economy becomes a real economy"
+    },
+    {
+      "id": "P2",
+      "text": "Healthy economies require participant production plus tax-like sinks that create currency value",
+      "status": "explicit",
+      "evidence_span": "the people who are participating in the economy should be able to produce in that economy"
+    },
+    {
+      "id": "P3",
+      "text": "Platform features including on-chain minigames, crafting, rewards, leaderboards, and security bots maintain healthy game economies",
+      "status": "explicit",
+      "evidence_span": "we have on-chain minigames, on-chain crafting, Minecraft style"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is a monthly analytics fee plus per-interaction infrastructure charges for game projects",
+      "status": "explicit",
+      "evidence_span": "we charge $1,000 per month to anyone who wants to know what's going on in an on-chain economy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Web3 game economy crash risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "economy infrastructure features and pricing",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Web3 games keep their on-chain economies healthy and engaging",
+      "status": "explicit",
+      "evidence_span": "how do I keep the economy healthy? And that's the problem that we help games to solve"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your biggest problem is how do I make sure my economy doesn't crash"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help games maintain healthy economies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Feature list (minigames/crafting/rewards/leaderboards/bots) folded as one economy-health platform mechanism. Transaction-volume traction excluded. Pitch ends abruptly (truncated=true)."
+}

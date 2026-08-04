@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Matching ingredients to skin type and using machine learning to find best-fit products can solve skincare selection",
+      "status": "explicit",
+      "evidence_span": "if we can find a way to potentially match ingredients with someone's skin type, and then use machine learning to find out what products best fit, we can probably solve this problem"
+    },
+    {
+      "id": "P2",
+      "text": "Personal skincare consultant accessible anytime powered by human expertise combined with AI",
+      "status": "explicit",
+      "evidence_span": "It is your personal skin care consultant that you can access anytime and is powered by a combination of human expertise and artificial intelligence"
+    },
+    {
+      "id": "P3",
+      "text": "Intake questions, photo, and dermatologist-like quiz categorize preferences and skin profile across 30+ types and five dimensions",
+      "status": "explicit",
+      "evidence_span": "the system first asks you a couple of questions, such as your skin product, products you're interested in, your skin profile, your age, as well as getting a photo of you"
+    },
+    {
+      "id": "P4",
+      "text": "Recommendations combine skin profile, similar users' likes, and age, then a human advisor cross-checks to one product",
+      "status": "explicit",
+      "evidence_span": "I will get my personal recommendation set based on A, my skin profile, B, people who are similar to me and what they have liked, and C, my age. And then it sends all these skin data to a real human advisor who will do a cross-check, validate the system, and then narrow it down to one product and send it to me"
+    },
+    {
+      "id": "P5",
+      "text": "Customers finish purchase via personal checkout link with Apple Pay, PayPal, or credit card",
+      "status": "explicit",
+      "evidence_span": "I get a personal checkout link, which I can use Apple Pay, PayPal, or any credit card to finish checkout process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI-plus-human skincare matching",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Text checkout commerce",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better skin and confidence without trials and errors",
+      "status": "explicit",
+      "evidence_span": "help more people achieve better skin and gain that confidence without going through all the trials and errors"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Spend more time looking great and less time wondering how",
+      "evidence_span": "spend more time looking great and less time wondering how"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal skin care consultant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal checkout link"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-sentence. Skin-type taxonomy and quiz treated as one profiling mechanism (§4.1.2). Traction metrics excluded. Singleton D2: checkout path separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-593",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:31:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

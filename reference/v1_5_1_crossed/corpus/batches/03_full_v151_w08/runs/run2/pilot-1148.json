@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1148",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most site traffic is one-shot or rare, while a small true-fan minority drives disproportionate page views and deeper engagement",
+      "status": "explicit",
+      "evidence_span": "more than 84% of a site's traffic visits just once a month or less frequently"
+    },
+    {
+      "id": "P2",
+      "text": "Publishers over-invest in SEO for one-shot traffic instead of engaging their true fans",
+      "status": "explicit",
+      "evidence_span": "companies are spending millions of dollars every month engaged in SEO and social media optimization so that they can get more of this crappy one-shot traffic"
+    },
+    {
+      "id": "P3",
+      "text": "Fans get credit and light gameplay for engagement, with social presence of who else is on a page and privacy controls over check-ins",
+      "status": "explicit",
+      "evidence_span": "We give them credit, give players credit for their activities, and give them a bit of good natured gameplay"
+    },
+    {
+      "id": "P4",
+      "text": "Sites can identify and connect with their most valuable users, including those invisible because they do not comment",
+      "status": "explicit",
+      "evidence_span": "enable sites to better identify and connect with their most valuable users"
+    },
+    {
+      "id": "P5",
+      "text": "The business becomes a loyalty-rewards broker for the web, offering tangible rewards via premier publisher partners",
+      "status": "explicit",
+      "evidence_span": "We are going to become the loyalty rewards program for the web"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "true-fan versus one-shot traffic",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "fan engagement and publisher visibility",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "web loyalty rewards brokerage",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help publishers engage true fans rather than chase one-shot traffic",
+      "status": "explicit",
+      "evidence_span": "They would be far better served by engaging their true fans"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Loyalty rewards program for the web",
+      "evidence_span": "the loyalty rewards program for the web"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true fans, small percentage of the overall traffic, but they make up a huge percentage of page views"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one true fan is all about them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offering tangible rewards for engagement"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-demo (truncated=true). Upcoming Digg/Delicious integrations folded into engagement-surface roadmap detail inside P3 rather than separate premises. Browser extension vs site service treated as delivery of same fan layer. Singleton D3: loyalty brokerage is the stated business model module."
+}

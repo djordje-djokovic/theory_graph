@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-998",
+    "coder_session_id": "session_02",
+    "session_case_index": 3,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People buy branded clothes to signal and talk about what they wear, not merely for function",
+      "status": "explicit",
+      "evidence_span": "They want to talk about them. They want others get to know what they have, what they wear"
+    },
+    {
+      "id": "P2",
+      "text": "A branding platform lets users tag brands on photos, ask the community what a brand is, poll friends on outfit choices, and manage wardrobes via web and bookmarklet",
+      "status": "explicit",
+      "evidence_span": "we call this awesome multifunctional tag brand in"
+    },
+    {
+      "id": "P3",
+      "text": "Brands will pay to communicate with their fans and competitors' fans through the service",
+      "status": "explicit",
+      "evidence_span": "brands can communicate with their fans and even with fans of their competitors. Brands will love it. And they will pay us for it"
+    },
+    {
+      "id": "P4",
+      "text": "A store marketplace auto-attaches purchase links to brandings from merchant price lists",
+      "status": "explicit",
+      "evidence_span": "Stores provide us with a price list and our system analyze keywords and automatically attach the links to the branding"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "brand signaling desire",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "branding community platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "brand and store monetization",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People who love brands can brand-in, discover, and shop brands socially",
+      "status": "explicit",
+      "evidence_span": "TechBrand is going to be a big brand for people who love brands"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "People buy brand clothes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings people together on the basis of their brand's loyalty"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brands can communicate with their fans"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Brand-in, question branding, try-on polls, web wardrobes/wishlists, and bookmarklet folded as cascade of one branding mechanism (§4.1.7) because speaker says all functionality revolves around branding. Brand ads and store marketplace kept as distinct monetization paths. Team credentials and raise ask excluded (§4.2). Anti-template: desire, platform, and monetization separately revisable."
+}

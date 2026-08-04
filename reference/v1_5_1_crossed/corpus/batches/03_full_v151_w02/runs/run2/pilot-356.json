@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-356",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:25:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Idle cash in P2P apps earns for the apps under inflation while users who want to build wealth lack easy ways to invest",
+      "status": "explicit",
+      "evidence_span": "it's those same peer-to-peer apps that are benefiting from cash balances and earning a return, leaving nothing behind for their users"
+    },
+    {
+      "id": "P2",
+      "text": "A P2P payment flow lets users pay or request in favorite stocks, converting cash to shares when the recipient accepts",
+      "status": "explicit",
+      "evidence_span": "the first peer-to-peer payment designed to generate wealth with every single transaction"
+    },
+    {
+      "id": "P3",
+      "text": "Public portfolios and social interactions on transactions make investing less lonely and more transparent",
+      "status": "explicit",
+      "evidence_span": "we make all portfolios and trades and transactions public, so you can like and comment on various transactions"
+    },
+    {
+      "id": "P4",
+      "text": "Brokerage-partner coverage protects large cash and portfolio balances so users feel safe investing",
+      "status": "explicit",
+      "evidence_span": "We cover up to 250K of user cash balances and 500K of portfolio investments using our brokerage partner, Alpaca"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Idle P2P cash wealth gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Stock peer-to-peer payments",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Social investing transparency",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Brokerage balance protection",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn every peer payment into an investment that builds wealth",
+      "status": "explicit",
+      "evidence_span": "turn every payment into an investment"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "want to earn and grow our wealth, but sometimes just lack the resources, time, or energy or resources to invest"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I just contributed to her long-term wealth goals just by going out to dinner with her"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make investing less lonely"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make sure that our users feel 100% safe and confident when investing with us long-term"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tax/paperwork friction contrast and accept/switch/cash options folded into P2 mechanism. Rideshare/registry/business plug-in framed as future vision and excluded. Team credentials and promo code excluded."
+}

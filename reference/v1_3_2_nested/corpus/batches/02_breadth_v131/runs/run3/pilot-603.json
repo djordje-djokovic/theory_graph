@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-603",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:47:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "One-to-one therapy and unmoderated online groups leave a scalability and safety gap",
+      "status": "explicit",
+      "evidence_span": "their one patient to one provider model isn't scalable"
+    },
+    {
+      "id": "P2",
+      "text": "Therapist-moderated anonymous text groups provide peer support plus clinical sessions",
+      "status": "explicit",
+      "evidence_span": "he can text his peer support network at any time from anywhere, while also participating in more scheduled therapy sessions via VoIP conference calling"
+    },
+    {
+      "id": "P3",
+      "text": "NLP detects latent suicidal ideation and context-dependent toxicity for triage",
+      "status": "explicit",
+      "evidence_span": "No negative words, but we can understand the latent suicidal ideation that's implied"
+    },
+    {
+      "id": "P4",
+      "text": "Licensing to fire, police, universities, and health systems monetizes while care stays free to users",
+      "status": "explicit",
+      "evidence_span": "Our early adopters include fire departments, universities, and police departments"
+    },
+    {
+      "id": "P5",
+      "text": "Institutional deployment yields population insights and lower crisis incidence",
+      "status": "explicit",
+      "evidence_span": "giving an institution insights into the true needs of its population"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Limits of status-quo mental health modalities",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Safe scalable group therapy tech",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Institutional deployment and insights",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smarter, more accessible psychotherapy at population scale",
+      "status": "explicit",
+      "evidence_span": "make smarter psychotherapy a reality"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Toxicity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "environment kept safe through technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring your mental health care infrastructure into the 21st century"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Early-adopter list coded as GTM beachhead condition (P4), not traction vanity. API/NLP expansion roadmap not coded as present premise."
+}

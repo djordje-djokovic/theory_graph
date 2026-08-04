@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords remain a human weak link driving the majority of breaches",
+      "status": "explicit",
+      "evidence_span": "That is why over 86% of breaches today are caused by users"
+    },
+    {
+      "id": "P2",
+      "text": "Alternative tools either retrain users, need dedicated IT integrations, or centralize secrets in the cloud",
+      "status": "explicit",
+      "evidence_span": "none have been widely adopted mainly because They either require teaching the user something new, or require integrations"
+    },
+    {
+      "id": "P3",
+      "text": "MyKey changes team access by phone-approved login injection and remote logout without provider integrations",
+      "status": "explicit",
+      "evidence_span": "MyKey solves the password problem by fundamentally changing the way teams manage access to the digital workspace"
+    },
+    {
+      "id": "P4",
+      "text": "IT admins get a single ecosystem to share, revoke, grant, rule-restrict, and rotate credentials in real time",
+      "status": "explicit",
+      "evidence_span": "It is a single ecosystem for sharing, revoking, and granting access"
+    },
+    {
+      "id": "P5",
+      "text": "Freemium per-seat pricing targets medium-sized companies of about 10 to 50 users",
+      "status": "explicit",
+      "evidence_span": "initially targeting medium-sized companies that have between 10 and 50 users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken password tooling",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "MyKey access platform",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SMB freemium pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Swift, secure team login and admin control over account access",
+      "status": "explicit",
+      "evidence_span": "She's in swiftly and securely"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "everything that I've shown you today requires no integration with service providers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "password problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "full visibility and control"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free for the first five users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Cloud single-point-of-failure folded into P2 competitor inadequacy. On-prem/upmarket roadmap not coded (future aspiration). Features on/off flexibility folded into platform premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-709",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

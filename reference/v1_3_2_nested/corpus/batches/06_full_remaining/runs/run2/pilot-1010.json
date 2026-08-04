@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1010",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:27:04+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite huge online apparel spend, ~90% of fashion still sells in-store because shoppers cannot judge fit online",
+      "status": "explicit",
+      "evidence_span": "Because 90% of fashion is still sold in store. That's $270 billion. But why? I'll tell you why. What's missing in online fashion shopping is personalization"
+    },
+    {
+      "id": "P2",
+      "text": "Fitikit builds a personalized 3D model and lets users drag-and-drop true-to-size try-ons, including side-by-side sizes, in the browser",
+      "status": "explicit",
+      "evidence_span": "trying on clothes is as simple as dragging and dropping on the model"
+    },
+    {
+      "id": "P3",
+      "text": "No special hardware, downloads, webcams, or scanners—works on PC, Mac, or iPad in-browser",
+      "status": "explicit",
+      "evidence_span": "No need for special hardware or downloadable software, no creepy webcams or scanners. It's all delivered in browser"
+    },
+    {
+      "id": "P4",
+      "text": "Scalable designer digitization feeds retailers through an API with pay-as-you-go pricing and analytics dashboards",
+      "status": "explicit",
+      "evidence_span": "The retailers have no upfront costs. They pay us as they go"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-store fashion dominance from fit uncertainty",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "In-browser personalized 3D try-on",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Digitize-and-API retailer offer",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A new way to shop online fashion with confidence about fit and style",
+      "status": "explicit",
+      "evidence_span": "Today we're going to show you a new way to shop online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Clothes are shown on standard models, which are slim or tall, unlike real people"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It looks great. It fits perfect"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they get access to this amazing data, the analytics, which they never had access before"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Browser delivery kept with try-on as delivery constraint of same product. Upcoming retailer launch treated as traction/roadmap, not premise. Mass-customization path not coded as condition."
+}

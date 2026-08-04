@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combustion-based fossil power plants are inefficient, inflexible, and emit large amounts of CO2",
+      "status": "explicit",
+      "evidence_span": "These combustion power plants fail. They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "id": "P2",
+      "text": "Solid oxide fuel cells plus CO2 separation and methanation in a closed cycle eliminate combustion, achieve ~100% fuel conversion and 80% electric efficiency, and yield water and pure CO2",
+      "status": "explicit",
+      "evidence_span": "By adding the two components that we showed before to the fuel cells and operating the system in a closed cycle, we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "id": "P3",
+      "text": "System is reversible: can produce green hydrogen or renewable methane from excess grid power for long-term storage",
+      "status": "explicit",
+      "evidence_span": "our new system design is reversible, meaning it can also produce gas from excess power"
+    },
+    {
+      "id": "P4",
+      "text": "First market is biogas plants: produce renewable power and separate biogenic CO2 when renewables are scarce, enabling negative emissions via long-term CO2 storage",
+      "status": "explicit",
+      "evidence_span": "Biogas plants are our first target market"
+    },
+    {
+      "id": "P5",
+      "text": "Doubling electric efficiency plus reversible operation can more than fivefold customer income from electricity and related revenues",
+      "status": "explicit",
+      "evidence_span": "the doubling in electric efficiency first of all means doubling revenues from electricity. With the additional revenues from the reversible operation, they can overall more than fivefold their income"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient fossil combustion power",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Closed-cycle SOFC power plant",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas plant economics and GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decentralized, carbon-negative, highly efficient power generation",
+      "status": "explicit",
+      "evidence_span": "provide the world with decentralized, carbon negative, and highly efficient power plants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-term renewable energy storage via reversible gas production",
+      "evidence_span": "This enables long-term energy storage"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our solution produces power at a groundbreaking efficiency of 80%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Long-term storage of this biogenic CO2, in turn, enables negative CO2 emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Process+performance of the closed-cycle plant (efficiency, no off-gas, pure CO2) folded into P2 per v1.5.1 #8. Container subsystem tour treated as cascade of that mechanism. Global market-scale vision not coded as a premise. Plug-and-play/carbon-negative claims folded into value and process premises."
+}

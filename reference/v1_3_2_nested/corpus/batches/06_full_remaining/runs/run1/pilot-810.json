@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:36:21+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home automation adoption is very low because setup is frustrating despite customer excitement",
+      "status": "explicit",
+      "evidence_span": "the adoption rate is an abysmal 2%"
+    },
+    {
+      "id": "P2",
+      "text": "Wired smart switches need costly electrician installs and cannot be used in many apartments; smart bulbs require multiple bulbs and disable the wall switch",
+      "status": "explicit",
+      "evidence_span": "if you don't want to do it yourself, you can hire an electrician, but it'll cost you thousands of dollars"
+    },
+    {
+      "id": "P3",
+      "text": "Switchmate snaps magnetically onto standard switch screws and mechanically flips the switch, controllable from a phone",
+      "status": "explicit",
+      "evidence_span": "It uses two magnets on the back that snap right to the screws on your standard light switch"
+    },
+    {
+      "id": "P4",
+      "text": "Same device enables vacation timers, approach detection, and manual-or-phone control without losing the wall switch",
+      "status": "explicit",
+      "evidence_span": "you can still access your light switch manually or just turn it off right from your phone"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market via crowdfunding pre-order, manufacturing partner, online retail, then brick-and-mortar",
+      "status": "explicit",
+      "evidence_span": "Next month in February, we're planning to launch a pre-order campaign"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Magnetic switch automation product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hard-to-install smart lighting alternatives",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Pre-order and retail channel plan",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get extremely simple smart lighting without painful install",
+      "status": "explicit",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mission to make the smart home simple more broadly",
+      "evidence_span": "on a mission to make the smart home simple"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes smart lighting extremely simple"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why this was the case"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will never compromise on making sure we make products that are extremely simple to use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Use cases treated as applications of one mechanism (§4.1(2)). Optional hub and future vents/breakers folded as roadmap vision (§4.1(4)/(5)), not separate premises. Beta tester story is illustrative evidence."
+}

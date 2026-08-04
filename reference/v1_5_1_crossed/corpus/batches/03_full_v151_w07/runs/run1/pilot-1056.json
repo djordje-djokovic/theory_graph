@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1056",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Interactive classroom touchscreens each lock content into vendor software and the classroom—inaccessible from home",
+      "status": "explicit",
+      "evidence_span": "your content is locked not only into your platform, but it's locked into the classroom. You can't access it from home"
+    },
+    {
+      "id": "P2",
+      "text": "Browser-based lessons run on any browser device and support simultaneous multi-user interaction without installed software",
+      "status": "explicit",
+      "evidence_span": "this is now completely browser-based. It's inside the Safari browser"
+    },
+    {
+      "id": "P3",
+      "text": "In-browser equation tool and live graphing let students interact with math dynamically (challenging TI classroom monopoly)",
+      "status": "explicit",
+      "evidence_span": "it's really hard to do math on a computer no longer"
+    },
+    {
+      "id": "P4",
+      "text": "Publish feature shares lessons globally with local copies, LMS/blog embed, PDF, and offline classroom downloads",
+      "status": "explicit",
+      "evidence_span": "the way that you do that is with our publish feature, which we're introducing today"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "locked classroom interactive content",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "browser collaborative lessons and math",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "publish embed and offline share",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive educational content accessible anywhere, collaboratively, changing the future of education",
+      "status": "explicit",
+      "evidence_span": "join us in changing the future of education"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have a solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "multiple people can interact with this content simultaneously"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a million people can look at this simultaneously, interact with it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Vendor-locked classroom content as problem. Browser any-device + simultaneous collaboration and math/graphing tools folded as product cascade (§4.1.7)—math is additional education problem solved by same browser platform. Publish/embed/offline as distribution module. McGraw-Hill demo as traction evidence. Funding/alpha code excluded. Three domains—anti-template."
+}

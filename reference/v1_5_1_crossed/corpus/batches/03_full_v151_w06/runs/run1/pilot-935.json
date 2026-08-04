@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-935",
+    "coder_session_id": "session_04",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:14:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Streaming economics make it hard for artists to earn a living while fans assume music should be free",
+      "status": "explicit",
+      "evidence_span": "Nearly a generation has grown up assuming music is or should be free. And this has made it very hard for artists to make a living today"
+    },
+    {
+      "id": "P2",
+      "text": "Spacebar streams live audio performances from venues to mobile devices worldwide at high bitrate, with free previews and paid listen-in",
+      "status": "explicit",
+      "evidence_span": "Space Bar streams live audio performances to mobile devices"
+    },
+    {
+      "id": "P3",
+      "text": "Live listenership data gives bands and venues business intelligence for touring and booking",
+      "status": "explicit",
+      "evidence_span": "This is new data that the bands had never seen before"
+    },
+    {
+      "id": "P4",
+      "text": "Partnership with Backplane and a scalable architecture enable streaming for major artists' fan communities",
+      "status": "explicit",
+      "evidence_span": "we're also pleased to announce today our partnership with Backplane"
+    },
+    {
+      "id": "P5",
+      "text": "Artists can go live to the world with a push of a button from an iPhone",
+      "status": "explicit",
+      "evidence_span": "With a push of a button, the artist is live, on the air"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "live mobile concert streaming",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "listenership data for artists and venues",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "scale via fan-community partnerships",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help musicians connect with fans and let fans who wish to support artists do so directly via live mobile listening",
+      "status": "explicit",
+      "evidence_span": "help musicians to better connect with their fans and to build a mobile platform to help those fans that wish to support artists to directly do so"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No matter where you are in the world, you can hear your favorite artist"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It will help them plan their tours"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when superstars take the stage, they can reach out to all of their fans all over the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "99-cent paid listen and free preview treated as commercial detail of the streaming mechanism in P2. Venue launch list treated as traction. Non-music talent expansion treated as market-size framing, not a separate premise."
+}

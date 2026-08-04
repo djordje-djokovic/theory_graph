@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-835",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Building camera-integrated software is costly because of local networking, fragmented camera SDKs, and laborious per-customer deployment",
+      "status": "explicit",
+      "evidence_span": "The issues they came up against, local network issues. Cameras, like any local network device, will misbehave. There's firewalls, routers, port forwarding"
+    },
+    {
+      "id": "P2",
+      "text": "A hosted developer web API abstracts camera connectivity so apps work with any internet-connected camera",
+      "status": "explicit",
+      "evidence_span": "We try and reduce all of that complexity and expose to the software developer a beautiful, modern, hosted web API"
+    },
+    {
+      "id": "P3",
+      "text": "End-user tooling helps camera owners connect and stay connected, removing network burden from developers",
+      "status": "explicit",
+      "evidence_span": "Part of our product is for our customer's customer, the person who owns the camera, to help them get the camera connected and keep it connected, removing all of those problems from the desk of the software developer"
+    },
+    {
+      "id": "P4",
+      "text": "An app-store-like path makes distributing camera software as easy as phone apps",
+      "status": "explicit",
+      "evidence_span": "We make it as easy to get software working on a camera as it is today to get it working on a phone"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is a recurring per-camera fee on deployed solutions",
+      "status": "explicit",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "camera software integration complexity",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "hosted API connection and app store",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "per-camera recurring fee",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make cameras programmable so developers can ship live-image software that improves customer businesses",
+      "status": "explicit",
+      "evidence_span": "make these cameras programmable, and thereby to unleash a whole new category of software development based around the live image"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this project was bigger than they had anticipated, was risky and expensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one developer, one month, and they have a successful, working, deployed solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three stated camera-project problems (network, fragmentation, per-customer deploy) folded as one developer pain-bundle (§4.1.6). API, end-user connect tooling, and app-store ease coded as distinct platform capabilities. Team Deutsche Telekom bio and Tunstall cost/time comparison numbers treated as illustration of mechanism not separate premises. Singleton D3 retained as independently revisable monetization."
+}

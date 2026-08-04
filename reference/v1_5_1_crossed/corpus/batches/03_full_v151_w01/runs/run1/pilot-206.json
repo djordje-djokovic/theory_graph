@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-206",
+    "coder_session_id": "session_02",
+    "session_case_index": 14,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Labor shortages in construction, agriculture, restaurants, and manufacturing create a large economic gap that factory-style robots do not serve",
+      "status": "explicit",
+      "evidence_span": "There is a labor crisis in the US across the construction, agriculture, restaurant, and manufacturing industries, having a $1 trillion negative impact on the US economy"
+    },
+    {
+      "id": "P2",
+      "text": "Industrial robots use costly strain-wave gears, external control boxes, and extreme precision that everyday tasks do not need",
+      "status": "explicit",
+      "evidence_span": "These industrial robots have big external control boxes with difficult-to-manufacture strain wave gears and legacy PLCs, limiting where robots need to go in the future. These robots are also focusing on costly, extreme precision"
+    },
+    {
+      "id": "P3",
+      "text": "Ally Arm uses cheaper planetary gears, integrated power (110AC/48V DC), novel joints, quick-change actuators, and application skins for right-tool everyday automation",
+      "status": "explicit",
+      "evidence_span": "We've opted for proven planetary gears that are 97% efficient and 20% the cost of strain wave gears. We've removed the external control box"
+    },
+    {
+      "id": "P4",
+      "text": "Imitation learning / microbehaviors let non-experts program by demonstration instead of expensive professional training",
+      "status": "explicit",
+      "evidence_span": "even my five-year-old will be able to program the robot by showing it, and the robot will then repeat that task"
+    },
+    {
+      "id": "P5",
+      "text": "NVIDIA Isaac collaboration provides edge compute, AI, and simulation tools for developers and non-developers",
+      "status": "explicit",
+      "evidence_span": "We are collaborating with NVIDIA to adopt the Isaac platform for edge compute, AI, and simulation to accelerate our development"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Everyday automation labor gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Affordable serviceable Ally Arm hardware",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Show-and-repeat AI training",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smart, affordable, easy-to-service and simple-to-train robotics for anyone, anywhere",
+      "status": "explicit",
+      "evidence_span": "enabling robotics for anyone, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We must create the right tool for the right job"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly expand the market for robotic technology and everyday automation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The Ally Arm is both smart and simple"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hardware feature list (gears, power, joint, actuator, skins) folded into one P3 mechanism/product package. LOI and monthly services excluded as traction. Machine vision + imitation learning + AI phrasing treated as the training stack with P4 as the core learn-by-showing claim."
+}

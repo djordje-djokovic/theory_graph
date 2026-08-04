@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-551",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Frequent cattle weighing is critical for health, genetics, sale timing, and value but traditional weighing is laborious, stressful, injurious, and causes weight loss",
+      "status": "explicit",
+      "evidence_span": "obtaining weight information is labor-intensive, time-consuming, and expensive, so it's rarely obtained"
+    },
+    {
+      "id": "P2",
+      "text": "Portable 3D-camera software estimates cattle weight automatically as animals pass, stress-free and much faster than traditional weighing",
+      "status": "explicit",
+      "evidence_span": "Our proprietary software uses a portable 3D camera to estimate the weight of the cattle"
+    },
+    {
+      "id": "P3",
+      "text": "A dashboard gives recommendations to optimize weight gain and profitability across individuals and groups",
+      "status": "explicit",
+      "evidence_span": "farmers can see our dashboard with recommendations on how to optimize weight gain and profitability"
+    },
+    {
+      "id": "P4",
+      "text": "Portable camera plus per-animal-month pricing is cheaper and more scalable than passage scales or manual photo apps for all farm sizes",
+      "status": "explicit",
+      "evidence_span": "Olho do Dono is portable. The 3D camera costs around R$ 3,000 and we charge R$ 1 per animal month"
+    },
+    {
+      "id": "P5",
+      "text": "Platform recommendations on products that optimize weight gain earn commission fees",
+      "status": "explicit",
+      "evidence_span": "Our platform also gives recommendations on products that can optimize weight gain and we make a commission fee on that"
+    },
+    {
+      "id": "P6",
+      "text": "Initial market is Brazil's large herd with later expansion to Latin America, EU, US, Australia, and others",
+      "status": "explicit",
+      "evidence_span": "The Brazilian initial market for Olho do Dono is at 1.2 billion reais yearly"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cattle weighing friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "3D weight estimation product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Pricing, commissions, and Brazil market",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Higher beef-cattle productivity and profitability while maintaining cow well-being",
+      "status": "explicit",
+      "evidence_span": "increase the beef cattle productivity and profitability while maintaining the well-being of the cow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more weight, more money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We help farmers to grow their bottom lines"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Olho do Dono is portable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Health/genetics/sale timing pains folded into one weighing problem premise (§4.1.6). Camera+auto ID+speed treated as one mechanism; dashboard recommendations kept as related analytics path. Traction betas and team bios excluded. Price amount kept with commercial packaging (§4.1.3)."
+}

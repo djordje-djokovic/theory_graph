@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Adding countries beyond USA/Canada multiplies potential customers",
+      "status": "explicit",
+      "evidence_span": "you add another country, for example Brazil, you have four more million potential customers for this product"
+    },
+    {
+      "id": "P2",
+      "text": "Future childcare product line for parents addresses an unexplored market for safety and comfort",
+      "status": "explicit",
+      "evidence_span": "create later a new line of products, childcare products designed for parents because we think this part of the market has not yet been explored and the safety of parents and their comfort is also very important at this time of their life"
+    },
+    {
+      "id": "P3",
+      "text": "Kickstarter price of $180 then web stores then large specialized distribution",
+      "status": "explicit",
+      "evidence_span": "The product will be sold on Kickstarter for $180. Then we want to sell it through our web store and different web store. But in the end, we will go to large distribution and sell it in a specialized store like Baby's Arrest, for example"
+    },
+    {
+      "id": "P4",
+      "text": "Working 3D-printed wristband prototypes need improved design and manufacturing to reach market",
+      "status": "explicit",
+      "evidence_span": "We want to improve different things like the design of the wristband, start manufacturing them. Those are some 3D printed prototypes, for example. So they are working, but we need to raise some money to get to market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Market expansion and parent products",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Wristband product readiness",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Multi-stage distribution",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parent safety and comfort via childcare products",
+      "status": "explicit",
+      "evidence_span": "the safety of parents and their comfort is also very important at this time of their life"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "childcare products designed for parents"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design of the wristband"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "large distribution and sell it in a specialized store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.4
+  },
+  "notes": "Truncated opening. Raise ask excluded; prototype/design readiness coded as product condition. Three domains justified as separately revisable geographic/product-line, hardware, and channel modules.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-802",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

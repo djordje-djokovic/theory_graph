@@ -1,0 +1,126 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The vision system detects berries in the scene and decides which to pick",
+      "status": "explicit",
+      "evidence_span": "The system's cameras take a snapshot of the scene. Our vision system detects the berries in that image, decides which to pick"
+    },
+    {
+      "id": "P2",
+      "text": "A patented mechanically compliant gripper built from soft food-safe silicone belts extracts berries delicately",
+      "status": "explicit",
+      "evidence_span": "We grab the berries with soft, food-safe silicone belts that we mold around stiffer materials."
+    },
+    {
+      "id": "P3",
+      "text": "The robot withstands the tough farm environment and runs continuously for months",
+      "status": "explicit",
+      "evidence_span": "It is robust to dust, dirt, rain, wind, vibrations, and the other aspects of the tough farm environment. and it operates all day, every day, for months and years on end."
+    },
+    {
+      "id": "P4",
+      "text": "Everything runs locally with no internet or off-site compute",
+      "status": "explicit",
+      "evidence_span": "And finally, it does all this locally. No internet, no off-site compute."
+    },
+    {
+      "id": "P5",
+      "text": "TrapTik targets year-round strawberry harvest rather than low-value or seasonal crops",
+      "status": "explicit",
+      "evidence_span": "Traptic focuses on year-round strawberry harvest."
+    },
+    {
+      "id": "P6",
+      "text": "Growers change nothing about their growing process to adopt the system",
+      "status": "explicit",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment."
+    },
+    {
+      "id": "P7",
+      "text": "The robots-as-a-service offer charges 23 cents per pound with all aspects of the service included",
+      "status": "explicit",
+      "evidence_span": "we provide all aspects of the service, machine, tractor, driver, et cetera"
+    },
+    {
+      "id": "P8",
+      "text": "Three years of daily testing partnerships with the largest commercial growers carry the path to commercial deployment",
+      "status": "explicit",
+      "evidence_span": "Traptiq has developed testing partnerships over the last three years with the largest commercial growers, including Nature Ripe and Driscolls"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Automated picking technology",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Strawberry market entry",
+      "premise_ids": ["P5", "P6", "P8"]
+    },
+    {
+      "id": "D3",
+      "name": "Harvest service economics",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Robots automate the harvest work people do not want to do, sustaining food production",
+      "status": "explicit",
+      "evidence_span": "Our robots are saving the world's food production system by automating the work people don't want to do."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "it plans a path to grab it, and our software commands the robot arm to move the gripper to the berry"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "TrapTik's giant farming robots pick strawberries."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Traptiq will deploy commercially next year."
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is slightly less than the current spend."
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Finer split: robustness and local compute coded separately, and the grower testing program coded as a deployment-path premise because the speaker presents the partnerships as the mechanism carrying commercial launch, not as a past-performance metric. Patent folded into gripper premise (v1.3.1 clarification 1). Revenue master plan and team pedigree excluded (vision framing; credentials). Singleton D3: per-pound service pricing stands alone as a commercial module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-452",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:33:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

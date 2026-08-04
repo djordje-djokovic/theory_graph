@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Frequent blackouts leave households and businesses without predictable grid power",
+      "status": "explicit",
+      "evidence_span": "175 million Nigerians experience blackouts every day"
+    },
+    {
+      "id": "P2",
+      "text": "Backup generators cost about four times grid power and undercut revenue",
+      "status": "explicit",
+      "evidence_span": "it costs four times the amount to run a backup generator than it costs to get power from the grid"
+    },
+    {
+      "id": "P3",
+      "text": "Low-cost Android phones in proprietary cases act as community power sensors",
+      "status": "explicit",
+      "evidence_span": "we take low-cost Android phones, just like this, and we turn them into power sensors"
+    },
+    {
+      "id": "P4",
+      "text": "Users get push (or SMS) notifications when power is restored or taken and can report downed lines",
+      "status": "explicit",
+      "evidence_span": "she'll get a push notification that the power has been restored"
+    },
+    {
+      "id": "P5",
+      "text": "Power companies are the main customers, using the platform to communicate with end users",
+      "status": "explicit",
+      "evidence_span": "our main customers are the power companies, and they can use our platform to communicate directly with their customers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blackout unpredictability cost",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Phone-based outage sensors",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Utility communication customers",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time power outage notifications so people and utilities can adapt",
+      "status": "explicit",
+      "evidence_span": "We provide real-time power outage notifications"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "imagine what businesses could adapt to with a little more predictability"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "let our users know when there's power available in their community"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communicate directly with their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Bill-pay/data-play roadmap folded out as non-conditions. 'Number one platform in Africa' vision excluded per §4.1(4). Pilot with Idibadan treated as traction evidence of utility channel, mechanism coded in P5. Singleton D3 justified as customer/channel module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-874",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

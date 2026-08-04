@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1028",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge unused bike supply exists while shop rentals and public bike share are expensive or poorly suited for leisure rides",
+      "status": "explicit",
+      "evidence_span": "there's this huge pool of bicycles that are not being capitalized on"
+    },
+    {
+      "id": "P2",
+      "text": "SpinLister is a peer-to-peer web marketplace matching excess bike owners with travelers and locals who want to rent",
+      "status": "explicit",
+      "evidence_span": "we allow individual bike owners to rent out their bikes to travelers and locals looking to explore"
+    },
+    {
+      "id": "P3",
+      "text": "Listings are owner-priced with photos and details, reviewed for quality, searchable by location/type/size, with profiles, contact, and social proof",
+      "status": "explicit",
+      "evidence_span": "You submit a few photos, a few details about your bike, including the location, as well as the price that you get to choose"
+    },
+    {
+      "id": "P4",
+      "text": "Rentals are facilitated with messaging dashboards, bike insurance up to $5,000, and institutional insurance while owners own customer service",
+      "status": "explicit",
+      "evidence_span": "We insure bicycles up to $5,000"
+    },
+    {
+      "id": "P5",
+      "text": "The model is location-independent and infrastructure-light, enabling turnkey expansion beyond launch cities",
+      "status": "explicit",
+      "evidence_span": "in a location-independent way that is extremely infrastructure-light"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "idle bikes vs costly rental alternatives",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "P2P bike rental marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "insured facilitated rental ops",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "infrastructure-light expansion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect the world's existing bikes so people can rent personally and affordably for exploration",
+      "status": "explicit",
+      "evidence_span": "the largest bike rental system in the world already exists. We just need to connect it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a bike rental in New York City or San Francisco currently costs between $40 and $60 a day"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have enough rules in place to make it safe"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turnkey potential of this business"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Told to wrap mid-traction slide (truncated=true). Idle supply and expensive shop/share alternatives folded as one opportunity/problem (§4.1.6). Listing/search/profile UX folded into marketplace cascade; insurance+messaging facilitation split as trust/ops module. City listing traction excluded (§4.2). Four domains—not a triad."
+}

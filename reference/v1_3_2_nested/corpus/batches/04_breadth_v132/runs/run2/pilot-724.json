@@ -1,0 +1,155 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Billions of connected things are coming into use",
+      "status": "explicit",
+      "evidence_span": "6 billion connected things will be in use till the end of this year"
+    },
+    {
+      "id": "P2",
+      "text": "People manage their digital life across dozens of apps and check their phones constantly",
+      "status": "explicit",
+      "evidence_span": "I personally use more than 50 different apps to manage my digital life"
+    },
+    {
+      "id": "P3",
+      "text": "Users need a nicer way to communicate with technology than checking the phone every minute",
+      "status": "explicit",
+      "evidence_span": "There should be a nicer way to communicate with technology rather than checking your phone every single minute"
+    },
+    {
+      "id": "P4",
+      "text": "Glance Clock is a wall clock with a glanceable display, built-in speaker, and open cloud platform",
+      "status": "explicit",
+      "evidence_span": "Glance Clock is a well-designed wall clock with embedded glanceable display, built-in speaker, and open cloud platform"
+    },
+    {
+      "id": "P5",
+      "text": "Information appears as background geometric shapes rather than text and numbers",
+      "status": "explicit",
+      "evidence_span": "The information appears in the background in geometric shapes rather than text and numbers"
+    },
+    {
+      "id": "P6",
+      "text": "An open-API cloud platform integrates with the user's favorite apps",
+      "status": "explicit",
+      "evidence_span": "we have a cloud platform with a lot of integrations that can actually integrate via open APIs"
+    },
+    {
+      "id": "P7",
+      "text": "Glance Cloud analyzes the data to understand what information, when, and where to display",
+      "status": "explicit",
+      "evidence_span": "Glance Cloud will analyze this data and understand what information, when, and where to display"
+    },
+    {
+      "id": "P8",
+      "text": "The clock works out of the box: pair a phone and it sets the current time automatically",
+      "status": "explicit",
+      "evidence_span": "Our clocks ready out of the box and you just need to pair your phone with the clock and it will set up current time automatically"
+    },
+    {
+      "id": "P9",
+      "text": "Go-to-market runs through an Indiegogo crowdfunding campaign at a $149 price point",
+      "status": "explicit",
+      "evidence_span": "we will launch Indiegogo campaign on February this year. And the estimated price will be just $149 for a single device"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Notification overload",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Glanceable ambient display hardware",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P8"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud integrations and contextual intelligence",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Crowdfunding launch",
+      "premise_ids": [
+        "P9"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant information from wearables, devices, and services arrives right at the moment it is needed",
+      "status": "explicit",
+      "evidence_span": "It shows you information from your wearables, connected devices, and web services right at the moment you need it"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Information is readable at a glance without disrupting current tasks",
+      "evidence_span": "It allows you to read information quickly at a glance without being disrupted from your current tasks"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "checking your phone every single minute"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "right at the moment you need it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what information, when, and where to display"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$149 for a single device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Coded against the current prompt transcript (Glance Clock). Accelerator pedigree and founder track record excluded per 4.2; 2,000-person community treated as traction; retail-after-shipping and added IoT connections are roadmap, uncoded (v1.3.2 4.1(4)); sleep/weather/calendar demo integrations folded into the cloud-integration capability (v1.3.2 4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-724",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T14:14:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

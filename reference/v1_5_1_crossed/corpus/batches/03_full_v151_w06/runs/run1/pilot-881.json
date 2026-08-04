@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "coder_session_id": "session_02",
+    "session_case_index": 9,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Medication non-adherence is an extremely costly healthcare problem in deaths, costs, and lost revenues",
+      "status": "explicit",
+      "evidence_span": "Medication adherence is arguably the most costly problem in health care today"
+    },
+    {
+      "id": "P2",
+      "text": "A patented smart pill bottle sends open/close timestamps and medication-amount data to the cloud for dosage comparison",
+      "status": "explicit",
+      "evidence_span": "Every time the patient uses the bottle, it sends two pieces of data into the cloud"
+    },
+    {
+      "id": "P3",
+      "text": "On discrepancy the bottle uses lights and chimes plus phone or text alerts, and can ask why doses were missed to notify caregivers in real time",
+      "status": "explicit",
+      "evidence_span": "we have on-bottle lights and chimes, and we also have phone or text message alerts as well"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in cellular connectivity, long battery, normal-cap use, and no apps make the bottle easy and versatile for non-tech-savvy patients",
+      "status": "explicit",
+      "evidence_span": "patients don't have to sync it to Wi-Fi or Bluetooth. It simply works the moment they get it from the pharmacy"
+    },
+    {
+      "id": "P5",
+      "text": "An open API integrates with healthcare partners and the bottle design supports labels and grip",
+      "status": "explicit",
+      "evidence_span": "We've built this solution with an open API so we can easily integrate with all of our health care partners"
+    },
+    {
+      "id": "P6",
+      "text": "Specialty pharma companies pay for bottles that distribute high-cost drugs free to patients to raise adherence, refills, and pharma revenue",
+      "status": "explicit",
+      "evidence_span": "partner with specialty pharma companies to distribute high-cost drugs in our bottle"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "costly medication non-adherence",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart bottle sensing and intervention",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "specialty pharma distribution model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients take the right pills at the right time with improved adherence and engagement",
+      "status": "explicit",
+      "evidence_span": "improve medication adherence and patient engagement"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Pharma gains higher adherence, refills, and revenues",
+      "evidence_span": "AdhereTech will increase adherence. refills, and ultimately revenues for the pharma company"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "patients taking the right pill at the right time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if we notice a discrepancy, like the patient didn't take their pills, then we intervene"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Patients will get this bottle from the specialty pharmacy completely free of charge"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Intervention modalities (lights/chimes/calls/texts/why-missed) folded as one intervention package (§4.1.7–8). Ease features (CDMA, battery, normal cap, alert channels) folded as one usability premise. Trials and named pharma partnerships treated as traction/evidence of the B2B model, not extra premises (§4.2). Team/board/GE excluded as biography. Patents folded into bottle mechanism (§4.1.1). Anti-template: problem, product, and pharma model separately revisable."
+}

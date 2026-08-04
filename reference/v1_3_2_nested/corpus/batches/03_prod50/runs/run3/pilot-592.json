@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "No-code Whiteboarder modeling, linking, upload mapping, and visualization get users to Insight",
+      "status": "explicit",
+      "evidence_span": "I have already modeled my crime data using FactGem's whiteboarder, and now I will easily model my weather data and dynamically link it to my crime data"
+    },
+    {
+      "id": "P2",
+      "text": "Uploader automatically maps data with simple drag-and-drop for exceptions",
+      "status": "explicit",
+      "evidence_span": "most of my weather data automatically maps. For the few fields that don't map, it's easy. I will use Fact Gem's drag and drop tool shown here"
+    },
+    {
+      "id": "P3",
+      "text": "Delivers linked insight across CRM/e-commerce/POS data in hours at retailer scale",
+      "status": "explicit",
+      "evidence_span": "We built a linked model across all stores and customers. We exposed new insight. And we did this in six hours, not 24"
+    },
+    {
+      "id": "P4",
+      "text": "Easy path to insight without training, consulting, expensive engineering, or rewriting business logic",
+      "status": "explicit",
+      "evidence_span": "FactGem is the only tool here that is easy to use and gets you to insight quickly. And we don't force you to change your business logic to fit a technology solution"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "No-code data linking workflow",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fast insight without heavy BI overhead",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Quick Insight from putting related data together",
+      "status": "explicit",
+      "evidence_span": "gets you to insight quickly"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ready to explore and visualize my data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "expose new insights in 24 hours"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged whiteboarder modeling with explore/visualize as one workflow premise. Competitor comparison kept as ease-of-insight condition.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-592",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:36:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

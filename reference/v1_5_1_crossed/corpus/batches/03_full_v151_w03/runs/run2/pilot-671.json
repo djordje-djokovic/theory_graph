@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-671",
+    "coder_session_id": "session_05",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:45:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CDN-based large-audience video streaming introduces minutes of latency that break real-time social interaction around live events",
+      "status": "explicit",
+      "evidence_span": "a content delivery network based solution that results in an awful lot of latency being introduced"
+    },
+    {
+      "id": "P2",
+      "text": "Existing real-time streams under half a second cannot scale to enough concurrent viewers",
+      "status": "explicit",
+      "evidence_span": "they don't scale to reach enough concurrent viewers"
+    },
+    {
+      "id": "P3",
+      "text": "A ground-up platform with proprietary algorithms including an interactive transport protocol streams to millions of concurrent viewers under half a second of latency",
+      "status": "explicit",
+      "evidence_span": "we can stream to millions of concurrent viewers with under half a second of latency"
+    },
+    {
+      "id": "P4",
+      "text": "Optional proximity multicast peer-to-peer algorithms further reduce cost and address bandwidth constraints at internet scale",
+      "status": "explicit",
+      "evidence_span": "proximity multicast, which is a series of peer-to-peer algorithms that help to further reduce cost"
+    },
+    {
+      "id": "P5",
+      "text": "Product is licensed via APIs and SDKs across Android, iOS, web, and desktop with fast customer integration",
+      "status": "explicit",
+      "evidence_span": "we license our product to our customers through our API's and SDK's that reach devices like Android iOS as well as web and desktop browsers"
+    },
+    {
+      "id": "P6",
+      "text": "Target use cases include one-to-many broadcast, expanded group chat/broadcast, and interactive verticals such as social, webinars, news, and education",
+      "status": "explicit",
+      "evidence_span": "we're able to take that group broadcast, that group chat, and broadcast out to millions of concurrent viewers when that's necessary"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "latency vs scale streaming tradeoff",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "scalable real-time streaming platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "API licensing and use-case GTM",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reach very large audiences with low-latency video that drives interaction and engagement",
+      "status": "explicit",
+      "evidence_span": "reach really large audiences and do so in a very innovative way with very low latency to drive interactive interaction and engagement with your users"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "latency that results from your video stream"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scalable real time video streaming platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license our product to our customers through our API's and SDK's"
+    },
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "help to further reduce cost deliver on an even massive scale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: Chelsea/Twitter latency vignette and CDN vs real-time tradeoff folded into P1–P2 problem pair. HLS/chunking cascade folded into P3 mechanism (§4.1.7). Demo concurrent-viewer numbers treated as performance evidence of P3, not a premise. Paying-customer names and team bios excluded as traction/credentials. Future e-sports/AR/OTT roadmap treated as GTM direction under P6 rather than separate premises."
+}

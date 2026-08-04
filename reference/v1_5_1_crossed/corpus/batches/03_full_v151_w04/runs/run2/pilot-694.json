@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home coffee makers lag third-wave quality, while single-serve pods create waste, high cost, and stale grounds",
+      "status": "explicit",
+      "evidence_span": "That wave is not sustainable. It creates a lot of waste"
+    },
+    {
+      "id": "P2",
+      "text": "A connected centrifugal Spin Coffee Maker brews barista-quality coffee from fresh beans without pods or filters, managing brew variables and spinning out dry grounds",
+      "status": "explicit",
+      "evidence_span": "The Spin Coffee Maker uses patented centrifugal force technology to brew your coffee"
+    },
+    {
+      "id": "P3",
+      "text": "An app marketplace of local roasters auto-replenishes beans when machine sensors detect low stock",
+      "status": "explicit",
+      "evidence_span": "The beans get ordered automatically from a marketplace for local coffee roasters"
+    },
+    {
+      "id": "P4",
+      "text": "Business model takes margin on machines and a cut of every marketplace bean order",
+      "status": "explicit",
+      "evidence_span": "we're going to make margins on the machines and the beans"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home coffee quality and pod waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "centrifugal connected brewer",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "roaster marketplace auto-replenish",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "machine and bean margins",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Third-wave coffee quality at home with single-serve convenience and no pod waste",
+      "status": "explicit",
+      "evidence_span": "combines the quality of the third wave coffee roasters with the convenience of a single serve pod system"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's kind of hard to make a good quality coffee at home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This machine makes any coffee style you like"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're going to solve the biggest problem in coffee history, coffee downtime"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pod waste/cost/staleness and home-maker stagnation folded as one problem set motivating the product (v1.5.1 §4.1.6). RPM styles, steel filter, residue container, Wi-Fi, and patent folded into one centrifugal brewer mechanism+cascade (§4.1.7). Marketplace auto-reorder kept as separately revisable IoT commerce module. Singleton domains retained as independently learnable. Giveaway/rewards excluded."
+}

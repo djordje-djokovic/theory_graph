@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-789",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Tween and teen girls who love nail art find salon manicures inconvenient, pricey, limited, and hard to DIY with the non-dominant hand",
+      "status": "explicit",
+      "evidence_span": "getting a customized instant manicure is a hassle. Going to a nail salon is extremely inconvenient. It's also pretty pricey, and there's a limited art selection"
+    },
+    {
+      "id": "P2",
+      "text": "NailBot prints custom images onto fingernails in seconds from a smartphone using inkjet technology and cosmetic-safe cartridges",
+      "status": "explicit",
+      "evidence_span": "The NailBot prints custom, instant nail art directly onto your fingernail using your smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "An art marketplace supplies licensed and user designs beyond basic fingernail printing",
+      "status": "explicit",
+      "evidence_span": "we're creating an art marketplace for those to creatively express themselves"
+    },
+    {
+      "id": "P4",
+      "text": "An AR app lets girls preview art on nails and share socially while hardware ships, building a viral community",
+      "status": "explicit",
+      "evidence_span": "we developed an augmented reality app where they can use the back-facing camera on their smartphone and superimpose images"
+    },
+    {
+      "id": "P5",
+      "text": "21 million US tween/teen girls who regularly decorate nails are the beachhead; family and pro polish bots expand into a large nail-care market",
+      "status": "explicit",
+      "evidence_span": "They are 21 million girls strong in the United States. 92% of which decorate their nails regularly"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "salon manicure hassle",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "NailBot printer and art marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "AR community and teen beachhead",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Girls get customized instant nail art for creative self-expression without salon hassle",
+      "status": "explicit",
+      "evidence_span": "creatively express herself, change her look daily, and feel pretty"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting a customized instant manicure is a hassle"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prints custom, instant nail art directly onto your fingernail"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creating our viral social community"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Salon inconvenience/price/selection and bad-hand DIY folded as one hassle problem (§4.1.6). Prep coats, HP inkjet, DPI, remover, top coat folded as feature cascade of NailBot (§4.1.7). Marketplace kept as separately emphasized content module. AR preview/share as interim community GTM. Girl Scout partnerships treated as community GTM detail folded into beachhead/community domain. Advanced family/pro bots treated as roadmap extensions of the same category beachhead. Crowdfunding signup as channel detail in beachhead. Anti-template: problem, product/marketplace, and community/beachhead separately revisable."
+}

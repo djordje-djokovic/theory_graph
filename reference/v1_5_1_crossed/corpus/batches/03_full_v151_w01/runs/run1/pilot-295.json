@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-295",
+    "coder_session_id": "session_05",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lithium brine resources are abundant but solar-evaporation extraction is too slow, water-intensive, carbon-heavy, and costly to meet battery demand",
+      "status": "explicit",
+      "evidence_span": "lithium brine industry lack efficient lithium extraction technology to meet the current demands of exploding battery market"
+    },
+    {
+      "id": "P2",
+      "text": "Nano-mosaic absorbents selectively extract lithium from brine in about 48 hours into battery-grade product with far less water, cost, and carbon than evaporation",
+      "status": "explicit",
+      "evidence_span": "develop nano-mosaic absorbents, which are very similar to a sponge"
+    },
+    {
+      "id": "P3",
+      "text": "Filter units loaded with the absorbents scale lithium throughput for brine and petrochemical operators",
+      "status": "explicit",
+      "evidence_span": "these are our filter units, which are five feet long"
+    },
+    {
+      "id": "P4",
+      "text": "The same selective extraction approach can extend beyond lithium to other chemicals such as nickel and cobalt",
+      "status": "explicit",
+      "evidence_span": "not just limited to lithium extraction, but can be extended to various chemical extraction like nickel and cobalt"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inefficient brine lithium extraction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "nano-mosaic direct lithium extraction",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-mineral expansion",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable, efficient lithium supply for the clean-energy battery market",
+      "status": "explicit",
+      "evidence_span": "provide sustainable energy technology to the global market"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have enough resources of lithium, but lithium brine industry lack efficient lithium extraction technology"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extracting lithium within 48 hours and process it into battery grade"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extended to various chemical extraction like nickel and cobalt"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.5.1 process+performance package: 48h timing, water, cost, and zero carbon folded into P2 rather than separate premises. Industry-lacks-efficient-tech kept as the motivating brine-extraction gap (P1) because it is the go-to-market problem the process answers. Revenue-per-filter figures treated as traction."
+}

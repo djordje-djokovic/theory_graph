@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:43:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After-school private tutoring is essential but hard to source",
+      "status": "explicit",
+      "evidence_span": "Private tutoring is a standard for success"
+    },
+    {
+      "id": "P2",
+      "text": "Peer tutors are booked through preference filters and instant chat/location sharing",
+      "status": "explicit",
+      "evidence_span": "Select a tutor based on your preferences, number of hours tutored, proximity"
+    },
+    {
+      "id": "P3",
+      "text": "Online delivery includes whiteboard, notes, video, ratings, and progress reports",
+      "status": "explicit",
+      "evidence_span": "Once a session is done, a student rates the tutor. And as soon as the session is done, after that, he receives a progress report"
+    },
+    {
+      "id": "P4",
+      "text": "Algorithms pre-select and recommend tutors using a graph of students, tutors, and interactions",
+      "status": "explicit",
+      "evidence_span": "We use our graph database to connect students, tutors, and their interactions to show personalized recommendations in real time"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from tutor commissions and institutional analytics subscriptions",
+      "status": "explicit",
+      "evidence_span": "We charge our tutors a 20% commission per transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tutoring access need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "P2P tutoring platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Commission and B2B analytics model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make private tutoring accessible via a peer marketplace",
+      "status": "explicit",
+      "evidence_span": "make education Accessible to all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Need a private tutor for exam tomorrow?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peer-to-peer platform that connects students"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're also going to charge the institutions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.1: commission and institutional fee kept in one commercial premise describing how the platform is sold. Ministry MOUs treated as traction/channel evidence, not a premise."
+}

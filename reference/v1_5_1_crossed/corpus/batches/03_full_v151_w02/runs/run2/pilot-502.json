@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-502",
+    "coder_session_id": "session_04",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "African logistics lack flexibility and centralized coordination, so contracted trucks often fail to show and goods cost far more",
+      "status": "explicit",
+      "evidence_span": "there's no flexibility or centralized coordination in the system"
+    },
+    {
+      "id": "P2",
+      "text": "Truckers sit empty or idle most of the time and wait days to load/offload for short journeys",
+      "status": "explicit",
+      "evidence_span": "The truckers are empty or idle 93% of the time"
+    },
+    {
+      "id": "P3",
+      "text": "Tech-enabled logistics optimization provides flexibility and centralized coordination across the journey",
+      "status": "explicit",
+      "evidence_span": "We are a tech-enabled logistics optimization solution that provides this flexibility and centralized coordination"
+    },
+    {
+      "id": "P4",
+      "text": "Thousands of truck/journey data points enable data-driven redirects when delays or port issues occur",
+      "status": "explicit",
+      "evidence_span": "collecting thousands of data points of every single truck in every journey and then providing data-driven decision making"
+    },
+    {
+      "id": "P5",
+      "text": "Operations dashboards give cargo owners and transporters visibility and peace of mind on loading, transit, and offload",
+      "status": "explicit",
+      "evidence_span": "providing these details and information to our customers, our cargo owners and our transporters, and allowing them to have peace of mind"
+    },
+    {
+      "id": "P6",
+      "text": "Google Waze partnership and live tracking/push notifications improve coordination and visibility",
+      "status": "explicit",
+      "evidence_span": "partnered with Google Waze in order to better optimize our tracking coordination platform"
+    },
+    {
+      "id": "P7",
+      "text": "Focus on large-volume haulage of grains, fertilizers, cement, and sugar across Sub-Saharan Africa, starting in Kenya and Uganda",
+      "status": "explicit",
+      "evidence_span": "Right now we're focused on grains, fertilizers, cement, and sugar"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken African haulage coordination",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Data-driven redirect and visibility platform",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Bulk commodity corridor focus",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring down the cost of goods by revolutionizing continental logistics",
+      "status": "explicit",
+      "evidence_span": "bringing down the cost of goods for all of us and for the whole continent"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peace of mind for cargo owners and transporters during stressful moves",
+      "evidence_span": "allowing them to have peace of mind, which we found to be quite important in these stressful times"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The logistic system's broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Lorry is powering African logistics"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Lorry is moving large volumes across Sub-Saharan Africa"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Shipper and trucker pain folded as one coordination-failure problem set with two facets kept because separately failable (P1 vs P2). Run-rate/retention traction excluded. Waze noted as beta but still a claimed coordination condition."
+}

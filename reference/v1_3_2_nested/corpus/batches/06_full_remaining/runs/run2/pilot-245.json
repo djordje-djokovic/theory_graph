@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Textbook study cannot compete for student attention against messaging and short-form social apps",
+      "status": "explicit",
+      "evidence_span": "a generation that spends eight hours a day on Snapchat and TikTok to spend two hours a day on a textbook"
+    },
+    {
+      "id": "P2",
+      "text": "OCR plus a machine-learning model can turn a photo of textbook text into prioritized flashcard questions and answers in seconds",
+      "status": "explicit",
+      "evidence_span": "we use OCR to grab the words out of the textbook. In the background, our machine learning model creates questions and answers"
+    },
+    {
+      "id": "P3",
+      "text": "A pocket tutor inside messaging apps generates Q&A from a short prompt and extends to essay help and related study tasks",
+      "status": "explicit",
+      "evidence_span": "all you need to do is send a word rather than copy paste the text itself"
+    },
+    {
+      "id": "P4",
+      "text": "Semantic, task-specific model training on collected study data yields much faster Q&A generation than industry benchmarks",
+      "status": "explicit",
+      "evidence_span": "our Q&A generation algorithm takes 200 milliseconds to create questions and answers, whereas the next industry benchmark is 1,200 milliseconds"
+    },
+    {
+      "id": "P5",
+      "text": "The same algorithms can distill university knowledge bases and produce instant training resources for large employers",
+      "status": "explicit",
+      "evidence_span": "we're using our algorithms and our models to distill their knowledge repositories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Attention competition with social apps",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Flashcard and messaging study assistants",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Fast specialized models and B2B training",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster student learning through generative AI study tools with seamless experience",
+      "status": "explicit",
+      "evidence_span": "building generative AI to help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Workplace and university knowledge distillation for employee and institutional upskilling",
+      "evidence_span": "use our algorithms to create instant training resources for their employees"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "this is all made possible because we specialize in language"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the competition for attention today is so fierce"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building out a seamless learning experience for your workforce"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent coding: merged 'learn faster' product framing into value rather than a separate premise; kept Kado and Milo as two product premises. Traction metrics and founder biography excluded. Ambassadors/recruiting treated as data-expansion detail inside P4, not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

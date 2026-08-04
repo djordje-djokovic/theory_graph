@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1193",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "RedBeacon matches consumer local-service requests to businesses that quote and offer bookable times",
+      "status": "explicit",
+      "evidence_span": "local businesses who've signed up for Red Beacon receive the job, and they're able to quote a price and offer appointment times, which you can then book online"
+    },
+    {
+      "id": "P2",
+      "text": "Complete pay-for-performance billing lowers provider signup friction versus lead-gen models",
+      "status": "explicit",
+      "evidence_span": "So it's complete pay for performance"
+    },
+    {
+      "id": "P3",
+      "text": "Booking requires more trust data than quotes alone, so the product must be social and reference-rich",
+      "status": "explicit",
+      "evidence_span": "consumers actually needed a lot more information than we thought they would before they'll book a job online"
+    },
+    {
+      "id": "P4",
+      "text": "Partner websites distribute the network through a customizable embed widget and revenue share",
+      "status": "explicit",
+      "evidence_span": "with one line of JavaScript"
+    },
+    {
+      "id": "P5",
+      "text": "Supply-side expansion into new cities extends the bookable provider set",
+      "status": "explicit",
+      "evidence_span": "we're starting a geographic expansion"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Marketplace liquidity and trust",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Widget partner channel",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "City-by-city supply growth",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Book local service jobs online as easily as booking a flight",
+      "status": "explicit",
+      "evidence_span": "Anyone who's ever booked a flight online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it very easy to schedule jobs online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making Red Beacon available to them on their websites"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there'll be many other markets coming soon"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Coarser marketplace domain bundles product, PFP economics, and trust. Widget customization details absorbed into P4. Unique-visitor partner stats excluded as traction."
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-42",
+    "coder_session_id": "session_02",
+    "session_case_index": 2,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Agriculture must raise output ~60% while climate-related crop failures rise, creating urgent need for new resilient varieties",
+      "status": "explicit",
+      "evidence_span": "we're going to need to increase our agricultural output by 60%. That's 60% more food, more clothes, and more medicine. And at the same time, we're expecting a massive uptick in the number of climate-related crop failures"
+    },
+    {
+      "id": "P2",
+      "text": "GWAS and conventional GM/breeding discovery are too inaccurate and slow to clear the variety-development bottleneck in time",
+      "status": "explicit",
+      "evidence_span": "only about 14% of the things that they return are actually useful, and sometimes it's as low as 1%. And after you're done finding your target genes, it's at least five years and up to $100 million to produce even a simple genetically modified variety. Or you could run a traditional plant breeding program, which could take a decade or more"
+    },
+    {
+      "id": "P3",
+      "text": "Interpretable ML discovery identifies causal gene targets at ~90% precision from natural-selection-inspired models",
+      "status": "explicit",
+      "evidence_span": "a new discovery method that, instead of the 14% accuracy of GWAS, allows us to identify causal gene targets with 90% precision"
+    },
+    {
+      "id": "P4",
+      "text": "An AI recommendation system suggests trait-producing plant crosses with far less data and forecasts outcomes before planting",
+      "status": "explicit",
+      "evidence_span": "an AI-enabled recommendation system that suggests which plant crosses might produce the traits that we're looking for. And it does that with only a hundredth of the data that's normally required. This level of accuracy and efficiency allows us to forecast plant outcomes before they even happen"
+    },
+    {
+      "id": "P5",
+      "text": "Cost and time efficiency makes previously uneconomic crops feasible and enables embedding into partners' breeding pipelines",
+      "status": "explicit",
+      "evidence_span": "we can actually work on any crop in the world. So even crops that were too complicated or too costly to work on are now economically feasible for us. And as a result, we're working with a number of pilot partners to get our technology into their existing breeding pipelines"
+    },
+    {
+      "id": "P6",
+      "text": "The company makes new seeds with partners and its own pipeline for alternative rubber, sustainable sunflowers, and drought-resistant cotton",
+      "status": "explicit",
+      "evidence_span": "the real goal of our company is to make new seeds, and we're currently doing that with partners like Farmed Materials to create an alternative source of rubber, and with our own R&D pipeline to create sustainable sunflowers for cooking oil and drought-resistant cotton with better fiber quality"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Resilient variety bottleneck",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Discovery and cross recommendation AI",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Partner pipelines and new seeds",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster creation of new productive, climate-resilient crop varieties for farmers",
+      "status": "explicit",
+      "evidence_span": "accelerate the creation of new and productive crop varieties"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A more sustainable and resilient agricultural world",
+      "evidence_span": "a more sustainable and resilient world is still possible"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "urgent and unmet need to deliver new and resilient crop varieties to farmers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the process of discovery and development by up to 77%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the real goal of our company is to make new seeds"
+    },
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We then used that knowledge to build an AI-enabled recommendation system"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Broccoli greenhouse experiment treated as validation evidence for P3–P4, not a separate premise. Team credentials and financing ask excluded. P3→P4 coded because speaker explicitly says discovery knowledge was used to build the recommender."
+}

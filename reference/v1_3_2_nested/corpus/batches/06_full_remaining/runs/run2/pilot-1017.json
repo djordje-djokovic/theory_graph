@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stranger-averaged and often fake reviews fail users with unique taste",
+      "status": "explicit",
+      "evidence_span": "one-third of reviews online are fake"
+    },
+    {
+      "id": "P2",
+      "text": "Recommendations come from critics, trusted friends, and algorithmically similar-taste users",
+      "status": "explicit",
+      "evidence_span": "The first group are professional critics, people with genuine expertise, whose livelihoods depend on giving high-quality recommendations. The second group are your friends"
+    },
+    {
+      "id": "P3",
+      "text": "Friend Q&A with pre-filled surveys collects recommendations without friction",
+      "status": "explicit",
+      "evidence_span": "LiveStar pre-populates a survey based on the text that I put in the question that lets my friends simply answer in a few taps"
+    },
+    {
+      "id": "P4",
+      "text": "Categories span dining, music, and movies in one destination",
+      "status": "explicit",
+      "evidence_span": "We're a one-stop destination, and we're constantly adding new categories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Review quality failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Trusted and similar-taste engine",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Category coverage",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, simple access to recommendations the user will actually trust and like",
+      "status": "explicit",
+      "evidence_span": "It's fast, it's simple, and it's easy to use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "existing solutions are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "faster access to friend and critic recommendations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one-stop destination"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.2: critic/friend/similar enumerated uses folded into one trusted-source premise with Q&A as separate enabling module. Date-night narrative is demo only.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1017",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

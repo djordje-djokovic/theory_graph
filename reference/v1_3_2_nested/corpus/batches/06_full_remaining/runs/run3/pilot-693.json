@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Half of consumed fish is farm-raised while 85% of wild stocks are exploited, making farm integrity critical",
+      "status": "explicit",
+      "evidence_span": "50% of the fish that we consume today is farm raised"
+    },
+    {
+      "id": "P2",
+      "text": "Diver-only inspection is expensive, unsafe in pairing costs, and leaves critical structural information missing",
+      "status": "explicit",
+      "evidence_span": "this method is very imprecise and often critical information in the structures is missing"
+    },
+    {
+      "id": "P3",
+      "text": "SeaDrone applies aerial-drone lessons to an underwater vehicle that is portable, maintainable, and affordable",
+      "status": "explicit",
+      "evidence_span": "taking lessons learned from AerialDrone to make an underwater robot"
+    },
+    {
+      "id": "P4",
+      "text": "Task-driven piloting with auto-filed photos/videos and cloud upload gives managers global farm visibility",
+      "status": "explicit",
+      "evidence_span": "he can immediately see the global information of the entire fish farm"
+    },
+    {
+      "id": "P5",
+      "text": "100-meter depth extends inspection beyond easy diver reach",
+      "status": "explicit",
+      "evidence_span": "since the sea drone can go to the 100-meter depth, it's also very good to inspect the things in the deep water"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Aquaculture inspection imperative",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Underwater drone platform",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Manager cloud visibility",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer, more efficient fish-farm inspection with decision-ready digital data",
+      "status": "explicit",
+      "evidence_span": "huge opportunity to make fish farming both safer and more efficient all at once"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inspecting these farms, again, is very difficult"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It costs a fraction of existing solutions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "C-Zone provides better data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Product-line tiers excluded as packaging detail. Baja pilot treated as demo evidence not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-693",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

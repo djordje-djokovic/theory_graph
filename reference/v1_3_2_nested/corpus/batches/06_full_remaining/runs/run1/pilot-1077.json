@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable status reports and project updates travel point-to-point by email so the rest of the company cannot access them",
+      "status": "explicit",
+      "evidence_span": "these communications that are loaded with valuable business information are sent by email from one person to another, and the rest of the company can't access them"
+    },
+    {
+      "id": "P2",
+      "text": "Managers can configure who reports, when, and what template content in a simple scheduled status-report workflow",
+      "status": "explicit",
+      "evidence_span": "all we need to know is who you want status reports from, when you want them, and what information they should include"
+    },
+    {
+      "id": "P3",
+      "text": "The platform makes reports consistent, timely, and team-shared and automates reminders so managers need not harass writers",
+      "status": "explicit",
+      "evidence_span": "their status reports are more consistent than they've ever been. They're more timely. They're shared among all the people on their team"
+    },
+    {
+      "id": "P4",
+      "text": "Shared status reports across a company map real day-to-day people-and-project relationships beyond the org chart",
+      "status": "explicit",
+      "evidence_span": "Using status reports, we're mapping the relationships between people and projects in a company"
+    },
+    {
+      "id": "P5",
+      "text": "Employees can search across submitted status reports to find expertise, client relationships, and office location inside the company",
+      "status": "explicit",
+      "evidence_span": "search across all of the status reports these people have submitted to see which of them has been working on solar power systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email-trapped status communications",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Scheduled status-report collection",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Business-graph search and discovery",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People across the organization understand the full puzzle and can align people and resources through accessible status reports",
+      "status": "explicit",
+      "evidence_span": "ThinkFuse provides this understanding by making status reports more accessible, by making them more consistent, and more powerful to align people and resources across an organization"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Let's look at one example of how ThinkFuse helps you leverage that information"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "decisions are less informed, work is duplicated, and ultimately, companies lose money because of this"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making status reports more accessible, by making them more consistent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more powerful to align people and resources across an organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-sentence on the closing. Beta-user praise treated as traction per 4.2. Recipient-list and Follow UI details folded into collection/sharing and search premises (v1.3.2 clarification 5). Singleton D1 retained: the email-access failure is independently revisable from the product modules. 'Business graph' coded as the mapping/search mechanism, not as vision framing alone.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1077",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

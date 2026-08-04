@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without monitoring, people only have a rough sense of where their time goes",
+      "status": "explicit",
+      "evidence_span": "people actually have a pretty rough sense of where their time goes"
+    },
+    {
+      "id": "P2",
+      "text": "Body-worn phone sensors collect activity data passively 24 hours a day",
+      "status": "explicit",
+      "evidence_span": "on your body, 24 hours a day are sensors. We passively collect data"
+    },
+    {
+      "id": "P3",
+      "text": "The app turns passive data into goal and social views that drive intentional living",
+      "status": "explicit",
+      "evidence_span": "encouraging this kind of behavioral change to help you achieve that goal of living your life more intentionally"
+    },
+    {
+      "id": "P4",
+      "text": "Full-week hour tracking shows what users are actually prioritizing versus narrow vertical tools",
+      "status": "explicit",
+      "evidence_span": "Chronos enables you to see those tradeoffs, to see what you're actually prioritizing"
+    },
+    {
+      "id": "P5",
+      "text": "Knowing goals from continuous context supports selling experiences and products that help achieve those goals",
+      "status": "explicit",
+      "evidence_span": "We can offer you things that can help you achieve those goals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Time-awareness gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Passive geo-social time product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Goal-aligned monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Live life more intentionally with actionable knowledge of time use",
+      "status": "explicit",
+      "evidence_span": "knowing how you spend your time matters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people actually have a pretty rough sense of where their time goes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "living your life more intentionally"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Truncated open/close. Optional dependencies omitted. Fitbit-class integrator not separate premise (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web search returns link lists for task queries instead of direct actionable results",
+      "status": "explicit",
+      "evidence_span": "all you get is a sea of web links, not direct results that help you make a decision immediately"
+    },
+    {
+      "id": "P2",
+      "text": "Maluba combines voice and full touch interfaces so users complete tasks with the same UI either way",
+      "status": "explicit",
+      "evidence_span": "everything you see here is fully accessible through both touch and voice with the same gorgeous UI in either case"
+    },
+    {
+      "id": "P3",
+      "text": "Supports many vertical categories powered by NL classification that expands quickly to new domains",
+      "status": "explicit",
+      "evidence_span": "Maluba supports 18 such categories, ranging from movies, entertainment, restaurants, and many more"
+    },
+    {
+      "id": "P4",
+      "text": "Open ecosystem partners with leading content providers rather than locking to Apple or Google",
+      "status": "explicit",
+      "evidence_span": "We're not tied to an ecosystem just like Apple or Google. We want to provide you the best possible experience"
+    },
+    {
+      "id": "P5",
+      "text": "Android now with later cross-platform and an SDK for third-party apps on the NL platform",
+      "status": "explicit",
+      "evidence_span": "We're going on Android today, but we want to go cross-platform later this year on Windows phones and iPhones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Actionable mobile search gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Voice/touch do-engine across categories",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Open partners, platforms, SDK",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get tasks done through a voice-activated do engine with direct results",
+      "status": "explicit",
+      "evidence_span": "voice-activated do engine that helps you get tasks done"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not direct results that help you make a decision immediately"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps you get tasks done"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best possible experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Independent run: timeline/share demo features folded into voice/touch product. Open-ecosystem vision coded via partnership condition. Category-expansion roadmap folded into P3.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1018",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

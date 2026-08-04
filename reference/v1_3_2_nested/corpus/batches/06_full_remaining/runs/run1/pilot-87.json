@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Heavy industries need heat that is cheap, reliable, and flame-hot, but zero-carbon options today fail that combination and become unaffordable when made reliable",
+      "status": "explicit",
+      "evidence_span": "There is no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "id": "P2",
+      "text": "The Joule Hive thermal battery takes cheap abundant electricity, stores it as heat, and delivers hot gas to existing furnaces, boilers, and kilns",
+      "status": "explicit",
+      "evidence_span": "This system takes in electricity from renewables or off-peak nuclear or hydro whenever it's cheap, whenever it's abundant, whenever it's available"
+    },
+    {
+      "id": "P3",
+      "text": "The system reaches 1,800 Celsius heat at least three times cheaper than hydrogen while remaining retrofittable to existing processes",
+      "status": "explicit",
+      "evidence_span": "we can keep it affordable, at least three times cheaper than hydrogen. And best of all, we're retrofitable"
+    },
+    {
+      "id": "P4",
+      "text": "Electrically conductive fire bricks (e-bricks) made from doped refractory materials go hotter and last longer than today's electric heaters",
+      "status": "explicit",
+      "evidence_span": "We use semiconductor doping to make them electrically conductive. The result is a material that can go hotter and last longer than electric heaters today"
+    },
+    {
+      "id": "P5",
+      "text": "Stacked e-bricks form a three-in-one electric heater, thermal store, and heat exchanger from cheap abundant bricks",
+      "status": "explicit",
+      "evidence_span": "It's a giant electric heater. It's a giant thermal store. And it's a giant heat exchanger that gets the energy out, all built from cheap, affordable, abundant bricks"
+    },
+    {
+      "id": "P6",
+      "text": "In markets with cheap renewable electricity, the system can pay back in about five years while offsetting most carbon emissions, or beat electric boilers on time-of-use rates",
+      "status": "explicit",
+      "evidence_span": "We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unaffordable industrial decarbonization",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Joule Hive and e-brick stack",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Cheap-power payback economics",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, reliable, flame-hot electrified heat that decarbonizes heavy industry without radically changing existing processes",
+      "status": "explicit",
+      "evidence_span": "turn the power from those sources into reliable industrial heat"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Decarbonize industrial sites and offset carbon emissions",
+      "evidence_span": "offsetting 80% of your carbon emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We stack these up to massive scales to build our dual high thermal battery"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we need a new approach to decarbonize our heat"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver it to your furnace, to your boiler, to your kiln, in place of the fossil fuels you usually burn"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Electricity prices, we see that in the Midwest, you can operate in areas today where 50% of the year, electricity is cheaper than natural gas"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Scale-up demo (pellets to towers) treated as evidence of feasibility, not separate premises. 'Industry electrified by 2045' vision not coded as premise (§4.1(4)). Heat/cost/retrofit kept as one commercial performance premise with e-brick as separately revisable materials module. Singleton D1 and D3 justified as market-need and deployment-economics modules."
+}

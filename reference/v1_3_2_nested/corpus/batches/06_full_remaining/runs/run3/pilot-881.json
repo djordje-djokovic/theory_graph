@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:03+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Smart pill bottles sense dosing events and compare them to prescribed schedules",
+      "status": "explicit",
+      "evidence_span": "tells us how many pills the patient took and when they took them. And we compare this to a patient's recommended dosage schedule"
+    },
+    {
+      "id": "P2",
+      "text": "On-bottle and remote interventions fire when dosing diverges from schedule",
+      "status": "explicit",
+      "evidence_span": "if we notice a discrepancy, like the patient didn't take their pills, then we intervene"
+    },
+    {
+      "id": "P3",
+      "text": "Cellular connectivity and normal-bottle use make the system work without Wi-Fi, Bluetooth, or apps",
+      "status": "explicit",
+      "evidence_span": "The bottle automatically sends all data over the Verizon data network"
+    },
+    {
+      "id": "P4",
+      "text": "Open API and non-adherence feedback extend the bottle into partner care workflows",
+      "status": "explicit",
+      "evidence_span": "open API so we can easily integrate with all of our health care partners"
+    },
+    {
+      "id": "P5",
+      "text": "Business model charges specialty pharma while patients receive bottles free for high-cost meds",
+      "status": "explicit",
+      "evidence_span": "Patients will get this bottle from the specialty pharmacy completely free of charge"
+    },
+    {
+      "id": "P6",
+      "text": "Ease of setup and use is the differentiator for non-adherent patients who will not clear complicated hurdles",
+      "status": "explicit",
+      "evidence_span": "we're the easiest to set up and the easiest to use"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Sensing and alerts",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Zero-friction connectivity",
+      "premise_ids": [
+        "P3",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner and pharma commercialization",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients take the right medication on time with higher adherence",
+      "status": "explicit",
+      "evidence_span": "improve medication adherence and patient engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if we notice a discrepancy, like the patient didn't take their pills, then we intervene"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're the easiest to set up and the easiest to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AdhereTech will increase adherence"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Problem magnitude statistics excluded as traction framing; adherence definition retained as the condition for value. Design cosmetics folded into P6."
+}

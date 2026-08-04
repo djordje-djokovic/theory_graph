@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-130",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Territorial payment platforms and creator tools fail international entrepreneurs who need to get paid across borders",
+      "status": "explicit",
+      "evidence_span": "Platforms like Stripe, PayPal, Payoneer, all building cross-border payments that are territorial and not tailored to these needs"
+    },
+    {
+      "id": "P2",
+      "text": "Multi-country payment API integration is complex, slow, fee-heavy, and technically demanding",
+      "status": "explicit",
+      "evidence_span": "time consuming and leads to higher transaction fees"
+    },
+    {
+      "id": "P3",
+      "text": "One account with compliance unlocks a unified API intermediary to many payment providers without code",
+      "status": "explicit",
+      "evidence_span": "enabling non-technical entrepreneurs and creators to get access to global payment options without writing any single line of code"
+    },
+    {
+      "id": "P4",
+      "text": "No-code websites, storefronts, invoicing, and media kits are the top-of-funnel conversion layer alongside payments",
+      "status": "explicit",
+      "evidence_span": "Our top of the funnel strategy is the reason for conversion of the platform"
+    },
+    {
+      "id": "P5",
+      "text": "IP geolocation and transaction parameters dynamically select which payment APIs to call",
+      "status": "explicit",
+      "evidence_span": "inform which of the payments APS to call at what point in time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-border payment pain",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mainstack payments and no-code stack",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Global payment access with simple secure receiving starting in minutes",
+      "status": "explicit",
+      "evidence_span": "receive payment from their customers in a simple and highly secure manner starting in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "rather than enabling Sandra with just financial services like other guys would do, we enable them with no-code suites"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "difficulty of getting paid"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get started in minutes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged no-code and payments into one product domain this run; speaker presents suites as funnel into the same platform. Traction and bios excluded. ASR 'payments APS' kept verbatim in evidence."
+}

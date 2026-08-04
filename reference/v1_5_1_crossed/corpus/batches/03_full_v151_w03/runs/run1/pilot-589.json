@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-589",
+    "coder_session_id": "session_04",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Machines need large volumes of structured training data while most human-created data is unstructured and data scientists spend most of their time cleaning it",
+      "status": "explicit",
+      "evidence_span": "90% of that data is unstructured, but machines need structured data to learn"
+    },
+    {
+      "id": "P2",
+      "text": "A platform combines tools, humans in the loop, and machine learning into specialized workflows so data scientists can collect, enrich, and structure high-quality multimodal training data at scale",
+      "status": "explicit",
+      "evidence_span": "combining tools, humans in the loop, and machine learning into specialized data workflows"
+    },
+    {
+      "id": "P3",
+      "text": "The offering blends professional-services quality and reach with SaaS scale and process control, unlike pure crowd platforms or traditional services alone",
+      "status": "explicit",
+      "evidence_span": "The fine crowd combines the best of both worlds"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unstructured training-data bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "human-in-loop data workflows",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS plus services quality model",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises gather more higher-quality training data faster so machines become smarter and more useful",
+      "status": "explicit",
+      "evidence_span": "gather more data of higher quality in less time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data scientists spend about 80% of their time cleaning and refining data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collect, enrich, and structure high quality training data at scale"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "high quality and reach of the professional services combined with the scale and control of the SaaS companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Voice assistant failure anecdote used as framing for smarter machines; core coded problem is structured training data. Crowd settings/recording/biometrics demo cascade folded into one workflow platform. Founder credentials and Fortune-500 partnership traction excluded. Accelerating intelligence vision kept as value not premise."
+}

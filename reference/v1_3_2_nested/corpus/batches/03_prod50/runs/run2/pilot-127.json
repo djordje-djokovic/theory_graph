@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Goal is sustainable efficient supply chain by replacing single-use online packaging with reusable shippers",
+      "status": "explicit",
+      "evidence_span": "looking to make the supply chain system more sustainable and efficient"
+    },
+    {
+      "id": "P2",
+      "text": "Sell to retailers: shipper fleet plus software used when fulfilling consumer orders",
+      "status": "explicit",
+      "evidence_span": "We provide them with a fleet of our shippers and the access to our software. Then they use those shippers when they're filling orders for their consumers"
+    },
+    {
+      "id": "P3",
+      "text": "E-commerce growth left retailers and consumers overburdened by cardboard boxes seeking alternatives",
+      "status": "explicit",
+      "evidence_span": "E-commerce grew much faster than any of us thought. And then we found ourselves surrounded by these boxes"
+    },
+    {
+      "id": "P4",
+      "text": "Shippers are designed in-house from diverted billboard vinyl with useful material properties",
+      "status": "explicit",
+      "evidence_span": "we actually designed our own reusable shippers"
+    },
+    {
+      "id": "P5",
+      "text": "Larger participation improves efficiency via nearest-need redistribution of shippers",
+      "status": "explicit",
+      "evidence_span": "the more people that buy into the program, the better and more efficient it becomes"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cardboard problem and reusable thesis",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Retailer product and materials",
+      "premise_ids": [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smart reusable packaging for retailer-to-consumer shipping",
+      "status": "explicit",
+      "evidence_span": "smart reusable option"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the supply chain system more sustainable and efficient"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "replacing all single-use packaging"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Q&A format; interviewer content excluded. Thin/truncated pitch. Return-model fit for rental baby clothes treated as illustration inside retailer use, not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without digitized who/what/when/where labor tracking, farms struggle under H-2A paperwork and DoL audits",
+      "status": "explicit",
+      "evidence_span": "farmers do this not just to better understand their farms, but to be compliant with labor laws"
+    },
+    {
+      "id": "P2",
+      "text": "About 84% of farms still rely on pen and paper for that tracking",
+      "status": "explicit",
+      "evidence_span": "84% of farms today are still tracking everything with pen and paper"
+    },
+    {
+      "id": "P3",
+      "text": "Grower-built AgriTrack suite captures field labor events into real-time dashboards using tablet NFC and phone geotags",
+      "status": "explicit",
+      "evidence_span": "we digitize the whole process"
+    },
+    {
+      "id": "P4",
+      "text": "Audit-ready labor reports and automated hour/piece-rate/overtime calculations remove manual compliance burden",
+      "status": "explicit",
+      "evidence_span": "all they have to do is download that report, give it to them, and they're ready to go"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Paper-based compliance risk",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Digitized labor and payroll system",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Confident, accurate farm labor data for compliance and decisions",
+      "status": "explicit",
+      "evidence_span": "confidence in the data that they're collecting, knowing that it's accurate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "So AgriTrack helps solve this problem by digitizing the whole process"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely impractical way of doing it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We do all the heavy lifting for them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Two-domain partition: compliance problem vs productized digitization/payroll. Future modules excluded. Time pressure ending excluded as presenter meta.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People need visibility into how personality, cognition, and emotion affect daily performance",
+      "status": "explicit",
+      "evidence_span": "Tidepool helps you understand how your personality, states of your cognition and emotions, drive and impact your daily performance"
+    },
+    {
+      "id": "P2",
+      "text": "Patented scientific games make measuring those states enjoyable and repeatable",
+      "status": "explicit",
+      "evidence_span": "our games are designed to help you understand what makes you unique"
+    },
+    {
+      "id": "P3",
+      "text": "Insights go beyond game scores to when users are sharpest and what activities to take",
+      "status": "explicit",
+      "evidence_span": "provides insights into when during the day she is most sharp"
+    },
+    {
+      "id": "P4",
+      "text": "Works across five health dimensions and connects to wearables like Fitbit",
+      "status": "explicit",
+      "evidence_span": "Tidepool actually works with five different dimensions that influence all of our daily behavior"
+    },
+    {
+      "id": "P5",
+      "text": "Monetizes via premium games and shareable reports",
+      "status": "explicit",
+      "evidence_span": "access premium games and reports, reports that you can actually share with your family, doctors, or even coaches"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "What to quantify about the brain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Games to multi-dimension insights",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Premium monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun personalized tracking that helps users organize their day and relationships better",
+      "status": "explicit",
+      "evidence_span": "organize her day better, get more done in a day, and have healthier relationships"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "daily performance"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "holistic perspective of your health"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "premium games and reports"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Anti-template note: need/product/monetization cut matches speaker's free-vs-premium structure and separately revisable measurement thesis vs game engine vs paid reports.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-969",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

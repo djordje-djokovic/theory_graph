@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aquaculture nets and mooring lines need frequent inspection because failures cause fish escapes",
+      "status": "explicit",
+      "evidence_span": "There's the mooring lines or rope that hold these nets to the seabed, and there's also the nets themselves"
+    },
+    {
+      "id": "P2",
+      "text": "Commercial divers are costly, dive in pairs, and produce incomplete paper documentation requiring transcription",
+      "status": "explicit",
+      "evidence_span": "when these divers come out of the water, they're taking notes on paper"
+    },
+    {
+      "id": "P3",
+      "text": "A five-kilogram robot with replaceable thrusters and a wide-gimbal camera is easy to pilot and maintain",
+      "status": "explicit",
+      "evidence_span": "C-Drone only weighs five kilograms, so it's extremely portable"
+    },
+    {
+      "id": "P4",
+      "text": "Operators follow assigned anchors/nets, capture media with comments, and sync cloud reports for managers",
+      "status": "explicit",
+      "evidence_span": "he can review the previous inspection data, current inspection summary. He can even just one click and file the entire report"
+    },
+    {
+      "id": "P5",
+      "text": "Deep-water capability inspects anchors divers cannot easily reach",
+      "status": "explicit",
+      "evidence_span": "especially like the anchor or those things that the diver cannot easily reach"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fish-farm inspection failure modes",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Intuitive subsea robot hardware",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Digital inspection reporting loop",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automate underwater inspections so farm managers get better data and safer operations",
+      "status": "explicit",
+      "evidence_span": "professional subsea robots to automate underwater inspections"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "farm managers only have one solution, which is commercially trained divers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "very intuitive to pilot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the farm manager can easily make a better decision"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Current-holding and gimbal FOV folded into hardware premise. Adjacent verticals uncoded as aspiration.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-693",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

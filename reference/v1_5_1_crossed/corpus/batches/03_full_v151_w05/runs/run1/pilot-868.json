@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "coder_session_id": "session_06",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:02:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Getting from question to insight requires a slow expensive pipeline of engineers, scientists, and programmers",
+      "status": "explicit",
+      "evidence_span": "From question to insight, it can take several weeks"
+    },
+    {
+      "id": "P2",
+      "text": "Company data is fragmented across siloed services",
+      "status": "explicit",
+      "evidence_span": "today all our data is fragmented across different services"
+    },
+    {
+      "id": "P3",
+      "text": "PatternEQ unifies data by connecting services and extracts patterns automatically",
+      "status": "explicit",
+      "evidence_span": "Pattern EQ unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "id": "P4",
+      "text": "One-click Predictions auto-builds models of influencing factors for a chosen outcome",
+      "status": "explicit",
+      "evidence_span": "you click the Predictions button. What it does behind the scenes is finds out the influencing factors"
+    },
+    {
+      "id": "P5",
+      "text": "Models score future customers for outcomes such as churn risk",
+      "status": "explicit",
+      "evidence_span": "This model can actually predict how your future subscribers can behave"
+    },
+    {
+      "id": "P6",
+      "text": "One-click Segments clusters similar customer groups with explainable features",
+      "status": "explicit",
+      "evidence_span": "you click on the Segments button. And what it's doing behind the scenes is clustering your data to find groups that behave similarly"
+    },
+    {
+      "id": "P7",
+      "text": "SaaS pricing starts at $1,000 per month and scales with volume",
+      "status": "explicit",
+      "evidence_span": "we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data divide and fragmented services",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated predictive analytics platform",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Volume-based SaaS pricing",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyone can access data science insights without specialist pipeline delay",
+      "status": "explicit",
+      "evidence_span": "simplifies data science and makes it accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's a data divide inside companies"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "an analyst coming into the service can get deep insights that typically require you to be a data scientist"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are a SaaS service. We make it super simple for you to use Predictive Insights"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Engineer/scientist/programmer steps folded as one slow pipeline pain; silos kept separate. Predictions, scoring, and segments are distinct analytic jobs split under enumeration rule 2. Demo factor interpretations are illustrations of Predictions, not separate premises. Singleton D3 retained as independently revisable commercial module. Anti-template: problem, product, pricing separately framed."
+}

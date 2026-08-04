@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Every Talks message carries both text and audio formats",
+      "status": "explicit",
+      "evidence_span": "Talks incorporates text and voice into every message"
+    },
+    {
+      "id": "P2",
+      "text": "Recipients can listen when they cannot read and speak when they cannot type",
+      "status": "explicit",
+      "evidence_span": "Tyler's driving, so he can't read the message. But with Talks, you can just tap on the chat bubble"
+    },
+    {
+      "id": "P3",
+      "text": "Fully featured messaging supports rich media and social network posting",
+      "status": "explicit",
+      "evidence_span": "a fully featured messaging app that supports pictures, voice, video, doodles, music, and location"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-platform release without requiring recipient to install the app",
+      "status": "explicit",
+      "evidence_span": "talks doesn't require the receiver to have the app so I can send messages literally to anyone"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud voice clones speak messages in the user's or a celebrity voice",
+      "status": "explicit",
+      "evidence_span": "we're able to make a message that you send to a friend or that you post on Facebook and Twitter read out in your voice or the voice of your favorite celebrity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Talks messaging experience",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Viral reach without app install",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Voice cloning tech",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Communicate without choosing between text and voice",
+      "status": "explicit",
+      "evidence_span": "you won't have to choose whether you type or talk or read or listen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Talks always has both formats in every message"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help talks be more viral than any other messaging app"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "voice cloning"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Problem contrast merged into dual-format premise rather than separate P1. Singletons D2/D3 justified as independently revisable viral and TTS modules.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-938",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

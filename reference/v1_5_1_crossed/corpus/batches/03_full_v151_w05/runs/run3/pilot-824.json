@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "coder_session_id": "session_02",
+    "session_case_index": 20,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote clinics lack expensive or bulky hospital diagnostic tools needed for patient care",
+      "status": "explicit",
+      "evidence_span": "clinics are not equipped to meet patients' needs. Many tools are available in large hospitals. are not accessible because they are expensive or too bulky"
+    },
+    {
+      "id": "P2",
+      "text": "OSCULT is an ultrasound solution on an iPad that captures images, annotations, measurements, and exam records",
+      "status": "explicit",
+      "evidence_span": "We have built a new ultrasound solution working on an iPad"
+    },
+    {
+      "id": "P3",
+      "text": "Practitioners can send images and consult specialists remotely over cellular or Wi-Fi",
+      "status": "explicit",
+      "evidence_span": "I can call a more experienced doctor in a major city hospital to get advice"
+    },
+    {
+      "id": "P4",
+      "text": "Priced at about one third of regular ultrasound devices (14,900 euros), targeting clinics and emergency use",
+      "status": "explicit",
+      "evidence_span": "14,900 euros, Ausgut is a great tool for emergency. This is one third of the price of the regular ultrasound device"
+    },
+    {
+      "id": "P5",
+      "text": "Also suited for medical education by broadcasting image streams to classrooms",
+      "status": "explicit",
+      "evidence_span": "Oscult is also ready for education. It's an ideal tool for healthcare classroom, because you can instantly broadcast the image stream to a large audience"
+    },
+    {
+      "id": "P6",
+      "text": "CE/FDA approvals are on track to open US and European sales after emerging-market clinic trials",
+      "status": "explicit",
+      "evidence_span": "CE Medical and FDA are on track to be approved by mid-next year, which will allow us to sell to US and European markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "portable ultrasound product",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "pricing and education uses",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "regulatory market access",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let local clinics better diagnose patients and connect to specialists to improve health without sending every case to hospital",
+      "status": "explicit",
+      "evidence_span": "local clinics can better diagnose and connect to specialists to improve the patient's health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring great user experience and communication in medical imaging"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This opens the market to every partition"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allow us to sell to US and European markets"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Demo capture/measure/annotate cascade folded into P2. Remote consult kept as distinct communication capability P3. ASR Ausgut/Oscult/OSCULT spans verbatim. Singleton D3 justified as regulatory GTM condition. Consumer future vision not coded as premise."
+}

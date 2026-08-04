@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "coder_session_id": "session_05",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile teams need to work together, but email is inadequate for sharing files, talking, and calendaring as a group",
+      "status": "explicit",
+      "evidence_span": "the world's gone mobile. We all need to communicate as teams. But email doesn't really cut it for us all the time"
+    },
+    {
+      "id": "P2",
+      "text": "Zula is a structured team messaging stream with embedded work tools—file sharing, polls, file library with Dropbox/Drive, calendar events, and search",
+      "status": "explicit",
+      "evidence_span": "we started off with a very standard messaging stream, a structured messaging stream. And we said, OK, what do we need to add to this for business tools to really get things done together as a team?"
+    },
+    {
+      "id": "P3",
+      "text": "People are invited into streams from contacts and social networks via deep links that land them directly in the conversation",
+      "status": "explicit",
+      "evidence_span": "I invite people into a stream the way I interact with people today, which is really the convergence of our social worlds and our business worlds"
+    },
+    {
+      "id": "P4",
+      "text": "One-tap conference calling from the stream rings participants with a join push and needs no phone numbers",
+      "status": "explicit",
+      "evidence_span": "we have one tap conference calling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email fails mobile team work",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "structured team messaging workspace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "in-stream conference calling",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Teams get things done with less email through a structured mobile conversation workspace",
+      "status": "explicit",
+      "evidence_span": "this is the beginning of reducing email and moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when we're communicating with email, sometimes we have to share files. Sometimes we have to talk to people. Sometimes we want to calendar things"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we know it really helps us get things done and obviously has way reduced our email"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sometimes all of this back and forth is not enough. And all this asynchronous communication"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "File share, polls, Dropbox/Drive library, calendar, and search folded as cascade of one structured messaging workspace (§4.1.7). Social invite/deep link kept with that collaboration surface. One-tap calling split as separately framed synchronous module when async is not enough. Six months of dogfooding treated as traction, not a premise."
+}

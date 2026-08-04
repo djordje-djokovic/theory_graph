@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "coder_session_id": "session_01",
+    "session_case_index": 3,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:03Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Gen Y users do not know where their money goes and need fun, fast budgeting/tracking",
+      "status": "explicit",
+      "evidence_span": "I have no idea where my money goes. None. I spend and I just don't think about it"
+    },
+    {
+      "id": "P2",
+      "text": "Expense input must be extremely fast—under three seconds on phone",
+      "status": "explicit",
+      "evidence_span": "whip out your phone and input any expense in under three seconds"
+    },
+    {
+      "id": "P3",
+      "text": "App never asks for bank/credit-card credentials or even name—anonymity",
+      "status": "explicit",
+      "evidence_span": "We'll never ask you for your credit card or bank information, not even your name"
+    },
+    {
+      "id": "P4",
+      "text": "Proactive logging engages users with their finances at the moment of spend",
+      "status": "explicit",
+      "evidence_span": "When it comes to your finances, we believe that being proactive is the key"
+    },
+    {
+      "id": "P5",
+      "text": "Game mechanics—XP, tokens, achievements, leveling—encourage tracking habits",
+      "status": "explicit",
+      "evidence_span": "we're going to make it fun and rewarding. Gen Y, or my generation, is all about playing games"
+    },
+    {
+      "id": "P6",
+      "text": "Pattern/frequency tagging surfaces likely merchants and categories automatically",
+      "status": "explicit",
+      "evidence_span": "Spends tracks both the pattern and frequency of my top tags and intuitively responds"
+    },
+    {
+      "id": "P7",
+      "text": "Tokens unlock sponsored deals matched to spending habits as a monetization path",
+      "status": "explicit",
+      "evidence_span": "Spends Tokens unlock deals"
+    },
+    {
+      "id": "P8",
+      "text": "Subcategory budgets and age-peer You Versus Them insights deepen tracking value",
+      "status": "explicit",
+      "evidence_span": "allowed for subcategorization"
+    },
+    {
+      "id": "P9",
+      "text": "Mobile is primary with web backup dashboard; product always free for users",
+      "status": "explicit",
+      "evidence_span": "we also built Spends Web to instantly back up everything you do on your mobile account"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Gen Y budgeting problem and proactive stance",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "fast anonymous gamified tracking product",
+      "premise_ids": ["P2", "P3", "P5", "P6", "P8", "P9"]
+    },
+    {
+      "id": "D3",
+      "name": "deals monetization",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun, fast budgeting and money tracking so users know where cash goes",
+      "status": "explicit",
+      "evidence_span": "solve the problem of budgeting and tracking your money. Not like everybody else, but fun and fast"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I have no idea where my money goes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "input any expense in under three seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working with companies to get the right deals in front of the right audience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "XP/tokens/achievements/leveling folded as one game-mechanics premise (§4.1.7). Demo McDonald's/girlfriend flows are cascade of fast input+tags. Bootstrap/launch timing excluded as traction. Free-forever is commercial facet of P9. Singleton D3: sponsored deals are separately revisable monetization module. Anti-template: need, product, deals separately revisable."
+}

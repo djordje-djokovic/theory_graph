@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-679",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents' only options to keep kids safe online are invasive phone-scanning or password spot-checks that undermine independence and waste hours on trivial messages",
+      "status": "explicit",
+      "evidence_span": "my only options are to pick up his phone, scan through his messages, or to save his passwords and randomly spot check his activity online"
+    },
+    {
+      "id": "P2",
+      "text": "Bark uses ML on connected social accounts and messages to detect issues like cyberbullying, sexting, and depression/suicide signs, alerting parents with recommended actions without full message access",
+      "status": "explicit",
+      "evidence_span": "we've developed machine learning-based algorithms to detect issues like cyberbullying, sexting, signs of depression or suicide"
+    },
+    {
+      "id": "P3",
+      "text": "Parents configure age-appropriate notification types across many social accounts, with weekly summaries when quiet and text alerts when issues arise, plus parent confirmation feedback to improve the model",
+      "status": "explicit",
+      "evidence_span": "We give the parents the ability to configure the type of notifications they want to receive"
+    },
+    {
+      "id": "P4",
+      "text": "Priced at $9/month per family with unlimited children and accounts, plus school/nonprofit affiliate partnerships",
+      "status": "explicit",
+      "evidence_span": "BARC is just $9 per month per family, unlimited children, unlimited connected accounts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual parental monitoring friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "ML issue detection and parent alerts",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "family pricing and school affiliates",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children stay safer online while keeping privacy and helping families build trust",
+      "status": "explicit",
+      "evidence_span": "keep children safe online while allowing them privacy and helping their families build trust in that process"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This manual process is a daily friction point"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If we detect an issue, we send an alert to the parent along with recommended actions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keeping their student population safe online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cyberbullying/sexting/depression detection kept as one ML issue-detection mechanism (v1.5.1 §4.1.7). Message-volume traction excluded. Singleton D1/D3 retained as separately revisable problem and commercial modules."
+}

@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personality, cognition, and emotion drive daily performance and should be measured alongside physical metrics",
+      "status": "explicit",
+      "evidence_span": "how your personality, states of your cognition and emotions, drive and impact your daily performance"
+    },
+    {
+      "id": "P2",
+      "text": "Fun, quick games establish baselines and repeatedly track attention, speed, and related factors",
+      "status": "explicit",
+      "evidence_span": "In less than a minute, by playing a fun and a visual game, Cindy quickly established her baseline personality profile"
+    },
+    {
+      "id": "P3",
+      "text": "Platform fuses game data with sleep, activity, and device biometrics into actionable timing recommendations",
+      "status": "explicit",
+      "evidence_span": "Tidepool even recommends the kind of activities that Cindy should take based on her state of attention and speed"
+    },
+    {
+      "id": "P4",
+      "text": "Premium games and clinician/family-shareable reports are the paid upsell",
+      "status": "explicit",
+      "evidence_span": "Soon, through our premium model, you can also access premium games and reports"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Performance drivers to measure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Game-based insight engine",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Premium sharing tier",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Take control of brain health with actionable daily insights",
+      "status": "explicit",
+      "evidence_span": "Download now and take control of your health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "impact your daily performance"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized recommendations that you can apply right away"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reports that you can actually share with your family, doctors, or even coaches"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Fitbit integration folded into P3 fusion premise. NIMH prevalence stats excluded as market framing. Team bios excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-969",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

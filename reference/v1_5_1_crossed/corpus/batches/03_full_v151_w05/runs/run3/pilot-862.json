@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-862",
+    "coder_session_id": "session_06",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding and booking fishing charters online is hard and time-consuming for travelers",
+      "status": "explicit",
+      "evidence_span": "Finding and booking fishing charters online is hard and time consuming"
+    },
+    {
+      "id": "P2",
+      "text": "Charter captains lack a proper way to market their businesses online",
+      "status": "explicit",
+      "evidence_span": "you don't have a way to market your business properly"
+    },
+    {
+      "id": "P3",
+      "text": "A marketplace lets customers find, book, compare, and review fishing charters",
+      "status": "explicit",
+      "evidence_span": "a website where customers can easily find, book, and compare, and review fishing charters"
+    },
+    {
+      "id": "P4",
+      "text": "Captains get free profiles to manage availability and acquire customers",
+      "status": "explicit",
+      "evidence_span": "captains get a free profile. They can manage their business, their availability, and get customers more easily"
+    },
+    {
+      "id": "P5",
+      "text": "Post-trip reviews and fishing reports help anglers choose better",
+      "status": "explicit",
+      "evidence_span": "we collect all these reviews into a community that's on Fishing Booker and that helps anglers make better choices"
+    },
+    {
+      "id": "P6",
+      "text": "Customer acquisition is mainly via search with positive unit economics on bookings",
+      "status": "explicit",
+      "evidence_span": "We use mostly search to acquire customers. And it costs us about $40 to get one person to book a fishing trip through our website. We earn about $125"
+    },
+    {
+      "id": "P7",
+      "text": "Seven-day customer service and 100% verified interviewed captains differentiate supply quality",
+      "status": "explicit",
+      "evidence_span": "we have seven-day customer service. All of our captains are 100% verified, and we interview each of them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Charter discovery pain for anglers and captains",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Booking marketplace and reviews",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Search acquisition and verified supply ops",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anglers can easily book trusted fishing charters while captains get customers",
+      "status": "explicit",
+      "evidence_span": "customers can easily find, book, and compare, and review fishing charters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding and booking fishing charters online is hard and time consuming"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "captains get a free profile. They can manage their business, their availability, and get customers more easily"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All of our captains are 100% verified, and we interview each of them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-pitch; truncated=true. Traveler and captain pains are two-sided marketplace conditions kept separate (could fail independently). Market-size and $250k GMV treated as traction/scale evidence, not premises; CAC/earnings coded as continuing unit-economics condition. Founder angling passion excluded as biography."
+}

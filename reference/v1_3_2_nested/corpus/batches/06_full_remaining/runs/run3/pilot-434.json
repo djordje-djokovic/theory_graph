@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unpredictable supply and volatile prices threaten food businesses; soft commodities are hard to hedge on exchanges",
+      "status": "explicit",
+      "evidence_span": "Less than 8% of the world's commodities are traded. And even when they are, even in a place like Chicago, quite often, as a business, you're in a different country, or you're operating in a different currency. And that creates basis risk"
+    },
+    {
+      "id": "P2",
+      "text": "Index insurance platform with 3000+ country-local indexes automatically pays the difference when prices breach the chosen threshold",
+      "status": "explicit",
+      "evidence_span": "a food business is worried about the price going over 200 euros a ton. And in November, it went up to 210. The difference is, of course, 10, and we pay out automatically to replace that lost income"
+    },
+    {
+      "id": "P3",
+      "text": "Distribution mixes direct corporate sales and aggregator channels for farmers",
+      "status": "explicit",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators"
+    },
+    {
+      "id": "P4",
+      "text": "Clients set duration, volume, and trigger price via a simple slider while algos auto-price using simulations, futures, and diversification",
+      "status": "explicit",
+      "evidence_span": "You can move the slider to create your exact protection. And behind the scenes, our algos are pricing that automatically"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard-to-hedge food price risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automatic local index insurance",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B and aggregator GTM",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect food businesses' income and deliver financial confidence to invest",
+      "status": "explicit",
+      "evidence_span": "if you're going to invest in technology, you need the confidence to place that investment. So Stable is delivering financial confidence to our clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "basis risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay out automatically to replace that lost income"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protect your business"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "UX and algo pricing merged as one learnable commercial/pricing module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-434",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:34:40+02:00"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-877",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Restaurants price the same despite peak/off-peak demand, wasting perishable table inventory and high fixed-cost capacity",
+      "status": "explicit",
+      "evidence_span": "you end up paying the exact same price for your meal at both those occasions. Well, this doesn't make economic sense, at least not for a perishable inventory"
+    },
+    {
+      "id": "P2",
+      "text": "About 40% of restaurant inventory is underutilized from lack of yield management, contributing to high failure rates",
+      "status": "explicit",
+      "evidence_span": "about 40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "id": "P3",
+      "text": "ResGuru automatically changes restaurant prices based on demand and supply as a GDS-like platform",
+      "status": "explicit",
+      "evidence_span": "a dynamic pricing platform for restaurants. It allows the restaurants to automatically change their prices based on demand and supply"
+    },
+    {
+      "id": "P4",
+      "text": "Platform consolidates reservations and orders across online/offline channels with POS integration and analytics",
+      "status": "explicit",
+      "evidence_span": "all my reservations, all my food orders are consolidated from across all the online and offline channels for my restaurant"
+    },
+    {
+      "id": "P5",
+      "text": "Dynamic pricing uses menu engineering, utilization/overbooking rules, and channel commissions",
+      "status": "explicit",
+      "evidence_span": "we can actually do menu engineering. We can set up a strategy to start off with"
+    },
+    {
+      "id": "P6",
+      "text": "Forecasting uses many macro/micro variables and historical trends to price each time slot",
+      "status": "explicit",
+      "evidence_span": "taking into account 21 different variables, macro and micro data points, and along with historical trends to forecast the demand"
+    },
+    {
+      "id": "P7",
+      "text": "Better pricing also reduces food waste from poor forecasting and suboptimal selling",
+      "status": "explicit",
+      "evidence_span": "wasted because restaurants, A, are not able to forecast properly, B, they are not able to price their product optimally to sell it at the right point"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Perishable inventory and yield gap",
+      "premise_ids": ["P1", "P2", "P7"]
+    },
+    {
+      "id": "D2",
+      "name": "Dynamic pricing and forecasting engine",
+      "premise_ids": ["P3", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Channel consolidation and analytics",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Restaurants optimize revenue and utilization via demand-based pricing",
+      "status": "explicit",
+      "evidence_span": "help them optimize their revenue, but also get you better deals in your restaurants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Diners get better deals at off-peak times",
+      "evidence_span": "get you better deals in your restaurants"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "forecast the demand for me and give me a pricing strategy for each time slot during the day"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically change their prices based on demand and supply"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consolidated view, a snapshot of what's happening in my restaurant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Peak/empty same-price and perishable inventory folded with utilization/failure stats as one yield-management problem set; food waste kept as related but distinct outcome condition. Menu rules and 21-variable forecast treated as separately revisable parts of the pricing stack vs channel consolidation UI. Pilot utilization/profit lift excluded as traction. Hospitality credentials excluded. Singleton D3 retained: channel consolidation is independently learnable from the pricing engine."
+}

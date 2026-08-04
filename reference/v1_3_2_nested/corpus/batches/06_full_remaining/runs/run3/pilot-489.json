@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Blood-sugar management is hard because nearly everything affects a diabetic's sugar",
+      "status": "explicit",
+      "evidence_span": "Living with diabetes is incredibly difficult because everything affects my sugar"
+    },
+    {
+      "id": "P2",
+      "text": "Competing apps increase logging work instead of preventing incidents",
+      "status": "explicit",
+      "evidence_span": "the problem lies before the incident happens, not after it"
+    },
+    {
+      "id": "P3",
+      "text": "Spike's automatic sensing delivers proactive tips, meal carb suggestions, and post-meal insulin prompts",
+      "status": "explicit",
+      "evidence_span": "she would automatically get the top three food options she would have with approximate carb count"
+    },
+    {
+      "id": "P4",
+      "text": "Patch and glucometer support feeds automatic readings into the assistant",
+      "status": "explicit",
+      "evidence_span": "by scanning one of the patches that we support"
+    },
+    {
+      "id": "P5",
+      "text": "Guardians and doctors are looped in with real-time information and alerts",
+      "status": "explicit",
+      "evidence_span": "guardians and doctors, they are informed in real time about her situation"
+    },
+    {
+      "id": "P6",
+      "text": "Free forever for diabetics via payers who care about health productivity",
+      "status": "explicit",
+      "evidence_span": "who are the people who care about your health more than you and are willing to pay for it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pre-incident management gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensing and proactive coaching",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Care-circle visibility",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Payer monetization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less-diabetic diabetes management that reduces worry and mismanagement risk",
+      "status": "explicit",
+      "evidence_span": "making diabetes management less diabetic"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We changed it from more work to less worry"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is why diabetics love us"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they are also alerted if unusual pattern is detected"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spike is free forever for diabetics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "P2 uses the before-incident contrast as the competitor-failure condition. Team patents excluded as credentials (4.2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-489",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

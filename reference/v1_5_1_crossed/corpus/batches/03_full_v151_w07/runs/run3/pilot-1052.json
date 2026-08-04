@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1052",
+    "coder_session_id": "session_02",
+    "session_case_index": 23,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unethical freemium—fake free trials, crippleware, spyware—erodes trust so mainstream users avoid free products",
+      "status": "explicit",
+      "evidence_span": "unethical businesses are eroding our trust in the concept of free"
+    },
+    {
+      "id": "P2",
+      "text": "A curated resource verifies which free apps are safe, highlights top user picks, and lets users explore free tools by job-to-be-done",
+      "status": "explicit",
+      "evidence_span": "safer and easier for people to find the best free products and avoid those with hidden catches"
+    },
+    {
+      "id": "P3",
+      "text": "CatchFree sells CPA growth to freemium businesses and gives credits only for top user picks, keeping users in control",
+      "status": "explicit",
+      "evidence_span": "offer profitable CPAs to freemium businesses"
+    },
+    {
+      "id": "P4",
+      "text": "Acquisition via reverse-affiliate credits, viral sharing, and search as a comprehensive free-apps resource",
+      "status": "explicit",
+      "evidence_span": "Reverse Affiliate. These are the credits that we're giving"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken trust in free",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "safe free discovery resource",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CPA and viral growth model",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mainstream users can safely find the best free products and avoid hidden catches",
+      "status": "explicit",
+      "evidence_span": "find the best free products and avoid those with hidden catches"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not worth the risk of trying a free product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fast and easy verification whether a free product is safe"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most have no way to buy growth until now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fake-free/crippleware/spyware list folded as one trust problem (§4.1.6). Verification, category browse, UGC features, Q&A, and heart logo principles folded into discovery resource cascade (§4.1.7). Sean freemium consulting bio excluded. User-test quotes as traction. Anti-template: problem, resource product, and CPA/viral model separately revisable."
+}

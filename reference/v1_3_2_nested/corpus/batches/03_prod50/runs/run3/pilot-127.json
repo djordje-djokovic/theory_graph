@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Replace single-use packaging with smart reusable shippers for sustainability and efficiency",
+      "status": "explicit",
+      "evidence_span": "replacing all single-use packaging"
+    },
+    {
+      "id": "P2",
+      "text": "Retailers are the direct customer for shippers and software",
+      "status": "explicit",
+      "evidence_span": "direct customer is the retailers themselves"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers dislike cardboard overload; retailers want solutions",
+      "status": "explicit",
+      "evidence_span": "consumers are fed up with it and looking for solutions"
+    },
+    {
+      "id": "P4",
+      "text": "Upcycled billboard-vinyl shippers are lightweight, durable, and waterproof",
+      "status": "explicit",
+      "evidence_span": "diverting it from the landfill, and it's already naturally lightweight, durable, and waterproof"
+    },
+    {
+      "id": "P5",
+      "text": "Model works at any size and better when larger via closest-need shipper routing",
+      "status": "explicit",
+      "evidence_span": "the model works at any size. It actually works better the bigger it is"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Market need for reusables",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Shipper design and retailer deployment",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Network effects of scale",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable efficient shipping packaging for e-commerce",
+      "status": "explicit",
+      "evidence_span": "supply chain system more sustainable and efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers are fed up with it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smart reusable option"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more efficient it becomes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.52
+  },
+  "notes": "Pass A on interview fragment only; financing/accelerator not coded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

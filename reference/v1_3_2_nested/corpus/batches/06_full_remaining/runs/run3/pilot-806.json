@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Emotional toll of break-ins and demand for security outpace adoption of broken traditional systems",
+      "status": "explicit",
+      "evidence_span": "the solutions that are available today are both broken and outdated"
+    },
+    {
+      "id": "P2",
+      "text": "Minutes-long self-install all-in-one unit replaces hours of expert installation",
+      "status": "explicit",
+      "evidence_span": "takes minutes versus hours of expert installation"
+    },
+    {
+      "id": "P3",
+      "text": "One destination for environmental stats, alerts, themes, and connected-device control",
+      "status": "explicit",
+      "evidence_span": "an all-in-one solution to know and control your home from one single destination"
+    },
+    {
+      "id": "P4",
+      "text": "Portable solution for movers, urban dwellers, and pet parents at a fraction of traditional cost",
+      "status": "explicit",
+      "evidence_span": "never really been able to have that available to them in a portable solution"
+    },
+    {
+      "id": "P5",
+      "text": "Hardware platform expands via cloud video and Android developer apps",
+      "status": "explicit",
+      "evidence_span": "Android developers will actually have an opportunity to build custom apps on top of the Sentry device"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Outdated security alternatives",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Self-serve intelligent hub",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Portability and platform expansion",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help each household protect what matters most",
+      "status": "explicit",
+      "evidence_span": "help each of us protect what matters most"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "broken and outdated"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "designed for life"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take this solution on to go with them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Company Ascentry/Sentry naming ASR inconsistency; coded as Sentry product. Discount-code CTA excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-806",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:04:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

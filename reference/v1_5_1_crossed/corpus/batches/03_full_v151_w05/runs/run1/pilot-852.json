@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-852",
+    "coder_session_id": "session_06",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:02:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users maintain multiple desktops and consoles creating hardware clutter, duplicate licenses, and split applications",
+      "status": "explicit",
+      "evidence_span": "That's a lot of hardware clutter. It's a pain in the butt to upgrade the software across all these devices"
+    },
+    {
+      "id": "P2",
+      "text": "Pocket PC with mainstream computing and mid-core gaming docks to cheap stations at office, home, and TV",
+      "status": "explicit",
+      "evidence_span": "I can carry Tango in my pocket and simply connect it to any dock to gain instant access to all my files, all my applications, and all my games"
+    },
+    {
+      "id": "P3",
+      "text": "Bulky connectors, fan, and heat sink live in the dock while a miniaturized motherboard packs into the pocket unit",
+      "status": "explicit",
+      "evidence_span": "we took the bulky connectors, the bulky fan, and the bulky heat sink and placed them into a docking station"
+    },
+    {
+      "id": "P4",
+      "text": "Patent-pending docked cooling enables fanless ventless 200g design with user-upgradable RAM and storage",
+      "status": "explicit",
+      "evidence_span": "through our patent-pending technology, we have been able to outsource the cooling job to the docking station"
+    },
+    {
+      "id": "P5",
+      "text": "Saves hardware and software license costs versus multiple PCs and consoles",
+      "status": "explicit",
+      "evidence_span": "Tango can save you money on hardware. by replacing multiple PCs and gaming consoles with inexpensive docking stations. Tango can save you money on software because you don't need additional software licenses"
+    },
+    {
+      "id": "P6",
+      "text": "Retail distribution via Best Buy, Amazon, and large retailers plus BYOD enterprise TCO reduction",
+      "status": "explicit",
+      "evidence_span": "We have relationship with Best Buy and Amazon and other large retailers whom we'll partner to distribute the product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Multi-device PC and console clutter",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Pocket PC with docked cooling",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Cost savings and retail/enterprise GTM",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hands-free hassle-free mobile access to full PC computing and games",
+      "status": "explicit",
+      "evidence_span": "Tango gives you mobility that's hands-free and hassle-free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Lower hardware and software costs",
+      "evidence_span": "Tango can save you money on hardware"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "outsource the cooling job to the docking station. That's why Tango is fanless, ventless"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's a lot of hardware clutter"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "carry Tango in my pocket and simply connect it to any dock"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save you money on hardware"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Clutter/upgrade/license/split-app pains folded as one multi-device problem. Dock cooling, fanless form, and upgradability treated as one miniaturization mechanism with patents. Office/CAD/gaming performance is capability detail of the pocket PC premise. Market-size stats and Kickstarter ask excluded. ODM relationship folded into product delivery reliability within D2 manufacturing path—kept via retail GTM. Singleton D1 retained."
+}

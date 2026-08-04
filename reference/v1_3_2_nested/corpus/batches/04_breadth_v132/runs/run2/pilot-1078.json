@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:27:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Search is still too difficult to implement, so good search remains rare on websites",
+      "status": "explicit",
+      "evidence_span": "search is still too difficult to implement"
+    },
+    {
+      "id": "P2",
+      "text": "In a typical setup the database, search index, and web server must each be changed for every index modification",
+      "status": "explicit",
+      "evidence_span": "every time we wanted to modify the index, we had to change the system in three separate places"
+    },
+    {
+      "id": "P3",
+      "text": "ThriftDB combines the database, search index, and web server into a single system",
+      "status": "explicit",
+      "evidence_span": "ThriftDB is just combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P4",
+      "text": "Because companies model their data as objects with attributes, ThriftDB is designed to handle objects natively",
+      "status": "explicit",
+      "evidence_span": "So objects are so important that we designed ThriftDB to handle objects natively"
+    },
+    {
+      "id": "P5",
+      "text": "Native object handling yields fast, scalable search with attribute-level filtering right out of the box",
+      "status": "explicit",
+      "evidence_span": "With ThriftDB, you get fast, scalable search right out of the box"
+    },
+    {
+      "id": "P6",
+      "text": "Schema changes require only uploading a new schema, with no downtime, cutting development time",
+      "status": "explicit",
+      "evidence_span": "Now we just upload a new schema, and that's it"
+    },
+    {
+      "id": "P7",
+      "text": "The product ships as an on-demand cloud service with a free beta signup",
+      "status": "explicit",
+      "evidence_span": "You can sign up for the beta. It's free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Search implementation pain",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified database-search system",
+      "premise_ids": ["P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Object-native data model and search quality",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Cloud service delivery",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Powerful search that is extremely simple for any site or app to implement and use",
+      "status": "explicit",
+      "evidence_span": "It's a really powerful tool that's also extremely simple to use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "And that's why we built ThriftDB"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we designed it from the ground up to make search really simple to implement"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these are really powerful features"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launching it today as a on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The objects-world assumption and the native-object design are merged into one premise P4: the speaker binds them in a single 'so important that we designed' sentence, so the condition is coded as one design rationale; no premise-premise link is therefore needed. The three demo apps are folded into P3/P5 as demonstrations of the same capability per v1.3.2 clarification 5. D4 singleton justified: cloud delivery and free-beta pricing revise independently of the engine. '15 million parts, 300 attributes' is detail demonstrating the capability, not a separate premise. 'And that's why we built ThriftDB' is motivation, not a premise-prerequisite, so no dependency coded."
+}

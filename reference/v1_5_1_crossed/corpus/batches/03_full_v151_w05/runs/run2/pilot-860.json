@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shoppers struggle to find a visual product they have in mind because keyword search across stores returns unrelated results",
+      "status": "explicit",
+      "evidence_span": "it was very difficult to put in words a visual product that I had in mind. And I got a lot of unrelated results"
+    },
+    {
+      "id": "P2",
+      "text": "An intuitive mobile attribute questionnaire finds the right product in under 15 seconds and lets users buy on the spot",
+      "status": "explicit",
+      "evidence_span": "With Donde, you can find exactly what you're looking for in less than 15 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Results are personalized by a learning system using user context such as location, age, taste, and environment",
+      "status": "explicit",
+      "evidence_span": "It's based on a learning mechanism that combines the contextual information of the search of the user. her location, her age, everything that we can know about her taste and her environment"
+    },
+    {
+      "id": "P4",
+      "text": "Backend scraping, item fingerprints, a cross-retailer ontology, and AI question selection power the guided search",
+      "status": "explicit",
+      "evidence_span": "Scraping the data of different websites and different stores extracting the unique fingerprints of every item and using and creating an ontology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "visual product search frustration",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "guided personalized product search",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Delightful fast mobile search that finds the exact product someone imagines",
+      "status": "explicit",
+      "evidence_span": "we offer a very intuitive and delightful search experience for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "frustrated from the shopping, searching and shopping experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find exactly what you're looking for in less than 15 seconds"
+    },
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "using an artificial intelligence technology to choose the best question to ask you next"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Favorite-store/eBay/Amazon/Google failures folded as one visual-search pain (v1.5.1 §4.1.6). Color/sleeve/pattern question demo folded into guided-search UX; scrape/ontology/AI-question stack kept as the enabling data mechanism asserted to power that UX. Founder intel/CS credentials excluded. Two-domain partition: need vs search system."
+}

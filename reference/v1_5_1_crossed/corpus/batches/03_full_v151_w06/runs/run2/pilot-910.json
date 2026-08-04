@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-910",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Designers can sell professional 3D-printable files on a marketplace rather than giving them away",
+      "status": "explicit",
+      "evidence_span": "marketplace where designers can sell professional level 3D printable files rather than just giving them away"
+    },
+    {
+      "id": "P2",
+      "text": "Buyers can purchase, download, and print digitized objects at home from a diverse catalog",
+      "status": "explicit",
+      "evidence_span": "digitized objects that you can purchase, download, and manufacture right from the comfort of your home"
+    },
+    {
+      "id": "P3",
+      "text": "Buyers without printers can customize and fulfill via a network of print shops with pickup or shipping",
+      "status": "explicit",
+      "evidence_span": "with our 1,000 3D print shops in our network, you can order something from across the world and literally pick it up from across the street, or have it shipped directly to you"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from design sales and print fulfillment, with printers competing to commoditize print price",
+      "status": "explicit",
+      "evidence_span": "we generate revenue from the design and profit from the sale of print"
+    },
+    {
+      "id": "P5",
+      "text": "Consumers will demand printable content that is cheaper, greener, and better quality than mass manufacturing",
+      "status": "explicit",
+      "evidence_span": "files, blueprints, products that are cheaper, greener, and better quality than anything that is currently mass manufactured"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "designer file marketplace",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "print-shop fulfillment network",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "consumer demand for printable goods",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buyers choose when, where, and how purchased products are manufactured via 3D printable designs",
+      "status": "explicit",
+      "evidence_span": "We give you the power to choose when, where, and how the products you buy are manufactured"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our system allows 3D printers to compete for your business. With competition comes commoditization, and that means lower pricing for you"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase, download, and manufacture right from the comfort of your home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "print, wherever and whenever it's convenient for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "insatiable worldwide demand for 3D printable content"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Stiletto customize-size flow folded into P3 as cascade of networked fulfillment. Direct designer collaboration folded into marketplace surface. $10M free credit promotion treated as GTM tactic detail, not a separate premise. Market-size flip-to-2020 framing partly captured in P5. Singleton D3 retained as independently revisable demand/adoption condition."
+}

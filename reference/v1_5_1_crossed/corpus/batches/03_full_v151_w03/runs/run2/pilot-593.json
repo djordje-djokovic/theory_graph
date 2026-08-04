@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-593",
+    "coder_session_id": "session_03",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People cannot easily match skincare ingredients and products to their skin type amid abundant products",
+      "status": "explicit",
+      "evidence_span": "couldn't even figure out what to put on our face"
+    },
+    {
+      "id": "P2",
+      "text": "Ava is an anytime personal skincare consultant combining human expertise and AI/machine learning",
+      "status": "explicit",
+      "evidence_span": "personal skin care consultant that you can access anytime and is powered by a combination of human expertise and artificial intelligence"
+    },
+    {
+      "id": "P3",
+      "text": "Quiz, photo, and preferences classify users into 30+ skin types across five dimensions and recommend via profile, similar users, and age, then a human advisor narrows to one product with checkout",
+      "status": "explicit",
+      "evidence_span": "divided people into more than 30 different skin types based on five dimensions"
+    },
+    {
+      "id": "P4",
+      "text": "Messaging-based purchase completes via Apple Pay, PayPal, or cards after the recommendation",
+      "status": "explicit",
+      "evidence_span": "personal checkout link, which I can use Apple Pay, PayPal, or any credit card"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "skin product matching confusion",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI plus human skincare recommendation",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "message-to-checkout purchase",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better skin and confidence without trial-and-error product hunting",
+      "status": "explicit",
+      "evidence_span": "achieve better skin and gain that confidence without going through all the trials and errors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match ingredients with someone's skin type"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get my personal recommendation set"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finish checkout process"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-framing. Quiz/photo/30-type taxonomy/human cross-check folded as one recommendation mechanism cascade. Conversion/repurchase traction excluded. Anti-template: problem, recommendation engine, and checkout are separately revisable."
+}

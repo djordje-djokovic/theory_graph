@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-446",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After GDPR, companies must track vendor data sharing and meet privacy obligations they currently cannot see",
+      "status": "explicit",
+      "evidence_span": "between public opinion and government regulation, when GDPR came into effect last year, that era ended forever"
+    },
+    {
+      "id": "P2",
+      "text": "Companies unknowingly share with hundreds of vendors",
+      "status": "explicit",
+      "evidence_span": "they share with an astounding 750"
+    },
+    {
+      "id": "P3",
+      "text": "Vendor privacy scoring, lawsuit/policy tracking, and website cookie consent form one compliance platform",
+      "status": "explicit",
+      "evidence_span": "one place to see your SaaS vendors, their privacy risks and their ratings, and all of the data transfers that are happening"
+    },
+    {
+      "id": "P4",
+      "text": "Developer API extends privacy controls into applications and workflows",
+      "status": "explicit",
+      "evidence_span": "developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "id": "P5",
+      "text": "Positioned against expensive OneTrust-like tools for the underserved majority, leveraging free compliance users",
+      "status": "explicit",
+      "evidence_span": "we are already their compliance vendor of record"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Regulatory privacy gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Osano compliance platform",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free-to-paid midmarket motion",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Be proactive about vendor privacy risk and stay ahead of the law",
+      "status": "explicit",
+      "evidence_span": "Don't let your vendors put you at risk. Be proactive about data privacy. Get ahead of the law"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "comply with their privacy obligations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "website is complying with the law"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "compliance vendor of record"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cookie consent folded into core platform P3 this run (§4.1(5)). Free-user counts used only as mechanism that they are vendor of record (P5), not as traction boast. Attorney ML future automation not premised (§4.1(4)). Team bios excluded."
+}

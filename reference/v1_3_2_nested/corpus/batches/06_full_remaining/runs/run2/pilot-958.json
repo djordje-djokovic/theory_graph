@@ -1,0 +1,125 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Dev and production environments mismatch, sending engineers down wasteful bug rabbit holes",
+      "status": "explicit",
+      "evidence_span": "we end up going down rabbit holes, chasing bugs that we really didn't want to fix"
+    },
+    {
+      "id": "P2",
+      "text": "Slow tests leave engineers waiting instead of working",
+      "status": "explicit",
+      "evidence_span": "Testing took forever. And when your tests take a long time to run, your engineers essentially are not doing work"
+    },
+    {
+      "id": "P3",
+      "text": "A build break blocks the whole team and destroys productivity",
+      "status": "explicit",
+      "evidence_span": "When a build break happens, your entire team is blocked from doing work"
+    },
+    {
+      "id": "P4",
+      "text": "Quality isolates each change in limbo so a would-be break never hits the shared build",
+      "status": "explicit",
+      "evidence_span": "quality, I mentioned, has this in a limbo state, in isolation. So nobody else has actually seen this change. The build is not broken"
+    },
+    {
+      "id": "P5",
+      "text": "Every change is tested on multiple production-environment replicas in a customer-chosen cloud, including behind the firewall",
+      "status": "explicit",
+      "evidence_span": "it spins up multiple replicas of Jordan's production environment in a cloud system of his choosing"
+    },
+    {
+      "id": "P6",
+      "text": "The automation test suite is chunked and thrown at replicas in parallel for fast turnaround",
+      "status": "explicit",
+      "evidence_span": "it will chunk up your automation test suite, and it'll just throw it at these replicas in parallel"
+    },
+    {
+      "id": "P7",
+      "text": "Companies that cannot afford Google-scale internal tooling need a buyable product so engineers work on their own problems",
+      "status": "explicit",
+      "evidence_span": "They want their engineers working on their problems, moving their companies forward"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mismatch, slow tests, and build breaks",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Limbo isolation and production-like parallel testing",
+      "premise_ids": ["P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Buyable alternative to internal tooling",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unleash engineers and free up development capacity without new hiring",
+      "status": "explicit",
+      "evidence_span": "Unleash your engineers and really see. Get those free devs of yours today"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More effective engineers become much happier",
+      "evidence_span": "if you make us more effective, you make us much, much happier"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your team just doesn't get anything done"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "devs don't have to wait for tests"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we deliver real value"
+    },
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "What quality then will do is it will chunk up your automation test suite, and it'll just throw it at these replicas in parallel"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run2 splits limbo, replicas, and parallelization as separately failable platform conditions. Singleton D3 is the buyable-product GTM assumption. Hiring 20% effectiveness pitch treated as value framing rather than a separate commercial premise. Customer traction and deal size excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-958",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

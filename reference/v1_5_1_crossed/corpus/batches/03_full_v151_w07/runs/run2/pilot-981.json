@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-981",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "GTAR has matured from prototype into a sturdier, more reliable product with features such as an interchangeable dock for different handsets",
+      "status": "explicit",
+      "evidence_span": "grow from this prototype that we brought here last year into a real product"
+    },
+    {
+      "id": "P2",
+      "text": "Functionality has grown beyond a guitar learning tool into a standalone instrument usable with multiple G-tar compatible apps as different instruments",
+      "status": "explicit",
+      "evidence_span": "gone beyond being just kind of a learning tool for people who want to play guitar and become kind of an amazing instrument in and of itself"
+    },
+    {
+      "id": "P3",
+      "text": "Units are fulfilling Kickstarter orders with online preorders and inventory expected around June",
+      "status": "explicit",
+      "evidence_span": "we're currently in the process of fulfilling them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "GTAR product maturity and apps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "fulfillment and preorder availability",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A real, app-powered guitar instrument—not just a learning toy",
+      "status": "explicit",
+      "evidence_span": "become kind of an amazing instrument in and of itself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "functionality has grown so that it's gone beyond being just kind of a learning tool"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're taking preorders online now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.6
+  },
+  "notes": "Thin update pitch. Kickstarter raise amount excluded as financing. Sturdy/reliable/dock folded as product maturity package; multi-app song demo is cascade of instrument capability. Fulfillment/preorder/inventory kept as separately revisable go-to-market availability condition. Singleton D2 justified."
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-774",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:06+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Airco replaces legacy phone hardware with cloud software",
+      "status": "explicit",
+      "evidence_span": "Airco is a cloud-based phone system that replaces really the legacy phone system"
+    },
+    {
+      "id": "P2",
+      "text": "Integrations with CRM, helpdesk, BI, and AI keep conversations and sentiment where teams work",
+      "status": "explicit",
+      "evidence_span": "integrate with your CRM for your sales team, with your help desk, with your customer support team, or your BI tool"
+    },
+    {
+      "id": "P3",
+      "text": "Anyone can set it up regardless of where customers are",
+      "status": "explicit",
+      "evidence_span": "can be set up by anyone in the world. No matter where your customers are"
+    },
+    {
+      "id": "P4",
+      "text": "Marketplace enables partners to build integrations and tools on top of Airco",
+      "status": "explicit",
+      "evidence_span": "software vendors that are contacting us every day are joining us to build tools on top of Airco"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud phone product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Partner marketplace",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "360-degree customer view and better daily work from voice conversations that matter",
+      "status": "explicit",
+      "evidence_span": "Conversation matters, and we believe in that"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve daily work with recorded conversations",
+      "evidence_span": "improve your daily work"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the conversations you have with your customers, with your prospects, they stay recorded"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "360 view about your customer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Announcement of marketplace coded as go-to-market/platform condition. Seed/Series amounts and battlefield history excluded."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-697",
+    "coder_session_id": "session_04",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Under-$5,000 digital tools (hobby lasers, 3D printers, desktop CNCs) cannot cut hard flat materials, so makers still fabricate simple metal parts by slow hand processes",
+      "status": "explicit",
+      "evidence_span": "If you want to cut something hard and flat, you pretty much have to do it by hand"
+    },
+    {
+      "id": "P2",
+      "text": "Wazer is a desktop waterjet that cuts any material with digital precision, is compact/contained/clean/safe/quiet, redesigned with patents pending, and priced under $4,000",
+      "status": "explicit",
+      "evidence_span": "Wazer is the first desktop waterjet cutter"
+    },
+    {
+      "id": "P3",
+      "text": "It pressurizes water with abrasive particles to erode material automatically from a digital design so users can press cut and walk away",
+      "status": "explicit",
+      "evidence_span": "we pressurize water. We combine it with abrasive sand-like particles at high velocity"
+    },
+    {
+      "id": "P4",
+      "text": "Needed across diverse makers—jewelers, artisans, homeowners, hobbyists, makerspaces, and students—who need multi-material cutting",
+      "status": "explicit",
+      "evidence_span": "it's needed by lots of different types of makers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard-material desktop cutting gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "desktop waterjet cutter",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-maker use cases",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Makers can digitally cut hard and fragile materials at desktop scale that they could not cut otherwise",
+      "status": "explicit",
+      "evidence_span": "We're cutting an intricate shape in glass that you literally cannot cut any other way"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the process of making it is actually quite involved"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It cuts any material. It cuts with digital precision"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bringing this amazing technology to workshops everywhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Laser/3D/CNC limitations folded as one under-$5k tooling gap (v1.5.1 §4.1.6). Material list and compact/safe/quiet attributes kept as performance package of the waterjet (§4.1.7–8). Kickstarter dollars excluded. Price under $4k kept inside product premise with channel/market uses as separate GTM module."
+}

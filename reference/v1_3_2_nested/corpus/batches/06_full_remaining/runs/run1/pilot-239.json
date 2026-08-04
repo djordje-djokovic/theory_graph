@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stigma, healthcare distrust, and long clinic wait lists block people from getting depression treatment",
+      "status": "explicit",
+      "evidence_span": "One reason is the social stigma that exists around it"
+    },
+    {
+      "id": "P2",
+      "text": "Antidepressant care is trial-and-error with roughly 40% first-line response over months",
+      "status": "explicit",
+      "evidence_span": "a treatment model that revolves around trial and error, where you're prescribed an antidepressant, you only have a 40% chance of responding to it"
+    },
+    {
+      "id": "P3",
+      "text": "Existing DNA, mRNA, and protein approaches are inadequate biomarkers for depression care",
+      "status": "explicit",
+      "evidence_span": "The big problem in mental health care is that there are no good biomarkers that exist today"
+    },
+    {
+      "id": "P4",
+      "text": "Circular RNA biomarkers are stable, predictive, and measurable in blood",
+      "status": "explicit",
+      "evidence_span": "Circular RNAs are a biomarker. They're stable, predictive, and can be measured in bodily fluids, including your blood"
+    },
+    {
+      "id": "P5",
+      "text": "Blood-sample circRNA qPCR plus an analytical pipeline can diagnose depression and predict medication response",
+      "status": "explicit",
+      "evidence_span": "we use a process called quantitative, circRNA-specific quantitative PCR. We use this to measure the expression levels of the circular RNAs"
+    },
+    {
+      "id": "P6",
+      "text": "Primary care, telemedicine, and urgent care are the channels for the product",
+      "status": "explicit",
+      "evidence_span": "There are three channels that we see our product easily going into the market. Primary care, telemedicine, and urgent care"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Access and trial-and-error care gaps",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Circular RNA diagnostic platform",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Care-setting channels",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Precision medicine that improves depression diagnosis and treatment outcomes",
+      "status": "explicit",
+      "evidence_span": "help clinicians provide precision medicine leading to improved patient outcomes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Biological basis for depression helps remove stigma",
+      "evidence_span": "This helps remove the stigma that revolves around depression by giving it a biological basis"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Circular RNAs are a biomarker. They're stable, predictive, and can be measured in bodily fluids, including your blood"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reducing months of trial and error treatment down to days"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "precision medicine leading to improved patient outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We can improve their workflow, increase their volume, reduce those wait lists"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Oncology/neurology extensions folded into circRNA platform per §4.1(5). Clinical-trial accuracy percentages treated as support for P5 mechanism, not separate traction premises. Team credentials excluded. Need/product/channel triad justified by separately revisable access problem, assay, and care-setting GTM.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-239",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

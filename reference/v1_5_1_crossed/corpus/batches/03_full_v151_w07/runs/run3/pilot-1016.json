@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1016",
+    "coder_session_id": "session_04",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing transport solutions fail: developed-world EVs are slow/expensive/inefficient with limited range; developing-world bikes are unsafe, hard to drive, and impractical in rain",
+      "status": "explicit",
+      "evidence_span": "these take forever to get to market. They're incredibly expensive to develop"
+    },
+    {
+      "id": "P2",
+      "text": "The C1 is a narrow enclosed electric motorcycle with car safety features (airbags, seatbelts, doors, roll cage) and car-like controls",
+      "status": "explicit",
+      "evidence_span": "We made an efficient, incredibly romantic motorcycle, but with the safety and the comfort of a car"
+    },
+    {
+      "id": "P3",
+      "text": "A light platform with off-the-shelf batteries delivers long range on a small pack and uses far fewer parts for cheap manufacture and low maintenance",
+      "status": "explicit",
+      "evidence_span": "because it is so light, it gets 200 miles per charge"
+    },
+    {
+      "id": "P4",
+      "text": "Dual consumer gyroscopes make the C1 self-balancing and hard to tip over, protected by filed patents",
+      "status": "explicit",
+      "evidence_span": "the Lit Motor C1 is the first self-balancing, fully electric motorcycle"
+    },
+    {
+      "id": "P5",
+      "text": "Target retail pricing is about $19,000 at launch with a path to roughly $10,000 at scale and very low per-charge energy cost",
+      "status": "explicit",
+      "evidence_span": "2014 for $19,000, and we believe we can get this to scale for only $10,000 in 2017"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "failed existing transport options",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "self-balancing enclosed electric C1",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "affordable vehicle pricing path",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safe, efficient, affordable personal transportation combining motorcycle agility with car safety",
+      "status": "explicit",
+      "evidence_span": "safety in an accessible motorcycle that's incredibly efficient and affordable and safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we really need a new solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the Lit Motor C1 is the first self-balancing, fully electric motorcycle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "2014 for $19,000, and we believe we can get this to scale for only $10,000 in 2017"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "US EV and developing-world bike failure modes folded as one problem set (§4.1.6). Width/aero/interior/safety-feature cascade folded into enclosed motorcycle form; range, battery size, and part-count folded as process/performance package of the light platform (§4.1.7–8). Patents kept inside gyro balancing mechanism (§4.1.1). Team/advisory credentials and $750k spend excluded (§4.2). Truncated when moderator cuts engineering-plan wrap-up. Three domains—anti-template: price path separately revisable from vehicle tech."
+}

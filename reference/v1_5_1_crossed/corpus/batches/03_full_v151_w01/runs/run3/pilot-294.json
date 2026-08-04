@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "coder_session_id": "session_06",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:14:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "PVA microplastics from products like laundry pods enter oceans and return through drinking water and food",
+      "status": "explicit",
+      "evidence_span": "these parts will break down into microplastics, flow into the ocean"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary process upcycles agricultural waste into biobased polymer resins usable on existing plastic manufacturing equipment",
+      "status": "explicit",
+      "evidence_span": "upcycle these waste using our technology, turn them into biobased polymer"
+    },
+    {
+      "id": "P3",
+      "text": "Bacteria brew-like process intakes biomass or plastic waste and produces modifiable polymer for partner resins",
+      "status": "explicit",
+      "evidence_span": "we create bacteria that can intake different type of inedible biomass waste and even plastic waste"
+    },
+    {
+      "id": "P4",
+      "text": "Material matches PVA mechanical quality while using less CO2/energy in manufacturing and aiming for lower unit cost at commercial scale",
+      "status": "explicit",
+      "evidence_span": "mechanical property of our material has a bit similar quality as PVA"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with CPG and packaging leaders (e.g., Unilever, Monosol, Anheuser-Busch) enable co-developed products and commercial scale-up",
+      "status": "explicit",
+      "evidence_span": "creating the world's first 100% bio-based laundry pod made from beer waste"
+    },
+    {
+      "id": "P6",
+      "text": "Initial applications face lighter FDA burden and higher-paying customers willing to pay a premium versus food-tech routes",
+      "status": "explicit",
+      "evidence_span": "There's no grass FDA regulation for our initial applications"
+    },
+    {
+      "id": "P7",
+      "text": "Scale path includes licensing technology and joint development with partners to increase production and lower costs",
+      "status": "explicit",
+      "evidence_span": "we will license our technology and join develop with our partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "PVA microplastic problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "biobased polymer process",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "partner scale-up and GTM",
+      "premise_ids": ["P5", "P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Replace PVA with biobased polymer so people avoid consuming microplastics",
+      "status": "explicit",
+      "evidence_span": "solution to replace PVA with bulb-based polymer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Upcycle agricultural waste and reduce CO2, water use, and ocean microplastic load",
+      "evidence_span": "upcycle 200 million kilos of agricultural waste, replacing 100 kilos of PVA"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we don't want to drink microplastics or eat microplastics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn them into biobased polymer, which can then be processed into these biobased resins"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale up commercially quickly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Application list (construction/textile/cosmetic/pharma) treated as uses of one polymer mechanism (v1.5.1 §4.1.2), not split. Process+performance (CO2/energy/cost) package folded into P4. Patents/USDA certification folded into P2 IP/process detail. Revenue forecasts and Series A ask excluded. Team bio excluded."
+}

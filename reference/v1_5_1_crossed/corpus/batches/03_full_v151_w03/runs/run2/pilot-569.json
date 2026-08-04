@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Students struggle to find qualified, accessible, available private tutors quickly, especially for after-school tutoring in the Middle East",
+      "status": "explicit",
+      "evidence_span": "One out of three students struggle to find a tutor"
+    },
+    {
+      "id": "P2",
+      "text": "A peer-to-peer app connects students to pre-vetted tutors in three steps: pick course, select tutor, book session",
+      "status": "explicit",
+      "evidence_span": "a peer-to-peer platform that connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in online tutoring includes note sharing, whiteboarding, video, chat, location sharing, and in-person or online choice",
+      "status": "explicit",
+      "evidence_span": "we build our online tutoring system from scratch with note sharing, whiteboarding, and video functionalities"
+    },
+    {
+      "id": "P4",
+      "text": "ML and graph algorithms pre-select tutor candidates and recommend tutors by proximity, education, and hours tutored",
+      "status": "explicit",
+      "evidence_span": "Our machine learning algorithm are helping our HR team to pre-select our candidates"
+    },
+    {
+      "id": "P5",
+      "text": "Matching emphasizes peer tutors with similar educational background and rewards tutors with pay, internships, training, and bonuses",
+      "status": "explicit",
+      "evidence_span": "we match students with peer tutors who have been in their shoes and have the same educational background"
+    },
+    {
+      "id": "P6",
+      "text": "Product is localized for the MENA market in Arabic",
+      "status": "explicit",
+      "evidence_span": "Sinkers will cater for the MENA market and will be in Arabic"
+    },
+    {
+      "id": "P7",
+      "text": "Business model charges tutors 20% commission and plans institutional analytics subscriptions",
+      "status": "explicit",
+      "evidence_span": "We charge our tutors a 20% commission per transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Private tutor discovery problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Peer tutoring marketplace product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "MENA localization and monetization",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Making education accessible by matching students to qualified flexible private tutors",
+      "status": "explicit",
+      "evidence_span": "make education Accessible to all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "One out of three students struggle to find a tutor"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sinkers will cater for the MENA market and will be in Arabic"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Booking-flow UI cascade folded into P2; online session features folded into P3. Traction hours/students and Ministry partnership treated as evidence not premises. Team bios and financing excluded. ASR brand spellings left verbatim in spans."
+}

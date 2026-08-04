@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Uniform whole-field fertilizer rates waste fertilizer and yield",
+      "status": "explicit",
+      "evidence_span": "assigning the rate of the fertilizer, which is the same for the whole field. Now, guess what? This results in huge inefficiency"
+    },
+    {
+      "id": "P2",
+      "text": "Infrared/satellite imagery produces prescription maps so fertilizer goes only where and when needed",
+      "status": "explicit",
+      "evidence_span": "We generate actionable prescription maps for fertilizer application using infrared pictures of the farms"
+    },
+    {
+      "id": "P3",
+      "text": "Farmers can see crop stress up to 10 days sooner than traditional methods",
+      "status": "explicit",
+      "evidence_span": "farmers can see the stress of their crops up to 10 days sooner that they can see it with traditional methods"
+    },
+    {
+      "id": "P4",
+      "text": "Hyperspectral sensing pinpoints the stressor better than multispectral image competitors",
+      "status": "explicit",
+      "evidence_span": "Our hyperspectral sensing is allowing farmers to see the crop stress sooner and, moreover, pinpoint the stressor behind it"
+    },
+    {
+      "id": "P5",
+      "text": "Workflow: guided sampling, lab calibration, analytics, zoning to variable tractor rates",
+      "status": "explicit",
+      "evidence_span": "agronomist is guided where to go sample the crop, and then uses the crop test results from the lab to plug into the platform to calibrate the nitrogen maps"
+    },
+    {
+      "id": "P6",
+      "text": "Integrates with existing farm management software to tailor prescriptions with farm data",
+      "status": "explicit",
+      "evidence_span": "integrated straight into existing farm management software so that we can leverage the years of data that we collected on the farm"
+    },
+    {
+      "id": "P7",
+      "text": "Annual subscriptions sold to commercial and independent agronomists at per-hectare prices",
+      "status": "explicit",
+      "evidence_span": "Annual subscriptions, this is how we sell our product. We provide those to commercial and independent agronomists at the price of $7.5 per hectare and $3 per hectare correspondingly"
+    },
+    {
+      "id": "P8",
+      "text": "Agronomy firms including the world's largest are channels to market",
+      "status": "explicit",
+      "evidence_span": "we have key commercial partners on board, multiple agronomy firms, which are including world's largest, which are our channels to market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Uniform fertilizer inefficiency problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hyperspectral prescription platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and agronomy channels",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Grow more with less via precise fertilizer application and earlier stress detection",
+      "status": "explicit",
+      "evidence_span": "start growing more with less"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce environmental damage from wasted fertilizer",
+      "evidence_span": "costing our planet $10 billion in environmental damage"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "up to 30% of all fertilizer applied is wasted"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fertilizer can go only where it's needed exactly when it's required"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "which are our channels to market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Revenue, farm counts, seed round excluded as traction. §4.1.3: dual per-hectare prices stay one commercial premise. Singleton D1: problem framing separately revisable. Anti-template: problem/product/channel warranted.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-459",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:30:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

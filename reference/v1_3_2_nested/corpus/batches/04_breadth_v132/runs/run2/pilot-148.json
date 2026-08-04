@@ -1,0 +1,85 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Educational content is overwhelmingly static and linear because slow, costly production cannot keep pace with changing learner needs",
+      "status": "explicit",
+      "evidence_span": "However, 98% of this content is both static and linear."
+    },
+    {
+      "id": "P2",
+      "text": "AI generates bite-sized interactive e-learning packages 100 times faster, ready to plug into any learning environment",
+      "status": "explicit",
+      "evidence_span": "generate interactive bite-sized e-education, e-learning packages, 100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "id": "P3",
+      "text": "Knowledge LX generates full learning experiences for any learning goal in near real time",
+      "status": "explicit",
+      "evidence_span": "With Knowledge LX, we generate full learning experiences for any learning goal in near real-time."
+    },
+    {
+      "id": "P4",
+      "text": "Distribution comes from partner platforms while Knowledge stays the behind-the-scenes AI provider",
+      "status": "explicit",
+      "evidence_span": "while our partners provide distribution through their platforms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Why education content must change",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Generation engine and embedded distribution",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any learning goal gets a dynamically generated, interactive education in real time",
+      "status": "explicit",
+      "evidence_span": "we generate full learning experiences for any learning goal in near real-time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's no longer clear what problems our learners need to solve tomorrow"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plug-and-play ready for any learning environment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Merged reading: the production-cost cause and the unpredictable-future consequence are one content-mismatch premise, and the partner channel is grouped with the generation engine as one go-to-market-plus-product module that is learned as a unit (B2B2C plug-in model). Educator counts, contract values, ARR estimates, and NPS/PMF scores excluded as traction; demo outputs folded into the generation premise (v1.3.2 clarification 5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-148",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

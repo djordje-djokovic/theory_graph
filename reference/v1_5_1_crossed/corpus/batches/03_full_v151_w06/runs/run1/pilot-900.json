@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-900",
+    "coder_session_id": "session_02",
+    "session_case_index": 10,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable web data is trapped in HTML pages without APIs, so only organizations that can hire developers can access it",
+      "status": "explicit",
+      "evidence_span": "The majority of sites do not have an API, and creating one is complex"
+    },
+    {
+      "id": "P2",
+      "text": "A no-code data browser turns any web page into a live table or API in minutes by learning from example rows and columns",
+      "status": "explicit",
+      "evidence_span": "turn any website. into a table of data or an API in a matter of minutes without writing code"
+    },
+    {
+      "id": "P3",
+      "text": "Created APIs can be combined so many sites stream into an application over a single API call",
+      "status": "explicit",
+      "evidence_span": "Combining the API that I just created with other APIs is very easy"
+    },
+    {
+      "id": "P4",
+      "text": "A Data Factory Chrome extension gives anyone access to a growing library of ready-made APIs from pages they browse",
+      "status": "explicit",
+      "evidence_span": "the Data Factory. The data factory is a chrome extension that will allow anybody to get access to our library of APIs"
+    },
+    {
+      "id": "P5",
+      "text": "There is always a free version of the product",
+      "status": "explicit",
+      "evidence_span": "It's all free at the moment, and there will always be a free version"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "trapped web data without APIs",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "no-code extraction and API combine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Data Factory API library",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "free access tier",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can easily access and use data from the web by turning sites into APIs",
+      "status": "explicit",
+      "evidence_span": "data on the web would be easily accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Currently, this data is not available to everyone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with a couple of clicks, I've turned a web page into a table of data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instantly, the data is extracted from the site, formatted, and placed into a table"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there will always be a free version"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "User/API/page traction counts excluded as traction (§4.2); Red Cross and HP examples treated as applications of the same extraction mechanism (§4.1.2). Data Factory split as separately launched library/extension module. Vision that every website has an API treated as value framing, not premise (§4.1.4). Singleton D3/D4 retained. Anti-template: problem, extractor, library product, and free tier separately revisable."
+}

@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Productivity-stagnant construction still runs on paper, producing avoidable measurement errors and waste",
+      "status": "explicit",
+      "evidence_span": "the vast majority of tasks are still managed on paper"
+    },
+    {
+      "id": "P2",
+      "text": "Hardware captures and executes data while a mobile platform connects it for streamlined jobsite execution",
+      "status": "explicit",
+      "evidence_span": "hardware products to capture and execute the data, as well as a mobile platform to connect all the data together"
+    },
+    {
+      "id": "P3",
+      "text": "T1 Tomahawk logs measurements to e-paper and the app; M1 caliper and QR labels finish the cut-and-label loop",
+      "status": "explicit",
+      "evidence_span": "automatically sent over there to it"
+    },
+    {
+      "id": "P4",
+      "text": "System is built for tradespeople end-to-end, not only PM-layer enterprise tools",
+      "status": "explicit",
+      "evidence_span": "everyone down to the individual electrician or plumber is using on the job site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Paper-era construction errors",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Capture-to-cut connected tools",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Trade-worker accessibility",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Measure once, cut once with connected digital tools on the jobsite",
+      "status": "explicit",
+      "evidence_span": "With Recon Tools, you can measure runs and cut ones"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce these errors and streamline operations on the job site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "really streamlines the process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every worker on the job site can use the equipment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Competitive positioning folded into trade-worker accessibility rather than separate 'only system' premise this run.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:10:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

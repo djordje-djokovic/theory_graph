@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-42",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:22:35+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Complex traits involve many genes, and state-of-the-art GWAS returns mostly non-useful targets while breeding or GMO development takes many years and large cost",
+      "status": "explicit",
+      "evidence_span": "The genome-wide association studies are our current state-of-the-art, but only about 14% of the things that they return are actually useful"
+    },
+    {
+      "id": "P2",
+      "text": "There is an urgent unmet need to deliver new resilient crop varieties to farmers in time",
+      "status": "explicit",
+      "evidence_span": "We have an urgent and unmet need to deliver new and resilient crop varieties to farmers"
+    },
+    {
+      "id": "P3",
+      "text": "Avalo's interpretable-ML discovery plus AI cross-recommendation stack finds causal targets at high precision, needs far less data, and speeds discovery and development",
+      "status": "explicit",
+      "evidence_span": "The result is a new discovery method that, instead of the 14% accuracy of GWAS, allows us to identify causal gene targets with 90% precision"
+    },
+    {
+      "id": "P4",
+      "text": "Efficiency lets Avalo work on any crop and place the technology in partners' breeding pipelines while also creating new seeds with partners and its own R&D",
+      "status": "explicit",
+      "evidence_span": "we're working with a number of pilot partners to get our technology into their existing breeding pipelines"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Breeding discovery bottleneck and farmer need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI gene discovery and cross forecasting",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Any-crop partner and seed pipeline",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Use AI to create more climate-resilient, productive crops faster",
+      "status": "explicit",
+      "evidence_span": "we use AI to make more climate-resilient crops"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "until we figure out how to reduce the bottleneck in the discovery and the development process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This level of accuracy and efficiency allows us to forecast plant outcomes before they even happen"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the real goal of our company is to make new seeds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Discovery method and recommendation system folded into one tech premise (v1.3.2 §4.1(5)) as one AI-enabled breeding stack. 60% output / climate-failure framing kept inside need via unmet-need span. Mission closing not coded as premise. Singleton D2/D3 retained as independently learnable modules."
+}

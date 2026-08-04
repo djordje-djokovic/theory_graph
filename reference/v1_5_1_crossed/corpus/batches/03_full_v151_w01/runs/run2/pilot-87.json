@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Heavy industry needs cheap, reliable, flame-hot heat and current zero-carbon options fail that triad",
+      "status": "explicit",
+      "evidence_span": "There is no affordable way to decarbonize our heavy industries. Cement, steel, glass, the building blocks of our society all need a tremendous amount of energy. And that energy needs to be cheap, reliable, and hot, often hot as flames"
+    },
+    {
+      "id": "P2",
+      "text": "Joule Hive stores cheap abundant electricity as on-demand hot gas delivered to existing furnaces/boilers/kilns",
+      "status": "explicit",
+      "evidence_span": "This system takes in electricity from renewables or off-peak nuclear or hydro whenever it's cheap, whenever it's abundant, whenever it's available. We turn it into on-demand heat stored into the system. We make hot gas with that system, blow air through it, make hot air, and deliver it to your furnace, to your boiler, to your kiln, in place of the fossil fuels you usually burn"
+    },
+    {
+      "id": "P3",
+      "text": "System reaches ~1,800°C, is ~3x cheaper than hydrogen, and retrofits without radical process change",
+      "status": "explicit",
+      "evidence_span": "We can do this hot as they need, 1,800 Celsius, the same as hydrogen, say. But we can keep it affordable, at least three times cheaper than hydrogen. And best of all, we're retrofitable"
+    },
+    {
+      "id": "P4",
+      "text": "Electrically conductive fire bricks (e-bricks) combine heater, thermal store, and heat exchanger from abundant refractory materials",
+      "status": "explicit",
+      "evidence_span": "the electrically conductive fire brick, or e-bricks, if you like. These bricks are from normal refractory materials, normal bricks that line furnaces today. We use semiconductor doping to make them electrically conductive"
+    },
+    {
+      "id": "P5",
+      "text": "Deploy where cheap renewables/time-of-use rates yield multi-year paybacks versus gas or electric boilers",
+      "status": "explicit",
+      "evidence_span": "in the Midwest, you can operate in areas today where 50% of the year, electricity is cheaper than natural gas as a heat source. We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Industrial heat decarbonization need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Joule Hive e-brick thermal battery",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Cheap-electricity deployment economics",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, reliable electrified heat that decarbonizes industrial furnaces without ripping them out",
+      "status": "explicit",
+      "evidence_span": "you don't have to radically change what you're doing to decarbonize what you're doing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we need a new approach to decarbonize our heat"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn the power from those sources into reliable industrial heat"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Temperature, hydrogen cost comparison, and retrofitability kept as performance package of the Joule Hive mechanism (P3). Heater/store/exchanger triad folded into e-brick building block (P4). LOIs and 2030 revenue targets excluded as traction/asks. Singletons D1 and D3 retained as separately revisable need framing and site-economics module."
+}

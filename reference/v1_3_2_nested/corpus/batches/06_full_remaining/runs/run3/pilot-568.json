@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Car search in MENA has no centralized platform, inconsistent illegitimate information, and non-standardized pricing",
+      "status": "explicit",
+      "evidence_span": "Finding a great deal is hard because there's no centralized platform, inconsistent and illegitimate information, and no standardized pricing in the MENA region"
+    },
+    {
+      "id": "P2",
+      "text": "AI prices cars from photos with continuous market recalibration and aggregates all national listings",
+      "status": "explicit",
+      "evidence_span": "The AI behind the pricing even scans the market to constantly adjust its algorithm to make sure that it stays relevant with the market as it is currently"
+    },
+    {
+      "id": "P3",
+      "text": "Caesar chatbot negotiates with every dealer so buyers see final prices before choosing",
+      "status": "explicit",
+      "evidence_span": "when he's ready to search, we will already have negotiated some cars so he can see what their final price is"
+    },
+    {
+      "id": "P4",
+      "text": "WhatsApp integration books seller contact and test drives",
+      "status": "explicit",
+      "evidence_span": "with the help of our WhatsApp integration, he simply contacts the seller and books a test drive, all with the help of Sease"
+    },
+    {
+      "id": "P5",
+      "text": "Monetize via OEM/dealer leads, brand BI tools, and bank/insurance VAS partners",
+      "status": "explicit",
+      "evidence_span": "We work with OEMs and certified dealers to send them leads on their featured cars"
+    },
+    {
+      "id": "P6",
+      "text": "Surface leasing options to grow MENA leasing from very low penetration",
+      "status": "explicit",
+      "evidence_span": "you'll be able to lease cars through the C-SAP. So instead of just seeing new and used cars, you can also see the leasing options for these cars"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented opaque car market",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI pricing search and negotiation",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Leasing inventory",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get the right car at the right time at the right price across buy and lease",
+      "status": "explicit",
+      "evidence_span": "get the right car, at the right time, at the right price"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding a great deal is hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AI-powered search engine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "three channels of monetization"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "both buying and leasing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Independent run3: leasing split from lead/BI monetization as separately announced product module. Traction excluded. Competitor claims used only as support for negotiation uniqueness already in P3.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-568",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:41:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

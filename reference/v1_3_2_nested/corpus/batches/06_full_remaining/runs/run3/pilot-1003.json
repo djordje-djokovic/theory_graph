@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Owners hate shop logistics and opaque pricing for routine and unexpected car repairs",
+      "status": "explicit",
+      "evidence_span": "when you have a car problem, don't waste your time going to a shop, begging friends for a ride, and then hoping and maybe praying that you don't get ripped off"
+    },
+    {
+      "id": "P2",
+      "text": "Web booking shows comparable fixed prices, mechanic reviews, and schedules service at the customer's place",
+      "status": "explicit",
+      "evidence_span": "You can see our price. You can compare it with dealer and shop price. You can see mechanics' ratings and reviews"
+    },
+    {
+      "id": "P3",
+      "text": "Platform knowledge of parts and labor times plus supplier integration keeps prices fixed and fair",
+      "status": "explicit",
+      "evidence_span": "this allows us to give you a fixed, fair price every time"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile mechanics with personal tools cover most repairs and improve earnings versus shop wage splits",
+      "status": "explicit",
+      "evidence_span": "Because when you go to the shop and pay $120 an hour, I make $20 of those dollars"
+    },
+    {
+      "id": "P5",
+      "text": "Large installed base of older cars spending hundreds yearly on local garage repairs defines the opportunity",
+      "status": "explicit",
+      "evidence_span": "People spend over $800 every single year fixing their cars at local garages"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Customer repair friction",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Transparent on-site service",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Independent mechanic supply",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Best car repair experience delivered at home or work with fair fixed pricing",
+      "status": "explicit",
+      "evidence_span": "Our mechanics are delivering the best car repair experience every single day"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I totally get the pain with car repair"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No shady markups, and no last minute surprises"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you save money, I make more"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Tesla/smog exclusion noted as scope limit inside mechanic capability, not separate premise. Personal car spend anecdote not coded as traction metric.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1003",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:40+02:00"
+  }
+}

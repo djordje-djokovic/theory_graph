@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote fans are disconnected from stadium energy",
+      "status": "explicit",
+      "evidence_span": "he was disconnected from the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Connected devices transmit fan energy into stadiums via Vivecast",
+      "status": "explicit",
+      "evidence_span": "enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P3",
+      "text": "App claps, swipes, sensors, and shouts aggregate on VibeBoards and world maps",
+      "status": "explicit",
+      "evidence_span": "when you clap, your reactions come up on the screens. You can swipe up to say, come on"
+    },
+    {
+      "id": "P4",
+      "text": "Teams adopt for CRM data, connected merchandise, and brand integration",
+      "status": "explicit",
+      "evidence_span": "Why do they want to work with us? Well, we capture a unique set of data that can feed into your CRM activities"
+    },
+    {
+      "id": "P5",
+      "text": "$4 fan chip plugs into merchandise to make it connected",
+      "status": "explicit",
+      "evidence_span": "a fan chip that can, for $4, just plug into any merchandise you have, making it connected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remote stadium participation",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Team and merchandise products",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give millions of remote fans a voice in the game",
+      "status": "explicit",
+      "evidence_span": "giving millions of remote fans a voice in the game"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for the first time ever, giving millions of remote fans a voice in the game"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's time to make the world a stadium for your fans"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Coarser coding; sponsor context folded into P4.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

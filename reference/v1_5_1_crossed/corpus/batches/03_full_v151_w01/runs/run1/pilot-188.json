@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-188",
+    "coder_session_id": "session_06",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:19:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stool and urine contain rich health data that is normally flushed away unused",
+      "status": "explicit",
+      "evidence_span": "data-rich stool and urine. It's absolute gold, yet it's flushed away every day"
+    },
+    {
+      "id": "P2",
+      "text": "A toilet seat optically scans toilet output and AI improves at interpreting stool and urine signals over sessions",
+      "status": "explicit",
+      "evidence_span": "toilet seat that optically scans your output"
+    },
+    {
+      "id": "P3",
+      "text": "Senior-community nurses can track residents without manual toilet talk because the seat monitors sessions automatically",
+      "status": "explicit",
+      "evidence_span": "nurses love it because they no longer have to toilet talk and manually track the residents"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unused toilet health data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "optical toilet-seat scanning AI",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "senior-community care workflow",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient continuous personal health monitoring from the toilet without wearing or recharging a device",
+      "status": "explicit",
+      "evidence_span": "This is far more convenient. You don't need to recharge it. You don't need to wear it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data-rich stool and urine"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "like a crack team of doctors looking into your toilet bowl every day"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no longer have to toilet talk and manually track the residents"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Community install counts and session volume treated as traction. AI color/urine/stool interpretation examples folded into P2 cascade. Wearable comparison folded into value convenience claim."
+}

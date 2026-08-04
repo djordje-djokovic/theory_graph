@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile fragmentation forces large testing spend; cloud unit-test tools leave developers with long error logs and no device in hand",
+      "status": "explicit",
+      "evidence_span": "you're now probably spending one third of your total development budget just on testing"
+    },
+    {
+      "id": "P2",
+      "text": "Real physical devices in data centers can be accessed and interacted with lifelike via tablet/mobile/desktop as if on your desk",
+      "status": "explicit",
+      "evidence_span": "you can access those devices and interact with them as if they were on your desk"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending input-output transfer enables nearly zero-latency lifelike interaction",
+      "status": "explicit",
+      "evidence_span": "patent pending input-output transfer technology that allows lifelike interaction with nearly zero latency"
+    },
+    {
+      "id": "P4",
+      "text": "Custom server infrastructure, demand-driven inventory algorithms, and cooling racks support many devices with higher gross margins",
+      "status": "explicit",
+      "evidence_span": "one server can support up to 250 devices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly mobile testing without devices",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Remote real-device interaction tech",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Device-farm infrastructure economics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Access any real device anytime for a fraction of cost and debug as if it were on your desk",
+      "status": "explicit",
+      "evidence_span": "You can access any device anytime you want for a fraction of cost"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save time so teams build and deploy faster and reach more device markets",
+      "evidence_span": "You save time. Your team works much more efficiently"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spending one third of your total development budget just on testing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interact with real physical device as if it was on your desk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fewer data centers, fewer servers, and higher gross margins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Debugger USB-like connection, multi-device touch replication, and IoT examples folded into remote-interaction capability (v1.3.2 §4.1(5)). Market-size stats excluded. Need/tech/infra partition justified as separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-761",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

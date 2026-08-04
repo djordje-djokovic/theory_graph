@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-444",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:07+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Standard lab detection of cholera in water takes about seven days, expertise, and high cost, leaving communities exposed",
+      "status": "explicit",
+      "evidence_span": "It takes seven days to detect four cholera in water"
+    },
+    {
+      "id": "P2",
+      "text": "A portable system detects cholera in water anywhere in under 30 minutes",
+      "status": "explicit",
+      "evidence_span": "detecting four cholera in water, anywhere in the world, in under 30 minutes"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware portable lab, disposable reagent kit, and smartphone amplify the cholera toxin gene and measure viscosity change",
+      "status": "explicit",
+      "evidence_span": "We have a hardware component, disposable test kit, and a smartphone that works seamlessly together"
+    },
+    {
+      "id": "P4",
+      "text": "Smartphone and web portal show where and when cholera occurs so outbreaks can be stopped early",
+      "status": "explicit",
+      "evidence_span": "see where and when cholera has happened and notify people so that they can come in and eliminate the outbreak"
+    },
+    {
+      "id": "P5",
+      "text": "B2B model: one-time hardware purchase plus recurring single-use disposable kits",
+      "status": "explicit",
+      "evidence_span": "our hardware is a single-time purchase and our disposable test kits create the recurring revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rapid portable cholera detection",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Outbreak mapping alerts",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware plus kit revenue",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Rapidly detect pathogens in the field to save lives by mobilizing the lab",
+      "status": "explicit",
+      "evidence_span": "Rapidly detecting pathogens, saving lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put the power of the lab in the palm of your hand"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminate the outbreak before it's too large"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "disposable test kits create the recurring revenue"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Multi-disease chemistry swap treated as roadmap extension folded into notes, not a separate premise (§4.1(5)). Patents folded into viscosity mechanism in P3. LOIs and market size excluded as traction. Anti-template: detection, surveillance UX, and commercial model are separately revisable."
+}

@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-954",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:33:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Reality-TV post-production is extremely labor-intensive relative to finished runtime",
+      "status": "explicit",
+      "evidence_span": "one minute of the final product takes up to 17 hours of post-production"
+    },
+    {
+      "id": "P2",
+      "text": "Teams currently coordinate post via email threads, calendars, calls, and spreadsheets",
+      "status": "explicit",
+      "evidence_span": "sifting through emails with long threads where someone hits reply all, scheduling meetings on calendars, long phone calls with people in multiple time zones"
+    },
+    {
+      "id": "P3",
+      "text": "A viewing room focuses stakeholders on the video with timestamped comments",
+      "status": "explicit",
+      "evidence_span": "the viewing room is the sole focus is on the video itself and to give feedback on it"
+    },
+    {
+      "id": "P4",
+      "text": "Timestamped feedback can be assigned and exported as markers into editors' NLEs",
+      "status": "explicit",
+      "evidence_span": "export it directly into his favorite video editing software"
+    },
+    {
+      "id": "P5",
+      "text": "Browser-based design that uses existing hosting eases IT adoption",
+      "status": "explicit",
+      "evidence_span": "IT departments specifically love us because it's browser-based, and we leverage existing hosting infrastructure"
+    },
+    {
+      "id": "P6",
+      "text": "Project-based pricing is affordable for small teams while producing upside for larger clients",
+      "status": "explicit",
+      "evidence_span": "project based pricing that's friendly to teams of all sizes"
+    },
+    {
+      "id": "P7",
+      "text": "Native Adobe integration and MPAA standards unlock Hollywood studio workflows",
+      "status": "explicit",
+      "evidence_span": "we're announcing our native integration with Adobe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Post-production coordination pain",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Timestamped viewing and actionable review",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Browser IT adoption and project pricing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Adobe and studio standards",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Video professionals collaborate and manage post-production without email-driven chaos",
+      "status": "explicit",
+      "evidence_span": "a communication and project management tool for video professionals"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "collecting feedback's great, right? And clearly we've made it very, very easy to collect timestamp feedback. However, collection is one part. You've got to make it actionable"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Instead of doing emails and back and forth, all Paul needs to do is drop in a link"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that then replaces, let's say, emails going back and forth"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's easy to use, and it's easy to manage"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bringing post-production out of the Stone Age"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D4 retained: Adobe/MPAA studio access is an independently revisable GTM module. Quick-comment hotkeys kept inside P3. Traction counts and network-effect aside excluded per 4.2. Pricing amount and project-based structure kept as one commercial premise (v1.3.1 §4.1.3)."
+}

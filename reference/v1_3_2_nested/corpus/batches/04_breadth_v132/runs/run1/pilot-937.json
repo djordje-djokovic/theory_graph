@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large companies contract with suppliers for everything yet have almost no information on supplier environmental sustainability",
+      "status": "explicit",
+      "evidence_span": "they don't have almost any information on their supplier's environmental sustainability"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers, shareholders, and media increasingly scrutinize supply-chain sustainability",
+      "status": "explicit",
+      "evidence_span": "Consumers, shareholders, and the media are increasingly paying attention to supply chain sustainability problems"
+    },
+    {
+      "id": "P3",
+      "text": "The first truly integrated platform lets companies understand and manage sustainability, evaluate risk, and drive supplier improvement",
+      "status": "explicit",
+      "evidence_span": "We've developed the first truly integrated platform that helps companies understand and manage their supply chain sustainability, as well as evaluate supply chain risk, and drive their suppliers to be better."
+    },
+    {
+      "id": "P4",
+      "text": "On-the-fly drill-down analysis re-weights issues and identifies which suppliers are part of a given problem",
+      "status": "explicit",
+      "evidence_span": "This is supply chain analysis, supply chain risk analysis on the fly."
+    },
+    {
+      "id": "P5",
+      "text": "Supplier dashboards with industry-peer benchmarking incentivize suppliers to improve",
+      "status": "explicit",
+      "evidence_span": "Now, Spacely Sprockets can see where it stands relative to its industry peers, and that's a game changer."
+    },
+    {
+      "id": "P6",
+      "text": "Anonymous cross-network score visibility gives buyers access to more sustainable suppliers, who then win more business",
+      "status": "explicit",
+      "evidence_span": "you can also see the anonymous scores of suppliers outside of your supply chain. So now buyers have access to more sustainable suppliers, and more sustainable suppliers get more business."
+    },
+    {
+      "id": "P7",
+      "text": "A unified scorecard library fixes RFP fatigue: companies reuse common questionnaires and suppliers answer once",
+      "status": "explicit",
+      "evidence_span": "we have a unified scorecard library that fixes the RFP fatigue problem"
+    },
+    {
+      "id": "P8",
+      "text": "The platform charges an annual fee plus a small per-supplier fee",
+      "status": "explicit",
+      "evidence_span": "they pay a annual fee plus a small fee per supplier"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Supply-chain sustainability information gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Buyer analytics platform",
+      "premise_ids": ["P3", "P4", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Supplier network incentives",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Fee-based commercial model",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies understand and manage supply-chain sustainability and risk instead of flying blind into scandals",
+      "status": "explicit",
+      "evidence_span": "helps companies understand and manage their supply chain sustainability, as well as evaluate supply chain risk, and drive their suppliers to be better"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More sustainable products for the companies' own customers",
+      "evidence_span": "the part that will make the products that you buy more sustainable"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "it will be incentivized to improve because maintaining good relationships with buyers is so critical"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies have very little information and are flying blind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand which of its suppliers are actually part of the problem"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more sustainable suppliers get more business"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Consulting history treated as origin context; the 'need beyond consulting' line supports the platform premise rather than standing alone. Remaining feature list (analytics/reporting tool, data uploads, data quality scoring) folded into the platform premise per v1.3.2 clarification 5. Singleton D4 retained: the fee model is a standalone commercial module; no D4-to-V1 link coded because pricing contributes to viability rather than directly to customer value. Network-visibility-to-incentive dependency coded from the explicit 'incentivized because' warrant.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-937",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:23:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

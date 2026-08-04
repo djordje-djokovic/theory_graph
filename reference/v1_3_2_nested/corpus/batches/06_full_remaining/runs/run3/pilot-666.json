@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drug-target interaction success is the critical early discovery stage, yet inefficient choices destroy large value per drug",
+      "status": "explicit",
+      "evidence_span": "what makes drugs successful is its ability to interact with our body"
+    },
+    {
+      "id": "P2",
+      "text": "An average biotech must evaluate tens of thousands of proteins with scattered data and subjective manual process",
+      "status": "explicit",
+      "evidence_span": "An average biotech company needs to evaluate 25,000 of those"
+    },
+    {
+      "id": "P3",
+      "text": "Genomics plus AI plus text mining comprehensively analyzes proteins for new targets or novel therapeutic uses of compounds",
+      "status": "explicit",
+      "evidence_span": "identify new drug targets or to retarget existing compounds for the novel therapeutic usage"
+    },
+    {
+      "id": "P4",
+      "text": "Primary patient genomic data and secondary mined databases jointly score confidence and druggability",
+      "status": "explicit",
+      "evidence_span": "The primary data sets are the genomic data that we obtain from the healthy and ill patients"
+    },
+    {
+      "id": "P5",
+      "text": "Any disease with a strong genetic component can be analyzed on the platform",
+      "status": "explicit",
+      "evidence_span": "any other disease with the strong genetic component can be analyzed on the platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scale of target evaluation burden",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI genomic target scoring",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Broad genetic-disease applicability",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase speed and accuracy of biotech R&D target discovery",
+      "status": "explicit",
+      "evidence_span": "increase speed or accuracy of your R&D processes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$1 billion per drug is lost due to inefficient and suboptimal choice"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drug discovery faster and cheaper with the help of genomic and artificial intelligence"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I'm working on the cure for the prostate cancer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.73
+  },
+  "notes": "Ends at 'Thank'. Illumina and pilot negotiations excluded as traction. Singleton D3: disease-scope applicability separately revisable from the scoring engine.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-666",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "coder_session_id": "session_06",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote clinics lack hospital imaging tools because devices are expensive or too bulky",
+      "status": "explicit",
+      "evidence_span": "Many tools are available in large hospitals. are not accessible because they are expensive or too bulky"
+    },
+    {
+      "id": "P2",
+      "text": "iPad-based ultrasound enables local diagnosis with touch imaging workflow",
+      "status": "explicit",
+      "evidence_span": "We have built a new ultrasound solution working on an iPad"
+    },
+    {
+      "id": "P3",
+      "text": "Clinicians can capture, annotate, measure, and document exams including speech-to-text and voice memos",
+      "status": "explicit",
+      "evidence_span": "I can easily add some description to this exam. So I can type a title. I can use speech to text to be more productive, or maybe record a voice memo"
+    },
+    {
+      "id": "P4",
+      "text": "Images can be shared over cellular or Wi-Fi so specialists advise without patient travel",
+      "status": "explicit",
+      "evidence_span": "I can call a more experienced doctor in a major city hospital to get advice"
+    },
+    {
+      "id": "P5",
+      "text": "Device priced at about one-third of regular ultrasound opens emergency and education markets",
+      "status": "explicit",
+      "evidence_span": "14,900 euros, Ausgut is a great tool for emergency. This is one third of the price of the regular ultrasound device"
+    },
+    {
+      "id": "P6",
+      "text": "CE Medical and FDA approvals are on track to unlock US and European sales",
+      "status": "explicit",
+      "evidence_span": "CE Medical and FDA are on track to be approved by mid-next year, which will allow us to sell to US and European markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inaccessible clinic imaging",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "iPad ultrasound and remote consult",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Price point and regulatory market access",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local clinics better diagnose and connect to specialists to improve patient health",
+      "status": "explicit",
+      "evidence_span": "local clinics can better diagnose and connect to specialists to improve the patient's health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Classroom broadcast education use",
+      "evidence_span": "ideal tool for healthcare classroom, because you can instantly broadcast the image stream to a large audience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clinics are not equipped to meet patients' needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring great user experience and communication in medical imaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of the price of the regular ultrasound device"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Contrast/brightness/capture/zoom/measure cascade folded into imaging workflow with documentation. Tele-specialist consult is separately revisable connectivity module. Emerging-market trial traction excluded. Consumer future vision not coded as premise. Co-founder 90s bio excluded. Singleton D1 retained."
+}

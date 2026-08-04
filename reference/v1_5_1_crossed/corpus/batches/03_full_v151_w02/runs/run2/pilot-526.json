@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-526",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:25:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Multimodal shipment visibility requires consolidating many transport providers' data and pairing it with independent real-time tracking",
+      "status": "explicit",
+      "evidence_span": "pair providers' information with real-time and reliable tracking"
+    },
+    {
+      "id": "P2",
+      "text": "Data science predicts arrival times from external factors and alerts operations teams on smartphones",
+      "status": "explicit",
+      "evidence_span": "use data science to predict times of arrival by taking into account external factors like real-time traffic or events"
+    },
+    {
+      "id": "P3",
+      "text": "Focus is overseas multimodal shipments for industrial shippers rather than continental road freight alone",
+      "status": "explicit",
+      "evidence_span": "We focus on multimodal overseas shipments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Provider and tracking data consolidation",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Predictive ETA alerts",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Overseas multimodal shipper focus",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change the supply chain from reactive to predictive so shippers can anticipate delays and cut inventory risk",
+      "status": "explicit",
+      "evidence_span": "We change the supply chain from reactive to predictive"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve end-customer experience with proactive shipment information",
+      "evidence_span": "improve customer experience by providing proactive information to the end customer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consolidates multiple transport providers into one single stream"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "anticipation, to secure production lines by sending alerts to operational teams"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unique tech to guarantee data quality and predictability for international shipments"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-sentence after prior context (truncated=true). Satellite/GPS/IoT and turnkey software posture folded into P1. Reliability/inventory-savings and CX benefits recorded as value/secondary_value rather than extra premises. Customer logos/traction and team bios excluded."
+}

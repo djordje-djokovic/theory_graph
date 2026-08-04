@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-522",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Millions of Nigerian households cook with biomass that causes deadly indoor air pollution and many also lack electricity",
+      "status": "explicit",
+      "evidence_span": "30 million households in Nigeria use this biomass to cook"
+    },
+    {
+      "id": "P2",
+      "text": "An affordable smokeless cook stove cooks much faster and self-generates about 50 watts of electricity while cooking",
+      "status": "explicit",
+      "evidence_span": "a clean cook stove that is affordable. It's smokeless. It cooks five times faster than any traditional stove"
+    },
+    {
+      "id": "P3",
+      "text": "Waste-derived biomass pellets are much cheaper than charcoal, burn without smoke, and cook faster",
+      "status": "explicit",
+      "evidence_span": "Good Life Biomass Pellet"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution through cooperatives, MFIs, and local cooking-fuel vendors reaches households without destroying informal seller margins",
+      "status": "explicit",
+      "evidence_span": "working with existing cooperative societies, MFIs, and also we are using the local cooking food vendors"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from selling stoves and pellets plus after-sales support under a guarantee",
+      "status": "explicit",
+      "evidence_span": "We sell our products to these target markets and also we provide after-sales support services"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Biomass cooking and electricity gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Power stove",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Biomass pellets",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Vendor and cooperative distribution",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D5",
+      "name": "Product sales and after-sales",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clean cooking that protects women and children from smoke-related health harms",
+      "status": "explicit",
+      "evidence_span": "clean cook solution like PowerStove is the solution to health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Household electricity generation while cooking",
+      "evidence_span": "self-generates 50 watts of electricity"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100,000 Nigerians die every year as a result of this act"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It also self-generates 50 watts of electricity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it burns without smoke, so we are removing indoor air pollution"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are giving them a better solution they can sell at a better price margin"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we ensure that our 12-month guarantee, we can also be able to provide support"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Stove speed/smoke/electricity metrics kept as one process+performance package in P2; pellet cheapness/smoke/speed as one fuel package in P3. Traction figures, prize ask, and team bios excluded. Carbon certification/export roadmap treated as future plans, not current premises."
+}

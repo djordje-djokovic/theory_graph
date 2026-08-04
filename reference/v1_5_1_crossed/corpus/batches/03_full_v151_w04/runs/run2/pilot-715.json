@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-715",
+    "coder_session_id": "session_02",
+    "session_case_index": 6,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Presentation work is fragmented across desktop apps, email, chat, cloud drives, version/format breakage, and yet another tool to present or share online",
+      "status": "explicit",
+      "evidence_span": "creating their presentation in PowerPoint, sharing it via email, having a conversation about it on Slack"
+    },
+    {
+      "id": "P2",
+      "text": "Slides is a collaborative cloud editor with a stacked-detail presentation format, comments, team templates, media library, and live embedded content from external services",
+      "status": "explicit",
+      "evidence_span": "an entirely new format for how you structure your presentations"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in presenting and sharing covers live presentation with speaker notes, offline export, link sharing, and richly interactive playback on any phone or tablet",
+      "status": "explicit",
+      "evidence_span": "present live from slides.com using speaker notes, export and present offline, or simply share the presentation as a link"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization spans free signup plus individual and team plans, with Enterprise behind the corporate firewall for additional security",
+      "status": "explicit",
+      "evidence_span": "We offer plans for individuals and teams like Acme"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented presentation workflow",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "create collaborate and present platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "free team and enterprise plans",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "End-to-end easy collaborative presentations that look great in any setting",
+      "status": "explicit",
+      "evidence_span": "end-to-end platform for creating, presenting, and sharing presentations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is absolutely crazy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've also built the best tools for presenting and sharing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Slides for Enterprise, which takes our product and puts it behind the corporate firewall"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "PowerPoint/email/Slack/Drive/version pain folded as one workflow problem-set (§4.1.6). Editor format/comments/templates/media/embeds folded as one creation surface; present/share kept as speaker-framed second capability module (§4.1.7). User/visitor traction metrics excluded. Singleton D1/D3 retained. Anti-template: problem, product, and packaging are separately revisable."
+}

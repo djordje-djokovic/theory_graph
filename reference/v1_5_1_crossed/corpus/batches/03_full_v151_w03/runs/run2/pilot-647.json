@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-647",
+    "coder_session_id": "session_04",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Multichannel selling lifts sales but is tedious because merchants must replicate listings, orders, and inventory tracking across platforms without central real-time sync",
+      "status": "explicit",
+      "evidence_span": "Multichannel selling can be tedious, time-consuming, and extremely difficult to manage in real time"
+    },
+    {
+      "id": "P2",
+      "text": "A centralized dashboard lets merchants sell, track, and manage inventory across channels with real-time multi-directional product sync and selective customization for small businesses",
+      "status": "explicit",
+      "evidence_span": "The Syncommerce centralized dashboard allows online merchants to sell, track, and manage inventory across multiple sales channels simultaneously"
+    },
+    {
+      "id": "P3",
+      "text": "Monthly subscription tiers from $40 to $200 based on products listed and channels connected, with integrations including Shopify, eBay, Etsy, and newly Amazon",
+      "status": "explicit",
+      "evidence_span": "Our monthly subscription ranges from $40 to $200 per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multichannel management burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "centralized real-time sync dashboard",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "tiered channel subscriptions",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Online merchants sell more across channels while working less on inventory and listings",
+      "status": "explicit",
+      "evidence_span": "Sell more, work less"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cross-platform selling for online merchants time and capital intensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "effective and efficient multichannel retailing for online merchants a reality"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable and optimized solutions for small businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain facets (switching platforms, replicating listings/orders/inventory) folded as one multichannel burden. Dashboard publish/sync/customize features folded as one mechanism versus competitors. Pricing and channel integrations kept as commercial package for the same offer (v1.3.1 price+structure). Revenue/merchant traction excluded. 190% lift treated as demand framing inside pain/value, not separate premise."
+}

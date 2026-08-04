@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-587",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A patented dissolvable shell material is critical so dunking in hot water yields a production-quality part",
+      "status": "explicit",
+      "evidence_span": "shell material that he's washing off is a world first and a patented Collider invention that is critical to our process"
+    },
+    {
+      "id": "P2",
+      "text": "Orchid produces green-state parts in hours across metal, rubber, and silicone uses far faster and cheaper than CNC or molding",
+      "status": "explicit",
+      "evidence_span": "Orchid is five to 60 times faster. three to 125 times less expensive"
+    },
+    {
+      "id": "P3",
+      "text": "The machine is wall-plug simple with cartridge materials, no skilled labor or special ventilation, ~36 cm/hour and two-shoebox build volume",
+      "status": "explicit",
+      "evidence_span": "press a button to start, plug it into the wall, and there's no skilled labor or special ventilation required"
+    },
+    {
+      "id": "P4",
+      "text": "Initial customers are service bureaus and rapid prototyping shops, then medical and automotive manufacturers needing rapid iteration",
+      "status": "explicit",
+      "evidence_span": "initially targeting service bureaus and rapid prototyping shops"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "patented dissolvable shell process",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "service bureau then manufacturer GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable a new category of fast, inexpensive, production-quality custom manufacturing",
+      "status": "explicit",
+      "evidence_span": "enabling an entirely new category of manufacturing"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve amputees' lives with affordable customized prosthetic liners",
+      "evidence_span": "change the quality of someone's life with customization"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving a production quality part"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies that can benefit from rapid iteration"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-demo. Speed/cost/catalog treated as performance package of Orchid process (v1.5.1 §4.1.8) with shell invention. Application examples folded as uses of same process. Singleton D2 retained as separately revisable GTM sequence."
+}

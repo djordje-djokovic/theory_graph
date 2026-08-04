@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-895",
+    "coder_session_id": "session_03",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A human personal stylist searches fashion items for the user and delivers shoppable links to the inbox",
+      "status": "explicit",
+      "evidence_span": "your very own personal stylist, a human being that will be behind the computer searching the item on your behalf"
+    },
+    {
+      "id": "P2",
+      "text": "A fashion social network lets users follow others and shop what they are searching",
+      "status": "explicit",
+      "evidence_span": "we have also an Instagram for fashion feature, a social network, where you can inspire people and get inspiration as well"
+    },
+    {
+      "id": "P3",
+      "text": "In-house image recognition plus business rules overrides when automation fails, backed by human styling and community fallbacks",
+      "status": "explicit",
+      "evidence_span": "we're developing the best technology when it comes to image recognition in-house, but we're also adding business rules to override technology when it fails"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is affiliate commission of 6% on sales, with future subscription, trends data, and ads options",
+      "status": "explicit",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "human personal styling search",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "fashion social shopping network",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "image tech with human and community fallback",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "affiliate monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users discover and shop fashion items without being let down when search fails",
+      "status": "explicit",
+      "evidence_span": "Our promise is to never let the user down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The only thing you have to do is check your inbox for links of shoppable items"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can shop what others are searching"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If automated fails, you can then counter the personal styling"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affiliate with commission of 6% on sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-pitch (truncated=true). Team PhD bios excluded (§4.2.2). Image recognition, business-rule overrides, and layered human/community fallback folded as one reliability stack (§4.1.7). Vision verb ASAP excluded as framing (§4.1.4). Four-domain partition; not a need/product/money triad."
+}

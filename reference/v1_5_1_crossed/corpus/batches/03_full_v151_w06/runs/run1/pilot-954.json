@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-954",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:14:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video post-production feedback is stuck in email threads, meetings, calls, and spreadsheets, making collaboration slow",
+      "status": "explicit",
+      "evidence_span": "a lot of teams are running around, sifting through emails with long threads where someone hits reply all"
+    },
+    {
+      "id": "P2",
+      "text": "Viewing rooms focus feedback on the video with automatic pause, timestamped comments, and quick-comment hotkeys",
+      "status": "explicit",
+      "evidence_span": "the viewing room is the sole focus is on the video itself and to give feedback on it"
+    },
+    {
+      "id": "P3",
+      "text": "Review/export pane digests stakeholder feedback into assignable edits that export as markers into editors like Premiere",
+      "status": "explicit",
+      "evidence_span": "this is our review and export pane. Here you have a digest of all your stakeholders giving feedback"
+    },
+    {
+      "id": "P4",
+      "text": "Browser-based product uses existing hosting so IT has little to deploy; same collaboration pattern across team sizes and content types",
+      "status": "explicit",
+      "evidence_span": "IT departments specifically love us because it's browser-based, and we leverage existing hosting infrastructure"
+    },
+    {
+      "id": "P5",
+      "text": "Project-based pricing for teams of all sizes plus native Adobe integration and MPAA-standard compliance path",
+      "status": "explicit",
+      "evidence_span": "we're introducing project based pricing that's friendly to teams of all sizes"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "timestamped video review and edit handoff",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "browser IT-light deployment",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "project pricing and studio integrations",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Communication and project management that makes post-production collaboration actionable and out of the stone age",
+      "status": "explicit",
+      "evidence_span": "First Cut Pro is a communication and project management tool for video professionals"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've made it very, very easy to collect timestamp feedback"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they really don't have to do anything"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bringing post-production out of the Stone Age"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Feedback-collection UI cascade folded into P2; assignment+NLE export kept as the actionable handoff premise P3. Network-effect growth anecdote treated as traction. Pricing and Adobe/MPAA announcements grouped as go-to-market/compliance package."
+}

@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shoppers cannot tell how furniture chosen online or in store will look in their own home",
+      "status": "explicit",
+      "evidence_span": "hard to see how something that you choose online or even in a retail store will look in your own home"
+    },
+    {
+      "id": "P2",
+      "text": "Commercial 3D modeling tools are too hard, costly, or slow, so almost no homeowners use them",
+      "status": "explicit",
+      "evidence_span": "less than 1% of homeowners use these 3D model solutions"
+    },
+    {
+      "id": "P3",
+      "text": "A homeowner-friendly smartphone capture builds a 3D home model in minutes using photos plus device sensors",
+      "status": "explicit",
+      "evidence_span": "the only homeowner-friendly solution that allows anyone to create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud GPU algorithms turn multi-image captures into structural geometry and photorealistic WebGL rooms for shopping and collaboration",
+      "status": "explicit",
+      "evidence_span": "From that geometrical model, we create a model that we can render with WebGL"
+    },
+    {
+      "id": "P5",
+      "text": "The business connects furniture retailers to homeowners so retailers upsell, reach new customers, and cut returns",
+      "status": "explicit",
+      "evidence_span": "Our business opportunity is to connect retailers with homeowners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-home visualization problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smartphone-to-photorealistic 3D pipeline",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Retailer connection opportunity",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "The home becomes the ultimate photorealistic showroom for shopping furniture",
+      "status": "explicit",
+      "evidence_span": "your home becomes the ultimate showroom, that your home becomes the ideal place to shop for furniture"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Photorealism is very important for us"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing the ideal shopping experience for homeowners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Catalog placement, measurement tool, sticky notes, and designer boards folded into P3/P4 offering. No premise-premise links coded (none plainly asserted as prerequisites). Retailer contract treated as traction for P5 mechanism. Singleton D3 justified as separately revisable commercial module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:28:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

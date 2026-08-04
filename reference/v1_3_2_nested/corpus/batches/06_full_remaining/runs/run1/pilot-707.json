@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread and patients wait months for results",
+      "status": "explicit",
+      "evidence_span": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread"
+    },
+    {
+      "id": "P2",
+      "text": "Dipstick tests are portable but not sensitive enough for early detection, while PCR is sensitive but costly and not easily portable so results take days",
+      "status": "explicit",
+      "evidence_span": "the dipstick test, similar to the pregnancy test, is portable. However, it's not sensitive enough to detect early case detection. And the PCR, although it's very sensitive, it is very costly"
+    },
+    {
+      "id": "P3",
+      "text": "FastChip is a field-ready vacuum-driven chip that needs zero external power or pumps and can be carried in a bag",
+      "status": "explicit",
+      "evidence_span": "The chip requires zero power because everything is driven by vacuum"
+    },
+    {
+      "id": "P4",
+      "text": "Isothermal nucleic acid amplification on the chip has PCR-comparable sensitivity and yields quantitative pathogen concentration from fluorescing microwells within about one hour",
+      "status": "explicit",
+      "evidence_span": "We are using isothermal nucleic acid amplification, which has comparable sensitivity with PCR tests, the industry standard"
+    },
+    {
+      "id": "P5",
+      "text": "A trackable app platform records GPS, patient info, and test results as a disease-tracking network for ministries of health",
+      "status": "explicit",
+      "evidence_span": "We're building a trackable platform, an app that tracks GPS data, patient info, and test results"
+    },
+    {
+      "id": "P6",
+      "text": "Launch path starts as a research toolkit, then after sample prep integration and FDA clearance as a human diagnostic kit",
+      "status": "explicit",
+      "evidence_span": "Initially, we plan to launch this as a research toolkit. Then, after integrating sample prep and clearing FDA approval, we'll market this as a human diagnostic kit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Outbreak diagnostic gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "FastChip field diagnostics",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Tracking network and launch path",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients get molecular diagnostic results within one hour in the field instead of waiting days or months",
+      "status": "explicit",
+      "evidence_span": "Results come out within one hour, so patients don't have to wait for days to get the results"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enable ministries of health to deploy resources in outbreak hotspots",
+      "evidence_span": "We hope to enable ministries of health to optimally deploy the resources in the hotspots"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This is why Amfluidic solution is so much more affordable and low cost"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Results come out within one hour, so patients don't have to wait for days to get the results"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So this becomes a powerful disease tracking network"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Need/product/GTM triad noted; gap vs FastChip vs tracking/FDA path are separately revisable. Multi-disease screening and patent-like funding history folded/excluded (v1.3.2 #5; 4.2). PhD credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-707",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:11+02:00"
+  }
+}

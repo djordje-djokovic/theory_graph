@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding last-minute personal services requires dialing many merchants who may not answer or be free",
+      "status": "explicit",
+      "evidence_span": "I jump on Yelp and end up dialing 20 massage therapists, mainly getting no responses or otherwise hearing that they're booked for the evening"
+    },
+    {
+      "id": "P2",
+      "text": "Many qualified local businesses will bend over backwards to fill idle time with a new paying customer",
+      "status": "explicit",
+      "evidence_span": "there's a pool of highly qualified small businesses that are willing to bend over backwards in order to bring a new customer through the door"
+    },
+    {
+      "id": "P3",
+      "text": "Bidzee lets customers request a service, set terms and name a price; matching merchants accept and the card is charged and calendars updated",
+      "status": "explicit",
+      "evidence_span": "Within a few clicks on a website or mobile apps, you can easily place a request for personal service, and you can even name your own price"
+    },
+    {
+      "id": "P4",
+      "text": "Merchants face no upfront cost, get bottom-of-funnel card-backed demand, timing certainty, and only accept when they have excess capacity",
+      "status": "explicit",
+      "evidence_span": "A merchant working with BidZ faces no upfront investment at all"
+    },
+    {
+      "id": "P5",
+      "text": "Marketplace flips listings: customer offers themselves and Bidzee knocks on many local doors at once",
+      "status": "explicit",
+      "evidence_span": "We are the only platform that flips the equation and allows a customer to offer themselves to a business versus the traditional process of asking customers to filter through various business listings"
+    },
+    {
+      "id": "P6",
+      "text": "Only verified, rated local businesses perform services, unlike consumer-to-consumer task marketplaces",
+      "status": "explicit",
+      "evidence_span": "BidZ is only connecting you with a verified, rated local business in order to perform the service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Last-minute service mismatch",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Customer-named-price marketplace",
+      "premise_ids": [
+        "P3",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Merchant acquisition terms",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get appointments on their terms while businesses monetize otherwise idle time",
+      "status": "explicit",
+      "evidence_span": "A customer gets an appointment on their terms, and a business gets a paying customer through the door, allowing them to monetize, otherwise, idle time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "painful process of dialing all of those merchants just to find one that was willing to take my money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get the service that I desperately need"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put extra money in the pocket of this merchant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Groupon revenue cited as market evidence for merchant demand for acquisition channels, not Bidzee traction. Service category list folded into marketplace premise (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-915",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:31:25+02:00"
+  }
+}

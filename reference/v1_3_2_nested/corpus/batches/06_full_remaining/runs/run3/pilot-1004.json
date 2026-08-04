@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Apartment hunting is stressful because listings lack content, go stale, and marketplaces are full of spam duplicates",
+      "status": "explicit",
+      "evidence_span": "after searching for days and weeks, you click through to the one apartment that fitted everything you wanted to see. 404, it was down"
+    },
+    {
+      "id": "P2",
+      "text": "Zumper sources curated listings directly from supply-side partners",
+      "status": "explicit",
+      "evidence_span": "They're not scraped. We work directly with brokers, landlords, property managers"
+    },
+    {
+      "id": "P3",
+      "text": "Neighborhood discovery content plus follow/newsfeed delivers tailored search",
+      "status": "explicit",
+      "evidence_span": "you can search curated content alongside curated listings"
+    },
+    {
+      "id": "P4",
+      "text": "Qualification messaging helps competitive markets prioritize serious, qualified renters for brokers",
+      "status": "explicit",
+      "evidence_span": "What really matters to a broker or a landlord is if a renter is qualified. So we created a messaging tool to help with that"
+    },
+    {
+      "id": "P5",
+      "text": "Growth motion is bottom-up partnerships with leading landlords and brokers",
+      "status": "explicit",
+      "evidence_span": "business development with the leading landlords and brokers in the States to build this bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken listings market",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated search and messaging",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Supply-side BD motion",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help renters find and close apartments without theatrical open-house competition",
+      "status": "explicit",
+      "evidence_span": "so you don't need to do the song and dance like you saw in that video"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Apartment rentals are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make an inquiry for an apartment in under three minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bottom up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Messaging split as own premise but same domain as curated search because both revise with product UX. Live NY/SF launch traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1004",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Irrelevant pre-roll ads hurt content providers, brands, and viewers because targeting uses only user data",
+      "status": "explicit",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "id": "P2",
+      "text": "Recognition engine indexes video elements—faces, objects, logos, music, gender, age, emotion—to target on content",
+      "status": "explicit",
+      "evidence_span": "Our engine able to detect today faces, objects, logos, music, gender, age, and even emotion to better target advertising"
+    },
+    {
+      "id": "P3",
+      "text": "Nightly metadata downloads enable matching ads to the exact second for pre-roll, mid-roll, or related placements",
+      "status": "explicit",
+      "evidence_span": "We download them every night from the content provider. Then we're able to match on the right second the relevant advertising"
+    },
+    {
+      "id": "P4",
+      "text": "Company sells recognition data and campaign management to operators, platforms, and brands",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Irrelevant video ad targeting",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Content recognition and second-level matching",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Data and campaign sales",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users enjoy video with related ads while advertisers place ads where they work",
+      "status": "explicit",
+      "evidence_span": "enjoy show video content and be inspired by related ads"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bad user experience, irritation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring the power of the content on top of the user data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "implement this powerful engine into the online video advertising ecosystem"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mobile cookie-disabled standard claim folded into content-on-user-data positioning inside D2 rather than separate premise. Patent folded into engine. Team bios and CTR traction excluded. Mission-as-vision uncoded."
+}

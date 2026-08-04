@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1049",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:43:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "No product on the market can tell people what places and events go together for their occasion",
+      "status": "explicit",
+      "evidence_span": "there's not a single product on the market today that can tell you what places and what events go together for your occasion"
+    },
+    {
+      "id": "P2",
+      "text": "People plan by mood and companions, and they want review snippets of what is new and fresh nearby",
+      "status": "explicit",
+      "evidence_span": "they wanted review snippets of what's new and fresh and happening in the area"
+    },
+    {
+      "id": "P3",
+      "text": "The engine searches thousands of places and events across the web in real time, algorithmically classifying, ranking, and composing itineraries on the fly",
+      "status": "explicit",
+      "evidence_span": "goes out across the web, looking at thousands of places and events, algorithmically classifying them, ranking them, and on the fly, composing them into itineraries to fit my needs"
+    },
+    {
+      "id": "P4",
+      "text": "Generated plans are never hand curated or canned, and they carry reviews and booking links for immediate decisions",
+      "status": "explicit",
+      "evidence_span": "Everything's algorithmically generated. Not a single thing is hand curated"
+    },
+    {
+      "id": "P5",
+      "text": "The plan belongs to the user, who can customize it however they want",
+      "status": "explicit",
+      "evidence_span": "I can do whatever I want with it. I can customize this however I want"
+    },
+    {
+      "id": "P6",
+      "text": "Friends can advise on the plan through Facebook and add places to it in real time",
+      "status": "explicit",
+      "evidence_span": "They all get a Facebook notification saying I've asked them for some advice on my WeOtta plan"
+    },
+    {
+      "id": "P7",
+      "text": "The plan becomes a Facebook event in less than two seconds, easier than on Facebook itself",
+      "status": "explicit",
+      "evidence_span": "There's our Facebook event. That happened in less than two seconds"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmet occasion-planning need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Algorithmic plan generation",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Plan ownership and social execution",
+      "premise_ids": ["P5", "P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People get their evening made for them — what to do tonight with all the hassle removed",
+      "status": "explicit",
+      "evidence_span": "It made our evening for us"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "As coverage and personalization grow, the right inventory reaches the right people at the right time",
+      "evidence_span": "Ouyada will have the right inventory to the right people at the right time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It solves the problem of what to do tonight. It also takes all the hassle out of planning it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ouyada plans are generated on the fly, they're never curated, they're never canned"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making a Facebook event on WIATA is that it's even easier than making a Facebook event on Facebook site itself"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Audience interjections during the demo excluded per 4.2; the founder's answers remain codable and support P4. The planning-behavior findings (mood/companions, review snippets, event-first itineraries, Facebook personalization) are compressed into P2 as one user-research premise about how people plan — splitting each interview finding would over-split restatements of the same behavioral assumption. The 'right inventory' claim is a secondary value criterion per v1.3.2 clarification 4. The tweet promotion is an audience appeal excluded per 4.2. No plainly asserted premise-prerequisite."
+}

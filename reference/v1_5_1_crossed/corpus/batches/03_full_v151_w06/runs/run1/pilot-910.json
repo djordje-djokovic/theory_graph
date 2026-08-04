@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-910",
+    "coder_session_id": "session_05",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "3DLT is a marketplace where designers sell professional-level 3D printable files rather than giving them away",
+      "status": "explicit",
+      "evidence_span": "creating a marketplace where designers can sell professional level 3D printable files rather than just giving them away on sites like Thingiverse"
+    },
+    {
+      "id": "P2",
+      "text": "Buyers without home printers can customize designs and fulfill via a network of print shops with pickup or shipping, with printers competing for the job",
+      "status": "explicit",
+      "evidence_span": "With our 1,000 3D print shops in our network, you can order something from across the world and literally pick it up from across the street, or have it shipped directly to you"
+    },
+    {
+      "id": "P3",
+      "text": "Revenue comes from design sales and profit from print fulfillment, with printer competition driving lower consumer prices",
+      "status": "explicit",
+      "evidence_span": "we generate revenue from the design and profit from the sale of print. Our system allows 3D printers to compete for your business"
+    },
+    {
+      "id": "P4",
+      "text": "Consumers can work directly with designers to fast-track new products when catalog items are missing",
+      "status": "explicit",
+      "evidence_span": "You can work directly with our designers to fast-track the innovation to new products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "designer 3D file marketplace",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "print-shop fulfillment network",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "design and print monetization",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buyers choose when, where, and how products are manufactured—cheaper, greener, better-quality printable goods",
+      "status": "explicit",
+      "evidence_span": "We give you the power to choose when, where, and how the products you buy are manufactured"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Designers turn passion into passive income by selling files",
+      "evidence_span": "they can turn their passion into passive income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've got a store full of digitized objects that you can purchase, download, and manufacture right from the comfort of your home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our system helps you select the best option"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With competition comes commoditization, and that means lower pricing for you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Home-print and print-shop paths treated as one fulfillment portfolio with customization. Market-size/2020 flip forecasts treated as framing. $10M free credit promo treated as launch tactic detail, not a core premise. Three domains are marketplace, fulfillment, and monetization—anti-template justified: designer catalog, print network, and take-rate mechanics are separately revisable."
+}

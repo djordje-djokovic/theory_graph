@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-425",
+    "coder_session_id": "session_05",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Africa faces a shortage of developers; few school children leave with basic computer-science knowledge",
+      "status": "explicit",
+      "evidence_span": "Africa suffers from what I would love to call SOD, shortage of developers"
+    },
+    {
+      "id": "P2",
+      "text": "Children need to become creators of technology, not only passive consumers, with coding as a key skill",
+      "status": "explicit",
+      "evidence_span": "These children need not only be passive consumers of technology, but also become creators and innovators of it"
+    },
+    {
+      "id": "P3",
+      "text": "Gamified app teaches programming fundamentals via puzzles and graphical blocks that animate game characters",
+      "status": "explicit",
+      "evidence_span": "bBlocky lets children learn the fundamentals of computer programming through game puzzles and helping them animate different different game characters"
+    },
+    {
+      "id": "P4",
+      "text": "App works fully offline for low-internet regions and uses AR to make lessons interactive",
+      "status": "explicit",
+      "evidence_span": "our application works fully offline, ensuring inclusivity in regions where internet penetration is very low"
+    },
+    {
+      "id": "P5",
+      "text": "Global app that remains relevant to local African audiences",
+      "status": "explicit",
+      "evidence_span": "it's a global app, which has a global reach and appeal, but at the same time, remaining relevant to our local audiences"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue from in-app character toy store and branded character placements",
+      "status": "explicit",
+      "evidence_span": "Our primary source of revenue is in-app toy store, where we allow our users to purchase different game characters in our toy store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "African kids coding skills gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Offline AR gamified learning app",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "In-app and brand monetization",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make learning programming easy and fun for kids so they can prosper in a tech-driven world",
+      "status": "explicit",
+      "evidence_span": "Programming has never been this easy and fun"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "coding would play a huge role in helping them prosper in this tech-driven, rapidly changing world"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "learn the fundamentals of computer programming through game puzzles"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase different game characters in our toy store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Course range and coins-for-characters treated as facets of the gamified learning product. Competitor geography contrast folded into offline/local-relevance premises. Download traction excluded."
+}

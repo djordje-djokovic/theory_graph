@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords, plastic IDs, and digit numbers are weak ways to authenticate identity",
+      "status": "explicit",
+      "evidence_span": "You're not a nine-digit number. You're not a piece of plastic with a photo on it. and you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "Biometric and behavioral factors build a unique digital fingerprint for implicit authentication",
+      "status": "explicit",
+      "evidence_span": "We use biometric and behavioral factors to build a unique digital fingerprint of you, and use that to authenticate and secure your identity"
+    },
+    {
+      "id": "P3",
+      "text": "Matching recent multi-device sensor signals authenticates without passwords or codes",
+      "status": "explicit",
+      "evidence_span": "UniFi ID uses the recent sensor data from your phone, computer, wearables, and other nearby devices. If the signals match, you're in"
+    },
+    {
+      "id": "P4",
+      "text": "Proprietary ML discovers uniqueness from over 100 passive attributes including gait and typing",
+      "status": "explicit",
+      "evidence_span": "These are just two factors of over 100 different attributes that go into our proprietary machine learning system"
+    },
+    {
+      "id": "P5",
+      "text": "Passive human-behind-device factors streamline auth, reduce fraud, and prevent account takeover cross-device",
+      "status": "explicit",
+      "evidence_span": "applications in streamlining authentication, reducing fraud, and preventing account takeover"
+    },
+    {
+      "id": "P6",
+      "text": "Deploying with financial and technology partners on account-takeover and password-reset pain",
+      "status": "explicit",
+      "evidence_span": "one of our partners has a big problem with account takeover, and we're working with them to incorporate Unify ID's technology"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Weak password-era identity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Implicit multi-sensor biometric authentication",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fraud and enterprise partner use cases",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Authenticate securely by being yourself without passwords",
+      "status": "explicit",
+      "evidence_span": "We believe the best way to authenticate yourself is to be yourself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the way you authenticate yourself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No passwords to remember, no codes to read off your phone, and no fuss"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using what's unique about each individual to enhance security"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "'Future of authentication' and market-size claims treated as vision/framing per §4.1(4), not premises. IoT offline extension folded into multi-device capability. Team credentials and prior exit excluded per §4.2. Private beta status treated as stage, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

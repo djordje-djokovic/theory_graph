@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cable-driven on-site printer is accurate, portable across sizes, and freer than rail or center-arm rival architectures",
+      "status": "explicit",
+      "evidence_span": "This design can give accurate results, can be easily installed and dismantled on the work site"
+    },
+    {
+      "id": "P2",
+      "text": "Custom concrete optimized for 3D printing: strength, set speed, flow, bonding, and environmental profile",
+      "status": "explicit",
+      "evidence_span": "building engineers also created a concrete mixture"
+    },
+    {
+      "id": "P3",
+      "text": "Sell faster custom printed structures at comparable market prices while scaling printer size toward houses",
+      "status": "explicit",
+      "evidence_span": "sold at a price similar to the market, but at a very faster rate"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cable robot architecture",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Print concrete formulation",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Faster custom structure sales",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, safe, risk-free building for construction customers",
+      "status": "explicit",
+      "evidence_span": "building fast, safe, and risk-free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Rebuild homes after disasters and wars",
+      "evidence_span": "natural disasters and wars destroy whole cities"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "printing plate can move freely throughout the cables"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "critical in 3D printing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "at a very faster rate"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.66
+  },
+  "notes": "Competitor contrast folded into cable-robot premise. Strategic partner deal excluded as unfinished traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-558",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

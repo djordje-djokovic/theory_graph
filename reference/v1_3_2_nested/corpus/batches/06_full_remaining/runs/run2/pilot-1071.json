@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional ECG is clinic-bound with cables, gel, and trained operators",
+      "status": "explicit",
+      "evidence_span": "you'll have to have an ECG technician or a trained doctor that can operate the machine"
+    },
+    {
+      "id": "P2",
+      "text": "Time to hospital treatment is the critical survival factor in cardiac events",
+      "status": "explicit",
+      "evidence_span": "Time is the most crucial factor in cardiac events"
+    },
+    {
+      "id": "P3",
+      "text": "A pocket SmartHeart device turns phones into a hospital-grade 12-lead ECG machine",
+      "status": "explicit",
+      "evidence_span": "transform your iPhones, Androids, and BlackBerrys into a hospital-grade ECG machine"
+    },
+    {
+      "id": "P4",
+      "text": "Single-button recording yields results users can view and share with clinicians",
+      "status": "explicit",
+      "evidence_span": "a single button click, and you are 30 seconds away from performing a full ECG"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market combines ~$499 hardware with free apps and subscription or pay-per-use service",
+      "status": "explicit",
+      "evidence_span": "You can use it on a monthly service packages or alternatively on a pay-per-use model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Clinic ECG and time barriers",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Consumer SmartHeart product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware-plus-service pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can get a hospital-grade ECG anywhere in seconds to improve cardiac survival odds",
+      "status": "explicit",
+      "evidence_span": "world's smallest hospital-grade ECG that can be used by a non-professional end user anywhere, anytime"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "higher your chances to survive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hospital-grade ECG machine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better health care and quality of living"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "ASR SmartHealth/Smarter naming left in spans; premise text normalized to SmartHeart offer.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1071",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:54:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

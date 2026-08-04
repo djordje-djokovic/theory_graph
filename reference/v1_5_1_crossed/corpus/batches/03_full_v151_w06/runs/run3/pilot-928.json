@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-928",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Email remains central to cloud workers' workflows but traps attachments as a content silo",
+      "status": "explicit",
+      "evidence_span": "email is a massive content silo. Stuff just gets stuck in there"
+    },
+    {
+      "id": "P2",
+      "text": "A Chrome extension connects email to cloud services so attachments move into those services while staying linked to the email context",
+      "status": "explicit",
+      "evidence_span": "move these files directly into other cloud services and keep them associated with the context of the original email"
+    },
+    {
+      "id": "P3",
+      "text": "Rules can automatically route incoming attachments from specified senders into the correct cloud folders",
+      "status": "explicit",
+      "evidence_span": "automatically send everything that she's receiving from this big enterprise company directly into the correct contract folder"
+    },
+    {
+      "id": "P4",
+      "text": "Files can be attached from the cloud with access-control permissions limited to designated recipients",
+      "status": "explicit",
+      "evidence_span": "attaches the file directly from the cloud and sets access control permissions on it"
+    },
+    {
+      "id": "P5",
+      "text": "Admin policies and an event dashboard give teams consistent cross-app data handling and visibility into ownership and workflow",
+      "status": "explicit",
+      "evidence_span": "sets policies across the cloud applications that they use so that she can make sure that data is being consistently handled"
+    },
+    {
+      "id": "P6",
+      "text": "The product is free for individuals and paid when a group is claimed to govern shared data workflow",
+      "status": "explicit",
+      "evidence_span": "Cloudless is completely free for individual users. You only pay when you claim a group of people"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email-to-cloud attachment workflow",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "team data governance and visibility",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium group pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A simple secure workflow that moves and governs data across the enterprise cloud",
+      "status": "explicit",
+      "evidence_span": "offers a simple, secure workflow across the enterprise cloud that users and IT will love"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data is moving seamlessly from one application to another"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gains visibility into data ownership and workflow across her team"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "appealing directly to individual users and functional business units"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Salesforce autofill and Yammer analytics examples folded as future platform cascade of the connect-and-move mechanism, not separate premises. Outlook availability treated as channel detail of the email connector. Market-size capture claim left as framing. Singletons D2 and D3 retained as separately revisable governance and pricing modules."
+}

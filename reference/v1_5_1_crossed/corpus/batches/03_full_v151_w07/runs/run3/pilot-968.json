@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-968",
+    "coder_session_id": "session_02",
+    "session_case_index": 17,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Token and one-time codes make login frustrating; authentication should stay strong while becoming seamless and fun",
+      "status": "explicit",
+      "evidence_span": "authenticate without rushing to type these stupid codes"
+    },
+    {
+      "id": "P2",
+      "text": "Patent-pending ultrasonic audio links confirm a phone is near the computer to approve a session without unlocking or tapping the phone",
+      "status": "explicit",
+      "evidence_span": "connects the two devices using audio signals"
+    },
+    {
+      "id": "P3",
+      "text": "The same proximity flow can replace username and password entirely for experiences like corporate VPN login",
+      "status": "explicit",
+      "evidence_span": "replace the entire login process and make it completely seamless"
+    },
+    {
+      "id": "P4",
+      "text": "Each session encodes a unique encrypted key in the audio so only a nearby phone can confirm",
+      "status": "explicit",
+      "evidence_span": "generates a unique key for each session and encodes this key into the audio signal"
+    },
+    {
+      "id": "P5",
+      "text": "Browser-based, platform-agnostic deployment needs no new user or data-center hardware",
+      "status": "explicit",
+      "evidence_span": "we can run entirely in the browser, that makes us completely platform agnostic"
+    },
+    {
+      "id": "P6",
+      "text": "Enterprises can geo-fence where large transactions or logins are allowed or blocked",
+      "status": "explicit",
+      "evidence_span": "let your customers perform large transactions only from their home or their office, and not from other countries"
+    },
+    {
+      "id": "P7",
+      "text": "No-hardware simplicity yields a cost-effective IAM offering for financial institutions and large enterprises",
+      "status": "explicit",
+      "evidence_span": "we can provide our customers a very superior and cost-effective product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "painful strong auth",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "ultrasonic proximity login",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise IAM packaging",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncompromising security with an unbelievable seamless login experience",
+      "status": "explicit",
+      "evidence_span": "uncompromising security and an unbelievable user experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "login process could be fun instead of frustrating"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "truly seamless and secure experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cost-effective product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-thought (truncated=true). Token/code frustration as problem. Ultrasonic proximity, full passwordless mode, session-key crypto, and browser/no-hardware folded as cascade/packages of one Flick/Sleek login mechanism (§4.1.7–8). Geo IAM and cost-effective enterprise sell kept as commercial/enterprise module. Bank POC as traction. $12B market framing. Anti-template: problem, auth tech, and enterprise packaging separately revisable."
+}

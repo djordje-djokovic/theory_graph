@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hair styling is central to self-expression but the hair industry is largely offline and hard to find stylists in",
+      "status": "explicit",
+      "evidence_span": "the industry isn't online, and so it's hard to find a stylist"
+    },
+    {
+      "id": "P2",
+      "text": "Independent stylists lack websites, client tracking, marketing email, and online scheduling so they cannot actively grow",
+      "status": "explicit",
+      "evidence_span": "She doesn't have a website. She doesn't track client information or send marketing emails. She doesn't have daily access to her schedule because her salon doesn't have an online system"
+    },
+    {
+      "id": "P3",
+      "text": "StyleSeat gives professionals a website with social sharing and specials so clients can help grow the business",
+      "status": "explicit",
+      "evidence_span": "with StyleSeek, Glenda gets her own website. So for the first time, she can actually control her visibility online"
+    },
+    {
+      "id": "P4",
+      "text": "Clients can search local professionals, filter, book online including last-minute slots, and get reminders plus recommendation prompts",
+      "status": "explicit",
+      "evidence_span": "I can go to styleseat.com, type in haircut San Francisco, get a search results page with a bunch of professionals in my area"
+    },
+    {
+      "id": "P5",
+      "text": "Professionals get schedule access, client CRM, marketing tools, education, dashboard metrics, and demand-based specials to grow revenue",
+      "status": "explicit",
+      "evidence_span": "Now Glenda has direct access to her schedule for the first time. She has all her client information in one place. She can send marketing emails to them"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium model with free online booking and scheduling makes the platform available to the entire industry",
+      "status": "explicit",
+      "evidence_span": "We have freemium model, free online booking, free scheduling, so we're available for the entire industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Offline hair professionals who cannot grow",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Marketplace booking and professional tools",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium industry access",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring the hair industry online so clients find and book stylists and professionals actively grow their businesses",
+      "status": "explicit",
+      "evidence_span": "StyleSeed is bringing this $40 billion industry online starting today"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unlock inefficiency by freeing unused marketing capital and making matching more efficient",
+      "evidence_span": "StyleSeat will unlock $18 billion in inefficiency in the space"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she can't take an active role in growing it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the first time, Glenda can actively grow her business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're available for the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "App/iPad launch and future schedule optimization folded into professional tools per v1.3.2 4.1(5). Traction (10k professionals, school deals) excluded per 4.2. Launch credit promo excluded as financing/marketing ask. Aestheticians/trainers extension treated as same professional-tools mechanism, not a separate premise. Singleton D3: freemium availability is separately revisable commercial design.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1076",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

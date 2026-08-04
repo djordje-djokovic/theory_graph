@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Communication and accountability gaps drive relapse after treatment",
+      "status": "explicit",
+      "evidence_span": "lack of communication, and two, lack of accountability for your recovery activities"
+    },
+    {
+      "id": "P2",
+      "text": "Wearable-linked mobile app enforces recovery-plan check-ins with location verification",
+      "status": "explicit",
+      "evidence_span": "as she checks in, it verified the geolocation, so she checked in successfully"
+    },
+    {
+      "id": "P3",
+      "text": "Support network visibility, alerts, SOS, and non-triggering rewards sustain engagement",
+      "status": "explicit",
+      "evidence_span": "the second part of accountability is being connected to your support network"
+    },
+    {
+      "id": "P4",
+      "text": "Inpatient treatment centers are the first channel and receive referral and outcome data",
+      "status": "explicit",
+      "evidence_span": "data that we also provide to the treatment centers, which are helpful for them for referrals, outcome studies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Relapse drivers",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected recovery accountability app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Treatment-center GTM and data",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Prevent relapse through accountability and connection",
+      "status": "explicit",
+      "evidence_span": "This can literally be a lifesaver"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "falling back into relapse"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "engaged into your recovery every single day"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Early Adopter Program, which is inpatient treatment programs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Rewards folded into support/accountability bundle per §4.1(5). Profile setup on last day of inpatient treated as onboarding demo detail.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-698",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

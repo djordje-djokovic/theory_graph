@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-444",
+    "coder_session_id": "session_01",
+    "session_case_index": 13,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:22:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Standard lab cholera-in-water detection takes about seven days, is expert-heavy and expensive, leaving communities exposed",
+      "status": "explicit",
+      "evidence_span": "It takes seven days to detect four cholera in water"
+    },
+    {
+      "id": "P2",
+      "text": "A portable hardware unit, disposable kit, and smartphone detect cholera in water in under 30 minutes via DNA amplification viscosity sensing",
+      "status": "explicit",
+      "evidence_span": "detecting four cholera in water, anywhere in the world, in under 30 minutes"
+    },
+    {
+      "id": "P3",
+      "text": "Smartphone and web portal geotag detections so responders can stop outbreaks early",
+      "status": "explicit",
+      "evidence_span": "see where and when cholera has happened and notify people so that they can come in and eliminate the outbreak before it's too large"
+    },
+    {
+      "id": "P4",
+      "text": "B2B model sells hardware once and disposable kits recurrently; kit chemistry can expand to other pathogens",
+      "status": "explicit",
+      "evidence_span": "hardware is a single-time purchase and our disposable test kits create the recurring revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow cholera water testing",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "30-minute portable detection",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Outbreak mapping alerts",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Hardware and kit sales",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobilize the lab to rapidly detect pathogens and save lives",
+      "status": "explicit",
+      "evidence_span": "Rapidly detecting pathogens, saving lives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this leaves communities vulnerable to the water that they drink"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put the power of the lab in the palm of your hand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminate the outbreak before it's too large"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we change out the chemistry in our disposable test kits, and we can detect for many diseases in many different markets"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-phrase (truncated=true). Heating, imaging, viscosity patents, and sensitivity folded into P2. Rapid-test vs culture competitor contrast treated as positioning. LOIs and team expertise excluded as traction/credentials. Multi-disease chemistry swap kept inside P4 commercial platform claim."
+}

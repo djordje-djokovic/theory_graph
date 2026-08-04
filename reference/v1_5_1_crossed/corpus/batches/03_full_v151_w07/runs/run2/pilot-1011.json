@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1011",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:17:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastic gift cards are lost, stolen, or forgotten, leaving large unspent balances that hurt consumers and retailers",
+      "status": "explicit",
+      "evidence_span": "your gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile app stores gift cards in the cloud by entering merchant and card codes with balance verification",
+      "status": "explicit",
+      "evidence_span": "My cards are now securely backed up in the cloud"
+    },
+    {
+      "id": "P3",
+      "text": "Users can buy and send personalized gift cards via Facebook, email, or text with merchant suggestions and event reminders",
+      "status": "explicit",
+      "evidence_span": "Gift is seamlessly integrated with Facebook for convenience around sending gift cards to friends and family"
+    },
+    {
+      "id": "P4",
+      "text": "In-store redemption uses barcode/numeric display including a patented scratch-to-reveal code",
+      "status": "explicit",
+      "evidence_span": "Redemption is simple, with both barcode and numeric options"
+    },
+    {
+      "id": "P5",
+      "text": "Unwanted cards can be regifted to friends from the app",
+      "status": "explicit",
+      "evidence_span": "you can regift unwanted cards to your friends"
+    },
+    {
+      "id": "P6",
+      "text": "Open APIs will let retailers push cards into the wallet and developers build on the platform",
+      "status": "explicit",
+      "evidence_span": "enabling both retailers and developers to leverage our open APIs"
+    },
+    {
+      "id": "P7",
+      "text": "Launch distribution includes a large set of national retail partners as a mobile gift-card store",
+      "status": "explicit",
+      "evidence_span": "we've secured over 200 national retail partners to launch with our app"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lost plastic gift card problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile wallet send and redeem",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "retailer API and partner store",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make gift cards fun, social, and usable from a phone so they are not lost or unused",
+      "status": "explicit",
+      "evidence_span": "We're making gift cards fun, and we're making gift cards social"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's $20 billion in unspent gift cards every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage all your gift card needs right from your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making us the largest mobile gift card store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Lost/stolen/forgotten unspent cards folded as one problem (§4.1.6). Upload, send, redeem, scratch, and regift treated as distinct jobs within the wallet product under enumeration rule 2, grouped in one revisable wallet domain. Funding and free-card giveaways excluded (§4.2). Three domains—anti-template: retailer API/partner distribution separately revisable from consumer wallet UX."
+}

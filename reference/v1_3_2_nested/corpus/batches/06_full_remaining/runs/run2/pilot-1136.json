@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CheckPoints is a mobile shopping rewards application that works across stores rather than being tied to one retailer",
+      "status": "explicit",
+      "evidence_span": "shopping rewards application that is store agnostic"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers can earn and redeem rewards on their iPhone across a large U.S. store footprint",
+      "status": "explicit",
+      "evidence_span": "consumers can earn rewards in over one million stores throughout the U.S. with just their iPhone"
+    },
+    {
+      "id": "P3",
+      "text": "Advertisers deliver marketing messages to the right demographic in-store at the moment the product is in hand",
+      "status": "explicit",
+      "evidence_span": "reach consumers of the demographic they're looking for in any store in America where their product is sold"
+    },
+    {
+      "id": "P4",
+      "text": "UPC scanning unlocks an HTML5 cached product interaction page that presents advertiser content like an iAd",
+      "status": "explicit",
+      "evidence_span": "It's all delivered through HTML5 that's cached on the user's phone and presents itself in an iAds-like experience"
+    },
+    {
+      "id": "P5",
+      "text": "Rewards area partnerships let users redeem points for gifts, miles, and similar prizes in real time on the phone",
+      "status": "explicit",
+      "evidence_span": "many of which are delivered over the phone in real time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile store-agnostic rewards",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "Virtual end-cap advertising",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "In-store product discovery for advertisers plus rewarding shopping for consumers",
+      "status": "explicit",
+      "evidence_span": "drive discovery and interaction in-store while providing a fun and rewarding opportunity for consumers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "imagine walking into a store and walking out with rewards"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our advertisers are calling it a virtual end cap"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Coin gaming folded into the consumer rewards path rather than split. Traction and partner announcements excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1136",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

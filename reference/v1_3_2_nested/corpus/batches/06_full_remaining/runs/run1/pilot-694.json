@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Good quality coffee is hard to make at home, so consumers pay cafe prices despite third-wave demand for taste",
+      "status": "explicit",
+      "evidence_span": "it's kind of hard to make a good quality coffee at home"
+    },
+    {
+      "id": "P2",
+      "text": "Patented centrifugal brewing manages barista-level elements without pods, filters, or wasteful materials",
+      "status": "explicit",
+      "evidence_span": "uses patented centrifugal force technology to brew your coffee"
+    },
+    {
+      "id": "P3",
+      "text": "Wi-Fi connected machine plus marketplace app auto-replenishes fresh beans from local roasters",
+      "status": "explicit",
+      "evidence_span": "The beans get ordered automatically from a marketplace for local coffee roasters"
+    },
+    {
+      "id": "P4",
+      "text": "Business model takes margins on machines and a cut of every marketplace bean order",
+      "status": "explicit",
+      "evidence_span": "we're going to make margins on the machines and the beans"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home quality coffee gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Centrifugal connected brewer",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Machine and bean marketplace margins",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Third-wave coffee quality at home with single-serve convenience and no pod waste",
+      "status": "explicit",
+      "evidence_span": "combines the quality of the third wave coffee roasters with the convenience of a single serve pod system"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Eliminate coffee downtime via automatic bean replenishment",
+      "evidence_span": "solve the biggest problem in coffee history, coffee downtime"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard to make a good quality coffee at home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "patented centrifugal force technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Patents folded into brew mechanism (v1.3.1 #1). RPM/style range and dry grounds fertilizer folded into P2. Second-wave pod critique supports P1/P2, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:56:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

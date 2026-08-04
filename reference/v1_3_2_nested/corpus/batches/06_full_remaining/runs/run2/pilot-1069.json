@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1069",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:12:27+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Catalog front pages show only a tiny sliver of content, so discovery remains a pharmaceutical-grade pain point",
+      "status": "explicit",
+      "evidence_span": "When you go to the front page of iTunes, you see a tiny, minuscule sliver of their catalog"
+    },
+    {
+      "id": "P2",
+      "text": "Behavioral account-level data plus 4–6 trusted social signals (super trust) fuel collaborative filtering better than model tweaks",
+      "status": "explicit",
+      "evidence_span": "for any product category, there's four to six people that I truly trust. And that list is steroids for collaborative filtering"
+    },
+    {
+      "id": "P3",
+      "text": "Product combines social actions as implicit recommendations, object-level similarity, wider consensus, and trusted critics, then lets users buy by price/access",
+      "status": "explicit",
+      "evidence_span": "It's a social action as an implicit recommendation, instant gratification, it's object level similarity based on what you actually listen to"
+    },
+    {
+      "id": "P4",
+      "text": "Sharing to social media exposes non-users to affiliate links; core ARPU comes from affiliate conversions across categories",
+      "status": "explicit",
+      "evidence_span": "when non-users see those items in social media, they're being exposed to an affiliate link, and we are effectively monetizing non-users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Catalog discovery pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-first recommendation theory",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affiliate monetization of users and non-users",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people find the media they actually want through true social discovery",
+      "status": "explicit",
+      "evidence_span": "true social discovery for media content"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Build a portable taste graph valuable to media and brand marketers",
+      "evidence_span": "We're creating a depersonalized taste graph, which would be extremely valuable to media and brand marketers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we think there's a better way to find what you want in iTunes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all this fuels what we believe to be the ultimate recommendation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affiliate sales is our core revenue stream"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Taste-graph licensing recorded as secondary value aspiration tied to commercial path. Device expansion vision not coded. 'Data startup with multiple viable revenue streams' used to justify keeping monetization as its own domain."
+}

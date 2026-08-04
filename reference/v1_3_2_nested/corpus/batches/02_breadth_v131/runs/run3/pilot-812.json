@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-812",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:58:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Time-to-market advantage requires collapsing design-to-manufacturing handoffs that today rely on fragmented software and manual machine operation",
+      "status": "explicit",
+      "evidence_span": "time to market is one of the most important things when you're trying to beat your competition"
+    },
+    {
+      "id": "P2",
+      "text": "Cloud platform connects printers, CNC, water jets, welding arms, and related machines for remote one-click jobs",
+      "status": "explicit",
+      "evidence_span": "it's not just 3D printers, it's connecting all these machines and workflows in the cloud, anytime, anywhere"
+    },
+    {
+      "id": "P3",
+      "text": "Browser-based design rendering and live machine views let distributed teams operate without local machine software expertise",
+      "status": "explicit",
+      "evidence_span": "This works on Android, iPhone, pretty much anything with a web browser"
+    },
+    {
+      "id": "P4",
+      "text": "Workflow/assembly orchestration and factory duplication extend control beyond single-machine print jobs",
+      "status": "explicit",
+      "evidence_span": "I can instantly, quickly change the workflows. I can log in and instantly see the workflow"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is a high six-figure site license sold to large enterprises scaling worldwide",
+      "status": "explicit",
+      "evidence_span": "we charge 200K per site license. And we've already signed up two large enterprises"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Speed-to-market manufacturing friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Multi-machine cloud manufacturing OS",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise site licensing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Instant cloud manufacturing from design to object, anytime and anywhere",
+      "status": "explicit",
+      "evidence_span": "go from design, manufacturing, distribution instantly"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you want to go from an idea to a real object instantly"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "entire control of all my factory with one click"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more efficient as they scale worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Third pass folds fog client into cloud machine-control premise. Prior part-volume traction excluded; enterprise logos support the license premise only."
+}

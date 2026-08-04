@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online music increases spending, time in venue, and brand perception",
+      "status": "explicit",
+      "evidence_span": "using music online increases spending, it increases the time in the venue, and it even improves the perception of the brand"
+    },
+    {
+      "id": "P2",
+      "text": "Licensing and complying with online music law is a massive legal undertaking",
+      "status": "explicit",
+      "evidence_span": "using music online is a legal nightmare"
+    },
+    {
+      "id": "P3",
+      "text": "A legal turnkey API and SDKs add popular music to websites, apps, or games without sending users elsewhere",
+      "status": "explicit",
+      "evidence_span": "legal turnkey way to add popular music to your website, app, or game"
+    },
+    {
+      "id": "P4",
+      "text": "Analytics and A/B test infrastructure measure lift in engagement, retention, and revenues from music",
+      "status": "explicit",
+      "evidence_span": "necessary analytics and A-B test infrastructure for you to quickly determine if there is lift in engagement, retention, and revenues"
+    },
+    {
+      "id": "P5",
+      "text": "Self-service pricing starts at a low monthly fee for streaming on a site, app, or game",
+      "status": "explicit",
+      "evidence_span": "For the price of $25 per month, you can get popular music streaming on your website, app, or game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Music lift versus legal barrier",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Turnkey licensed music platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Self-service subscription pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "B2B customers gain engagement, retention, and revenues by adding music to their products",
+      "status": "explicit",
+      "evidence_span": "building engagement, retention, and revenues for our customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "that's exactly why we created Feed.fm"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "using music online increases spending"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "designed to increase session time and therefore engagement on your product"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get popular music streaming on your website, app, or game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "JavaScript/iOS/Unity SDKs, Shopify, and WordPress plugin folded into P3 (v1.3.2 §4.1(5)). Blackjack A/B percentages and 'every customer saw lift' excluded as traction; P4 codes the measurement capability. Singleton D3 retained: self-service price is a separately revisable commercial module. Stripe-for-music analogy treated as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-953",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

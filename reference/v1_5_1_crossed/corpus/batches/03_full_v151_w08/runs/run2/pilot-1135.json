@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1135",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most web publishers lack tools to recognize and reward user attention and loyalty the way offline loyalty programs do",
+      "status": "explicit",
+      "evidence_span": "publishers don't really have the tools to do so"
+    },
+    {
+      "id": "P2",
+      "text": "Badgeville is a flexible loyalty and rewards platform using game mechanics—status, reputation, achievements, leaderboards—tied to publisher-defined behaviors",
+      "status": "explicit",
+      "evidence_span": "We're a loyalty and rewards platform for web publishers to drive engagement"
+    },
+    {
+      "id": "P3",
+      "text": "Platform plugs into existing registration, supplies embed codes/widgets/API, and admin tools so marketers can define behaviors and rewards quickly",
+      "status": "explicit",
+      "evidence_span": "We've made it really easy for marketers, community managers to implement this very quickly"
+    },
+    {
+      "id": "P4",
+      "text": "Analytics show valued behaviors, top users, community health, and friction points for publishers",
+      "status": "explicit",
+      "evidence_span": "These are the kinds of analytics we can provide to our clients"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "missing online loyalty tools",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "game-mechanics engagement platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize engagement for web publishers by rewarding valued user behaviors",
+      "status": "explicit",
+      "evidence_span": "maximize engagement for publishers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "online, it's very difficult for us to get recognized and rewarded for our attention and our loyalty"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drive engagement"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript truncates mid-closing (truncated). Achievement/leaderboard/social-graph demo cascade folded into platform (§4.1.7). Customer counts and revenue traction excluded (§4.2)."
+}

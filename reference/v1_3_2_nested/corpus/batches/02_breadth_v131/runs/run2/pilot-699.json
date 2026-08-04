@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-699",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:41:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge SQL joins for analytics can take tens of hours on enterprise servers",
+      "status": "explicit",
+      "evidence_span": "35 hours to run"
+    },
+    {
+      "id": "P2",
+      "text": "GPU vector processors run matrix-form table operations across thousands of cores",
+      "status": "explicit",
+      "evidence_span": "instead of operating on the four processors in our CPU, we're distributing that processing to 2,000 graphics processing cores"
+    },
+    {
+      "id": "P3",
+      "text": "Clusters scale out and self-tune to the hardware and workload",
+      "status": "explicit",
+      "evidence_span": "It actually self-configures itself based on the hardware in your cluster, the data stored in your database, or the usage patterns of your team"
+    },
+    {
+      "id": "P4",
+      "text": "SQL is the access layer because businesses already live in SQL",
+      "status": "explicit",
+      "evidence_span": "it's SQL. The main reason we did this is to give as much access to big data processing to as many analysts and developers as possible"
+    },
+    {
+      "id": "P5",
+      "text": "Software can run in cloud, on-prem, or as a free community edition on a laptop",
+      "status": "explicit",
+      "evidence_span": "launching a community edition version of a GPU SQL database that is free to use for life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "GPU SQL performance engine",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ubiquitous SQL access paths",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Next-generation SQL database speed at massive scale",
+      "status": "explicit",
+      "evidence_span": "next-generation SQL database on video graphics cards"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That is the power of GPUs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "businesses, frankly, live in SQL"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two-domain partition: engine vs access/deployment. Customer pilot counts excluded."
+}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-953",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Using popular music online is a legal nightmare of lawyers, copyright agencies, and statutes that blocks engagement-driven music use",
+      "status": "explicit",
+      "evidence_span": "using music online is a legal nightmare"
+    },
+    {
+      "id": "P2",
+      "text": "Feed.fm provides a legal turnkey music API and SDKs/plugins so sites, apps, and games can add popular music without legal burden",
+      "status": "explicit",
+      "evidence_span": "We provide a legal turnkey way to add popular music to your website, app, or game"
+    },
+    {
+      "id": "P3",
+      "text": "In-page/HTML5 and game music experiences are designed to increase session time on the customer's product",
+      "status": "explicit",
+      "evidence_span": "Our player is 100% designed to increase session time and therefore engagement on your product"
+    },
+    {
+      "id": "P4",
+      "text": "Analytics and A/B testing measure lift in engagement, retention, and revenue",
+      "status": "explicit",
+      "evidence_span": "we also have the necessary analytics and A-B test infrastructure for you to quickly determine if there is lift"
+    },
+    {
+      "id": "P5",
+      "text": "Self-service platform priced at $25 per month",
+      "status": "explicit",
+      "evidence_span": "For the price of $25 per month, you can get popular music streaming on your website, app, or game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "music licensing legal barrier",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "turnkey legal music platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "self-service subscription pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses increase engagement, retention, and revenue by legally embedding music",
+      "status": "explicit",
+      "evidence_span": "building engagement, retention, and revenues for our customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's a massive, massive undertaking"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every single customer working with Feed.fm has seen an increase in session times"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "launch of our self-service platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Legal-question laundry list folded as one licensing barrier (§4.1.6). API/SDKs/Shopify/WordPress and curated stations folded into turnkey platform; session-time player design and analytics kept as performance/measurement package of that platform (§4.1.7–8). A/B lift stats as traction evidence for engagement value. Blip.fm team history excluded. Anti-template: legal gap, product, and $25 self-serve pricing separately revisable."
+}

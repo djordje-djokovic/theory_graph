@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hemels e-shower recirculates and refreshes water through micro-filtration and UV while adding limited fresh hot water",
+      "status": "explicit",
+      "evidence_span": "We add one and a half liters of fresh hot water to maintain the temperature"
+    },
+    {
+      "id": "P2",
+      "text": "Reuse yields about 80% energy and 90% water savings with high-flow comfort",
+      "status": "explicit",
+      "evidence_span": "saving you 80% on energy, 90% on water"
+    },
+    {
+      "id": "P3",
+      "text": "Because the unit is connected, monetization is either hardware sale or free hardware in exchange for shared savings",
+      "status": "explicit",
+      "evidence_span": "because it's connected, we can sell the hardware"
+    },
+    {
+      "id": "P4",
+      "text": "Dramatically smaller boilers and heating systems cut home infrastructure cost for sustainable housing",
+      "status": "explicit",
+      "evidence_span": "Your boiler goes from 200 liters for a family to 20 liters"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Refresh-cycle shower technology",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected savings business model",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Home infrastructure downsizing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Huge comfort shower with large water and energy savings",
+      "status": "explicit",
+      "evidence_span": "It's high volume, high pressure, so a big upgrade from what you got at home now"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "80% infrastructure reduction for sustainable homes",
+      "evidence_span": "80% reduction in infrastructure"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "uses each precious drop not once, but seven times"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "check your savings on your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainable homes available for everyone at very little cost"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Opening truncated; problem setup incomplete. Certifications and Remea audit excluded as traction/credibility.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-737",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

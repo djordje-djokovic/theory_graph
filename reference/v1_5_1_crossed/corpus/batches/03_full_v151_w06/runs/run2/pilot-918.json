@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-918",
+    "coder_session_id": "session_02",
+    "session_case_index": 4,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home restaurants, underground dining, and pop-ups worldwide reflect a lasting human need to share food that needs business structure, safety, and trust to scale",
+      "status": "explicit",
+      "evidence_span": "put business structure, safety, and trust around this phenomena and make it accessible to tens of millions more around the world"
+    },
+    {
+      "id": "P2",
+      "text": "A community marketplace lists authentic dining experiences that guests can discover, review hosts, and book with secure online payment including commission",
+      "status": "explicit",
+      "evidence_span": "EatWith is a community marketplace for authentic dining experiences"
+    },
+    {
+      "id": "P3",
+      "text": "Verified hosts and events are protected under a million-dollar guarantee",
+      "status": "explicit",
+      "evidence_span": "all of his events are protected under the Eat With $1 million guarantee"
+    },
+    {
+      "id": "P4",
+      "text": "Demand comes from both tourists seeking authentic local meals and locals booking social and private events",
+      "status": "explicit",
+      "evidence_span": "50% of all our booking during our pilot came from locals"
+    },
+    {
+      "id": "P5",
+      "text": "Hosts can earn income by cooking and meeting new people through the marketplace",
+      "status": "explicit",
+      "evidence_span": "Eat With lets me do this while earning some extra income"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "shared-food phenomenon needing trust",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "verified marketplace booking",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "tourist and local demand",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Travelers and locals get great food, interesting people, and unforgettable authentic dining experiences",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this basic human need to share food with others"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "community marketplace for authentic dining experiences"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is much bigger than about travel"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-anecdote (truncated=true). City examples of home dining folded into one phenomenon/need premise (§4.1.6). Marketplace discovery, reviews, and payment folded as one booking mechanism; $1M guarantee kept as distinct trust condition. Pilot traction numbers used only for local+tourist demand mechanism. Market-size billion-dollar framing largely excluded as vision. Singleton D1/D3 retained. Anti-template: phenomenon, marketplace/trust product, and demand mix separately revisable."
+}

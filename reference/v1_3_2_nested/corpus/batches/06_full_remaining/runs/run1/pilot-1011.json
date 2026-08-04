@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastic gift cards end up lost, stolen, or forgotten, leaving billions unspent and hurting retailers",
+      "status": "explicit",
+      "evidence_span": "there's $20 billion in unspent gift cards every year? And that's because your gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile app stores gift cards securely in the cloud with merchant select, code entry, balance verification, and barcode or scratch redemption",
+      "status": "explicit",
+      "evidence_span": "My cards are now securely backed up in the cloud, and no more forgetting them at home"
+    },
+    {
+      "id": "P3",
+      "text": "Facebook-integrated sending with a personalization engine suggests merchants and notifies around events like birthdays",
+      "status": "explicit",
+      "evidence_span": "Gift is seamlessly integrated with Facebook for convenience around sending gift cards to friends and family. Our patent-pending personalization engine will suggest relevant merchants your friends will enjoy"
+    },
+    {
+      "id": "P4",
+      "text": "Anyone can receive and use cards regardless of phone type, and unwanted cards can be regifted",
+      "status": "explicit",
+      "evidence_span": "anyone can receive a card on gift, regardless of what type of phone you have"
+    },
+    {
+      "id": "P5",
+      "text": "Launch with 200+ national retail partners makes it the largest mobile gift card store; open APIs will let retailers push cards later",
+      "status": "explicit",
+      "evidence_span": "we've secured over 200 national retail partners to launch with our app, including Sephora, Gap, Amazon, and Lowe's, making us the largest mobile gift card store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lost and unspent plastic gift cards",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile wallet send, receive, and redeem",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Retail partner network and open APIs",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make gift cards fun, social, and easy to manage and redeem from a phone",
+      "status": "explicit",
+      "evidence_span": "We're making gift cards fun, and we're making gift cards social"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce unspent gift-card waste for consumers and retailers",
+      "evidence_span": "that's bad for consumers, but it's really bad for retailers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage all your gift card needs right from your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making us the largest mobile gift card store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Scratch UI and barcode options folded into wallet/redemption premise (v1.3.2 4.1(5)). Funding announcement and free-card giveaways excluded per 4.2. Vision phrase 'forever change' not coded as premise. Partner count treated as go-to-market condition for assortment, not traction metric alone.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1011",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

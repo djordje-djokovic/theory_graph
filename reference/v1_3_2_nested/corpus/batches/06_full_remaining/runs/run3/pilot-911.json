@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brick-and-mortar dominates sales volume but shops lack online personalization and recommendations",
+      "status": "explicit",
+      "evidence_span": "When we go online, you feel like all these websites know you. Whatever you search will show up in your email titles. You get product recommendations. You get different product reviews. You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "id": "P2",
+      "text": "Retailers cannot distinguish shopper intent or personality across in-store transactions",
+      "status": "explicit",
+      "evidence_span": "every single customer that comes into your store wants something different. How do you know if they're in there to be after the newest products or the sales?"
+    },
+    {
+      "id": "P3",
+      "text": "POS-triggered personalization attaches recommended products and rich visuals to digital receipts",
+      "status": "explicit",
+      "evidence_span": "we can send him a copy of the receipt, and alongside it, put in all those rich visuals with the recommended products"
+    },
+    {
+      "id": "P4",
+      "text": "Brand dashboard turns spreadsheets into visual growth drivers, customer lists, and purchase histories",
+      "status": "explicit",
+      "evidence_span": "These are the growth drivers. You can see that in the middle, 80% of your customers in the middle are actually growing"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market focuses on mid-to-high luxury standalone fashion brands",
+      "status": "explicit",
+      "evidence_span": "We went after the individual brands in the mid to high luxury tier fashion retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Anonymous store shopping",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Receipt personalization",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Brand analytics dashboard",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Luxury fashion beachhead",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customize brick-and-mortar retail for every shopper",
+      "status": "explicit",
+      "evidence_span": "make it customized for everyone here"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You don't get any of that rich data when you walk into a store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommended products"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what they can do about it"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "best experience for the customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent run3: split receipt personalization vs brand dashboard as separately revisable modules (speaker presents both as distinct product surfaces). Singletons D2-D4 justified. Retail-is-Neanderthal market framing not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-911",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

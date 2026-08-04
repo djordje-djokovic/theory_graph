@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-585",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected vehicles face real cyber-attack risk that can seize steering, braking, and acceleration",
+      "status": "explicit",
+      "evidence_span": "suddenly your car is hacked. Critical control functions, such as steering, braking, and acceleration, is out of your hands"
+    },
+    {
+      "id": "P2",
+      "text": "Secure IoT software protects connected vehicles via a multi-layered stack including encryption, authentication, key management, firewall, OTA updates, and big-data modules, with patents",
+      "status": "explicit",
+      "evidence_span": "Our core solution is Secure IoT. This is a software-based solution for protecting connected vehicles from hacker attacks"
+    },
+    {
+      "id": "P3",
+      "text": "Cybersecurity-as-a-service charges about $10 per vehicle per month with continuous updates for fleet owners",
+      "status": "explicit",
+      "evidence_span": "We charge $10 per vehicle per month to protect them from outside attacks"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue-sharing go-to-market runs through automotive OEMs deploying security and service providers selling subscriptions to fleet owners",
+      "status": "explicit",
+      "evidence_span": "Trillium develops automotive cybersecurity solutions, an automotive OEM deploys our security in their vehicles, and a customer service provider"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Vehicle cyber-attack risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Secure IoT multi-layer protection",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fleet SaaS and OEM channel",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stopping car hacking so next-generation mobility can be deployed on secure onboard systems",
+      "status": "explicit",
+      "evidence_span": "we're stopping car hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This threat is real today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protecting connected vehicles from hacker attacks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cybersecurity as a service offering that we offer to fleet owners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Feature cascade of Secure IoT modules folded into one mechanism premise; patents as IP detail (§4.1.1/7). DEF CON and partner-project traction excluded. Autonomy/EV/rideshare framing treated as value rationale not separate premises. Price kept with SaaS offer (§4.1.3). Singleton D1/D2 retained."
+}

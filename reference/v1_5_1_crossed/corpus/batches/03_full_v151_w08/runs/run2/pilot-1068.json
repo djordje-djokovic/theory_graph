@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1068",
+    "coder_session_id": "session_02",
+    "session_case_index": 2,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents lack ready access to kids' critical medical information in emergencies and for daycare/sports requests",
+      "status": "explicit",
+      "evidence_span": "Imagine having access to all your kid's critical medical information available to you in your pocket"
+    },
+    {
+      "id": "P2",
+      "text": "A new law lets patients own records and requires doctors to provide them after a release",
+      "status": "explicit",
+      "evidence_span": "a law passed which says you now own your medical records"
+    },
+    {
+      "id": "P3",
+      "text": "A parent-centric subscription delivers immunizations, growth charts, and milestones via secure web and mobile app",
+      "status": "explicit",
+      "evidence_span": "what parents will be focused on are the immunizations, the growth charts, the last milestones"
+    },
+    {
+      "id": "P4",
+      "text": "Electronic release plus fax ingest and customer-service extraction makes record capture effortless for parents",
+      "status": "explicit",
+      "evidence_span": "We've built a system to ingest all these faxes"
+    },
+    {
+      "id": "P5",
+      "text": "The service is HIPAA compliant with extra security layers for cautious parents",
+      "status": "explicit",
+      "evidence_span": "we are HIPAA compliant"
+    },
+    {
+      "id": "P6",
+      "text": "Existing PHRs fail parents via self-entry, single-provider views, and non-parent UI",
+      "status": "explicit",
+      "evidence_span": "the existing players have three fatal flaws"
+    },
+    {
+      "id": "P7",
+      "text": "25 million U.S. moms with large first-year baby spend are the launch market",
+      "status": "explicit",
+      "evidence_span": "25 million moms living in the U.S. that spend $5-10 billion in the first year of a baby's life"
+    },
+    {
+      "id": "P8",
+      "text": "Co-marketing partnerships with baby sites reach where mothers coalesce",
+      "status": "explicit",
+      "evidence_span": "we are already working on some co-marketing partnerships with them"
+    },
+    {
+      "id": "P9",
+      "text": "Monetization is a subscription roughly the cost of a latte per month",
+      "status": "explicit",
+      "evidence_span": "we're a subscription-based service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "parent medical-info gap",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "parent-centric kids health product",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "record acquisition and security",
+      "premise_ids": [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "moms market GTM and subscription",
+      "premise_ids": [
+        "P7",
+        "P8",
+        "P9"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Busy parents can access kids' critical medical information anytime from pocket via web and mobile",
+      "status": "explicit",
+      "evidence_span": "all your kid's critical medical information available to you in your pocket, accessible anytime, from anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how many of you would know what's the last immunization your kid had if you were asked in the emergency room"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all the elements from the web is available for you in your fingertips"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The key is it's effortless for the customer"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring electronic medical records to the masses, starting with those who need it most, busy, caring moms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Immunizations/growth/milestones/print-email/camera milestones folded as parent product cascade (§4.1.7). Three competitor flaws folded as one gap premise (§4.1.6). First-year-free promo and family expansion vision excluded/not coded as premises (§4.1.4/4.2). Singleton D2 retained: product surface separately revisable from fax ops and GTM."
+}

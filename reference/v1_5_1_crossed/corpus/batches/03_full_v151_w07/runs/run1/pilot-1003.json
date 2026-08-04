@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1003",
+    "coder_session_id": "session_03",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Car repair today wastes time at shops, needs rides, and risks being ripped off",
+      "status": "explicit",
+      "evidence_span": "don't waste your time going to a shop, begging friends for a ride, and then hoping and maybe praying that you don't get ripped off"
+    },
+    {
+      "id": "P2",
+      "text": "Book a mobile mechanic online in under 60 seconds with transparent prices, comparisons, ratings, and 7-day scheduling at your location",
+      "status": "explicit",
+      "evidence_span": "you can take care of your car problems in less than 60 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Symptom guidance plus on-spot app estimates yield fixed fair prices via parts-supplier integration and labor/parts data",
+      "status": "explicit",
+      "evidence_span": "This price that you see here is fixed by us, always"
+    },
+    {
+      "id": "P4",
+      "text": "Independent mechanics with their own tools can do ~80% of repairs and earn more than shop wages while customers save",
+      "status": "explicit",
+      "evidence_span": "all of us mechanics own our own scanners and tools to perform about 80% of all car repairs"
+    },
+    {
+      "id": "P5",
+      "text": "Target large out-of-warranty older-car repair market (~$160B)",
+      "status": "explicit",
+      "evidence_span": "Out of warranty, older cars. Making this a $160 billion market opportunity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "shop hassle and rip-off risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "on-demand transparent booking and fixed pricing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "mechanic two-sided earnings",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "older-car repair market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Best car repair experience at home/office—customers save, mechanics make more",
+      "status": "explicit",
+      "evidence_span": "When you hire me through your mechanic, you save money, I make more, and everyone wins"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Your Mechanic is the car mechanic that comes to you"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "No shady markups, and no last minute surprises"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you save money, I make more, and everyone wins"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "car repair is ripe for disruption"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Shop/ride/rip-off pains folded as one problem (§4.1.6). Booking UX, symptom help, mobile estimate, fixed price/parts data folded as marketplace product cascade (§4.1.7). Mechanic supply economics split as two-sided condition. Market sizing as target-market premise. Investor/gift CTA excluded. Four domains."
+}

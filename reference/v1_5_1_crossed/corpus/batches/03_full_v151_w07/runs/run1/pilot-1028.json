@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1028",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Idle privately owned bikes are a huge underused pool while shop rentals and public bike share are expensive or poorly suited for leisure rides",
+      "status": "explicit",
+      "evidence_span": "there's this huge pool of bicycles that are not being capitalized on"
+    },
+    {
+      "id": "P2",
+      "text": "SpinLister is a peer-to-peer web marketplace matching excess bike supply with renter demand via reviewed listings, search, filters, and owner messaging",
+      "status": "explicit",
+      "evidence_span": "taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "id": "P3",
+      "text": "Average daily prices are about half of shop rentals with a wide range set by owners",
+      "status": "explicit",
+      "evidence_span": "Our average price on SpinLister right now is about $20 a day, about half of existing bike rental shop prices"
+    },
+    {
+      "id": "P4",
+      "text": "Rentals are insured (bikes up to $5,000 plus institutional cover) while owners deliver personalized local customer service",
+      "status": "explicit",
+      "evidence_span": "We insure bicycles up to $5,000"
+    },
+    {
+      "id": "P5",
+      "text": "Location-independent, infrastructure-light model scales beyond launch cities, with organic listings across many cities/countries and a forthcoming mobile app/national launch",
+      "status": "explicit",
+      "evidence_span": "location-independent way that is extremely infrastructure-light"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "idle bikes vs costly rentals",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "peer-to-peer bike rental marketplace",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "infrastructure-light geographic scale",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Travelers and locals rent diverse bikes conveniently and affordably while owners monetize idle bikes",
+      "status": "explicit",
+      "evidence_span": "allow individual bike owners to rent out their bikes to travelers and locals looking to explore"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Rentals become social connections with local tips beyond the bike itself",
+      "evidence_span": "allow people to connect over a bicycle, this common interest"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the largest bike rental system in the world already exists. We just need to connect it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "facilitating a conversation. We're letting real people talk about renting out a bicycle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bikes been listed in over 275 cities in over 40 countries"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Shop $40–60 and bike-share limits folded into demand-side of the idle-bike problem (§4.1.6). Listing/review/search/profile/rent/dashboard cascade folded into marketplace product (§4.1.7). Price competitiveness kept with marketplace as commercial facet in same domain. Traction cut short by wrap-up—truncated true. Audience-choice mention excluded."
+}

@@ -1,0 +1,97 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Standard reference tools synthesize literature but do not incorporate practicing doctors' ranked clinical experience",
+      "status": "explicit",
+      "evidence_span": "I have no way of feeding information back into the system and telling other doctors what I think"
+    },
+    {
+      "id": "P2",
+      "text": "SharePractice ranks treatments by doctor votes and surfaces dosing plus peer rationale so clinicians can decide and contribute quickly",
+      "status": "explicit",
+      "evidence_span": "these treatments are actually ranked by doctors upvoting and downvoting these treatments"
+    },
+    {
+      "id": "P3",
+      "text": "Sharing a clinical question to doctor contacts both solicits structured answers and recruits new users",
+      "status": "explicit",
+      "evidence_span": "SharePractice just grabbed a new user. Viral model is baked right in"
+    },
+    {
+      "id": "P4",
+      "text": "A proprietary ontology merges diagnosis and treatment databases so varied medical terminology maps correctly",
+      "status": "explicit",
+      "evidence_span": "proprietary medical ontology that took multiple databases, treatment databases, diagnosis databases, put them all together and actually made sense of this information"
+    },
+    {
+      "id": "P5",
+      "text": "The system collects unique data on why doctors choose one treatment over alternatives",
+      "status": "explicit",
+      "evidence_span": "Every Walgreens knows that, you know, Dr. So-and-so prescribed Lipitor to treat high cholesterol, but only SharePractice knows why"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Closed-loop clinical experience sharing",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Prescribing-rationale analytics data",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients receive better treatment because doctors tap collective verified clinical experience",
+      "status": "explicit",
+      "evidence_span": "you're going to get the best treatment, because effectively, share practice puts a million doctors in every doctor's pocket"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "In order to account for all the variance in medical terminology, SharePractice built a proprietary medical ontology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get the benefit of all of that experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This information doesn't exist anywhere else"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Problem and product merged into one learnable experience-sharing domain; analytics 'why' data kept as singleton D2 with its own claimed path to value. Global-cure speculation left uncoded as vision. $10B analytics market size treated as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-933",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

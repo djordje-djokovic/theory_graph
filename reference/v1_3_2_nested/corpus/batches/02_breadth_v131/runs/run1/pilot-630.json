@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:37:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial job sites face unpredictable water, mold, and fire damage without active environmental monitoring",
+      "status": "explicit",
+      "evidence_span": "there's currently no active fire monitoring solution for most job sites today"
+    },
+    {
+      "id": "P2",
+      "text": "A job-site smart sensor network delivers active warning, logistics-usable environmental data, and a lasting build record",
+      "status": "explicit",
+      "evidence_span": "First, we do active warning and damage mitigation for those I mentioned before. Two, the data is actually usable for logistics"
+    },
+    {
+      "id": "P3",
+      "text": "Sensors mount easily on ferrous surfaces, straps, pipes, or 2x4s in dynamic construction environments",
+      "status": "explicit",
+      "evidence_span": "It makes it incredibly easy to move in a very dynamic construction environment"
+    },
+    {
+      "id": "P4",
+      "text": "Deployment follows floor-plan placement with alerts on a dashboard and direct smartphone push notifications",
+      "status": "explicit",
+      "evidence_span": "we push notifications directly to the smartphone"
+    },
+    {
+      "id": "P5",
+      "text": "Priced per square foot with a one-time install fee and monthly fee bundling hardware, firmware, software, and analytics",
+      "status": "explicit",
+      "evidence_span": "$0.03 per square foot one-time installation fee, and $0.02 per square foot per month. Everything included"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Job-site environmental damage risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor network monitoring product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-square-foot HaaS/SaaS pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time environmental monitoring that prevents and mitigates construction-site damage",
+      "status": "explicit",
+      "evidence_span": "first real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Buildings carry a lasting quality record of how they were built",
+      "evidence_span": "Now your building has a Carfax"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "costs millions of dollars"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "active warning and damage mitigation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bundling hardware, firmware, software, and data analytics into one easy package"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.3.1: enumerated First/Two/Three uses of the same sensor network coded as one monitoring-value premise. Install fee and monthly fee kept as one commercial premise for the same offer."
+}

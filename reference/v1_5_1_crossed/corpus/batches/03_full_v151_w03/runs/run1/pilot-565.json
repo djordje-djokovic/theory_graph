@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-565",
+    "coder_session_id": "session_02",
+    "session_case_index": 10,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Automated live trading connects Collective2 strategy marketplace credentials to brokers without the user writing code",
+      "status": "explicit",
+      "evidence_span": "Neotic runs on Collective 2, which is a marketplace for trading strategies and is connected to five other brokers"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary algorithms daily analyze U.S. stocks, cluster them, and classify winners versus losers with adaptive ML",
+      "status": "explicit",
+      "evidence_span": "The proprietary Neotech algorithms analyze daily all U.S. stocks' financial markets data, extract features and labels, group stocks into clusters, and classify them as winners or losers accordingly"
+    },
+    {
+      "id": "P3",
+      "text": "Unlike coder-centric competitors, traders do not need to write code to use the product",
+      "status": "explicit",
+      "evidence_span": "they require traders to know how to write codes, while Neotic doesn't"
+    },
+    {
+      "id": "P4",
+      "text": "Customers are acquired via forums, email, AdWords, articles, and broker referrals",
+      "status": "explicit",
+      "evidence_span": "We acquire our customers through specialized forums, email campaigns, Google AdWords, publishing articles, and referral by our connected brokers"
+    },
+    {
+      "id": "P5",
+      "text": "Free trial then charges roughly $400 per user per year based on backtests, forecasts, and automated traders",
+      "status": "explicit",
+      "evidence_span": "We charge per number of backtest, forecast, and automated traders average $400 per user per year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "No-code automated brokerage trading",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Adaptive stock winner-loser ML",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Forum and broker customer acquisition",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Per-usage annual pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make good returns on equity investments via automated AI trading instead of idle cash",
+      "status": "explicit",
+      "evidence_span": "start making some good returns on your money instead of keeping it under your belt"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start automated orders"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerated machine learning forecasting model, which is adaptive and everyday learning"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We acquire our customers through specialized forums"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Every user is entitled to a free trial"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Transcript opens mid-demo. Feature/label/cluster/classify cascade folded into one ML premise. Early-adopter counts and board credentials excluded. Channel list treated as one GTM premise (single acquisition mechanism bundle)."
+}

@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Getting usable data requires long privacy engineering, legal, and security processes that slow innovation",
+      "status": "explicit",
+      "evidence_span": "This slows down innovation a lot"
+    },
+    {
+      "id": "P2",
+      "text": "Synthetic data generation preserves statistical properties while anonymizing private data",
+      "status": "explicit",
+      "evidence_span": "100% anonymized synthetic data that has the same properties as the real data"
+    },
+    {
+      "id": "P3",
+      "text": "Encrypted confidential computing means the vendor cannot see customer data during jobs",
+      "status": "explicit",
+      "evidence_span": "companies don't have to trust us with data because we can't even see it"
+    },
+    {
+      "id": "P4",
+      "text": "Tokenized data assets remain company-owned with tamper-proof locks",
+      "status": "explicit",
+      "evidence_span": "That token belongs to the company. So only the company can read or download their customer data"
+    },
+    {
+      "id": "P5",
+      "text": "Cross-organization encrypted collaboration yields joint synthetic datasets",
+      "status": "explicit",
+      "evidence_span": "the encrypted data from both banks will go into the confidential computing environment, combined together, and a synthetic data will be produced"
+    },
+    {
+      "id": "P6",
+      "text": "Deployable via licensing/support on-prem or cloud through APIs or a web UI",
+      "status": "explicit",
+      "evidence_span": "we support on-premise, private, and public cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Access friction under privacy rules",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic data stack",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Multi-party collaboration",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Licensing and deployment",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Innovate on private data quickly without compromising privacy or ownership",
+      "status": "explicit",
+      "evidence_span": "innovate on data while protecting their customers' privacy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It takes a long time to get access to data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "innovate on data in days and not months"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "safely collaborate with others"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "licensing and support business model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Collaboration split as its own module this run because the bank demo presents it as a distinct path to value. Future market-ownership claim not coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-232",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

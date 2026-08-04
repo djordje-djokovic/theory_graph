@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Legacy challenge questions destroy conversions and fail to stop fraud",
+      "status": "explicit",
+      "evidence_span": "every one of those steps is destroying conversions. It's just not working"
+    },
+    {
+      "id": "P2",
+      "text": "TrustEv verifies identity via social fingerprinting with behavioral and transactional data into an authenticity score",
+      "status": "explicit",
+      "evidence_span": "Our platform uses social data as a primary. We add in behavioral data, transactional data. We give the merchant a score, and that score is all about authenticity"
+    },
+    {
+      "id": "P3",
+      "text": "Collects device, behavior, and order data then augments with social network profile and post analysis",
+      "status": "explicit",
+      "evidence_span": "it collects data about the customer's device, their behavior, and the order they're doing"
+    },
+    {
+      "id": "P4",
+      "text": "Validates profiles are real people and maps them to real-world locations via check-ins, tags, photos, videos",
+      "status": "explicit",
+      "evidence_span": "that allows us to validate that the profile is a real person. We then also identify who the person actually is"
+    },
+    {
+      "id": "P5",
+      "text": "Cross-checks social graph against IP, shipping/billing addresses, device fingerprint, behavior, and order history for 0-100 score",
+      "status": "explicit",
+      "evidence_span": "We compare all the socially graphed information back to the IP address, delivery address, the billing address, the device fingerprint, the behavior of the customer, and the order history"
+    },
+    {
+      "id": "P6",
+      "text": "Pre-populates checkout from verified data for smoother secure purchases",
+      "status": "explicit",
+      "evidence_span": "pre-populate the online checkout form with the customer's data, so their name, their address, and their email, making the online transaction smoother, easier, and a more secure experience"
+    },
+    {
+      "id": "P7",
+      "text": "Per-transaction pay-as-you-go pricing without contracts or monthly minimums",
+      "status": "explicit",
+      "evidence_span": "it's per transaction. You just pay for what you use. There's no annual contracts. There's no monthly minions. It's simple. It's really like Stripe for fraud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social identity scoring engine",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Checkout prefill",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Stripe-like fraud pricing",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eliminate online fraud while preserving conversions by knowing customer authenticity",
+      "status": "explicit",
+      "evidence_span": "We're trusted, and we're here to eliminate fraud"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "score of zero to 100, which indicates whether or not the customer is actually who they say they are"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smoother, easier, and a more secure experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "like Stripe for fraud"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split real-person validation from cross-check scoring as adjacent but speaker presents both as one pipeline; soft over-split risk noted. Soft count at 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-939",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:47:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

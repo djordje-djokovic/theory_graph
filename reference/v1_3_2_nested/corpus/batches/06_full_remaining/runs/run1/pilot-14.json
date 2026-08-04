@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Downtime and broken manufacturing systems cost industrial players massively as nearshoring shifts supply chains",
+      "status": "explicit",
+      "evidence_span": "downtime is still costing industrial players over 11% of their yearly turnover"
+    },
+    {
+      "id": "P2",
+      "text": "A CapEx-lite gateway connects to most industrial machinery protocols and pulls process and machine-health data",
+      "status": "explicit",
+      "evidence_span": "connect to over 90% of industrial machinery categories, sensors, and PLCs"
+    },
+    {
+      "id": "P3",
+      "text": "ML models detect irregular activity and recommend probable cause and course of action, not mere monitoring",
+      "status": "explicit",
+      "evidence_span": "We tell factories what's the probable cause and what's the recommended course of action"
+    },
+    {
+      "id": "P4",
+      "text": "Every customer action improves shared algorithms, creating network effects across the platform",
+      "status": "explicit",
+      "evidence_span": "every single action improves our model's algorithms, creating network effects"
+    },
+    {
+      "id": "P5",
+      "text": "A generative-BI chatbot trained on plant productivity data answers operational questions in seconds",
+      "status": "explicit",
+      "evidence_span": "this assistant is trained with all of your productivity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manufacturing downtime urgency",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Gateway and intelligent recommendations",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cross-customer learning effects",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn legacy operations into intelligent factories that are more efficient and responsive",
+      "status": "explicit",
+      "evidence_span": "turn legacy operations into intelligent factories"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stabilize supply chains with more sustainable manufacturing",
+      "evidence_span": "stabilizing supply chains in a world of more efficient manufacturing"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Manufacturing systems are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making manufacturing more efficient"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ultimately benefit every single customer on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Traction metrics (revenue, $400M monitored) excluded as achievements (§4.2). Efficiency-module feature list folded into P3. Nearshoring/Monterrey demand treated as part of urgency P1.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-14",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:50:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bugs, missing features, and hard-to-get support characterize open and free software",
+      "status": "explicit",
+      "evidence_span": "bugs and missing features. And especially when it's open or free software, support can be hard to get"
+    },
+    {
+      "id": "P2",
+      "text": "Users and developers differ in knowledge and priorities, blocking support",
+      "status": "explicit",
+      "evidence_span": "mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "id": "P3",
+      "text": "A service lets users pay or get paid for support directly from an issue page",
+      "status": "explicit",
+      "evidence_span": "offering a service which allows you to pay or get paid directly from an issue page"
+    },
+    {
+      "id": "P4",
+      "text": "Major issue trackers get an integrated incentive panel with crowdfunding and developer ask flows",
+      "status": "explicit",
+      "evidence_span": "we offer integrations for all the major issue systems, like Mantis, Jira, Track, and Bugzilla"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is a 6% take plus fee-share that turns hosters' issue systems into profit centers",
+      "status": "explicit",
+      "evidence_span": "we take a 6% fee for each successful incentive. And we offer a fee to all the issue system hosters running our integration, which turns an issue system into a profit center"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "User-developer support gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Issue-system incentive integrations",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Take rate and hoster fees",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get the software support or improvements you need via paid incentives",
+      "status": "explicit",
+      "evidence_span": "get the support you really need or where it's easy to get something improved"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Monetization layer for the open source market",
+      "evidence_span": "adding a monetization element to the entire open source market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "support can be hard to get"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "place an incentive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "successful incentive"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Panel UI details and crowdfunding clicks folded into the integration premise. Intention to put the panel on every bug page treated as vision (§4.1(4)), not coded. Singleton fee domain kept as independently revisable commercial module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-917",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:26:40+02:00"
+  }
+}

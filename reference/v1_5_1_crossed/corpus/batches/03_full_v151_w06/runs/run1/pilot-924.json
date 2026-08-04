@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-924",
+    "coder_session_id": "session_06",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Priorities come from email, mind, and meetings and must be captured in one place before good decisions",
+      "status": "explicit",
+      "evidence_span": "your inbox has priorities, but so do they come out of your mind, and they come out of meetings. You have to get them all in one place"
+    },
+    {
+      "id": "P2",
+      "text": "The Handle habit requires capture, triage, plan, and do because email clients or task managers alone cannot solve priority work",
+      "status": "explicit",
+      "evidence_span": "email clients have not been able to solve this problem alone, and task managers have not been able to solve this problem alone"
+    },
+    {
+      "id": "P3",
+      "text": "Mobile capture and a keyboard handlebar enable fast intent-to-action triage of email and tasks",
+      "status": "explicit",
+      "evidence_span": "we've created a unique element we call the handlebar"
+    },
+    {
+      "id": "P4",
+      "text": "A priority list ordered by importance, with snooze and calendar blocking, structures the plan step",
+      "status": "explicit",
+      "evidence_span": "Handle's priority list is ordered by importance with must dos at the top"
+    },
+    {
+      "id": "P5",
+      "text": "Opening a task shows instructions, comments, links, and the related email thread so work proceeds without context switching",
+      "status": "explicit",
+      "evidence_span": "I can jump in and be productive immediately. No context switching"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "capture-triage-plan-do habit",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "handlebar triage and priority planning product",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People finish their must-do priorities that day and protect personal life from email chaos",
+      "status": "explicit",
+      "evidence_span": "getting all the must do things you have to do done that day"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we started from scratch. And we built the whole thing"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Actually do the work that you think is most important until it is complete"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Another day handled"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Archive/reply/task/unsubscribe/reader commands folded into P3 as cascade of the handlebar intent-action mechanism. Capture/triage/plan/do kept as the stated indivisible habit framing in P2 with P1 stating the capture precondition. Dinner/family and fitness outcomes recorded in primary value phrasing from speaker's disruption claims."
+}

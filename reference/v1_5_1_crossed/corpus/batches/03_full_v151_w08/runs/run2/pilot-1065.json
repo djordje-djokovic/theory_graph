@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1065",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Community organizers and members currently juggle multiple separate platforms for events, email, member management, and engagement",
+      "status": "explicit",
+      "evidence_span": "I've had to use five platforms to stay organized"
+    },
+    {
+      "id": "P2",
+      "text": "Cohort is a single umbrella for communication, event, member, and transaction management with group pages and discussion-board-integrated email lists",
+      "status": "explicit",
+      "evidence_span": "Communication management, event management, member management, transaction management, under one umbrella"
+    },
+    {
+      "id": "P3",
+      "text": "Member directory, profiles, and custom application forms enable targeted communication and events to membership subsets",
+      "status": "explicit",
+      "evidence_span": "We also have a complete member management system. It's a full membership directory"
+    },
+    {
+      "id": "P4",
+      "text": "Advanced ticketing and dues tiers with transaction handling so organizers never touch cash",
+      "status": "explicit",
+      "evidence_span": "we also have advanced ticketing"
+    },
+    {
+      "id": "P5",
+      "text": "Hierarchical subgroups/chapters get full toolsets with autonomous local leadership plus global communications/events",
+      "status": "explicit",
+      "evidence_span": "Each group can have as many subgroups as they want and as many tiers of subgroups as they need"
+    },
+    {
+      "id": "P6",
+      "text": "Social group interaction, curated interest channels, discovery, and public/private/hidden privacy toggles for groups, events, and members",
+      "status": "explicit",
+      "evidence_span": "We've also created something new called channels"
+    },
+    {
+      "id": "P7",
+      "text": "Most groups free; revenue from channel subscriptions, premium groups, and transaction service fees",
+      "status": "explicit",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-platform organizer pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "unified community platform",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "free plus subscription fees",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One solution organizers need to engage membership and connect communities",
+      "status": "explicit",
+      "evidence_span": "it is the single solution that an organizer needs to engage their membership"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unify entrepreneurial ecosystems and export entrepreneurship globally via university communities",
+      "evidence_span": "unify the entire entrepreneurial ecosystem and export entrepreneurship globally"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "thousands of people have had to sign up for five different systems in order to engage our group"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Cohort is the catch-all for all things community"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for the vast majority of groups, it's entirely free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Five-platform organizer/member friction folded as one pain (§4.1.6). Core umbrella tools, member directory/forms, ticketing/dues, hierarchy, and social/channels/privacy split as distinct capability modules under enumeration rule 2; channels+privacy kept together as discovery/control surface. Fundraising ask and waitlist traction excluded (§4.2). Movement vision as secondary_value not premise (§4.1.4)."
+}

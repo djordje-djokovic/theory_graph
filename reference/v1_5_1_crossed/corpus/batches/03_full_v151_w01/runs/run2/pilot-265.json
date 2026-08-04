@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-265",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:16:55Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Women lack everyday guidance and data on fluctuating hormone levels outside fertility contexts; multi-day blood testing is inconvenient and costly",
+      "status": "explicit",
+      "evidence_span": "Today's data on cyclical hormone levels unrelated to fertility and pregnancy isn't just thin on the ground, it barely exists"
+    },
+    {
+      "id": "P2",
+      "text": "Patent-pending non-invasive urine tests for three key hormones give quantitative results at home in about 15 minutes without a lab, cheaper than blood testing",
+      "status": "explicit",
+      "evidence_span": "decreased the time it takes for you to get your test results from five days to 15 minutes"
+    },
+    {
+      "id": "P3",
+      "text": "Mobile app algorithm schedules testing days per cycle, analyzes scanned tests, shows hormone patterns, and links symptoms to tips and treatments",
+      "status": "explicit",
+      "evidence_span": "unique hormonal algorithm indicates the three testing days per cycle alongside which hormone to test"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "everyday hormone data gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "at-home urine hormone tests",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "cycle algorithm and insights app",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Women understand their individual hormone patterns from home and can act on symptoms and life planning",
+      "status": "explicit",
+      "evidence_span": "empowers women to understand their hormones from the comfort of our home"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Build the hormonal baseline medicine will work from and narrow the gender data gap",
+      "evidence_span": "creating the hormonal baseline that medicine will be working off of"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Who's there to tell us if a change is expected, normal, or abnormal? Today, no one"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely removed the need for a lab"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand how symptoms connect to their hormone levels"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Menopause/fertility detection framed as outcomes of regular testing folded into P2/P3 rather than separate premises. Blue-ocean first-mover market talk treated as framing. Founder story used as need illustration inside P1, not bio premise. Anti-template: need / assay / app insights separately revisable."
+}

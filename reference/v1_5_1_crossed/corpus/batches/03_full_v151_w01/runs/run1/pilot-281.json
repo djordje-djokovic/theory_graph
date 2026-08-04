@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-281",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lab-centric milk testing is slow, labor-intensive, error-prone, and typically only monthly, so farmers lack real-time herd health information",
+      "status": "explicit",
+      "evidence_span": "this lab-centric testing is time-consuming, labor-intensive, and often prone to human errors. So lack of real-time information is causing a big problem for industry. Today, dairy farmers only offer testing once a month"
+    },
+    {
+      "id": "P2",
+      "text": "Mastitis is hard to detect early, spreads easily, and is the most common expensive dairy disease, requiring frequent early testing",
+      "status": "explicit",
+      "evidence_span": "Mastitis is hard to detect, unlike COVID, and spreads easily among the herd. To stop it, you need to test often and test early"
+    },
+    {
+      "id": "P3",
+      "text": "Optical milk analyzer with embedded ML captures reagent-free optical data and returns quality metrics (butterfat, protein, SCC) in ~10 seconds",
+      "status": "explicit",
+      "evidence_span": "optical milk analyzer with embedded machine learning. Second, a portal with customized data visual for milk quality and health management. Finally, a remote veterinary support from our animal care partners"
+    },
+    {
+      "id": "P4",
+      "text": "Portal/dashboard provides herd and cow-level continuous milk quality and health monitoring",
+      "status": "explicit",
+      "evidence_span": "Our dashboard provide. milk quality information on both herd level and individual cow level. With our daily, weekly, and monthly data, farmer now have reliable and continuous data to monitor the health of their herd"
+    },
+    {
+      "id": "P5",
+      "text": "Remote veterinary support from animal-care partners supplies best practices and recommendations",
+      "status": "explicit",
+      "evidence_span": "a remote veterinary support from our animal care partners for best practices and recommendations"
+    },
+    {
+      "id": "P6",
+      "text": "Solution scales across producers, co-ops, and processors as reagent-free, low-maintenance, no-special-training testing",
+      "status": "explicit",
+      "evidence_span": "our solution can be easily scale up entire supply chain from dairy producers, to dairy co-op and dairy processors. Enormously reduce the length and the difficulty of testing process. Compared to traditional lab-based testing, our technology is reagent-free, low-maintenance, and requires no special training"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Delayed milk testing and mastitis risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Field optical analyzer, portal, and vet support",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Supply-chain scalable testing model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time on-farm milk quality and herd-health insight that prevents losses and improves profitability",
+      "status": "explicit",
+      "evidence_span": "By providing automatic testing and improving animal health and profitability, we can really reshape the dairy industry"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identifies mass status before it spreads among herd and cause major economic losses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings the lab testing technology to the field"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Enormously reduce the length and the difficulty of testing process"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three product modules listed by speaker treated as separate capabilities (analyzer, portal, vet support) per enumeration rule 2. Future feed/pathogen/antibiotic applications folded as roadmap of same optical sensing core, not extra premises. ASR 'mass status' left in evidence_span verbatim."
+}

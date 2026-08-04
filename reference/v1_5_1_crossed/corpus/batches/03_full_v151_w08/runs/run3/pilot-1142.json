@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1142",
+    "coder_session_id": "session_02",
+    "session_case_index": 18,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Venmo makes it easy and fun to pay and charge friends via linked credit card and bank account on phone",
+      "status": "explicit",
+      "evidence_span": "makes it really easy and really fun to pay and charge your friends"
+    },
+    {
+      "id": "P2",
+      "text": "Giphy lets people hide real money at real-world locations for friends to find by checking in on Foursquare",
+      "status": "explicit",
+      "evidence_span": "lets people hide real money at real-world locations for their friends to find by checking in through Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "Recipients need only be Foursquare friends; Venmo handles payment without requiring the Giphy app",
+      "status": "explicit",
+      "evidence_span": "your friends don't need to have the application to receive a gift from you"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-recipient gifts become a first-to-check-in competition with optional clues and Venmo notes",
+      "status": "explicit",
+      "evidence_span": "the first one to check in will get the gift"
+    },
+    {
+      "id": "P5",
+      "text": "Businesses and brands can use location gifts for loyalty, hospitality, and friend-of-customer acquisition",
+      "status": "explicit",
+      "evidence_span": "imagine how businesses and major brands can benefit from Giphy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Venmo social payments rails",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "location money gift game",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "business brand loyalty use",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun real-world money gifts that make friends feel special via check-ins",
+      "status": "explicit",
+      "evidence_span": "It really does feel nice to make someone feel special"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Venmo is going to handle the rest"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hide real money at real-world locations for their friends to find"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "great way for businesses to show their customers, and more importantly, their customers' friends"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cheer-up/dinner/soup use examples folded as applications of gift mechanism (§4.1.7). Launch scavenger $2500 promo excluded (§4.2). Future Facebook Places support folded into location-check-in product. Three domains—anti-template: payments rail, gift game, and B2B loyalty separately revisable."
+}

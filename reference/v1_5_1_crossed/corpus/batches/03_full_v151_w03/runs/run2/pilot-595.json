@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-595",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ultrasonic audio data transmission can send IDs, passwords, or links locally between devices even in airplane mode across audio-to-mobile, mobile-to-device, and embedded in-car or home use cases",
+      "status": "explicit",
+      "evidence_span": "This is an example of ultrasonic data transmission"
+    },
+    {
+      "id": "P2",
+      "text": "Ticketing companies use the technology as a mobile authentication tool for device identity and moment-of-access authentication with near-zero fraud and sub-second entry",
+      "status": "explicit",
+      "evidence_span": "Ticketing companies have chosen us as their mobile authentication tool"
+    },
+    {
+      "id": "P3",
+      "text": "The offering is sold as data-over-audio as a service per device per year and outperforms narrower competitors such as Android-only alternatives",
+      "status": "explicit",
+      "evidence_span": "We sell data over audio as a service per device per year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ultrasonic data transmission",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "venue ticketing authentication",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "per-device audio SaaS",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Devices across venues, cars, and homes identify and connect via a simple flexible audio protocol",
+      "status": "explicit",
+      "evidence_span": "focusing on identifying and connecting devices better"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no other protocol as simple, as flexible, or as powerful as Listener"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "entry times in less than a second"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data over audio as a service per device per year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Opens/ends mid-pitch (truncated). Four transmission modes folded as feature cascade of one ultrasonic mechanism. Ticketing kept as distinct vertical authentication module. Device-count and $50B market claims excluded as traction/vision sizing. Internet-of-sound framing not coded as premise. All singletons retained as separately revisable tech, vertical, and monetization modules."
+}

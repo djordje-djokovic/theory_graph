@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile device users need a better power solution than hunting for outlets",
+      "status": "explicit",
+      "evidence_span": "scurrying around trying to find an outlet just to get a little bit more juice in your phone"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary harvesting antenna in a phone case captures wasted RF from the phone and converts it into electricity returned to the battery, extending life passively without plugging in",
+      "status": "explicit",
+      "evidence_span": "Our case is embedded with a harvesting antenna that is proprietary that captures that wasted RF energy and then takes it through a conversion process to convert it into electricity and then dumps it back into the phone"
+    },
+    {
+      "id": "P3",
+      "text": "A smartphone case is the right first product because many US smartphone users already buy power accessories",
+      "status": "explicit",
+      "evidence_span": "out of the 220 million smartphone users in the United States, over 30% have purchased some sort of product to help them get a little more power in their phone"
+    },
+    {
+      "id": "P4",
+      "text": "Partnership with Ohio State as a leading RF research institution enables pioneering and bringing the technology to market quickly",
+      "status": "explicit",
+      "evidence_span": "We partnered with Ohio State because they are the leading RF research institution, academic institution, in the United States"
+    },
+    {
+      "id": "P5",
+      "text": "A follow-on wireless charger will provide near-field and far-field powering where consumers are",
+      "status": "explicit",
+      "evidence_span": "Our next product that we're going to bring to the market is a wireless charger that will provide near field and far field powering solutions"
+    },
+    {
+      "id": "P6",
+      "text": "Low-power IoT sensors can live entirely by harvesting ambient RF energy without battery changes",
+      "status": "explicit",
+      "evidence_span": "low power sensors that can live 100% off of our technology"
+    },
+    {
+      "id": "P7",
+      "text": "The case launches to consumers through Kickstarter",
+      "status": "explicit",
+      "evidence_span": "in one month, we are launching this product. And we will be doing that on Kickstarter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "RF harvesting case technology",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile power need and case market",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "wireless power product roadmap",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Kickstarter launch",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Extra battery power for mobile devices without plugging in, enabling everyday mobility",
+      "status": "explicit",
+      "evidence_span": "extend your battery life by 30% simply using wasted energy transmitted from your phone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Ubiquitous wireless power for connected / IoT devices",
+      "evidence_span": "truly make wireless power ubiquitous in our world"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extend your battery life by 30% simply using wasted energy transmitted from your phone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you as a consumer deserve a better solution for power for your mobile devices"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100% mobility"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are launching this product. And we will be doing that on Kickstarter"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D4 retained as independently revisable GTM channel. Vision of ubiquitous wireless power coded as secondary_value, not a premise. 30% extension and passive/no-plug details folded into P2 (feature cascade / quantitative detail). Inventor bios excluded."
+}

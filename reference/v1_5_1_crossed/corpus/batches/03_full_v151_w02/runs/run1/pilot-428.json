@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-428",
+    "coder_session_id": "session_01",
+    "session_case_index": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Email conversations can be turned into Kanban task cards and managed visually without leaving the inbox",
+      "status": "explicit",
+      "evidence_span": "take that email, turn it into a task card, and add it to his Trello-like Kanban board"
+    },
+    {
+      "id": "P2",
+      "text": "A platform-agnostic model will expand beyond the current Gmail-centered workspace",
+      "status": "explicit",
+      "evidence_span": "Our platform agnostic model will further expand our potential"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "In-inbox email Kanban",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Platform-agnostic expansion",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify teamwork by enabling stakeholder communication, collaboration, and getting work done",
+      "status": "explicit",
+      "evidence_span": "we need to communicate with our stakeholders, we need to collaborate with our team, and we need to get work done"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gmail's boards give you a visual representation of your email conversations and all of the projects and tasks that follow"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our platform agnostic model will further expand our potential"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-sentence (truncated=true). Priority dates/drag-drop folded into P1 feature cascade. User counts and TAM figures treated as traction/market framing and excluded. YC and team passion excluded."
+}

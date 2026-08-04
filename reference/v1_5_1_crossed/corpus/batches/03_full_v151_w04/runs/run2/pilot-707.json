@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-707",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outbreak response lacks rapid accessible diagnostics: dipsticks are insensitive for early detection and PCR is costly, non-portable, and slow",
+      "status": "explicit",
+      "evidence_span": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread"
+    },
+    {
+      "id": "P2",
+      "text": "FastChip is a vacuum-powered, zero-external-equipment microfluidic chip that isothermally amplifies DNA/RNA and yields smartphone-readable results in about an hour",
+      "status": "explicit",
+      "evidence_span": "a field-ready, affordable, sensitive, and trackable solution"
+    },
+    {
+      "id": "P3",
+      "text": "A companion app tracks GPS, patient info, and results as a disease-tracking network for health ministries",
+      "status": "explicit",
+      "evidence_span": "an app that tracks GPS data, patient info, and test results"
+    },
+    {
+      "id": "P4",
+      "text": "Launch path starts as a research toolkit, then sample-prep integration and FDA clearance for a human diagnostic kit",
+      "status": "explicit",
+      "evidence_span": "Initially, we plan to launch this as a research toolkit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow outbreak diagnostic gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "FastChip molecular test and tracking",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Research toolkit then FDA diagnostic path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fighting epidemics with rapid, decentralized molecular diagnostics",
+      "status": "explicit",
+      "evidence_span": "fight epidemics with rapid molecular diagnostics"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Patients are waiting months to get their results back"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Results come out within one hour"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "market this as a human diagnostic kit"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vacuum pouch, heat pack, optical box, quantitative microwells, and multi-disease future wells folded as cascade/performance of FastChip (§4.1.7–8). Gates/DARPA/PhD credentials excluded. Singleton D1/D3 retained as problem vs regulatory GTM modules. Anti-template: diagnostic gap, chip+tracking product, and launch/FDA path are separately revisable."
+}

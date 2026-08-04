@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1002",
+    "coder_session_id": "session_03",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "ML-tailored virtual marketing manager recommends ideas, templates, and multi-channel campaigns for a business's location and preferences",
+      "status": "explicit",
+      "evidence_span": "My feeds are based on data mining and machine learning algorithms and are tailored to my business, location, and preferences"
+    },
+    {
+      "id": "P2",
+      "text": "Alliances let businesses co-run campaigns to reach each other's customers",
+      "status": "explicit",
+      "evidence_span": "Alliances allow businesses to run marketing campaigns together, reaching a huge number of new customers"
+    },
+    {
+      "id": "P3",
+      "text": "Marketing calendar with analytics/ROI plus automated tasks (signs, Google Places SEO, holiday outreach, social) upgrade basic marketing",
+      "status": "explicit",
+      "evidence_span": "all of my campaigns are put into a marketing calendar, which gives me the big picture view, as well as analytics and ROI information"
+    },
+    {
+      "id": "P4",
+      "text": "Viral freemium distribution via Alliance invites with contextual sponsored suggestions",
+      "status": "explicit",
+      "evidence_span": "Our distribution model is highly viral, thanks to our Alliance feature that enables businesses to invite other businesses to our system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ML marketing recommendations and channels",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "alliance co-campaigns",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "viral freemium with sponsored suggestions",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local businesses run sophisticated marketing that lifts purchase, clients, and revenue while focusing on their craft",
+      "status": "explicit",
+      "evidence_span": "It handles all of your marketing needs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they run very sophisticated marketing mix and many, many tasks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helping each other reach more customers, driving more traffic to our businesses"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our revenue model is freemium, with contextual sponsored suggestions built in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "No separate problem enumeration—product asserted as virtual marketing manager. ML feed, templates, multi-channel send, calendar/analytics, location offers, SEO, holiday automation folded as one marketing-ops cascade (§4.1.7). Alliances split as distinct growth mechanism. Freemium+sponsored suggestions as commercial model. Beta KPI claims as traction framing. Three domains."
+}

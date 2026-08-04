@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Disjointed paper processes and human measurement errors drive massive material waste on job sites",
+      "status": "explicit",
+      "evidence_span": "simple human errors result in almost 20% of materials on a given job site being completely wasted"
+    },
+    {
+      "id": "P2",
+      "text": "Platform must be usable by every worker, not only supervisors or project managers",
+      "status": "explicit",
+      "evidence_span": "every worker on the job site can use the equipment"
+    },
+    {
+      "id": "P3",
+      "text": "Rock app connects measurement capture to calculators and common plan-to-build actions",
+      "status": "explicit",
+      "evidence_span": "measurement capture, automatic putting into calculators, utilities, and other common actions"
+    },
+    {
+      "id": "P4",
+      "text": "Digital tape auto-syncs readings; saw-mounted caliper and QR labels remove guessing and Sharpie steps",
+      "status": "explicit",
+      "evidence_span": "takes any guessing out of what measurement I'm interpreting"
+    },
+    {
+      "id": "P5",
+      "text": "Recon uniquely spans day-to-day capture and execution versus incremental tools or narrow enterprise apps",
+      "status": "explicit",
+      "evidence_span": "Recon Tools is the only system that has the granularity needed"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wasteful measurement workflow",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Worker-wide connected tools",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Jobsite-complete system",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Streamline jobsite measurement and cut costly avoidable errors",
+      "status": "explicit",
+      "evidence_span": "streamline their measurement operations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stop treating overruns and delays as inevitable",
+      "evidence_span": "stop expecting errors, cost overruns, and timeline delays as inevitable"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over $100 billion wasted in construction each year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "streamline the process and takes out what I normally have to hang you off a ladder"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "execute day-to-day operations on the job site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Bio/MIT shop story excluded. Synonym goals (digital tape as common as drill) treated as aspiration not premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:09:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

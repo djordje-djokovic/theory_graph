@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-808",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small drones cannot safely fly close to urban and infrastructure obstacles and depend on one skilled operator per aircraft",
+      "status": "explicit",
+      "evidence_span": "They're very challenging to fly in that up-close airspace, close to obstacles that you see every day"
+    },
+    {
+      "id": "P2",
+      "text": "Guardian is a platform-agnostic sensor-software suite that automatically detects and avoids obstacles even against operator error or wind",
+      "status": "explicit",
+      "evidence_span": "a platform agnostic sensor software suite that automatically detects obstacles in the environment and avoids them"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market partners with infrastructure inspection firms such as Upwind for commercial drone use",
+      "status": "explicit",
+      "evidence_span": "We're going to market by partnering with major infrastructure inspection, commercial users that want to use drones today"
+    },
+    {
+      "id": "P4",
+      "text": "NSF-backed work extends avoidance to other aircraft in shared airspace for FAA-relevant problems",
+      "status": "explicit",
+      "evidence_span": "it will also avoid other aircraft in the airspace, solving one of the biggest problems the FAA has today"
+    },
+    {
+      "id": "P5",
+      "text": "An early-adopter program installs Guardian on customer platforms for 90 days with free upgrades and co-development",
+      "status": "explicit",
+      "evidence_span": "launching our early adopter program and inviting 20 customers to work with us for 90 days"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unsafe close-airspace drone flight",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Guardian obstacle avoidance",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "inspection partners and early adopters",
+      "premise_ids": ["P3", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies unlock a safer aerial workforce for inspection, farming, and delivery without expert pilots",
+      "status": "explicit",
+      "evidence_span": "finally enable companies to unlock their aerial workforce"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These drones do not have eyes and a brain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finally allow people that are not highly trained pilots to use drones"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inspecting over 10,000 wind turbines a year using our system"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "City/obstacle crashes and one-operator limits folded as one close-airspace problem (§4.1.6). Detect/avoid, adjustable safety distance, swappable sensors, and LiDAR demo folded as one Guardian mechanism (§4.1.7); aircraft-airspace avoidance as roadmap extension of same safety stack. Farming/delivery uses treated as applications (§4.1.2). Industry-size stats as framing. Team competitions as credentials. Anti-template: problem, product, and GTM separately revisable."
+}

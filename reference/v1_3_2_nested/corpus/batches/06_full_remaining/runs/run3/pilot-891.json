@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Affordable accessible quality robot hardware is required to accelerate innovation now that other robot subsystems are commoditized",
+      "status": "explicit",
+      "evidence_span": "if more people can afford and access quality hardware, then the pace of innovation can be massively increased"
+    },
+    {
+      "id": "P2",
+      "text": "ModBot sells reconfigurable servo/joint/link modules that integrate industrial joint components at roughly 1/10th cost",
+      "status": "explicit",
+      "evidence_span": "reduce the cost of an industrial equivalent by about one-tenth"
+    },
+    {
+      "id": "P3",
+      "text": "Companion phone app and cloud virtual builder enable wireless programming, simulation, sharing, and ordering",
+      "status": "explicit",
+      "evidence_span": "The VR builder has been designed to promote sharing, and when you're done, you can click the order button"
+    },
+    {
+      "id": "P4",
+      "text": "Target users range from everyday inventors and gamers to researchers and small businesses building local automation",
+      "status": "explicit",
+      "evidence_span": "into the hands of everyday inventors. For that, we need good quality and affordable robot parts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Affordable hardware access thesis",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Modular integrated joints",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Digital design-to-order tools",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Democratize robot building the way PCs democratized computing",
+      "status": "inferred",
+      "evidence_span": "we believe that ModBot can do the same for robots"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robots out of expensive research labs and into the hands of everyday inventors"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "advantages in cost"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ModBot puts your ideas into the cloud with our virtual robot builder"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "PC analogy used as value framing (inferred). Opening 'robot butler' vignette treated as framing not premise. Founder defense/auto anecdotes excluded as bio.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:53:00+02:00"
+  }
+}

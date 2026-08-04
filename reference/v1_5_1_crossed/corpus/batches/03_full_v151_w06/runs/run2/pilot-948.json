@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "coder_session_id": "session_02",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-performance and high-throughput computing users spend months deploying tools so hundreds or thousands of cloud instances work together",
+      "status": "explicit",
+      "evidence_span": "spend months deploying software and writing tools and technologies to make hundreds or thousands of cloud instances work together"
+    },
+    {
+      "id": "P2",
+      "text": "Developers configure one sandbox instance that the platform automatically distributes and replicates across any cloud at any scale in minutes",
+      "status": "explicit",
+      "evidence_span": "distribute virtually any high-performance or high-throughput application across any cloud at any scale in a matter of minutes, not months"
+    },
+    {
+      "id": "P3",
+      "text": "An API builder turns a configured command-line application into a custom API that receives a firehose of compute tasks",
+      "status": "explicit",
+      "evidence_span": "a tool that we've built to build a custom API specific to your command line application"
+    },
+    {
+      "id": "P4",
+      "text": "Large HPC/HTC and PaaS markets already spend heavily on cloud compute that the platform can capture",
+      "status": "explicit",
+      "evidence_span": "a billion is already being spent in the cloud today, again, to do high-performance computing"
+    },
+    {
+      "id": "P5",
+      "text": "Public beta starts on AWS with roadmap to other public clouds and then private enterprise cloud",
+      "status": "explicit",
+      "evidence_span": "Today we support Amazon Web Services and over the next few months will add support for other infrastructure"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "months to scale cloud HPC",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "sandbox distribute and API platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "HPC cloud market and cloud roadmap",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any compute application can plug in and consume cloud compute at scale without thinking about configuration or where compute comes from",
+      "status": "explicit",
+      "evidence_span": "plug in any compute application, consume as much compute power as you want, without having to think about configuration"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll spend months. Or you can do it the CPU usage way, and you'll be up and running in just a matter of minutes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically distribute it and replicate it across hundreds or thousands of compute nodes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's the market that's up for grabs with us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Biotech molecule example treated as illustration of the months-to-scale HPC pain, not a separate vertical premise. Sandbox→distribute→start cascade folded into distribute mechanism; API builder split as separately demoed module. Electricity/utility vision kept as value framing, not premise (§4.1.4). Anti-template: problem, platform mechanism, and market/roadmap separately revisable."
+}

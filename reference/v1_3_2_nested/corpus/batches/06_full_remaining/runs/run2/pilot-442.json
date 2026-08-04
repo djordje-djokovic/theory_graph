@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:32+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Chemical synthesis is the overlooked bottleneck because tens of thousands of molecules must be made and route design is manual",
+      "status": "explicit",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "id": "P2",
+      "text": "Users input a target structure; the system finds and ranks routes from commercial starting materials with lab evidence",
+      "status": "explicit",
+      "evidence_span": "The system tries to find a way to make it from commercially available molecules"
+    },
+    {
+      "id": "P3",
+      "text": "Deep-learning model proposes novel steps and assembles multi-step pathways in under a minute",
+      "status": "explicit",
+      "evidence_span": "A process that used to take hours and days can now be done in under a minute"
+    },
+    {
+      "id": "P4",
+      "text": "Initial focus is the drug-discovery ecosystem that wants modern AI for synthesis planning",
+      "status": "explicit",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem, which craves for the utilization of recent advances in artificial intelligence"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue via seat/data-point SaaS and enterprise on-prem tiers",
+      "status": "explicit",
+      "evidence_span": "We use SaaS paid by number of seats or data points"
+    },
+    {
+      "id": "P6",
+      "text": "Competitors lack AI-driven chemical-dataset planning and modern UX",
+      "status": "explicit",
+      "evidence_span": "Software of our competitors does not utilize AI to leverage chemical datasets for synthesis planning"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI route design product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Drug-discovery synthesis need",
+      "premise_ids": [
+        "P1",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Chemists design viable syntheses in seconds so medicines can be made faster",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cure patients faster by optimizing synthesis pipelines",
+      "evidence_span": "Cure patients faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "UI age of competitors folded into competitive differentiation with lack of AI rather than separate premise. Fine chemicals/agro as future applications left as market vision."
+}

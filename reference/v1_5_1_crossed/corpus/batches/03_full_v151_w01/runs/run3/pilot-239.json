@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-239",
+    "coder_session_id": "session_05",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Depression patients face stigma, distrust of care, long waits, and months of antidepressant trial-and-error",
+      "status": "explicit",
+      "evidence_span": "why don't patients get treatment for depression? One reason is the social stigma that exists around it"
+    },
+    {
+      "id": "P2",
+      "text": "Existing DNA, mRNA, and protein approaches fail as practical predictive biomarkers for depression care",
+      "status": "explicit",
+      "evidence_span": "there are no good biomarkers that exist today"
+    },
+    {
+      "id": "P3",
+      "text": "Circular RNA in blood is a stable, predictive biomarker for diagnosing depression and predicting medication response",
+      "status": "explicit",
+      "evidence_span": "use a new biomarker called circular RNA to help diagnose, monitor treatment, and monitor treatment of mental health conditions"
+    },
+    {
+      "id": "P4",
+      "text": "A lab pipeline extracts blood RNA and runs circRNA-specific qPCR with analytics to profile diagnosis and drug response",
+      "status": "explicit",
+      "evidence_span": "we use a process called quantitative, circRNA-specific quantitative PCR"
+    },
+    {
+      "id": "P5",
+      "text": "Primary care, telemedicine, and urgent care are the channels that need faster depression diagnosis workflows",
+      "status": "explicit",
+      "evidence_span": "There are three channels that we see our product easily going into the market. Primary care, telemedicine, and urgent care"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "depression care access and biomarker gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "circular RNA diagnostics platform",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "primary care telemedicine urgent care channels",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Precision medicine for mental health diagnostics and therapeutics with better patient outcomes",
+      "status": "explicit",
+      "evidence_span": "bring precision medicine to mental health diagnostics and therapeutics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Platform molecules for early oncology and neurology detection beyond mental health",
+      "evidence_span": "We can use them for very early detection of medical conditions. For example, in oncology, predicting early remission of a cancer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The big problem in mental health care is that there are no good biomarkers that exist today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help clinicians provide precision medicine leading to improved patient outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide the patient a better experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.5.1: stigma/distrust/waits/trial-and-error folded as one depression-care pain bundle. Predictive percentages treated as traction evidence of the biomarker premise, not separate premises. Oncology/neurology extension recorded as secondary value, not extra premises."
+}

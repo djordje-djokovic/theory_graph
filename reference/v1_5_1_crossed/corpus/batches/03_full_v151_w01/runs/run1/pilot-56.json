@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-56",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:16:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Professionals who bill for mobile call time routinely forget to capture those calls, especially off-hours",
+      "status": "explicit",
+      "evidence_span": "when you're getting called in the evenings, afternoons when you're running errands, or on the weekends, you forget to bill those calls"
+    },
+    {
+      "id": "P2",
+      "text": "Manual billing of mobile calls is too time-consuming and lacks a good capture method, so roughly 40% of billable mobile time goes unbilled",
+      "status": "explicit",
+      "evidence_span": "roughly 40% of the time, professionals that build by the hour spend talking on a mobile phone goes unbilled"
+    },
+    {
+      "id": "P3",
+      "text": "A third button on the mobile call screen auto-starts tracking answered calls for billing",
+      "status": "explicit",
+      "evidence_span": "adding a third button to the mobile call screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbilled mobile professional time",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Call-screen billing capture button",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Attorneys and other mobile billers automatically capture call time they would otherwise lose",
+      "status": "explicit",
+      "evidence_span": "mobile billing solution for attorneys, consultants, life coaches, and anyone that bills for call time with clients on their mobile phone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We've solved this problem by adding a third button to the mobile call screen"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this adds up into huge losses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app automatically starts tracking that call for billing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Short pitch; downloads/users and seed ask excluded. Singleton D2 retained as the distinct product mechanism."
+}

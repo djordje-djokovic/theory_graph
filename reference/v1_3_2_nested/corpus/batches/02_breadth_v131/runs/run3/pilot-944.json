@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-944",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:59:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Athletes need inch-level and multi-point motion measurement that consumer wearables and GPS cannot provide",
+      "status": "explicit",
+      "evidence_span": "what can you use to measure such a distance? GPS is not precise enough"
+    },
+    {
+      "id": "P2",
+      "text": "QOSP wearable network plus access point delivers inch-accurate position with acceleration and speed via differential GNSS",
+      "status": "explicit",
+      "evidence_span": "We engineered the QOSP core to analyze satellite signals instead of trusting the satellite data like normal GPS does"
+    },
+    {
+      "id": "P3",
+      "text": "Real-time multi-sensor feedback shows technique metrics such as swing angle, strength, and field acceleration",
+      "status": "explicit",
+      "evidence_span": "There is no need for imagination, actually. You have all there"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market prioritizes team sports where no solution exists for tactics, injury prevention, or scouting, despite broader API applicability",
+      "status": "explicit",
+      "evidence_span": "for now, we are going to keep a razor sharp focus on the team sport market for two reasons"
+    },
+    {
+      "id": "P5",
+      "text": "Patents on sensor networks and indoor/outdoor positioning protect this tracking mechanism",
+      "status": "explicit",
+      "evidence_span": "owns several patents on sensor networks, on our indoor and outdoor positioning system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Precision sport measurement gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "QOSP differential motion platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Team-sport market focus",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Quantified inch-accurate motion tracking that improves sport performance for individuals and teams",
+      "status": "explicit",
+      "evidence_span": "Tracking your development is the answer for those who want to achieve a goal"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "the real difference between QOSP and everything else in its inch-accurate position technology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "even more so in sport"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inch-accurate motion tracker"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no technological solution for teams"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.1: P5 patents remain with the QOSP mechanism domain rather than a separate IP/GTM module. Market-size figures excluded as context; focus decision coded."
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-625",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pregnancy complications are rising and prenatal checkups are inconvenient, expensive, and limited by antiquated technology, leaving moms uncertain",
+      "status": "explicit",
+      "evidence_span": "these trips are inconvenient, expensive, and ultimately limited by 50-year-old antiquated technology"
+    },
+    {
+      "id": "P2",
+      "text": "A medical-grade wearable sensor plus analytics measures biopotentials (contractions and related signals) to reassure moms and inform doctors",
+      "status": "explicit",
+      "evidence_span": "We combine wearable devices with data analytics to both reassure expecting moms and provide doctors with better information to improve birth outcomes"
+    },
+    {
+      "id": "P3",
+      "text": "Same hardware roadmap expands via OTA software to pregnancy-specific parameters including fetal movement and fetal heart rate",
+      "status": "explicit",
+      "evidence_span": "All of these features will be made available via over-the-air software updates. No additional hardware changes are necessary"
+    },
+    {
+      "id": "P4",
+      "text": "Direct-to-consumer monthly subscription for reusable sensor and disposable patches, later referrals, channel partners, FDA clearance, and reimbursement toward standard of care",
+      "status": "explicit",
+      "evidence_span": "We will first offer Bloom Life direct to consumers via monthly subscription"
+    },
+    {
+      "id": "P5",
+      "text": "Crowdsourced maternal-fetal dataset powers cloud ML to help doctors predict and manage pregnancy complications earlier",
+      "status": "explicit",
+      "evidence_span": "crowdsource the largest and most comprehensive data set on maternal and fetal health ever collected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inadequate prenatal monitoring",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "wearable prenatal sensing and analytics",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription to reimbursed care path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve health of moms and babies by giving need-to-know prenatal information and better birth outcomes",
+      "status": "explicit",
+      "evidence_span": "technology designed to improve the health of moms and babies"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce heartache of lost children by predicting and managing complications earlier",
+      "evidence_span": "Saving millions of families from the heartache of a lost child, and making more healthy babies in this world"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are failing women and babies at this time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide doctors with better information to improve birth outcomes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Bloom Life to become standard of care, fully reimbursed"
+    },
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "will help power our cloud-based machine learning analytics to help doctors better predict and manage pregnancy complications"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: rising complications, checkup friction, and antiquated tech folded as one prenatal-care pain (P1). Contraction app facets folded into wearable mechanism (P2). Fetal movement/HR listed as OTA expansion of same sensor (P3), not separate hardware products. Clinical studies/beta shipments excluded as traction. Designing-the-future framing not coded as premise (§4.1.4)."
+}

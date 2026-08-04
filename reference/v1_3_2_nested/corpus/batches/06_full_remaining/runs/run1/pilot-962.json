@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Digital play has become isolating compared with physical face-to-face play with objects",
+      "status": "explicit",
+      "evidence_span": "It's all digital. It's isolating. And the interactions happen through devices"
+    },
+    {
+      "id": "P2",
+      "text": "An iPad accessory redirects the front camera to capture the table surface for tangible play with ordinary physical pieces",
+      "status": "explicit",
+      "evidence_span": "a simple iPad accessory that redirects iPad's front camera to capture the surface in front of it"
+    },
+    {
+      "id": "P3",
+      "text": "On-device AI recognizes unmarked physical game pieces in real time without Wi-Fi, markers, calibration, or special lighting",
+      "status": "explicit",
+      "evidence_span": "It runs all locally. No Wi-Fi dependencies"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term business model is selling physical games bundled with an iPad app at affordable price points under about $30 for the base",
+      "status": "explicit",
+      "evidence_span": "our business model is to sell physical games that comes with an iPad app"
+    },
+    {
+      "id": "P5",
+      "text": "The offering sits in the hybrid games trend between physical and video games and can later become a broader platform",
+      "status": "explicit",
+      "evidence_span": "there's a fast growing multi-billion dollar trend of hybrid games. We are right at the center of that trend"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Isolating digital play problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Camera accessory and local AI",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Physical game SKU and hybrid market",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Bring magic back to real-world social play by combining board games and video games",
+      "status": "explicit",
+      "evidence_span": "How can we bring magic to real-world play?"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "playing together, having face-to-face interactions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manipulation of common physical objects"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sell physical games that comes with an iPad app"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Word game and Tangram demos are uses of one recognition mechanism—one tech premise (v1.3.1 #2 / v1.3.2 #5). Future D&D/chess/platform vignettes not coded as premises (v1.3.2 #4 vision). Founder bios excluded. Price amount stays with commercial premise (v1.3.1 #3).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-962",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:57:00+02:00"
+  }
+}

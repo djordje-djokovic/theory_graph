@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMBs miss large energy-cost savings because they do not organize and analyze energy data the way large firms do",
+      "status": "explicit",
+      "evidence_span": "most large businesses organized and analyzed their energy data and managed it well and paid less for it. But small and medium-sized users didn't"
+    },
+    {
+      "id": "P2",
+      "text": "Energy Elephant builds, visualizes, and analyzes energy data from uploaded bills",
+      "status": "explicit",
+      "evidence_span": "helping businesses build, visualize, and analyze their energy data"
+    },
+    {
+      "id": "P3",
+      "text": "Product shows five-year cost projections and cost, consumption, and carbon breakdowns with year comparisons",
+      "status": "explicit",
+      "evidence_span": "his cost for the next five years"
+    },
+    {
+      "id": "P4",
+      "text": "Weather overlays and automated warnings detect wasteful patterns such as overheating",
+      "status": "explicit",
+      "evidence_span": "We can even show Sean how the weather is affecting his energy use"
+    },
+    {
+      "id": "P5",
+      "text": "Peer benchmarks and supplier comparisons surface consumption and tariff savings",
+      "status": "explicit",
+      "evidence_span": "we compare it against other suppliers to see what opportunities for savings are available"
+    },
+    {
+      "id": "P6",
+      "text": "Anyone can use free bill upload; paying customers get deeper ongoing analysis for under £1/day/site",
+      "status": "explicit",
+      "evidence_span": "Anybody can use the Energy Elephant system. for free if they have an energy bill"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB vs enterprise energy analytics gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Bill-to-insight analytics product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Free-plus-paid access model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help SMBs cut energy costs and environmental impact by understanding and acting on their energy data",
+      "status": "explicit",
+      "evidence_span": "helping them reduce their costs by thousands and reduce their environmental impacts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make better energy decisions by organizing and analyzing their energy data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "discover the power of your energy data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for free if they have an energy bill"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Average 15% savings treated as traction evidence of mechanism already coded in analytics, not a separate premise. Soft count 6.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-735",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:26:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

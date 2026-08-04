@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "B2B sites lose nearly all traffic to bounce because one marketing message does not resonate for every segment",
+      "status": "explicit",
+      "evidence_span": "convert the 99% of their traffic that bounces today"
+    },
+    {
+      "id": "P2",
+      "text": "In-house personalization requires engineers, data scientists, UX designers, and analysts that average marketing teams lack",
+      "status": "explicit",
+      "evidence_span": "The average marketing team does not have access to these technical expertise"
+    },
+    {
+      "id": "P3",
+      "text": "Mutiny identifies visitors, recommends audiences, offers a non-technical visual editor, and measures personalization lift",
+      "status": "explicit",
+      "evidence_span": "to solve all of these problems in one place with software"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Generic messaging bounce problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "No-code personalization platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convert website traffic B2B companies already have via personalization",
+      "status": "explicit",
+      "evidence_span": "learn how to convert the traffic that you already have"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the same marketing message didn't necessarily resonate for everybody"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The result of this personalization is a 54% increase in leads"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Four product capabilities folded into one software premise (v1.3.2 §4.1(5)). Customer lift metrics used as value evidence; founding bio excluded except as problem discovery. AdWords comparison treated as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-443",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

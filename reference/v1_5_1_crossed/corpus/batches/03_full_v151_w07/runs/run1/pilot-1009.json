@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1009",
+    "coder_session_id": "session_01",
+    "session_case_index": 4,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "HTML5 and current browsers have inherent flaws that prevent native-class 3D/2D performance",
+      "status": "explicit",
+      "evidence_span": "there are inherent flaws that exist in the browser that make that impossible to do things like this"
+    },
+    {
+      "id": "P2",
+      "text": "Treating a game engine as an app engine delivers the 3D and 2D performance games already solved",
+      "status": "explicit",
+      "evidence_span": "what if a game engine is an app engine"
+    },
+    {
+      "id": "P3",
+      "text": "Famo.us bypasses inefficient browser layers and talks mathematically directly to the GPU",
+      "status": "explicit",
+      "evidence_span": "we're having a direct and beautiful mathematical conversation with the GPU"
+    },
+    {
+      "id": "P4",
+      "text": "The same engine runs across browsers, iOS, Android, PCs, Macs, and consoles wherever a GPU is accessible",
+      "status": "explicit",
+      "evidence_span": "This solution abstracts out to every device that has a GPU and an operating system that can access it"
+    },
+    {
+      "id": "P5",
+      "text": "JavaScript engineers get a new tool that can outperform HTML5 and native for rich interfaces",
+      "status": "explicit",
+      "evidence_span": "this gives JavaScript engineers a new tool in their tool belt that they didn't have before"
+    },
+    {
+      "id": "P6",
+      "text": "Democratizing 3D development requires bridging 2D templates to 3D as a settings option",
+      "status": "explicit",
+      "evidence_span": "we won't succeed unless we build a bridge from the 2D world to the 3D world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "game-engine rendering and GPU path",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "JavaScript developer tool",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "2D to 3D democratization bridge",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give designers and engineers performant 3D/2D web apps that feel better than HTML5 or native",
+      "status": "explicit",
+      "evidence_span": "HTML5 is good, native is better, but famous is the best"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make JavaScript engineers famous with a powerful new tool",
+      "evidence_span": "the reason I started famous was to make JavaScript engineers famous"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Performance that even a native app would die to have"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they have a new tool now"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we want to democratize the development of the 3D world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Vision framing about Flickr/Pinterest/Lucas templates not coded as premises (§4.1.4). Cross-device list folded into one portability premise. Singleton D2/D3: developer positioning and 2D-3D bridge claimed as distinct success conditions."
+}

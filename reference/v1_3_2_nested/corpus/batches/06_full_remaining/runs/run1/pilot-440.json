@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-440",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Microsatellite customers forced onto shared launches must compromise on schedule, destination, and multi-customer integration constraints",
+      "status": "explicit",
+      "evidence_span": "they must compromise on every aspect of the launch"
+    },
+    {
+      "id": "P2",
+      "text": "Ground-launched rockets cannot be made small enough to cost-effectively serve an individual microsatellite customer because of atmospheric drag",
+      "status": "explicit",
+      "evidence_span": "when you launch a rocket from the ground, you can only make it so small while still having enough energy to reach orbit. And unfortunately, at this size, it's just too big and expensive"
+    },
+    {
+      "id": "P3",
+      "text": "Launching from 60,000 feet above most of Earth's atmosphere enables a roughly half-size rocket for individual customers",
+      "status": "explicit",
+      "evidence_span": "By launching at this altitude, we can reduce the size of the rocket to just half of what it would be if we would launch it from the ground"
+    },
+    {
+      "id": "P4",
+      "text": "Regulus is a fully reusable, autonomous, mobile high-altitude balloon launch platform",
+      "status": "explicit",
+      "evidence_span": "Regulus is a fully reusable and autonomous vehicle that allows us to launch rockets from 60,000 feet in altitude"
+    },
+    {
+      "id": "P5",
+      "text": "Solid first and second stages plus a non-cryogenic liquid third stage provide safe, manufacturable propulsion and fine-tuned precise orbit insertion",
+      "status": "explicit",
+      "evidence_span": "Our first and second stages use a solid motor architecture. This architecture is safe. It's shelf-stable, and it's mass manufacturable"
+    },
+    {
+      "id": "P6",
+      "text": "The platform can deliver dedicated launches within weeks to any low-Earth orbit at high frequency so satellites can operate immediately",
+      "status": "explicit",
+      "evidence_span": "Leo Aerospace can provide a launch within a matter of weeks to any low-Earth orbit and support a very high launch frequency"
+    },
+    {
+      "id": "P7",
+      "text": "FAA authorization for launching from a reusable balloon platform provides a clear regulatory path forward",
+      "status": "explicit",
+      "evidence_span": "provided a clear regulatory path for us moving forward"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ride-share launch compromises",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "High-altitude Regulus vehicle",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Dedicated launch cadence and regulation",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Microsatellite customers get a dedicated launch service that takes them where they want, when they want, without compromise",
+      "status": "explicit",
+      "evidence_span": "providing our microsatellite customers with a dedicated launch service that they've been asking for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "And that's exactly what we do. Introducing Leo Aerospace's premier high-altitude launch platform, Regulus"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what customers need is the experience that you and I know is ride-sharing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Regulus is a fully reusable and autonomous vehicle that allows us to launch rockets from 60,000 feet in altitude"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "microsatellite customers will have the dedicated launch service they've been asking for"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D1 retained: ride-share pain is a separately revisable market assumption from the vehicle architecture. Solid/liquid stages folded into one propulsion premise (v1.3.2 §4.1(5)). Team credentials, market-size figures, Air Force backlog, and NASA JPL Mars extension excluded as traction/roadmap framing. Partition is need/vehicle/service-regulation; justified because cadence/regulatory path can fail while the balloon architecture still stands."
+}

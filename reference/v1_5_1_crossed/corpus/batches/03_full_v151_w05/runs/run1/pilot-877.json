@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-877",
+    "coder_session_id": "session_05",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Restaurants have perishable table inventory with high fixed costs yet ~40% underutilization and flat prices across peak/off-peak demand",
+      "status": "explicit",
+      "evidence_span": "about 40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "id": "P2",
+      "text": "Poor forecasting and suboptimal pricing contribute to large food waste and high restaurant failure rates",
+      "status": "explicit",
+      "evidence_span": "food is wasted on a daily basis. That's a lot of food going down to the hog farms, wasted because restaurants, A, are not able to forecast properly, B, they are not able to price their product optimally"
+    },
+    {
+      "id": "P3",
+      "text": "ResGuru consolidates online/offline reservations and POS into analytics (utilization, RevPASH) for restaurant operators",
+      "status": "explicit",
+      "evidence_span": "all my reservations, all my food orders are consolidated from across all the online and offline channels for my restaurant"
+    },
+    {
+      "id": "P4",
+      "text": "Dynamic pricing uses goals, overbooking/walk-in rules, channel commissions, and ~21 macro/micro variables to recommend time-slot prices",
+      "status": "explicit",
+      "evidence_span": "a dynamic pricing platform for restaurants. It allows the restaurants to automatically change their prices based on demand and supply"
+    },
+    {
+      "id": "P5",
+      "text": "B2B go-to-market to restaurant owners (private beta) on top of an existing restaurant digitization footprint",
+      "status": "explicit",
+      "evidence_span": "we welcome all of you who are restaurant owners to sign up with us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "underutilized perishable restaurant inventory",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "ResGuru analytics and dynamic pricing",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "restaurant owner B2B GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Optimize restaurant revenue/utilization via demand-based pricing (and better deals for diners)",
+      "status": "explicit",
+      "evidence_span": "help them optimize their revenue, but also get you better deals in your restaurants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce food waste through better forecast and pricing",
+      "evidence_span": "not able to forecast properly, B, they are not able to price their product optimally to sell it at the right point"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If a restaurant is not able to sell a table at 7 o'clock in the evening, it's a lost opportunity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically change their prices based on demand and supply"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are launching our private beta today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Peak/empty same-price and perishable inventory economics folded with underutilization as core yield problem; waste/failure treated as related industry consequence module in D1. Menu-engineering rule cascade kept inside dynamic pricing mechanism. Pilot Taj % lifts and 1,200 digitized restaurants excluded as traction. Cornell bio excluded. Singleton D3 retained as independently revisable B2B channel condition."
+}

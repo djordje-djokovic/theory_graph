@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing tools are optimized for product delivery rather than product discovery",
+      "status": "explicit",
+      "evidence_span": "stuck with tools that are optimized and designed for product delivery, not the crucial part of product discovery"
+    },
+    {
+      "id": "P2",
+      "text": "Customer feedback is hoarded across scattered systems, records, and formats",
+      "status": "explicit",
+      "evidence_span": "We hoard feedback in a variety of systems, records, and formats"
+    },
+    {
+      "id": "P3",
+      "text": "A system of record can aggregate feedback, link insights to features by user need, prioritize against goals, and automate interactive roadmaps through to engineering tools",
+      "status": "explicit",
+      "evidence_span": "system of record for product management that helps product people understand what people need, prioritize what to build, and automate interactive roadmaps"
+    },
+    {
+      "id": "P4",
+      "text": "The product is sold as a per-user tiered subscription",
+      "status": "explicit",
+      "evidence_span": "subscription service with a per user tiered pricing starting at $24 a month"
+    },
+    {
+      "id": "P5",
+      "text": "Customers are reached through content marketing and inside sales for cross-sell and up-sell",
+      "status": "explicit",
+      "evidence_span": "reach our customers via combination of content marketing and inside sales for cross-sell and up-sell"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Product discovery tooling gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "System of record for product management",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription pricing and go-to-market",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Product makers make products people want by understanding needs and prioritizing what to build",
+      "status": "explicit",
+      "evidence_span": "help you make products people want"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasting energy building features and products that nobody wants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what people need, prioritize what to build"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you make products people want"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo UI features (integrations, impact scores, JIRA push) folded into P3 per v1.3.2 §4.1(5). 'Whole new market category' treated as vision framing, not a premise. 100 paying companies excluded as traction. Singleton D2 retained: the platform is the independently learnable offering. Need/product/money triad justified: discovery gap, product mechanism, and pricing/GTM are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-710",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

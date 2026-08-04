@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hypervelocity debris and looming Kessler syndrome threaten satellites that modern life depends on",
+      "status": "explicit",
+      "evidence_span": "In a chain reaction known as Kessler syndrome, if it happens, it can destroy an entire orbital regime"
+    },
+    {
+      "id": "P2",
+      "text": "Manual collision avoidance cannot keep up with 10x launch growth",
+      "status": "explicit",
+      "evidence_span": "In the next decade alone, we're launching 10 times that"
+    },
+    {
+      "id": "P3",
+      "text": "Pathfinder is an autonomous collision-avoidance system that cuts response time >90% using real-time data, predictions, and optimized maneuvers",
+      "status": "explicit",
+      "evidence_span": "reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "id": "P4",
+      "text": "New commercial product Gamit covers launch vehicle and payload flight safety",
+      "status": "explicit",
+      "evidence_span": "Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Orbital debris collision problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pathfinder product",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gamit product",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer space flight through faster, autonomous collision risk management",
+      "status": "explicit",
+      "evidence_span": "day in and day out, we're building technologies that are making space flight safer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our lives are governed by satellites"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Pathfinder, an autonomous satellite collision avoidance solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "second commercial product, Gamit"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Backend modeling folded into Pathfinder premise. Traction (500 satellites, contracts) excluded. Singleton products retained as separately sold commercial lines.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-276",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:13:00+02:00"
+  }
+}

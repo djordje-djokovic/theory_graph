@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1148",
+    "coder_session_id": "session_05",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most site traffic is one-shot and forgettable while a tiny share of true fans drive disproportionate page views and deeper engagement; publishers waste spend chasing one-shot SEO traffic",
+      "status": "explicit",
+      "evidence_span": "more than 84% of a site's traffic visits just once a month or less frequently"
+    },
+    {
+      "id": "P2",
+      "text": "One True Fan credits fan activity with good-natured gameplay, leaderboards, and presence of who else is on a page (including social-network friends and Twitter sharers)",
+      "status": "explicit",
+      "evidence_span": "We give them credit, give players credit for their activities, and give them a bit of good natured gameplay"
+    },
+    {
+      "id": "P3",
+      "text": "Privacy controls over check-ins and no sharing of complete browsing history; users discover people who love the same content via profiles and shared articles",
+      "status": "explicit",
+      "evidence_span": "You have complete control over where you check in, if you want to check in automatically on a site"
+    },
+    {
+      "id": "P4",
+      "text": "Helps sites identify and connect with most valuable users (including invisible non-commenters) with roadmap of stats, APIs, and tangible loyalty rewards—business model as web loyalty rewards program",
+      "status": "explicit",
+      "evidence_span": "We enable sites to better identify and connect with their most valuable users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "one-shot vs true fan traffic",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "fan gameplay and presence",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "publisher loyalty rewards",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Engage true fans rather than chasing disposable one-shot traffic",
+      "status": "explicit",
+      "evidence_span": "They would be far better served by engaging their true fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true fans, small percentage of the overall traffic, but they make up a huge percentage of page views"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one true fan is all about them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are going to become the loyalty rewards program for the web"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-demo (truncated). One-shot vs true-fan traffic economics folded as one publisher problem (§4.1.6). Gameplay/leaderboards/presence and privacy/discovery folded as fan product; publisher identify+rewards/loyalty business model split as separately framed GTM module. Upcoming Digg/etc integrations folded as cascade. Browser extension alpha status not coded as premise."
+}

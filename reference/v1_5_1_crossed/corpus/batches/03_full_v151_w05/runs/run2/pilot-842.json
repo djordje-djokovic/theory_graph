@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-842",
+    "coder_session_id": "session_03",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mass retail cannot stock prestige niche makeup colors because volume-driven supply chains limit assortment, while prestige stores are expensive",
+      "status": "explicit",
+      "evidence_span": "Walmart can't offer you all the colors that expensive prestige stores can, like Sephora. Why? Supply chain"
+    },
+    {
+      "id": "P2",
+      "text": "A desktop inkjet-like printer turns any digital image or hex color into wearable cosmetics using FDA-compliant ink and substrates",
+      "status": "explicit",
+      "evidence_span": "Mink is a desktop printer that prints makeup. It can take any image and instantly transform it into a wearable color cosmetic"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware retails around $300 with commodity-priced consumables so colors stay accessible at home",
+      "status": "explicit",
+      "evidence_span": "I'm going to retail this for about $300 initially. And the ink and the substrates are going to be commodity priced"
+    },
+    {
+      "id": "P4",
+      "text": "Initial customers are girls ages 13–21 who are still experimenting and learn makeup online",
+      "status": "explicit",
+      "evidence_span": "My initial target market, they're girls, ages 13 to 21. They have not formed any habits yet"
+    },
+    {
+      "id": "P5",
+      "text": "An open developer path extends printing beyond eyeshadow to other cosmetic formats from web images",
+      "status": "explicit",
+      "evidence_span": "We're printing eyeshadow right now, but this is basically gonna be able to print lipsticks, powders, creams, foundations, et cetera"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "color assortment and young buyers",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "home makeup printer hardware",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "device and consumables pricing",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Prestige-level color selection with mass convenience at home from any digital color",
+      "status": "explicit",
+      "evidence_span": "It gives you the selection of prestige and it combines it with the convenience of mass"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Girls control their own definition of beauty rather than corporations",
+      "evidence_span": "The definition of beauty is something that they should be able to control, not our corporations"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you want like the cool niche colors, you have to go to expensive Sephora"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turning any phone, laptop, or camera into an endless beauty aisle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the ink and the substrates are going to be commodity priced. So they are very accessible"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mass vs prestige supply-chain story folded as one assortment/price pain (v1.5.1 §4.1.6). ColorZilla/Photoshop hex print demo and case packaging folded into printer mechanism (§4.1.7). Founder bio excluded. Developer signup treated with format-expansion as open-platform path. Anti-template: market/pain, hardware product, and pricing separately revisable."
+}

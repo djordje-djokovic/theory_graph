@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "coder_session_id": "session_01",
+    "session_case_index": 4,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing smart lighting options are painful: wired switches need costly install and exclude renters, while smart bulbs require many units and force phone-only control",
+      "status": "explicit",
+      "evidence_span": "Why is it that a product meant to make our lives simple and better is such a pain to deal with right out of the box?"
+    },
+    {
+      "id": "P2",
+      "text": "Switchmate magnetically snaps onto a standard light switch and mechanically flips it so users keep manual control and add phone control",
+      "status": "explicit",
+      "evidence_span": "It uses two magnets on the back that snap right to the screws on your standard light switch. And it mechanically flips the switch up and down"
+    },
+    {
+      "id": "P3",
+      "text": "Hundreds of millions of US homes and about 1.2 billion light switches are addressable, including rentals and condos",
+      "status": "explicit",
+      "evidence_span": "There's about 120 million homes in the United States alone, a third of them being rentals and condos"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market moves from pre-order crowdfunding to online retail then brick-and-mortar",
+      "status": "explicit",
+      "evidence_span": "launch a pre-order campaign. We're also working with a manufacturing partner that has experience building multiple hardware products. By the end of this year, we hope to deliver to online retail, such as Amazon, and through our own website. Then, in 2016, we hope to get into brick-and-mortar retailers"
+    },
+    {
+      "id": "P5",
+      "text": "An optional hub will serve as base station for Switchmate and future simple smart-home products",
+      "status": "explicit",
+      "evidence_span": "we'll be providing an optional hub that will serve as the base station for SwitchMate and any other feature products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "painful smart lighting adoption",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "snap-on switch and hub platform",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "home switch market and retail GTM",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple smart lighting that anyone can install without electrician work or losing the physical switch",
+      "status": "explicit",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peace of mind from remote vacation lighting and approach automation",
+      "evidence_span": "leave on vacation with some peace of mind"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a product meant to make our lives simple and better is such a pain to deal with right out of the box"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can install smart lighting like that, and you're done"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "1.2 billion light switches that have the potential to be automated"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wired-switch and smart-bulb frustrations folded as one smart-lighting pain set (§4.1.6). Magnet snap, mechanical flip, phone control, and still-manual use folded as one Switchmate mechanism (§4.1.7). Vacation timers, approach detection, and bed control treated as applications of that mechanism (§4.1.2). Market size and pre-order/online/retail path kept as separately revisable commercial module. Anti-template: problem, product/hub, and market/GTM separately revisable."
+}

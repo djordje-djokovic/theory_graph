@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Product delivery tools leave teams unable to gather scattered feedback and prioritize real customer needs, so they build unwanted features",
+      "status": "explicit",
+      "evidence_span": "tools that are optimized and designed for product delivery, not the crucial part of product discovery"
+    },
+    {
+      "id": "P2",
+      "text": "Product Board is a product-management system of record that unifies research inputs, need-linked feature prioritization, interactive roadmaps, and handoff to engineering systems",
+      "status": "explicit",
+      "evidence_span": "Product Board is a system of record for product management"
+    },
+    {
+      "id": "P3",
+      "text": "The offering serves the whole company as a hub for product discovery, not only product managers",
+      "status": "explicit",
+      "evidence_span": "this isn't just a tool for product managers, because at a typical product company, everyone wants to contribute and be part of the product management process"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue model is a per-user tiered subscription; acquisition uses content marketing plus inside sales",
+      "status": "explicit",
+      "evidence_span": "We offer a subscription service with a per user tiered pricing starting at $24 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Discovery tooling problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Company-wide product discovery hub",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and GTM motion",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help product makers make products people want",
+      "status": "explicit",
+      "evidence_span": "Our mission at Product Board is to help you make products people want"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building products means nothing if they're not the right products"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what people need, prioritize what to build"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you make products people want"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pricing and GTM merged per §4.1(3) as one commercial premise for the same offer. Demo feature list folded into P2. Company-wide hub kept as P3 because speaker distinguishes PM-only vs whole-company use. New market category not coded. Traction excluded. Singletons D1/D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-710",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-602",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "E-commerce clothing returns are driven by fit problems that require body shape, not size alone",
+      "status": "explicit",
+      "evidence_span": "The problem with returns is more than just a size or a measurement issue. The solution must include shape"
+    },
+    {
+      "id": "P2",
+      "text": "Teaching designers only hourglass and rectangle shapes excludes half of women from the design table",
+      "status": "explicit",
+      "evidence_span": "This single decision takes half of women off of the design table"
+    },
+    {
+      "id": "P3",
+      "text": "Shape filter uses AI classification of assortments plus a UI capturing shopper shape and proportion to recommend garments",
+      "status": "explicit",
+      "evidence_span": "these together comprise the shape filter technology"
+    },
+    {
+      "id": "P4",
+      "text": "Unlike size-only rivals, recommendations show how clothes will look and narrow the assortment to what fits",
+      "status": "explicit",
+      "evidence_span": "they will tell you what size to buy, but they fail to tell you how you will look in those clothes. They won't give you a subset to make your shopping easier"
+    },
+    {
+      "id": "P5",
+      "text": "Retailers pay an annual contract with upfront fee and percentage of sales; system fits inventory management",
+      "status": "explicit",
+      "evidence_span": "Our enterprise implementation fits easily into our customers' inventory management system. We have an annual contract with an upfront fee and a percentage of sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shape-inclusive fit problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Shape filter vs size-only tools",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise fee and share of sales",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help women shop with confidence by recommending clothes that match body shape and proportion",
+      "status": "explicit",
+      "evidence_span": "making her shopping a whole lot easier"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve retail economics by increasing sales and decreasing returns",
+      "evidence_span": "Savitude does improve our retail economics"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one third of clothing be returned because it doesn't fit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommendations on clothing for an individual body shape and proportion"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "percentage of sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Competitive differentiation kept as part of product theory (how shape filter creates value vs TrueFit). Patent-pending knowledge base folded into shape filter. Accessories roadmap not coded as premise. Founder credentials excluded."
+}

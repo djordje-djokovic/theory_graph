@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Product managers fail to understand real user needs because feedback and ideas are stuck in scattered systems and disorganized backlogs",
+      "status": "explicit",
+      "evidence_span": "We still fail to understand user needs, and we end up wasting energy building features and products that nobody wants"
+    },
+    {
+      "id": "P2",
+      "text": "Product Board centralizes user input via integrations, links insights to feature ideas by need, scores impact against strategic goals, and auto-generates shareable roadmaps",
+      "status": "explicit",
+      "evidence_span": "helps product people understand what people need, prioritize what to build, and automate interactive roadmaps"
+    },
+    {
+      "id": "P3",
+      "text": "Prioritized features push into JIRA or other engineering delivery systems with live progress updates",
+      "status": "explicit",
+      "evidence_span": "push the features to JIRA or other engineering delivery systems"
+    },
+    {
+      "id": "P4",
+      "text": "Sold as a per-user tiered subscription starting at a stated monthly price",
+      "status": "explicit",
+      "evidence_span": "per user tiered pricing starting at $24 a month"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market combines content marketing with inside sales for cross-sell and up-sell",
+      "status": "explicit",
+      "evidence_span": "combination of content marketing and inside sales for cross-sell and up-sell"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scattered feedback and discovery failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Discovery hub through engineering handoff",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Pricing and sales motion",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make products people want through better product discovery",
+      "status": "explicit",
+      "evidence_span": "make products people want"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building features and products that nobody wants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completed the complete product discovery cycle, from research to prioritization"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "coming out of beta now to help you make products people want"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Delivery-vs-discovery tool critique folded into P1 rather than split. JIRA handoff kept as P3 because speaker presents push-to-engineering as completing the discovery cycle into delivery. Market-category claim not coded (vision). Word-of-mouth beta traction excluded. Singleton D1 retained as separately revisable problem diagnosis.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-710",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

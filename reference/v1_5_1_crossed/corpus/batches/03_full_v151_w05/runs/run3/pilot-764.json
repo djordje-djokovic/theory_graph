@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-764",
+    "coder_session_id": "session_04",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Making even small web-page changes requires calling a developer or agency, paying hundreds or thousands, and waiting days or weeks, while non-coders are stuck with rigid paint-by-numbers templates",
+      "status": "explicit",
+      "evidence_span": "if you wanted to make even the slightest change to a page on the Web, like moving something one inch to the right, you better be willing to call a developer or agency, pay hundreds or thousands, and wait days or weeks"
+    },
+    {
+      "id": "P2",
+      "text": "PageCloud lets anyone with a browser edit pages with PowerPoint-like freedom—drag widgets, embed YouTube/Eventbrite URLs, manipulate objects—and changes go live immediately on save",
+      "status": "explicit",
+      "evidence_span": "If you know how to use PowerPoint or Keynote or Photoshop, you already know how to use PageCloud"
+    },
+    {
+      "id": "P3",
+      "text": "Mobile mode lets users reflow content so pages look good on phones without wrestling complex mobile web tech",
+      "status": "explicit",
+      "evidence_span": "Page Cloud dramatically simplifies the incredibly complex task of making Web pages mobile-friendly"
+    },
+    {
+      "id": "P4",
+      "text": "Copy-page analyzes an existing site, breaks it into root content, and rebuilds it as a pixel-accurate PageCloud-editable page (patent-pending)",
+      "status": "explicit",
+      "evidence_span": "PageCloud will analyze everything that's going on on this page, break it down into its root content and rebuild it in PageCloud editable format"
+    },
+    {
+      "id": "P5",
+      "text": "Preorder pricing with a Disrupt promo is $75 for the year for a site",
+      "status": "explicit",
+      "evidence_span": "you're going to get an amazing price of just $75 for the year for your site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken web publishing for non-developers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "browser creative editing and page rebuild",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "preorder promo pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone with a browser gets unrestricted creative freedom to create and publish the web without developers or templates",
+      "status": "explicit",
+      "evidence_span": "everyone with a web browser gets complete creative freedom"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "at best, are able to fill in the blanks of a rigid paint-by-numbers template"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's no other platform on the planet that gives you this creative freedom"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "become one of the first people to truly experience the web the way it was always meant to be"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Developer/agency wait-cost and rigid-template path folded as one publishing-access problem (§4.1.6). Demo edits, URL widgets, and live save folded as one unrestricted-editor mechanism (§4.1.7); mobile mode kept with product as packaging of the same creative surface. Copy-page rebuild split as separately emphasized patent-pending mechanism. Developer source/widget roadmap mentioned only in passing—folded into product notes, not a premise. Anti-template: problem, product stack, and promo pricing separately revisable."
+}

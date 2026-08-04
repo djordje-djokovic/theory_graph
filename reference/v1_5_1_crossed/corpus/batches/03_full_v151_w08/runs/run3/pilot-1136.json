@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1136",
+    "coder_session_id": "session_05",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "CheckPoints is a store-agnostic mobile shopping rewards app: consumers earn and redeem rewards across over one million U.S. stores via iPhone",
+      "status": "explicit",
+      "evidence_span": "Checkpoints is the first shopping rewards application that is store agnostic"
+    },
+    {
+      "id": "P2",
+      "text": "Advertisers reach targeted demographics in any store where their product is sold, delivering a message while the shopper has the product in hand (virtual end cap)",
+      "status": "explicit",
+      "evidence_span": "They can reach consumers of the demographic they're looking for in any store in America where their product is sold"
+    },
+    {
+      "id": "P3",
+      "text": "In-store flow: nearby locations, featured aisle products, UPC scan to earn points, then an HTML5 product interaction page (coupon, Facebook like, app, recipe, survey)",
+      "status": "explicit",
+      "evidence_span": "they just tap on the particular product that they're looking for, pick up their phone, put it over the UPC code"
+    },
+    {
+      "id": "P4",
+      "text": "Consumers earn coins from featured scans, play them for extra points, and redeem points for 40+ partner rewards delivered on phone",
+      "status": "explicit",
+      "evidence_span": "Every time a user scans a featured product, they earn a coin"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "store-agnostic consumer rewards",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "in-aisle advertiser messaging",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advertisers drive in-store discovery and interaction while consumers earn fun extra rewards",
+      "status": "explicit",
+      "evidence_span": "allows advertisers to drive discovery and interaction in-store while providing a fun and rewarding opportunity for consumers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers can earn rewards in over one million stores throughout the U.S. with just their iPhone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this advertising is reaching the consumer at that most valuable moment where they're in the store with the product in hand"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Scan→interaction-page media types folded as cascade of one in-aisle engagement mechanism (§4.1.7). Coin gaming and rewards catalog folded into consumer rewards module. Founder bio and named launch partners treated as credentials/traction (§4.2), not premises. Two domains: consumer rewards vs advertiser in-aisle reach as separately revisable."
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:08+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Over 90% of RF energy transmitted by phones is lost to the environment and can be harvested",
+      "status": "explicit",
+      "evidence_span": "over 90% of that energy is lost into the environment"
+    },
+    {
+      "id": "P2",
+      "text": "A smartphone case with a proprietary harvesting antenna converts wasted RF into electricity returned to the phone",
+      "status": "explicit",
+      "evidence_span": "Our case is embedded with a harvesting antenna that is proprietary that captures that wasted RF energy"
+    },
+    {
+      "id": "P3",
+      "text": "The case passively extends battery life by about 30% without plugging in, unlike battery cases and portable chargers",
+      "status": "explicit",
+      "evidence_span": "extend your battery life by 30% simply using wasted energy transmitted from your phone"
+    },
+    {
+      "id": "P4",
+      "text": "A case is the right first form factor because many smartphone users already buy power accessories",
+      "status": "explicit",
+      "evidence_span": "over 30% have purchased some sort of product to help them get a little more power in their phone"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "RF harvesting case",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Case accessory beachhead",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Extra passive battery power for mobile devices from sunup to sundown",
+      "status": "explicit",
+      "evidence_span": "gives you extra power that you need to get from sunup to sundown"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Path toward ubiquitous wireless power and 100% mobility",
+      "evidence_span": "100% mobility"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extend your battery life by 30%"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why a case?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wireless charger roadmap and IoT sensor future folded as vision into secondary_value, not separate premises (§4.1(4)/(5)). Kickstarter launch timing excluded as financing/traction. OSU partnership treated as bio/credibility."
+}

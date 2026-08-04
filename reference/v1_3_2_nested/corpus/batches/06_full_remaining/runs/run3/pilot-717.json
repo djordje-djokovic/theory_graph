@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-717",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:05+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Apps shortcut routing by precomputing and assuming unchanged traffic mid-drive",
+      "status": "explicit",
+      "evidence_span": "they take a big shortcut. They pre-compute some routes for that time of day in advance"
+    },
+    {
+      "id": "P2",
+      "text": "Time-dependent routing with minute-level ingestion finds routes other apps exclude",
+      "status": "explicit",
+      "evidence_span": "which is one that other apps have likely already excluded"
+    },
+    {
+      "id": "P3",
+      "text": "Delivery and mobility apps suffer uncontrolled experiences when drivers switch to third-party nav",
+      "status": "explicit",
+      "evidence_span": "This results in a 90% uncontrolled experience"
+    },
+    {
+      "id": "P4",
+      "text": "TallyGo SDK embeds real-time turn-by-turn with only a few integration steps",
+      "status": "explicit",
+      "evidence_span": "Add a few lines of code, literally three lines of code"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Accurate real-time routing",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Embeddable SDK channel",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses embed true real-time navigation and get the actual fastest routes",
+      "status": "explicit",
+      "evidence_span": "truly living up to that name with minute-level traffic data ingestion, prediction, accidents, and routing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This ensures we find the actual fastest route"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "embed real-time, turn-by-turn navigation directly into their existing apps"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Platform-accelerates-the-future language omitted as vision. Sensor count traction used only as evidence supporting minute-level data capability."
+}

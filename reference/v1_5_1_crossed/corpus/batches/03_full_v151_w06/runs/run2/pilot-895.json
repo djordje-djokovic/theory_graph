@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-895",
+    "coder_session_id": "session_02",
+    "session_case_index": 2,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:08:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A human personal stylist searches on the user's behalf and delivers shoppable item links by inbox",
+      "status": "explicit",
+      "evidence_span": "your very own personal stylist, a human being that will be behind the computer searching the item on your behalf"
+    },
+    {
+      "id": "P2",
+      "text": "A fashion Instagram-style social network lets users share finds and shop what others are searching when they lack a starting image",
+      "status": "explicit",
+      "evidence_span": "we have also an Instagram for fashion feature, a social network, where you can inspire people and get inspiration as well"
+    },
+    {
+      "id": "P3",
+      "text": "In-house image recognition plus business rules that override tech failures, with human styling and community as fallbacks so users are never let down",
+      "status": "explicit",
+      "evidence_span": "we're developing the best technology when it comes to image recognition in-house, but we're also adding business rules to override technology when it fails"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue is affiliate commission on sales, with future options for styling subscription, brand trend sales, and ads",
+      "status": "explicit",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "human styling and social shopping",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "image tech with human override stack",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "affiliate monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users find and shop fashion items without being let down by failed automated search",
+      "status": "explicit",
+      "evidence_span": "Our promise is to never let the user down"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The only thing you have to do is check your inbox for links of shoppable items"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If automated fails, you can then counter the personal styling"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we work as an affiliate with commission of 6% on sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Team PhD credentials excluded as biography (§4.2) unless causal; differentiation coded as the tech+rules+human+community stack (P3). Automated/styling/community fallback chain treated as one reliability mechanism (§4.1.7). ASAP vision framing not coded as premise (§4.1.4). Future monetization avenues folded into commercial premise as same offer economics detail (§4.1.3). Singleton D2/D3 retained as independently revisable reliability stack and monetization. Anti-template: human/social product, reliability stack, and affiliate model separately revisable."
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-448",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:03:28+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Spinning up VMs, networking, and SSL for every app is tedious and error-prone even when building the app is easy",
+      "status": "explicit",
+      "evidence_span": "I had to spin up VMs, install networking, set up SSL, and a ton of other things for every single app. It was tedious, it was error-prone"
+    },
+    {
+      "id": "P2",
+      "text": "Render deploys from static sites to complex clusters without managing servers, faster than other clouds",
+      "status": "explicit",
+      "evidence_span": "you can do it faster than on any other cloud and without managing servers at all"
+    },
+    {
+      "id": "P3",
+      "text": "Native service discovery, private networking, load balancing, managed SSD backups, and single-file service definitions differentiate the managed cloud",
+      "status": "explicit",
+      "evidence_span": "Render is the first fully managed cloud to offer SSDs with automatic backups and one-click restores"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing undercuts Heroku-like hosts while aiming at a large and growing PaaS then IaaS market",
+      "status": "explicit",
+      "evidence_span": "Just two gigabytes of RAM costs $250 a month on Heroku compared to $25 a month on Render. So we truly give you the best of both worlds"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual app hosting pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated managed cloud features",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Lower price best-of-both-worlds offer",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Effortless automated cloud hosting with ease of use and flexibility",
+      "status": "explicit",
+      "evidence_span": "Render makes it effortless"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Building these apps was easy. but hosting them was agonizing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I don't have to lift a finger for any of it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Amazing ease of use combined with tremendous flexibility"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Market-size TAM figures treated as vision/context, not premises; price comparison retained as commercial condition. Stripe credentials excluded. Truncation at end of signup CTA noted but pitch largely complete (truncated=false)."
+}

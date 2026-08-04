@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-700",
+    "coder_session_id": "session_01",
+    "session_case_index": 19,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sites personalize from single-app actions without time context, while user identities and behaviors are siloed across many online/offline IDs",
+      "status": "explicit",
+      "evidence_span": "these silos make it nearly impossible for any individual website or app to be able to deliver a personalized experience"
+    },
+    {
+      "id": "P2",
+      "text": "Brainify builds a time-weighted cross-web 'digital DNA' profile by mapping and aggregating identities and behaviors",
+      "status": "explicit",
+      "evidence_span": "we create the most robust, dynamic, and encrypted profile of an individual"
+    },
+    {
+      "id": "P3",
+      "text": "An API returns real-time hyper-relevant product or experience recommendations mapped to the client's format",
+      "status": "explicit",
+      "evidence_span": "Brainify's API allows any company to harness the power of digital DNA"
+    },
+    {
+      "id": "P4",
+      "text": "Tiered pricing is based on monthly API call volume, with easy multi-language integration",
+      "status": "explicit",
+      "evidence_span": "We have a tier pricing structure that's based off of the volume of API calls per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed untimely personalization",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Digital DNA profile and API",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "API-call volume pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Truly hyper-relevant personalized experiences for each user",
+      "status": "explicit",
+      "evidence_span": "deliver truly hyper-relevant experiences for every user"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Rock Out cannot distinguish between me buying a present for my friend weeks ago"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find the best products for this person at this moment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making us easily affordable for every single company"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Mailers/search/nav uses folded as applications of same digital-DNA API (§4.1.2). Team credentials and beta-customer traction excluded. Transcript ends mid-promo-code sentence (truncated/thin close). Anti-template: silo problem, DNA/API product, and volume pricing are separately revisable."
+}

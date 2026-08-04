@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:22:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits are underserved by tech and still rely on pen and paper for scheduling, volunteer tracking, and donations",
+      "status": "explicit",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "id": "P2",
+      "text": "Volunteers should be treated like retail customers because they give massive service hours and donate far more than non-volunteers",
+      "status": "explicit",
+      "evidence_span": "volunteers should be treated no differently than retail customers"
+    },
+    {
+      "id": "P3",
+      "text": "Automated volunteer-hour tracking via geofenced mobile app, self-service kiosk, and staff admin check-in",
+      "status": "explicit",
+      "evidence_span": "Civic Chance provides automated volunteer management by providing three different ways for nonprofits to track volunteer hours"
+    },
+    {
+      "id": "P4",
+      "text": "Integrated micro-donations platform automatically converts volunteers to donors using volunteer data for timing, amount, and messaging",
+      "status": "explicit",
+      "evidence_span": "the integrated micro-donations platform that will allow for nonprofits to automatically convert volunteers to donors"
+    },
+    {
+      "id": "P5",
+      "text": "Architecture uniquely serves nonprofits, volunteers, and corporations with seamless data sharing across the full market",
+      "status": "explicit",
+      "evidence_span": "Civic Champs has a database and technology architecture that's uniquely built to serve the full market, allowing for seamless data sharing between nonprofits, volunteers, and corporations"
+    },
+    {
+      "id": "P6",
+      "text": "Sold as monthly SaaS to nonprofits (and related stakeholders) in the nonprofit CRM market",
+      "status": "explicit",
+      "evidence_span": "Civic Champs is targeting the $1.7 billion CRM market for nonprofits"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underserved nonprofit volunteer engagement",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Volunteer tracking and micro-donation product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Nonprofit CRM subscription market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Seamless volunteer management and automatic conversion of volunteers to donors for greater community impact",
+      "status": "explicit",
+      "evidence_span": "looking for seamless volunteer management and a way to automatically convert your volunteers to donors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nonprofits continue to be underserved by our tech community"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically convert volunteers to donors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeting the $1.7 billion CRM market for nonprofits"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three tracking modalities treated as one volunteer-management capability enumeration (facets of automated hour tracking). Demo reflections/high-fives/corporate match folded into volunteer/donation product experience. Client traction and founder exits excluded."
+}

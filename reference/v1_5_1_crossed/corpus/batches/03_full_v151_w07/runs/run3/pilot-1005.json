@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1005",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:17:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cloud platform for developers processes large in-flight real-time data streams and pushes/broadcasts results via easy API",
+      "status": "explicit",
+      "evidence_span": "makes it easy to do two key things. To take large streams of data that are in flight, real-time, and to process them"
+    },
+    {
+      "id": "P2",
+      "text": "Social TV and similar apps need real-time big-data processing of huge concurrent audiences, not just one-way broadcast",
+      "status": "explicit",
+      "evidence_span": "That's a real-time big data problem, where you have to take that deluge of data, you have to process it, and then you have to transmit it back out"
+    },
+    {
+      "id": "P3",
+      "text": "Dashboard quant channels configure inputs, continuous processing (e.g. averages), and outputs without building the backend",
+      "status": "explicit",
+      "evidence_span": "a quant channel for broadcasting and communicating data in real time"
+    },
+    {
+      "id": "P4",
+      "text": "SDK and few lines of code link channels to apps, offloading scaling complexity",
+      "status": "explicit",
+      "evidence_span": "link the quant channel to your app through our SDK and a few lines of code"
+    },
+    {
+      "id": "P5",
+      "text": "Combined stream processing plus broadcast/push, real-time history storage, and cloud pricing lower barriers vs elite only stacks",
+      "status": "explicit",
+      "evidence_span": "we provide both data stream processing as well as data broadcast and push in one package"
+    },
+    {
+      "id": "P6",
+      "text": "Self-service developer adoption across TV, metrics, gaming, and mobile expands use beyond any single vertical",
+      "status": "explicit",
+      "evidence_span": "we're engaging developers directly through a self-service model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "real-time stream processing platform",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "complete package and low barrier pricing",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "self-service developer GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower developers to build real-time apps by gift-wrapping hard stream processing",
+      "status": "explicit",
+      "evidence_span": "This is the problem that Bright Context Platform solves, and we gift wrap it for developers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you've offloaded a huge amount of complexity to us"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dramatically lowering the barrier to entry to very sophisticated back-end technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "adopted more broadly, more quickly, and more creatively through partnering with innovative developers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Election Meter demo treated as illustration of platform; social TV need kept as demand condition for the mechanism. Three disruption claims folded into one complete-package premise (enumeration as facets of one offering). Real-time-as-trend vision not a premise."
+}

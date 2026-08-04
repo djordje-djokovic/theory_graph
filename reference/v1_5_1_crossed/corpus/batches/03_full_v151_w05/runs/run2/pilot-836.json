@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-836",
+    "coder_session_id": "session_05",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers can remotely top up and manage a contactless transit card from phone/cloud wherever they are",
+      "status": "explicit",
+      "evidence_span": "They can top up their card while on their way to the bus, while waiting for the bus from the hotel room or even from their home city, wherever and whenever they are"
+    },
+    {
+      "id": "P2",
+      "text": "The Fidesmo card integrates into operators' existing ticketing infrastructure so phones become sales channels without new physical infrastructure",
+      "status": "explicit",
+      "evidence_span": "the Videsmo card integrates seamlessly into their existing infrastructure"
+    },
+    {
+      "id": "P3",
+      "text": "MIFARE-based contactless standards cover most global ticketing systems, enabling multi-city one-card use",
+      "status": "explicit",
+      "evidence_span": "70% of all contactless ticketing systems in the world are based on MyFair, and we intend to take advantage of that"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution and monetization run through public-transport operators with a percentage take on ticket sales",
+      "status": "explicit",
+      "evidence_span": "we intend to sell a lot of tickets and take a percentage on those"
+    },
+    {
+      "id": "P5",
+      "text": "An open API platform lets third parties add loyalty, hotel-key, and secure-access services on the same card",
+      "status": "explicit",
+      "evidence_span": "Fidesmo is, at the core, an API. We invite other companies to build services on top of our platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cloud-managed transit card",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "operator ticket take-rate",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "open API multi-service platform",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One connected card that simplifies multi-city transit and related services via cloud management",
+      "status": "explicit",
+      "evidence_span": "We will make one card to replace them all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's easy to use, and it gives them control"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every phone becomes a sales channel"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we want everyone to use our card or card space on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-pitch (IP/workflow mention truncated). ASR MyFair/Videsmo corrected in premise text; evidence spans verbatim. Market-size and Oyster-card counts treated as sizing/traction. Future phone embedding treated as aspiration. Singletons D2/D3 retained as independently revisable monetization and platform-extension modules."
+}

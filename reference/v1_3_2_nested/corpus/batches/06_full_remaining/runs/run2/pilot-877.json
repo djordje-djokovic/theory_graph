@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Restaurants sell perishable seats yet charge the same price at busy and empty times, wasting inventory",
+      "status": "explicit",
+      "evidence_span": "you end up paying the exact same price for your meal at both those occasions. Well, this doesn't make economic sense, at least not for a perishable inventory"
+    },
+    {
+      "id": "P2",
+      "text": "About 40% of restaurant inventory is underutilized without yield management, contributing to failure and food waste",
+      "status": "explicit",
+      "evidence_span": "about 40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "id": "P3",
+      "text": "ResGuru dynamically changes prices from demand and supply as a restaurant GDS",
+      "status": "explicit",
+      "evidence_span": "global distribution system for restaurants, which allows them to change their prices automatically based on demand and supply"
+    },
+    {
+      "id": "P4",
+      "text": "POS-integrated diary consolidates channels and shows utilization and RevPASH analytics",
+      "status": "explicit",
+      "evidence_span": "all my reservations, all my food orders are consolidated from across all the online and offline channels"
+    },
+    {
+      "id": "P5",
+      "text": "Engine forecasts demand from many variables and history to price each time slot under owner goals and rules",
+      "status": "explicit",
+      "evidence_span": "21 different variables, macro and micro data points, and along with historical trends to forecast the demand"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Perishable underused restaurant capacity",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Yield-management pricing platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Raise restaurant utilization and revenue through automatic demand-based pricing",
+      "status": "explicit",
+      "evidence_span": "optimize their revenue"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Diners may get better deals at off-peak times",
+      "evidence_span": "get you better deals in your restaurants"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lost opportunity for the restaurants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "change their prices automatically based on demand and supply"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Independent run: food-waste/failure folded into underutilization. Pilot KPI lifts as traction of mechanism. Two-domain partition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-877",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

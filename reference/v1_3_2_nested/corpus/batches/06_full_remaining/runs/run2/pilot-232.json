@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Privacy laws and compliance make sharing and accessing data the biggest bottleneck for building AI software",
+      "status": "explicit",
+      "evidence_span": "data privacy to be the biggest challenge for companies to build AI software today"
+    },
+    {
+      "id": "P2",
+      "text": "BetterData produces anonymized synthetic data usable like real data for analytics and ML",
+      "status": "explicit",
+      "evidence_span": "synthetic data can be used just like the real data for your analytics, for your machine learning"
+    },
+    {
+      "id": "P3",
+      "text": "Confidential computing and tokenization keep raw customer data unread by BetterData and owned by the company",
+      "status": "explicit",
+      "evidence_span": "at no point in time does better data access to read or download the data set itself"
+    },
+    {
+      "id": "P4",
+      "text": "Parties can collaborate on encrypted datasets to produce combined synthetic customer profiles",
+      "status": "explicit",
+      "evidence_span": "companies can collaborate on data sets together and understand more about their combined and common customers"
+    },
+    {
+      "id": "P5",
+      "text": "Sold as licensing/support across on-prem and cloud with API or web access",
+      "status": "explicit",
+      "evidence_span": "licensing and support business model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data access delay problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Privacy-preserving synthetic platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Licensing GTM",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster data access and safe collaboration without exposing private data",
+      "status": "explicit",
+      "evidence_span": "access data in days and not months, retain full ownership over their data, and safely collaborate with others"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't let data slow you down"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "customer data remains encrypted to all parties involved"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "APIs integrated directly into your data science pipelines"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Confidential computing and tokenization merged into one ownership/privacy mechanism this run. Market-size and pilot traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-232",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

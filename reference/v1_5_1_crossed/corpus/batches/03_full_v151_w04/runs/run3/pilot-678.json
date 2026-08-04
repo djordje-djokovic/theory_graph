@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-678",
+    "coder_session_id": "session_04",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Lead, arsenic, mercury and other heavy metals contaminate water across US cities and about 10% of the world, while fixing pipes (e.g. Flint) takes years and tens of millions of dollars",
+      "status": "explicit",
+      "evidence_span": "there is actually lead, arsenic, mercury, and other heavy metals in cities that we've never even heard of"
+    },
+    {
+      "id": "P2",
+      "text": "Common pitcher filters and under-sink reverse-osmosis systems leave mercury/lead/salt, take hours to install, and deliver only about 20% efficiency",
+      "status": "explicit",
+      "evidence_span": "these kind of filters do not clean out any other smaller particles, such as mercury, lead, or even salt"
+    },
+    {
+      "id": "P3",
+      "text": "Watero is a next-generation reverse-osmosis purifier with four US-made filters and a recycling continuous cycle that reaches about 80% efficiency and demonstrably low TDS on lead and salt water",
+      "status": "explicit",
+      "evidence_span": "we're able to achieve 80% efficiency. That's already four times better than your traditional reverse osmosis systems"
+    },
+    {
+      "id": "P4",
+      "text": "Watero is a Wi-Fi smart device controllable from a smartphone for monitoring TDS and sharing results",
+      "status": "explicit",
+      "evidence_span": "we're also a smart device where your smartphone is actually enabled with the device through Wi-Fi"
+    },
+    {
+      "id": "P5",
+      "text": "The unit is offered at a $399 pre-sale with $80 replacement filter sets and roughly $0.03 per serving versus bottled water",
+      "status": "explicit",
+      "evidence_span": "we're able to offer this at a pre-sale for $399, available in June of this year"
+    },
+    {
+      "id": "P6",
+      "text": "Watero partners with the nonprofit Water Is Life to donate purified water to thousands of families",
+      "status": "explicit",
+      "evidence_span": "We're also partnering up with a global nonprofit called Water Is Life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contaminated water and weak filters",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Watero RO purifier and smart control",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "pre-sale pricing and nonprofit partnership",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clean, drinkable pure water for households facing contamination, at a fraction of bottled-water cost",
+      "status": "explicit",
+      "evidence_span": "Our solution is to provide clean water"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Donating purified water access to thousands of families via Water Is Life",
+      "evidence_span": "We're going to be donating to thousands of families through our campaign"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a fraction of that can actually solve the contaminated water and actually provide pure water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll be able to remove particles such as bacteria, virus, lead, and results pure H2O"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Watero, it's going to give you $0.03"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "TDS displays, filter meters, and four-filter cascade folded into the RO efficiency premise (v1.5.1 §4.1.7–8). Pitcher vs under-sink pains kept as one inadequate-alternatives bundle. Anti-template: contamination problem, purifier tech, and commercial/nonprofit go-to-market are separately revisable."
+}

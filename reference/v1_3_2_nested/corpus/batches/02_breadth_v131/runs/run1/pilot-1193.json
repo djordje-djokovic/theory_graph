@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1193",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers can request local services and book quoted prices and appointment times online",
+      "status": "explicit",
+      "evidence_span": "it's a website where you can request virtually any kind of local service"
+    },
+    {
+      "id": "P2",
+      "text": "Businesses are charged only when a consumer books and work is done (full pay-for-performance)",
+      "status": "explicit",
+      "evidence_span": "we're only going to charge businesses if a consumer books the job with them and actually does work"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers need rich trust information—social recommendations, reviews, background checks—before booking",
+      "status": "explicit",
+      "evidence_span": "They want to know who do their friends and family recommend. They want references. They want to see the ratings and reviews from across the web. They want background checks"
+    },
+    {
+      "id": "P4",
+      "text": "High-quality local provider supply must be built market by market",
+      "status": "explicit",
+      "evidence_span": "we've been acquiring service professionals, the same kind of high quality providers from accountants through yard workers in Seattle"
+    },
+    {
+      "id": "P5",
+      "text": "An embeddable widget exposes the provider network to partner sites with generous revenue share",
+      "status": "explicit",
+      "evidence_span": "we're creating an embeddable widget which basically makes our high-quality service provider network available to any website"
+    },
+    {
+      "id": "P6",
+      "text": "Partners can customize occupations, look-and-feel, and recommended providers in the widget",
+      "status": "explicit",
+      "evidence_span": "we can actually allow you to customize the widget so that it makes sense for your users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Local services booking marketplace",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pay-for-performance provider economics",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Geographic provider coverage",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Embeddable partner distribution",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient online booking of local services with price transparency",
+      "status": "explicit",
+      "evidence_span": "increase the price transparency and make it very easy to schedule jobs online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "that's why we think it was really easy to sign up service providers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "which is just incredibly convenient"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You only pay if you actually make money from a customer that we provided you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Red Beacon is open in Seattle now"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it is a very generous revenue share"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Fundraising/bootstrap narrative and VC names excluded. Partner media logos treated as channel evidence for P5, not traction premises. Live demo narration by guest not coded as additional premises."
+}

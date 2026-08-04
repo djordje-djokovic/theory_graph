@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise knowledge is siloed in emails, IMs, and conversations, so employees repeat work and make mistakes",
+      "status": "explicit",
+      "evidence_span": "all the knowledge was siloed. It was siloed in emails, IMs, conversations. There was no good knowledge base."
+    },
+    {
+      "id": "P2",
+      "text": "Melding Q&A power with wiki flexibility creates an organically growing, easily searchable knowledge base organized around questions",
+      "status": "explicit",
+      "evidence_span": "So we take the power of a Q&A site, meld it with the flexibility of wikis to create a really organically growing, really easily searchable knowledge base for the enterprise."
+    },
+    {
+      "id": "P3",
+      "text": "Verified corporate email sign-up gates each company network",
+      "status": "explicit",
+      "evidence_span": "signs up for Opsy using their corporate email address, which we then verify"
+    },
+    {
+      "id": "P4",
+      "text": "Endorsement voting and enterprise-appropriate anonymity fit how knowledge is validated and surfaced inside companies",
+      "status": "explicit",
+      "evidence_span": "We have a voting mechanic that allows people to stand behind and endorse certain answers, which is very important in the enterprise context."
+    },
+    {
+      "id": "P5",
+      "text": "A fast, powerful search engine lets people find previous answers",
+      "status": "explicit",
+      "evidence_span": "we have a very fast, very powerful search engine that allows people to find previous answers to questions that they have already"
+    },
+    {
+      "id": "P6",
+      "text": "Deep email integration lets users ask and answer by email, extracts listserv content into the index, and routes questions to likely answerers",
+      "status": "explicit",
+      "evidence_span": "We know that people and companies live in their Outlook email boxes, and so that's where we'd like to interact and integrate with them."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed enterprise knowledge",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Q&A knowledge platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Email workflow integration",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People at companies share knowledge and find the answers they need",
+      "status": "explicit",
+      "evidence_span": "Opsy's mission is to help people at companies share knowledge."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I found myself repeating work, making mistakes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "really organically growing, really easily searchable knowledge base for the enterprise"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people and companies live in their Outlook email boxes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D1 retained: the siloed-knowledge need is an independently revisable market module. Partition happens to be need/product/channel; justification per 4.5(5): the problem framing (D1) can be re-examined without touching product features (D2), and the email-integration bet (D3) is tested and revised separately from the web platform, as the speaker's roadmap ('spend the next few weeks nailing the Q&A platform') shows. The 'eventual goal' of being the first place people turn is vision framing, left uncoded per v1.3.2 clarification 4. Seed round, YC pedigree, and waitlist signups excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

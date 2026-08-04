@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-688",
+    "coder_session_id": "session_04",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Huge comedy fan interest exists, but streaming has not caught up—only a small share of comedy content and market is available versus the old album era",
+      "status": "explicit",
+      "evidence_span": "you only have about 10% of the comedy that's available and only 1% of the market"
+    },
+    {
+      "id": "P2",
+      "text": "Laughly is a streaming app built for stand-up/spoken-word comedy with a large catalog of comedians and tracks searchable by artist, album, and track",
+      "status": "explicit",
+      "evidence_span": "the very first app that's built from the ground up to focus on streaming comedy or specifically spoken word"
+    },
+    {
+      "id": "P3",
+      "text": "Spoken Word Project technology transcribes jokes to enable profanity filtering and topic-based radio stations",
+      "status": "explicit",
+      "evidence_span": "we have a technology which allows us to transcribe every single joke into text"
+    },
+    {
+      "id": "P4",
+      "text": "Ad-supported free tier plus $7.99/month subscription for ad-free, offline play, and exclusive content",
+      "status": "explicit",
+      "evidence_span": "for $7.99 a month, you get ad-free, you get offline play, and you get access to exclusive content"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue share with comedians plus distribution via top record labels so artists promote Laughly to their followers",
+      "status": "explicit",
+      "evidence_span": "we share revenue with them for every single stream, so these guys are promoting these apps for us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "comedy streaming supply gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "spoken-word streaming app and transcription tech",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription and comedian-label distribution",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Comedy fans get a dedicated spoken-word streaming experience with deep catalog, filters, and topic stations",
+      "status": "explicit",
+      "evidence_span": "built from the ground up streaming app focused on stand-up comedy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That creates a huge problem for all these big fans of comedy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create radio stations based on the subject matter of the joke itself"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "By being able to work with the artist to promote their material, not only do we drive volume and drive scale very quickly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Facebook/Instagram interest stats treated as market framing folded into supply-gap premise where they motivate demand; catalog counts excluded as traction. Profanity filter and topic radio kept as uses of the transcription mechanism (v1.5.1 §4.1 / applications rule) inside P3. Anti-template: problem, product/tech, and monetization/distribution separately revisable."
+}

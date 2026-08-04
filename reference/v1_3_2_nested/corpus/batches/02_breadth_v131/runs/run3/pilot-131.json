@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:48:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Job-costing businesses drown in manual, error-prone AP data entry across disconnected roles",
+      "status": "explicit",
+      "evidence_span": "more than 80 hours a month of manual data entry, error-prone double entry throughout the process, and limited visibility for management"
+    },
+    {
+      "id": "P2",
+      "text": "High-resolution bill extraction plus models turn invoices into structured, contextualized data",
+      "status": "explicit",
+      "evidence_span": "expose that partially reconciled data to a series of deterministic language models"
+    },
+    {
+      "id": "P3",
+      "text": "Users teach the system through localized one-shot learning in the product",
+      "status": "explicit",
+      "evidence_span": "users teach the system by virtue of their actions in it using localized one-shot learning"
+    },
+    {
+      "id": "P4",
+      "text": "End-to-end AP software routes, codes, syncs, pays, and preserves an audit trail",
+      "status": "explicit",
+      "evidence_span": "The comprehensiveness of our workflow software allows the tech, bleeding edge though it is, to fade into the background"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual AP burden",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Learning bill-reading system",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Full AP workflow software",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-enriched AP operations that save time and improve financial confidence",
+      "status": "explicit",
+      "evidence_span": "a more efficient workforce, better data for the organization, and greater confidence in his financial operations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "saved 70 hours a month on AP tasks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture all of their data with no manual entry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simply prosecute their AP tasks more effortlessly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "One-shot learning split from extraction models as a distinct adaptive mechanism. Payment discount detail absorbed into P4 workflow."
+}

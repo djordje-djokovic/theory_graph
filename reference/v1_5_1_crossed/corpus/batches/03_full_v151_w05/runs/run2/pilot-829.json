@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-829",
+    "coder_session_id": "session_03",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Retail category managers cannot manually keep thousands of SKUs competitive and profitable against many online rivals",
+      "status": "explicit",
+      "evidence_span": "he's got to do that for 25,000 products every single hour. And that is a non-trivial problem"
+    },
+    {
+      "id": "P2",
+      "text": "A SaaS price-optimization platform monitors competitive positioning and sets dynamic prices to grow revenue without losing margin dollars",
+      "status": "explicit",
+      "evidence_span": "We are a price optimization company"
+    },
+    {
+      "id": "P3",
+      "text": "Strategy simulation uses historical data to project revenue and profit before retailers submit pricing strategies",
+      "status": "explicit",
+      "evidence_span": "Boomerang has looked up the past historical data and has given me some projections in terms of revenue and profits"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is monthly SaaS subscription fees from large e-commerce retailers",
+      "status": "explicit",
+      "evidence_span": "We are a SaaS product, which means we monetize with monthly subscription fees"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "retail pricing analytical divide",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "dynamic price optimization product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS subscription monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "E-commerce retailers price for competitiveness and profitability at scale",
+      "status": "explicit",
+      "evidence_span": "dynamically price your items for competitiveness and profitability"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's a huge analytical divide"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You cannot achieve these results consistently with just price matching"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "monetize with monthly subscription fees"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Competitive dashboard, strategy builder, and what-if simulation folded as one optimization product surface with simulation as enabling cascade detail (v1.5.1 §4.1.7). Canon Rebel case and sales/margin lifts excluded as traction evidence of the mechanism. Bookings figures excluded per §4.2. Anti-template: problem, product, and SaaS monetization separately revisable."
+}

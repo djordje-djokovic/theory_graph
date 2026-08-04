@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-938",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:12:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Messaging forces a text-versus-voice choice: voice transcription errors and voice-only apps fail in quiet settings",
+      "status": "explicit",
+      "evidence_span": "every one of these messages is either in text format or voice format"
+    },
+    {
+      "id": "P2",
+      "text": "Every Talks message always includes both text and voice so recipients can read or listen and keep original audio if transcription errs",
+      "status": "explicit",
+      "evidence_span": "Talks incorporates text and voice into every message"
+    },
+    {
+      "id": "P3",
+      "text": "The app supports rich sharing to social networks and media types including pictures, video, doodles, music, and location in a simple UI",
+      "status": "explicit",
+      "evidence_span": "a fully featured messaging app that supports pictures, voice, video, doodles, music, and location"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-platform launch and sending to recipients who lack the app increases virality",
+      "status": "explicit",
+      "evidence_span": "talks doesn't require the receiver to have the app so I can send messages literally to anyone"
+    },
+    {
+      "id": "P5",
+      "text": "Voice cloning learns the user's voice so messages and posts can be read aloud in their voice or celebrity voices",
+      "status": "explicit",
+      "evidence_span": "we created a technology called voice cloning"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "text-or-voice messaging tradeoff",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "dual-format messaging app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "cross-platform viral distribution",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "voice cloning",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People communicate without choosing between typing and talking because every message has both formats",
+      "status": "explicit",
+      "evidence_span": "you won't have to choose whether you type or talk or read or listen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "built talks to disrupt everything"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Talks always has both formats in every message"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This will help talks be more viral than any other messaging app"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "read out in your voice or the voice of your favorite celebrity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Text/voice marketplace problems folded as one choice-tradeoff premise (§4.1.6). Dual-format core kept separate from rich media cascade folded into one messaging-app extension premise. No-app-required + four platforms folded as viral distribution. Voice cloning split as separately claimed speech module. Team download counts excluded as credentials (§4.2). Free celebrity promo as packaging. Anti-template: problem, messaging product, distribution, and cloning separately revisable."
+}

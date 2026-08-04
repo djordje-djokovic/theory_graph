@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Privacy regulation and internal privacy/legal/security processes make data access slow for AI and data teams",
+      "status": "explicit",
+      "evidence_span": "It takes a long time to get access to data. Data is either locked away, or they have to go through a long process, including privacy engineering, legal, and security"
+    },
+    {
+      "id": "P2",
+      "text": "Private real data can be converted into 100% anonymized synthetic data with the same properties",
+      "status": "explicit",
+      "evidence_span": "We convert private real data into 100% anonymized synthetic data that has the same properties as the real data"
+    },
+    {
+      "id": "P3",
+      "text": "Confidential computing lets computation run on encrypted data so BetterData cannot see the data",
+      "status": "explicit",
+      "evidence_span": "We introduced confidential computing, where you can compute on encrypted data, so companies don't have to trust us with data because we can't even see it"
+    },
+    {
+      "id": "P4",
+      "text": "Data tokenization keeps ownership with the company via tamper-proof locks",
+      "status": "explicit",
+      "evidence_span": "data tokenization. Companies own their data fully, and we have tamper-proof locks for that as well"
+    },
+    {
+      "id": "P5",
+      "text": "Encrypted multi-party collaboration can combine datasets and return shared synthetic data without revealing raw data",
+      "status": "explicit",
+      "evidence_span": "safely collaborate with others, all while their customer data remains encrypted to all parties involved"
+    },
+    {
+      "id": "P6",
+      "text": "Licensing and support business with on-prem, private, and public cloud plus API or web interface",
+      "status": "explicit",
+      "evidence_span": "We have a licensing and support business model, and we support on-premise, private, and public cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Privacy-constrained data access",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic data and confidential compute",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Licensing deployment model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies innovate on data in days while protecting customer privacy",
+      "status": "explicit",
+      "evidence_span": "allows you to innovate on data in days and not months"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This slows down innovation a lot"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "innovate on data in days and not months"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can either use our APIs integrated directly into your data science pipelines or the web interface"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision that most AI models will train on synthetic data excluded per v1.3.2 clarification 4. Pilot counts and grants treated as traction/credentials. QA report and ML parity folded into synthetic-data mechanism.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-232",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

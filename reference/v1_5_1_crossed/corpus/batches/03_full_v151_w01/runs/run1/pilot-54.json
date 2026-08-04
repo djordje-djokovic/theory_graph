@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-54",
+    "coder_session_id": "session_03",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aviation must reach net-zero by 2050 but current trends leave a multi-gigaton CO2 gap",
+      "status": "explicit",
+      "evidence_span": "there's an urgent need to decarbonize aviation. At the Paris Agreement, in France, where we're based, in 2015, the entire industry agreed to meet net zero emissions by 2050. But if you see the trend of today's aviation market, you get three gigatons CO2 equivalent per year in 2050"
+    },
+    {
+      "id": "P2",
+      "text": "Hydrogen is preferred over batteries and SAF for balancing energy efficiency with aircraft range/speed/payload",
+      "status": "explicit",
+      "evidence_span": "hydrogen in the middle has good enough energy efficiency and a good enough aircraft performance. That's why we are choosing hydrogen at Beyond Aero to develop our first aircraft"
+    },
+    {
+      "id": "P3",
+      "text": "Start with light aircraft then a hydrogen-electric business jet with comparable mission performance and no direct emissions",
+      "status": "explicit",
+      "evidence_span": "we need to start from the light aircraft. That's why today I'm very excited to introduce you one. One is our business jet but fully electric thanks to hydrogen technology"
+    },
+    {
+      "id": "P4",
+      "text": "Scalable powertrain architecture (H2 tanks, fuel cell, air supply, batteries, dual motors) with aircraft integration and thermal management",
+      "status": "explicit",
+      "evidence_span": "This is possible thanks to our scalable portion architecture. Basically, it's three times that hydrogen truck, but for an aircraft. So we supply H2 tanks, H2 fuel cell, air supply system, and some batteries, and two electric motors for this architecture"
+    },
+    {
+      "id": "P5",
+      "text": "Working with European airports to make hydrogen available for the jet",
+      "status": "explicit",
+      "evidence_span": "an important part of Beyond Activity is to work with European airports for them to be ready for our jet. So 200 airports handle 80% of the traffic in Europe, and we're working with 50 of them to bring hydrogen for our aircraft"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Aviation net-zero gap and hydrogen choice",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Hydrogen-electric aircraft powertrain",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Airport hydrogen readiness",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Electric hydrogen aviation that matches business-jet missions without direct emissions",
+      "status": "explicit",
+      "evidence_span": "we propose comparable performance without the direct emissions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-run scale to regional/commercial platforms and large CO2 reduction contribution",
+      "evidence_span": "we'll scale this to regional and commercial platforms. At the end of the day, Beyond Aero has a possible CO2 reduction contribution possible of 350 megaton of CO2 equivalent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are convinced aviation will be electric. That's a solution to fill this gap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "business jet but fully electric thanks to hydrogen technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring hydrogen for our aircraft"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Battery vs SAF comparison folded into hydrogen-choice premise (P2). LOI amounts excluded as traction. Singleton D3 retained as airport infrastructure pathway distinct from airframe."
+}

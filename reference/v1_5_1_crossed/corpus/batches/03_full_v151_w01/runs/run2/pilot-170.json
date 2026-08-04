@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "coder_session_id": "session_06",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:16:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Jobsite measurement and process errors waste large shares of materials and over $100B yearly in construction",
+      "status": "explicit",
+      "evidence_span": "almost 20% of materials on a given job site being completely wasted"
+    },
+    {
+      "id": "P2",
+      "text": "Rock Jobsite mobile app captures measurements, calculators, annotations, and tasks for every worker, eliminating many paper steps",
+      "status": "explicit",
+      "evidence_span": "Rock Jobsite app is a simple and easy to use platform that works on any mobile device"
+    },
+    {
+      "id": "P3",
+      "text": "T1 Tomahawk digital tape captures measurements on a display and syncs them wirelessly to the app",
+      "status": "explicit",
+      "evidence_span": "T1 Tomahawk really represents the core of our hardware ecosystem"
+    },
+    {
+      "id": "P4",
+      "text": "M1 caliper clamps onto contractors' existing saws to display the cut measurement accurately",
+      "status": "explicit",
+      "evidence_span": "M1 caliper is an augmented tool that clamps onto existing saws that contractors already own"
+    },
+    {
+      "id": "P5",
+      "text": "Printed QR labels link cut materials to the app location for worker info and traceability",
+      "status": "explicit",
+      "evidence_span": "print out a QR code label, which has both information printed on the label for a worker"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "construction measurement waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Rock Jobsite software",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "connected measurement hardware",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce jobsite errors and streamline measurement-to-cut operations so work is measured once and cut once",
+      "status": "explicit",
+      "evidence_span": "significantly reduce these errors and streamline operations on the job site"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over $100 billion wasted in construction each year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating many of the paper steps in the process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "takes out what I normally have to hang you off a ladder and write down measurements"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vision 'digital everything' framing not coded as premise. Hardware devices split as distinct capture/execution modules; shared app is separate software domain. Founder bio excluded."
+}

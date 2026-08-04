@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-866",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile email UIs still expose cluttered formats, metadata, and repeating signatures unlike messaging",
+      "status": "explicit",
+      "evidence_span": "when you scroll down this email, you will need to go through all these frustrating formats, annoying metadata, and repeating signatures again and again"
+    },
+    {
+      "id": "P2",
+      "text": "Intelligent parsing reformats inbox into chat-like conversation bubbles with optional original view",
+      "status": "explicit",
+      "evidence_span": "MailTime's intelligent content parsing engine can reformat all your emails into this conversation view so that you can mail like what you do, like text messaging"
+    },
+    {
+      "id": "P3",
+      "text": "In-thread @mentions, task lists, and group-chat-like participant management turn email into actionable teamwork",
+      "status": "explicit",
+      "evidence_span": "you can also mention someone with an at symbol to assign a task"
+    },
+    {
+      "id": "P4",
+      "text": "Length warnings nudge users to keep emails short enough to read",
+      "status": "explicit",
+      "evidence_span": "when I'm trying to send this super long email, Mailtime just told me that it's too long, didn't read"
+    },
+    {
+      "id": "P5",
+      "text": "Mail syncs directly with the user's mail server without cloud content storage; freemium charges $0.99 for extra accounts",
+      "status": "explicit",
+      "evidence_span": "we send and receive every single email just directly between your mail server and Mailtime on your phone. So we don't touch any content"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cluttered smartphone email",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "chat-style parsed mail and tasks",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "direct-server security and freemium",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make smartphone email as easy as text messaging without desktop clutter",
+      "status": "explicit",
+      "evidence_span": "It's a way how we design email for your smartphone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "email is the most important thing on your smartphone"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can mail like what you do, like text messaging"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So it's super safe"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Format/metadata/signature clutter folded as one mobile-email pain. Conversation view + tasks/@mentions + length nudge treated as related product capabilities that could fail separately (split per tie-break). Security path and freemium pricing packaged as commercial/trust condition. TalkBox growth numbers excluded as biography/traction. Time-limited promo excluded."
+}

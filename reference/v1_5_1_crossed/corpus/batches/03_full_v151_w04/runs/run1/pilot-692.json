@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-692",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:53:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hiring fails because candidates and employers decide on the wrong data: hidden jobs and soft-skill mismatch while resumes show only hard skills",
+      "status": "explicit",
+      "evidence_span": "everyone, both candidates and employers, are making decisions based on the wrong data"
+    },
+    {
+      "id": "P2",
+      "text": "Cognitive assessments best predict job performance but are long, expensive, and slow, so they go unused",
+      "status": "explicit",
+      "evidence_span": "cognitive assessments, are the single most accurate predictors of job performance across the board"
+    },
+    {
+      "id": "P3",
+      "text": "Science-based mobile games measure and quantify soft skills into a cognitive fingerprint in about 20 minutes",
+      "status": "explicit",
+      "evidence_span": "In just 20 minutes, our science-based mobile games measure and quantify soft skills"
+    },
+    {
+      "id": "P4",
+      "text": "Predictive models built from a company's top performers match candidates likely to perform similarly, filtering irrelevant demographic signals",
+      "status": "explicit",
+      "evidence_span": "we take the predictive model based off of Aiden and cross-reference it against everyone on our platform who's played the game"
+    },
+    {
+      "id": "P5",
+      "text": "Companies pay a setup fee plus subscription or sourcing fees; games are free for candidates to play",
+      "status": "explicit",
+      "evidence_span": "Companies like Cloud Co pay us a one-time setup fee for creating the predictive model based on their top performers, and then a subscription"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wrong-data hiring and unused cognitive tests",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "game-based soft-skill matching",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "setup subscription sourcing monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help companies build world-class teams by matching on predictors of job success",
+      "status": "explicit",
+      "evidence_span": "help companies build world-class teams"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Candidates learn about their own unique talents by playing for free",
+      "evidence_span": "free for anyone to download and play to learn more about themselves and their own unique talents"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "46% of hires fail"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match perfect fit candidates to top jobs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a sourcing fee for bringing undiscovered talent from elsewhere on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hidden-job and soft-skill-mismatch sides folded as one wrong-data problem-set (§4.1.6). Mini-game skill examples folded as feature cascade of the cognitive-fingerprint games (§4.1.7). Harvard bio excluded. Anti-template: problem, matching product, and commercial model separately revisable."
+}

@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile teams cannot get group work done with email alone when they need files, talk, and calendar",
+      "status": "explicit",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "id": "P2",
+      "text": "Structured messaging stream aggregates business tools: files, polls, Dropbox/Drive, calendar, and search over long conversations",
+      "status": "explicit",
+      "evidence_span": "what do we need to add to this for business tools to really get things done together as a team?"
+    },
+    {
+      "id": "P3",
+      "text": "Invites via contacts/social with deep links plus one-tap conference calling when async is not enough",
+      "status": "explicit",
+      "evidence_span": "sometimes all of this back and forth is not enough. And all this asynchronous communication, which we all live and love and work with, just isn't enough"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Email gap for mobile teams",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Structured stream tools",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Invites and live calling",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce email by structuring team communication so work gets done",
+      "status": "explicit",
+      "evidence_span": "reducing email and moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get things done together as a team"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I need to talk to you guys. I need to actually have a synchronous conversation"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Invite+calling grouped as participation/sync module separate from core stream tools. Feature list within P2 folded per §4.1(5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "epistemic_markers": []
+}

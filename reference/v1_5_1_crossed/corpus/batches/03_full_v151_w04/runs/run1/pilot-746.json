@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-746",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Field professionals collect site data with pen and paper, producing messy sketches that must be recreated on desktop CAD, wasting repeated effort",
+      "status": "explicit",
+      "evidence_span": "he's doing the same thing two or even three times, once or twice on paper and again on the computer"
+    },
+    {
+      "id": "P2",
+      "text": "ArcSight converts freehand iPad sketches into precise geometry in real time with dimensions, recognizing line/arc combinations and tangency",
+      "status": "explicit",
+      "evidence_span": "ArcSight converts his freehand input into perfect, precise geometry"
+    },
+    {
+      "id": "P3",
+      "text": "Users can load blueprints, sketch and measure distances/angles, and attach photos at locations so field data stays organized and exportable to desktop design software",
+      "status": "explicit",
+      "evidence_span": "he can sketch and measure on top of it"
+    },
+    {
+      "id": "P4",
+      "text": "Basic app launches free on the App Store; Pro will add advanced features, cloud service, and coworker collaboration/sharing",
+      "status": "explicit",
+      "evidence_span": "we are launching ArcSight Basic at App Store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "paper field investigation waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "realtime sketch-to-CAD field app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "free basic and cloud Pro packaging",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Field professionals capture organized, precise site data once and avoid redoing work on the desktop",
+      "status": "explicit",
+      "evidence_span": "This totally eliminates the need to recreate everything from scratch"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All this math, wasted effort"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That is a huge time saver"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "professionals can create and organize data, and also to collaborate and share with their coworkers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Outdated blueprints, pen/paper mess, and triple-entry CAD recreation folded as one field-workflow problem (v1.5.1 §4.1.6). Real-time geometry recognition and blueprint/photo/measure/export tools folded as one ArcSight product mechanism with feature cascade (§4.1.7). Engineering-experience credentials and $200B industry size treated as framing. Free Basic vs Pro cloud/collaborate as packaging module. Anti-template: problem, product, and packaging separately revisable."
+}

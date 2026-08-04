@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-812",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:38:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise rapid prototyping is slowed by fragmented machine software, operators, and file-exchange workflows",
+      "status": "explicit",
+      "evidence_span": "they go back and forth with Excel files, spreadsheets, file shares. It's a very cumbersome process"
+    },
+    {
+      "id": "P2",
+      "text": "Manufacturing is decentralizing across multiple factories and locations",
+      "status": "explicit",
+      "evidence_span": "manufacturing is decentralizing. Now you don't have engineers in one location. You have multiple factories and engineers in different locations"
+    },
+    {
+      "id": "P3",
+      "text": "A cloud manufacturing platform connects machines and workflows for one-click manufacturing anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "connecting all these machines and workflows in the cloud, anytime, anywhere"
+    },
+    {
+      "id": "P4",
+      "text": "Designers can render designs for many machines in the cloud and remotely take over ready machines without local USB/SD workflows",
+      "status": "explicit",
+      "evidence_span": "instead of having to deal with all the different software, I can instantly click on the different manufacturers for many, many different machines and instantly render it"
+    },
+    {
+      "id": "P5",
+      "text": "The platform also controls assembly workflows and can duplicate factories across sites",
+      "status": "explicit",
+      "evidence_span": "It's also controlling the workflow, the assembly"
+    },
+    {
+      "id": "P6",
+      "text": "Monetized via per-site enterprise licenses",
+      "status": "explicit",
+      "evidence_span": "we charge 200K per site license"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented multi-site manufacturing workflow",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cloud machine and workflow control platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise site licensing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Go from design to a real manufactured object instantly, anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "taking an idea to a real object instantly, anytime, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cumbersome process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one-click manufacturing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to be more efficient as they scale worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Prior 3D-printing OS traction and named enterprise customers treated as evidence of mechanism/GTM, not coded as separate premises beyond site-license model. Anti-template justified by distinct workflow problem, cloud platform, and licensing modules."
+}

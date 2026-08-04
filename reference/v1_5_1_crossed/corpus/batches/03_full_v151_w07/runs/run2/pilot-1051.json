@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1051",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people never meticulously check bills, so they lose money to hidden charges, errors, forgotten subscriptions, scams, and fraud that banks only partly catch",
+      "status": "explicit",
+      "evidence_span": "We almost never check our bills"
+    },
+    {
+      "id": "P2",
+      "text": "BillGuard daily-scans registered cards with many automated tests and alerts users when transactions need review",
+      "status": "explicit",
+      "evidence_span": "BillGuard will do a daily scan of your credit card activity and email you when your attention is required"
+    },
+    {
+      "id": "P3",
+      "text": "People-powered flags, web complaints, and merchant reliability scores feed collective knowledge so one-click flagging protects others",
+      "status": "explicit",
+      "evidence_span": "What if you could simply get an alert any time a charge on your bill is flagged by anyone else out there on theirs"
+    },
+    {
+      "id": "P4",
+      "text": "Better Than Free freemium: primary card free, premium unlimited cards later for a monthly fee",
+      "status": "explicit",
+      "evidence_span": "We call it Better Than Free"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution expands via direct consumers plus bank embedding and identity-theft/antivirus partners",
+      "status": "explicit",
+      "evidence_span": "we're in talks with three of the top US banks to deliver BillGuard as a native part of their banking experience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unchecked bill leakage and fraud",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "people-powered bill antivirus",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Better Than Free and partner distribution",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers stop losing money on bad bill charges by being safer together",
+      "status": "explicit",
+      "evidence_span": "we're now safer together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the average American will lose over $300 this year to stuff we simply miss"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the world's first antivirus for bills"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when you start using BillGuard, you stop losing money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript ends mid-CTA (truncated=true). Hidden charges/errors/subscriptions/scams/fraud folded as one bill problem (§4.1.6). Daily scan, metadata, cancel help, recurring filters folded into antivirus cascade; collective flagging kept as core people-powered mechanism package of that product. Anti-template: problem, product, and freemium+distribution separately revisable."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-232",
+    "coder_session_id": "session_03",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Privacy regulation and fines make getting usable data for AI slow (privacy engineering, legal, security)",
+      "status": "explicit",
+      "evidence_span": "It takes a long time to get access to data. Data is either locked away, or they have to go through a long process, including privacy engineering, legal, and security"
+    },
+    {
+      "id": "P2",
+      "text": "Platform converts private real data into anonymized synthetic data with the same properties",
+      "status": "explicit",
+      "evidence_span": "We convert private real data into 100% anonymized synthetic data that has the same properties as the real data"
+    },
+    {
+      "id": "P3",
+      "text": "Confidential computing lets jobs run on encrypted data so BetterData cannot see customer data",
+      "status": "explicit",
+      "evidence_span": "We introduced confidential computing, where you can compute on encrypted data, so companies don't have to trust us with data because we can't even see it"
+    },
+    {
+      "id": "P4",
+      "text": "Data tokenization keeps companies owning data with tamper-proof access locks",
+      "status": "explicit",
+      "evidence_span": "data tokenization. Companies own their data fully, and we have tamper-proof locks for that as well"
+    },
+    {
+      "id": "P5",
+      "text": "Encrypted multi-party collaboration can combine datasets and return joint synthetic data",
+      "status": "explicit",
+      "evidence_span": "companies can collaborate on data sets together and understand more about their combined and common customers, all while the data remains encrypted for all parties involved"
+    },
+    {
+      "id": "P6",
+      "text": "Licensing/support model supports on-prem, private, and public cloud via APIs or web UI",
+      "status": "explicit",
+      "evidence_span": "We have a licensing and support business model, and we support on-premise, private, and public cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI data-access privacy bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic data with confidential compute and tokenization",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Licensing and deployment model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Innovate on data in days while protecting customer privacy",
+      "status": "explicit",
+      "evidence_span": "allows you to innovate on data in days and not months"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data privacy to be the biggest challenge for companies to build AI software today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "access data in days and not months, retain full ownership over their data, and safely collaborate with others"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use our APIs integrated directly into your data science pipelines or the web interface"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "QA report similarity to real-data model performance folded into synthetic-data mechanism. Pilots and NUS grants excluded as traction. Singleton D1 and D3 retained as separately revisable problem framing and commercial packaging."
+}

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-746",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:32:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Site investigation professionals redo messy pen-and-paper field notes on desktop computers",
+      "status": "explicit",
+      "evidence_span": "doing the same thing two or even three times, once or twice on paper and again on the computer"
+    },
+    {
+      "id": "P2",
+      "text": "ArcSight turns freehand sketches into precise real-time geometry with live dimensions, including line/arc combinations and tangency",
+      "status": "explicit",
+      "evidence_span": "ArcSight converts his freehand input into perfect, precise geometry. It is the first and only algorithm that can do this in real time"
+    },
+    {
+      "id": "P3",
+      "text": "Field users overlay sketches, measurements, and photos on blueprints so data stays organized in one digital file",
+      "status": "explicit",
+      "evidence_span": "all the data is well organized, so he doesn't need to remember where the photos were taken anymore"
+    },
+    {
+      "id": "P4",
+      "text": "Export to desktop design software removes recreate-from-scratch work",
+      "status": "explicit",
+      "evidence_span": "export to other desktop design software. This totally eliminates the need to recreate everything from scratch"
+    },
+    {
+      "id": "P5",
+      "text": "Basic is a free App Store download; Pro will add advanced features, cloud service, and coworker collaboration",
+      "status": "explicit",
+      "evidence_span": "ArcSight Pro will be soon available with more advanced feature and cloud service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Duplicate paper-to-desktop work",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Field capture to export workflow",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Free Basic and Pro cloud path",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Huge time savings by capturing field geometry once in a digital file",
+      "status": "explicit",
+      "evidence_span": "That is a huge time saver"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasted effort"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminates the need to recreate everything from scratch"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collaborate and share with their coworkers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Independent run: folded algorithm recognition details into the core geometry premise; merged blueprint/photo organization. Free/Pro path remains singleton GTM module."
+}

@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Public data reflects the real world and reveals things social platforms cannot",
+      "status": "explicit",
+      "evidence_span": "it's a reflection of the real world, and it reveals things that you won't find by looking at Twitter hashtags or Foursquare check-ins"
+    },
+    {
+      "id": "P2",
+      "text": "Public data arrives in incompatible shapes and forms, from restrictive portals to 1970s database formats",
+      "status": "explicit",
+      "evidence_span": "Today, public data comes in all kinds of different shapes and forms"
+    },
+    {
+      "id": "P3",
+      "text": "Data locked in silos makes relationships between sources invisible",
+      "status": "explicit",
+      "evidence_span": "because this data is locked away in silos, it's impossible to see the relationships and the connections between these sources of public data"
+    },
+    {
+      "id": "P4",
+      "text": "Enigma is building a scalable infrastructure for acquiring, indexing, and searching public data",
+      "status": "explicit",
+      "evidence_span": "we're building a scalable infrastructure for acquiring, indexing, and searching public data"
+    },
+    {
+      "id": "P5",
+      "text": "Users can ask questions of any indexed data set, from visa salaries to energy contracts",
+      "status": "explicit",
+      "evidence_span": "We can ask questions of this data set"
+    },
+    {
+      "id": "P6",
+      "text": "Discovery surfaces data sets the user did not know existed or were relevant",
+      "status": "explicit",
+      "evidence_span": "Enigma is also about discovering new data sets you didn't even know existed or were relevant"
+    },
+    {
+      "id": "P7",
+      "text": "A browser plugin lights up companies, people, and locations on any page and routes back into Enigma",
+      "status": "explicit",
+      "evidence_span": "All of the entities on the page light up. So companies, people, locations"
+    },
+    {
+      "id": "P8",
+      "text": "The web app and API are launching with partner institutions",
+      "status": "explicit",
+      "evidence_span": "we're launching our web app and API with partners who really share this vision"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Valuable but siloed public data",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Indexing infrastructure with query and discovery",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Access surfaces: plugin, web app, API",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users can find and manipulate the public data they are looking for",
+      "status": "explicit",
+      "evidence_span": "really let you find and manipulate the data you're looking for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "impossible to see the relationships and the connections"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "acquiring, indexing, and searching public data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "be routed back to that level of granularity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run 3 variation on the current Enigma transcript: merges the inaccessibility and search-impossibility claims into one formats premise (P2), and elevates the query-demo capability to a premise. Partner names and 'structured web' future framing excluded per 4.2 and v1.3.2 4.1(4); 100,000-dataset scale claim treated as traction here rather than a premise (boundary variation from run 2).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-919",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:15:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Business opportunity search—hiring, being hired, intros, experts—is painful without trusted networks",
+      "status": "explicit",
+      "evidence_span": "we know the pain associated with building a business. You're looking to hire, you're looking to be hired, you're looking for an introduction, or maybe an expert"
+    },
+    {
+      "id": "P2",
+      "text": "Social graph plus real-time infrastructure publishes, routes, and matches opportunities",
+      "status": "explicit",
+      "evidence_span": "couple it with our real-time infrastructure to make publishing, routing, and matching happen like magic"
+    },
+    {
+      "id": "P3",
+      "text": "Posted opportunities fan out to contacts, followers, and called-out experts with notifications",
+      "status": "explicit",
+      "evidence_span": "it goes to all of my contacts and followers, plus these experts, but I can also call out a few people"
+    },
+    {
+      "id": "P4",
+      "text": "Stream users can route opportunities to others and apply or introduce inline",
+      "status": "explicit",
+      "evidence_span": "help them out by routing things"
+    },
+    {
+      "id": "P5",
+      "text": "Endorsements of declared expertise build the business expertise graph",
+      "status": "explicit",
+      "evidence_span": "What I'm going to do is endorse him as an expert"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Opportunity discovery pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Namesake routing platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make matching business supply and demand happen in real time",
+      "status": "explicit",
+      "evidence_span": "how Namesake makes this happen like magic"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Share business opportunities and knowledge in a community",
+      "evidence_span": "community for sharing business opportunities and knowledge"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is hard work"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "opportunity matched on namesake"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Merged endorsements into the platform domain this run as part of one graph product rather than a singleton trust module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1147",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:31:40+02:00"
+  }
+}

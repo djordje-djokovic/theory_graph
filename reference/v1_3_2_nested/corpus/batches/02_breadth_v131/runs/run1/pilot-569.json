@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Students struggle to find qualified, accessible, available private tutors quickly",
+      "status": "explicit",
+      "evidence_span": "One out of three students struggle to find a tutor. And it takes, on average, four to five hours to find someone who's qualified, accessible, and available"
+    },
+    {
+      "id": "P2",
+      "text": "An app lets students pick a course, choose a pre-vetted tutor, and book a session in three steps",
+      "status": "explicit",
+      "evidence_span": "connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "id": "P3",
+      "text": "Sessions can be in person or online with notes, whiteboarding, and video built in-house",
+      "status": "explicit",
+      "evidence_span": "we build our online tutoring system from scratch with note sharing, whiteboarding, and video functionalities"
+    },
+    {
+      "id": "P4",
+      "text": "ML-assisted vetting and graph-based matching recommend tutors on proximity, education, and hours",
+      "status": "explicit",
+      "evidence_span": "Our machine learning algorithm are helping our HR team to pre-select our candidates"
+    },
+    {
+      "id": "P5",
+      "text": "Tutors are charged a 20% commission and rewarded with training, internships, and bonuses",
+      "status": "explicit",
+      "evidence_span": "We charge our tutors a 20% commission per transaction"
+    },
+    {
+      "id": "P6",
+      "text": "Schools and universities can be charged a monthly fee for tutoring-activity analytics",
+      "status": "explicit",
+      "evidence_span": "charge the institutions, universities, and schools $1,000 per month in exchange for analytics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tutor discovery pain",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Matching and session product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace and institutional economics",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students get qualified private tutors quickly through a peer platform",
+      "status": "explicit",
+      "evidence_span": "Syncios is your solution"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "struggle to find a tutor"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "directly book a session"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our business model is quite simple"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Hour/student traction counts excluded. Arabic/MENA positioning treated as market scope for the product, not a separate premise. Tutor rewards kept with commission as one tutor-side commercial module; institutional analytics fee split (distinct buyer)."
+}

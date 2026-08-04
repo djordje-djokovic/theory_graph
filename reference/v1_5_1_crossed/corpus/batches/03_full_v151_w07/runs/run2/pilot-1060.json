@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1060",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "America has massive car overpopulation with hundreds of millions of cars parked most of the day",
+      "status": "explicit",
+      "evidence_span": "We have over 250 million cars in America that sit parked 22 hours each day"
+    },
+    {
+      "id": "P2",
+      "text": "GetAround is a peer-to-peer car-sharing marketplace where nearby owners set price/availability and renters book via an iPhone app with ratings and in-app keys",
+      "status": "explicit",
+      "evidence_span": "Getaround is a marketplace for peer-to-peer car sharing, the Airbnb for cars"
+    },
+    {
+      "id": "P3",
+      "text": "A low-cost self-install Car Kit with keyless remote, Wi-Fi, and GPS enables smartphone-only secure car access",
+      "status": "explicit",
+      "evidence_span": "a beautiful, low-cost, and easy-to-install device that combines a keyless remote with Wi-Fi and GPS"
+    },
+    {
+      "id": "P4",
+      "text": "GetAround provides insurance with each rental via a Berkshire Hathaway deal enabling national coverage expansion",
+      "status": "explicit",
+      "evidence_span": "Getaround provides insurance as part of each rental"
+    },
+    {
+      "id": "P5",
+      "text": "The peer-to-peer model is not limited to dense urban areas like Zipcar and takes a commission on rentals",
+      "status": "explicit",
+      "evidence_span": "The peer-to-peer model is not limited to dense urban areas like Zipcar"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "car overpopulation idle assets",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "P2P marketplace and iPhone rental UX",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Car Kit keyless access hardware",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "bundled Berkshire rental insurance",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People rent cars instantly nearby and owners earn money, redefining ownership and reducing car overpopulation",
+      "status": "explicit",
+      "evidence_span": "Instead of buying a car, you can rent one instantly from someone nearby"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large-scale sharing would cut CO2 emissions dramatically",
+      "evidence_span": "CO2 emissions would drop by a whopping 48 billion pounds per year"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solving a problem we call car overpopulation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "rent one instantly from someone nearby"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes peer-to-peer car sharing hassle-free"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How does insurance work?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Three announcements coded as marketplace UX, Car Kit hardware, and insurance—separately claimed modules (§4.1.2/5). Commission folded into marketplace commercial detail. Million-car CO2 vision as secondary value/framing, not extra premises (§4.1.4). Free sign-up/no membership fees as packaging. Four domains."
+}

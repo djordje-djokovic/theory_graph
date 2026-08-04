@@ -1,0 +1,125 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The cost of packing and shipping is hidden, obscured, or hard to determine in online transactions",
+      "status": "explicit",
+      "evidence_span": "There's an element of cost in almost any online transaction that's hidden. It's obscured. It's subsidized. And this is a problem"
+    },
+    {
+      "id": "P2",
+      "text": "Target customers are small and medium retail shippers of diverse micro-niche goods, not standard boxed items",
+      "status": "explicit",
+      "evidence_span": "Our customers are small and medium-sized businesses that ship a diverse group of goods. We call them micro niches"
+    },
+    {
+      "id": "P3",
+      "text": "The shipping market is fragmented and carriers will not quote unless the item is in a box, crate, or on a pallet",
+      "status": "explicit",
+      "evidence_span": "The market itself is incredibly fragmented. Every different type of item requires a different type of carrier"
+    },
+    {
+      "id": "P4",
+      "text": "ShipHawk aggregates fragmented carrier markets into one website so almost any item size or weight can ship to almost any destination",
+      "status": "explicit",
+      "evidence_span": "we have aggregated all of these different markets into one website"
+    },
+    {
+      "id": "P5",
+      "text": "The system converts real items into packed weights and dimensions to deliver instant packing and multi-carrier shipping quotes",
+      "status": "explicit",
+      "evidence_span": "we're going to convert your real item into packed weights and dimensions. This allows us to provide customers with instant data, instant packing quotes, instant shipping quotes"
+    },
+    {
+      "id": "P6",
+      "text": "Shippers can schedule pickup or drop off at a ShipHawk network location, including local delivery by the same agent",
+      "status": "explicit",
+      "evidence_span": "you get to schedule a pickup at your home or office. Or you can find a local ShipHawk network location where you can drop your item off"
+    },
+    {
+      "id": "P7",
+      "text": "ShipHawk earns a commission from shipping, packing, insurance, and other service providers it sends business to",
+      "status": "explicit",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard-to-price packing and shipping for diverse retail goods",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Aggregated quoting and logistics marketplace",
+      "premise_ids": ["P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Commission from service providers",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make shipping easy so retail shippers can move almost any item with instant multi-carrier quotes from one site",
+      "status": "explicit",
+      "evidence_span": "help us make shipping easy for everyone"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save shippers real money and real time on packing and shipping",
+      "evidence_span": "It costs people real money and real time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This allows us to provide customers with instant data, instant packing quotes, instant shipping quotes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can ship almost any item of almost any size or weight to almost any destination from one website"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D3 retained: commission monetization is separately revisable from the quoting/logistics product. Need/product/money triad noted; justified because fragmented quoting failure, marketplace mechanism, and provider commission can be revised independently. Kayak analogy treated as framing for value, not a premise (v1.3.2 4.1(4)). Carrier-type list folded into fragmentation premise. Team credentials excluded per 4.2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

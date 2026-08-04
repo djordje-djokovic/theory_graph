@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1118",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:03Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional databases are rigid and siloed so related app data cannot live together",
+      "status": "explicit",
+      "evidence_span": "applications that had related data no longer were forced to store it into unrelated databases"
+    },
+    {
+      "id": "P2",
+      "text": "FluidDB is a shared writable database where any application can add information to anything without permission",
+      "status": "explicit",
+      "evidence_span": "It's a shared database for applications"
+    },
+    {
+      "id": "P3",
+      "text": "Independent apps storing into FluidDB enable unanticipated cross-app queries combining their data",
+      "status": "explicit",
+      "evidence_span": "I've combined data in an unanticipated way from three independent but related applications"
+    },
+    {
+      "id": "P4",
+      "text": "Provides a shared writable object for everything—platform for the web of things",
+      "status": "explicit",
+      "evidence_span": "FluidDB gives you a shared, writable object for everything"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed rigid databases problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "shared writable FluidDB platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Related information lives together so apps and people can add data without asking permission—making data more useful",
+      "status": "explicit",
+      "evidence_span": "they're choosing to store their information into a place that makes it more valuable, because it's more useful"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Writable, social future of data where applications do not own the final word",
+      "evidence_span": "The future of data is a writable future"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "because it stores data into FluidDB, it's just the beginning"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "forced to store it into unrelated databases"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "none of them had to ask permission to put that information into FluidDB"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Tickery/TunkRank/We Met At demos folded as cascade illustrating one shared-DB mechanism (§4.1.7). 'Future of data' vision recorded as secondary_value not premises (§4.1.4). Funding anecdote excluded (§4.2). Wikipedia analogy is framing. Two domains—not a triad."
+}

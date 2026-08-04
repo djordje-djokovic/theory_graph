@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users lack visibility into what personal data they generate, who can see it, and how to secure it",
+      "status": "explicit",
+      "evidence_span": "the average user has no idea what data they're generating or who can see it, let alone how to actually secure their data"
+    },
+    {
+      "id": "P2",
+      "text": "Syncing platforms like Facebook and Google organizes personal data in categories that are fully anonymized and encrypted",
+      "status": "explicit",
+      "evidence_span": "Simply sync your platforms, like Facebook and Google, to see all of your personal data organized in simple categories, fully anonymized and encrypted"
+    },
+    {
+      "id": "P3",
+      "text": "Reverse subscription lets approved companies pay to subscribe to a user's anonymized data with monthly payouts to the user",
+      "status": "explicit",
+      "evidence_span": "Ozone offers a reverse subscription model where companies you approve can pay to subscribe to your anonymized data. For each subscription, you receive a monthly payment directly into your Venmo, PayPal, or bank account of your choice"
+    },
+    {
+      "id": "P4",
+      "text": "Patented encryption gives only the user the private key and encrypted ML matches shareable data to targeted offers",
+      "status": "explicit",
+      "evidence_span": "Our patented technology encrypts your data and only you have the private key. Ozone then runs encrypted machine learning to match only the data you want to share with offers that are targeted for you"
+    },
+    {
+      "id": "P5",
+      "text": "Businesses query by zip, age, gender, and category to get pre-approved audiences for high-conversion ads and direct marketing",
+      "status": "explicit",
+      "evidence_span": "Pick a zip code, age, gender, and category, and Ozone will return pre-approved audiences that match your targeted profile. Companies can engage these audiences in targeted ads and direct marketing that has a high likelihood of approval, high likelihood of conversion"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium model: consumers get free tools to organize and secure data; companies pay for conversions not eyeballs",
+      "status": "explicit",
+      "evidence_span": "We have a simple freemium model where consumers get simple, free tools to organize and secure their personal data, and companies get pre-approved audiences and only pay for conversions, not just eyeballs like on Facebook"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "User data sync privacy and encryption",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Reverse subscription marketplace and freemium",
+      "premise_ids": [
+        "P3",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users take back control of their data and capture the value big data currently earns on them",
+      "status": "explicit",
+      "evidence_span": "Take back control of your data, and take back the billions that big data is earning on you"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Ethically sourced user-controlled data for businesses",
+      "evidence_span": "This is ethically sourced data that's controlled by the user"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Take back control of your data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take back the billions that big data is earning on you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patents pending treated as IP detail on the encryption/ML stack (v1.3.1 §4.1.1), not a separate premise. Traction and alumni bios excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-447",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

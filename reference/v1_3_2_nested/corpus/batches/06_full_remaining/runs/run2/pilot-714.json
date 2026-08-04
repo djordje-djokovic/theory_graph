@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People needing jobs, opportunities, or recommendations are stuck with contacts or limited bots",
+      "status": "explicit",
+      "evidence_span": "we can talk to the people that are currently in our contact list if you happen to know the right person"
+    },
+    {
+      "id": "P2",
+      "text": "Sensei is a single messenger contact that matches you to an awesome human for whatever you need",
+      "status": "explicit",
+      "evidence_span": "You just reach out to Sensei on your favorite messenger, and Sensei will match you with an awesome human to chat with"
+    },
+    {
+      "id": "P3",
+      "text": "Match-and-dispatch uses NLP and many topical, behavioral, and linguistic variables",
+      "status": "explicit",
+      "evidence_span": "Our match and dispatch algorithm finds and connects you with the perfect person"
+    },
+    {
+      "id": "P4",
+      "text": "Default anonymity plus ratings and tipping enable trusted chat commerce",
+      "status": "explicit",
+      "evidence_span": "Sensei's transactional layer kicks in to allow us to tip our Sensei to express gratitude"
+    },
+    {
+      "id": "P5",
+      "text": "Availability spans Slack, Facebook Messenger, Kik, Telegram, SMS, with Line, WeChat, and Skype launching",
+      "status": "explicit",
+      "evidence_span": "Sensei is going global, launching in line, WeChat, and Skype in beta"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contact-list and bot insufficiency",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Matching and trust marketplace",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Global messenger presence",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Human conversation marketplace for advice, referrals, opportunities, and jobs",
+      "status": "explicit",
+      "evidence_span": "They give each other advice, referrals, opportunities, and jobs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what we really need is human conversation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sensei is more than just a community. It's a conversation marketplace"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sensei is cross-platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Anecdotal contracts/trips treated as illustration not traction metrics to code. Vision line uncoded (4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-714",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

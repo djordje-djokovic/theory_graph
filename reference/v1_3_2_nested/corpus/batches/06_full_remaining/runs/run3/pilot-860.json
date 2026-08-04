@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Keyword search cannot express visual apparel intent and returns unrelated results",
+      "status": "explicit",
+      "evidence_span": "I got a lot of unrelated results"
+    },
+    {
+      "id": "P2",
+      "text": "Intuitive mobile attribute search finds exact products in under 15 seconds",
+      "status": "explicit",
+      "evidence_span": "an intuitive mobile search for products"
+    },
+    {
+      "id": "P3",
+      "text": "Contextual learning personalizes inventory ranked for the shopper",
+      "status": "explicit",
+      "evidence_span": "combines the contextual information of the search of the user"
+    },
+    {
+      "id": "P4",
+      "text": "Scraped fingerprints and ontology plus AI question selection power the experience",
+      "status": "explicit",
+      "evidence_span": "we combined it and with the contextual information of the search that helps us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unrelated keyword results",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized ontology-backed mobile search",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Delightful search that finds what you have in mind",
+      "status": "explicit",
+      "evidence_span": "This is exactly the search I've been looking for"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unrelated results"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delightful search experience for everyone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Scraping, ontology, and question AI bundled as one backend mechanism. Year of technology development treated as effort framing, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

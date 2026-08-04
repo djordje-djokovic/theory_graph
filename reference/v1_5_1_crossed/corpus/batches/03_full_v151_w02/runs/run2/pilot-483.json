@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-483",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:28:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data breaches are common and costly, so encryption is needed to mitigate breach risk",
+      "status": "explicit",
+      "evidence_span": "it's no longer a question of whether a breach will occur, but rather what the cost of this breach will be"
+    },
+    {
+      "id": "P2",
+      "text": "Calypso keeps cloud database data encrypted at rest, in transit, and in memory",
+      "status": "explicit",
+      "evidence_span": "the data remains encrypted, addressed, in transit, and in memory at the database storage"
+    },
+    {
+      "id": "P3",
+      "text": "Users can privately search and fetch encrypted data without revealing keys or changing applications",
+      "status": "explicit",
+      "evidence_span": "While encrypted, one is able to search through the data, fetch them back to the application in a private way, and only there the data gets decrypted"
+    },
+    {
+      "id": "P4",
+      "text": "Oblivious RAM plus differential privacy enables efficient secure indexing on AES-encrypted records",
+      "status": "explicit",
+      "evidence_span": "we combine cryptography, so oblivious RAM, with differential privacy in order to ensure an efficient and secure indexing of these records"
+    },
+    {
+      "id": "P5",
+      "text": "Solution offers true security with much higher speed and broader query support than alternatives",
+      "status": "explicit",
+      "evidence_span": "Calypso is the first one to offer this true security with orders of magnitude higher speeds"
+    },
+    {
+      "id": "P6",
+      "text": "GTM via direct financial-services and cloud-native engagements plus database channel partners",
+      "status": "explicit",
+      "evidence_span": "we're working with direct engagements with financial services, medium-sized, cloud-native companies, and also database providers as channel partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Breach risk and encryption need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Never-decrypt searchable cloud database",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Financial and channel GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "True cloud data security that lets clients differentiate products while keeping data secret",
+      "status": "explicit",
+      "evidence_span": "help you differentiate your products for your clients based on true security"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk. So that's why we started Calypso"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encryption is the most effective measure in mitigating this risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Calypso is the first never decrypt cloud database solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "direct engagements with financial services"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Dynamic re-encryption demo facet folded into never-decrypt/search mechanism. Financing ask and pre-revenue status excluded. Team bios excluded except proprietary Harvard crypto as P4 mechanism. Singleton D1/D3 retained as separately revisable need and GTM modules."
+}

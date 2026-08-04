@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Usability failures: tedious manual recording, incompatible hardware/software, missing support-network platform",
+      "status": "explicit",
+      "evidence_span": "One, manually recording is considered tedious. Two, while digital tools exist, hardware and software are often incompatible"
+    },
+    {
+      "id": "P2",
+      "text": "Smart cable makes existing glucometers work with smart devices so users need not replace meters",
+      "status": "explicit",
+      "evidence_span": "users don't have to go out and buy new ones"
+    },
+    {
+      "id": "P3",
+      "text": "App tagging, medication flags, and contextual logs produce shareable graphs for patients and doctors",
+      "status": "explicit",
+      "evidence_span": "she can email or send it to the doctor in advance, or use it with a doctor the next time she visits"
+    },
+    {
+      "id": "P4",
+      "text": "Secure cloud plus partner view enables remote caregiving across devices",
+      "status": "explicit",
+      "evidence_span": "The data is also uploaded into a secure data center, where I, as part of the partner function, am one of her partners"
+    },
+    {
+      "id": "P5",
+      "text": "Third-party ecosystem (insurers, pharmacies, APIs) extends the patient-centric platform",
+      "status": "explicit",
+      "evidence_span": "this platform also enables us to get into new service business models in the future, API strategy partnerships"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Care inadequacy diagnosis",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cable and patient app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner network and ecosystem",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Control glucose by aggregating and sharing usable patient data",
+      "status": "explicit",
+      "evidence_span": "To control diabetes is about controlling glucose"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This smart solution, along with the software that we're offering, basically solved three issues"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "proper care for diabetes is inadequate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bringing them to the digital age"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving control back to you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Prevalence statistic treated as problem framing, not a premise. Explicit 'smart solution along with software solved three issues' warrants P2->P3.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

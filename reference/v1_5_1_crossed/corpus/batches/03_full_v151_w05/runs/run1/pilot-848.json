@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-848",
+    "coder_session_id": "session_04",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online merchants must verify that a buyer is who they claim to be and keep personal information safe without unnecessary data exchange",
+      "status": "explicit",
+      "evidence_span": "They need to know that Emily is who she says she is, and once they've confirmed that she is who she says she is, they need to keep her information safe"
+    },
+    {
+      "id": "P2",
+      "text": "Patented protocol hashes attributes onto graphs and compares micro-components so two parties can confirm matching information without exchanging the information",
+      "status": "explicit",
+      "evidence_span": "allows two parties to confirm that the information that they have is the same without ever exchanging the information"
+    },
+    {
+      "id": "P3",
+      "text": "An identity exchange lets organizations holding verified attributes publish them in Siddiqui format for merchants to leverage without re-collecting data",
+      "status": "explicit",
+      "evidence_span": "get organizations that hold lots of verified identity attributes on us to convert that information into the SIDICI format, make it available on servers"
+    },
+    {
+      "id": "P4",
+      "text": "Transactional fee per verification with 30% shared back to the information provider",
+      "status": "explicit",
+      "evidence_span": "Every verification we do, we charge a fee for. But the interesting thing is we give 30% of that back to the provider of the information"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "online identity and data-safety need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "zero-exchange verification and identity exchange",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-verification fee sharing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses prove identity and prevent fraud quickly and accurately while keeping personal information from leaving parties' systems",
+      "status": "explicit",
+      "evidence_span": "We help businesses prove that you are who you say you are and keep your information safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This creates a number of problems for merchants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no information left my browser, no information left the server in the bank"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our model's really simple. It's transactional"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Verify-identity and keep-safe folded as one merchant problem set (§4.1.6). Hash/graph micro-comparison demo and patent folded as one protocol mechanism (§4.1.7); identity exchange kept as network/module path within product domain. BT UK exchange and fraud vs KYC use cases treated as GTM evidence/applications, not extra premises. ASR Siddiqui/Cedici/SIDICI variants left in spans. Anti-template: problem, protocol/exchange, and fee model separately revisable."
+}

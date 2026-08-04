@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-210",
+    "coder_session_id": "session_04",
+    "session_case_index": 22,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:16:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Deskless workers are poorly served by current employment systems for safety, pay, and help, and employers lack structure to meet those needs",
+      "status": "explicit",
+      "evidence_span": "Current employment solutions are not actually built for these workers"
+    },
+    {
+      "id": "P2",
+      "text": "SMS is the right accessible channel because deskless workers will not adopt another app",
+      "status": "explicit",
+      "evidence_span": "Deskless workers don't need another application on their phone"
+    },
+    {
+      "id": "P3",
+      "text": "A two-way SMS portal auto-answers FAQs, translates widely, and lets workers reach managers for issues like training",
+      "status": "explicit",
+      "evidence_span": "Our system enables access to the software, replies to FAQs automatically, translates into over 110 languages"
+    },
+    {
+      "id": "P4",
+      "text": "Auto-resolution and campaign/survey tools save manager time while giving workers quick answers",
+      "status": "explicit",
+      "evidence_span": "our auto-resolution feature resolves over 95% of the inbound questions automatically"
+    },
+    {
+      "id": "P5",
+      "text": "Advanced analytics, workplace health scores, and sentiment/psychometrics surface turnover risk before workers leave",
+      "status": "explicit",
+      "evidence_span": "advanced analytics showing you the workplace health score"
+    },
+    {
+      "id": "P6",
+      "text": "Reducing turnover requires mutual trust built through accessible two-way communication between employers and deskless employees",
+      "status": "explicit",
+      "evidence_span": "The mutual trust is the core component of reducing turnover"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Deskless worker support gap",
+      "premise_ids": ["P1", "P6"]
+    },
+    {
+      "id": "D2",
+      "name": "SMS two-way support portal",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Turnover analytics for employers",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A bridge that connects deskless workers and employers to improve access, engagement, and retention",
+      "status": "explicit",
+      "evidence_span": "Antil is reconciling employees and employers by creating a bridge between them"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "to build trust, we first need to provide access to that communication"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when these workers are not heard, they just leave"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Employees with Antil get more connectivity, more access, more education, and more engagement"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Overall, our goal is to improve retention across your organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "FAQ/translate/job-data feature cascade folded into P3 as one SMS portal mechanism; auto-resolution and analytics split as distinct employer-side jobs. Traction and dollar savings excluded. Future SAP/API roadmap treated as vision and omitted as a premise."
+}

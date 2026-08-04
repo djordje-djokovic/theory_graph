@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-428",
+    "session_case_index": 3,
+    "extraction_run": 2
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Teams need to communicate with stakeholders, collaborate, and get work done amid many moving project parts in email",
+      "status": "explicit",
+      "evidence_span": "we need to communicate with our stakeholders, we need to collaborate with our team, and we need to get work done"
+    },
+    {
+      "id": "P2",
+      "text": "One-click conversion of email into a task card on an in-inbox Trello-like Kanban board with visual conversation/project management",
+      "status": "explicit",
+      "evidence_span": "Within one click, Yoda is able to take that email, turn it into a task card, and add it to his Trello-like Kanban board. This is all without leaving his inbox"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Teamwork communication and task load",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "In-inbox email Kanban tasks",
+      "premise_ids": [
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplify teamwork by empowering collaboration inside email workflows",
+      "status": "explicit",
+      "evidence_span": "empowering teams and improving collaboration"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we need to communicate with our stakeholders, we need to collaborate with our team, and we need to get work done"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So is your company ready to simplify teamwork?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-sentence (truncated). Platform-agnostic expansion treated as vision, not a premise. Traction/market-size figures excluded. ASR product names (Yoda/Gimelist/Chemeleth) left verbatim in spans."
+}

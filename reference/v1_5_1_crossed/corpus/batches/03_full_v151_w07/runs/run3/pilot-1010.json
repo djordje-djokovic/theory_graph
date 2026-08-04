@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1010",
+    "coder_session_id": "session_04",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fashion lacks personalization because shoppers cannot see how clothes fit on bodies unlike standard models",
+      "status": "explicit",
+      "evidence_span": "What's missing in online fashion shopping is personalization"
+    },
+    {
+      "id": "P2",
+      "text": "Shoppers create a personal body model from just brand-and-size answers they already wear well",
+      "status": "explicit",
+      "evidence_span": "Creating a model is as simple as answering just two basic questions"
+    },
+    {
+      "id": "P3",
+      "text": "Browser-based true-to-size 3D fitting/styling lets shoppers try sizes and full outfits on their model without special hardware",
+      "status": "explicit",
+      "evidence_span": "This is true to size. That means she can try on each sizes one by one and really see how each size would fit"
+    },
+    {
+      "id": "P4",
+      "text": "Digitizing designer collections at scale and offering them to retailers via API with pay-as-you-go pricing",
+      "status": "explicit",
+      "evidence_span": "we offer this collection to the retailers who carry these designers using our API"
+    },
+    {
+      "id": "P5",
+      "text": "Retailers gain size and style analytics from consumer try-ons to optimize operations",
+      "status": "explicit",
+      "evidence_span": "They get access to all the sizes from the consumers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "online fashion fit gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "3D true-to-size fitting room",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "designer digitization and retailer API",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shoppers try clothes online on a personal true-to-size model so more fashion sales can move online",
+      "status": "explicit",
+      "evidence_span": "What if you can create your own model and try on clothes on that model?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers get increased sales, reduced returns, and new fit analytics",
+      "evidence_span": "They get increased sales, reduced returns, and they get access to this amazing data"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "People still don't know how clothes fit when they're buying online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "trying on clothes is as simple as dragging and dropping on the model"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the retailers have no upfront costs. They pay us as they go"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fit uncertainty and standard-model display folded as one problem (§4.1.6). Drag/zoom/rotate, side-by-side sizes, full-outfit styling, and no-hardware browser delivery folded as cascade of one true-to-size fitting room (§4.1.7). Mass-customization/Holy Grail vision not coded as a premise (§4.1.4). Designer logos and Indian-retailer announcement treated as traction (§4.2). Three domains—anti-template: retailer API economics separately revisable from consumer fitting UX."
+}

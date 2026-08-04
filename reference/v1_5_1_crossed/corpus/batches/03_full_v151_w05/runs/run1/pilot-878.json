@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-878",
+    "coder_session_id": "session_06",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:02:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small businesses need branding but face expensive crowdsourcing or low-quality DIY",
+      "status": "explicit",
+      "evidence_span": "Either pay hundreds and thousands of dollars for online crowdsource services, or if you're like most businesses who can't afford that, you end up doing something on your own and compromise for really low quality branding"
+    },
+    {
+      "id": "P2",
+      "text": "Over 80 million small businesses want branding they cannot afford",
+      "status": "explicit",
+      "evidence_span": "Over 80 million small businesses out there want branding, need branding, but can't really afford it"
+    },
+    {
+      "id": "P3",
+      "text": "A learning system uses design rules to study a business and generate a custom brand without templates",
+      "status": "explicit",
+      "evidence_span": "Taylor is a learning system that turns your computer into a graphic designer"
+    },
+    {
+      "id": "P4",
+      "text": "Pay-only-when-thrilled $50 purchase delivers logo, business card, letterhead, and brand book",
+      "status": "explicit",
+      "evidence_span": "no money exchanges hands until you're completely thrilled with your new design"
+    },
+    {
+      "id": "P5",
+      "text": "Ongoing service designs offline and online assets as the business grows",
+      "status": "explicit",
+      "evidence_span": "It's a service, and it's going to walk with your company and design everything it can possibly need"
+    },
+    {
+      "id": "P6",
+      "text": "Learning from designed brands yields brand and trend insights for customers",
+      "status": "explicit",
+      "evidence_span": "using the thousands of brands it actually designs, it can actually understand brand insights, and trend insights, and give that to you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unaffordable small-business branding",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Rule-based generative brand system",
+      "premise_ids": ["P3", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Fifty-dollar satisfied purchase and ongoing assets",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable great branding accessible to every small business",
+      "status": "explicit",
+      "evidence_span": "put an in-house designer in every business across the world for just 50 bucks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "want branding, need branding, but can't really afford it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design the perfect brand for it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for $50, you have just received your very own logo, business card, letterhead, even your very own brand book"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Crowdsource vs DIY options folded as one affordability/quality problem with market-size as demand condition. Color/font/industry rules and 350k options are cascade of the learning design system. Logo/card/letterhead/brand-book delivery folded into the $50 offer. Ongoing asset types (menu/website/etc.) folded as one continuing-service premise. Promo codes excluded as ask."
+}

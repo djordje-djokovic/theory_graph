@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "coder_session_id": "session_05",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords and conventional IDs are a poor way to authenticate people compared with who they uniquely are",
+      "status": "explicit",
+      "evidence_span": "you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "UnifyID builds a unique digital fingerprint from biometric and behavioral factors for implicit authentication online and offline",
+      "status": "explicit",
+      "evidence_span": "We use biometric and behavioral factors to build a unique digital fingerprint of you"
+    },
+    {
+      "id": "P3",
+      "text": "Passive sensor signals from phone, computer, wearables, and nearby devices authenticate without passwords or conscious user action, cross-device",
+      "status": "explicit",
+      "evidence_span": "we use passive factors to identify the human behind the device. So we naturally work cross-device, and we don't require any conscious user action"
+    },
+    {
+      "id": "P4",
+      "text": "A proprietary ML system uses 100+ attributes such as gait, typing dynamics, places, and nearby device signals",
+      "status": "explicit",
+      "evidence_span": "over 100 different attributes that go into our proprietary machine learning system"
+    },
+    {
+      "id": "P5",
+      "text": "The technology targets streamlining authentication, reducing fraud, and preventing account takeover for financial and technology companies",
+      "status": "explicit",
+      "evidence_span": "applications in streamlining authentication, reducing fraud, and preventing account takeover"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "password authentication failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "implicit behavioral biometric fingerprint",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "fraud and ATO enterprise use cases",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Authenticate people by being themselves—secure identity without passwords",
+      "status": "explicit",
+      "evidence_span": "the best way to authenticate yourself is to be yourself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the way you authenticate yourself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "implicit authentication, and it's going to revolutionize the way you authenticate yourself"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reducing fraud, and preventing account takeover"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Gait and typing demos folded into 100-attribute ML mechanism. Market size figures are framing, not premises. Team acquisition biography excluded. Partner password-reset/ATO problems folded into enterprise use-case premise."
+}

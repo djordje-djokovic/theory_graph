@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Carrying one pocket PC between $89 docks replaces multiple PCs and gaming consoles",
+      "status": "explicit",
+      "evidence_span": "I can carry Tango in my pocket and simply connect it to any dock to gain instant access to all my files, all my applications, and all my games"
+    },
+    {
+      "id": "P2",
+      "text": "Outsourcing cooling and bulky parts to the dock yields a fanless, high-performance, light PC",
+      "status": "explicit",
+      "evidence_span": "That's why Tango is fanless, ventless, and weighs mere 200 grams"
+    },
+    {
+      "id": "P3",
+      "text": "User-upgradable standard components and top-10 ODM relationship enable reliable volume delivery",
+      "status": "explicit",
+      "evidence_span": "have a relationship with the world top 10 ODM to deliver a reliable product in volumes"
+    },
+    {
+      "id": "P4",
+      "text": "Best Buy/Amazon retail plus BYOD enterprise channels reach a multibillion PC and console market",
+      "status": "explicit",
+      "evidence_span": "We have relationship with Best Buy and Amazon and other large retailers whom we'll partner to distribute the product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pocket PC and dock system",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Retail and BYOD channels",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobility that is hands-free and hassle-free",
+      "status": "explicit",
+      "evidence_span": "most importantly, Tango gives you mobility that's hands-free and hassle-free"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hardware and software cost savings",
+      "evidence_span": "Tango can save you money on hardware"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Tango truly keeps me hands-free and hassle-free"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "whom we'll partner to distribute the product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Problem of clutter inferred into the replace-multiple-devices product claim rather than separate domain. iPod analogy treated as framing, not premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-852",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

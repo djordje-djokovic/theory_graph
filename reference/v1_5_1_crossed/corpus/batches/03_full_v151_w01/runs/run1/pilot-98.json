@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-98",
+    "coder_session_id": "session_03",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Green-energy transition depends on batteries, but current battery metals are toxic and scarce so recycling alone cannot scale",
+      "status": "explicit",
+      "evidence_span": "The metals that we use in our current battery tech are not only toxic, but very scarce as well. So if you run the numbers, you'd realize that recycling initiatives, while they're very noble, are nothing but a short-term Band-Aid solution"
+    },
+    {
+      "id": "P2",
+      "text": "Rechargeable hydrogel-reinforced cellulose paper batteries use zinc and manganese instead of lithium materials",
+      "status": "explicit",
+      "evidence_span": "our batteries are rechargeable, and they work very similar to lithium batteries. But what we have done is to change the materials that we use. We have invented what we call hydrogel-reinforced cellulose paper, and utilize zinc and manganese as the two sides of the battery"
+    },
+    {
+      "id": "P3",
+      "text": "Batteries are fully compostable, adaptively flexible/bendable, and safe even when cut while operating",
+      "status": "explicit",
+      "evidence_span": "our batteries are fully compostable, which means at the end of its lifecycle, you can throw it into the ground, and within a month, it would completely degrade"
+    },
+    {
+      "id": "P4",
+      "text": "Stackable form factors made with existing manufacturing processes enable plug-and-play lithium replacement",
+      "status": "explicit",
+      "evidence_span": "all we have to do is to stack up these paper batteries into the required shape and size, and we practically have a plug-and-play solution to replace any type of lithium batteries that are out there"
+    },
+    {
+      "id": "P5",
+      "text": "Abundant materials make paper batteries about 10x cheaper than current options",
+      "status": "explicit",
+      "evidence_span": "because of how abundant the materials that we use are, the cost of making our paper batteries isn't two times or three times cheaper, but it's 10 times cheaper"
+    },
+    {
+      "id": "P6",
+      "text": "Specialized versions target energy storage, consumer/wearables, and eventually EVs with partners",
+      "status": "explicit",
+      "evidence_span": "we decided to come up with three versions of specialized paper batteries for a focused area of application, so that we can either match or outperform lithium batteries in these areas"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scarce toxic battery materials bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Compostable paper battery chemistry and form",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Cost advantage and application versions",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer, more sustainable, and cost-efficient batteries for a greener energy future",
+      "status": "explicit",
+      "evidence_span": "our solution for a safer, more sustainable, and cost-efficient future in battery tech"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a dream of a greener future demands greener batteries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Paper batteries. Now, this is our solution for a safer, more sustainable, and cost-efficient future"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not only is ours one of the most sustainable options, but also one of the most cost-efficient options out there"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Compostable/flexible/cut-safe features folded as one performance package of the paper battery (P3) rather than three premises. Three application versions kept as one GTM specialization premise (P6). Revenue projections excluded."
+}

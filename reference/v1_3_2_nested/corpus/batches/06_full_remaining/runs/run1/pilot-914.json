@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brokers cannot legally rebate insurance commissions to clients",
+      "status": "explicit",
+      "evidence_span": "it's illegal for them to rebate any portion of that commission to their clients"
+    },
+    {
+      "id": "P2",
+      "text": "Zenefits funds free HR, payroll, and benefits administration software from insurance commissions",
+      "status": "explicit",
+      "evidence_span": "We do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "id": "P3",
+      "text": "Clients connect existing payroll/benefits systems or set them up online without fax-heavy process",
+      "status": "explicit",
+      "evidence_span": "You don't have to re enroll or switch anything you could just connect your existing systems to our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Becoming broker of record lets Zenefits manage benefits and collect ongoing commissions without changing plans or pricing",
+      "status": "explicit",
+      "evidence_span": "They make this back end change in their systems where we become the broker of record"
+    },
+    {
+      "id": "P5",
+      "text": "Connected systems mechanize hiring, payroll setup, immigration checks, and benefits enrollment",
+      "status": "explicit",
+      "evidence_span": "we can start to mechanize it. We can start to replace people and paper with software and technology"
+    },
+    {
+      "id": "P6",
+      "text": "Most HR work is administrative rather than strategic, so firms will outsource it when free",
+      "status": "explicit",
+      "evidence_span": "HR is only 20% strategic. Things like who you hire, the kind of culture that you create. 80% of it is administrative"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Commission-funded free HR",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected payroll and onboarding automation",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Administrative HR demand",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Free end-to-end HR and benefits admin that replaces costly outsourcing and thin brokers",
+      "status": "explicit",
+      "evidence_span": "the product that you charge an arm and a leg for, we now offer for free"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "I can't give you guys money back, but what I can do is provide a whole lot of services and software for free"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we make money on the insurance commissions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "replace people and paper with software and technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take all these headaches off your hands"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Billion-dollar claim and competitor taunts treated as framing. Broker-of-record is core to commission funding, kept with monetization domain.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-914",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-893",
+    "coder_session_id": "session_02",
+    "session_case_index": 17,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Seniors using walkers face fall injuries from forgetting to engage brakes and from instability on steep ramps and hills",
+      "status": "explicit",
+      "evidence_span": "she's often forgetful. And even though her physiotherapists tell her constantly to always engage the brakes before sitting on the walker, she sometimes forget"
+    },
+    {
+      "id": "P2",
+      "text": "A smart walker uses pressure, encoder, and accelerometer sensors to perceive user intention and environment and actuate gradual brakes",
+      "status": "explicit",
+      "evidence_span": "capable of perceiving user intention, the environment around us, and actuating appropriately to minimize the risk of injuries"
+    },
+    {
+      "id": "P3",
+      "text": "Auto-brakes engage when sitting and gradual braking on descents reduces walk-away and ramp fall risk",
+      "status": "explicit",
+      "evidence_span": "when a senior sits on the walker, automatically brakes kicks in and prevents a fall from happening"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is licensing the technology to walker manufacturers for factory integration",
+      "status": "explicit",
+      "evidence_span": "license it to walker manufacturers. They integrate it into their walkers as they leave the factory"
+    },
+    {
+      "id": "P5",
+      "text": "An aging population and growing assistive-device market make safer walkers needed now",
+      "status": "explicit",
+      "evidence_span": "The senior population is going to explode over the next couple of years"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "walker-related fall injuries",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "sensor smart-braking walker",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "license to manufacturers and aging market",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Seniors get safer mobility and higher quality of life with fewer walk-related fall injuries",
+      "status": "explicit",
+      "evidence_span": "safeguard seniors from falls, leading them to a higher quality of life"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these are problems that seniors face today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "actuating appropriately to minimize the risk of injuries"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is why this technology is needed now, today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript includes host intro and biographical origin story; biography and networking ask excluded (§4.2). Forgetfulness and steep-ramp pains folded as one fall-injury problem set (§4.1.6). Sensor array and auto/gradual brake behaviors treated as one mechanism plus its actuation package (§4.1.7–8). Injury cost figures quantitative detail of the problem. Anti-template: problem, product, and licensing/market separately revisable."
+}

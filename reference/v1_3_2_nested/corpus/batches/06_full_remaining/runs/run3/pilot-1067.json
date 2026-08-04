@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sharing and getting local news lacks real-time local relevance",
+      "status": "explicit",
+      "evidence_span": "sharing and getting news right now kind of sucks"
+    },
+    {
+      "id": "P2",
+      "text": "Location-based posting pins stories to maps with list newswire views",
+      "status": "explicit",
+      "evidence_span": "show your current location and the news stories around you"
+    },
+    {
+      "id": "P3",
+      "text": "Eyewitness check-in lets people on scene add accounts and media",
+      "status": "explicit",
+      "evidence_span": "Once you check in as an eyewitness, you can tell people what you've seen at that particular location and add your media"
+    },
+    {
+      "id": "P4",
+      "text": "Rewards badges unlock prize drawings and tangible redemptions",
+      "status": "explicit",
+      "evidence_span": "redeem a lot of those badges for actual tangible prizes"
+    },
+    {
+      "id": "P5",
+      "text": "Same content available on web search for an area",
+      "status": "explicit",
+      "evidence_span": "it brings up the same information that you saw on the app"
+    },
+    {
+      "id": "P6",
+      "text": "Promote stories, syndicate local data, sell ads, and run sponsored categories",
+      "status": "explicit",
+      "evidence_span": "we also have various advertising opportunities available both in the app and on the website"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "News sharing problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile and web local desk",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization paths",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time local news people choose to report and follow",
+      "status": "explicit",
+      "evidence_span": "decide what local news is important"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MePorter solves that"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "report the stories"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how we plan to make the big bucks"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.76
+  },
+  "notes": "Web channel coded as its own distribution premise because speaker stages a separate web demo. Contest giveaways excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1067",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

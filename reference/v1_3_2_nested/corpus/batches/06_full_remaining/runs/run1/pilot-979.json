@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-979",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A small share of local-business customers drives about half of revenue while most customers under-spend",
+      "status": "explicit",
+      "evidence_span": "15% of their customers, people like me, represent about 50% of their revenue"
+    },
+    {
+      "id": "P2",
+      "text": "Punch cards and mobile loyalty apps create too much customer work and are not personalized",
+      "status": "explicit",
+      "evidence_span": "none of these solutions are personalized for me"
+    },
+    {
+      "id": "P3",
+      "text": "Customers earn personalized VIP points and perks by simply swiping their linked credit cards with no phone, NFC, or new hardware for the merchant",
+      "status": "explicit",
+      "evidence_span": "I get points at these local places by simply swiping my credit card"
+    },
+    {
+      "id": "P4",
+      "text": "Merchants get real-time CRM of who is in-store plus spend and social context",
+      "status": "explicit",
+      "evidence_span": "Cardify, in real time, will show Fig & Olive who is at their store right now"
+    },
+    {
+      "id": "P5",
+      "text": "Merchants see real-time insights into how Cardify affects their bottom line and customer base",
+      "status": "explicit",
+      "evidence_span": "real time insights into how Cardify impacts their bottom line"
+    },
+    {
+      "id": "P6",
+      "text": "Partnerships with Citigrid Media and Urban Spoon provide distribution to about half a million US merchants",
+      "status": "explicit",
+      "evidence_span": "partnership with Citigrid Media and with Urban Spoon, which gets us to about half a million merchants across the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken local loyalty",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Frictionless personalized rewards",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Merchant CRM and insights",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Merchant distribution partnerships",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "VIP rewards and perks custom-tailored to how customers spend and who they are",
+      "status": "explicit",
+      "evidence_span": "VIP rewards and perks at your favorite places that are custom-tailored towards you based on how much you spend, what you're interested in, and who you are"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Next-generation CRM recognition for local businesses",
+      "evidence_span": "this is pretty much your next generation's CRM system for local businesses"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's got to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simply swiping my credit card"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "next generation's CRM system for local businesses"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "half a million merchants across the US"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript cuts off mid-announcement. Reward catalog features (buy-five, VIP dinner, seating pass) folded into P3 (§4.1(5)). Zero software/hardware integration kept inside the swipe mechanism. Singleton D2 and D4 retained as independently revisable customer-offer and distribution modules. 'Most disruptive products' rhetoric not coded as a premise (§4.1(4))."
+}

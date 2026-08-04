@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most home gardeners struggle with watering and setup decisions, often using toxic chemicals, despite growing interest in home food growing",
+      "status": "explicit",
+      "evidence_span": "Gardening is really hard"
+    },
+    {
+      "id": "P2",
+      "text": "Fully assembled self-watering planter uses proprietary sub-irrigation hardware so plants draw water by natural pressure",
+      "status": "explicit",
+      "evidence_span": "the first fully-assembled, self-watering garden that you can just bring anywhere with you"
+    },
+    {
+      "id": "P3",
+      "text": "Coaching app and Grow team give climate- and season-aware real-time guidance, including proactive photo-based troubleshooting",
+      "status": "explicit",
+      "evidence_span": "we have a coaching app to keep you active, engaged and get all your questions answered"
+    },
+    {
+      "id": "P4",
+      "text": "Planter accessories and insulation support small spaces and year-round growing across climates, with a long warranty",
+      "status": "explicit",
+      "evidence_span": "You can pop in accessories for vertical growing to maximize your space, as well as cold frames"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard home gardening problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Self-watering planter hardware",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Coaching app and Grow team",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make gardening easy so people succeed growing plants anywhere",
+      "status": "explicit",
+      "evidence_span": "gardening is going to be so much easier for everybody"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Direct positive climate impact by growing some of your own food",
+      "evidence_span": "Each one of us can actually have a direct positive impact right now by just growing a little bit of food outside"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gardening should not be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you never ever have to worry that your plants are getting what they need"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "geared up for success"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Home Depot revenue and $50 promo excluded as traction/offer. Soil-included assembly and curated plant box folded into hardware/coaching as appropriate. Need/hardware/software triad justified: coaching subscription revisable without changing reservoir hardware.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-436",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

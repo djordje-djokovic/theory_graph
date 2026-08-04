@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-678",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Common pitcher and under-sink filters fail to remove small contaminants like lead, mercury, or salt, and traditional RO wastes most of the water and is hard to install",
+      "status": "explicit",
+      "evidence_span": "these kind of filters do not clean out any other smaller particles, such as mercury, lead, or even salt"
+    },
+    {
+      "id": "P2",
+      "text": "WaterO's multi-filter reverse-osmosis system with a recycling cycle removes heavy metals, bacteria, and salt at about 80% efficiency",
+      "status": "explicit",
+      "evidence_span": "we're able to achieve 80% efficiency. That's already four times better than your traditional reverse osmosis systems"
+    },
+    {
+      "id": "P3",
+      "text": "Dual TDS displays and filter meters show inlet/outlet purity and when filters need replacement",
+      "status": "explicit",
+      "evidence_span": "we have two TDS displays. The first one is actually to show you what the water is before it gets filtered, and the second to show you what comes out of the filtering process"
+    },
+    {
+      "id": "P4",
+      "text": "Wi-Fi smartphone control lets users monitor TDS and share results, with a $399 pre-sale unit and ~$0.03 per equivalent of bottled water versus ~$0.60",
+      "status": "explicit",
+      "evidence_span": "we're also a smart device where your smartphone is actually enabled with the device through Wi-Fi"
+    },
+    {
+      "id": "P5",
+      "text": "Partnership with Water Is Life donates units to thousands of families",
+      "status": "explicit",
+      "evidence_span": "We're also partnering up with a global nonprofit called Water Is Life. We're going to be donating to thousands of families"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contaminated-water filter gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "High-efficiency RO purifier",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Smart pricing and donations",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Provide clean, purified drinking water",
+      "status": "explicit",
+      "evidence_span": "Our solution is to provide clean water"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Donate purifiers to families through Water Is Life",
+      "evidence_span": "donating to thousands of families through our campaign"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10% of the world has a water pollution problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll be able to remove particles such as bacteria, virus, lead, and results pure H2O"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Watero, it's going to give you $0.03"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Four named filter stages and demo TDS numbers folded into purification/monitoring premises per §4.1(5). Price and smart-app control kept in one commercial premise (§4.1(3)). Nonprofit donation also listed as secondary_value. Singleton D1 retained as independently revisable problem diagnosis."
+}

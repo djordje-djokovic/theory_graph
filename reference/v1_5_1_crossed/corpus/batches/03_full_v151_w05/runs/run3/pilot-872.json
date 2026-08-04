@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-872",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Millions lack or have subprime credit because building history requires credit first, making credit expensive and limiting",
+      "status": "explicit",
+      "evidence_span": "in order to build or establish credit, first, you need credit. It's a fundamental catch-22"
+    },
+    {
+      "id": "P2",
+      "text": "Self Lender lets users choose affordable monthly deposits that are reported to credit bureaus and returned at term end to build payment history",
+      "status": "explicit",
+      "evidence_span": "Self Lender enables our users to build positive payment history, the most important factor in determining your credit score"
+    },
+    {
+      "id": "P3",
+      "text": "Signup is cheap and simple at about $3 per month with selectable amounts and terms",
+      "status": "explicit",
+      "evidence_span": "Signing up with Self Lender is easy, takes less than three minutes, and only costs $3 per month"
+    },
+    {
+      "id": "P4",
+      "text": "Internal payment data unlocks exclusive affordable lending offers such as lower-rate auto loans",
+      "status": "explicit",
+      "evidence_span": "Self Lender uses her payment data internally to offer her exclusive lending opportunities"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "credit catch-22 for the unscored",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "credit-builder savings product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "exclusive lending from payment data",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People build credit, save money, and access affordable financial products",
+      "status": "explicit",
+      "evidence_span": "the new revolutionary way to bill credit, save money, and gain access to affordable financial products"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Not having credit is expensive and very limiting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build positive payment history, the most important factor in determining your credit score"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use her new credit score to save money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "No-score/subprime stats and Dolores car-interest story folded as one credit catch-22 pain (v1.5.1 §4.1.6). Monthly amount/term choices and refund-at-end folded into credit-builder mechanism; $3 fee kept with that commercial offer (§4.1.3). Lifetime savings aggregates treated as traction/impact framing. Anti-template: problem, builder product, and lending marketplace separately revisable."
+}

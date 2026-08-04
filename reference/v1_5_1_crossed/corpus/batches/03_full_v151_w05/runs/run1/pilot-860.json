@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding a specific visual product is hard with text search across stores and Google, yielding unrelated results",
+      "status": "explicit",
+      "evidence_span": "it was very difficult to put in words a visual product that I had in mind. And I got a lot of unrelated results"
+    },
+    {
+      "id": "P2",
+      "text": "Donde guides users through short attribute questions (color, sleeves, pattern, etc.) to find the right product in under 15 seconds",
+      "status": "explicit",
+      "evidence_span": "With Donde, you can find exactly what you're looking for in less than 15 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "A learning mechanism personalizes results using contextual user information such as location, age, taste, and environment",
+      "status": "explicit",
+      "evidence_span": "learning mechanism that combines the contextual information of the search of the user. her location, her age, everything that we can know about her taste and her environment"
+    },
+    {
+      "id": "P4",
+      "text": "Backend scrapes stores, extracts item fingerprints, builds a cross-retailer ontology, and uses AI to choose the next best question",
+      "status": "explicit",
+      "evidence_span": "Scraping the data of different websites and different stores extracting the unique fingerprints of every item and using and creating an ontology"
+    },
+    {
+      "id": "P5",
+      "text": "Users can buy the found item on the spot in the app",
+      "status": "explicit",
+      "evidence_span": "When I found a dress, I can buy it on the spot"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "visual product search experience",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "personalization and catalog AI",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intuitive, delightful mobile product search that finds exactly what you want quickly",
+      "status": "explicit",
+      "evidence_span": "offer a very intuitive and delightful search experience for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find exactly what you're looking for in less than 15 seconds"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalizes the items and brings it in a very delightful and seamless experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Founder credentials excluded. Attribute-question demo cascade folded into P2; scraping/ontology/next-question AI kept as one backend mechanism in P4 with personalization as P3."
+}

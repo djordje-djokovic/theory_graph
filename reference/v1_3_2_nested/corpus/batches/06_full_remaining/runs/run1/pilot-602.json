@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-602",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About one third of clothing is returned because it does not fit, and fit requires shape not only size",
+      "status": "explicit",
+      "evidence_span": "How can one third of clothing be returned because it doesn't fit?"
+    },
+    {
+      "id": "P2",
+      "text": "Designers are taught only two of nine body shapes, taking half of women off the design table",
+      "status": "explicit",
+      "evidence_span": "They're told to use one of two design body shapes, the hourglass or the rectangle. But these are only two of nine body shapes. This single decision takes half of women off of the design table"
+    },
+    {
+      "id": "P3",
+      "text": "Shape-filter technology recommends clothing for an individual's body shape and proportion using garment design details",
+      "status": "explicit",
+      "evidence_span": "We make recommendations on clothing for an individual body shape and proportion using the design details in an individual garment"
+    },
+    {
+      "id": "P4",
+      "text": "AI, visual recognition, machine learning, and a shopper UI that captures shape together comprise the shape filter, with a patent-pending knowledge base",
+      "status": "explicit",
+      "evidence_span": "Our AI, visual recognition, machine learning, knowledge-based systems classify assortments. Our user interface captures a shopper's shape and her proportion. And these together comprise the shape filter technology"
+    },
+    {
+      "id": "P5",
+      "text": "Enterprise deals use an annual contract with an upfront fee and a percentage of sales, fitting retailers' inventory systems",
+      "status": "explicit",
+      "evidence_span": "We have an annual contract with an upfront fee and a percentage of sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fit and body-shape returns problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Shape filter recommendation technology",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Retail annual contract economics",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make dressing well ridiculously easy by showing clothes that fit the shopper's body and proportion",
+      "status": "explicit",
+      "evidence_span": "Savitude is making dressing well ridiculously easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Increase retailer sales and decrease returns",
+      "evidence_span": "If you want to increase your sales, decrease your returns"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The problem with returns is more than just a size or a measurement issue. The solution must include shape"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these five dresses are perfect for this shopper's body and proportion"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Savitude does improve our retail economics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Founder bio/patents-as-credentials excluded. Patent-pending knowledge base folded into shape-filter mechanism (v1.3.1 §4.1(1)). Accessories expansion treated as roadmap vision, not a premise (v1.3.2 §4.1(4)). Anti-template: need/tech/commercial triad justified—contract terms revisable without changing body-shape AI, and design-table exclusion is a separate market assumption."
+}

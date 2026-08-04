@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:50:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unbanked consumers in high-inflation emerging markets lack credit access, so they cannot pay for common online purchases",
+      "status": "explicit",
+      "evidence_span": "most of the population in this country is unbanked and also doesn't have access to credit"
+    },
+    {
+      "id": "P2",
+      "text": "Ripio Credit lets users pay online on installments in local currency at BitPagos merchants and Bitcoin-accepting merchants worldwide",
+      "status": "explicit",
+      "evidence_span": "our users can pay online on installments in local currency"
+    },
+    {
+      "id": "P3",
+      "text": "Identity verification, social/external data, and fraud checks produce a credit score that underwrites the user",
+      "status": "explicit",
+      "evidence_span": "we build a score to help us give credit to the user"
+    },
+    {
+      "id": "P4",
+      "text": "Borrowers repay via monthly statement using a bank account or cash at partnered merchant locations such as Pago Fácil, Boleto, and Oxxo",
+      "status": "explicit",
+      "evidence_span": "they can use any of the 16,000 merchant locations that we have partnered with"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbanked online credit gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Ripio installment credit underwriting",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Cash and bank repayment network",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enabling unbanked users to buy online on affordable local-currency installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "impossible to do it in the most common way to do a payment online, which is on credit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "approve this credit to our user and being able to start paying online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this makes it very convenient for a user to start buying online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "KYC selfie/ID, ML, social data, and fraud system folded into underwriting score mechanism (§4.1.7). Team Mercado Libre credentials and merchant-count traction excluded. Singleton D1/D3 retained: unbanked demand vs repayment-rail module are separately revisable. Anti-template note: problem, credit product/underwriting, and cash-repay network are three separately revisable modules."
+}

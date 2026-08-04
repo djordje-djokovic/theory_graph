@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1052",
+    "coder_session_id": "session_06",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unethical fake-free, crippleware, and spyware freemium offers erode mainstream trust so users miss great free apps",
+      "status": "explicit",
+      "evidence_span": "unethical businesses are eroding our trust in the concept of free"
+    },
+    {
+      "id": "P2",
+      "text": "CatchFree organizes user sentiment and structured data so people can quickly verify whether a free product is safe and find top picks by job-to-be-done",
+      "status": "explicit",
+      "evidence_span": "a fast and easy verification whether a free product is safe"
+    },
+    {
+      "id": "P3",
+      "text": "Heart-logo top user picks signal commitment to proposed freemium principles alongside category exploration and UGC feature voting",
+      "status": "explicit",
+      "evidence_span": "anytime you see this CatchFree heart logo, it means that this product is a top user pick in its category"
+    },
+    {
+      "id": "P4",
+      "text": "CatchFree monetizes via profitable CPAs and reverse-affiliate credits limited to top user picks, keeping users in control",
+      "status": "explicit",
+      "evidence_span": "CatchFree is actually going to offer profitable CPAs to freemium businesses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "eroded trust in free products",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "safe free-app discovery resource",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "CPA and reverse-affiliate monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mainstream users can safely and easily find the best free products and avoid hidden catches",
+      "status": "explicit",
+      "evidence_span": "safer and easier for people to find the best free products and avoid those with hidden catches"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's just not worth the risk of trying a free product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find the best free app or service that does exactly what you want it to do"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "users are in control with CatchFree"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fake-free/crippleware/spyware folded as one trust problem (§4.1.6). Verification, category browse, UGC features, and heart picks folded as discovery resource cascade (§4.1.7). Viral traffic anecdote excluded as traction. Acquisition loops (sharing/search) treated as GTM framing inside monetization notes rather than separate premises. Anti-template: problem, discovery product, and CPA model separately revisable."
+}

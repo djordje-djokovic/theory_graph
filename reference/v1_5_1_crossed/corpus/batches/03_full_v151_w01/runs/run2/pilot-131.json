@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Physical-world businesses need accurate bill validation, line-item coding, and accounting entry as the source of truth for costs",
+      "status": "explicit",
+      "evidence_span": "bills and receipts are the source of truth for your costs"
+    },
+    {
+      "id": "P2",
+      "text": "Most businesses fail at AP because bills are complex and disconnected functions cannot pass captured data across the organization",
+      "status": "explicit",
+      "evidence_span": "the vast majority of businesses cannot execute these fundamental steps"
+    },
+    {
+      "id": "P3",
+      "text": "Spatial mapping, proprietary indexing, deterministic language models, and one-shot learning extract and reconcile rich bill data without manual entry",
+      "status": "explicit",
+      "evidence_span": "we extract more than 50,000 data points from every page, the characters, and their relation to one another"
+    },
+    {
+      "id": "P4",
+      "text": "Smart routing sends bills only to required approvers and one-click coding assigns customer, job, and accounting codes",
+      "status": "explicit",
+      "evidence_span": "ensure the smart routing of this bill only to the people in the organization who need to review and opine on it"
+    },
+    {
+      "id": "P5",
+      "text": "Approved bills auto-create accounting records and support flexible single-click payment scheduling including net-term discounts",
+      "status": "explicit",
+      "evidence_span": "a single click approves the bill, auto-creates the associated record in the accounting system"
+    },
+    {
+      "id": "P6",
+      "text": "An integrated contextual data thread gives project managers and accounting shared visibility across validation and payment",
+      "status": "explicit",
+      "evidence_span": "we can push this contextual data thread all the way through the process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken manual AP for physical businesses",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated bill reading and coding",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Integrated AP payment and visibility",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-enriched AP operations that cut manual work and give organizations better cost data and financial confidence",
+      "status": "explicit",
+      "evidence_span": "Makers Hub provides data-enriched accounts payable operations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "until he met Makersub and we solved this for him"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect their disparate account payable processes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture all of their data with no manual entry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collaborate across the organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "AP pain steps (validate/code/enter) folded as one problem-set with P1; complexity and disconnection as why it fails (P2). Demo UI cascade of reading outputs folded into P3–P4. Customer hour-savings traction used only as illustration, not coded as a premise."
+}

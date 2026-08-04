@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-926",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Central HVAC leaves rooms over/under conditioned; thermostat innovation alone is only part of the solution",
+      "status": "explicit",
+      "evidence_span": "innovation has been focused on thermostat technology, but that is only part of the solution"
+    },
+    {
+      "id": "P2",
+      "text": "Wireless networked smart vents automatically redirect HVAC airflow to improve comfort and efficiency",
+      "status": "explicit",
+      "evidence_span": "wirelessly networked home air vent that maximizes the comfort and efficiency of a home's central heating and cooling system by automatically redirecting the air"
+    },
+    {
+      "id": "P3",
+      "text": "Users install by swapping existing vents and set up via a web account; a Lifestyle Survey programs each vent's smart cycle without manual programming",
+      "status": "explicit",
+      "evidence_span": "we've created the Lifestyle Survey"
+    },
+    {
+      "id": "P4",
+      "text": "A four-vent system can cut HVAC runtime up to 30% and eliminate hot/cold spots",
+      "status": "explicit",
+      "evidence_span": "reduces HVAC run times by up to 30%"
+    },
+    {
+      "id": "P5",
+      "text": "Sell via e-commerce then retail, and partner with builders, HVAC suppliers, and utilities with subsidies",
+      "status": "explicit",
+      "evidence_span": "leverage e-commerce partnerships to sell the KeenVent directly to consumers via the web"
+    },
+    {
+      "id": "P6",
+      "text": "Offer subscription and lifetime pricing for the four-vent system plus matching non-networked vents",
+      "status": "explicit",
+      "evidence_span": "A four KeenVents system will be sold for $25 with a $4 monthly service fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smart vent airflow product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Channels and pricing",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize home HVAC comfort and efficiency with lower energy spend",
+      "status": "explicit",
+      "evidence_span": "maximizes the comfort and efficiency of a home's central heating and cooling system"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Average annual savings of $150–$300",
+      "evidence_span": "average annual savings for our customers of one hundred and fifty to three hundred dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminates uncomfortable hot or cold spots throughout the home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extremely enticing value proposition"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Weather-alert account services folded into P3 setup/relationship (§4.1(5)). Price and channel kept as one commercial domain; amounts stay inside P6 (§4.1(3)). Indiegogo ask excluded as financing."
+}

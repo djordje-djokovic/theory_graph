@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "99% of B2B website traffic bounces under one-size-fits-all messaging",
+      "status": "explicit",
+      "evidence_span": "convert the 99% of their traffic that bounces today"
+    },
+    {
+      "id": "P2",
+      "text": "Doing personalization in-house is too hard for typical marketing teams without heavy technical staffing",
+      "status": "explicit",
+      "evidence_span": "when we tried to tailor our message for everyone, we learned just how challenging that was"
+    },
+    {
+      "id": "P3",
+      "text": "Software recommends segments, lets non-technical users edit experiences visually, and measures personalized vs generic lift",
+      "status": "explicit",
+      "evidence_span": "It has a visual editor that lets any non-technical person change the experience of their website"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Bounce and personalization difficulty",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Visual personalization product",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convert existing B2B website traffic into leads without buying more ads",
+      "status": "explicit",
+      "evidence_span": "stop paying for leads, go to mutinyhq.com slash disrupt and learn how to convert the traffic that you already have"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the same marketing message didn't necessarily resonate for everybody"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% site-wide increase in leads for Amplitude"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Identity integrations and analytics folded into visual personalization product. Customer lift figures used only in domain-value evidence, not as premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-443",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

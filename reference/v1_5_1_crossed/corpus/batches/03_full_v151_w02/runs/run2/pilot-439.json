@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-439",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:25:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inaccurate third-party wildfire models lead insurers to refuse or price out homes near wildfire regions",
+      "status": "explicit",
+      "evidence_span": "they simply can't write anywhere near wildfire areas because they don't know which homes are low risk and which homes are high risk"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary wildfire models identify truly lower-risk homes inside catastrophe regions better than industry models",
+      "status": "explicit",
+      "evidence_span": "created our own proprietary wildfire models that vastly outperform the models that are available in the industry"
+    },
+    {
+      "id": "P3",
+      "text": "An MGA writes property insurance for those low-risk homes and provides monthly active risk-mitigation guidance",
+      "status": "explicit",
+      "evidence_span": "launching a property insurance company that writes insurance specifically for low-risk homes within catastrophe regions"
+    },
+    {
+      "id": "P4",
+      "text": "Independent-agent distribution and carrier/reinsurance partnerships enable scale",
+      "status": "explicit",
+      "evidence_span": "We're selling through independent agents"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wildfire insurance withdrawal",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Proprietary wildfire risk models",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Low-risk home insurance MGA",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "Agent and carrier distribution",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Offer insurance to low-risk homes that other carriers abandon in catastrophe regions",
+      "status": "explicit",
+      "evidence_span": "offer insurance to homes that other insurance companies simply would stay away from"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help homeowners reduce wildfire risk through monthly mitigation guidance",
+      "evidence_span": "tell them exactly how their risk has changed and the top things they can change about their home to protect themselves from wildfire"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "his insurance company refused to renew his coverage"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what areas are low risk and offer insurance to homes that other insurance companies simply would stay away from"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a profitable portfolio of homes"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We actually have five agencies that have invested in Delos"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Satellite/weather/ignition layers and actuarial pricing folded into P2 model mechanism. Analytics side-product to other insurers noted as secondary evidence of model value, not a separate confirmatory premise. Hurricane expansion treated as roadmap. Team bios and premium TAM math excluded."
+}

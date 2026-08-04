@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Unstructured-text policy communication leaves citizens without the patience to engage",
+      "status": "explicit",
+      "evidence_span": "Because of this, most of us just don't have the patience to engage."
+    },
+    {
+      "id": "P2",
+      "text": "A microsimulation engine built on merged tax and census data projects the impact of any configured policy on real people",
+      "status": "explicit",
+      "evidence_span": "create a model of the US economy, where you can configure government policies and then see their projected impacts on real people"
+    },
+    {
+      "id": "P3",
+      "text": "Citizen endorsements feed government analytics and shape policy around what people want",
+      "status": "explicit",
+      "evidence_span": "this response gets recorded on the government's analytics, helping them shape policies around what people want"
+    },
+    {
+      "id": "P4",
+      "text": "A turnkey solution undercuts the enormous cost of incumbent government analysis tools",
+      "status": "explicit",
+      "evidence_span": "Outline, though, is a turnkey solution that not only saves governments money, but produces better governing."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Citizen disengagement",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Outline simulation platform and government offer",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Citizens understand and shape the government policies that affect them",
+      "status": "explicit",
+      "evidence_span": "making participation in government direct, intelligent, and easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Better governing at lower cost for governments",
+      "evidence_span": "not only saves governments money, but produces better governing"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it does matter. New government policy changes our income about $4,000 each year."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you advance your interests"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Compact two-domain reading: the demo walk-through (personal impact, map, sliders, budget lines) is one simulation engine per v1.3.2 clarification 5, and the participation loop plus turnkey government offer are grouped with it as the single Outline offering whose parts are learned together. The $4,000 stakes figure is treated as context reinforcing the disengagement problem rather than a separate premise. Election-tool usage and procurement announcement excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-964",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

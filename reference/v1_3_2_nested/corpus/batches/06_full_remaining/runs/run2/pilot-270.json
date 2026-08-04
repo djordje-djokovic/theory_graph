@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing data-center cooling is archaic and insufficient for heat caused by rising compute demand",
+      "status": "explicit",
+      "evidence_span": "data centers have cooling solutions, but this heat is a new problem. And the solutions today are archaic and simply just not good enough"
+    },
+    {
+      "id": "P2",
+      "text": "Two-phase cooling enables below-ambient CPU temperatures—a fridge on the CPU",
+      "status": "explicit",
+      "evidence_span": "Essentially, what they built and what we're building is a fridge on the CPU"
+    },
+    {
+      "id": "P3",
+      "text": "Integrated standard server can be inserted into any data center without changing infrastructure",
+      "status": "explicit",
+      "evidence_span": "You can insert it in any data center today, so you don't have to change a thing"
+    },
+    {
+      "id": "P4",
+      "text": "Client test: similar workload finished in almost 50% less time using only half the energy",
+      "status": "explicit",
+      "evidence_span": "with our system, we were able to run their computing task almost 50% less time, whilst using only half of the energy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inadequate cooling for heat",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Two-phase in-server cooling product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more energy-efficient compute for banking, startups, and real-time workloads",
+      "status": "explicit",
+      "evidence_span": "By going lower on the CPU, we both accelerate it, so we make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mission to cool the planet one server at a time",
+      "evidence_span": "cool down the planet one server at a time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solutions today are archaic"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "almost 50% less time, whilst using only half of the energy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Performance results folded into product domain as continuing capability claim rather than one-off traction-only metric.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-270",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:40+02:00"
+  }
+}

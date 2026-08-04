@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cement, steel, and glass need cheap, reliable, flame-hot energy, and today's zero-carbon options cannot deliver all three affordably",
+      "status": "explicit",
+      "evidence_span": "Our zero carbon options today are just one out of the three, cheap"
+    },
+    {
+      "id": "P2",
+      "text": "Joule Hive stores cheap electricity as on-demand heat and pipes hot gas into existing furnaces, boilers, and kilns",
+      "status": "explicit",
+      "evidence_span": "We turn it into on-demand heat stored into the system. We make hot gas with that system, blow air through it, make hot air, and deliver it to your furnace, to your boiler, to your kiln"
+    },
+    {
+      "id": "P3",
+      "text": "The system is retrofittable and delivers up to 1,800 Celsius heat at least three times cheaper than hydrogen",
+      "status": "explicit",
+      "evidence_span": "we can keep it affordable, at least three times cheaper than hydrogen. And best of all, we're retrofitable"
+    },
+    {
+      "id": "P4",
+      "text": "Semiconductor-doped refractory e-bricks enable hotter, longer-lasting electric heating building blocks",
+      "status": "explicit",
+      "evidence_span": "the electrically conductive fire brick, or e-bricks"
+    },
+    {
+      "id": "P5",
+      "text": "Stacked bricks simultaneously act as heater, thermal store, and heat exchanger at industrial scale",
+      "status": "explicit",
+      "evidence_span": "It's three in one. It's a giant electric heater. It's a giant thermal store. And it's a giant heat exchanger"
+    },
+    {
+      "id": "P6",
+      "text": "Where electricity is often cheaper than gas, customers can achieve multi-year payback while cutting most emissions",
+      "status": "explicit",
+      "evidence_span": "you can operate in areas today where 50% of the year, electricity is cheaper than natural gas as a heat source"
+    },
+    {
+      "id": "P7",
+      "text": "Even under regulated time-of-use rates, absorbing cheap electricity can beat electric boilers on payback",
+      "status": "explicit",
+      "evidence_span": "there are time of use rates where we can absorb cheap electricity and actually give you a three-year payback over your next best option for decarbonization, electric boilers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Heavy-industry heat trilemma",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "E-brick thermal battery",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Deployment economics by power market",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable reliable electrified industrial heat that replaces fossil fuels without radical process change",
+      "status": "explicit",
+      "evidence_span": "you don't have to radically change what you're doing to decarbonize what you're doing"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Offset the large majority of site carbon emissions",
+      "evidence_span": "offsetting 80% of your carbon emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We stack these up to massive scales to build our dual high thermal battery. And it's three in one"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in place of the fossil fuels you usually burn"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: split Midwest negative-price economics from regulated TOU vs electric-boiler economics. 2045 industry-electrified vision not coded as premise. Customer LOI pipeline treated as traction."
+}

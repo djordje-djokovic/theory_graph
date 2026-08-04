@@ -1,0 +1,142 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Public data is valuable because it reflects the real world and reveals what social signals cannot",
+      "status": "explicit",
+      "evidence_span": "it's a reflection of the real world, and it reveals things that you won't find by looking at Twitter hashtags or Foursquare check-ins"
+    },
+    {
+      "id": "P2",
+      "text": "Public data is not really accessible despite being public",
+      "status": "explicit",
+      "evidence_span": "While this data is public, and while it is out there, it's not really accessible"
+    },
+    {
+      "id": "P3",
+      "text": "Searching across all public data is not possible, so analysis is limited to known sources",
+      "status": "explicit",
+      "evidence_span": "Doing something as simple as a search across all of this public data is not even possible"
+    },
+    {
+      "id": "P4",
+      "text": "Siloed data hides the relationships and connections between sources",
+      "status": "explicit",
+      "evidence_span": "because this data is locked away in silos, it's impossible to see the relationships and the connections between these sources of public data"
+    },
+    {
+      "id": "P5",
+      "text": "Enigma is building scalable infrastructure for acquiring, indexing, and searching public data",
+      "status": "explicit",
+      "evidence_span": "At Enigma, we're building a scalable infrastructure for acquiring, indexing, and searching public data"
+    },
+    {
+      "id": "P6",
+      "text": "The index already covers over 100,000 data sets and billions of records",
+      "status": "explicit",
+      "evidence_span": "we're indexing over 100,000 data sets, billions of records"
+    },
+    {
+      "id": "P7",
+      "text": "Enigma surfaces related data sets the user did not know existed or were relevant",
+      "status": "explicit",
+      "evidence_span": "Enigma is also about discovering new data sets you didn't even know existed or were relevant"
+    },
+    {
+      "id": "P8",
+      "text": "A browser plugin lights up entities on any web page and routes back to that granularity in Enigma",
+      "status": "explicit",
+      "evidence_span": "with our browser plugin, it's on the right. It's going to enable it. All of the entities on the page light up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Valuable but inaccessible, siloed public data",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Acquisition, indexing, and search infrastructure",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Discovery and access surfaces",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can find and manipulate the public data they are looking for",
+      "status": "explicit",
+      "evidence_span": "What we do at Enigma is really let you find and manipulate the data you're looking for"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A hidden world of public knowledge becomes exposed",
+      "evidence_span": "really exposing this world that's just been hidden for way too long"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "And what that means is up front, you're limited by the sources of data that you know about"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's not really accessible"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "acquiring, indexing, and searching public data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "discovering new data sets you didn't even know existed"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Coded against the current prompt transcript (Enigma). Launch partners (Gerson Lehrman, NYT, S&P Capital IQ, Harvard Business School) excluded as traction/announcements per 4.2; 'redefine the structured web and limits of public knowledge' treated as vision (v1.3.2 4.1(4)); H-1B/DOE demo queries folded into the search-and-manipulate capability (v1.3.2 4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-919",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T14:10:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

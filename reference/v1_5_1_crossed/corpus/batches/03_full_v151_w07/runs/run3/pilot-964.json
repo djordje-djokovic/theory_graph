@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-964",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Government policies are still conveyed as unstructured text, so the public barely understands or influences changes that matter financially",
+      "status": "explicit",
+      "evidence_span": "we've been creating and communicating government policies through unstructured text documents"
+    },
+    {
+      "id": "P2",
+      "text": "A model of the US economy built from tax returns and census records lets people configure policies and see projected impacts on real people and communities",
+      "status": "explicit",
+      "evidence_span": "merging millions of tax returns and census records to create a model of the US economy"
+    },
+    {
+      "id": "P3",
+      "text": "Public endorsement feeds government analytics so citizens can advance outcomes they want",
+      "status": "explicit",
+      "evidence_span": "this response gets recorded on the government's analytics, helping them shape policies around what people want"
+    },
+    {
+      "id": "P4",
+      "text": "Outline is a turnkey alternative to inaccessible, enormously expensive government consulting tools",
+      "status": "explicit",
+      "evidence_span": "Outline, though, is a turnkey solution that not only saves governments money, but produces better governing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unstructured policy engagement gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "policy simulation and aided representation",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "turnkey government offer",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Participation in government that is direct, intelligent, and easy, producing better governing",
+      "status": "explicit",
+      "evidence_span": "we're making participation in government direct, intelligent, and easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Saves governments money versus bloated consulting spend",
+      "evidence_span": "not only saves governments money, but produces better governing"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of us just don't have the patience to engage"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we find out how policies impact issues that matter to you and help you advance your interests"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "saves governments money, but produces better governing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Unstructured-text/patience/influence pains folded as one problem (§4.1.6). Personal impact, zip map, sales-tax/budget sliders folded as simulation cascade (§4.1.7); Endorse/analytics kept as distinct aided-representation path. Team credentials, 4M uses, and Massachusetts procurement excluded (§4.2). Anti-template: problem, simulation+endorse product, and turnkey government commercial offer separately revisable."
+}

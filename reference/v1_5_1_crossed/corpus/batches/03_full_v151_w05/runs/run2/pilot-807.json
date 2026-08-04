@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-807",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students and other busy people lack time and skill to cook healthy home meals",
+      "status": "explicit",
+      "evidence_span": "We'll have limited time and ability to make food. Many of us don't know how to cook"
+    },
+    {
+      "id": "P2",
+      "text": "Cookie is a push-button robotic cooker that prepares meals from pre-portioned fresh ingredient trays",
+      "status": "explicit",
+      "evidence_span": "Cookie, a push-of-a-button automated cooking device from Serenity Kitchen"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware combines food-tray storage/delivery, induction cooktop, and robotic arm for timed manipulated cooking",
+      "status": "explicit",
+      "evidence_span": "Cookie captures these things with a storage and delivery mechanism for food trays, a safe induction cooktop, and of course, the robotic arm"
+    },
+    {
+      "id": "P4",
+      "text": "Foodie app selects recipes, buys from a recipe store, schedules cooks, and monitors progress",
+      "status": "explicit",
+      "evidence_span": "Foodie presents a clean, simple interface to connect a user with his or her food choices"
+    },
+    {
+      "id": "P5",
+      "text": "Chefs and home cooks can teach Cookie recipes and motions via the phone",
+      "status": "explicit",
+      "evidence_span": "Chefs can use Cookie to teach it how they cook. They can specify the recipes step by step"
+    },
+    {
+      "id": "P6",
+      "text": "Meals priced around $4 with $600 device purchase or rental subscription undercut restaurant margins on fresh food",
+      "status": "explicit",
+      "evidence_span": "A Serenity meal is typically priced at around $4 per meal. The app is free, and cookie will retail at $600"
+    },
+    {
+      "id": "P7",
+      "text": "Pre-portioned kits reduce household food waste and encourage healthier eating",
+      "status": "explicit",
+      "evidence_span": "By pre-portioning just the right amount of healthy fresh ingredients into meal kits and reducing the amount of work required to prepare these meals, we not only help save people time, but we also help conserve food and encourage healthier eating habits"
+    },
+    {
+      "id": "P8",
+      "text": "Go-to-market starts with college students then expands to broader market",
+      "status": "explicit",
+      "evidence_span": "deliver cookie and foodie first to college students and then to the broader market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Busy eater cooking gap",
+      "premise_ids": ["P1", "P8"]
+    },
+    {
+      "id": "D2",
+      "name": "Cookie robot and Foodie app",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Meal pricing and waste/health outcomes",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Push-button fresh home-cooked meals with less time and skill",
+      "status": "explicit",
+      "evidence_span": "Cookie delivers that same experience in making home-cooked meals with multiple trays of fresh ingredients"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Conserving food and encouraging healthier eating",
+      "evidence_span": "help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "limited time and ability to make food"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cook a recipe meal from a recipe database without picking up a spatula"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our meals compete on price with mid-tier frozen meals, but the difference is that our meals are made with fresh ingredients and real food"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Type/amount/time/temperature/manipulation folded into one robotic cooking process package with the three hardware subsystems. Young professionals/moms/family-sharing uses treated as applications of the same convenience mechanism, not separate premises. Crowdfunding ask excluded. Demo failures do not add premises."
+}

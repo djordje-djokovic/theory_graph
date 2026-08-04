@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "coder_session_id": "session_06",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peers learn far more from each other than from video/professor content, yet nearly all edtech is built top-down and classmates are hard to find on Facebook or Blackboard",
+      "status": "explicit",
+      "evidence_span": "peers learn seven times more from each other than they do from any video content"
+    },
+    {
+      "id": "P2",
+      "text": "Study Hall connects classmates with course pages, study-buddy recommendations, Q&A, note sharing, and real-time study sessions",
+      "status": "explicit",
+      "evidence_span": "Study Hall is the smartest platform to connect with your classmates and make your academic life easier"
+    },
+    {
+      "id": "P3",
+      "text": "A peer marketplace lets students list and buy books and study guides, with gamified ratings of study partners",
+      "status": "explicit",
+      "evidence_span": "We built a peer-to-peer marketplace"
+    },
+    {
+      "id": "P4",
+      "text": "Growth comes from university pilots and a large national honor-society partnership, with potential online-learning partnerships",
+      "status": "explicit",
+      "evidence_span": "We partnered up with one of the largest national honor societies in the country"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "missing peer-to-peer learning tools",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "classmate connection and study platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "peer academic marketplace",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "campus and honor-society GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students connect with classmates and make academic life easier through peer learning",
+      "status": "explicit",
+      "evidence_span": "connect with your classmates and make your academic life easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "99% of all educational technology is built for top down"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "an incredibly easy way to connect with your classmates, find your peers, and study in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you want the rest of my study guide, it's for sale on my Marketplace"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've successfully piloted programs at AU, Georgetown, Cornell University, Harvard, and Yale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Ends mid-monetization wrap (truncated=true). Peer-learning stat and Facebook/Blackboard friction folded as one problem (§4.1.6). Dashboard/courses/Q&A/notes/sessions/algorithm folded as platform cascade; marketplace split as separately claimed monetizable module. Pilot schools treated as GTM traction folded into partnership premise rather than bare metrics. Four domains."
+}

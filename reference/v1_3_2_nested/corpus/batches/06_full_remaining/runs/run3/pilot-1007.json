@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Time goes unmonitored like trying to manage weight without a scale",
+      "status": "explicit",
+      "evidence_span": "trying to manage our weight, but we don't even have the scale"
+    },
+    {
+      "id": "P2",
+      "text": "Entirely passive collection replaces active smartphone check-in behaviors that steal attention from real life",
+      "status": "explicit",
+      "evidence_span": "one of the core features of Khronos is that it's entirely passive"
+    },
+    {
+      "id": "P3",
+      "text": "Passive data plus goals and friend time rankings let users change behavior toward what matters most",
+      "status": "explicit",
+      "evidence_span": "change my behavior to ultimately do what's most important to me"
+    },
+    {
+      "id": "P4",
+      "text": "All-168-hour tracking surfaces tradeoffs that isolated fitness metrics cannot",
+      "status": "explicit",
+      "evidence_span": "in isolation, that's really not that meaningful"
+    },
+    {
+      "id": "P5",
+      "text": "24/7 context including intent and goals makes the data commercially valuable for non-ad offers",
+      "status": "explicit",
+      "evidence_span": "the data we collect 24 hours a day, seven days a week, is extremely valuable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing time scale",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Passive intentionality product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Valuable intent data",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Actionable insight into how time is spent so people can live more intentionally",
+      "status": "explicit",
+      "evidence_span": "make those insights actionable"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Address who and where people spend time as a core life regret",
+      "evidence_span": "Who do you spend your time with? Where do you spend your time?"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we don't even have the scale"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make those insights actionable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "things that can help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D1 as independently revisable problem framing. 'Huge idea' vision not coded as premise (v1.3.2 #4).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

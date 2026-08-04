@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-212",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developer toil from complexity wastes huge developer hours and drives unhappy developers to quit",
+      "status": "explicit",
+      "evidence_span": "developers spend half their week in toil"
+    },
+    {
+      "id": "P2",
+      "text": "AppMap delivers personal observability of runtime software behavior inside the code editor as developers write code",
+      "status": "explicit",
+      "evidence_span": "software developers can see the behavior of their software as they write code"
+    },
+    {
+      "id": "P3",
+      "text": "Runtime traces across services and data stores automatically surface performance and security issues while developers work",
+      "status": "explicit",
+      "evidence_span": "AppMap automatically analyzes this information to find issues why developers work, and it alerts them if it finds a problem"
+    },
+    {
+      "id": "P4",
+      "text": "Deep language/framework integrations and open source support new languages and communities",
+      "status": "explicit",
+      "evidence_span": "AppMap integrates deeply with popular languages and frameworks. And AppMap is open source"
+    },
+    {
+      "id": "P5",
+      "text": "Free for individuals and open source, with partnership paths for developer-focused organizations to deliver tools via runtime insights",
+      "status": "explicit",
+      "evidence_span": "AppMap is free for individuals, students, and open source projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "developer toil problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "editor-native runtime observability",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "individual free and partner distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Development teams reduce toil and ship more performant, secure, reliable code faster",
+      "status": "explicit",
+      "evidence_span": "reduce toil and ship more performant, secure, and reliable code faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help developer-tool organizations deliver more value from inside the code editor",
+      "evidence_span": "let AppMap help you deliver more value to your users"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Toil robs 25 million developers of the joy of coding"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal observability, performance, and security analysis to developers when they work to reduce toil"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Partner with AppMap"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Performance and security demo findings folded into P3 as analyses of the same runtime observability mechanism. Marketplace ratings and Postman partnership treated as traction/channel evidence supporting P5 rather than extra premises."
+}

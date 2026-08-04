@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Student attention spans and social-app habits make two-hour textbook study sessions hard to sustain",
+      "status": "explicit",
+      "evidence_span": "My generation has half the attention span that the generation before me did"
+    },
+    {
+      "id": "P2",
+      "text": "Personalized, addictive generative-AI learning can help students learn faster and teachers teach faster",
+      "status": "explicit",
+      "evidence_span": "what if we could make learning personalized? What if we could make learning addictive"
+    },
+    {
+      "id": "P3",
+      "text": "Kado converts a textbook photo via OCR and ML into categorized flashcards in under thirty seconds",
+      "status": "explicit",
+      "evidence_span": "in a matter of mere seconds, you get flashcards"
+    },
+    {
+      "id": "P4",
+      "text": "Milo places a virtual tutor in messaging apps so students get Q&A and study help without leaving where they already spend time",
+      "status": "explicit",
+      "evidence_span": "we went back to the drawing board and went to what students do most"
+    },
+    {
+      "id": "P5",
+      "text": "Training task-specific behavior into language models with product data yields 200ms Q&A versus ~1200ms industry benchmarks",
+      "status": "explicit",
+      "evidence_span": "training task-specific behavior in the model itself"
+    },
+    {
+      "id": "P6",
+      "text": "Models extend beyond students to university repository distillation and enterprise employee training",
+      "status": "explicit",
+      "evidence_span": "We now use our AI models beyond just students, and we're able to service workplace and training"
+    },
+    {
+      "id": "P7",
+      "text": "Builders who are themselves student users ensure the information pipeline fits peer learning habits",
+      "status": "explicit",
+      "evidence_span": "we are our own user. Me and my co-founders are 19 years old"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Attention and textbook friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Student generative learning products",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Specialized models and expansion markets",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D4",
+      "name": "User-founder insight",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster learning for students (and teaching for teachers) via seamless generative study tools",
+      "status": "explicit",
+      "evidence_span": "help students learn faster and help teachers teach faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Seamless workforce learning and upskilling",
+      "evidence_span": "seamless learning experience for your workforce and upskilling them as fast as possible"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Our attention wasn't where we wanted it to be. So we went back to the drawing board and went to what students do most"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the competition for attention today is so fierce"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This was a process that took me two hours in school, now being done by our users in less than 30 seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have a fantastic, seamless user experience"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building an information pipeline that not just we could use, but our peers could use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent coding: treated 'we are our own user' as a causal team/user condition (P7) rather than pure biography; singleton D4 retained with that warrant. Personalized/addictive framing kept as a product design premise here because speaker presents it as the theory of how learning wins attention. Traction counts excluded. P1->P4 on explicit pivot warrant.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-245",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:10+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

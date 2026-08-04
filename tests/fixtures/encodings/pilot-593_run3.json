@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ava matches ingredients and products to skin via ML plus human expertise as an anytime skincare consultant",
+      "status": "explicit",
+      "evidence_span": "It is your personal skin care consultant that you can access anytime and is powered by a combination of human expertise and artificial intelligence"
+    },
+    {
+      "id": "P2",
+      "text": "Quiz and photo intake classify skin profile and preferences including 30+ types on five dimensions",
+      "status": "explicit",
+      "evidence_span": "we've divided people into more than 30 different skin types based on five dimensions"
+    },
+    {
+      "id": "P3",
+      "text": "Personalized recommendation uses skin profile, similar people, and age, then human cross-check to one product",
+      "status": "explicit",
+      "evidence_span": "personal recommendation set based on A, my skin profile, B, people who are similar to me and what they have liked, and C, my age. And then it sends all these skin data to a real human advisor who will do a cross-check, validate the system, and then narrow it down to one product"
+    },
+    {
+      "id": "P4",
+      "text": "Text-back personal checkout link completes purchase with Apple Pay, PayPal, or card",
+      "status": "explicit",
+      "evidence_span": "I can simply text back. And then I get a personal checkout link, which I can use Apple Pay, PayPal, or any credit card to finish checkout process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Personalized AI-human skincare recommendations",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Messaging checkout",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better skin and confidence with less trial-and-error",
+      "status": "explicit",
+      "evidence_span": "help more people achieve better skin and gain that confidence without going through all the trials and errors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal recommendation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal checkout link"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged ML+human into one consultant mechanism; recommendation factors A/B/C treated as one scoring bundle (§4.1.2). Truncated opening.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-593",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:33:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-587",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A patented dissolvable shell material yields production-quality parts after a simple hot-water dunk",
+      "status": "explicit",
+      "evidence_span": "That shell material dissolves away, leaving a production quality part"
+    },
+    {
+      "id": "P2",
+      "text": "Orchid is many times faster and cheaper than alternatives with a large materials catalog",
+      "status": "explicit",
+      "evidence_span": "Orchid is five to 60 times faster. three to 125 times less expensive, and has a potential materials catalog of hundreds"
+    },
+    {
+      "id": "P3",
+      "text": "Operation is push-button, wall-plug, cartridge-based with no skilled labor or special ventilation",
+      "status": "explicit",
+      "evidence_span": "You just press a button to start, plug it into the wall, and there's no skilled labor or special ventilation required"
+    },
+    {
+      "id": "P4",
+      "text": "Initial customers are service bureaus and rapid prototyping shops, then medical and automotive manufacturers",
+      "status": "explicit",
+      "evidence_span": "We're initially targeting service bureaus and rapid prototyping shops, and then we'll look to companies that can benefit from rapid iteration, like medical and automotive manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dissolvable-shell production printing",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Service bureau then manufacturer GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable a new category of fast, affordable, production-quality customized manufacturing",
+      "status": "explicit",
+      "evidence_span": "Collider is enabling an entirely new category of manufacturing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving a production quality part"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you are a service bureau or a rapid prototyping shop, we'd like you to have a beta"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.6
+  },
+  "notes": "Transcript opens mid-demo. Speed/cost/materials catalog treated as process+performance package with the Orchid process (v1.5.1 §4.1.8). Application examples (motorcycle, footwear, prosthetics) folded as uses of one mechanism. Shell patent kept inside the process premise."
+}

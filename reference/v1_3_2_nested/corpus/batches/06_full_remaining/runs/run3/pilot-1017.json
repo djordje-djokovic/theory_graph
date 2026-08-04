@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stranger reviews and average ratings are not personalized and are polluted by fakes",
+      "status": "explicit",
+      "evidence_span": "all of these systems simply give you the average rating for all reviews, despite your unique personal taste"
+    },
+    {
+      "id": "P2",
+      "text": "Professional critics supply expert recommendations",
+      "status": "explicit",
+      "evidence_span": "The first group are professional critics, people with genuine expertise"
+    },
+    {
+      "id": "P3",
+      "text": "Friends provide recommendations from people the user knows whether to trust",
+      "status": "explicit",
+      "evidence_span": "you know who to trust and who not to trust"
+    },
+    {
+      "id": "P4",
+      "text": "Taste-matching finds people who like what you like",
+      "status": "explicit",
+      "evidence_span": "algorithmically finds who has the most identical taste to you and lets you discover their recommendations"
+    },
+    {
+      "id": "P5",
+      "text": "Q&A reaches friends off-platform with tap-friendly surveys",
+      "status": "explicit",
+      "evidence_span": "provide faster, easier access to friend recommendations through our Q&A feature"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Status-quo review failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Three trusted source types",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Friend solicitation Q&A",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "High-quality recommendations matched to real-world choices",
+      "status": "explicit",
+      "evidence_span": "revolutionizing recommendations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Clearly, the existing solutions are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "access to high-quality reviews from trusted sources"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so easy that it's actually a pleasure rather than a chore for my friends to give me recommendations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Split critics/friends/similar more finely than run2 because speaker frames three distinct source groups with own demo paths. Multi-category claim treated as feature enumeration of the same destination, folded into value rather than extra premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1017",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

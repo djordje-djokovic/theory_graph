@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "coder_session_id": "session_03",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wired and pad charging are a bad experience: tangled cables, unused phones while charging, and pads that charge one device per section",
+      "status": "explicit",
+      "evidence_span": "Charging is a terrible experience"
+    },
+    {
+      "id": "P2",
+      "text": "Pi contactlessly charges multiple devices at any angle via a patented magnetic-field platform that is safe, affordable, and FCC compliant",
+      "status": "explicit",
+      "evidence_span": "patented platform can power multiple devices at any angle. It's safe, it's affordable, and it's FCC compliant"
+    },
+    {
+      "id": "P3",
+      "text": "Cases enable legacy phones and tablets without receivers; Qi-supporting phones will not need cases",
+      "status": "explicit",
+      "evidence_span": "built these cases to enable people with popular legacy devices to be able to charge"
+    },
+    {
+      "id": "P4",
+      "text": "Business model sells Pi to consumers with high margins/LTV across rooms and opens the platform to consumer-electronics OEMs",
+      "status": "explicit",
+      "evidence_span": "sell Pi directly to consumers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "wired and pad charging friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "multi-device angled magnetic wireless charging",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "consumer sales and OEM platform",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Truly contactless wireless charging that lets people use multiple devices freely while they charge",
+      "status": "explicit",
+      "evidence_span": "world's first contactless wireless charging device"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Pads are not the solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "continue to use the device and move it around in different directions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "opening the Pi platform for use by existing consumer electronics OEMs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Unsafe microwave/ultrasound/laser alternatives folded as contrast into magnetic-safety claim within P2. Reservations/press/investor names excluded. Anti-template: problem, charging tech, and commercial model separately revisable."
+}

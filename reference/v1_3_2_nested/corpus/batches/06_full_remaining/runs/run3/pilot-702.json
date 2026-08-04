@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Out-of-pocket costs and opaque paper results leave consumers needing better lab testing access",
+      "status": "explicit",
+      "evidence_span": "I spent over $2,000 in out-of-pocket lab bills. All I got were 20 pieces of paper"
+    },
+    {
+      "id": "P2",
+      "text": "Mail-in kits and a secure account deliver filtered, actionable wellness results",
+      "status": "explicit",
+      "evidence_span": "receives her results via email and logs into her secure EverlyWell account"
+    },
+    {
+      "id": "P3",
+      "text": "DTC regulatory compliance and CLIA labs underpin accuracy across operating states",
+      "status": "explicit",
+      "evidence_span": "compliant in the 46 states where we operate with direct-to-consumer testing regulations"
+    },
+    {
+      "id": "P4",
+      "text": "Physician network authorization plus multi-lab logistics and HL7 translation run behind the simple UX",
+      "status": "explicit",
+      "evidence_span": "Though the consumer experience is simple, we have built a custom platform to make this happen"
+    },
+    {
+      "id": "P5",
+      "text": "Kit prices of $79 to $399 are positioned below typical uncovered lab costs",
+      "status": "explicit",
+      "evidence_span": "sell our kits online from $79 to $399"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly opaque lab experience",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "At-home testing product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Consumer kit pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "At-home health tests with results you can actually understand",
+      "status": "explicit",
+      "evidence_span": "at-home health tests with results you can actually understand"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Evidence-based guidance to change habits after results",
+      "evidence_span": "Using the evidence-based information provided by EverlyWell"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there had to be a better way"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "results you can actually understand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lower by test than out-of-pocket"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged compliance and platform into one operations/feasibility bundle with the consumer product this run, keeping price as a singleton commercial module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-702",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:33:10+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-716",
+    "coder_session_id": "session_04",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing app security (periodic audits, scanners with false positives, permissive firewalls) leaves a persistent gap between development and security as apps ship fast",
+      "status": "explicit",
+      "evidence_span": "security audits cannot be performed each time your code is changed"
+    },
+    {
+      "id": "P2",
+      "text": "Screen protects applications at runtime by monitoring critical in-app functions with logic-based blocking of unknown vulnerabilities and low false positives",
+      "status": "explicit",
+      "evidence_span": "Screen is a security solution that protects your application at runtime"
+    },
+    {
+      "id": "P3",
+      "text": "Installs like a dependency in a few commands and shows developers debugger-like attack details, backtraces, and user-protection signals in one dashboard",
+      "status": "explicit",
+      "evidence_span": "installing screen is not different from installing any other dependency in your application"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing starts at $99/month and scales with hosts; available for Python, Rails, and Node.js",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at only $99 per month and scales as you grow with the number of hosts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "development-security tooling gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "runtime Screen protection and developer UX",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "host-based pricing and language support",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers get simple, effective application security that blocks real attacks without drowning in false positives",
+      "status": "explicit",
+      "evidence_span": "we make application security simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Security is left behind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "block unknown vulnerabilities, because our protection is based on logic, not just patterns"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable all developers to protect their application"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Audit/scanner/firewall pains folded as one security-gap problem set (v1.5.1 §4.1.6). Dashboard attack details and account-takeover signals kept as feature cascade of runtime protection (§4.1.7). Attack-volume/beta user traction excluded. Singleton D1/D3 retained as separately revisable."
+}

@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brands need a new production process bridging controlled studio video and explosive UGC",
+      "status": "explicit",
+      "evidence_span": "What we want to do is bring these 2 worlds together. We want to create an entirely new process for production"
+    },
+    {
+      "id": "P2",
+      "text": "Clients mobilize their own communities as filmers for high-impact video at scale",
+      "status": "explicit",
+      "evidence_span": "enabling companies to produce high-impact video at scale by engaging their own communities of fans, customers, and employees to become the filmers"
+    },
+    {
+      "id": "P3",
+      "text": "Platform tools let clients run projects with filming instructions for invited community members",
+      "status": "explicit",
+      "evidence_span": "they set up a project, they set a project ID, and then they loaded filming instruction that they wanted their community to capture. They then invited a select number of people to join the project"
+    },
+    {
+      "id": "P4",
+      "text": "App terms let clients reuse uploaded community video online or in broadcast",
+      "status": "explicit",
+      "evidence_span": "Because of the terms and conditions in the app, all the video that's uploaded can then be used by the BBC, whether it's online or even in the broadcast shows"
+    },
+    {
+      "id": "P5",
+      "text": "Automatic tagging/analysis plus multiple edit routes turn community uploads into finished video",
+      "status": "explicit",
+      "evidence_span": "automatically tagged, analyzed, and processed on upload as well. Then there's 3 ways to edit either we have our online edit tools"
+    },
+    {
+      "id": "P6",
+      "text": "ML content search (sentiment, object recognition, transcription) unlocks reuse of the library",
+      "status": "explicit",
+      "evidence_span": "content search tools so you can now search sentiment analysis object recognition and transcription"
+    },
+    {
+      "id": "P7",
+      "text": "Business model is subscription studios rather than pay-as-you-go",
+      "status": "explicit",
+      "evidence_span": "initially we started off as a pay as you go but now we're fully into a subscription model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Community-as-filmers production thesis",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Briefing, rights, processing, and search tools",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Scale authentic community-produced video for brands and broadcasters",
+      "status": "explicit",
+      "evidence_span": "changing the way that our clients are thinking about how they might produce their next video"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Real employee/community content that connects with audiences",
+      "evidence_span": "best performing video online, because it's real and it connects"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "high-impact video at scale"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building the tools to enable our clients to engage and create with their own communities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Run2 splits rights from filming instructions (could fail separately: briefing quality vs legal reuse). Footage-download and client-count metrics excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-673",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

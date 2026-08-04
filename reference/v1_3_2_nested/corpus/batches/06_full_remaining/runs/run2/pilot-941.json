@@ -1,0 +1,126 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Niche vendors cover only one vertical, so customers lack a single system for all telecommunication services",
+      "status": "explicit",
+      "evidence_span": "there hasn't been a single platform where you can actually get all of your telecommunication services from the same system until today"
+    },
+    {
+      "id": "P2",
+      "text": "Employer-issued or personal cell phones are not real business phones",
+      "status": "explicit",
+      "evidence_span": "that is not an actual business phone. It is just a cell phone"
+    },
+    {
+      "id": "P3",
+      "text": "Sprint-network integration ties mobile into the switch so business logic and routing always run through it",
+      "status": "explicit",
+      "evidence_span": "it routes all the data through the switch, and so all your business logic and all the routing goes through the switch at all times"
+    },
+    {
+      "id": "P4",
+      "text": "Switch-tied mobile supports BYOD activation and business features such as transfers, presence, location without GPS, and recording",
+      "status": "explicit",
+      "evidence_span": "you can actually bring your own device"
+    },
+    {
+      "id": "P5",
+      "text": "Unlike over-the-top apps on data networks, calls ride the actual cellular phone channel",
+      "status": "explicit",
+      "evidence_span": "your mobile call is going over actual phone channel"
+    },
+    {
+      "id": "P6",
+      "text": "APIs let customers activate devices and attach their own systems",
+      "status": "explicit",
+      "evidence_span": "If you don't like our interface, you don't like our UI, you can attach your own software and your own systems to activate the cellular devices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "One-stop switch platform",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cellular-integrated business mobile",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Customer-facing APIs",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses communicate with real business-phone features on mobile tied into the core network",
+      "status": "explicit",
+      "evidence_span": "help their businesses communicate better"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Private telecom networks without internet for security-sensitive customers",
+      "evidence_span": "you can actually set up private telecom networks"
+    },
+    {
+      "text": "International IP calls through the switch are dirt cheap",
+      "evidence_span": "it's dirt cheap"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one-stop shop where all of these APIs and all of this functionality come in one box"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tied into the core network versus an over-the-top application"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "APIs that are exposed to you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Private networks and cheap international kept as secondary_value. D3 singleton: API extensibility framed as usable without their UI.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-941",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ad creative drives sales yet a large share of marketing budgets is wasted on ineffective content",
+      "status": "explicit",
+      "evidence_span": "47% of sales is attributed to the ad creative, and yet 25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "id": "P2",
+      "text": "Computer vision quantifies design elements so AI can discover creative features that drive sales",
+      "status": "explicit",
+      "evidence_span": "OmniKey uses computer vision to quantify design elements into data points. Our AI discovers the image features, video features, design features, keywords, and more that are driving sales"
+    },
+    {
+      "id": "P3",
+      "text": "Generative AI creates personalized ads from real-time marketing performance data",
+      "status": "explicit",
+      "evidence_span": "generate personalized content based on real-time marketing data"
+    },
+    {
+      "id": "P4",
+      "text": "Customers approve ads before automatic launch across platforms, with brand guidelines enforced",
+      "status": "explicit",
+      "evidence_span": "Once and only once customers explicitly approve the ads are the ads launched across the various ad networks"
+    },
+    {
+      "id": "P5",
+      "text": "Proprietary API integrations with ad networks ensure generated content is backed by real performance data",
+      "status": "explicit",
+      "evidence_span": "We have proprietary API integrations with all the ad networks and marketing platforms listed here to ensure that the content we generate actually drives results, actually is backed by real data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ineffective content waste",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-driven generative ad platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-generated ads that drive sales because they are backed by real-time marketing data",
+      "status": "explicit",
+      "evidence_span": "drive your sales to the moon with AI-generated content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our AI then utilizes these insights to generate personalized content at scale"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "money is wasted every year on ineffective content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the content we generate actually delivers conversions, actually delivers results because it's backed by real-time marketing data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Creator marketplace finishing touches and DAM brand-asset upload folded into approval/control premise per §4.1(5). Revenue and customer-count claims excluded as traction. 'First data-driven generative AI platform' slogan treated as framing. Self-serve launch and discount offer excluded as promo.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-306",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

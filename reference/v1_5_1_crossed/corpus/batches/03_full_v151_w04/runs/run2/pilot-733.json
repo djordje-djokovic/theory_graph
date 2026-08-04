@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-733",
+    "coder_session_id": "session_05",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most commerce is still offline, but brands lack control of in-store execution while collaboration with retailers relies on calls, emails, and costly visits",
+      "status": "explicit",
+      "evidence_span": "Brands and retailers are still relying on multiple phone calls and emails and very expensive and inefficient store visits"
+    },
+    {
+      "id": "P2",
+      "text": "Ubique is a collaboration platform so brands monitor globally, retailers improve execution remotely, and store employees focus on what matters",
+      "status": "explicit",
+      "evidence_span": "Brands monitor their operations globally, retailers improve their execution remotely, and in-store employees can focus on what really matters"
+    },
+    {
+      "id": "P3",
+      "text": "Brands run campaigns with configurable data collection and can alternatively use a 50,000-consumer crowdsourcing community",
+      "status": "explicit",
+      "evidence_span": "she can decide to use our crowdsourcing community of 50,000 consumers to collect the data on her behalf"
+    },
+    {
+      "id": "P4",
+      "text": "In-store staff complete tasks with training video, barcode stock updates, photo confirmation, and real-time object detection for facings",
+      "status": "explicit",
+      "evidence_span": "Ubique uses real-time object detection to automate continuous products"
+    },
+    {
+      "id": "P5",
+      "text": "Combining sales data with merchandising info yields previously unavailable insights and live-chat retailer notifications",
+      "status": "explicit",
+      "evidence_span": "By combining sales data with merchandising info, she has now insights that were never available before"
+    },
+    {
+      "id": "P6",
+      "text": "SaaS pricing is charged per user per company",
+      "status": "explicit",
+      "evidence_span": "SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken brand-retailer in-store collaboration",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "campaign execution and shelf intelligence platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "per-user SaaS pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve in-store execution collaboration so brands and retailers raise sales and merchandising ROI",
+      "status": "explicit",
+      "evidence_span": "We've improved field efficiency. We've maximized the merchandising return on investment"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in-store execution is key, but hardly happens"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reinventing how retailers and brands collaborate"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Store-employee task tools (video/barcode/photo/object detection) treated as one in-store execution mechanism with object detection as the diagnostic span. Traction (30 brands, 10k stores) excluded. Transcript cuts off mid-sentence. 25% sales lift excluded as outcome boast rather than a continuing mechanism."
+}

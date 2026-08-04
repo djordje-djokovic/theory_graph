@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-915",
+    "coder_session_id": "session_05",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customers struggle to book last-minute personal services while qualified local merchants have idle capacity they want to monetize",
+      "status": "explicit",
+      "evidence_span": "It seemed really inefficient that I had to go through the painful process of dialing all of those merchants just to find one that was willing to take my money, yet there's a pool of highly qualified small businesses that are willing to bend over backwards"
+    },
+    {
+      "id": "P2",
+      "text": "Bidzee lets customers place a named-price service request with terms (time, travel, rating) that is broadcast to local merchants who can accept, charge the card, and schedule",
+      "status": "explicit",
+      "evidence_span": "Within a few clicks on a website or mobile apps, you can easily place a request for personal service, and you can even name your own price"
+    },
+    {
+      "id": "P3",
+      "text": "Merchants get customer acquisition with no upfront investment, bottom-of-funnel carded demand, certainty of timing, and the ability to accept only when they have excess capacity",
+      "status": "explicit",
+      "evidence_span": "A merchant working with BidZ faces no upfront investment at all. They have bottom-of-the-funnel customers who have already put a credit card behind their offer"
+    },
+    {
+      "id": "P4",
+      "text": "Unlike C2C task marketplaces, Bidzee connects customers only to verified, rated local businesses",
+      "status": "explicit",
+      "evidence_span": "BidZ is only connecting you with a verified, rated local business in order to perform the service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "last-minute service booking inefficiency",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "customer-named-price bid marketplace",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "merchant acquisition on their terms",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "verified local business trust",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get services on their terms while merchants monetize idle time with paying customers",
+      "status": "explicit",
+      "evidence_span": "A customer gets an appointment on their terms, and a business gets a paying customer through the door, allowing them to monetize, otherwise, idle time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "marketplaces can effectively solve these inefficiencies"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are the only platform that flips the equation and allows a customer to offer themselves to a business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bidsy merchants only need to accept bids when they know they have excess capacity"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're starting off with the key facet to a successful marketplace, trust"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Customer dialing pain and merchant idle-capacity willingness folded as one two-sided inefficiency (§4.1.6). Haircut/nails/dog walking/etc. treated as service categories of one bid marketplace, not separate premises. Merchant channel complaints (expensive/complicated/risky/no control) folded into merchant-on-their-terms acquisition premise. Groupon revenue treated as market evidence framing. Four-domain partition; not a need/product/money triad."
+}

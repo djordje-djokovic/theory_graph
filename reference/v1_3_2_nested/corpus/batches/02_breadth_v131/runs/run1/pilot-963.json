@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users want phones and devices charged remotely without removing them from pocket or bag",
+      "status": "explicit",
+      "evidence_span": "How many of you would like to have your phone charge automatically without taking them out of your pocket or bag? We need wireless power"
+    },
+    {
+      "id": "P2",
+      "text": "COTA delivers about one watt of power at a 30-foot distance to multiple devices safely",
+      "status": "explicit",
+      "evidence_span": "Kota is the only wireless power technology that can deliver one watt of power at a 30-foot distance, spanning an entire home, powering multiple devices safely"
+    },
+    {
+      "id": "P3",
+      "text": "A receiver beacon lets the charger return power only along open paths, avoiding people and absorbers",
+      "status": "explicit",
+      "evidence_span": "A Kota-enabled receiver device would send out regularly a beacon signal that travels the environment and finds ways, paths, to the charger, which in turn returns the power signal only through the open paths between it and the receiver, powering it and avoiding people or anything that absorbs its energy"
+    },
+    {
+      "id": "P4",
+      "text": "Power works without line of sight, behind walls and around corners, without interfering with electronics",
+      "status": "explicit",
+      "evidence_span": "Kota works without line of sight, powering devices behind walls and around corners without interfering with electronic equipment"
+    },
+    {
+      "id": "P5",
+      "text": "Higher transmitter counts raise efficiency toward consumer charger designs",
+      "status": "explicit",
+      "evidence_span": "The more transmitters, the higher the efficiency"
+    },
+    {
+      "id": "P6",
+      "text": "COTA ships as device-integrated, battery-integrated, or dongle add-ons for existing devices",
+      "status": "explicit",
+      "evidence_span": "Kota will come to the market in several forms, built into devices and phones, built into standard batteries, and as dongles for current devices so we don't have to purchase new devices to use it"
+    },
+    {
+      "id": "P7",
+      "text": "Go-to-market is through electronics-manufacturer partnerships using COTA components and design",
+      "status": "explicit",
+      "evidence_span": "We want to partner with electronics manufacturers to use our components, design, and technology to enable their products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remote automatic charging need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Directed long-range wireless power tech",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Product forms and OEM partnerships",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A world that is always on and always ready through effortless remote wireless power",
+      "status": "explicit",
+      "evidence_span": "make a world that's always on, always ready"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Industrial uses such as oil-and-gas spark-risk reduction alongside consumer charging",
+      "evidence_span": "oil and gas industry, which has forever sought wireless power to eliminate the risk of disastrous sparking"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "phone charge automatically without taking them out of your pocket or bag"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver one watt of power at a 30-foot distance"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partner with electronics manufacturers to use our components, design, and technology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "v1.3.1 §4.1.1: issued patents stated after naming COTA stay inside the technology bundle (not a separate premise). FCC certification treated as status on the tech path, not a separate institutional premise. Capital ask excluded. Singleton D1: need premise is independently revisable from the mechanism.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

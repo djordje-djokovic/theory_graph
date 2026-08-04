@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-929",
+    "coder_session_id": "session_06",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Startups and mid-sized firms struggle to compete with big companies in increasingly competitive campus recruiting",
+      "status": "explicit",
+      "evidence_span": "how can a startup or a medium-sized company compete effectively with the big guys on campus?"
+    },
+    {
+      "id": "P2",
+      "text": "Relationships, not traditional networking/referral tools, are the key to hiring great students over a multi-year pipeline",
+      "status": "explicit",
+      "evidence_span": "relationships are the key to hiring great students"
+    },
+    {
+      "id": "P3",
+      "text": "A company portal with employee ambassadors invites promising students met on campus into a private long-term SRM",
+      "status": "explicit",
+      "evidence_span": "platform as a service for college recruiting teams to build and manage their relationship with students over multiple years"
+    },
+    {
+      "id": "P4",
+      "text": "Companies create challenges students solve while interacting with professionals to identify talent",
+      "status": "explicit",
+      "evidence_span": "companies can create challenges for students to work on"
+    },
+    {
+      "id": "P5",
+      "text": "Students showcase class and outside projects for expert feedback while companies learn about them",
+      "status": "explicit",
+      "evidence_span": "students can showcase projects that they're working on and potentially get feedback from professionals"
+    },
+    {
+      "id": "P6",
+      "text": "Free for students and monthly subscription for companies",
+      "status": "explicit",
+      "evidence_span": "Meriful is always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "relationship-based college recruiting need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "SRM portal challenges and projects",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "student-free company subscription",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies hire the best students by building multi-year campus relationships",
+      "status": "explicit",
+      "evidence_span": "help companies hire the best students out of universities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We built Merrifield to help companies make the most out of this long cycle by creating a relationship with students"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you want to hire the best students, you need to build a relationship with them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a sustainable relationship with students that's directly tied to their recruiting efforts"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Challenges and project showcase split as distinct engagement mechanisms. Progress-tracking/insights folded into P3 relationship-management surface. Private-beta traction excluded per §4.2. Singleton D3 retained as independently revisable pricing module. Partition is not a need/product/money triad in the habitual sense; D1 is competitive-campus relationship theory, not generic customer need."
+}

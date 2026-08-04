@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:56:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile device users still depend on outlets and struggle to keep phones charged through the day",
+      "status": "explicit",
+      "evidence_span": "scurrying around trying to find an outlet just to get a little bit more juice in your phone"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary harvesting-antenna phone case captures wasted RF from the device and converts it to DC power that extends battery life without plugging in",
+      "status": "explicit",
+      "evidence_span": "Our case is embedded with a harvesting antenna that is proprietary that captures that wasted RF energy and then takes it through a conversion process to convert it into electricity and then dumps it back into the phone"
+    },
+    {
+      "id": "P3",
+      "text": "A large share of U.S. smartphone users already buy accessories to get more phone power",
+      "status": "explicit",
+      "evidence_span": "out of the 220 million smartphone users in the United States, over 30% have purchased some sort of product to help them get a little more power in their phone"
+    },
+    {
+      "id": "P4",
+      "text": "Partnership with a leading RF academic lab enables bringing the technology to market quickly",
+      "status": "explicit",
+      "evidence_span": "In partnership with The Ohio State University, we have pioneered this technology and are bringing this technology to the market in less than one month from now"
+    },
+    {
+      "id": "P5",
+      "text": "The first product launches via Kickstarter",
+      "status": "explicit",
+      "evidence_span": "in one month, we are launching this product. And we will be doing that on Kickstarter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mobile charging pain and demand",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "RF harvesting case technology",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Kickstarter launch",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Extra passive battery power for mobile devices without hunting for outlets",
+      "status": "explicit",
+      "evidence_span": "it works passively, and it gives you extra power that you need to get from sunup to sundown"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Green recovery of wasted RF energy",
+      "evidence_span": "It is a green technology that simply harvests wasted energy and converts it into DC power"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you as a consumer deserve a better solution for power for your mobile devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extend your battery life by 30% simply using wasted energy transmitted from your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are launching this product. And we will be doing that on Kickstarter"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Outlet-hunting and 19th-century-power framing folded as one charging-pain premise (v1.5.1 §4.1.6). Antenna, conversion, 30% extension, and no-plug vs battery-case claims folded as one RF-harvesting case mechanism with performance package (§4.1.7–8). Wireless-charger/IoT roadmap and ubiquitous-power vision treated as framing, not premises. OSU partnership kept as separately revisable tech-access condition; Kickstarter singleton retained as independently revisable launch module. Anti-template: demand, product/tech access, and launch channel separately revisable."
+}

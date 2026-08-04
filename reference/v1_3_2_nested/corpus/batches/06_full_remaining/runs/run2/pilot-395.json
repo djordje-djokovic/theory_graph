@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rare-earth and battery metals lack scalable purification and face concentrated, volatile supply",
+      "status": "explicit",
+      "evidence_span": "there is no such competitive process"
+    },
+    {
+      "id": "P2",
+      "text": "Carbon nanotube filter stacks electrochemically recover individual metals from mixed liquid waste at coffee-cup scale",
+      "status": "explicit",
+      "evidence_span": "we take these carbon nanotube filters, assemble them in series, and we can introduce a mixed metal waste solution at the top of the filter stack and individually recover those metals"
+    },
+    {
+      "id": "P3",
+      "text": "Manufacturers need technology that turns effluent and disassembled components back into primary elements",
+      "status": "explicit",
+      "evidence_span": "there is no technology that can take those boxes of components sitting on the disassembly floor and turn them back into the primary elements"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term plug into fabrication effluent streams; productize beyond basement prototype",
+      "status": "explicit",
+      "evidence_span": "About half of the material, that hard fought expensive material, goes out the effluent stream of these manufacturing plants"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Supply and purification gap",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "CNT filter process",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Effluent integration roadmap",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reclaim metals so manufacturers control supply for electronics and energy storage",
+      "status": "explicit",
+      "evidence_span": "returns control of the metal supply chain to the manufacturer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you care a lot about this problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's ready for use in a new manufacturing design"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve fabrication efficiencies in manufacture"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged conductivity/surface-area properties into process premise. China price-spike history as evidence of supply premise, not separate. Singleton process domain: core tech independently learnable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-395",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:34:20+02:00"
+  }
+}

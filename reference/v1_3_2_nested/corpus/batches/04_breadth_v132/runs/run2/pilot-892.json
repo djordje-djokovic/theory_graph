@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-892",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:29:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SIDS is the number one cause of infant death and the central anxiety of new parents at home",
+      "status": "explicit",
+      "evidence_span": "It's the number one cause of infant death, and it's what keeps most moms up at night"
+    },
+    {
+      "id": "P2",
+      "text": "Current monitors are old and outdated and cannot tell parents whether the baby is breathing",
+      "status": "explicit",
+      "evidence_span": "the current monitors on the market stink"
+    },
+    {
+      "id": "P3",
+      "text": "A smart sock sends heart rate and oxygen levels to the parent's smartphone and alerts them in an emergency",
+      "status": "explicit",
+      "evidence_span": "It's a smart sock that sends heart rate and oxygen levels to a parent's smartphone and can alert you in case of an emergency"
+    },
+    {
+      "id": "P4",
+      "text": "The sock is built on hospital pulse-oximetry technology that is safe, proven, and used worldwide",
+      "status": "explicit",
+      "evidence_span": "it's safe, it's proven, and it's used all over the world"
+    },
+    {
+      "id": "P5",
+      "text": "Flexible electronics encased in silicone make the device baby-proof and waterproof",
+      "status": "explicit",
+      "evidence_span": "we've made the electronics completely flexible, and we've encased it in silicone so that it is also waterproof"
+    },
+    {
+      "id": "P6",
+      "text": "Hospital-grade pulse oximetry is miniaturized to 1/80th the size and keeps a great reading all the time through multiple sensors",
+      "status": "explicit",
+      "evidence_span": "which is 180th the size. And it does everything that the home pulse oximeter can do, and it's wireless"
+    },
+    {
+      "id": "P7",
+      "text": "Skin temperature, rollover alerts, and sleep-quality tracking empower parents who cannot ask an infant what is wrong",
+      "status": "explicit",
+      "evidence_span": "infants don't exactly tell you what they're feeling or what's wrong"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SIDS anxiety and failing monitors",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart-sock vitals product",
+      "premise_ids": ["P3", "P4", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Baby-proof miniaturized engineering",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parents are empowered and infant health is protected through continuous vitals visibility and alerts",
+      "status": "explicit",
+      "evidence_span": "is very helpful and empowering for parents during this difficult time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if I hadn't heard our monitor or seen her in time, she would have died"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can alert you in case of an emergency"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're getting a great reading the whole time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The opening emotional framing is compressed into P1 (SIDS anxiety); the customer testimonial is used only as evidence of the need. The quarter-million pre-sales figure is excluded as traction per 4.2, and the infant-health-dataset ambition is left uncoded here as a future platform vision per v1.3.2 clarification 4. P6 merges miniaturization with the multi-sensor continuous-reading solution: the speaker presents the four-sensor design as the fix for keeping a reading on a growing foot, one engineering condition. No plainly asserted premise-prerequisite coded."
+}

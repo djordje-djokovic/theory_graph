@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-922",
+    "coder_session_id": "session_06",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contract workflows span many drafts, approvals, negotiations, and signatures and become chaotic at sales-org scale",
+      "status": "explicit",
+      "evidence_span": "You're dealing with drafts, requests, manager approvals, customer approvals, negotiations, revisions, re-revisions, and ultimately signatures"
+    },
+    {
+      "id": "P2",
+      "text": "A visual workflow builder composes common contract tasks such as document requests, approvals, and signatures",
+      "status": "explicit",
+      "evidence_span": "simple visual building blocks that each represent common tasks, things like requesting documents, getting approvals, and getting signatures"
+    },
+    {
+      "id": "P3",
+      "text": "Glider automates requests, reminders, one-click review/approve/sign, and team notifications so deals need no babysitting",
+      "status": "explicit",
+      "evidence_span": "Glider takes care of all the requests and reminders so no babysitting is required"
+    },
+    {
+      "id": "P4",
+      "text": "A management dashboard shows where deals sit across legal, negotiation, and final signature stages",
+      "status": "explicit",
+      "evidence_span": "dashboard where you can see in one place how many deals are off in legal land, how many deals are stuck in internal or external negotiations, and how many deals are actually out for final customer signature"
+    },
+    {
+      "id": "P5",
+      "text": "Glider occupies the painful middle between CRM start and e-signature finish to shorten close times",
+      "status": "explicit",
+      "evidence_span": "That's where Glider is shortening close times and keeping teams working together seamlessly"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contract process chaos",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "workflow automation product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "CRM-to-signature market wedge",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organizations manage contracts simply and close deals faster with clear workflow visibility",
+      "status": "explicit",
+      "evidence_span": "make managing this process drop dead simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody hates dealing with contracts"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes them dead simple to follow"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Glider is shortening close times"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Seed financing and named pilot customers excluded as financing/traction per §4.2. Request/approve/sign blocks folded into P2 as one workflow-builder mechanism; reminders/notifications/one-click into P3 as the automation package of that product. Singletons D1 and D3 retained as separately revisable problem framing and market-wedge claims."
+}

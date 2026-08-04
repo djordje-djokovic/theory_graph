@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most historical plastic production becomes waste, yet plastics remain critical to the modern economy",
+      "status": "explicit",
+      "evidence_span": "7.3 billion tons of plastic have been produced since the 1950s, and 86% of that is waste"
+    },
+    {
+      "id": "P2",
+      "text": "Enzymes can be stabilized and packaged inside plastics so the materials self-degrade when finished",
+      "status": "explicit",
+      "evidence_span": "stabilize enzymes and package them up inside of the plastics so they can self-degrade when we're done with them"
+    },
+    {
+      "id": "P3",
+      "text": "A proprietary coating protects fragile enzymes so they can be embedded and triggered to degrade plastics from the inside",
+      "status": "explicit",
+      "evidence_span": "wrap them in our special proprietary coating that acts like PPE and enables us to take these fragile molecules and put them inside the plastics, where they can be triggered to degrade the materials from the inside out"
+    },
+    {
+      "id": "P4",
+      "text": "Degradation is on demand with water and heat and can run end-to-end to stop microplastics at the source",
+      "status": "explicit",
+      "evidence_span": "the degradation is on demand. It requires water and heat. It doesn't happen just on its own"
+    },
+    {
+      "id": "P5",
+      "text": "Offering is a drop-in additive using small enzyme doses that is readily scalable",
+      "status": "explicit",
+      "evidence_span": "We're developing a drop-in additive that's readily scalable. Enzymes are incredibly efficient, so we only need to use a little bit"
+    },
+    {
+      "id": "P6",
+      "text": "Beachhead is PLA compostable plastics to expand design space and improve end-of-life/regulatory options",
+      "status": "explicit",
+      "evidence_span": "We're starting with PLA, which is the first compostable plastic. It's a $3.5 billion market"
+    },
+    {
+      "id": "P7",
+      "text": "Warm-water or industrial pathways enable decentralized waste processing and chemical recycling",
+      "status": "explicit",
+      "evidence_span": "We can also break them down and warm water baths. And this is really important because that simple infrastructure that's easy to scale and maybe gives us a chance to think about decentralizing our waste stream"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Plastic waste versus economic necessity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Enzyme-in-plastic degradation technology",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "PLA market and end-of-life infrastructure",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Plastics that break down so society can live more harmoniously with nature",
+      "status": "explicit",
+      "evidence_span": "changing the way that we make and break materials so that we can live more harmoniously with nature"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stopping microplastics by degrading polymer chains end-to-end",
+      "evidence_span": "we stop microplastics at the source"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "6.3 billion tons of plastic on our land, oceans, air"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-degrade when we're done with them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely return to the soil at the end of life"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Team bios and grant/investor names excluded per §4.2. End-to-end degradation stopping microplastics treated as part of the on-demand degradation mechanism (P4) rather than a second premise. Singleton D1 retained as problem framing that could be revised separately from the enzyme tech.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-272",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

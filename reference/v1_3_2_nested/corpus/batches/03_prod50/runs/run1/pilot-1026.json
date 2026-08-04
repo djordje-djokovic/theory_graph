@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMS chat gives billions of people a mouthpiece to send messages and communicate",
+      "status": "explicit",
+      "evidence_span": "we're giving billions of people in the world a mouthpiece to send messages and communicate"
+    },
+    {
+      "id": "P2",
+      "text": "Monetize with advertisements treated as informational in emerging economies",
+      "status": "explicit",
+      "evidence_span": "we monetize with advertisement. I know ads are not in here. But we, in emerging economies, don't have access to information. We see ads as informational"
+    },
+    {
+      "id": "P3",
+      "text": "Platform brings internet-like services (Yelp, iTunes, shopping) to people on non-smartphones who leapfrogged PC",
+      "status": "explicit",
+      "evidence_span": "We are bringing people who have leapfrogged the PCH into mobile, 5.4 billion people, to now have access to a platform"
+    },
+    {
+      "id": "P4",
+      "text": "Solving SMS chat now while evolving into a platform for non-smartphone internet access",
+      "status": "explicit",
+      "evidence_span": "We are solving an SMS problem right now. But I see SEA as a platform that is going to bring internet access to people to have Stuff like Yelp, iTunes, shopping on their non-smartphones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMS communication for emerging markets",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Informational ad monetization",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Non-smartphone internet platform",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give emerging-market users a communication mouthpiece and path to internet services on non-smartphones",
+      "status": "explicit",
+      "evidence_span": "giving billions of people in the world a mouthpiece to send messages and communicate"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Informational ads that tell people where to get what",
+      "evidence_span": "if you send me an ad telling me where to go to get what, I respond to it"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mouthpiece to send messages and communicate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We see ads as informational"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring internet access to people"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Opens mid-pitch; download backlog treated as traction evidence of demand, not a premise. Fundraising ask excluded. Singletons D1/D2: chat vs ads separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1026",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:49:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

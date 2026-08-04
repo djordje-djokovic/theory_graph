@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:14:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Preventable maternal complications, OBGYN shortage, rising complications, and legislation make early identification of pregnancy problems harder",
+      "status": "explicit",
+      "evidence_span": "With the increasing shortage of OBGYNs, the growing rate of pregnancy complications, and new legislation negatively impacting maternal diagnostics, it's becoming more difficult to identify these problems earlier to prevent tragic outcomes"
+    },
+    {
+      "id": "P2",
+      "text": "Operator-dependent ultrasound errors cause widespread fetal malformation misdiagnosis and many mothers lack minimum-standard diagnostic ultrasound",
+      "status": "explicit",
+      "evidence_span": "In the developed world, half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators. Globally, 107 million mothers do not have access to the minimum standard diagnostic ultrasound"
+    },
+    {
+      "id": "P3",
+      "text": "Vendor-agnostic cloud AI integrates with any ultrasound machine via standard API to process exams",
+      "status": "explicit",
+      "evidence_span": "Biotics AI is a vendor agnostic cloud-based solution that can integrate with any ultrasound machine over a standard API"
+    },
+    {
+      "id": "P4",
+      "text": "AI validates screening completeness and quality across many anatomical views and gives live feedback when key regions are missing",
+      "status": "explicit",
+      "evidence_span": "Biotics AI has processed the entirety of Sara's ultrasound exam to validate the completeness and quality of the screening, ensuring the appropriate capture over 80 different anatomical views and structures, providing feedback to Dr. Sham if he missed any key regions"
+    },
+    {
+      "id": "P5",
+      "text": "Guided diagnostics localizes fetal malformations so abnormalities are not unnoticed and intervention can follow",
+      "status": "explicit",
+      "evidence_span": "Our AI was able to localize this fetal malformation, providing feedback to the obstetrician so that way this abnormality doesn't go unnoticed and that appropriate intervention can be taken"
+    },
+    {
+      "id": "P6",
+      "text": "AI also automates reporting and documentation to save clinician time per patient",
+      "status": "explicit",
+      "evidence_span": "we were able to automate reporting and documentation and save up to eight minutes per patient on documentation"
+    },
+    {
+      "id": "P7",
+      "text": "Hospitals buy via hybrid subscription plus volume-based API pricing justified by time savings, fewer callbacks, malpractice mitigation, and future NTAP reimbursement",
+      "status": "explicit",
+      "evidence_span": "we're selling our solution to hospitals. We're leveraging a hybrid pricing model with a subscription-based charge for baseline subscription costs and a volume-based pricing model for API calls to our algorithms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ultrasound misdiagnosis and maternal care gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "AI ultrasound quality control and diagnostics",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Hospital hybrid subscription sales",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect fetal abnormalities earlier with higher quality and efficiency so every pregnant patient gets needed care",
+      "status": "explicit",
+      "evidence_span": "Biotics AI helps detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Time savings and ROI for physicians and hospitals via automated documentation",
+      "evidence_span": "providing value to the patient, physician, and the hospital"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "our solution does not stop at quality control. It actually moves into guided diagnostics"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "validate the completeness and quality of the screening"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Hospitals are incentivized to leverage our solution because of the valuable ROI we're providing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Clinical study completeness +20% treated as traction evidence of P4, not a separate premise. Family biography excluded except as framing. Quality-control vs guided-diagnostics vs documentation split as distinct capabilities. Pitch ended on time call. Singleton D3 retained as commercial model module. Anti-template: need, product, hospital commercial model separately revisable."
+}

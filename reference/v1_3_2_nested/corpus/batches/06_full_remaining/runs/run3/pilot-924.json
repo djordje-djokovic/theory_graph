@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-924",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:04+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Priorities are not coextensive with email, so capture must include mind and meetings",
+      "status": "explicit",
+      "evidence_span": "Priorities are not all emails, and emails are not all priorities"
+    },
+    {
+      "id": "P2",
+      "text": "Triage means deciding on every item when you see it; plan and do close the habit",
+      "status": "explicit",
+      "evidence_span": "Triage is making decisions on every item when you see it"
+    },
+    {
+      "id": "P3",
+      "text": "Email-only or task-only tools cannot deliver the full habit",
+      "status": "explicit",
+      "evidence_span": "email clients have not been able to solve this problem alone, and task managers have not been able to solve this problem alone"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile capture plus handlebar triage empty the inbox into a trusted system",
+      "status": "explicit",
+      "evidence_span": "Handle makes it easy for me to capture my thoughts and get them into my trusted system quickly"
+    },
+    {
+      "id": "P5",
+      "text": "Importance-ordered planning and task-context execution finish the day's must-dos",
+      "status": "explicit",
+      "evidence_span": "I finished all my important work for the day"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Capture and triage habit",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Handle product surfaces",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Outcomes: must-dos done and focus on what matters most",
+      "status": "explicit",
+      "evidence_span": "handle is mostly about outcomes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You have to get them all in one place to make good decisions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I finished all my important work for the day"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Siri anecdote used only as design inspiration for handlebar, not a separate premise. Invite-code humor is demo color, not coded."
+}

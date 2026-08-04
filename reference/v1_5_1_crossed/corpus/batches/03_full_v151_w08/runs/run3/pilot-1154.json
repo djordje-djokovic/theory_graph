@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1154",
+    "coder_session_id": "session_06",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer-product marketers waste roughly half of large ad budgets because they cannot tell converters from already-loyal buyers and still rely on untargeted coupons",
+      "status": "explicit",
+      "evidence_span": "they know 50% of that budget is misspent and wasted on the wrong customers"
+    },
+    {
+      "id": "P2",
+      "text": "Users zap product barcodes to check in and share with friends on Facebook and Twitter, including in-store at decision time",
+      "status": "explicit",
+      "evidence_span": "We want you to zap the barcode, check in, and then share it with your friends and followers on Facebook and Twitter"
+    },
+    {
+      "id": "P3",
+      "text": "Check-ins unlock sarcastic dragon quips and comic-book adventures tied to product combinations, wrapping marketing in a game",
+      "status": "explicit",
+      "evidence_span": "as you check into different combinations of products, you unlock these comic books"
+    },
+    {
+      "id": "P4",
+      "text": "Product Fanship leaderboards let users compete for top status on favorite brands",
+      "status": "explicit",
+      "evidence_span": "for your favorite products, we have product leaderboards, which we call Fanships"
+    },
+    {
+      "id": "P5",
+      "text": "Check-in behavior gives consumer-product marketers the targeting tools to reward loyalty versus converting switchers",
+      "status": "explicit",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "untargeted CPG marketing waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "product check-in game with twist",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "marketer targeting from check-ins",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reinvent how consumer product companies market to customers with targeted, game-wrapped engagement",
+      "status": "explicit",
+      "evidence_span": "fundamentally reinvent how consumer product companies market to their customers"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Fun product check-in game that hooks consumers",
+      "evidence_span": "product check-in game with a twist"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "the fun really starts after the product check-in"
+    },
+    {
+      "from": "P2",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "By finally giving consumer product marketers the targeting tools that they need, and wrapping the whole thing in this fun gaming experience"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is the opportunity here for disruption"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wrapping the whole thing in this fun gaming experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "CPG waste/no-targeting/coupon examples folded as one problem-set. Barcode check-in, comics/quips, and Fanships split as distinct consumer engagement jobs (tie-break split). Marketer targeting kept as separately revisable B2B path enabled by check-ins."
+}

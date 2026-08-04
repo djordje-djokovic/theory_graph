@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators seeking hires, jobs, intros, or experts rely on asking trusted people, which is hard work",
+      "status": "explicit",
+      "evidence_span": "You're looking to hire, you're looking to be hired, you're looking for an introduction, or maybe an expert. This is hard work. So what do we do? We ask the people we trust"
+    },
+    {
+      "id": "P2",
+      "text": "Namesake couples social graphs with real-time infrastructure for publishing, routing, and matching",
+      "status": "explicit",
+      "evidence_span": "We take the power of your social graph, meaning Facebook, Twitter, and LinkedIn, and couple it with our real-time infrastructure to make publishing, routing, and matching happen like magic"
+    },
+    {
+      "id": "P3",
+      "text": "Smart routing pushes opportunities across contacts and followers and lets people re-route them",
+      "status": "explicit",
+      "evidence_span": "it's going out across my graph using our smart routing algorithm"
+    },
+    {
+      "id": "P4",
+      "text": "Users can apply or make introductions inline from the stream",
+      "status": "explicit",
+      "evidence_span": "we have the ability to apply for these things in line, to apply or, if it's the relevant opportunity, to make introductions"
+    },
+    {
+      "id": "P5",
+      "text": "Expertise endorsements build a business expertise graph that underpins trust",
+      "status": "explicit",
+      "evidence_span": "we're building out the business expertise graph, the key component in commerce for real"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Trusted-network opportunity matching need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Graph routing and inline response",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Expertise graph and endorsements",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Match business opportunity supply with demand through the social graph",
+      "status": "explicit",
+      "evidence_span": "Markets are about matching supply with demand"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Community for sharing business opportunities and knowledge",
+      "evidence_span": "Namesake is a community for sharing business opportunities and knowledge"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ask the people we trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "route business opportunities"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "business expertise graph"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Prior company exits excluded as biography. Opportunity posting form fields folded into routing capability. Singleton expertise domain retained as separately claimed trust module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1147",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:40+02:00"
+  }
+}

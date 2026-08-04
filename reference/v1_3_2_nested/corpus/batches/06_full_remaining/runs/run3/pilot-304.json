@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-304",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:50+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cancer patients at home between treatments cannot track blood counts and vitals, so infections delay chemo and drive hospitalizations",
+      "status": "explicit",
+      "evidence_span": "Infections lead to unplanned hospitalizations, costing $2.3 billion annually"
+    },
+    {
+      "id": "P2",
+      "text": "Current home monitoring misses critical health information versus what physicians need",
+      "status": "explicit",
+      "evidence_span": "Current methods of monitoring patients at home are missing critical health information"
+    },
+    {
+      "id": "P3",
+      "text": "NextGen Port implants optical sensing and microelectronics in a chemo port to measure blood cells and vitals in vivo",
+      "status": "explicit",
+      "evidence_span": "We measure blood cells as they flow past our optical system in the body"
+    },
+    {
+      "id": "P4",
+      "text": "ML software analyzes longitudinal data for pre-symptomatic changes and alerts physicians",
+      "status": "explicit",
+      "evidence_span": "our software uses machine learning to look for changes in health status before symptoms emerge"
+    },
+    {
+      "id": "P5",
+      "text": "Findings flow to physicians through EMR-integrated APIs so providers can contact patients before hospitalization",
+      "status": "explicit",
+      "evidence_span": "pass the findings on to physicians through an API integrated with their electronic medical records"
+    },
+    {
+      "id": "P6",
+      "text": "Wearables cannot track blood and clinic labs cannot measure real-time change, while the port adds no patient burden",
+      "status": "explicit",
+      "evidence_span": "Wearables can't track blood and they have low levels of patient engagement"
+    },
+    {
+      "id": "P7",
+      "text": "GTM sells to port manufacturers with FDA 510(k) hardware/software path and verified CPT reimbursement codes",
+      "status": "explicit",
+      "evidence_span": "we've submitted several patent applications, verified CPT codes for reimbursement. Based on predicates, we have a clear roadmap to our FDA submission"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmonitored infection risk at home",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Smart port data and alerts",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Manufacturer GTM and regulatory",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect early infection signs at home so physicians can intervene before hospitalization",
+      "status": "explicit",
+      "evidence_span": "detect early signs of infection before they even had symptoms"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve patient quality of life and avoid large hospitalization costs",
+      "evidence_span": "Imagine the impact we could have on the quality of life of patients if we could detect early signs of infection before they even had symptoms. Plus, save over a billion dollars"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "In between chemo treatments, our software uses machine learning"
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Our advanced warning alerts physicians to changes in health status so they can take action"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "50% of hospitalizations can be avoided with early detection"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "deliver life-saving care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the technology to port manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: kept patents/CPT/FDA inside one regulatory-commercial premise (§4.1(1)). Future dialysis/cardiac/vet uses treated as vision extensions, not premises. Team credentials excluded."
+}

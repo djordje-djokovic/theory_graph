@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers waste hours across irrelevant content and too many booking options without a coherent plan",
+      "status": "explicit",
+      "evidence_span": "Eight hours later, I'm sitting there with a shared Google spreadsheet and still got no plan"
+    },
+    {
+      "id": "P2",
+      "text": "Mapify personal travel guide integrates sources, community spots, and AI tagging into one journey workspace",
+      "status": "explicit",
+      "evidence_span": "Mapify integrates sources and information to collect everything in one place"
+    },
+    {
+      "id": "P3",
+      "text": "Magic planner auto-builds multi-stop itineraries with transport ordering and lodging matches for co-travelers",
+      "status": "explicit",
+      "evidence_span": "this timetable not only includes my spots, it also automatically connects and orders them by the best means of transport and matches a recommended Airbnb"
+    },
+    {
+      "id": "P4",
+      "text": "Brand and affiliate partnerships monetize the millennial leisure segment starting in Europe",
+      "status": "explicit",
+      "evidence_span": "generating revenue through brand and affiliate partnerships"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Planning paralysis",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mapify AI planner",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Travel brand monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant personalized travel plans without googling mess",
+      "status": "explicit",
+      "evidence_span": "There, no search for info, no googling, no mess"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "content totally irrelevant to us"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "An extremely powerful planner"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies want to be part of it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "AI engine folded into integrated platform premise. Competitive Instagram/Trivago contrast supports P1/P2 not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-534",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:20+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1018",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile web search returns seas of links instead of direct results that help decide immediately",
+      "status": "explicit",
+      "evidence_span": "all you get is a sea of web links, not direct results that help you make a decision immediately"
+    },
+    {
+      "id": "P2",
+      "text": "Maluba is a voice-and-touch do engine that returns actionable results across many task categories with timeline, share, and hybrid editing",
+      "status": "explicit",
+      "evidence_span": "It's a voice-activated do engine that helps you get tasks done"
+    },
+    {
+      "id": "P3",
+      "text": "Breakthrough natural language technology classifies questions into relevant categories accurately and supports rapid expansion to new verticals",
+      "status": "explicit",
+      "evidence_span": "breakthrough natural language technology, which classifies your question into the most relevant category with incredibly high accuracy"
+    },
+    {
+      "id": "P4",
+      "text": "An open ecosystem of content partners, cross-platform clients, and an SDK powers the best experience without being locked to one OS vendor",
+      "status": "explicit",
+      "evidence_span": "the future of search will be redefined by an open ecosystem"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "link-heavy mobile search problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "do-engine UX and NL classification",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "open partner and SDK ecosystem",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get tasks done with direct, natural-language results instead of hunting through web links",
+      "status": "explicit",
+      "evidence_span": "helps you get tasks done"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not direct results that help you make a decision immediately"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "voice-activated do engine that helps you get tasks done"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We want to provide you the best possible experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Sushi/timeline/share/touch+voice/hybrid edit folded as do-engine UX cascade (§4.1.7). NL accuracy and vertical expansion treated as enabling package of that product. Open ecosystem (partners/cross-platform/SDK) kept as third separately claimed belief. Anti-template: problem, product+NL, and open ecosystem separately revisable."
+}

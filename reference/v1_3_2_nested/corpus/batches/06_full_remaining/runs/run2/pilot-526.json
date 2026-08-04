@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Provider API/EDI consolidation must be paired with independent real-time tracking for data quality",
+      "status": "explicit",
+      "evidence_span": "So we pair providers' information with real-time and reliable tracking"
+    },
+    {
+      "id": "P2",
+      "text": "Satellite and GPS/IoT feeds plus data science produce ETA predictions and delay alerts",
+      "status": "explicit",
+      "evidence_span": "As soon as the delay is more than one day, we send an alert to operational teams so that they can anticipate"
+    },
+    {
+      "id": "P3",
+      "text": "Software turnkey solution—not a hardware company",
+      "status": "explicit",
+      "evidence_span": "we are not a hardware company. We are a software with a turnkey solution"
+    },
+    {
+      "id": "P4",
+      "text": "Target leading industrials on multimodal overseas lanes, not continental road freight",
+      "status": "explicit",
+      "evidence_span": "Most players in freight focus on continental road shipment. We are complementary to this market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Tracking, ETA, and alerts stack",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Multimodal overseas positioning",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Operational teams anticipate delays to secure production and cut transit-driven inventory",
+      "status": "explicit",
+      "evidence_span": "The goal is to reduce, as much as possible, the transit time"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve end-customer experience with proactive information",
+      "evidence_span": "we improve customer experience by providing proactive information to the end customer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can anticipate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Leading industrial companies ship goods worldwide, and Waikio is what they need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Truncated opening. Industry expertise claim excluded as credentials.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-526",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

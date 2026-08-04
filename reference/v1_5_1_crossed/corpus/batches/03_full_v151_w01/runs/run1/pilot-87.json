@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Heavy industry needs heat that is simultaneously cheap, reliable, and flame-hot; current zero-carbon options cannot deliver all three affordably",
+      "status": "explicit",
+      "evidence_span": "There is no affordable way to decarbonize our heavy industries. Cement, steel, glass, the building blocks of our society all need a tremendous amount of energy. And that energy needs to be cheap, reliable, and hot, often hot as flames"
+    },
+    {
+      "id": "P2",
+      "text": "Joule Hive thermal battery stores cheap/abundant electricity as on-demand hot gas delivered to existing furnaces, boilers, and kilns",
+      "status": "explicit",
+      "evidence_span": "This system takes in electricity from renewables or off-peak nuclear or hydro whenever it's cheap, whenever it's abundant, whenever it's available. We turn it into on-demand heat stored into the system"
+    },
+    {
+      "id": "P3",
+      "text": "Electrically conductive fire bricks (e-bricks) form a heater, thermal store, and heat exchanger that reach ~1,800°C cheaper than hydrogen and last longer than conventional electric heaters",
+      "status": "explicit",
+      "evidence_span": "the electrically conductive fire brick, or e-bricks, if you like. These bricks are from normal refractory materials, normal bricks that line furnaces today. We use semiconductor doping to make them electrically conductive"
+    },
+    {
+      "id": "P4",
+      "text": "System is retrofittable onto existing industrial processes without radical plant redesign",
+      "status": "explicit",
+      "evidence_span": "we're retrofitable. We can attach to your existing process, pipe in our hot gas to your furnace, your boiler, even your turbine"
+    },
+    {
+      "id": "P5",
+      "text": "In high-renewable regions, absorbing cheap/negative-priced power yields multi-year paybacks while cutting most site carbon versus gas or electric boilers",
+      "status": "explicit",
+      "evidence_span": "in the Midwest, you can operate in areas today where 50% of the year, electricity is cheaper than natural gas as a heat source. We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Industrial heat decarbonization gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Joule Hive and e-brick battery",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Cheap renewable power economics",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, reliable electrified heat that decarbonizes the hottest industries",
+      "status": "explicit",
+      "evidence_span": "decarbonize the hottest industries with electrified heat"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn the power from those sources into reliable industrial heat"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hydrogen cost comparison and 1,800°C performance folded into P2/P3 as quantitative detail of the thermal-battery mechanism. Lab scale-up demo and pilot glow treated as validation, not premises. Customer LOI/pipeline and 2030 revenue vision excluded as traction/aspiration. Anti-template note: D1 need, D2 technology, D3 site economics are separately revisable modules in the transcript."
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "coder_session_id": "session_01",
+    "session_case_index": 15,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote sports fans feel disconnected from the stadium despite broadcast, lacking a voice in the live game",
+      "status": "explicit",
+      "evidence_span": "he was disconnected from the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Connected devices let fans transmit energy into the stadium via apps and sensors shown on stadium VibeBoards (claps, swipes, sound)",
+      "status": "explicit",
+      "evidence_span": "enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P3",
+      "text": "For teams/stadiums: unique CRM data, connected merchandise via a fan chip, smartware apps, and brand integration around cheer moments",
+      "status": "explicit",
+      "evidence_span": "we capture a unique set of data that can feed into your CRM activities"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "remote fan stadium disconnect",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "live fan energy transmission",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "CRM merchandise brand B2B value",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the world a stadium so all fans become part of the game",
+      "status": "explicit",
+      "evidence_span": "make the world a stadium for sports fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving millions of remote fans a voice in the game"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "transmit their energy straight into the stadium"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can make all fans part of the game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Clap/swipe/sensor/sound demo facets folded as feature cascade of one fan-energy transmission mechanism. CRM, fan chip, smartware, and sponsorship listed as B2B value package for teams—one commercial/partnership premise under enumeration rule 1. Wembley/team cheer counts excluded as traction. Anti-template: fan pain, product, and B2B package are separately revisable."
+}

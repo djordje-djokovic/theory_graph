@@ -1,0 +1,121 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current braille interfaces cost thousands and show only a few words due to piezoelectric tech, hurting literacy",
+      "status": "explicit",
+      "evidence_span": "Devices that interface between blind user and computer. Essentially, it's a $5,000 up to $8,000 keyboard"
+    },
+    {
+      "id": "P2",
+      "text": "Airflow membrane actuators create a fully electronic tactile display controlling thousands of dots",
+      "status": "explicit",
+      "evidence_span": "produced the world's first tactile display without any mechanical elements. Now, we can control thousands of dots"
+    },
+    {
+      "id": "P3",
+      "text": "BlindTap pairs tactile braille surface with voiceover touch controls for learning, work, and play on one tablet",
+      "status": "explicit",
+      "evidence_span": "consists of two main components. We have our tactile screen embedded. And below, we have a touch screen"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud converter turns documents and web pages into full-page braille on the device",
+      "status": "explicit",
+      "evidence_span": "It can convert anything into Brow, like text files, documents, even whole web pages"
+    },
+    {
+      "id": "P5",
+      "text": "$500 price with online sales, distributors, and institutional orders for developing countries",
+      "status": "explicit",
+      "evidence_span": "affordable price of $500 US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inadequate braille access devices",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Tactile tablet hardware and software",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Affordable distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give blind users a full-page affordable tactile e-reader tablet",
+      "status": "explicit",
+      "evidence_span": "this makes it the digital e-reader for blind users"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Social mission to include blind children in modern education",
+      "evidence_span": "We are a venture with social mission"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we developed an innovative actuating technology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "low literacy rate among blind children"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "output one whole page in braille"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "affordable price of $500 US"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Independent run: literacy consequence inside access-problem premise. Price+channels one commercial premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-624",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

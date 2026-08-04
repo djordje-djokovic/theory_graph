@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1061",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Churn Labs builds speculative products in under-explored tech areas to learn and find opportunities",
+      "status": "explicit",
+      "evidence_span": "looking at areas of technology that we think haven't really been fully explored"
+    },
+    {
+      "id": "P2",
+      "text": "Non-stop Gnomes: unique digital gnome lives on one device, travels via photos/check-ins, and can be handed to friends",
+      "status": "explicit",
+      "evidence_span": "a gnome can only live on one device"
+    },
+    {
+      "id": "P3",
+      "text": "Users create custom gnomes or 'lift' them between devices with camera viewfinder magic transfer",
+      "status": "explicit",
+      "evidence_span": "transfer your gnome to a new friend. We're calling this process lift"
+    },
+    {
+      "id": "P4",
+      "text": "Prior holders get travel notifications, photos, and can comment along the gnome's path",
+      "status": "explicit",
+      "evidence_span": "everybody who's been along that path with Disrupt will actually get to comment and join in the fun"
+    },
+    {
+      "id": "P5",
+      "text": "Lyft/Lift interconnectivity enables drag-and-drop of content through screens between devices",
+      "status": "explicit",
+      "evidence_span": "a way of doing a different way of device interconnectivity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "exploratory lab approach",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "traveling digital gnomes",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "cross-device lift interconnect",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Playful unique digital objects that travel between people and devices while exploring new interconnectivity",
+      "status": "inferred",
+      "evidence_span": "wouldn't it be cool to have a gnome in your pocket"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Learn from greenfield experiments that may surface more interesting opportunities",
+      "evidence_span": "just by being there and seeing what we learn, we may bump into even more interesting opportunities"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're basically going to build products in those areas"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take him with you, to build your very own custom gnome"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drag and drop to really work between devices"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Playful pitch with weak explicit primary value—inferred from cool pocket-gnome framing. Lab strategy retained as singleton domain (independent learning claim). Gnomes vs Lyft device interconnect treated as separately revisable experiments. No commercial model stated."
+}

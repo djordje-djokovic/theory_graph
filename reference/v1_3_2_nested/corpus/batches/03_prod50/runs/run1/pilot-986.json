@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Circling for parking causes a large share of urban traffic congestion",
+      "status": "explicit",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "A smartphone social network matches departing drivers' spots to seekers who can reserve them",
+      "status": "explicit",
+      "evidence_span": "with Curve Karma, Marissa can find and reserve Heather's parking spot"
+    },
+    {
+      "id": "P3",
+      "text": "Karma Credits worth $1 settle each reservation: seeker pays two, giver earns one, platform keeps one",
+      "status": "explicit",
+      "evidence_span": "Marissa needs two Karma Credits to reserve a spot. When Heather gives her spot to Marissa, she earns one of those Karma credits worth a dollar"
+    },
+    {
+      "id": "P4",
+      "text": "Leavers publish exact spot location via map pin, scroll, or address search",
+      "status": "explicit",
+      "evidence_span": "Using the map feature, she can pinpoint exactly where she parked her car"
+    },
+    {
+      "id": "P5",
+      "text": "Built-in messaging and GPS navigation complete the handoff without revealing personal contacts",
+      "status": "explicit",
+      "evidence_span": "Heather and Marissa can stay in touch using built-in messaging without revealing any personal contact information"
+    },
+    {
+      "id": "P6",
+      "text": "High-demand curb spots concentrate exchange value in cities",
+      "status": "explicit",
+      "evidence_span": "only about 50,000 of those are considered in high demand"
+    },
+    {
+      "id": "P7",
+      "text": "The platform monetizes by earning one Karma Credit per completed exchange",
+      "status": "explicit",
+      "evidence_span": "because Curb Karma earns a Karma credit for every exchange, we make $400,000 a year in revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Urban parking scarcity",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Spot-matching social app",
+      "premise_ids": [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Karma credit economics",
+      "premise_ids": [
+        "P3",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drivers find parking where and when they need it without circling",
+      "status": "explicit",
+      "evidence_span": "Curb Karma finds you parking where and when you need it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "end that madness and to disrupt parking"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Marissa can find and reserve Heather's parking spot"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Free promo credits and App Store download CTA excluded as marketing. City revenue projections treated as illustrations of the per-exchange take-rate mechanism (P7), not as traction boasts. Three domains justified: scarcity diagnosis, matching product, and credit settlement are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open and free software commonly has bugs and missing features, and support is hard to get",
+      "status": "explicit",
+      "evidence_span": "all this software has two properties in common, which is bugs and missing features. And especially when it's open or free software, support can be hard to get"
+    },
+    {
+      "id": "P2",
+      "text": "There is a mismatch in knowledge and priority between users and developers",
+      "status": "explicit",
+      "evidence_span": "what we have is a mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "id": "P3",
+      "text": "Integrations put a panel on major issue systems so users can place an incentive in two clicks",
+      "status": "explicit",
+      "evidence_span": "we offer integrations for all the major issue systems. So it's an integration, shows a panel, as you can see on the right-hand side. So with two clicks, a user can place an incentive"
+    },
+    {
+      "id": "P4",
+      "text": "Multiple users can crowdfund one issue, and developers can ask for an incentive or list it for crowdfunding",
+      "status": "explicit",
+      "evidence_span": "many users can place incentives on one issue. So crowdfunding is now a reality"
+    },
+    {
+      "id": "P5",
+      "text": "The platform takes a 6% fee on successful incentives and shares fees with issue-system hosters",
+      "status": "explicit",
+      "evidence_span": "we take a 6% fee for each successful incentive. And we offer a fee to all the issue system hosters running our integration"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Support mismatch in open source",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Issue-page incentive panel",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fee and hoster monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get on-demand software support by placing incentives on issues",
+      "status": "explicit",
+      "evidence_span": "makes it possible to place incentives for on demand software support"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Adding a monetization element to the open source market",
+      "evidence_span": "we are adding a monetization element to the entire open source market"
+    },
+    {
+      "text": "Issue systems become a profit center for hosters",
+      "evidence_span": "turns an issue system into a profit center"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "To overcome this, we are offering a service which allows you to pay or get paid directly from an issue page"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how do I get support for this software"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay or get paid directly from an issue page"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "6% fee for each successful incentive"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Need/product/fee triad retained because support mismatch, issue integrations, and hoster fee-share are separately revisable. Developer-side one-click ask folded into crowdfunding premise (v1.3.2 §4.1(5)). App-store next focus treated as roadmap vision, not a premise. Market-size figures excluded as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-917",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:10+02:00"
+  }
+}

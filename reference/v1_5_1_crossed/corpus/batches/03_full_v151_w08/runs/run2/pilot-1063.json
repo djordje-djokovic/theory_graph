@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1063",
+    "coder_session_id": "session_03",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile aspects of invoice and on-the-go business management are not properly addressed",
+      "status": "explicit",
+      "evidence_span": "the mobile aspect of it was not being properly addressed"
+    },
+    {
+      "id": "P2",
+      "text": "Fully integrated cloud business-management tool with a consistent UI across mobile OS, including fast invoice create/send with customer URL",
+      "status": "explicit",
+      "evidence_span": "fully integrated cloud-powered business management tool with a consistent user interface on all mobile operating systems"
+    },
+    {
+      "id": "P3",
+      "text": "Integrations with QuickBooks, Xero, and leading B2B platforms so data pulls from and writes to the cloud",
+      "status": "explicit",
+      "evidence_span": "fully integrated with QuickBooks, QuickBooks Online, and Xero"
+    },
+    {
+      "id": "P4",
+      "text": "Invoices can attach picture, audio, and geotag documentation to prove delivery or work done",
+      "status": "explicit",
+      "evidence_span": "we added the features of picture, audio file"
+    },
+    {
+      "id": "P5",
+      "text": "Freemium model: free unlimited invoices/estimates; paid tiers for storage/payments and accounting or B2B attach",
+      "status": "explicit",
+      "evidence_span": "The app itself is free. You can send unlimited invoices and sales estimates"
+    },
+    {
+      "id": "P6",
+      "text": "Enterprise-ready sales orders support OMS-style uses beyond simple invoicing",
+      "status": "explicit",
+      "evidence_span": "we're basically ready for that with sales orders"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mobile invoicing gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "cloud mobile invoice product with media",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "accounting and B2B integrations",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "freemium and enterprise OMS packaging",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easier way to manage businesses on the go with integrated mobile invoicing",
+      "status": "explicit",
+      "evidence_span": "easier way to manage businesses on the go for businesses of all sizes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mobile aspect of it was not being properly addressed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely manage your entire business"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully integrated with as many accounting platforms as possible"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pricing model is, our business model is very, very easy to understand"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-sentence (truncated). Instant cloud URL send folded into core product speed cascade (§4.1.7). Media attachments kept as standout documentation capability under tie-break."
+}

@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote clinics lack bulky/expensive hospital imaging tools patients need",
+      "status": "explicit",
+      "evidence_span": "Many tools are available in large hospitals. are not accessible because they are expensive or too bulky"
+    },
+    {
+      "id": "P2",
+      "text": "iPad-based ultrasound brings diagnosis and specialist connection to local clinics",
+      "status": "explicit",
+      "evidence_span": "We have built a new ultrasound solution working on an iPad"
+    },
+    {
+      "id": "P3",
+      "text": "Workflow captures images, adjusts contrast, annotates, measures, and records notes including speech-to-text",
+      "status": "explicit",
+      "evidence_span": "I can adjust contrast and brightness with one finger"
+    },
+    {
+      "id": "P4",
+      "text": "Practitioners can send images and call specialists over cellular or Wi-Fi for remote advice",
+      "status": "explicit",
+      "evidence_span": "maybe I can call a more experienced doctor in a major city hospital to get advice"
+    },
+    {
+      "id": "P5",
+      "text": "Device priced at 14,900 euros—about one third of regular ultrasound—for emergency use",
+      "status": "explicit",
+      "evidence_span": "14,900 euros, Ausgut is a great tool for emergency. This is one third of the price of the regular ultrasound device"
+    },
+    {
+      "id": "P6",
+      "text": "Also suited to education by broadcasting the image stream to a classroom audience",
+      "status": "explicit",
+      "evidence_span": "ideal tool for healthcare classroom, because you can instantly broadcast the image stream to a large audience"
+    },
+    {
+      "id": "P7",
+      "text": "CE Medical and FDA approvals are on track to unlock US and European sales",
+      "status": "explicit",
+      "evidence_span": "CE Medical and FDA are on track to be approved by mid-next year, which will allow us to sell to US and European markets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Access gap in remote clinics",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "iPad ultrasound and teleconsult product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Price, education use, and regulatory path",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local clinics better diagnose and connect to specialists to improve patient health",
+      "status": "explicit",
+      "evidence_span": "local clinics can better diagnose and connect to specialists to improve the patient's health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clinics are not equipped to meet patients' needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ultimate diagnosis tool"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "great tool for emergency"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Founder biography excluded. Emerging-market trial names treated as go-to-market evidence folded into regulatory/expansion notes rather than a separate traction premise. ASR Ausgut/Oscult preserved.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

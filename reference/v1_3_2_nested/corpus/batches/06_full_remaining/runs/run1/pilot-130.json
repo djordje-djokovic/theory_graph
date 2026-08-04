@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-130",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing cross-border payment platforms are territorial and not tailored to international creators' needs",
+      "status": "explicit",
+      "evidence_span": "cross-border payments that are territorial and not tailored to these needs"
+    },
+    {
+      "id": "P2",
+      "text": "Integrating multiple country payment APIs is complex, costly, and requires technical expertise, barring many digital entrepreneurs",
+      "status": "explicit",
+      "evidence_span": "integrating with multiple payment APIs in different countries is incredibly complex"
+    },
+    {
+      "id": "P3",
+      "text": "A unified API ecosystem abstracts multi-provider payment integration so non-technical users get global payments without code",
+      "status": "explicit",
+      "evidence_span": "unified and robust API ecosystem that abstracts the complexity of integrating with multiple payment platforms"
+    },
+    {
+      "id": "P4",
+      "text": "No-code suites for websites, storefronts, invoicing, and media kits drive conversion by letting creators showcase work and get paid",
+      "status": "explicit",
+      "evidence_span": "no-code suites that make it easier for them to showcase their work and receive payments via websites, storefronts, invoicing, Media Kit, and more"
+    },
+    {
+      "id": "P5",
+      "text": "Real-time IP and geolocation detection chooses which payment APIs to call",
+      "status": "explicit",
+      "evidence_span": "sophisticated IP detection system that dynamically, in real time, analyzes Sandra's client's geolocation"
+    },
+    {
+      "id": "P6",
+      "text": "A single Mainstack account plus compliance approval unlocks the payment intermediary layer",
+      "status": "explicit",
+      "evidence_span": "creates a single account on Mainstack and completes our compliance requirement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-border payment barriers",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified payments API and routing",
+      "premise_ids": ["P3", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "No-code creator suites",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can showcase their work and receive secure global payments simply, starting in minutes",
+      "status": "explicit",
+      "evidence_span": "showcase their work and receive payment from their customers in a simple and highly secure manner starting in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Our top of the funnel strategy is the reason for conversion of the platform"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "international payments are a necessity for many entrepreneurs and creators"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "without writing any single line of code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "showcase their work and receive payments"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained: speaker frames no-code suites as the top-of-funnel conversion module distinct from the payment API layer. Listed suite features folded into P4 (§4.1(5)). Customer counts, GMV, country reach, and market size excluded as traction/framing; founder credentials excluded per §4.2. Free-trial CTA excluded."
+}

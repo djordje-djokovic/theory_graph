@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-14",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:47Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Manufacturing downtime and supply-chain strain create large ongoing losses for industrial players",
+      "status": "explicit",
+      "evidence_span": "downtime is still costing industrial players over 11% of their yearly turnover"
+    },
+    {
+      "id": "P2",
+      "text": "Nearshoring is shifting large production demand into markets like Mexico that must ready factory capacity now",
+      "status": "explicit",
+      "evidence_span": "Nearshoring is becoming the strategic pivot, moving manufacturing closer to its consumer"
+    },
+    {
+      "id": "P3",
+      "text": "A CapEx-lite gateway connects to most industrial machinery, sensors, and PLCs and aggregates factory data into a central source of truth",
+      "status": "explicit",
+      "evidence_span": "connect to over 90% of industrial machinery categories, sensors, and PLCs"
+    },
+    {
+      "id": "P4",
+      "text": "ML models detect irregular activity or failure and recommend probable cause and course of action rather than only monitoring",
+      "status": "explicit",
+      "evidence_span": "We tell factories what's the probable cause and what's the recommended course of action"
+    },
+    {
+      "id": "P5",
+      "text": "Each customer action improves shared algorithms, creating network effects across the platform",
+      "status": "explicit",
+      "evidence_span": "every single action improves our model's algorithms, creating network effects"
+    },
+    {
+      "id": "P6",
+      "text": "An AI assistant chatbot trained on operational data answers queries and generates BI visualizations for faster decisions",
+      "status": "explicit",
+      "evidence_span": "this assistant is trained with all of your productivity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "downtime and nearshoring demand",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "factory gateway and data",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "intelligent recommendations and learning",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Ali AI Assistant",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-powered factory operations that respond to problems with recommended actions and higher efficiency",
+      "status": "explicit",
+      "evidence_span": "running AI-powered operations to make factories respond quickly to market demands, making manufacturing more efficient"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More sustainable manufacturing and stabilized supply chains",
+      "evidence_span": "making manufacturing more efficient and more sustainable"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This is what enables our software"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "downtime is still costing industrial players over 11% of their yearly turnover"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "CapEx Lite infrastructure to turn legacy operations into intelligent factories"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes predictions and makes recommendations"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "now you can solve it in second"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain bundle (supply chains/inefficiencies/downtime) kept as one premise (v1.5.1 §4.1.6). Efficiency-module tracking facets folded into P4. Revenue/productivity traction excluded. Singleton D4 retained: chatbot framed as separately built decision interface. D2 singleton: gateway/data infrastructure is independently revisable from recommendation software."
+}

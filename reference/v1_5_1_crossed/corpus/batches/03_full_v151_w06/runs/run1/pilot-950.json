@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-950",
+    "coder_session_id": "session_02",
+    "session_case_index": 16,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drift moves on-screen keys under resting fingers via a home-row that forms beneath the hands",
+      "status": "explicit",
+      "evidence_span": "Instead of making the user move their fingers to the keys, we move the keys to their fingers"
+    },
+    {
+      "id": "P2",
+      "text": "Typing is detected by combining touch sensing with accelerometer thump/vibration sensing",
+      "status": "explicit",
+      "evidence_span": "We use two sensors, the touch sensor and the accelerometer"
+    },
+    {
+      "id": "P3",
+      "text": "Most people can type without looking to some degree, including two- or four-finger typists, so Drift is for that memory-typing majority",
+      "status": "explicit",
+      "evidence_span": "96% of people out there can type without looking"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution licenses the keyboard to OEMs and embeds it into third-party apps, similar to Swype",
+      "status": "explicit",
+      "evidence_span": "We're going to license this to OEMs directly so they can embed it in the keyboard"
+    },
+    {
+      "id": "P5",
+      "text": "Drift is estimated at about 2x the performance of current tablet typing solutions",
+      "status": "explicit",
+      "evidence_span": "we're about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "adaptive touch-and-tap keyboard",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "memory-typing user base",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM and app licensing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more natural typing on tablets that can accelerate tablet adoption versus notebooks",
+      "status": "explicit",
+      "evidence_span": "really disruptive for tablets"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What we do is combine two sensors, touch and tap. That's what makes Drift"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those people are who Drift are for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How are we going to get this to hundreds of millions of users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-pitch after prior problem setup (truncated=true). Two innovations coded as separately failable mechanisms (keys-to-fingers; touch+accelerometer). 2x performance kept as quantitative detail of the sensing mechanism package (§4.1.8) but retained as asserted performance condition. Co-founder biography and Swype history largely excluded; Swype-like licensing coded as GTM. Notebook-coffin vision partly as value. Launch feedback traction excluded (§4.2). Anti-template: tech mechanism, user assumption, and licensing separately revisable."
+}

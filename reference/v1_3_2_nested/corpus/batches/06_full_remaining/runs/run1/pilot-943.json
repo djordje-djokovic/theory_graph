@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile teams need more than email to share files, talk, and calendar together while working from phones",
+      "status": "explicit",
+      "evidence_span": "email doesn't really cut it for us all the time. And our phones, I mean, somehow this became my office. And yet I feel very dysfunctional, because there's so many times when I need to work with a group of people, and I just can't"
+    },
+    {
+      "id": "P2",
+      "text": "Zula is a structured messaging stream with integrated file sharing, polls, cloud-drive file views, calendar events, and search across long-lived conversations",
+      "status": "explicit",
+      "evidence_span": "we started off with a very standard messaging stream, a structured messaging stream. And we said, OK, what do we need to add to this for business tools to really get things done together as a team?"
+    },
+    {
+      "id": "P3",
+      "text": "People are invited from contacts and social graphs via deep links that land them directly in the conversation",
+      "status": "explicit",
+      "evidence_span": "They get a deep link, which takes them directly to this conversation"
+    },
+    {
+      "id": "P4",
+      "text": "One-tap in-stream conference calling starts a synchronous call with push notifications and no phone numbers",
+      "status": "explicit",
+      "evidence_span": "we have one tap conference calling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile team email gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Structured team messaging tools",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "One-tap conference calling",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help teams get things done together while reducing reliance on email",
+      "status": "explicit",
+      "evidence_span": "this is the beginning of reducing email and moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get things done together as a team"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I need to actually have a synchronous conversation"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "File/poll/calendar/search features folded into one structured-messaging premise per §4.1(5). One-tap calling split as a separately framed synchronous module when async is not enough. Six-month dogfooding treated as usage evidence, not a premise. Singleton D1 and D3 retained as independently revisable need and calling modules."
+}

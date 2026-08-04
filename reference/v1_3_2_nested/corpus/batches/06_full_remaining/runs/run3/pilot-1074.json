@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users can log any expense on a phone in under three seconds without sharing bank or card credentials",
+      "status": "explicit",
+      "evidence_span": "input any expense in under three seconds"
+    },
+    {
+      "id": "P2",
+      "text": "Anonymity means never asking for credit card, bank information, or name",
+      "status": "explicit",
+      "evidence_span": "We'll never ask you for your credit card or bank information, not even your name"
+    },
+    {
+      "id": "P3",
+      "text": "Gamification with XP, tokens, achievements, and levels makes tracking rewarding for Gen Y",
+      "status": "explicit",
+      "evidence_span": "Gen Y, or my generation, is all about playing games. It only makes sense that we add those same principles to encourage them to track their cash"
+    },
+    {
+      "id": "P4",
+      "text": "Featured deals unlocked by tokens are sold to companies as targeted placements; app stays free",
+      "status": "explicit",
+      "evidence_span": "Spends Tokens unlock deals"
+    },
+    {
+      "id": "P5",
+      "text": "Subcategory budgets and You-Versus-Them comparisons deliver spending insights",
+      "status": "explicit",
+      "evidence_span": "I've created a budget line that's called Girlfriend. It's got a goal of $300"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fast anonymous inputs",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Gamified budgets and insights",
+      "premise_ids": ["P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Token deals monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Solve budgeting and money tracking in a fun and fast way so users know where money goes",
+      "status": "explicit",
+      "evidence_span": "solve the problem of budgeting and tracking your money. Not like everybody else, but fun and fast"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make inputs fast, super fast"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it fun and rewarding"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get the right deals in front of the right audience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pattern/frequency tags folded into fast-input UX. Free-for-users folded into deals monetization premise. Smart-tag detail not split. Web backup uncoded as feature list item (v1.3.2 §4.1(5))."
+}

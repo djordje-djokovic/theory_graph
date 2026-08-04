@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1064",
+    "coder_session_id": "session_03",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Charisma is a mobile location-based real-time video messenger for spontaneous calls with people nearby and existing contacts",
+      "status": "explicit",
+      "evidence_span": "Charisma is mobile"
+    },
+    {
+      "id": "P2",
+      "text": "Signup pre-populates Facebook/Twitter profile and friends, and also surfaces nearby people outside the existing social graph",
+      "status": "explicit",
+      "evidence_span": "we pre-populate your profile with your existing data from Facebook and Twitter"
+    },
+    {
+      "id": "P3",
+      "text": "Sparks encourage a callback when someone is reluctant to place the first call",
+      "status": "explicit",
+      "evidence_span": "you can actually send them a spark to encourage them to call you back"
+    },
+    {
+      "id": "P4",
+      "text": "Open profiles, distance, and age filters let people see who someone is before calling",
+      "status": "explicit",
+      "evidence_span": "You can immediately see open profiles of people, see who they are before calling them"
+    },
+    {
+      "id": "P5",
+      "text": "Initially ads-based with a subscription to turn off ads",
+      "status": "explicit",
+      "evidence_span": "we are initially ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "nearby real-time video messaging",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "ads and subscription monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy spontaneous real-time interaction with people nearby without old-school dating-site friction",
+      "status": "explicit",
+      "evidence_span": "how easy it is to reach people nearby using Charisma"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spontaneous interactions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Nearby store/bar calling uses folded as applications of same messenger (§4.1.2). Dating-site questionnaire contrast folded into value. Live stage demos are product evidence, not traction metrics."
+}

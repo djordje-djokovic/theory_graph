@@ -1,0 +1,131 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Economic and technological conditions now resemble the PC shift that made computers personal",
+      "status": "explicit",
+      "evidence_span": "the conditions today, economical and technological, are very similar to different revolutions that moved us from these computers, large, expensive, difficult to use, to these computers, personal and in every home"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone and cloud robotics offload computation from the robot, making it affordable and dynamically upgradable",
+      "status": "explicit",
+      "evidence_span": "smartphone robotics and cloud robotics that takes a computation from the robot into devices you already have, making it much more affordable, and also automatically and dynamically upgradable"
+    },
+    {
+      "id": "P3",
+      "text": "Task-limited home robots can enter affordably, unlike Swiss-army-knife robots costing hundreds of thousands",
+      "status": "explicit",
+      "evidence_span": "move from Swiss army knife kind of robots that do anything from saving princesses to cleaning the house, but unfortunately cost hundreds of thousands of dollars. We're going to have a set of robots that are much more targeted at limited set of tasks"
+    },
+    {
+      "id": "P4",
+      "text": "Shimmy is a smartphone-powered, cloud-connected robotic speaker that listens to and engages with music",
+      "status": "explicit",
+      "evidence_span": "smartphone-powered, cloud-connected robot. called Shimmy. And Shimmy is a robotic speaker dog that doesn't just play the music for you. It actually listens to it and enjoys it as much as you do"
+    },
+    {
+      "id": "P5",
+      "text": "Dumb-robot architecture: motors, speakers, and power, with all intelligence on a smartphone app and the cloud",
+      "status": "explicit",
+      "evidence_span": "everything that the robot does actually happens on a smartphone app and on the cloud. And the robot is just some motors, high-end speakers, and power"
+    },
+    {
+      "id": "P6",
+      "text": "Cloud music structure data drives real-time choreography computed on the Android device",
+      "status": "explicit",
+      "evidence_span": "taking information from the cloud that has the beats, the segments, where the chorus starts, where the verse starts, what genre the song is. And it creates a real-time live choreography for this, which is different every time you play a different song, which is all computed on the Android device"
+    },
+    {
+      "id": "P7",
+      "text": "Phone-camera face tracking keeps the robot oriented for the best sound",
+      "status": "explicit",
+      "evidence_span": "using the camera to track my faces, always pointing towards me and giving me the best sound possible"
+    },
+    {
+      "id": "P8",
+      "text": "Consumer price is about $199, with early Kickstarter at $149",
+      "status": "explicit",
+      "evidence_span": "able to get it to $199. And if you are very quick and early adopters, like most of you are, we started a Kickstarter campaign that today you can get it for the next month for $149"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Personal robotics timing and affordability",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smartphone-cloud robotic speaker product",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Consumer price and Kickstarter offer",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Engaging, affordable, fun personal robots in the home",
+      "status": "explicit",
+      "evidence_span": "engaging, affordable, and fun to use robots in the home"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take the promise of a robot in every home and make it a reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Shimmy is a robotic speaker dog that doesn't just play the music for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "able to get it to $199"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Singleton D3 retained: consumer price/Kickstarter is a separately revisable commercial condition. Price amount and Kickstarter early-adopter channel kept as one commercial premise per v1.3.1 §4.1.3. Demo failures and financing narrative excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1030",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

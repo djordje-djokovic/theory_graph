@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-950",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drift moves on-screen keys under resting fingers (Home Rule) so users need not hunt for keys by feel",
+      "status": "explicit",
+      "evidence_span": "Instead of making the user move their fingers to the keys, we move the keys to their fingers"
+    },
+    {
+      "id": "P2",
+      "text": "Typing is detected by combining touch and accelerometer tap/thump sensing to distinguish taps from rests",
+      "status": "explicit",
+      "evidence_span": "We use two sensors, the touch sensor and the accelerometer"
+    },
+    {
+      "id": "P3",
+      "text": "Product targets the large share of people who can type without looking (any finger count), not only ten-finger typists",
+      "status": "explicit",
+      "evidence_span": "96% of people out there can type without looking. They have some form of memory typing"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution via OEM keyboard licensing plus embedding the dynamic keyboard into third-party apps",
+      "status": "explicit",
+      "evidence_span": "We're going to license this to OEMs directly so they can embed it in the keyboard"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "touch-plus-tap adaptive tablet keyboard",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "OEM and app-developer licensing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Much faster tablet typing that can displace notebooks for enterprise and field use",
+      "status": "explicit",
+      "evidence_span": "we're about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combine two sensors, touch and tap. That's what makes Drift and gives it some magic"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get this to hundreds of millions of users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-pitch (truncated). Two named innovations kept as separate premises because speaker frames them as first and second innovations that could fail independently. 2x performance treated as quantitative detail of the combined mechanism's value, not a separate premise. Swype business-model analogy folded into P4."
+}

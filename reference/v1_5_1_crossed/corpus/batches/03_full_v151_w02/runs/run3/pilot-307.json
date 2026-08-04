@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-307",
+    "coder_session_id": "session_05",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stalking, harassment, identity theft, fraud, phishing and social engineering are exploding, and data brokers posting and selling personal information are a major source adversaries use",
+      "status": "explicit",
+      "evidence_span": "Stalking and harassment, identity theft and fraud, phishing and social engineering, these types of attacks are exploding and we all are vulnerable"
+    },
+    {
+      "id": "P2",
+      "text": "Automated opt-out software removes users from hundreds of data-broker websites",
+      "status": "explicit",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "id": "P3",
+      "text": "Premium SaaS is sold to both consumers and businesses",
+      "status": "explicit",
+      "evidence_span": "We have a premium SaaS model, and we sell both to consumers and to businesses"
+    },
+    {
+      "id": "P4",
+      "text": "Patented search finds more profiles than competitors, including Google",
+      "status": "explicit",
+      "evidence_span": "our patented search technology finds more profiles than anyone, including Google"
+    },
+    {
+      "id": "P5",
+      "text": "Users see live screenshots of where they were found and before-and-after removal photos",
+      "status": "explicit",
+      "evidence_span": "Users see live screenshots of the places they've been found, and before and after photos of the places they've been removed"
+    },
+    {
+      "id": "P6",
+      "text": "Coverage spans 228 data brokers and is the most comprehensive in the industry",
+      "status": "explicit",
+      "evidence_span": "at 228 data brokers and counting, we have the most comprehensive coverage in the industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online attack and data-broker exposure problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated opt-out search, proof, and coverage",
+      "premise_ids": ["P2", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Consumer and business SaaS model",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect personal information online by removing exposure from data-broker sites",
+      "status": "explicit",
+      "evidence_span": "protecting your information online and why this matters"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Foundation for putting users in control of their data with all companies",
+      "evidence_span": "put all of you in control of your data in the future with all companies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one of their biggest sources of information about us is data brokers posting and selling our information online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we sell both to consumers and to businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain enumeration folded into P1; three product differentiators split as distinct capabilities. Future personal data rights platform treated as secondary_value/vision, not a premise. Traction metrics excluded. Singleton D1 and D3 retained as separately revisable problem vs go-to-market modules. Partition is need/product/money-like; justified by separately learnable threat framing, opt-out product stack, and dual-channel SaaS."
+}

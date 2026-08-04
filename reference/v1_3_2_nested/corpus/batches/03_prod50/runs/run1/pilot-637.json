@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Isolated African mobile-money wallets make cross-network, cross-border, and online payments hard",
+      "status": "explicit",
+      "evidence_span": "There are more than 155 mobile money wallets running, isolated one from another in our continent"
+    },
+    {
+      "id": "P2",
+      "text": "Single API lets online merchants accept cash and mobile-money wallets",
+      "status": "explicit",
+      "evidence_span": "enables online merchants to accept all cash and mobile money wallet online through a single API"
+    },
+    {
+      "id": "P3",
+      "text": "Blockchain ledger/tunneling network secures and interconnects payment channels",
+      "status": "explicit",
+      "evidence_span": "the highest security system using our blockchain ledger"
+    },
+    {
+      "id": "P4",
+      "text": "Platform supports cash, mobile money, cards, bank wallets, and cryptocurrencies",
+      "status": "explicit",
+      "evidence_span": "now supports cash, mobile money, credit and debit card, bank mobile wallet, and cryptocurrencies"
+    },
+    {
+      "id": "P5",
+      "text": "Split payment lets users pay what they have and invite others to cover the rest",
+      "status": "explicit",
+      "evidence_span": "we have built a split payment feature that enables us to pay the part that we have and invite our friends"
+    },
+    {
+      "id": "P6",
+      "text": "Merchants can accept, split, disburse, hold marketplace funds, and top up airtime across many countries",
+      "status": "explicit",
+      "evidence_span": "We Cash Up enables merchants to accept, split, disburse, dispatch payment to sellers, hold money for marketplaces, and top up airtime"
+    },
+    {
+      "id": "P7",
+      "text": "Six patents cover the interoperability technology",
+      "status": "explicit",
+      "evidence_span": "we hold six patents on our technology"
+    },
+    {
+      "id": "P8",
+      "text": "Monetize via monthly fee plus transaction fee",
+      "status": "explicit",
+      "evidence_span": "We charge a monthly fee and a transaction fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented mobile-money problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Universal payment API and rails",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fee-based merchant monetization",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, interoperable payments for merchants and unbanked users across Africa",
+      "status": "explicit",
+      "evidence_span": "ease of transaction processing for the unbanked across currencies"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Payments that can be life-critical (e.g., hospital admission)",
+      "evidence_span": "It can be a matter of life or death"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it very difficult to make cross-network payments, cross-border payments, and online payments"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "universal mobile money payment platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We charge a monthly fee and a transaction fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merchant counts and MoM growth excluded. Patents kept with tech module (§4.1.1). Speaker-enumerated merchant capabilities (accept/split/disburse...) one premise (§4.1.2).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-637",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:31:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

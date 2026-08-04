@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected home devices create open-door cyber risk across the household network",
+      "status": "explicit",
+      "evidence_span": "when these devices are so easy to hack, it's almost like you left your doors open"
+    },
+    {
+      "id": "P2",
+      "text": "Cujo is a powerful smart device you connect to keep the network safe",
+      "status": "explicit",
+      "evidence_span": "Cujo is a little smart device, very powerful, that you connect to your network to keep you safe against all kinds of cyber threats"
+    },
+    {
+      "id": "P3",
+      "text": "Auto inventory plus detection and blocking of unauthorized camera/network access",
+      "status": "explicit",
+      "evidence_span": "it detected an authorized attempt to access your camera, and it blocked it"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud threat intelligence and behavioral ML model each device",
+      "status": "explicit",
+      "evidence_span": "we also use machine learning to build behavioral models of your devices"
+    },
+    {
+      "id": "P5",
+      "text": "Collective real-time threat sharing across installed Cujos",
+      "status": "explicit",
+      "evidence_span": "everyone else's Cujos are updated in real time and they can now block that same threat"
+    },
+    {
+      "id": "P6",
+      "text": "$99 device with $8.99 monthly protection fee",
+      "status": "explicit",
+      "evidence_span": "for sale for $99 as well as an $8.99 a month fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smart home cyber threat",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cujo detection and collective defense",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Device and subscription offer",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Home security must change to stop silent remote hacking of accounts and devices",
+      "status": "explicit",
+      "evidence_span": "think about your home security and how it must change"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "invade your privacy and your security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hackers will not be able to see it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That is why you need Cujo"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "ASR 'authorized' likely 'unauthorized' — span kept verbatim. Singleton threat domain retained as independently stated problem module.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-684",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:29:22+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

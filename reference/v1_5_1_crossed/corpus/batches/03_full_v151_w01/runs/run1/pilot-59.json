@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "coder_session_id": "session_05",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Operator-dependent ultrasound errors and incomplete screenings cause widespread fetal malformation misdiagnosis, while many mothers lack access to standard diagnostic ultrasound",
+      "status": "explicit",
+      "evidence_span": "half of pregnant patients with a fetal malformation are misdiagnosed due to an error by ultrasound operators"
+    },
+    {
+      "id": "P2",
+      "text": "AI detects fetal abnormalities in ultrasound earlier, more frequently, and more efficiently",
+      "status": "explicit",
+      "evidence_span": "helps detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    },
+    {
+      "id": "P3",
+      "text": "A vendor-agnostic cloud solution integrates with any ultrasound machine over a standard API",
+      "status": "explicit",
+      "evidence_span": "vendor agnostic cloud-based solution that can integrate with any ultrasound machine over a standard API"
+    },
+    {
+      "id": "P4",
+      "text": "The system validates completeness and quality across many anatomical views and feeds back missing regions to the operator",
+      "status": "explicit",
+      "evidence_span": "validate the completeness and quality of the screening, ensuring the appropriate capture over 80 different anatomical views and structures"
+    },
+    {
+      "id": "P5",
+      "text": "Guided diagnostics localize fetal malformations so abnormalities are not missed",
+      "status": "explicit",
+      "evidence_span": "Our AI was able to localize this fetal malformation, providing feedback to the obstetrician"
+    },
+    {
+      "id": "P6",
+      "text": "Hospitals buy via hybrid subscription plus volume API pricing justified by time savings, fewer callbacks, and malpractice mitigation",
+      "status": "explicit",
+      "evidence_span": "we're selling our solution to hospitals. We're leveraging a hybrid pricing model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "prenatal ultrasound misdiagnosis gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI ultrasound quality and diagnostics",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "hospital commercial model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Every pregnant patient gets higher-quality prenatal ultrasound diagnostics and care",
+      "status": "explicit",
+      "evidence_span": "every single pregnant patient gets the quality of care that they need"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify these problems earlier to prevent tragic outcomes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "screening completeness rate increased by 20%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "valuable ROI we're providing through time savings"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pitch ends when out of time (truncated=true). Completeness QC and guided diagnostics split as distinct capabilities. Clinical study percentages treated as traction evidence supporting P4/P5 rather than separate premises. Family biography excluded."
+}

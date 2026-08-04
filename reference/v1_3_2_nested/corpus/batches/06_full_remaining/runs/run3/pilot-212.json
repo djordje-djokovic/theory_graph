@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developer toil from complexity wastes time and makes developers unhappy",
+      "status": "explicit",
+      "evidence_span": "Developers report that toil makes them unhappy"
+    },
+    {
+      "id": "P2",
+      "text": "AppMap shows real runtime software behavior in the code editor as code is written",
+      "status": "explicit",
+      "evidence_span": "We built AppMap so software developers can see the behavior of their software as they write code"
+    },
+    {
+      "id": "P3",
+      "text": "Runtime AppMaps are accurate across environments and include automated performance and security analysis",
+      "status": "explicit",
+      "evidence_span": "App maps are accurate, up-to-date, runtime information about the behavior of software"
+    },
+    {
+      "id": "P4",
+      "text": "Purpose-built personal observability with deep language integrations and open source",
+      "status": "explicit",
+      "evidence_span": "We started with data, purpose built for personal observability"
+    },
+    {
+      "id": "P5",
+      "text": "Distributed via IDE marketplaces free for individuals/students/OSS, with team value in reduced MTTR",
+      "status": "explicit",
+      "evidence_span": "AppMap is free for individuals, students, and open source projects from the VS Code and JetBrains marketplaces"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Developer toil problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Editor runtime observability product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "IDE marketplace distribution",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Teams ship more performant, secure, reliable code faster by reducing toil",
+      "status": "explicit",
+      "evidence_span": "reduce toil and ship more performant, secure, and reliable code faster"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "toil makes them unhappy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see the behavior of their software as they write code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free for individuals, students, and open source projects"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fewer premises after folding tool-maze into toil problem and analyses into runtime product.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-212",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-774",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Legacy desk phone systems and basic softphones fail to deliver enough value for modern businesses",
+      "status": "explicit",
+      "evidence_span": "even if you already had a software as your phone system, like a simple soft phone on your computer that doesn't bring more value"
+    },
+    {
+      "id": "P2",
+      "text": "Aircall is a cloud-based phone system that replaces the legacy hardware desk phone with software",
+      "status": "explicit",
+      "evidence_span": "Airco is a cloud-based phone system that replaces really the legacy phone system"
+    },
+    {
+      "id": "P3",
+      "text": "The phone system connects to CRM, help desk, and BI tools so customer conversations stay recorded and usable across the stack",
+      "status": "explicit",
+      "evidence_span": "Airco connects with all the tools companies are using"
+    },
+    {
+      "id": "P4",
+      "text": "Anyone can set up the system anywhere and talk to customers daily",
+      "status": "explicit",
+      "evidence_span": "Airco is simple to set up, can be set up by anyone in the world"
+    },
+    {
+      "id": "P5",
+      "text": "An open marketplace lets partners and software vendors build integrations on top of Aircall",
+      "status": "explicit",
+      "evidence_span": "the first phone system in the world creating their marketplace"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "legacy phone system inadequacy",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cloud phone product",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "voice ecosystem and marketplace",
+      "premise_ids": ["P3", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Businesses know customers better and improve daily work through recorded, integrated voice conversations",
+      "status": "explicit",
+      "evidence_span": "know your customer, record all the conversation, and be able to improve your daily work"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a simple soft phone on your computer that doesn't bring more value"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We replace that. We make it a software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can have a 360 view about your customer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Fundraising history, headcount, country/customer counts, and TechCrunch thanks excluded per §4.2. Softphone/legacy pain folded as one problem. Cloud replacement and easy global setup kept as product module; CRM/helpdesk/BI recording ecosystem folded with partner marketplace as one integration-platform module (marketplace is the announced extension of the same ecosystem). ASR Airco/Ergo/Aircall left in spans; normalized to Aircall in premise text. Singleton D1 retained as separately revisable problem premise. Anti-template: problem, product, and marketplace separately revisable."
+}

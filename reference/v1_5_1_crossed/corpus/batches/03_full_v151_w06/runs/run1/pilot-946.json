@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-946",
+    "coder_session_id": "session_06",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most men hate clothes shopping online because they distrust fit and do not know where to start",
+      "status": "explicit",
+      "evidence_span": "when it comes to shopping online, he has no idea where to even start. When it comes to fit, Joe just doesn't trust e-commerce"
+    },
+    {
+      "id": "P2",
+      "text": "Branded is a marketplace connecting men who hate shopping with personal shoppers who love to shop",
+      "status": "explicit",
+      "evidence_span": "marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "id": "P3",
+      "text": "MAIL collects style, size, and preference data to match men to shoppers and improve recommendations",
+      "status": "explicit",
+      "evidence_span": "Mail collects a bunch of data about what Joe likes to wear and what he doesn't, his sizes and his style"
+    },
+    {
+      "id": "P4",
+      "text": "Shoppers find items from any e-commerce site or boutique and add them to the cart in a real-time conversation",
+      "status": "explicit",
+      "evidence_span": "They find stuff from any e-commerce site in the world"
+    },
+    {
+      "id": "P5",
+      "text": "Try-on with pickup returns (return like a man) solves fit without post-office friction; charge kept items plus shopper tip",
+      "status": "explicit",
+      "evidence_span": "giving him the best return service in the industry. We call it return like a man"
+    },
+    {
+      "id": "P6",
+      "text": "Supply of style-capable underemployed shoppers can be recruited and trained at scale",
+      "status": "explicit",
+      "evidence_span": "finding people that would love to make money by shopping for our men isn't a hard sell"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "men's online shopping friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "matched personal-shopping marketplace",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "try-on and pickup returns",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "shopper supply scaling",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Average men get trusted human help shopping for clothes online with try-before-you-buy fit",
+      "status": "explicit",
+      "evidence_span": "connects men who hate shopping with people that love to shop. And we let you try stuff on before you buy it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "unlike in a store, this person's got all this data about what he likes and what he doesn't"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "93% of men still shop for clothes offline"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shopping for clothes isn't an exact science. It's personal. It requires a human touch"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shopping for fit is probably one of the biggest reasons why men don't shop online"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plenty of time to make money by shopping for our men"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Where-to-start and fit distrust folded as one men's e-commerce pain-bundle in P1. Waitlist traction and team credentials excluded. Tip-on-kept-items kept as commercial detail of P5. Singletons D1, D3, D4 retained as separately revisable demand, returns, and labor-supply modules."
+}

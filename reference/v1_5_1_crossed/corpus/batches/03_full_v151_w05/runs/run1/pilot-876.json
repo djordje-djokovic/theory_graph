@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-876",
+    "coder_session_id": "session_04",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students lack on-demand academic help and easy study-group/resource sharing, which widens the achievement gap",
+      "status": "explicit",
+      "evidence_span": "It's really hard for students to master a topic if they can't get help on demand"
+    },
+    {
+      "id": "P2",
+      "text": "Study Room connects classmates via school email and course pages for collaborative study guides, section data, and free shared files across semesters",
+      "status": "explicit",
+      "evidence_span": "any student can easily access the brainpower and knowledge of their entire class right on our platform"
+    },
+    {
+      "id": "P3",
+      "text": "Growth via campus founders plus first-day marketing, then student-to-student invites",
+      "status": "explicit",
+      "evidence_span": "we put together a campus founder program, and we do a big marketing and social media push the first day of class"
+    },
+    {
+      "id": "P4",
+      "text": "Peer Mentor Program offers affordable on-demand one-on-one tutoring matched from platform students who know the course/professor/materials",
+      "status": "explicit",
+      "evidence_span": "we're going to allow every single college student to offer online, on-demand tutoring sessions and make some money while helping others"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "missing on-demand student academic help",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "class social learning platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "campus viral growth",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "peer mentor tutoring marketplace",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "College students get timely peer help and resources so they can master coursework (and aim for strong grades)",
+      "status": "explicit",
+      "evidence_span": "if they want to get a 4.0, go to getstudyroom.com"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peer mentors can earn money for college while helping others",
+      "evidence_span": "a way for students to make some money for college"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this increases the achievement gap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Students learn best by helping each other out"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's how we were able to get over 40,000 students in just one semester"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized one-on-one help right when they need it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "On-demand help, study-group, and resource-sharing pains folded as one student-support problem (§4.1.6). Course pages, collaborative guides, and file sharing folded as social-platform cascade (§4.1.7). Peer Mentor Program split as separately launched tutoring module with its own path to value. 40k users treated as traction evidence for campus GTM mechanism. Q&A line at end ignored (§4.2.5). Four-domain partition; not a need/product/money triad."
+}

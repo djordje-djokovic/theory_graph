@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-144",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:39:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Antibody therapy today is fundamental and huge, yet treatments are expensive, risky, and hard to administer",
+      "status": "explicit",
+      "evidence_span": "Antibody drugs are a $200 billion market and fundamental to treat diseases. But these are not easy to use or affordable"
+    },
+    {
+      "id": "P2",
+      "text": "Monoclonal antibodies cannot cross most tissue barriers, lack stability out of cold chain, and have high manufacturing costs",
+      "status": "explicit",
+      "evidence_span": "incapability to cross through most tissue barriers on the body, lack of stability out of cold chain, and high manufacturing costs"
+    },
+    {
+      "id": "P3",
+      "text": "Those limits restrict antibody drugs to a narrow set of applications, leaving hundreds of diseases unserved",
+      "status": "explicit",
+      "evidence_span": "This limits their use into a very narrow set of applications, making impossible the development of new antibody drugs for hundreds of diseases"
+    },
+    {
+      "id": "P4",
+      "text": "Synthetic antibody mimetic proteins — shark single-domain CDR3 regions fused to a sea-snail scaffold via AI-driven molecular processes — can replace monoclonal antibodies",
+      "status": "explicit",
+      "evidence_span": "uses CDR3 regions from single-domain shark antibodies fused to a synthetic conoprotein scaffold from a sea snail"
+    },
+    {
+      "id": "P5",
+      "text": "AMPs are 40 times smaller with the same biological functions, crossing tissue barriers, limiting immune reactions, reaching hard antigens, and resisting heat",
+      "status": "explicit",
+      "evidence_span": "Our AMPs are 40 times smaller than a monoclonal antibody, but with the same biological functions"
+    },
+    {
+      "id": "P6",
+      "text": "Those advantages enable antibody drugs in previously impossible forms: aerosols, eye drops, viral delivery, trans-thermal release",
+      "status": "explicit",
+      "evidence_span": "the ability to develop Antibody drugs that have been impossible to develop, like antibody drugs in aerosol, in eye drops, viral delivery, or trans-thermal release"
+    },
+    {
+      "id": "P7",
+      "text": "Lead candidates already show in vivo eye tissue penetration and therapeutic activity, and nanomolar COVID-19 neutralization comparable to approved drugs",
+      "status": "explicit",
+      "evidence_span": "This is similar to FDA approved COVID-19 antibody drugs on the market"
+    },
+    {
+      "id": "P8",
+      "text": "Out-licensing AMPs to pharmaceutical companies produces upfront, milestone, and royalty revenue",
+      "status": "explicit",
+      "evidence_span": "Then we out-license our AMPs to pharmaceutical companies, generating revenue from upfront payments, clinical phase and approval milestones, and then royalties over sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Antibody therapy gap",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "AMP platform and candidates",
+      "premise_ids": ["P4", "P5", "P6", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Out-licensing revenue model",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs",
+      "status": "explicit",
+      "evidence_span": "Our mission is to make antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Patients can take their treatment as simple eye drops at home instead of an eye injection",
+      "evidence_span": "you will be able to take your treatment in simple eye drops at home, no need for an eye injection"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This limits their use into a very narrow set of applications"
+    },
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "These advantages gives our AMP platform the ability to develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "But these are not easy to use or affordable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generating revenue from upfront payments, clinical phase and approval milestones, and then royalties over sales of the marketed products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "The treatment-cost example and the market/fundamental claim are merged into one therapy-gap premise P1: the diabetic-retinopathy injection is the speaker's illustration of the same affordability/usability condition. P2->P3 and P5->P6 rest on explicit warrants. The patient home-treatment outcome is recorded as a secondary value criterion alongside the platform-level mission. D3 singleton: licensing economics revise independently of the science. Founders' biotech history excluded as biographical per 4.2; the 'largest portfolio' vision is framing per v1.3.2 clarification 4."
+}

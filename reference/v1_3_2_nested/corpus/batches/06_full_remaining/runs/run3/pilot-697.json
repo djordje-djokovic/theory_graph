@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-697",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:52+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Making simple hard metal parts by hand is slow and skill-heavy versus unavailable affordable digital cutters",
+      "status": "explicit",
+      "evidence_span": "The whole process could take a few hours, and we had to make dozens of these things"
+    },
+    {
+      "id": "P2",
+      "text": "First desktop waterjet cuts any material accurately, safely, and quietly for under $4,000",
+      "status": "explicit",
+      "evidence_span": "Now available for under $4,000"
+    },
+    {
+      "id": "P3",
+      "text": "Abrasive high-velocity water erosion, redesigned from industrial machines that cost over $100,000",
+      "status": "explicit",
+      "evidence_span": "Water-based cutting has been around for decades on the industrial scale"
+    },
+    {
+      "id": "P4",
+      "text": "Versatile cutting is needed across many maker segments from jewelers to high-school robotics",
+      "status": "explicit",
+      "evidence_span": "high school students will build better robots"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Affordable desktop waterjet",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hand-cut hard parts problem",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Makers digitally cut hard materials that other desktop tools cannot",
+      "status": "explicit",
+      "evidence_span": "It's a digital tool that uses water to cut through any material"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring water-cutting technology into ordinary workshops",
+      "evidence_span": "bringing this amazing technology to workshops everywhere"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cut through any material"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's what we're solving with Wazer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Price kept inside product premise with form factor (§4.1 quantitative detail). Kickstarter sales excluded."
+}

@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Threat of sharing a cheer or gripe with one's network creates uncompromised attention from merchants",
+      "status": "explicit",
+      "evidence_span": "immediately you have uncompromised attention"
+    },
+    {
+      "id": "P2",
+      "text": "Gripe flow captures incident details, media, and the customer's resolution ask",
+      "status": "explicit",
+      "evidence_span": "most importantly we ask you how can they help, how can they resolve your gripe"
+    },
+    {
+      "id": "P3",
+      "text": "Social distribution plus merchant email notification creates pressure and a path to claim-and-resolve",
+      "status": "explicit",
+      "evidence_span": "there's a social element and the gripe continues to virally expand"
+    },
+    {
+      "id": "P4",
+      "text": "Resolving a gripe flips public links from negative to positive for the merchant",
+      "status": "explicit",
+      "evidence_span": "All the links that were out there before now point to something that's positive"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social attention mechanism",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Gripe-to-resolution product loop",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Resolve gripes so unhappy customers become happy customers",
+      "status": "explicit",
+      "evidence_span": "unhappy customers into happy customers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "uncompromised attention"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the idea is to take every gripe and have it be resolved"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Truncated opening and closing. In-person guide-card and Start-a-Gripe treated as one attention mechanism plus one product loop rather than four modules.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1144",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

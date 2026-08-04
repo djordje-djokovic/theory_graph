@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online attacks such as stalking, identity theft, and phishing are exploding and everyone is vulnerable",
+      "status": "explicit",
+      "evidence_span": "these types of attacks are exploding and we all are vulnerable"
+    },
+    {
+      "id": "P2",
+      "text": "Data brokers post and sell people's information online, compromising their privacy and security",
+      "status": "explicit",
+      "evidence_span": "one of their biggest sources of information about us is data brokers posting and selling our information online"
+    },
+    {
+      "id": "P3",
+      "text": "Automated opt-out software can remove a user from hundreds of data-broker websites",
+      "status": "explicit",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "id": "P4",
+      "text": "A premium SaaS model sells the service to both consumers and businesses",
+      "status": "explicit",
+      "evidence_span": "We have a premium SaaS model, and we sell both to consumers and to businesses"
+    },
+    {
+      "id": "P5",
+      "text": "Patented search technology finds more exposed profiles per user than anyone, including Google",
+      "status": "explicit",
+      "evidence_span": "our patented search technology finds more profiles than anyone, including Google"
+    },
+    {
+      "id": "P6",
+      "text": "The service covers the most data brokers in the industry, at 228 and counting",
+      "status": "explicit",
+      "evidence_span": "at 228 data brokers and counting, we have the most comprehensive coverage in the industry"
+    },
+    {
+      "id": "P7",
+      "text": "Users get visual proof of exposure and removal through live screenshots and before-and-after photos",
+      "status": "explicit",
+      "evidence_span": "Users see live screenshots of the places they've been found, and before and after photos of the places they've been removed"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Data-broker privacy threat",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Automated opt-out software",
+      "premise_ids": ["P3", "P5", "P6", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Premium SaaS model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers and businesses protect their information online by removing it from data-broker sites",
+      "status": "explicit",
+      "evidence_span": "protecting your information online"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "A personal data rights management platform that puts users in control of their data with all companies",
+      "evidence_span": "put all of you in control of your data in the future with all companies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these types of attacks are exploding and we all are vulnerable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can remove yourself from hundreds of these websites using our automated opt-out software"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we sell both to consumers and to businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "User/customer counts excluded as traction per 4.2.3. Platform vision ('foundation for a comprehensive personal data rights management platform') recorded as secondary_value, not a premise, per v1.3.2 clarification 4. 'App3' treated as ASR noise for the venture name. Singleton D3 retained: the SaaS model is an independently revisable commercial module. No premise dependencies asserted explicitly, so none coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-307",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:18:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College recruiting is increasingly competitive and startups and medium-sized companies struggle to compete with big companies on campus",
+      "status": "explicit",
+      "evidence_span": "how can a startup or a medium-sized company compete effectively with the big guys on campus"
+    },
+    {
+      "id": "P2",
+      "text": "Relationships are the key to hiring great students, not brand recognition alone",
+      "status": "explicit",
+      "evidence_span": "relationships are the key to hiring great students"
+    },
+    {
+      "id": "P3",
+      "text": "Traditional recruiting services fail for college recruiting because students are not well connected and lack referral networks",
+      "status": "explicit",
+      "evidence_span": "traditional recruiting services don't work well for college recruiting"
+    },
+    {
+      "id": "P4",
+      "text": "College recruiting uniquely offers campus meeting avenues and a multi-year pipeline before students take a job",
+      "status": "explicit",
+      "evidence_span": "once you meet students, they're going to be in the pipeline for a number of years before they take a job"
+    },
+    {
+      "id": "P5",
+      "text": "An SRM platform-as-a-service lets college recruiting teams build multi-year relationships by connecting students with ambassadors via challenges, project showcase, and progress tracking",
+      "status": "explicit",
+      "evidence_span": "platform as a service for college recruiting teams to build and manage their relationship with students over multiple years"
+    },
+    {
+      "id": "P6",
+      "text": "Meritful is free for students and sold to companies as a monthly subscription",
+      "status": "explicit",
+      "evidence_span": "Meriful is always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "College recruiting relationship problem",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Student relationship management platform",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Free-student subscription pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies hire the best / talented students from universities",
+      "status": "explicit",
+      "evidence_span": "help companies hire the best students out of universities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We built Merrifield to help companies make the most out of this long cycle by creating a relationship with students"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you want to hire the best students, you need to build a relationship with them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we help companies hire talented students"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Meriful is always free for students and is available at a monthly subscription to companies"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Challenges, project showcase, and tracking folded into one SRM capability premise (v1.3.2 clarification 5). Singleton D2 and D3 retained: product mechanism and pricing are separately revisable. Beta/traction names excluded as past performance.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-929",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

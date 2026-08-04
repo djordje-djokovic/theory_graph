@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMS-based app gives emerging-market users a mouthpiece to communicate",
+      "status": "explicit",
+      "evidence_span": "we're giving billions of people in the world a mouthpiece to send messages and communicate"
+    },
+    {
+      "id": "P2",
+      "text": "Ads monetize the service because informational ads work where people lack access to information",
+      "status": "explicit",
+      "evidence_span": "in emerging economies, don't have access to information. We see ads as informational. I don't know where to go to get what. So if you send me an ad telling me where to go to get what, I respond to it"
+    },
+    {
+      "id": "P3",
+      "text": "Near-term SMS problem-solving expands into a platform for non-smartphone internet services",
+      "status": "explicit",
+      "evidence_span": "We are solving an SMS problem right now. But I see SEA as a platform that is going to bring internet access to people to have Stuff like Yelp, iTunes, shopping on their non-smartphones"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMS chat and informational ads",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Future non-smartphone internet platform",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Communication and internet access for billions who need it on basic phones",
+      "status": "explicit",
+      "evidence_span": "bring this to the billions of people that actually need this"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "mouthpiece to send messages and communicate"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "platform that is going to bring internet access"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Truncated start. Download/SMS backlog metrics excluded. Fundraising excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1026",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:51:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

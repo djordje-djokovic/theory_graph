@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "coder_session_id": "session_01",
+    "session_case_index": 18,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:37:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise knowledge is siloed in email/IM/conversations so people repeat work and cannot find who knows what",
+      "status": "explicit",
+      "evidence_span": "all the knowledge was siloed. It was siloed in emails, IMs, conversations. There was no good knowledge base"
+    },
+    {
+      "id": "P2",
+      "text": "Quora-like Q&A melded with wiki flexibility creates an organically growing searchable enterprise knowledge base",
+      "status": "explicit",
+      "evidence_span": "take the power of a Q&A site, meld it with the flexibility of wikis to create a really organically growing, really easily searchable knowledge base for the enterprise"
+    },
+    {
+      "id": "P3",
+      "text": "Corporate-email verified signup into question-organized content with voting, anonymity, and powerful search",
+      "status": "explicit",
+      "evidence_span": "someone at a company signs up for Opsy using their corporate email address, which we then verify"
+    },
+    {
+      "id": "P4",
+      "text": "Email/listserv integration: ask/answer by email and extract questions into the searchable index",
+      "status": "explicit",
+      "evidence_span": "we allow people to ask questions directly by email, answer them directly by replying to an email"
+    },
+    {
+      "id": "P5",
+      "text": "Intelligent email routing of questions to suitable answerers inside the company",
+      "status": "explicit",
+      "evidence_span": "intelligently route questions directly via email to people that we think are the most suitable candidates"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed enterprise knowledge problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Q&A wiki knowledge base product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "email and routing integrations",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people at companies share knowledge—first place to turn for answers",
+      "status": "explicit",
+      "evidence_span": "help people at companies share knowledge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not being able to know what other people already knew"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easily searchable knowledge base for the enterprise"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people and companies live in their Outlook email boxes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wiki/voting/anonymous/search features folded as cascade of one Q&A knowledge-base mechanism (§4.1.7). Eng/sales/CS/law use cases are applications of same platform—not separate premises. Seed investors and waitlist excluded as credentials/traction (§4.2). Email routing kept as separately claimed WIP module. Anti-template: problem, core product, email integrations separately revisable."
+}

@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-601",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Keyword and prestige-based resume screening overlooks high-potential candidates and creates false positives",
+      "status": "explicit",
+      "evidence_span": "they overlook the majority of high potential candidates while revealing false positives"
+    },
+    {
+      "id": "P2",
+      "text": "Deep learning qualifies diverse experiences, projects, education, and transitions, including hidden correlations across backgrounds",
+      "status": "explicit",
+      "evidence_span": "Our unique deep learning technology is able to qualify every experience project, education, or transition people can write down in their resumes"
+    },
+    {
+      "id": "P3",
+      "text": "The system covers technical and non-technical jobs, all languages, and media formats from PDF to images",
+      "status": "explicit",
+      "evidence_span": "we are able to assess both technical and non-technical jobs. We are able to scale to all languages. And finally, we can deal with all media formats, from PDF to images"
+    },
+    {
+      "id": "P4",
+      "text": "CV and NLP extract structured profiles, then general career-path and company-custom AI layers assess candidates",
+      "status": "explicit",
+      "evidence_span": "we use deep computer vision and natural language processing to extract each resume as a structured data profile"
+    },
+    {
+      "id": "P5",
+      "text": "Integrations such as SavvyBot simplify applying and capture far more candidates into assessable pools",
+      "status": "explicit",
+      "evidence_span": "It allows you to capture four times more candidates by tremendously simplifying the application experience"
+    },
+    {
+      "id": "P6",
+      "text": "The system continuously learns from recruiter Go/Standby/No-Go actions and can assess one pool across open roles",
+      "status": "explicit",
+      "evidence_span": "Reminder continuously learns from my actions"
+    },
+    {
+      "id": "P7",
+      "text": "Pricing starts at $99 and scales as the customer grows",
+      "status": "explicit",
+      "evidence_span": "our pricing starts only at $99 and scales as you grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Prestige-biased screening failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Deep learning career-path assessment",
+      "premise_ids": ["P2", "P3", "P4", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Candidate capture and pricing",
+      "premise_ids": ["P5", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reveal people's full potential so recruiters find more relevant talent with far fewer interviews",
+      "status": "explicit",
+      "evidence_span": "we reveal people's full potential"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Identify three times more relevant talents and reduce interviews by 80 percent before hiring decisions",
+      "evidence_span": "identify three times more relevant talents in their initial pools and reduce by 80% the number of interviews they do before making a hiring decision"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They favor prestige over potential"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "qualify every experience project, education, or transition"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture four times more candidates"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Founder biography excluded. Beta traction (10k apps/week) excluded. Jobs/languages/formats kept as scale conditions of the same DL stack rather than separate products (v1.3.1 §4.1(2)). Interest-tab demo details folded into assessment capability. SavvyBot kept with pricing as GTM/commercial surface; could alternatively sit in product—coded with monetization because speaker presents capture as acquisition volume plus $99 entry price."
+}

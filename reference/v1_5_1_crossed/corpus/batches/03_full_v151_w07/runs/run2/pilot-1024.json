@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1024",
+    "coder_session_id": "session_03",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing databases only store, organize, and look up data; applications need the database itself to be smarter",
+      "status": "explicit",
+      "evidence_span": "if everyone's already building things on databases, what if we were to make the actual database itself a lot smarter?"
+    },
+    {
+      "id": "P2",
+      "text": "Veritable is a predictive database that understands data and predicts missing values via a SQL-like PREDICT interface",
+      "status": "explicit",
+      "evidence_span": "Veritable is a predictive database that lets you, if you know how to talk to a database"
+    },
+    {
+      "id": "P3",
+      "text": "Same ML works across domains (dating, disease/symptoms, customers/products, voting/surveys) so apps need not hand-build intelligence",
+      "status": "explicit",
+      "evidence_span": "It also works across application domains"
+    },
+    {
+      "id": "P4",
+      "text": "Nonparametric Bayesian / MCMC engine lets non-data-scientists get predictions with confidence intervals without understanding the math",
+      "status": "explicit",
+      "evidence_span": "We've built state-of-the-art nonparametric Bayesian statistics powered by Markov chain Monte Carlo so that no one in this audience ever has to worry about what those words mean ever again"
+    },
+    {
+      "id": "P5",
+      "text": "If you can use SQL you can use Veritable—targeting the large population of SQL-literate developers",
+      "status": "explicit",
+      "evidence_span": "if you can use SQL, you can use Veritable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dumb lookup databases",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "predictive database and cross-domain ML",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "SQL-user go-to-market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any developer can build intelligent applications that fill blanks and forecast with confidence without hiring data science or doing math",
+      "status": "explicit",
+      "evidence_span": "let everyone in the audience actually build this class of application"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instead of just looking things up, it actually tells you interesting things"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Veritable makes it this easy to actually predict missing values"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every database user out there should be able to use Veritable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Lookup-only DB limitation as problem. Predictive DB + PREDICT syntax, cross-domain examples, and no-math Bayesian engine folded as product cascade (§4.1.7). SQL-user adoption as GTM. Demo dating app is illustration not separate premise. Oracle/Yahoo employee counts as framing. Three domains—anti-template."
+}

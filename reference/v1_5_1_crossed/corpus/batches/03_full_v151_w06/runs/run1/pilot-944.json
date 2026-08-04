@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-944",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer wearables and GPS are too imprecise for professional sport improvement that needs inch-accurate multi-point motion tracking",
+      "status": "explicit",
+      "evidence_span": "They are more motivators than real professional tools"
+    },
+    {
+      "id": "P2",
+      "text": "QOSP provides inch-accurate position plus acceleration and speed with multiple simultaneous observation points",
+      "status": "explicit",
+      "evidence_span": "the only device with which you can do that, in which you can have multiple observation points as well as an inch-accurate positioning response, that's the QOSP"
+    },
+    {
+      "id": "P3",
+      "text": "Differential GNSS fusion of device and access-point satellite signals (inspired by unmanned-vehicle guidance) delivers the patented inch-accurate positioning",
+      "status": "explicit",
+      "evidence_span": "Signals are received by the QOSP devices and the QOSP access point, which fuses the motion readings and corrects the satellite signal using the technique called differential GNSS positioning"
+    },
+    {
+      "id": "P4",
+      "text": "APIs expose acceleration, position, and speed readings so the platform can extend beyond sport to gaming, drones, and animation, while go-to-market focuses on team sports",
+      "status": "explicit",
+      "evidence_span": "Its APIs were specifically developed to get the readings of acceleration, position, and speed in the most convenient way"
+    },
+    {
+      "id": "P5",
+      "text": "Patents on sensor networks and indoor/outdoor positioning create a distinctive competitive advantage in the team-sport market that lacks real-time tactic, injury-prevention, and scouting tools",
+      "status": "explicit",
+      "evidence_span": "Beastar owns several patents on sensor networks, on our indoor and outdoor positioning system. And therefore, we have a distinctive competitive advantage over the competition"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "imprecise consumer sport trackers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "inch-accurate QOSP motion platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "API platform and team-sport focus",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "positioning patent advantage",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Athletes and teams get professional-grade motion tracking to improve performance (e.g., cut times, better swings)",
+      "status": "explicit",
+      "evidence_span": "Tracking your development is the answer for those who want to achieve a goal"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you really want to improve, if you really want to cut your times, you need to decelerate three feet before the flag instead of five"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can see the angle with which we hit the ball. You can see the strength with which we hit the ball"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can use it in gaming, quadcopters, or even animation"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there is no technological solution for teams"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Ski/tennis improvement examples folded into precision-need problem (§4.1.6). Multi-point tracking and differential GNSS kept as mechanism plus enabling tech package; patents treated as separately asserted GTM/IP advantage per §4.1.1 because speaker frames competitive advantage. API/platform vs razor-sharp team-sport focus coded as one GTM/platform premise. Market spend figures treated as framing. Four-domain partition; not a need/product/money triad."
+}

@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Profiles and friend lists pre-populate from Facebook and Twitter so signup is frictionless",
+      "status": "explicit",
+      "evidence_span": "we pre-populate your profile with your existing data from Facebook and Twitter, so you don't have to fill your profile initially"
+    },
+    {
+      "id": "P2",
+      "text": "Users can immediately see and call people nearby outside their existing social graph",
+      "status": "explicit",
+      "evidence_span": "immediately after you sign up, you would be able to see the people nearby, not only your existing contacts in your social graph"
+    },
+    {
+      "id": "P3",
+      "text": "Sparks and logged interaction requests enable reluctant first contact and callbacks",
+      "status": "explicit",
+      "evidence_span": "you can actually send them a spark to encourage them to call you back"
+    },
+    {
+      "id": "P4",
+      "text": "Real-time location-based video calling shows open profiles, distance, and age filters on mobile",
+      "status": "explicit",
+      "evidence_span": "Charisma is real-time. You actually see people right now, right here"
+    },
+    {
+      "id": "P5",
+      "text": "Ads-supported with a subscription to remove ads",
+      "status": "explicit",
+      "evidence_span": "We are initially ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social graph and nearby discovery",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Ads and subscription monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Spontaneous real-time video interactions with people nearby",
+      "status": "explicit",
+      "evidence_span": "You wouldn't be able to do this kind of spontaneous interactions using usual old-school dating sites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how easy it is to reach people nearby using Charisma"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Nearby store/bar calling uses folded into same location-call mechanism (v1.3.2 §4.1(5)). iOS-first/Android-follow treated as launch detail inside mobile premise. Thin on separate domain justification beyond monetization singleton.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1064",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

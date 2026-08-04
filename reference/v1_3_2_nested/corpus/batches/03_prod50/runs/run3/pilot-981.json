@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "GTAR matured into a sturdier, more reliable product with interchangeable phone docks",
+      "status": "explicit",
+      "evidence_span": "it's gotten sturdier. It's gotten more reliable. We've added some features like an interchangeable dock system"
+    },
+    {
+      "id": "P2",
+      "text": "Evolved from guitar learning tool into a standalone amazing instrument",
+      "status": "explicit",
+      "evidence_span": "gone beyond being just kind of a learning tool for people who want to play guitar and become kind of an amazing instrument in and of itself"
+    },
+    {
+      "id": "P3",
+      "text": "Ecosystem of G-tar compatible apps supports multi-instrument songs",
+      "status": "explicit",
+      "evidence_span": "four out of the dozens of G-tar compatible apps out on the App Store. And we put together a song where each app is representing a different instrument in the song"
+    },
+    {
+      "id": "P4",
+      "text": "Preorders online with inventory expected around June for non-Kickstarter buyers",
+      "status": "explicit",
+      "evidence_span": "we're taking preorders online now. You can order those right now. And we're looking to have inventory in stock in around June"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Product hardware maturity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Instrument plus app ecosystem",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Online preorder fulfillment",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real product instrument experience beyond the prototype learning tool",
+      "status": "explicit",
+      "evidence_span": "watching the GTAR grow from this prototype that we brought here last year into a real product"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "into a real product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "amazing instrument in and of itself"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking preorders online now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Preorder channel coded as commercial path; Kickstarter raise amount excluded. Thin update pitch.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-981",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:54:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

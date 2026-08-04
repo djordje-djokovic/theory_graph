@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-930",
+    "coder_session_id": "session_02",
+    "session_case_index": 21,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "App users need data continuity across devices, but existing backends are platform-locked, slow to build, or expensive at scale",
+      "status": "explicit",
+      "evidence_span": "lack of data continuity across devices"
+    },
+    {
+      "id": "P2",
+      "text": "Nimbus Base stores app data in users' personal clouds like Dropbox and Google Drive for sync across mobile and web",
+      "status": "explicit",
+      "evidence_span": "leverage app users' personal clouds, like Dropbox and Google Drive, to store app data"
+    },
+    {
+      "id": "P3",
+      "text": "Data is stored locally first and syncs when online, supporting offline use",
+      "status": "explicit",
+      "evidence_span": "If you're offline, that data is first stored locally and then synced to be online when you do have a connection"
+    },
+    {
+      "id": "P4",
+      "text": "Users can personally delete app data from their own cloud for security confidence",
+      "status": "explicit",
+      "evidence_span": "you can personally delete your data for your apps"
+    },
+    {
+      "id": "P5",
+      "text": "Developers integrate with a few lines of code, cut backend setup from months to minutes, and pay no storage costs because hosting is offloaded to personal-cloud providers",
+      "status": "explicit",
+      "evidence_span": "we completely remove the server from the app development equation"
+    },
+    {
+      "id": "P6",
+      "text": "Developers pay for a license; app users do not pay for the backend storage",
+      "status": "explicit",
+      "evidence_span": "it's a developer who pays for a license and not the app user"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cross-device backend pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "personal-cloud sync backend",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "developer time cost and licensing",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers get an easy free-to-scale everywhere backend and users get continuous data across devices with control",
+      "status": "explicit",
+      "evidence_span": "a back end that's easy to implement, free to scale, and works everywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "to have data sync across different devices, they first need a back end"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data is instantly synced between the two"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "he can scale from one user to millions for free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "iCloud/self-build/BaaS alternatives folded into one backend-problem premise (§4.1.6). Personal-cloud store, offline sync, and user delete folded as facets of the Personal Cloud mechanism with delete as security facet (§4.1.7). Time and money savings for developers folded as one developer-value package (§4.1.8) with license as commercial detail. Anti-template: problem, sync product, and developer economics separately revisable."
+}

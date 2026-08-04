@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-587",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Orchid prints production-quality parts in customer-ready materials after a dissolvable patented shell washes away in hot water",
+      "status": "explicit",
+      "evidence_span": "The shell material that he's washing off is a world first and a patented Collider invention that is critical to our process"
+    },
+    {
+      "id": "P2",
+      "text": "The process is much faster and cheaper than CNC or molding, with a large materials catalog and simple button-press operation without skilled labor or special ventilation",
+      "status": "explicit",
+      "evidence_span": "Orchid is five to 60 times faster. three to 125 times less expensive, and has a potential materials catalog of hundreds"
+    },
+    {
+      "id": "P3",
+      "text": "Initial customers are service bureaus and rapid prototyping shops, then medical and automotive manufacturers needing rapid iteration",
+      "status": "explicit",
+      "evidence_span": "We're initially targeting service bureaus and rapid prototyping shops, and then we'll look to companies that can benefit from rapid iteration, like medical and automotive manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dissolvable-shell production printing",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "bureau then manufacturer GTM",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Service bureaus and manufacturers get production-quality custom parts far faster and cheaper than CNC or molds",
+      "status": "explicit",
+      "evidence_span": "Collider is enabling an entirely new category of manufacturing"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving a production quality part"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "please go to collidertech.com to sign up to lease a beta today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Opens mid-demo (truncated). Speed/cost/materials/ease folded as process+performance package of one Orchid mechanism (v1.5.1). Application examples (motorcycle, footwear, prosthetics) treated as uses of same capability, not separate premises. Singleton D2 retained as separately revisable GTM sequence."
+}

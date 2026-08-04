@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-693",
+    "coder_session_id": "session_02",
+    "session_case_index": 3,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fish-farm nets and moorings need frequent inspection, but commercial divers are costly, unsafe in pairs, and produce imprecise paper notes that managers must re-transcribe for regulators",
+      "status": "explicit",
+      "evidence_span": "farm managers only have one solution, which is commercially trained divers"
+    },
+    {
+      "id": "P2",
+      "text": "SeaDrone is a portable, easy-to-pilot and maintain underwater robot with replaceable thrusters and gimbal camera that holds position in strong currents at a fraction of existing solution cost",
+      "status": "explicit",
+      "evidence_span": "an underwater robot that is very intuitive to pilot"
+    },
+    {
+      "id": "P3",
+      "text": "An app-and-cloud workflow assigns inspection tasks, auto-stores media and forms, uploads data, and lets managers review farm status and one-click file reports",
+      "status": "explicit",
+      "evidence_span": "upload the entire inspection data to our cloud-based service"
+    },
+    {
+      "id": "P4",
+      "text": "Product line spans Explorer, Inspector with subscription service, and Developer, starting in aquaculture with adjacent underwater inspection markets",
+      "status": "explicit",
+      "evidence_span": "We have our C-Drone Explorer, which is the basic model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fish-farm diver inspection problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "underwater robot and inspection software",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "SKU line and market expansion",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer, more efficient fish-farm inspection with better digital data for decisions and compliance",
+      "status": "explicit",
+      "evidence_span": "make fish farming both safer and more efficient all at once"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this method is very imprecise and often critical information in the structures is missing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the farm manager can easily make a better decision"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's other opportunities"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Diver cost/safety/paper/regulatory transcription folded as one aquaculture inspection pain-bundle (§4.1.6). Robot weight/thrusters/gimbal/current-holding as feature cascade of one ROV (§4.1.7). Operator app and manager cloud treated as one digital inspection workflow. Market-size figure excluded as framing. Singleton D1/D3 retained. Anti-template noted: problem, robot+software, and SKU/expansion are separately revisable."
+}

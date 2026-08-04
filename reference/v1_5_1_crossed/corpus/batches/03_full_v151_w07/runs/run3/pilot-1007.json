@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1007",
+    "coder_session_id": "session_02",
+    "session_case_index": 19,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite time being the most valuable resource, people do not monitor how they spend it across days to lifetimes",
+      "status": "explicit",
+      "evidence_span": "despite the fact that time is our most valuable resource, we don't really monitor it"
+    },
+    {
+      "id": "P2",
+      "text": "Always-on body sensors passively collect activity, turn it into insights, and make those insights actionable for intentional living",
+      "status": "explicit",
+      "evidence_span": "We passively collect data about what you're doing. We turn that data into insights. And ultimately, we make those insights actionable"
+    },
+    {
+      "id": "P3",
+      "text": "Map, goal, and real-world social-graph views show where time went, goal attainment, and time spent with each friend",
+      "status": "explicit",
+      "evidence_span": "This first view I'm showing you here is our map view"
+    },
+    {
+      "id": "P4",
+      "text": "Tracking all 168 hours reveals tradeoffs that narrow fitness trackers miss, with planned integrations to those collectors",
+      "status": "explicit",
+      "evidence_span": "by tracking all 168 hours, Chronos enables you to see those tradeoffs"
+    },
+    {
+      "id": "P5",
+      "text": "Intent-rich passive data can monetize via experiences and products that help users hit goals, not only targeted ads",
+      "status": "explicit",
+      "evidence_span": "this isn't just targeted ads. We can offer experiences, products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unmonitored time",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "passive time insights product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "intent data monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People live more intentionally by seeing and acting on how they spend time with whom and where",
+      "status": "explicit",
+      "evidence_span": "help you live your life more intentionally"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "knowing how you spend your time matters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "change my behavior to ultimately do what's most important to me"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help you achieve those goals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript truncated at start and end. Day/week/month waste cascade folded into unmonitored-time problem (§4.1.6). Passive collect→insights→action and three UI views folded as product cascade (§4.1.7). Fitbit contrast kept as differentiation premise within product domain. Anti-template: problem, product, and monetization separately revisable."
+}

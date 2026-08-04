@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-771",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing fitness trackers and logs fail to easily track strength exercises beyond steps",
+      "status": "explicit",
+      "evidence_span": "there's just never been an easy way to do it"
+    },
+    {
+      "id": "P2",
+      "text": "A smartwatch app uses built-in motion sensors to automatically identify exercises, count reps, and estimate calories",
+      "status": "explicit",
+      "evidence_span": "the first and only smartwatch app that automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "id": "P3",
+      "text": "Users can train the app in seconds to recognize custom exercises including indoor cardio",
+      "status": "explicit",
+      "evidence_span": "It takes only three seconds to train VemoFit to track any of my favorite exercises"
+    },
+    {
+      "id": "P4",
+      "text": "Patent-pending algorithms achieve accurate tracking from consumer-grade watch sensors alone",
+      "status": "explicit",
+      "evidence_span": "our engineers were able to accomplish it using only the consumer-grade sensors of the Android Wear and Apple Watch"
+    },
+    {
+      "id": "P5",
+      "text": "Primary users are home and gym strength trainees underserved by runner/cyclist apps",
+      "status": "explicit",
+      "evidence_span": "the first solution for the other 70% of the population that prefers to work out at home or in the gym"
+    },
+    {
+      "id": "P6",
+      "text": "GTM uses fitness influencers, personal-trainer O2O tools, and viral CrossFit/bodybuilding communities",
+      "status": "explicit",
+      "evidence_span": "first leverage our strong relationships with popular fitness influencers to help us spread the word in the community"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium model monetizes trainer routines, feedback, motivation, and personalized product offers",
+      "status": "explicit",
+      "evidence_span": "VmoFit will operate on a freemium business model, allowing your favorite personal trainers to create professional routines, give you feedback on your workouts, and help you stay motivated to reach your goals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Strength-tracking friction",
+      "premise_ids": ["P1", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "Smartwatch auto exercise recognition",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Influencer GTM and freemium monetization",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Frictionless automatic tracking of gym and home strength workouts",
+      "status": "explicit",
+      "evidence_span": "VemoFit takes the friction out of tracking my workouts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's just never been an easy way to do it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "VmoFit will operate on a freemium business model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Identify/reps/calories treated as one auto-tracking mechanism; custom training and indoor cardio are extensions of that same recognition surface kept as one trainable-capability premise. Sensor-accuracy challenge folded into patent-pending consumer-sensor claim. Influencer follower counts and team credentials excluded as traction/bio. Anti-template: problem, product, and GTM/monetization separately revisable."
+}

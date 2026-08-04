@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-534",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fragmented travel sources and services make planning slow and leave travelers with irrelevant content and option paralysis",
+      "status": "explicit",
+      "evidence_span": "Millions of sources and services have made a smooth travel planning process impossible"
+    },
+    {
+      "id": "P2",
+      "text": "Travelers act as global hosts who create and share visualizations of entire journeys that the community can access",
+      "status": "explicit",
+      "evidence_span": "enabling every single traveler to be a global host for the places they visit and the activities they experience"
+    },
+    {
+      "id": "P3",
+      "text": "An AI content engine matches tags with photos and text and sorts trips by geographic relevance, quality, and personal importance to personalize feeds and generate full itineraries with transport and Airbnb matches",
+      "status": "explicit",
+      "evidence_span": "an AI content engine we've built matching hundreds of thousands of tags with photos, text, and attachments"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization starts with the European leisure travel segment via brand and affiliate partnerships",
+      "status": "explicit",
+      "evidence_span": "We're focusing on monetizing the European subsegment first"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented travel planning",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "hosted journey sharing plus AI planner",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "European brand affiliate monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Travelers create a whole personalized travel journey in seconds on one platform",
+      "status": "explicit",
+      "evidence_span": "create your whole travel journey in just a few seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "too many options leave us totally paralyzed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrates sources and information to collect everything in one place"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generating revenue through brand and affiliate partnerships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Instagram/blog/Kayak/Airbnb planning pain folded as one fragmentation problem. Interest feed, magic itinerary, transport/Airbnb matching folded as AI planner cascade with UGC hosting as the content supply condition. Photo/tag counts and team credentials excluded."
+}

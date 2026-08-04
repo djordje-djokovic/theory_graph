@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Events matter for content learning and for socializing",
+      "status": "explicit",
+      "evidence_span": "To learn from great content and to socialize with people"
+    },
+    {
+      "id": "P2",
+      "text": "Current online substitutes omit socialization",
+      "status": "explicit",
+      "evidence_span": "Or maybe even a Reddit AMA. People can learn from great content, but they can't socialize"
+    },
+    {
+      "id": "P3",
+      "text": "Teo is an avatar-based virtual events platform inside a shared venue",
+      "status": "explicit",
+      "evidence_span": "Enter Teo, a platform for virtual events. You appear inside of a venue"
+    },
+    {
+      "id": "P4",
+      "text": "Communities like Startup Grind and Draper alumni lack a same-room gathering tool without Teo",
+      "status": "explicit",
+      "evidence_span": "They have two million entrepreneurs across 600 cities and no way to bring them together into the same room"
+    },
+    {
+      "id": "P5",
+      "text": "Business model: monthly venue access fee plus percentages of tickets and virtual sponsorship",
+      "status": "explicit",
+      "evidence_span": "charging organizations a monthly fee to have access to our venues"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing online socialization",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Teo venue product and communities",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Organization monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Distributed communities get both event content and socialization online",
+      "status": "explicit",
+      "evidence_span": "help connect your community, ah, your distributed community"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The world is missing a product that gives the two benefits"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can move around and actually talk to people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take a percentage of ticket sales and virtual sponsorship"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Named community examples support the distributed-community premise. $62B sponsorship figure excluded as market framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-435",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

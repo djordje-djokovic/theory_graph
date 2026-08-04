@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-766",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:21:13+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stores use fast, opaque dynamic and personalized pricing that disadvantages consumers",
+      "status": "explicit",
+      "evidence_span": "stores are taking advantage of this psychology by changing prices, by getting you to pay more without you realizing it"
+    },
+    {
+      "id": "P2",
+      "text": "Price-drop guarantees exist but filing claims is such a hassle that almost nobody recovers the money, leaving billions unclaimed",
+      "status": "explicit",
+      "evidence_span": "it's a huge hassle. Not only are the policies often complex by design, it takes a ton of time to price compare"
+    },
+    {
+      "id": "P3",
+      "text": "Paribus scans email receipts, tracks post-purchase prices, and automatically files claims when prices drop",
+      "status": "explicit",
+      "evidence_span": "It scans your inbox for receipts, tracks the prices on what you bought, and when they drop, automatically files claims to get you paid"
+    },
+    {
+      "id": "P4",
+      "text": "Paribus earns only after saving the user money, taking a standard 25% fee that referrals can reduce to zero",
+      "status": "explicit",
+      "evidence_span": "The only time that Paribus earns is after we save you money first. Our standard fee is charged 25% of the money we earn you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dynamic pricing and claim hassle",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated receipt tracking and claims",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Success-based savings fee",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get consumers the money they are owed from price drops effortlessly",
+      "status": "explicit",
+      "evidence_span": "gets you the money you're owed effortlessly"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Restore integrity of prices so consumers need not constantly price-compare",
+      "evidence_span": "When you can trust the integrity of prices, you no longer need a price compare"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "online consumers are leaving $10 billion on the table every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically files claims to get you paid"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The only time that Paribus earns is after we save you money first"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Beta savings traction excluded. Security/OAuth details folded into product mechanism as trust features of the same claim automation (v1.3.2 §4.1(5)). 20-store coverage folded into offering. Fee singleton retained as separately revisable commercial module. Need/product/money triad justified: fee can change without changing inbox-claim automation."
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-585",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:56:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Connected cars face real remote-hacking threats to critical driving controls",
+      "status": "explicit",
+      "evidence_span": "In 2015, Fiat Chrysler had to recall 1.4 million cars due to a cyber breach"
+    },
+    {
+      "id": "P2",
+      "text": "Secure IoT is a patented software multi-layer stack protecting vehicles via encryption, authentication, keys, firewall, OTA, and big-data modules",
+      "status": "explicit",
+      "evidence_span": "Our core solution is Secure IoT. This is a software-based solution for protecting connected vehicles from hacker attacks. We have patents registered for this technology. We protect vehicles from hacker attacks through a combination of encryption, authentication, key management, firewall, over-the-air updates, and big data management modules"
+    },
+    {
+      "id": "P3",
+      "text": "Cybersecurity as a service at $10 per vehicle per month, with OEM deployment and insurance/carrier/security partners delivering subscriptions to fleet owners",
+      "status": "explicit",
+      "evidence_span": "Our business model is based on a revenue sharing approach where Trillium develops automotive cybersecurity solutions, an automotive OEM deploys our security in their vehicles, and a customer service provider"
+    },
+    {
+      "id": "P4",
+      "text": "Without cyber-secure vehicles, autonomy, EV scale-out, and intended ride-sharing cannot fully deploy",
+      "status": "explicit",
+      "evidence_span": "At the core is the flawed assumption that the onboard systems are secure"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Automotive cyber threat",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Secure IoT product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CaaS partner commercial model",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Multi-layered protection that stops outside attacks on connected vehicle fleets",
+      "status": "explicit",
+      "evidence_span": "protecting connected vehicles from hacker attacks"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Foundational enabler for autonomous, EV, and ride-sharing mobility",
+      "evidence_span": "fundamental component to deploy these next paradigm for mobility"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This threat is real today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Secure IoT is that solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription service to the fleet owner"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.3.1 boundary checks: IP stays in P2; price and partner structure stay in P3. Recall example used as threat evidence for P1, not traction."
+}

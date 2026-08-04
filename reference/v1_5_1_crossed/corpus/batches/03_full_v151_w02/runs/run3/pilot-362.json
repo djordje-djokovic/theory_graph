@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-362",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outdoor maintenance equipment is gasoline/diesel powered and faces a long-term labor shortage",
+      "status": "explicit",
+      "evidence_span": "traditional equipment is gasoline or diesel powered, and there's a long-term labor shortage"
+    },
+    {
+      "id": "P2",
+      "text": "After solar plants are built, vegetation cutting is the biggest ongoing expense",
+      "status": "explicit",
+      "evidence_span": "after a solar power plant is built, the biggest expense is actually cutting the vegetation and the grass on site"
+    },
+    {
+      "id": "P3",
+      "text": "Solar sites need equipment that fits under panels around I-beams plus a special rough-cut deck for thick vegetation",
+      "status": "explicit",
+      "evidence_span": "drive lines limit typical equipment, and that equipment needs to go underneath the panels and around the I-beams"
+    },
+    {
+      "id": "P4",
+      "text": "A modular electric robot platform supports grass cutting, snow plowing, and many other outdoor operations via attachments",
+      "status": "explicit",
+      "evidence_span": "We've developed a powerful modular platform for not just grass cutting and snow plowing, but dozens of different operations"
+    },
+    {
+      "id": "P5",
+      "text": "Quick-attach tops and five-minute battery swaps enable many use cases and near 24/7 operation",
+      "status": "explicit",
+      "evidence_span": "Our quick attach system makes switching attachments quick and easy"
+    },
+    {
+      "id": "P6",
+      "text": "World's first 100% electric rough-cut deck cuts thick solar-site vegetation",
+      "status": "explicit",
+      "evidence_span": "we've developed the world's first 100% electric rough cut deck that is especially made to cut down that thick vegetation that grows on solar sites"
+    },
+    {
+      "id": "P7",
+      "text": "Offset electric grass-cutting deck reaches up to six feet under panels and around I-beams",
+      "status": "explicit",
+      "evidence_span": "100% electric grass-cutting deck that is able to offset, and it can offset up to six feet to get underneath those panels and around those I-beams"
+    },
+    {
+      "id": "P8",
+      "text": "Solar vegetation cutting is the launch use case in a much larger outdoor work robotics market",
+      "status": "explicit",
+      "evidence_span": "the solar vegetation cuts market globally by 24 alone is expected to be $50 billion"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Outdoor equipment and solar vegetation problems",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Modular electric robot platform",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Solar-specific cutting decks",
+      "premise_ids": ["P6", "P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Solar launch market",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "100% electric outdoor work equipment for sustainable maintenance, starting with solar vegetation management",
+      "status": "explicit",
+      "evidence_span": "make outdoor work equipment 100% electric"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Near 24/7 operation that can triple monetization via battery swaps",
+      "evidence_span": "batteries can be swapped in five minutes, enabling near 24-7 operation"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "traditional equipment is gasoline or diesel powered, and there's a long-term labor shortage"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're building an outdoor work robotics platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our solution was robotic vegetation management for solar farms"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is just our launching use case"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Solar site technical challenges folded into one site-constraint premise (P3); rough-cut and offset decks split as distinct mechanisms. Safety demo features folded into platform. Signed agreements and investment asks excluded. Singleton D4 retained as launch-market module."
+}

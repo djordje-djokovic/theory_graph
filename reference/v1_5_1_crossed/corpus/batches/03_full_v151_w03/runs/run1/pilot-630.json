@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "coder_session_id": "session_01",
+    "session_case_index": 7,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:36:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial job sites face unpredictable water leaks, mold growth, and fire damage with no active fire monitoring on most sites",
+      "status": "explicit",
+      "evidence_span": "there's currently no active fire monitoring solution for most job sites today"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time end-to-end environmental monitoring warns and mitigates damage, informs logistics, and creates a lasting building condition record",
+      "status": "explicit",
+      "evidence_span": "the first real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    },
+    {
+      "id": "P3",
+      "text": "Smart sensors deploy easily in dynamic sites via magnets, hanging straps, and wraps, then alert via dashboard and smartphone push",
+      "status": "explicit",
+      "evidence_span": "We deploy smart sensor networks on job sites"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing is per-square-foot installation plus monthly fee bundling hardware, firmware, software, and analytics",
+      "status": "explicit",
+      "evidence_span": "We charge $0.03 per square foot one-time installation fee, and $0.02 per square foot per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "job-site environmental damage risks",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "sensor network monitoring and alerts",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-square-foot hardware-software bundle",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Buildings are built with less time, less money, and higher quality through preventable-damage monitoring",
+      "status": "explicit",
+      "evidence_span": "Less time, less money, and with a quality never before seen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of which were preventable or mitigatable if they had a monitoring solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "active warning and damage mitigation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bundling hardware, firmware, software, and data analytics into one easy package"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Water/mold/fire listed as one job-site risk problem set (v1.5.1 §4.1.6), not three premises. Warning, logistics, and Carfax-like record treated as applications of one monitoring mechanism; mounting methods and push notifications folded as deployment/UI cascade. Price amount and HWaaS bundle kept as one commercial premise. Anti-template: risk, product, and pricing are separately revisable."
+}

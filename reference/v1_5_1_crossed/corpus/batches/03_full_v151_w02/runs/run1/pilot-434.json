@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-434",
+    "coder_session_id": "session_01",
+    "session_case_index": 4,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Volatile weather creates unpredictable supply and prices that kill food businesses",
+      "status": "explicit",
+      "evidence_span": "Volatile weather creates unpredictable supply"
+    },
+    {
+      "id": "P2",
+      "text": "Soft commodities are hard to hedge because they resist standardization, create basis risk, and are complex and expensive",
+      "status": "explicit",
+      "evidence_span": "soft commodities are not like gold, and they're not like oil. They're very hard to standardize"
+    },
+    {
+      "id": "P3",
+      "text": "An index insurance platform matches physical goods to local indexes and pays out automatically when thresholds are breached",
+      "status": "explicit",
+      "evidence_span": "match the risk, the risk of your physical goods, to a local index, highly, highly targeted"
+    },
+    {
+      "id": "P4",
+      "text": "B2B sales to corporates and aggregator channels reach farmers at manageable acquisition cost",
+      "status": "explicit",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators"
+    },
+    {
+      "id": "P5",
+      "text": "Lloyd's cover-holder status and global underwriters enable risk capacity",
+      "status": "explicit",
+      "evidence_span": "We already are a Lloyd's cover holder"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Food price and supply risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Index insurance platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Corporate and aggregator distribution",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Underwriting capacity",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Financial confidence for food businesses managing commodity price risk",
+      "status": "explicit",
+      "evidence_span": "Stable is delivering financial confidence to our clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tools that could help the world's most important industry to manage that risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we pay out automatically to replace that lost income"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Global underwriters underwrite the risk"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pricing algos, 62T simulations, futures ingestion, and diversification folded into P3 (process+performance package / feature cascade of the index platform). Simple three-question UX folded into P3. Team hedge-fund credentials excluded. Demo slider details treated as product UI facets."
+}

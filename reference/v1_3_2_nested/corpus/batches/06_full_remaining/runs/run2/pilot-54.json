@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Need to fill the aviation emissions gap toward 2050 net zero starting with light aircraft",
+      "status": "explicit",
+      "evidence_span": "we need to start from the light aircraft"
+    },
+    {
+      "id": "P2",
+      "text": "Batteries lack aircraft performance; SAF lacks energy efficiency; hydrogen is the middle path",
+      "status": "explicit",
+      "evidence_span": "battery technology has good energy efficiency, as you see for cars, but it's not matching range or payload or speed for an aircraft"
+    },
+    {
+      "id": "P3",
+      "text": "Hydrogen-electric powertrain demonstrated and integrated for test-flight-ready aircraft",
+      "status": "explicit",
+      "evidence_span": "Beyond IRO demonstrated the most powerful powertrain in Europe"
+    },
+    {
+      "id": "P4",
+      "text": "Business-jet GTM: six-to-eight passenger pressurized aircraft via scalable power architecture and airframe integration",
+      "status": "explicit",
+      "evidence_span": "it's a six to eight passengers aircraft pressurized"
+    },
+    {
+      "id": "P5",
+      "text": "European airport partnerships prepare hydrogen infrastructure for operations",
+      "status": "explicit",
+      "evidence_span": "an important part of Beyond Activity is to work with European airports for them to be ready for our jet"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hydrogen vs battery/SAF choice",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Powertrain and business-jet product",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Airport hydrogen ecosystem",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decarbonized business aviation matching existing missions without direct emissions",
+      "status": "explicit",
+      "evidence_span": "you can match the existing missions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-run scale to regional and commercial platforms and large CO2 reduction",
+      "evidence_span": "we'll scale this to regional and commercial platforms"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's why we are choosing hydrogen at Beyond Aero"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "comparable performance without the direct emissions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring hydrogen for our aircraft"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Energy-choice / product / airport modules separately revisable in the pitch.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-54",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

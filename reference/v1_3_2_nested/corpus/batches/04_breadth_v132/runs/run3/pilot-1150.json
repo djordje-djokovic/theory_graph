@@ -1,0 +1,149 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile users cannot get a signal in important places and pay too much",
+      "status": "explicit",
+      "evidence_span": "I can't get a signal at my house or my office"
+    },
+    {
+      "id": "P2",
+      "text": "TextFree provides free, unlimited text messages with real mobile phone numbers",
+      "status": "explicit",
+      "evidence_span": "TextFree lets you send free, unlimited text messages"
+    },
+    {
+      "id": "P3",
+      "text": "TextFree with voice turns an iPod Touch or iPad into a phone via SIP-based VoIP",
+      "status": "explicit",
+      "evidence_span": "It turns your iPod Touch, iPad into a phone, lets you make free phone calls"
+    },
+    {
+      "id": "P4",
+      "text": "The core user base is 12 to 26 years old and does not pay for anything",
+      "status": "explicit",
+      "evidence_span": "our users are between 12 and 26 years old. We've got over 8 million of them. They don't pay for anything"
+    },
+    {
+      "id": "P5",
+      "text": "Users can buy minutes or earn them by downloading offered applications",
+      "status": "explicit",
+      "evidence_span": "you could go to our offer window, and you choose an application"
+    },
+    {
+      "id": "P6",
+      "text": "The offer engine pays Pinger while users and advertisers get value",
+      "status": "explicit",
+      "evidence_span": "user gets free minutes. The company gets the download, and they go up in the iTunes charts, and we get paid"
+    },
+    {
+      "id": "P7",
+      "text": "In-app ad inventory monetizes the waiting moment after sending a text",
+      "status": "explicit",
+      "evidence_span": "five seconds after you hit the send button, you're sitting there looking at your screen waiting for a reply, it's a perfect time for an ad"
+    },
+    {
+      "id": "P8",
+      "text": "Wi-Fi's big pipe allows a better codec for HD quality audio",
+      "status": "explicit",
+      "evidence_span": "over Wi-Fi, because it's a big, big pipe, we can use a nice codec to give you HD quality audio"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly, unreliable carrier service",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Free texting and calling product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P8"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Young non-paying user base",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Offer and advertising monetization",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Very high quality phone service that customers never have to pay for",
+      "status": "explicit",
+      "evidence_span": "our customers could literally never pay for a very, very high quality phone service"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "they don't have a lot of money to spend on things like this"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay too much for their mobile phone service"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets you make free phone calls"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They don't pay for anything"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "and we get paid"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Run 3 variation on the current Pinger transcript: elevates the 12-26 non-paying demographic to its own singleton domain driving the earn-minutes design (P4->P5), and drops the brand-decision premise used in run 2. Traction counts excluded per 4.2 (kept the 8M figure inside the demographic span as it is one utterance); in-flight/Facebook expansion treated as vision (v1.3.2 4.1(4)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1150",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T14:16:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

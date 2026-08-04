@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-961",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customers hate holds, spelling names, and repeating information after disconnects",
+      "status": "explicit",
+      "evidence_span": "It sucks to wait on hold. It sucks to spell out your name and address"
+    },
+    {
+      "id": "P2",
+      "text": "API-delivered profiles plus skip-the-line routing replace verbal identity exchange",
+      "status": "explicit",
+      "evidence_span": "Because a sufficient exchange of information saves businesses so much money, they reward you by letting you skip the whole line"
+    },
+    {
+      "id": "P3",
+      "text": "Stored bill info can be released with a four-digit PIN for phone commerce",
+      "status": "explicit",
+      "evidence_span": "We also allow callers to save their bill information to the Nextcaller profile"
+    },
+    {
+      "id": "P4",
+      "text": "Zendesk, Five9, and Salesforce call centers can integrate NextCaller easily",
+      "status": "explicit",
+      "evidence_span": "Companies using Zendesk, Five9, and Salesforce to manage their call centers can easily integrate the Nextcaller application"
+    },
+    {
+      "id": "P5",
+      "text": "Unit price of $0.10 per profile yields large savings versus agent identification cost",
+      "status": "explicit",
+      "evidence_span": "We sell our profiles for $0.10. That represents savings of over 90%"
+    },
+    {
+      "id": "P6",
+      "text": "Telco partnerships enable identification without requiring every caller to sign up",
+      "status": "explicit",
+      "evidence_span": "We don't even need anyone to sign up to make Nextcaller work. We've partnered with all the major telcos"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Need for better phone identity exchange",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Profile routing product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Secure commerce PIN",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Channel integrations",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Pricing and telco data supply",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customer service without spelling and hold hassles",
+      "status": "explicit",
+      "evidence_span": "No waiting on hold, no more spelling out your information to representatives"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Customer service is terrible"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So we always make sure that you're the next caller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "conduct commerce over the phone"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "be live and running within minutes"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've already disrupted the market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Five domains from separately revisable modules; singleton D1/D2/D3/D4 justified by distinct failure modes (need, product, PIN, CRM integration). Widget/API/skip-line kept as one P2 per v1.3.1 enumerated-uses rule."
+}

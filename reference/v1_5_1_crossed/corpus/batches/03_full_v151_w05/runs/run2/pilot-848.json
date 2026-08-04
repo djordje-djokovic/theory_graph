@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-848",
+    "coder_session_id": "session_05",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online merchants must verify shopper identity and keep personal data safe without today's exchange of PII",
+      "status": "explicit",
+      "evidence_span": "They need to know that Emily is who she says she is, and once they've confirmed that she is who she says she is, they need to keep her information safe"
+    },
+    {
+      "id": "P2",
+      "text": "Patented hashing-to-graph comparison lets two parties confirm matching attributes without exchanging the underlying information",
+      "status": "explicit",
+      "evidence_span": "patented software that allows two parties to confirm that the information that they have is the same without ever exchanging the information"
+    },
+    {
+      "id": "P3",
+      "text": "An identity exchange lets verified attribute holders publish Sidici-format data for merchants to reuse prior verifications",
+      "status": "explicit",
+      "evidence_span": "get organizations that hold lots of verified identity attributes on us to convert that information into the SIDICI format, make it available on servers, so that we can then access it through an identity exchange"
+    },
+    {
+      "id": "P4",
+      "text": "Transactional fee per verification with 30% shared back to the attribute provider",
+      "status": "explicit",
+      "evidence_span": "Every verification we do, we charge a fee for. But the interesting thing is we give 30% of that back to the provider of the information"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market targets real-time fraud monitoring and identity verification, with BT building a UK identity exchange",
+      "status": "explicit",
+      "evidence_span": "We're looking to compete in two specific areas, the prevention of fraud, which is real-time monitoring of credit card transactions, and the identity verification area"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "merchant identity and data risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "zero-exchange verification and identity exchange",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-verification fees and UK GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Prove identity and keep information safe without moving personal data between parties",
+      "status": "explicit",
+      "evidence_span": "help businesses prove that you are who you say you are and keep your information safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This creates a number of problems for merchants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no information left my browser, no information left the server in the bank"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it fast and accurate"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hash/graph micro-component comparison treated as one verification mechanism (IP detail stays inside). Identity exchange is a separately revisable network-effect module. KYC/payments/sharing-economy/age-check uses folded as applications of the same identity need (§4.1.2). BT selection treated as GTM channel condition rather than traction boast alone."
+}

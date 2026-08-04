@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1077",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:45Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable status reports and similar group communications stay trapped in person-to-person email, causing less-informed decisions, duplicated work, and lost money",
+      "status": "explicit",
+      "evidence_span": "these communications that are loaded with valuable business information are sent by email from one person to another, and the rest of the company can't access them"
+    },
+    {
+      "id": "P2",
+      "text": "Managers set who reports, schedule, and templates in ~30 seconds; ThinkFuse prompts writers so reports are consistent, timely, shared, without manager harassment",
+      "status": "explicit",
+      "evidence_span": "all we need to know is who you want status reports from, when you want them, and what information they should include"
+    },
+    {
+      "id": "P3",
+      "text": "Shared recipient lists and Twitter-like project follow give stakeholders ongoing access to current and prior reports",
+      "status": "explicit",
+      "evidence_span": "each of these people can follow a project just as easily as they can follow someone on Twitter"
+    },
+    {
+      "id": "P4",
+      "text": "Aggregated status reports map a business graph of people-project relationships searchable to find expertise, client relationships, and office location across the company",
+      "status": "explicit",
+      "evidence_span": "Using status reports, we're mapping the relationships between people and projects in a company"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email-trapped status knowledge",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "scheduled shared status product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "business graph search",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Everyone understands the whole organizational puzzle so people and resources align",
+      "status": "explicit",
+      "evidence_span": "each person understanding the entire puzzle and where their pieces fit in"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "decisions are less informed, work is duplicated, and ultimately, companies lose money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making status reports more accessible, by making them more consistent, and more powerful"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ThinkFuse helps you leverage that information"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Email inaccessibility consequences folded as one knowledge problem (§4.1.6). Setup/prompting and follow/share kept as status-product facets; business-graph search/expertise discovery split as separately framed leverage module. Beta praise treated as traction (§4.2). Transcript ends mid-sentence. ASR ThinkView/ThinkFuse left in spans where used."
+}

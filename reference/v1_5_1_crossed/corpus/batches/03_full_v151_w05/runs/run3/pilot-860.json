@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "coder_session_id": "session_04",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding a visual product you have in mind via text search across stores yields unrelated results and takes a lot of time",
+      "status": "explicit",
+      "evidence_span": "it was very difficult to put in words a visual product that I had in mind"
+    },
+    {
+      "id": "P2",
+      "text": "Donde uses a short guided attribute questionnaire plus AI that picks the next best question, backed by scraped item fingerprints and a cross-brand ontology, personalized with user context",
+      "status": "explicit",
+      "evidence_span": "using an artificial intelligence technology to choose the best question to ask you next"
+    },
+    {
+      "id": "P3",
+      "text": "Users can buy the found item on the spot in the app",
+      "status": "explicit",
+      "evidence_span": "When I found a dress, I can buy it on the spot"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "visual product search frustration",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "intuitive AI product search app",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find exactly the product you want in less than 15 seconds through an intuitive mobile search",
+      "status": "explicit",
+      "evidence_span": "you can find exactly what you're looking for in less than 15 seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I got a lot of unrelated results"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we offer a very intuitive and delightful search experience for everyone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Store/web/Google search failures folded as one visual-search problem (§4.1.6). Attribute UI, scraping/ontology, contextual personalization, and AI next-question selection folded as one search mechanism (§4.1.7); buy-on-spot kept in product domain as conversion surface of that search. Founder credentials excluded. Two-domain partition (not need/product/money triad)."
+}

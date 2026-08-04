@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-601",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Search-based screening on prestige schools and companies misses high-potential diverse candidates",
+      "status": "explicit",
+      "evidence_span": "evaluations today are based on criteria such as well-known schools or well-known companies. They favor prestige over potential"
+    },
+    {
+      "id": "P2",
+      "text": "Deep learning on career paths finds hidden correlations across experiences and works across jobs, languages, and resume formats",
+      "status": "explicit",
+      "evidence_span": "our system is able to understand the different correlation, even if they are hidden"
+    },
+    {
+      "id": "P3",
+      "text": "Structured profiles from computer vision and NLP feed a general career-path layer and a company-custom layer",
+      "status": "explicit",
+      "evidence_span": "The first, it's a general layer based on the millions of career paths we analyzed. The second, it's a custom layer based on the internal data of the company"
+    },
+    {
+      "id": "P4",
+      "text": "Capture tools like SavvyBot and continuous learning from recruiter shortlist actions expand and refine candidate pools across roles",
+      "status": "explicit",
+      "evidence_span": "Reminder continuously learns from my actions"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing starts at $99 and scales with customer growth",
+      "status": "explicit",
+      "evidence_span": "our pricing starts only at $99 and scales as you grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Prestige-biased hiring filters",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Career-path deep learning product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Entry pricing that scales",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reveal every person's full potential so recruiters hire more relevant talent with fewer interviews",
+      "status": "explicit",
+      "evidence_span": "a solution able to understand the full potential of every person in the world"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Three times more relevant talents in initial pools; 80% fewer interviews before a hire",
+      "evidence_span": "identify three times more relevant talents in their initial pools and reduce by 80% the number of interviews"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "favor prestige over potential"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Analyzing career paths and not only the set of skills"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every recruiter in the world to concentrate on tasks that are emotionally intelligent"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged SavvyBot capture with learning loop as one workflow premise. Scale-across-jobs/languages/formats folded into DL capability (v1.3.1 §4.1(2)). Beta volume excluded. Singleton D1 and D3 retained."
+}

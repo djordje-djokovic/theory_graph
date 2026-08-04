@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Labor shortages across construction, agriculture, restaurant, and manufacturing create a trillion-dollar economic gap",
+      "status": "explicit",
+      "evidence_span": "There is a labor crisis in the US across the construction, agriculture, restaurant, and manufacturing industries"
+    },
+    {
+      "id": "P2",
+      "text": "Factory robots with strain-wave gears, external control boxes, and extreme precision are too costly and poorly suited to everyday automation",
+      "status": "explicit",
+      "evidence_span": "Robotic innovation has focused on factory automation that doesn't translate well to everyday automation"
+    },
+    {
+      "id": "P3",
+      "text": "Ally Arm uses cheaper efficient planetary gears, onboard control from standard power, and a novel coupled joint for torque without velocity loss",
+      "status": "explicit",
+      "evidence_span": "proven planetary gears that are 97% efficient and 20% the cost of strain wave gears"
+    },
+    {
+      "id": "P4",
+      "text": "Quick-change actuator and application-specific robotic skins enable easy service and domain adaptation",
+      "status": "explicit",
+      "evidence_span": "anyone will be able to service the robot just like replacing the batteries in your flashlight"
+    },
+    {
+      "id": "P5",
+      "text": "Imitation learning / microbehaviors let non-experts program by demonstration instead of expensive specialist training",
+      "status": "explicit",
+      "evidence_span": "even my five-year-old will be able to program the robot by showing it"
+    },
+    {
+      "id": "P6",
+      "text": "NVIDIA Isaac collaboration supplies edge AI, simulation, and developer tools for learning-first arm design",
+      "status": "explicit",
+      "evidence_span": "collaborating with NVIDIA to adopt the Isaac platform for edge compute, AI, and simulation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Everyday automation labor gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Affordable serviceable arm hardware",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Demonstration learning and AI stack",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, easy-to-train everyday robotic automation for anyone, anywhere",
+      "status": "explicit",
+      "evidence_span": "enabling robotics for anyone, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly expand the market for robotic technology and everyday automation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smartest, most affordable, easy-to-service, and simple-to-train robotic arm"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "program the robot by showing it, and the robot will then repeat that task"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "LOI/MRR figures treated as traction not premises. Soft count 6. Anti-template: problem, hardware, and learning modules separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-206",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:39:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

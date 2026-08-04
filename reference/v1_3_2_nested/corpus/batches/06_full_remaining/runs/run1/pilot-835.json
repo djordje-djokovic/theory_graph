@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-835",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:02+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Camera software projects routinely fail under local network complexity, device fragmentation, and laborious per-customer deployment",
+      "status": "explicit",
+      "evidence_span": "this project was bigger than they had anticipated, was risky and expensive"
+    },
+    {
+      "id": "P2",
+      "text": "EverCam exposes a hosted modern web API that removes that complexity from software developers",
+      "status": "explicit",
+      "evidence_span": "expose to the software developer a beautiful, modern, hosted web API"
+    },
+    {
+      "id": "P3",
+      "text": "The platform helps camera owners connect and stay connected, guarantees API software works with any internet-connected camera, and distributes camera apps like a phone app store",
+      "status": "explicit",
+      "evidence_span": "We guarantee when software is written for our API that it will work with any camera that can be connected to the internet"
+    },
+    {
+      "id": "P4",
+      "text": "The product is an entirely developer-focused hosted API, superior to security products that merely add an API and to local development platforms",
+      "status": "explicit",
+      "evidence_span": "our product is an API. It's entirely developer-focused"
+    },
+    {
+      "id": "P5",
+      "text": "EverCam earns a recurring fee on a per-camera basis when customers deploy solutions",
+      "status": "explicit",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Camera project complexity",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hosted developer camera API",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-camera recurring fees",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make cameras programmable so developers can build live-image applications that improve customer businesses",
+      "status": "explicit",
+      "evidence_span": "make these cameras programmable, and thereby to unleash a whole new category of software development based around the live image"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they could provide a much better service if they could access the cameras"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make these cameras programmable"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "EverCam is generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three named platform capabilities folded into P3 as one offering (§4.1(5)/(2)). Android/iOS analogy treated as vision framing (§4.1(4)). Singleton D1 and D3 justified: problem diagnosis and pricing are separately revisable from the API stack. Team bio excluded."
+}

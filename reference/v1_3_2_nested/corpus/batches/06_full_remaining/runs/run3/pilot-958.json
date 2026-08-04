@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In fast-growing software companies, mismatched environments, forever tests, and build breaks destroy engineer productivity",
+      "status": "explicit",
+      "evidence_span": "we experienced all the normal pains you get in a fast-moving, fast-growing software company"
+    },
+    {
+      "id": "P2",
+      "text": "Quality deploys on-site behind the firewall and tests every change in production-like replicas so environment mismatch goes away",
+      "status": "explicit",
+      "evidence_span": "every single change is tested in something that's like production. So you don't have to worry about mismatching environments"
+    },
+    {
+      "id": "P3",
+      "text": "Parallelized automation across replicas gives fast test turnaround so developers do not wait",
+      "status": "explicit",
+      "evidence_span": "this gives the test really fast turnaround time, and it means devs don't have to wait for tests"
+    },
+    {
+      "id": "P4",
+      "text": "Keeping changes in limbo isolation prevents would-be build breaks from blocking the rest of the team",
+      "status": "explicit",
+      "evidence_span": "He would have blocked the rest of his team from doing work. But quality, I mentioned, has this in a limbo state, in isolation"
+    },
+    {
+      "id": "P5",
+      "text": "A 20% more effective existing team yields free engineers without hiring, training, or ramp-up",
+      "status": "explicit",
+      "evidence_span": "if you have a team of 30 engineers, that's six devs you're getting for free"
+    },
+    {
+      "id": "P6",
+      "text": "Most companies cannot build Google/Facebook-scale internal solutions and instead need to buy the Quality product",
+      "status": "explicit",
+      "evidence_span": "Today is a different era. You can now buy the quality product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fast-company engineering pains",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "On-site production-like parallel testing with limbo",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Buyable productivity for existing teams",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Radically change how engineers write software by unleashing their productivity",
+      "status": "explicit",
+      "evidence_span": "unleash your engineers and radically change the way that they actually write software"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Engineer happiness from effectiveness beats free food perks",
+      "evidence_span": "it's better than actually buying us free food"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is actually what engineers feel on a day-to-day basis"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "quality has just prevented a bunch of engineers from being very angry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's over a million dollars in value a year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Run3 folds the three named pains into one market-pain premise (speaker presents them as one standing set of pains). Singleton D1 retained as independently revisable problem diagnosis. Traction data and market-size framing excluded. Partition is need/product/commercial; justified by separate revisability of pains vs platform vs buy-vs-build thesis.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-958",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-487",
+    "coder_session_id": "session_01",
+    "session_case_index": 8,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:20:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "City data is trapped in silos, legacy systems, spreadsheets, and paper, so leaders cannot use it for decisions",
+      "status": "explicit",
+      "evidence_span": "the data is trapped in silos"
+    },
+    {
+      "id": "P2",
+      "text": "A modular governance platform pulls legacy (and paper) data into reports and actionable insights for city leaders",
+      "status": "explicit",
+      "evidence_span": "We take data from any existing legacy system and produce reports and actionable insights that governments can use to reach their goals"
+    },
+    {
+      "id": "P3",
+      "text": "Regional on-site sales, modular pricing below procurement thresholds, and political networks win city contracts",
+      "status": "explicit",
+      "evidence_span": "Our modular pricing helps winning contracts below procurement thresholds"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS monetization combines a one-time setup fee by integrations with an annual license by modules and city size",
+      "status": "explicit",
+      "evidence_span": "software as a service business model with a one-time setup fee and an annual license fee"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed city data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Governance insights platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Municipal sales motion",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "SaaS setup and license fees",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-empowered city decisions that improve citizens' lives through more effective government",
+      "status": "explicit",
+      "evidence_span": "all city leaders across Europe make data-empowered decisions, improving the life of millions of their citizens"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when it comes to decision-making local governments tap in the dark"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "produce reports and actionable insights that governments can use to reach their goals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we scale through political networks and social proof"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "software as a service business model with a one-time setup fee and an annual license fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Childcare module demo, data bridge, and paper digitization folded into P2 as facets of one platform mechanism. Manual processing cost figure treated as problem evidence inside P1's domain, not a separate premise. Paying-customer traction and team bios excluded. P3 vs P4 split: sales motion vs fee structure could fail independently."
+}

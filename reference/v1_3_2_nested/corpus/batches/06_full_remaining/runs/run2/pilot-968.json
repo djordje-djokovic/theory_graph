@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Login can be fun and seamless by placing an unlocked phone near the computer instead of typing tokens",
+      "status": "explicit",
+      "evidence_span": "All you have to do is just put it close to the computer you log in from. And that's it. You're logged in"
+    },
+    {
+      "id": "P2",
+      "text": "Inaudible ultrasonic frequencies carry the proximity auth signal between devices",
+      "status": "explicit",
+      "evidence_span": "our technology uses ultrasonic frequencies, which are inaudible but perfectly detectable to microphones"
+    },
+    {
+      "id": "P3",
+      "text": "Session keys encrypted for the phone are delivered only when proximity is confirmed",
+      "status": "explicit",
+      "evidence_span": "The key is encrypted for your phone. And the phone will get the key only if it's close to your computer, making sure only you can confirm your session"
+    },
+    {
+      "id": "P4",
+      "text": "Browser-based setup works across endpoints and mobile devices without data-center hardware",
+      "status": "explicit",
+      "evidence_span": "we support all endpoints and all mobile devices, and even not for your data center"
+    },
+    {
+      "id": "P5",
+      "text": "Location allow/block maps extend the product into IAM for banks and large enterprises",
+      "status": "explicit",
+      "evidence_span": "Sleek login can also provide identity and access management like never before"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Proximity ultrasonic login",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware-free browser deploy",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise IAM geofencing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncompromising security with an unbelievable seamless login user experience",
+      "status": "explicit",
+      "evidence_span": "provides uncompromising security and an unbelievable user experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You're logged in"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "do not require you to buy any new hardware"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identity and access management like never before"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cost-effectiveness claim treated as consequence of P4 rather than separate commercial premise this run. Customer segment (banks/enterprises) folded into IAM domain.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-968",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:10+02:00"
+  }
+}

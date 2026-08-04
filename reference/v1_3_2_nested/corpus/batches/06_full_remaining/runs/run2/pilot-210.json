@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most of the global workforce is deskless and current systems leave over half of them with unresolved issues",
+      "status": "explicit",
+      "evidence_span": "More than 50% of these deskless workers are having issues with the current system"
+    },
+    {
+      "id": "P2",
+      "text": "Text-message two-way portal gives workers easy access without installing another app",
+      "status": "explicit",
+      "evidence_span": "Deskless workers don't need another application on their phone"
+    },
+    {
+      "id": "P3",
+      "text": "Employers get visibility and tools to engage frontline workers and see what each side is doing",
+      "status": "explicit",
+      "evidence_span": "ANTIL provides employers with the tools to engage with their deskless workers and the transparency to see what every side is doing"
+    },
+    {
+      "id": "P4",
+      "text": "Custom sentiment and psychometric analysis lets employers learn feelings and needs before serious problems arise",
+      "status": "explicit",
+      "evidence_span": "We also created a custom sentiment and psychometric analysis so that the employers will learn the feelings and needs of their desk-less workers before they say something"
+    },
+    {
+      "id": "P5",
+      "text": "High turnover is costly and stems from workers not being heard",
+      "status": "explicit",
+      "evidence_span": "Turnover is expensive. On average, companies are facing above 47% of turnover rates"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Deskless workforce and turnover cost",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "SMS two-way support for workers",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Employer engagement and predictive analytics",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Don't lose deskless workers—know what is going on and keep them connected",
+      "status": "explicit",
+      "evidence_span": "Don't lose your workers. Get connected today and know what's going on with your workers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when these workers are not heard, they just leave"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Antil is reconciling employees and employers by creating a bridge between them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Overall, our goal is to improve retention across your organization"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Auto-resolution demo treated as part of employer engagement tools with SMS access rather than a fourth domain. Dollar savings cited as value evidence, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-210",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

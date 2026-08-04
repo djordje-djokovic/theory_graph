@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-773",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor growers' sensor notes and yields stay siloed raw data, forcing guesswork, consultant spend, or gut decisions",
+      "status": "explicit",
+      "evidence_span": "this is raw data. It doesn't talk to each other, and it doesn't tell Tom anything"
+    },
+    {
+      "id": "P2",
+      "text": "AgriList aggregates sensor, document, and manual data into one dashboard with graphs and crop task management",
+      "status": "explicit",
+      "evidence_span": "With AgriList, all of Tom's data talks to each other, eliminating the guesswork from decision making"
+    },
+    {
+      "id": "P3",
+      "text": "The platform analyzes operations and recommends actions such as lighting schedules for time-varying electricity rates",
+      "status": "explicit",
+      "evidence_span": "AgriList goes a step further and provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings"
+    },
+    {
+      "id": "P4",
+      "text": "Subscription pricing around $1,000 per acre per month targets a large and growing global greenhouse acreage market",
+      "status": "explicit",
+      "evidence_span": "Our private beta was released at a subscription price at $1,000 per acre per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed greenhouse operations data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "unified analytics and recommendations",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-acre greenhouse SaaS market",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Indoor farmers control operations and profits with easier, data-driven growing",
+      "status": "explicit",
+      "evidence_span": "helps indoor farmers take control of their operations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More sustainable, efficient food production to meet rising global demand",
+      "evidence_span": "We want to help feed the world"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "being able to control those conditions means being able to control your profits"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Agilis aggregates all of Tom's data in one place. Agilis analyzes and makes recommendations for Tom, saving him money"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There are over 1 million acres of vegetable production greenhouses globally"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Notebook/sensor silos, consultant spend, and gut decisions folded as one raw-data problem (§4.1.6). Dashboard, multi-input ingest, graphs, tasks/yield alerts folded as one aggregation product; lighting recommendations as analysis module in same learnable ops platform (§4.1.7). Beta greenhouse count treated as traction. Hydroponic land/water efficiency and 2050 demand as impact framing/secondary value. Price+market acreage as one commercial premise. Singleton D1/D3 retained. Anti-template: problem, product, and commercial market separately revisable. ASR AgriList/Agoralyst/Agilis left in spans."
+}

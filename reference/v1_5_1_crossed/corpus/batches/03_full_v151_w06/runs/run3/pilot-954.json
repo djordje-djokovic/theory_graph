@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-954",
+    "coder_session_id": "session_06",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Video post-production feedback today is fragmented across email, calendars, calls, and spreadsheets",
+      "status": "explicit",
+      "evidence_span": "teams are running around, sifting through emails with long threads where someone hits reply all, scheduling meetings on calendars, long phone calls with people in multiple time zones"
+    },
+    {
+      "id": "P2",
+      "text": "A viewing room focuses stakeholders on the video so they can leave timestamped comments while watching",
+      "status": "explicit",
+      "evidence_span": "the viewing room is the sole focus is on the video itself and to give feedback on it"
+    },
+    {
+      "id": "P3",
+      "text": "Quick-comment hotkeys speed repeated feedback while watching",
+      "status": "explicit",
+      "evidence_span": "allowing users to set their own kind of quick comments"
+    },
+    {
+      "id": "P4",
+      "text": "A review-and-export pane digests stakeholder feedback and assigns edits to editors",
+      "status": "explicit",
+      "evidence_span": "digest of all your stakeholders giving feedback"
+    },
+    {
+      "id": "P5",
+      "text": "Assigned markers export directly into editors' NLEs such as Adobe Premiere",
+      "status": "explicit",
+      "evidence_span": "export it directly into his favorite video editing software"
+    },
+    {
+      "id": "P6",
+      "text": "Browser-based design uses existing hosting so IT has little to deploy",
+      "status": "explicit",
+      "evidence_span": "browser-based, and we leverage existing hosting infrastructure"
+    },
+    {
+      "id": "P7",
+      "text": "Project-based pricing is affordable for small teams while scaling for larger clients",
+      "status": "explicit",
+      "evidence_span": "project based pricing that's friendly to teams of all sizes"
+    },
+    {
+      "id": "P8",
+      "text": "Native Adobe integration and upcoming MPAA compliance target studio standards",
+      "status": "explicit",
+      "evidence_span": "announcing our native integration with Adobe"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "timestamped video feedback workflow",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "NLE export and Adobe/MPAA stack",
+      "premise_ids": ["P5", "P8"]
+    },
+    {
+      "id": "D3",
+      "name": "browser IT adoption",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D4",
+      "name": "project-based pricing",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Video professionals collaborate and manage post-production feedback without email chaos",
+      "status": "explicit",
+      "evidence_span": "communication and project management tool for video professionals"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "collection is one part. You've got to make it actionable in some way"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "made it very, very easy to collect timestamp feedback"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our markers actually show up directly in the timeline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "IT departments specifically love us because it's browser-based"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it affordable for small teams while keep on producing upsides for larger clients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Auto-pause/resume and reply-in-thread folded into P2 as cascade of the viewing-room feedback mechanism. Network-effect pilot counts excluded as traction. Adobe native integration kept with NLE export domain; MPAA compliance folded into P8 as institutional detail of the studio stack. Singletons D3 and D4 retained as separately revisable IT and pricing modules."
+}

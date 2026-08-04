@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Alicanto recommends marketing ideas via data mining and machine learning tailored to the business, location, and preferences",
+      "status": "explicit",
+      "evidence_span": "My feeds are based on data mining and machine learning algorithms and are tailored to my business, location, and preferences"
+    },
+    {
+      "id": "P2",
+      "text": "Users can launch multi-channel campaigns from style-matched templates across email, postcards, text, and social",
+      "status": "explicit",
+      "evidence_span": "I can run it across multiple marketing channels, emails, postcards, text, and social media, to name a few"
+    },
+    {
+      "id": "P3",
+      "text": "Alliances let businesses run joint campaigns to reach each other's customers",
+      "status": "explicit",
+      "evidence_span": "Alliances allow businesses to run marketing campaigns together, reaching a huge number of new customers"
+    },
+    {
+      "id": "P4",
+      "text": "Freemium revenue with contextual sponsored suggestions; distribution is viral via the Alliance invite feature",
+      "status": "explicit",
+      "evidence_span": "Our revenue model is freemium, with contextual sponsored suggestions built in"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ML marketing recommendations and campaigns",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Business alliance campaigns",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Freemium and viral distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drive key marketing KPIs—average purchase, new and returning clients, and total revenues—with a sophisticated marketing mix",
+      "status": "explicit",
+      "evidence_span": "This drives all key performance indicators rapidly off, average purchase, number of new clients, number of returning customers, and total revenues"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Handle all of a small business's marketing needs so owners can focus on the craft",
+      "evidence_span": "It handles all of your marketing needs"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they run very sophisticated marketing mix and many, many tasks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helping each other reach more customers, driving more traffic to our businesses"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our distribution model is highly viral, thanks to our Alliance feature"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Calendar, ROI analytics, SEO/Google Places, and print signs folded into the recommendation/campaign offering (§4.1(5)). Alliance kept separate as an independently revisable growth module. Freemium+sponsored suggestions one commercial premise. Product/alliance/monetization partition; not a need triad.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1002",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

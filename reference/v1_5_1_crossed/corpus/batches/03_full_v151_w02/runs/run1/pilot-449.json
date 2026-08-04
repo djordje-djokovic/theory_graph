@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-449",
+    "coder_session_id": "session_04",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cross-border remittances suffer lost funds, delays, high cost, and low transparency",
+      "status": "explicit",
+      "evidence_span": "Lost funds, delayed delivery of funds, high cost, low transparency"
+    },
+    {
+      "id": "P2",
+      "text": "SendMe integrates with employer payroll so employees can send payroll funds cross-border, top up phones, and pay international bills",
+      "status": "explicit",
+      "evidence_span": "integrates with an employer's payroll system and allows employees to send payroll funds cross-border, top up mobile phones, and pay international bills"
+    },
+    {
+      "id": "P3",
+      "text": "FDIC-insured wallet receives a portion of each paycheck for sending abroad",
+      "status": "explicit",
+      "evidence_span": "that balance is held at a financial institution and is FDIC-insured"
+    },
+    {
+      "id": "P4",
+      "text": "Direct Central Bank of Mexico connection enables instant transfers to Mexican bank accounts",
+      "status": "explicit",
+      "evidence_span": "We have built a direct connection to the Central Bank of Mexico, which allows us to do an instant transfer to Mexican bank accounts"
+    },
+    {
+      "id": "P5",
+      "text": "Recipients can also cash out via a large BBVA ATM network with a code",
+      "status": "explicit",
+      "evidence_span": "We can also send funds to a network of over 10,000 BBVA ATMs in Mexico"
+    },
+    {
+      "id": "P6",
+      "text": "Banking-network interoperability is created through central-bank and partner connections",
+      "status": "explicit",
+      "evidence_span": "We're creating that interoperability by building partnerships"
+    },
+    {
+      "id": "P7",
+      "text": "Combining payroll with money services shifts behavior, cuts regulatory and CAC costs, and can shift paying to employers",
+      "status": "explicit",
+      "evidence_span": "We combine payroll with money service business, and in so doing, shift user behavior, reduce regulatory costs, and reduce customer acquisition costs"
+    },
+    {
+      "id": "P8",
+      "text": "Distributed through banks, payroll providers, and employers; beachhead is US–Mexico corridor",
+      "status": "explicit",
+      "evidence_span": "We distribute the products to banks, payroll providers, and direct to employers"
+    },
+    {
+      "id": "P9",
+      "text": "Low upfront fees and FX with value-added services drive international transfer cost toward zero",
+      "status": "explicit",
+      "evidence_span": "We charge between $1 and $4 up front and 2% in foreign exchange"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken remittance experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Payroll-linked send and cash-out rails",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Payroll MSB model and distribution",
+      "premise_ids": ["P7", "P8", "P9"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "High-transparency, lower-cost, more efficient cross-border payroll transfers",
+      "status": "explicit",
+      "evidence_span": "a solution that is high transparency, lower cost"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More money reaches recipients when transfer costs fall",
+      "evidence_span": "With each 1% reduction in the cost of international transfers, $6 billion goes into the hands of recipients"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've experienced every problem imaginable as it relates to sending money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "allows employees to send payroll funds cross-border"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "driving the cost of the international transfer to zero"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain list folded as one remittance problem set. Phone top-up and bill pay kept inside payroll flex-pay offer (P2) as same product surface; ATM cash-out and central-bank rail split as distinct delivery modules. Price and partner distribution: fee model (P9) kept with commercial package; bank/payroll distribution (P8) separate channel module."
+}

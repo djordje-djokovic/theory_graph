@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers struggle to see total personal value of fragmented air, hotel, car, and card rewards and which offers fit them",
+      "status": "inferred",
+      "evidence_span": "this number is pretty hard to come by"
+    },
+    {
+      "id": "P2",
+      "text": "A dashboard aggregates reward accounts, balances, personal value, growth, and risk of losing points or status",
+      "status": "explicit",
+      "evidence_span": "a super smart dashboard that organizes all your points in one spot"
+    },
+    {
+      "id": "P3",
+      "text": "Deep analysis of spending versus peers projects points forward and recommends cards or actions that raise rewards and status sooner",
+      "status": "explicit",
+      "evidence_span": "the technology that we developed to track your value over time and project it forward"
+    },
+    {
+      "id": "P4",
+      "text": "Trip planning filters destinations and overlays Kayak results with which offer is best suited—not merely cheapest—including points versus cash",
+      "status": "explicit",
+      "evidence_span": "we will go bring results from Kayak and overlay them with which offer is best suited for you, not necessarily the cheapest one"
+    },
+    {
+      "id": "P5",
+      "text": "Service is free to consumers; Superfly earns referral fees from airlines, reward cards, and others when users take recommendations",
+      "status": "explicit",
+      "evidence_span": "When the user saves, we make money off the referral fee that we get not from the user"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented rewards visibility",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "rewards dashboard analysis and booking",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "referral-fee monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help travelers become savvy by organizing points and choosing the best-suited rewards offers",
+      "status": "explicit",
+      "evidence_span": "help you become one"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "figure out which offer is best suited for you"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "organizes all your points in one spot, scans all the rewards that are out there"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give them intelligent suggestions about how to earn more points, get the status faster, or spend the points more wisely"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "P1 inferred from 'hard to come by' personal value plus product framing; demand obsession with elite status treated as motivation not a separate premise. Sign-up with account+PIN folded into dashboard onboarding. Unused-points market size and competitor typology treated as framing. Dashboard, forward projection/recommendations, and Kayak-overlay planning split as distinct product jobs (enumeration atomicity). Anti-template note: D1/D2/D3 resemble need/product/money but each is separately revisable in the transcript (visibility problem vs analysis product vs referral economics)."
+}

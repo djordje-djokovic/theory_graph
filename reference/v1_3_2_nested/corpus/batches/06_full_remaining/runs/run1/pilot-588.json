@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote video monitoring for small and retail businesses is an untapped market currently limited by expensive human-only solutions to special use cases",
+      "status": "explicit",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    },
+    {
+      "id": "P2",
+      "text": "Their platform uniquely does active threat detection in the surveillance space versus other deep learning applications",
+      "status": "explicit",
+      "evidence_span": "we're actually the only ones that we know of who are working on active threat detection"
+    },
+    {
+      "id": "P3",
+      "text": "The platform is about 10 times less expensive than traditional human-only remote video monitoring",
+      "status": "explicit",
+      "evidence_span": "which is 10 times more expensive than our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Threat detections are sent in real time to a remote monitoring analyst who contacts the police",
+      "status": "explicit",
+      "evidence_span": "those detections would be sent to a remote monitoring analyst in real time, who would then contact the police"
+    },
+    {
+      "id": "P5",
+      "text": "Security integrators serving banks, retail chains, and Latin American markets are the go-to-market path for testing and deployment",
+      "status": "explicit",
+      "evidence_span": "March Networks, they do security integration for numerous bank branches as well as fast food retail chains throughout North America"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB remote monitoring market gap",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Active threat detection platform",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Security integrator channel",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable active-threat remote video monitoring for small and retail businesses",
+      "status": "explicit",
+      "evidence_span": "help us bring security surveillance technology into the 21st century"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10 times more expensive than our platform"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working on active threat detection"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "security integration for numerous bank branches as well as fast food retail chains"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "ARR/market-size figures treated as framing not premises. Board appointment and free beta launch excluded. Singleton D3 retained: integrator channel separately revisable. Three domains are market-access cost, detection product, and channel—not a need/product/money triad.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-588",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

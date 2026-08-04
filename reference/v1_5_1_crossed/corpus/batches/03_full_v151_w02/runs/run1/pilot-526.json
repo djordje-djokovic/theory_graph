@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-526",
+    "coder_session_id": "session_06",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:32:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Provider API/EDI consolidation alone is limited in data quality for multimodal shipments",
+      "status": "explicit",
+      "evidence_span": "consolidation alone is limited in terms of data quality"
+    },
+    {
+      "id": "P2",
+      "text": "Satellite, truck GPS, and IoT tracking paired with provider data improve real-time visibility",
+      "status": "explicit",
+      "evidence_span": "We use satellite data to track ships and planes. And we connect to trucks' GPS and IoT devices"
+    },
+    {
+      "id": "P3",
+      "text": "Data science predicts arrival times using external factors and alerts ops teams on smartphones",
+      "status": "explicit",
+      "evidence_span": "we use data science to predict times of arrival by taking into account external factors like real-time traffic or events"
+    },
+    {
+      "id": "P4",
+      "text": "Platform consolidates multimodal overseas shipments into one stream with analytics to cut transit time",
+      "status": "explicit",
+      "evidence_span": "It consolidates multiple transport providers into one single stream"
+    },
+    {
+      "id": "P5",
+      "text": "Value comes from anticipation, reliability via lower safety inventories, and proactive customer experience",
+      "status": "explicit",
+      "evidence_span": "we bring three key aspects to our customers. First, anticipation, to secure production lines by sending alerts to operational teams"
+    },
+    {
+      "id": "P6",
+      "text": "Focus is multimodal overseas shipments complementary to continental road freight players",
+      "status": "explicit",
+      "evidence_span": "We focus on multimodal overseas shipments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Provider data quality limits",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Predictive multimodal tracking software",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Overseas multimodal market focus",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shift B2B supply chains from reactive to predictive to secure production and cut inventory cost",
+      "status": "explicit",
+      "evidence_span": "We change the supply chain from reactive to predictive"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "But consolidation alone is limited in terms of data quality. So we pair providers' information with real-time and reliable tracking"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consolidation alone is limited in terms of data quality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we send an alert to operational teams so that they can anticipate"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "unique tech to guarantee data quality and predictability for international shipments"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-sentence after describing transport-provider connections. Anticipation/reliability/CX triad folded as one value-mechanism package (P5) rather than three premises. Customer onboard counts excluded as traction. Singleton D1/D3 retained. Team port bios excluded."
+}

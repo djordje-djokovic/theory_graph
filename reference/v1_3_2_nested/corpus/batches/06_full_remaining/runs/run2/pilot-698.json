@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many people in recovery relapse within the first year",
+      "status": "explicit",
+      "evidence_span": "60% of people with drug and alcohol addiction relapse within the first year"
+    },
+    {
+      "id": "P2",
+      "text": "Relapse is caused by lack of communication and lack of accountability",
+      "status": "explicit",
+      "evidence_span": "the two key things that cause relapse. One, lack of communication, and two, lack of accountability"
+    },
+    {
+      "id": "P3",
+      "text": "App plus wearables verifies attendance and engagement at recovery activities via geo and motion",
+      "status": "explicit",
+      "evidence_span": "we're even able to tell if you showed up to your 12-step meeting just for the last five minutes or if you've been there and engaged the entire time"
+    },
+    {
+      "id": "P4",
+      "text": "Support network sees progress, gets alerts, and can be summoned with one SOS button when someone isolates",
+      "status": "explicit",
+      "evidence_span": "We also provide alerts when someone is not doing their recovery program"
+    },
+    {
+      "id": "P5",
+      "text": "Points redeem for recovery-friendly rewards that deepen engagement",
+      "status": "explicit",
+      "evidence_span": "really get the person engaged further into recovery"
+    },
+    {
+      "id": "P6",
+      "text": "Sell via inpatient centers first, then expand using center data into healthcare, insurance, and EAPs",
+      "status": "explicit",
+      "evidence_span": "we're going to go next into health care providers, insurance companies, and employee assistance programs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Relapse problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Accountability, connection, and rewards",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Inpatient-first distribution",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Daily engaged recovery that reduces relapse risk",
+      "status": "explicit",
+      "evidence_span": "You have to be engaged into your recovery every single day"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Saving lives of people affected by addiction",
+      "evidence_span": "quest to save lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cause relapse"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the accountability"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "first sales channel, which is inpatient treatment centers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Treatment-center data usefulness folded into channel expansion premise. Market-size one-in-three/one-in-six framing not coded as premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-698",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-766",
+    "coder_session_id": "session_05",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stores use opaque dynamic and personalized pricing that outmatches consumers, and price-drop/coupon guarantees are too complex and time-consuming for shoppers to claim",
+      "status": "explicit",
+      "evidence_span": "Stores try to give people comfort around these fast-changing prices by offering a guarantee that if a price drops after you buy it or you miss a coupon, you can get this difference back. But it's a huge hassle"
+    },
+    {
+      "id": "P2",
+      "text": "A web app can capture purchases via inbox OAuth and account linking, track prices and coupons, check store policies, and NLP-file refund claims automatically",
+      "status": "explicit",
+      "evidence_span": "It scans your inbox for receipts, tracks the prices on what you bought, and when they drop, automatically files claims to get you paid"
+    },
+    {
+      "id": "P3",
+      "text": "Receipt and store-communication data can be pulled and secured without reading other email contents",
+      "status": "explicit",
+      "evidence_span": "We placed customized webhooks to pull receipts and store communications based on subject and sender alone, without ever touching the contents of your other emails"
+    },
+    {
+      "id": "P4",
+      "text": "Coverage of the largest online retailers is sufficient for typical shopping categories",
+      "status": "explicit",
+      "evidence_span": "Paribus already supports 20 of the largest stores online"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is a success fee charged only after savings are delivered (25%, reducible via referrals)",
+      "status": "explicit",
+      "evidence_span": "The only time that Paribus earns is after we save you money first. Our standard fee is charged 25% of the money we earn you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dynamic pricing claim hassle",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automated secure claim recovery",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "store coverage and success fee",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers recover money owed from post-purchase price drops effortlessly",
+      "status": "explicit",
+      "evidence_span": "gets you the money you're owed effortlessly"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "online consumers are leaving $10 billion on the table every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Paribus, it's all automated"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no matter where you shop or what you're buying, food, electronics, clothing, books, you name it, Paribus has you covered"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pain-side dynamic pricing plus claim hassle folded as one problem set (v1.5.1 §4.1.6). Receipt-to-claim pipeline kept as one mechanism cascade (§4.1.7); security treated as separately asserted trust condition. Beta savings counts and member traction excluded per §4.2. Anti-template: D1/D2/D3 map to problem, product, and commercial coverage/fee as separately revisable modules named in the pitch."
+}

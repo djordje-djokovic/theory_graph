@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:15:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large enterprise application portfolios accumulate compounding technical debt across infrastructure, architecture, code, and dependencies, making modernization costly and slow",
+      "status": "explicit",
+      "evidence_span": "technical debt starts to accumulate"
+    },
+    {
+      "id": "P2",
+      "text": "A continuous modernization platform automates discovery, cutting technical debt, re-architecting, containerized deployment, and ongoing maintenance as a repeatable product routine",
+      "status": "explicit",
+      "evidence_span": "productized solution to help identify, cut, and maintain technical debt"
+    },
+    {
+      "id": "P3",
+      "text": "Machine learning classifications help users identify, contextualize, and optimize application architecture across common legacy stacks",
+      "status": "explicit",
+      "evidence_span": "built on top of machine learning classifications that help our users identify, contextualize, and optimize application architecture"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market runs through cloud-provider programs that accelerate cloud revenue spend and customer modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "work very closely with the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "enterprise technical debt burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "continuous modernization platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "cloud-provider GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, repeatable modernization that frees budget wasted maintaining legacy systems",
+      "status": "explicit",
+      "evidence_span": "freeing up that 40% that's wasted maintaining legacy"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of budget across all sectors is actually spent just maintaining that legacy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automate and simplify and create a repeatable, predictable process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerate cloud revenue spend for the cloud providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Four crumbling pillars folded into one tech-debt need premise. Demo cascade (inventory→Docker→Fargate) folded into P2 automation mechanism. Pitch cut short by timekeeper (truncated=true)."
+}

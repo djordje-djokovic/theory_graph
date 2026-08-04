@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Expense inputs must be completable on a phone in under three seconds",
+      "status": "explicit",
+      "evidence_span": "input any expense in under three seconds"
+    },
+    {
+      "id": "P2",
+      "text": "The app never asks for credit card, bank information, or even the user's name",
+      "status": "explicit",
+      "evidence_span": "We'll never ask you for your credit card or bank information, not even your name"
+    },
+    {
+      "id": "P3",
+      "text": "Gamified XP, tokens, achievements, and leveling encourage tracking, and tokens unlock sponsored deals",
+      "status": "explicit",
+      "evidence_span": "we're going to make it fun and rewarding"
+    },
+    {
+      "id": "P4",
+      "text": "Smart tags rise by pattern and frequency of the user's spending habits",
+      "status": "explicit",
+      "evidence_span": "Spends tracks both the pattern and frequency of my top tags and intuitively responds"
+    },
+    {
+      "id": "P5",
+      "text": "Users can set subcategory budgets and see You-Versus-Them peer spending insights",
+      "status": "explicit",
+      "evidence_span": "we've gone one step farther and allowed for subcategorization"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization works with companies to put the right deals in front of the right audience while the app stays free for users",
+      "status": "explicit",
+      "evidence_span": "working with companies to get the right deals in front of the right audience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fast anonymous expense capture",
+      "premise_ids": ["P1", "P2", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Gamification budgets and insights",
+      "premise_ids": ["P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Sponsored deals monetization",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Budget and track money in a way that is fun and fast so users know where money goes",
+      "status": "explicit",
+      "evidence_span": "solve the problem of budgeting and tracking your money. Not like everybody else, but fun and fast"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make inputs fast, super fast"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "achievements are ways that we encourage our users to do some great spending habits"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Spends Tokens unlock deals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Bootstrap/launch timing and demo XP numbers excluded as traction. Web backup treated as a feature of the same offering and folded into capture/backup UX rather than a separate premise (v1.3.2 §4.1(5)). Proactive-engagement rhetoric folded into the fast-input/anonymous product stance. Free-for-users kept inside the deals monetization premise (price+partner structure, v1.3.1 §4.1(3))."
+}

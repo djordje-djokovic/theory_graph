@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "coder_session_id": "session_05",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-school STEM students lack a way to showcase projects to colleges and employers beyond limited Facebook/team sites",
+      "status": "explicit",
+      "evidence_span": "Students are still having trouble exposing their projects, collaborating with one another, and organizing those projects, but not anymore"
+    },
+    {
+      "id": "P2",
+      "text": "GradFly is a visual portfolio platform where students upload multimedia project stories searchable by topic and category",
+      "status": "explicit",
+      "evidence_span": "Introducing GradFly, a portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "id": "P3",
+      "text": "An algorithm matches students to colleges based on project interests, with school pages including program info and social feeds",
+      "status": "explicit",
+      "evidence_span": "We've created an algorithm that pairs the student to a particular college"
+    },
+    {
+      "id": "P4",
+      "text": "Commendations and skill badges create prestige and a viral incentive for students to keep uploading projects",
+      "status": "explicit",
+      "evidence_span": "The more a student has commendations, the more weight and prestige that portfolio has"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hidden high-school STEM projects",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "multimedia portfolio platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "college matching algorithm",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "commendations and badges growth loop",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "STEM students leverage groundbreaking projects to reach colleges, internships, and high-tech employers",
+      "status": "explicit",
+      "evidence_span": "how do you leverage these projects that students are working on to get into schools like MIT, RPI, Caltech, Cooper Union"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I witnessed students building some of the most amazing and incredible things I've ever seen. And no one knows about them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "GradFly is a visual LinkedIn for high school science, technology, engineering, and math students showcasing their most groundbreaking projects"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we would pair her with robust college programs out there that are geared towards robotics"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what's gonna keep students excited about uploading projects?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Expose/collaborate/organize pains folded as one student showcase problem (§4.1.6). Upload UI multimedia cascade folded into portfolio platform premise. College-match and badges/commendations split as separately revisable modules with own paths to admissions/engagement value. Embedded student-interview video treated as problem evidence. Ed-tech market size framing excluded. Waitlist/apps-under-development treated as launch status, not premises. Four-domain partition; not a need/product/money triad."
+}

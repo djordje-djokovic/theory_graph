@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1072",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional e-commerce search assumes buyers know what they want and makes shopping solitary, while friends actually drive product discovery",
+      "status": "explicit",
+      "evidence_span": "commerce has really focused on our needs. The ever-present search metaphor presumes that we only want what we know"
+    },
+    {
+      "id": "P2",
+      "text": "Aspirational brands are curated into a daily personalized store based on what you and friends like, showing who peeked at each product",
+      "status": "explicit",
+      "evidence_span": "We use what you and your friends like on Sneak Peek to create a store every single day just for you"
+    },
+    {
+      "id": "P3",
+      "text": "Limited daily peeks intelligently drop price for everyone peeking until someone buys, creating urgency and competition",
+      "status": "explicit",
+      "evidence_span": "every peek drops the price for everyone peeking"
+    },
+    {
+      "id": "P4",
+      "text": "The experience runs on the web, inside Facebook, and on tablets",
+      "status": "explicit",
+      "evidence_span": "Sneak Peek works on sneakpeek.com. It works inside the comforts of Facebook"
+    },
+    {
+      "id": "P5",
+      "text": "Long-term brand partnerships deliver impulse sales and social-channel engagement for brands",
+      "status": "explicit",
+      "evidence_span": "we form long-term partnerships, and we help them deliver meaningful sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "solitary search commerce gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "social discovery shopping",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "peek price-drop game mechanics",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "brand partnerships",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Social proof and serendipity move shoppers from discovery to purchase",
+      "status": "explicit",
+      "evidence_span": "This adds the social proof we all need to move us from discovery to purchase"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "friends do help friends discover products"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "having social or friends data in it really helps people move from discovery to the purchase phase"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "game mechanics, such as competition and urgency, really drive sales"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help them deliver meaningful sales, which are mostly impulse"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three learnings (serendipity, social data, game mechanics) map to separately asserted mechanisms; peek pricing kept as its own domain. Pilot peek counts and $10 credit excluded as traction/promo. Surfaces (web/FB/tablet) folded into social shopping delivery rather than three premises."
+}

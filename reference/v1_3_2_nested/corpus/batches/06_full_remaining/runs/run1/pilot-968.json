@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ultrasonic audio signals confirm the phone is near the computer to authenticate without typing codes",
+      "status": "explicit",
+      "evidence_span": "our unique patent-pending technology, which connects the two devices using audio signals"
+    },
+    {
+      "id": "P2",
+      "text": "Each session generates a unique encrypted key encoded in audio that only a nearby phone can receive",
+      "status": "explicit",
+      "evidence_span": "generates a unique key for each session and encodes this key into the audio signal, which is transmitted from the computer to the phone"
+    },
+    {
+      "id": "P3",
+      "text": "Runs entirely in the browser so it is platform agnostic and needs no new hardware for users or data centers",
+      "status": "explicit",
+      "evidence_span": "Because we can run entirely in the browser, that makes us completely platform agnostic. We do not require you to buy any new hardware"
+    },
+    {
+      "id": "P4",
+      "text": "Geofenced identity and access controls let banks allow or block logins by location",
+      "status": "explicit",
+      "evidence_span": "All you have to do is mark the areas you want them to log in from, mark the areas you want to block, and that's it"
+    },
+    {
+      "id": "P5",
+      "text": "No extra hardware and simple implementation yield a superior cost-effective product for financial institutes and enterprises",
+      "status": "explicit",
+      "evidence_span": "Because we require no additional hardware and have a very simple implementation process, we can provide our customers a very superior and cost-effective product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Ultrasonic proximity auth",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Browser platform-agnostic delivery",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Geofenced IAM controls",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Cost-effective enterprise offer",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Uncompromising security with an unbelievable seamless login user experience",
+      "status": "explicit",
+      "evidence_span": "provides uncompromising security and an unbelievable user experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connects the two devices using audio signals"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely platform agnostic"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identity and access management like never before"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "superior and cost-effective product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patent-pending detail folded into ultrasonic tech premise (§4.1(1)). VPN passwordless demo treated as application of same mechanism (§4.1(2)/(5)), not split. $12B IAM market and bank POC treated as framing/traction. Traditional token support mentioned as insufficient baseline, not a separate product module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-968",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:10+02:00"
+  }
+}

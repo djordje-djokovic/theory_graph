@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people in high-inflation emerging markets are unbanked and lack credit, blocking online credit payments",
+      "status": "explicit",
+      "evidence_span": "most of the population in this country is unbanked and also doesn't have access to credit"
+    },
+    {
+      "id": "P2",
+      "text": "Users can pay online on installments in local currency at Ripio merchants and Bitcoin-accepting merchants worldwide",
+      "status": "explicit",
+      "evidence_span": "pay online on installments in local currency in any of our merchants or the hundreds of thousands of merchants that accept Bitcoin payments worldwide"
+    },
+    {
+      "id": "P3",
+      "text": "ID selfie verification, social data, external sources, ML, and fraud prevention build a credit score for underbanked users",
+      "status": "explicit",
+      "evidence_span": "processed by our back end using machine learning techniques, together with the information that the user provided, the social data, also pulling some external sources"
+    },
+    {
+      "id": "P4",
+      "text": "Prior team experience underwriting credit (Dinero Mail, Mercado Libre) enables approving Ripio Credit",
+      "status": "explicit",
+      "evidence_span": "our team has been working on this problem for several years before BitPagos, in many countries like Dinero Mail or Mercado Libre"
+    },
+    {
+      "id": "P5",
+      "text": "Wallet converts to local currency and offers installment options with disclosed interest and totals",
+      "status": "explicit",
+      "evidence_span": "automatically makes the currency conversion to see how many pesos you had to pay"
+    },
+    {
+      "id": "P6",
+      "text": "Underbanked borrowers can repay via bank account or cash at partnered merchant locations (Pago Fácil, Boleto, Oxxo)",
+      "status": "explicit",
+      "evidence_span": "they can use any of the 16,000 merchant locations that we have partnered with, where they can go and pay in cash"
+    },
+    {
+      "id": "P7",
+      "text": "Credit works across Ripio's merchant network and hundreds of thousands of virtual Bitcoin merchants worldwide",
+      "status": "explicit",
+      "evidence_span": "already working on 600 merchants on our network, and it also works with the hundreds of thousands of virtual merchants"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbanked credit access gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Identity and credit underwriting",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Local-currency installment Bitcoin payments",
+      "premise_ids": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Repayment rails and merchant reach",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable unbanked emerging-market consumers to shop online on affordable local-currency credit installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no online shopping, no purchasing Netflix, or buying that video game"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "approve this credit to our user and being able to start paying online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this makes it very convenient for a user to start buying online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D1 retained: unbanked/credit gap is separately revisable from underwriting and repayment rails. Traction counts coded as merchant-reach mechanism not achievement metrics. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

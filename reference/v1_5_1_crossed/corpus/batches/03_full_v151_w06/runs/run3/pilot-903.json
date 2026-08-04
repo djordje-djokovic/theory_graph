@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-903",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Bicycle theft is a huge worldwide problem and today's keyless locks and trackers have not been integrated into one solution",
+      "status": "explicit",
+      "evidence_span": "bike security tech today is not that advanced. There are some keyless locks, and then there are some tracking devices. But they haven't been integrated really"
+    },
+    {
+      "id": "P2",
+      "text": "Lock8 is a keyless smart lock combining alarm, multi-sensor anti-tamper detection, and GPS tracking in one device",
+      "status": "explicit",
+      "evidence_span": "It has to have an alarm. It has to be secure. And it has to be GPS trackable, because we don't know if it might fail eventually. And above all, it has to have a keyless mechanism"
+    },
+    {
+      "id": "P3",
+      "text": "A companion app arms the lock, pushes tamper alerts, shows lock location, and tunes notification/sensitivity settings",
+      "status": "explicit",
+      "evidence_span": "if my thief tries to tamper with it, it switches on the alarm. And I will shortly get a push notification"
+    },
+    {
+      "id": "P4",
+      "text": "Owners can share or rent bikes and locks via the same system, enabling connected mobility and bike-sharing without city infrastructure",
+      "status": "explicit",
+      "evidence_span": "we can share bikes easily with anyone that we want. But not only that, if you want to make money with your bike, you can rent your bike out"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unintegrated bike theft problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Lock8 smart lock and app",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "bike sharing and rental mobility",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cyclists keep bikes safe while unlocking share/rent mobility from the same lock",
+      "status": "explicit",
+      "evidence_span": "you can rent your bike out to whoever you want, and you can rest assured that your bike will be safe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Bicycle theft is a huge problem worldwide"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if your bicycle actually gets stolen, we have a tracker, a GPS tracker"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can offer this and expand in many cities and truly disrupt what bicycle sharing is all about"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Theft-scale stats treated as framing for the unintegrated-lock problem (§4.1.6). Vibration/gyro/temp/light/cable sensors folded as cascade of one smart-lock mechanism (§4.1.7). Share/rent and infrastructure-free bike-sharing split as separately revisable mobility module. Three-domain partition is problem/product/mobility, not a need/product/money triad."
+}

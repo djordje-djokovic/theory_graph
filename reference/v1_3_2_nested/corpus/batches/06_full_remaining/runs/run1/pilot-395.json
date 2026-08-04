@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Low-abundance rare earth and related metals lack a competitive electrochemical purification process that exists for bulk metals like copper and nickel",
+      "status": "explicit",
+      "evidence_span": "for low abundance metals like the rare earth ones that are used in all of the electronics sitting in your pockets or perhaps on your wrists, there is no such competitive process"
+    },
+    {
+      "id": "P2",
+      "text": "Carbon nanotube mesh filters with exceptional conductivity and surface area shrink electrochemical deposition from football-field scale to coffee-cup scale",
+      "status": "explicit",
+      "evidence_span": "give us the ability to shrink a process that used to require the size of a cubic football field down to the size of a coffee cup"
+    },
+    {
+      "id": "P3",
+      "text": "Charging the nanotube mesh precipitates metals from liquid solution and can separately recover bulk versus rare earth elements at high purity from mixed waste",
+      "status": "explicit",
+      "evidence_span": "Our process is able to separate bulk elements from rare earth elements"
+    },
+    {
+      "id": "P4",
+      "text": "Globally needed metals have geographically concentrated, ethically/price-volatile supply that large electronics and EV firms must secure",
+      "status": "explicit",
+      "evidence_span": "while there's a globally distributed need for these materials, the supply of them is focused in a small number of countries"
+    },
+    {
+      "id": "P5",
+      "text": "Short-term recover metals from manufacturing effluent; long-term digest disassembled device components into primary elements for remanufacture",
+      "status": "explicit",
+      "evidence_span": "our short-term goal is to try to improve fabrication efficiencies in manufacture"
+    },
+    {
+      "id": "P6",
+      "text": "Must productize the basement prototype into a coffee-cup unit that plugs into manufacturing streams",
+      "status": "explicit",
+      "evidence_span": "we need to take this to something that actually looks more like a coffee cup that you could plug into that manufacturing stream"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Concentrated metal supply risk",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Nanotube electrochemical recovery",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Manufacturer integration path",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Return control of the metal supply chain to manufacturers via reclaimed metals for new processes and products",
+      "status": "explicit",
+      "evidence_span": "give the electronics manufacturers the ability to put new life into new process from reclaimed metals"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "American innovation not limited by metal supply",
+      "evidence_span": "American innovation isn't limited by supply of metals, but by the imaginations of the innovators"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "The process that we use relies on delivering a charge across the mesh of carbon nanotube filters"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "returns control of the metal supply chain to the manufacturer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reclaim the individual metals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve fabrication efficiencies in manufacture"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Vision of imagination-limited innovation recorded as secondary_value, not premise (v1.3.2 #4). Cobalt demo detail folded into recovery mechanism. Apple robot anecdote is problem framing, not own traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-395",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:35+02:00"
+  }
+}

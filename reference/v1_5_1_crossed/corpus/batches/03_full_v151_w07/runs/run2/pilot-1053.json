@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1053",
+    "coder_session_id": "session_02",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Businesses run on painful reply-all email threads and need email made more productive, collaborative, and social rather than replaced",
+      "status": "explicit",
+      "evidence_span": "Businesses almost all run on these kind of reply all threads. And it's totally stupid"
+    },
+    {
+      "id": "P2",
+      "text": "A Loop is a named email-addressable smart list created via email and backed by SaaS without IT installs or new behavior",
+      "status": "explicit",
+      "evidence_span": "The loop is a smart mailing list easy to search, easy to share, easy to create"
+    },
+    {
+      "id": "P3",
+      "text": "Web UI searches threads and attachments and suggests related loops to follow with digest or web-only options",
+      "status": "explicit",
+      "evidence_span": "You know, web interface has all the threads, all the content, all the attachments. It has great search"
+    },
+    {
+      "id": "P4",
+      "text": "Open loops and footer/partner/website invites create email-native virality that supports freemium",
+      "status": "explicit",
+      "evidence_span": "email lists are just intrinsically viral"
+    },
+    {
+      "id": "P5",
+      "text": "Customers pay for customization, administration, and integrations such as Google Apps, Dropbox, and Salesforce",
+      "status": "explicit",
+      "evidence_span": "customers have told us they'll pay for customization"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken workplace email",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "email-native Loop product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "freemium paid features",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Workplace email becomes more productive, collaborative, and social without forcing users off email",
+      "status": "explicit",
+      "evidence_span": "make email more productive, so you waste less time in it, more collaborative, and more social"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make email more productive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't ask for behavior changes, because it's just email"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "freemium model really easy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-CTA (truncated=true). Reply-all pain folded as one problem (§4.1.6). Create-via-email, search, suggestions, follow/digest, and virality folded as cascade of email-native Loop mechanism (§4.1.7). Paid customization/admin/integrations as commercial package. Team/investor bio excluded. Anti-template: problem, product, and freemium packaging separately revisable."
+}

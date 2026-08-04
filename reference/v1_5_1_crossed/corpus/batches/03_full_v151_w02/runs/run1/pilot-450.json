@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-450",
+    "coder_session_id": "session_05",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most investors cannot code algorithmic defenses against news/tweet-driven market moves even though markets are machine-led",
+      "status": "explicit",
+      "evidence_span": "only 7 per cent of our world can code. But 85 per cent of our market is led by machines"
+    },
+    {
+      "id": "P2",
+      "text": "Easy-to-use plain-English quantitative tools let non-coding investors create trading strategies with bespoke buy/sell rules across categories like news and Twitter",
+      "status": "explicit",
+      "evidence_span": "providing easy-to-use quantitative tools for everyday non-coding investors"
+    },
+    {
+      "id": "P3",
+      "text": "In-house backtesting on a Turing-complete proprietary scripting language lets users test strategies before going live",
+      "status": "explicit",
+      "evidence_span": "StratiX allows users to backtest before they go forth with a strategy"
+    },
+    {
+      "id": "P4",
+      "text": "Broker-agnostic platform supports automation of strategies and protection mechanisms for younger users",
+      "status": "explicit",
+      "evidence_span": "StratiX is actually broker diagnostic, meaning you can bring your own broker"
+    },
+    {
+      "id": "P5",
+      "text": "Tiered plans from free to day-trader and tailored packages for larger accounts",
+      "status": "explicit",
+      "evidence_span": "Our plans essentially start from free all the way to day trader with other materials and tailored packages for larger accounts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Non-coders left behind in algo markets",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Create, backtest, and automate strategies",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Tiered plan monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Democratize algorithmic trading so everyday investors can reclaim alpha",
+      "status": "explicit",
+      "evidence_span": "StratiX is democratizing algorithmic trading"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everyone in this space is being left behind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "creating a strategy, backtesting your strategy, and then automation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plans essentially start from free all the way to day trader"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-argument (Trump tweet example). Three process phases treated as create/backtest/automate capabilities; broker-agnostic + protections folded into automation/platform premise. Waitlist traction excluded. ASR 'broker diagnostic' left in evidence_span verbatim."
+}

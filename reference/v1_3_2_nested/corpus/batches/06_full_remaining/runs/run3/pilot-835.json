@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-835",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:02+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Camera integrations fail on networking, brand fragmentation, and per-customer rollout effort",
+      "status": "explicit",
+      "evidence_span": "local network issues. Cameras, like any local network device, will misbehave"
+    },
+    {
+      "id": "P2",
+      "text": "EverCam's hosted developer API abstracts those issues so camera software can be built quickly",
+      "status": "explicit",
+      "evidence_span": "one developer, one month, and they have a successful, working, deployed solution"
+    },
+    {
+      "id": "P3",
+      "text": "End-user connection support, any-camera guarantee, and app-store-like distribution are parts of that platform offering",
+      "status": "explicit",
+      "evidence_span": "removing all of those problems from the desk of the software developer"
+    },
+    {
+      "id": "P4",
+      "text": "Per-camera recurring fees monetize deployed solutions",
+      "status": "explicit",
+      "evidence_span": "recurring fee on a per-camera basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Developer camera API",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Per-camera recurring model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Programmable cameras enabling live-image applications at scale",
+      "status": "explicit",
+      "evidence_span": "make these cameras programmable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make these cameras programmable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recurring fee on a per-camera basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Merged problem into the platform domain because the pitch treats EverCam as the direct answer to those three issues rather than a separately learnable market module. Singleton D2: pricing is independently revisable."
+}

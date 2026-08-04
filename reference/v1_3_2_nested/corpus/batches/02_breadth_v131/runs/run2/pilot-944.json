@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-944",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:49:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Improving sport technique requires measuring small distances and multi-point motion that consumer GPS wearables cannot resolve",
+      "status": "explicit",
+      "evidence_span": "GPS is not precise enough. GPS has got an inaccuracy of 15 feet, if you're lucky"
+    },
+    {
+      "id": "P2",
+      "text": "QOSP devices on multiple body points stream strength, angle, acceleration, and inch-accurate position in real time",
+      "status": "explicit",
+      "evidence_span": "You can see the angle with which we hit the ball. You can see the strength with which we hit the ball. And you can see also our maximum acceleration on the field"
+    },
+    {
+      "id": "P3",
+      "text": "Core positioning analyzes satellite signals with differential GNSS via devices plus an access point",
+      "status": "explicit",
+      "evidence_span": "Signals are received by the QOSP devices and the QOSP access point, which fuses the motion readings and corrects the satellite signal using the technique called differential GNSS positioning"
+    },
+    {
+      "id": "P4",
+      "text": "Platform APIs support gaming, drones, and animation, while go-to-market focuses on team sports lacking tactic/injury/scouting tools",
+      "status": "explicit",
+      "evidence_span": "we are going to keep a razor sharp focus on the team sport market"
+    },
+    {
+      "id": "P5",
+      "text": "Sensor-network and indoor/outdoor positioning patents are part of the protected tracking technology advantage",
+      "status": "explicit",
+      "evidence_span": "Beastar owns several patents on sensor networks, on our indoor and outdoor positioning system. And therefore, we have a distinctive competitive advantage"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Precision needs in sport improvement",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "QOSP differential positioning platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Team-sport platform focus",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Professional-grade inch-accurate motion tracking for individuals and teams",
+      "status": "explicit",
+      "evidence_span": "inch-accurate motion tracker for individuals and teams"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "real difference between QOSP and everything else in its inch-accurate position technology, which is VSTAR patented"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Tracking your development is the answer for those who want to achieve a goal"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inch-accurate positioning response"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no technological solution for teams"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.1: patents stay with mechanism (P5 in product domain). API breadth merged with team-sport focus as one commercial/platform-scope premise."
+}

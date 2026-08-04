@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "coder_session_id": "session_06",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online and retail furniture shopping is risky because buyers cannot see how items will look in their own home",
+      "status": "explicit",
+      "evidence_span": "hard to see how something that you choose online or even in a retail store will look in your own home"
+    },
+    {
+      "id": "P2",
+      "text": "Existing 3D home-modeling tools are too difficult, expensive, or slow for homeowners",
+      "status": "explicit",
+      "evidence_span": "current solutions available are just too difficult for homeowners. They're too expensive, or they just take a long time"
+    },
+    {
+      "id": "P3",
+      "text": "A smartphone app captures wall photos plus IMU data so anyone can create a 3D model of their home in minutes",
+      "status": "explicit",
+      "evidence_span": "allows anyone to create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P4",
+      "text": "Users place catalog and favorite furniture in the model, measure, browse design boards, and collaborate with designers via links and sticky notes",
+      "status": "explicit",
+      "evidence_span": "takes a sofa from the Crate and Barrel catalog and puts it in her living room"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud GPU reconstruction from multi-image point clouds yields a WebGL geometrical and photorealistic room model quickly",
+      "status": "explicit",
+      "evidence_span": "able to do this in a few minutes using GPU compute power on the cloud"
+    },
+    {
+      "id": "P6",
+      "text": "Connecting retailers to homeowners via the model increases sales, upsells, reach, and lowers returns",
+      "status": "explicit",
+      "evidence_span": "connect retailers with homeowners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "homeowner furniture visualization need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "smartphone 3D capture and room shopping",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "retailer-homeowner marketplace connection",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Homeowners shop for furniture with low risk by seeing pieces in a 3D model of their own home",
+      "status": "explicit",
+      "evidence_span": "disrupt the way we shop for furniture"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers make more money through better experience, upsell, reach, and fewer returns",
+      "evidence_span": "our experience will make them more money"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "breakthrough in technology and 3D model creation"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your home becomes the ultimate showroom"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "providing the ideal shopping experience for homeowners"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Difficult/expensive/slow competitor pains folded as one pain-bundle in P2. Catalog place/measure/design-board/collaborate features folded into P4 as one room-shopping surface. Photorealism treated as performance detail of P5 reconstruction. Named retailer deal treated as traction evidence for P6 mechanism, not a separate premise. Anti-template note: D1/D2/D3 resemble need/product/channel but transcript separately revises visualization problem, capture+shop product, and retailer connection economics."
+}

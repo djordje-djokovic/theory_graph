@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-522",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Biomass cooking pollution kills and sickens; many homes also lack electricity",
+      "status": "explicit",
+      "evidence_span": "30 million households in Nigeria use this biomass to cook. And this causes a lot of indoor air pollution"
+    },
+    {
+      "id": "P2",
+      "text": "Clean cook stove is affordable, smokeless, faster, and generates 50W from cooking heat",
+      "status": "explicit",
+      "evidence_span": "self-generates 50 watts of electricity"
+    },
+    {
+      "id": "P3",
+      "text": "Waste-based pellets are ~80% cheaper than charcoal and smokeless",
+      "status": "explicit",
+      "evidence_span": "It's 80% cheaper than charcoal. So users save money using our product"
+    },
+    {
+      "id": "P4",
+      "text": "Sell through cooperatives/MFIs and local fuel vendors with after-sales support and guarantee",
+      "status": "explicit",
+      "evidence_span": "Our revenue model is simple. We sell our products to these target markets and also we provide after-sales support services"
+    },
+    {
+      "id": "P5",
+      "text": "Only competitor in their space that generates electricity, at a lower stove price",
+      "status": "explicit",
+      "evidence_span": "we are the only one that generates electricity within our competitive space"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cooking and power poverty",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Stove-pellet offering",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Channel and service model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clean cook solution that protects health while cooking",
+      "status": "explicit",
+      "evidence_span": "clean cook solution like PowerStove is the solution to health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save money vs charcoal while removing smoke",
+      "evidence_span": "users save money using our product. And also it burns without smoke"
+    },
+    {
+      "text": "Household electricity generation while cooking",
+      "evidence_span": "start generating electricity"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "indoor air pollution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smokeless"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "after-sales support services"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Electricity-access statistic folded into combined problem P1. Competitive uniqueness kept inside product domain. Financing prize and headcount ask excluded."
+}

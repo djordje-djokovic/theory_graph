@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current illness detection happens after symptoms via slow manual PCR community testing",
+      "status": "explicit",
+      "evidence_span": "We are then doing it manually by doing PCR tests"
+    },
+    {
+      "id": "P2",
+      "text": "Sewage surveillance detects one sick person in 10,000 and works for symptomatic and asymptomatic infection",
+      "status": "explicit",
+      "evidence_span": "you can detect one sick person in 10,000 people"
+    },
+    {
+      "id": "P3",
+      "text": "Manual sewer-to-lab workflows take up to a week and cost up to $1,000, arriving too late",
+      "status": "explicit",
+      "evidence_span": "when an organization like the CDC gets their data, it's already too late and outbreaks already happened"
+    },
+    {
+      "id": "P4",
+      "text": "Automated multi-stage hardware keeps the dirtiest filtrate, extracts RNA, and runs continuous collective qPCR",
+      "status": "explicit",
+      "evidence_span": "We're keeping the dirtiest sample. We filter hundreds of liters of water each and every day"
+    },
+    {
+      "id": "P5",
+      "text": "Installable building systems detect multiple pathogens and push same-day dashboard risk insights to customers",
+      "status": "explicit",
+      "evidence_span": "Our product can detect up to 12 pathogens"
+    },
+    {
+      "id": "P6",
+      "text": "Workplaces and nursing homes can act before symptoms (e.g., norovirus two days early)",
+      "status": "explicit",
+      "evidence_span": "For norovirus, you can detect symptoms two days, illnesses two days before symptoms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Detection lag problem",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sewage surveillance advantage",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Automated hardware and dashboard",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect illnesses early across whole buildings without testing entire communities, enabling outbreak prevention",
+      "status": "explicit",
+      "evidence_span": "providing a better way without testing whole communities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's already too late and outbreaks already happened"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detect illnesses right from the beginning of infection"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prevent outbreak happening"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three-stage hardware details kept as one automation premise (§4.1(5)). 12 pathogens treated as quantitative detail of the product capability. Disease history slides treated as framing, not premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-190",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:03+02:00"
+  }
+}

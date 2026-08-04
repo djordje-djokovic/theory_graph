@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Illnesses move silently for weeks because people are asymptomatic and detection is manual PCR after symptoms",
+      "status": "explicit",
+      "evidence_span": "it takes weeks to detect illnesses, because many people don't even show symptoms"
+    },
+    {
+      "id": "P2",
+      "text": "Sewage surveillance can measure a whole community with one test and detect infection early including asymptomatic cases",
+      "status": "explicit",
+      "evidence_span": "You measure a whole community with a single test. Even better, you can detect illnesses right from the beginning of infection, if they're symptomatic, asymptomatic, or pre-symptomatic"
+    },
+    {
+      "id": "P3",
+      "text": "Manual sewage sampling is too slow and costly, so data arrives too late for outbreak response",
+      "status": "explicit",
+      "evidence_span": "A person has to take a sample from the sewer, drive it to the lab, then analyze it and send the data back. This means the data could take up to a week and cost up to $1,000"
+    },
+    {
+      "id": "P4",
+      "text": "Plug-and-play automated hardware and software can be installed into any building to run end-to-end sewage surveillance",
+      "status": "explicit",
+      "evidence_span": "Untap Health is providing plug-and-play automated end-to-end hardware and software solution that can be installed into any and every building"
+    },
+    {
+      "id": "P5",
+      "text": "Multi-stage filtration, RNA extraction, and continuous qPCR automate the gold-standard lab workflow and raise detection limits",
+      "status": "explicit",
+      "evidence_span": "Our hardware is a multi-stage technology automating the gold standard lab workflow for sewage surveillance"
+    },
+    {
+      "id": "P6",
+      "text": "Same-day pathogen risk dashboards give care homes, offices, and factories actionable outbreak prevention insights",
+      "status": "explicit",
+      "evidence_span": "This data is sent directly to customers that day. This means that data can go directly to organizations that need it most. Care homes, offices, factories, and so much more"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Silent undetected disease",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sewage surveillance science",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Automated building hardware",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Same-day customer dashboard",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect illnesses early across whole buildings without testing entire communities, enabling outbreak prevention",
+      "status": "explicit",
+      "evidence_span": "providing a better way without testing whole communities"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Aggregated site data can guide preventative healthcare, insurance, and public health policy",
+      "evidence_span": "Those data insights can be used to guide preventative healthcare solutions, insurance policy, public health policy, and so, so much more"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "illnesses are moving silently amongst us"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You measure a whole community with a single test"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automating the gold standard lab workflow for sewage surveillance"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ways to prevent outbreak happening"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patents pending folded into hardware premise (§4.1(1)/(5)). Pathogen feature list and future use cases (cruise ships, cancers) folded into capability, not split. UK/US market dollars and 'trillion dollar' opportunity treated as framing/vision (§4.1(4)). Live workplace detection mentioned as traction evidence of the mechanism, not coded separately.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-190",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:03+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-127",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:18:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "E-commerce single-use cardboard and polymer packaging creates a sustainability problem consumers and retailers want solved",
+      "status": "explicit",
+      "evidence_span": "replacing all single-use packaging"
+    },
+    {
+      "id": "P2",
+      "text": "Direct customers are retailers who get a fleet of reusable shippers plus software access for consumer orders",
+      "status": "explicit",
+      "evidence_span": "our direct customer is the retailers themselves"
+    },
+    {
+      "id": "P3",
+      "text": "Self-designed reusable shippers use upcycled billboard vinyl that is lightweight, durable, and waterproof",
+      "status": "explicit",
+      "evidence_span": "first fleet of shippers that we're working with actually use upcycled materials, so billboard vinyls"
+    },
+    {
+      "id": "P4",
+      "text": "Larger shared networks route shippers to the closest place of need rather than always back to the original retailer, improving efficiency",
+      "status": "explicit",
+      "evidence_span": "allows us to send shippers to the closest place of need, as opposed to back to the original retailer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "single-use packaging waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "reusable shippers and materials",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retailer fleet software and network",
+      "premise_ids": ["P2", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More sustainable and efficient supply-chain shipping by replacing single-use packaging with reusable shippers",
+      "status": "explicit",
+      "evidence_span": "make the supply chain system more sustainable and efficient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "consumers are fed up with it and looking for solutions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "diverting it from the landfill"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the more people that buy into the program, the better and more efficient it becomes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Interview/Q&A format; only founder answers coded; interviewer prompts excluded. Transcript starts mid-sentence (truncated=true). Named retailer traction folded as evidence, not premises. Anti-template: need / shipper design / retailer network separately revisable."
+}

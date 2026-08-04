@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-446",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "GDPR and related regulation ended the era of unrestricted corporate data sharing",
+      "status": "explicit",
+      "evidence_span": "when GDPR came into effect last year, that era ended forever"
+    },
+    {
+      "id": "P2",
+      "text": "Companies share data with far more vendors than they realize and lack easy ways to track flows or meet privacy obligations",
+      "status": "explicit",
+      "evidence_span": "there is no easy way to track what's happening with all of that data, and there's no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "id": "P3",
+      "text": "A privacy platform scores vendors from a proprietary dataset and surfaces lawsuits, policies, and risk for compliance decisions",
+      "status": "explicit",
+      "evidence_span": "Utilizing our proprietary data set of 7,000 different vendors, Osano provides a 360-degree view of each vendor's privacy practices"
+    },
+    {
+      "id": "P4",
+      "text": "A managed cookie-consent solution with one line of code makes websites compliant across many countries' laws",
+      "status": "explicit",
+      "evidence_span": "fully managed cookie consent solution, so that with one line of code, websites can immediately become compliant with the laws of 40 different countries"
+    },
+    {
+      "id": "P5",
+      "text": "A developer API lets builders embed data privacy into applications and workflows",
+      "status": "explicit",
+      "evidence_span": "developer API so that developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "id": "P6",
+      "text": "The offering targets the majority of companies underserved by expensive, hard-to-use point solutions",
+      "status": "explicit",
+      "evidence_span": "targeting the 90 percent of companies who are not served by the expensive point solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Privacy compliance pressure",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Vendor risk and consent platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Underserved mid-market wedge",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies can easily identify vendor privacy risk and comply with privacy laws",
+      "status": "explicit",
+      "evidence_span": "makes it easy for companies to identify which vendors are best to work with, to comply with laws like GDPR"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "comply with their privacy obligations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Osano makes it easy, one place to see your SaaS vendors, their privacy risks and their ratings"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not served by the expensive point solutions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Lawsuit browsing, policy tracking, and consent dialog language folded into vendor/consent platform premises (§4.1(5)); cookie consent kept distinct from vendor scoring because it is framed as a separate website-compliance mechanism. Singleton D3: go-to-market wedge vs OneTrust is independently revisable. Free-user counts and consent volume excluded as traction; team bios and discount CTA excluded. Market-spend forecast treated as framing, not a premise."
+}

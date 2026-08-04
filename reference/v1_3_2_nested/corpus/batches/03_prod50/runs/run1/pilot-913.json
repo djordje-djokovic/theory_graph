@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise apps sit behind firewalls so personal tablets cannot get work done; MDM locks the whole device and needs more data-center boxes",
+      "status": "explicit",
+      "evidence_span": "people working within traditional enterprises cannot get their work done today on those devices because the apps they need, like SharePoint, SAP, and Oracle, are all secured behind corporate firewalls"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot is the one place IT manages while the rest of the device stays personal",
+      "status": "explicit",
+      "evidence_span": "the one place where IT manages and the rest of the device remains personal"
+    },
+    {
+      "id": "P3",
+      "text": "Uses existing authentication and integrates with top SSL VPN providers covering most enterprise users",
+      "status": "explicit",
+      "evidence_span": "We've done the integration to the top four SSL VPN providers in Cisco, Juniper, Dell, and F5"
+    },
+    {
+      "id": "P4",
+      "text": "Virtual file system with per-document encryption and WorkSpot-only remote wipe keeps data safe offline",
+      "status": "explicit",
+      "evidence_span": "Each document is actually encrypted with its own security key so everything stays safe"
+    },
+    {
+      "id": "P5",
+      "text": "Patent-pending mobile virtualization delivers secure access/control with a seamless user experience",
+      "status": "explicit",
+      "evidence_span": "patent pending mobile virtualization technology"
+    },
+    {
+      "id": "P6",
+      "text": "Collects end-user work activity data powering Insights and Events for UX, problem detection, audit, and compliance",
+      "status": "explicit",
+      "evidence_span": "We also collect complete end user activity data on the device"
+    },
+    {
+      "id": "P7",
+      "text": "Access and control are free; revenue comes from charging for end-user activity data",
+      "status": "explicit",
+      "evidence_span": "giving access and control for free. What we do is change the revenue equation to charge for end user activity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "BYOD access failure of MDM",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Secure personal-device work container",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Activity-data monetization",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employees get seamless work on personal devices while IT keeps control without locking the whole device",
+      "status": "explicit",
+      "evidence_span": "the one place for work with the rest of the device remaining personal"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "defeating the whole purpose for BYOD"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "very personal, seamless, and immersive user experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D1: MDM/firewall failure is the separately stated problem module. Early customer list excluded as traction. Team prior VPN/VDI experience excluded as biography.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

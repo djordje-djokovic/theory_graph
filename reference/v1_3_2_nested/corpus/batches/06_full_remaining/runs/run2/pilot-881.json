@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-881",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:03+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Patients must take the right pill at the right time; non-adherence is extremely costly",
+      "status": "explicit",
+      "evidence_span": "patients taking the right pill at the right time"
+    },
+    {
+      "id": "P2",
+      "text": "Passive bottle sensing of opens and medication removed is compared to the dosage schedule",
+      "status": "explicit",
+      "evidence_span": "All data is collected and analyzed in a completely passive manner"
+    },
+    {
+      "id": "P3",
+      "text": "Lights, chimes, and remote alerts intervene when patients miss doses",
+      "status": "explicit",
+      "evidence_span": "during the optimal dosage time, the time when a user should take their pills, the bottle glows blue"
+    },
+    {
+      "id": "P4",
+      "text": "Cellular module and simple bottle UX remove setup hurdles for non-adherent patients",
+      "status": "explicit",
+      "evidence_span": "You don't have to download any apps. You can use this with a landline or with a cell phone"
+    },
+    {
+      "id": "P5",
+      "text": "Why-did-you-miss prompts plus partner API enable real-time clinical follow-up",
+      "status": "explicit",
+      "evidence_span": "we also ask them why they didn't take their meds"
+    },
+    {
+      "id": "P6",
+      "text": "Pharma is the customer; specialty pharmacies give patients free bottles for high-cost meds",
+      "status": "explicit",
+      "evidence_span": "pharma is our customer. Patients are our users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Smart bottle adherence loop",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Specialty pharma distribution",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve patients' lives by raising adherence over the status quo",
+      "status": "explicit",
+      "evidence_span": "we've built a device that will improve the lives of patients"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Increase pharma refills and revenues",
+      "evidence_span": "increase adherence. refills, and ultimately revenues for the pharma company"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve the lives of patients"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pharma is our customer. Patients are our users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Product features kept in one domain as one learnable adherence system; commercial customer split is independently revisable. RCT traction excluded."
+}

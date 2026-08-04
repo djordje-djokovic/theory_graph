@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1068",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Busy parents lack ready access to kids' critical medical information when caregivers or emergencies demand it",
+      "status": "explicit",
+      "evidence_span": "how many of you would know what's the last immunization your kid had if you were asked in the emergency room?"
+    },
+    {
+      "id": "P2",
+      "text": "A new law lets patients own medical records and requires doctors to provide them after a proper release",
+      "status": "explicit",
+      "evidence_span": "a law passed which says you now own your medical records. And once a proper release is signed, a doctor has to provide it to you in a timely fashion"
+    },
+    {
+      "id": "P3",
+      "text": "Parent-focused subscription service delivers immunizations, growth charts, and milestones via secure web and mobile app",
+      "status": "explicit",
+      "evidence_span": "a subscription service that's going to provide to you all this information available from a secure website and a mobile app"
+    },
+    {
+      "id": "P4",
+      "text": "Electronic release triggers faxed records that the firm ingests and customer service uploads, making it effortless for the parent",
+      "status": "explicit",
+      "evidence_span": "We in turn take that release, send it to your doctor and your doctor will now use a new technology we like to call the fax"
+    },
+    {
+      "id": "P5",
+      "text": "Service is HIPAA compliant with extra security layers beyond typical PHRs",
+      "status": "explicit",
+      "evidence_span": "we are HIPAA compliant. And actually, we've added extra special layers of security"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription priced about a latte a month, with co-marketing via baby sites where moms coalesce",
+      "status": "explicit",
+      "evidence_span": "we're a subscription-based service. So after a set of fee, the cost will be roughly a cost of latte a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent access to kids' records",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Effortless parent-centric record service",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and baby-site distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Kids' critical medical information available in your pocket anytime from anywhere",
+      "status": "explicit",
+      "evidence_span": "access to all your kid's critical medical information available to you in your pocket, accessible anytime, from anywhere"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Organize kids' health for busy, frazzled parents",
+      "evidence_span": "organize the kids' health, one busy, frazzled parent at a time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We intend to take full use of this new law"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Imagine having access to all your kid's critical medical information"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The key is it's effortless for the customer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription-based service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Competitor-flaw contrast coded as support for effortless parent-centric design inside D2 rather than separate premises. Milestone camera/share and print/email immunization features folded into parent-focused product (v1.3.2 §4.1(5)). Expansion to seniors treated as vision, not premise. First-100 free promo excluded as financing/promo ask adjacent."
+}

@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Encryption normally destroys searchability so firms leave source code and records exposed",
+      "status": "explicit",
+      "evidence_span": "why was nobody encrypting their source code? Because encryption makes your data completely unsearchable and unusable"
+    },
+    {
+      "id": "P2",
+      "text": "Practical searchable encryption enables Google-speed search on ciphertext without revealing keys",
+      "status": "explicit",
+      "evidence_span": "world's first practical searchable encryption technology, Overnest"
+    },
+    {
+      "id": "P3",
+      "text": "Git Zero encrypts repos and history, builds an encrypted index, and keeps standard Git setup",
+      "status": "explicit",
+      "evidence_span": "GitZero is easy to set up and uses the same Git workflow that you're already used to"
+    },
+    {
+      "id": "P4",
+      "text": "Users password-protect keys so even the host cannot use them",
+      "status": "explicit",
+      "evidence_span": "password protecting it, so that nobody, not even Git Zero, can use it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsearchable encryption barrier",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Git Zero searchable hosting",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cloud security with on-premise-grade privacy for searchable source code",
+      "status": "explicit",
+      "evidence_span": "cloud, security, and on-premise privacy can coexist"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "choice between convenience and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encrypted search on an encrypted source code repository"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "AES-256 detail folded into searchable-encryption premise. Breach statistics treated as problem evidence, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-685",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

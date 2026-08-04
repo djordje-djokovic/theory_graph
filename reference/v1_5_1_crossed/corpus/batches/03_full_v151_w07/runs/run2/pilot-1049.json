@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1049",
+    "coder_session_id": "session_04",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:17:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing apps find single venues or events but none compose places and events that go together for an occasion",
+      "status": "explicit",
+      "evidence_span": "there's not a single product on the market today that can tell you what places and what events go together for your occasion"
+    },
+    {
+      "id": "P2",
+      "text": "Planning starts from mood, companions, optional focal events, and fresh local review snippets, including Facebook-personalized itineraries",
+      "status": "explicit",
+      "evidence_span": "most people, when planning any social occasion, think of two things. What's my mood and who's coming with me?"
+    },
+    {
+      "id": "P3",
+      "text": "Algorithms classify, rank, and compose live web places/events into itineraries without hand curation",
+      "status": "explicit",
+      "evidence_span": "Everything's algorithmically generated. Not a single thing is hand curated"
+    },
+    {
+      "id": "P4",
+      "text": "Plans include review snippets, directions, and booking links (OpenTable, StubHub, etc.) and can be customized",
+      "status": "explicit",
+      "evidence_span": "You even have relevant information about each place, and you can get directions from place to place to place here, as well as booking links out to OpenTable"
+    },
+    {
+      "id": "P5",
+      "text": "Friends can collaboratively edit plans via Facebook notifications in real time",
+      "status": "explicit",
+      "evidence_span": "They all get a Facebook notification saying I've asked them for some advice on my WeOtta plan"
+    },
+    {
+      "id": "P6",
+      "text": "Finished plans can be turned into Facebook events with places and booking links in seconds",
+      "status": "explicit",
+      "evidence_span": "making a Facebook event on WIATA is that it's even easier than making a Facebook event on Facebook site itself"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "occasion planning gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "algorithmic itinerary generation",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "social plan collaboration",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Personal-concierge style answers for what to do tonight with hassle-free composed plans",
+      "status": "explicit",
+      "evidence_span": "solves the problem of what to do tonight. It also takes all the hassle out of planning it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "WIATA is a lot like having your own personal concierge"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "composing them into itineraries to fit my needs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're going to do this plan together tonight"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Mood/companions/event/review interview findings folded as one planning-input package for the occasion problem (§4.1.6–7). Algorithmic compose+rank kept as core product mechanism; booking/review/directions as cascade of plan utility. Friend collab and Facebook-event export split as social GTM/collaboration module. Stage banter not coded."
+}

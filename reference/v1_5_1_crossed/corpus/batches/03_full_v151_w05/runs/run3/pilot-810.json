@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "coder_session_id": "session_03",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Smart lighting adoption fails because wired switches are hard/expensive to install and smart bulbs break normal switch use",
+      "status": "explicit",
+      "evidence_span": "Why is it that a product meant to make our lives simple and better is such a pain to deal with right out of the box?"
+    },
+    {
+      "id": "P2",
+      "text": "Switchmate snaps magnetically onto standard light-switch screws and mechanically flips the switch for phone control without rewiring",
+      "status": "explicit",
+      "evidence_span": "It uses two magnets on the back that snap right to the screws on your standard light switch. And it mechanically flips the switch up and down"
+    },
+    {
+      "id": "P3",
+      "text": "Hundreds of millions of U.S. homes including rentals and condos have switches that can be automated without in-wall install",
+      "status": "explicit",
+      "evidence_span": "There's about 120 million homes in the United States alone, a third of them being rentals and condos"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market moves from crowdfunding pre-orders to online retail then brick-and-mortar, with an experienced manufacturing partner",
+      "status": "explicit",
+      "evidence_span": "Next month in February, we're planning to launch a pre-order campaign. We're also working with a manufacturing partner that has experience building multiple hardware products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "smart lighting friction and addressable switches",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "magnetic snap-on switch product",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "crowdfunding retail manufacturing path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple smart-home lighting control anyone can install without electrician pain",
+      "status": "explicit",
+      "evidence_span": "we've developed a product that makes smart lighting extremely simple without dealing with any of these issues"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the smart home simple"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can install smart lighting like that, and you're done"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "By the end of this year, we hope to deliver to online retail, such as Amazon, and through our own website"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wired-switch and smart-bulb failure modes folded as one smart-lighting pain set (v1.5.1 §4.1.6). Vacation timers, approach detection, and manual still-usable switch folded as use cascade of the snap-on actuator (§4.1.7). Optional hub/future vents treated as roadmap framing. Market-size and rental constraint kept with demand. Anti-template: problem/market, product, and GTM/manufacturing separately revisable."
+}

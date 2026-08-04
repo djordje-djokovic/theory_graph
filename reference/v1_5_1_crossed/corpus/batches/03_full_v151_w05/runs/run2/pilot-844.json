@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-844",
+    "coder_session_id": "session_04",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Offerboard's fundability score compares a company's data to past successful and unsuccessful capital raises and tells CEOs how to improve the score",
+      "status": "explicit",
+      "evidence_span": "This is a score that looks at a company's data and compares it with the data of companies that have successfully and unsuccessfully raised capital in the past"
+    },
+    {
+      "id": "P2",
+      "text": "The score is built on the Australian Small Scale Offering Board dataset plus layered US and global public/private databases with a specialized quant/banking team",
+      "status": "explicit",
+      "evidence_span": "we took the largest data set of small private offerings in the world, which is the Australian Small Scale Offering Board's data set"
+    },
+    {
+      "id": "P3",
+      "text": "Issuers/investors sign up free; Offerboard takes 2% success fee on platform transactions via a broker-dealer, plus 5% if engaged as full-service investment bank",
+      "status": "explicit",
+      "evidence_span": "For any deals that transact on the platform, we take a 2% success fee"
+    },
+    {
+      "id": "P4",
+      "text": "Global deal inventory comes through partnerships with platforms, deal sourcers, and brokers across countries",
+      "status": "explicit",
+      "evidence_span": "We've made partnerships with global platforms, deal sourcers, and brokers to bring in deals from multiple countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fundability score product",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "success-fee marketplace model",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "global deal sourcing partnerships",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies improve likelihood of raising private capital and connect with investors on the platform",
+      "status": "inferred",
+      "evidence_span": "provides the CEO information about what they can do to improve that score"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it'll tell you the ways that you can actually improve your fundability as a company"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For investors or issuers to sign up on the site, it's free"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have a global inventory of deals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript starts mid-pitch and ends mid-sentence (truncated=true). Listing volume and named investors treated as traction. Score demo features folded into one fundability-score mechanism; underlying datasets kept as enabling package of that score (§4.1.7–8). Jobs Act market-size framing excluded. Anti-template noted for score/fees/sourcing partition."
+}

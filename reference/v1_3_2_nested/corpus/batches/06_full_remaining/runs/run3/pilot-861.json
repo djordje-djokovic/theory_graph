@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Meaningful health metrics for users and loved ones are hard to capture today",
+      "status": "explicit",
+      "evidence_span": "But how much do you really know about measurements that truly matter?"
+    },
+    {
+      "id": "P2",
+      "text": "Nine-sensor Dyno captures many health metrics including cuffless BP in 60 seconds and syncs to mobile or cradle",
+      "status": "explicit",
+      "evidence_span": "It's nine integrated sensors and analytics. It's able to track 33 different health metrics"
+    },
+    {
+      "id": "P3",
+      "text": "Aging-care and other care settings benefit when analytics flag abnormalities early",
+      "status": "explicit",
+      "evidence_span": "Having the ability to track their health has dramatic implication on the quality of the care they're going to receive"
+    },
+    {
+      "id": "P4",
+      "text": "States/Medicare remote monitoring and hospital readmission pressure expand paid use cases",
+      "status": "explicit",
+      "evidence_span": "There are now 17 states that pay for remote monitoring. And the Medicare is about to join the party as well"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue from subscriptions, OEM/licensing, and later data mining",
+      "status": "explicit",
+      "evidence_span": "How do we make money? Through subscription base, OEM and licensing revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer health awareness gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dyno sensing and alerts",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Reimbursement and monetization",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower users and care organizations with rapid health metrics for preventive action",
+      "status": "explicit",
+      "evidence_span": "empowering you to take control of your health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Improve quality of care for the growing aging population",
+      "evidence_span": "dramatic implication on the quality of the care they're going to receive"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "measurements that truly matter"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "meaningful use case of this technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Preventing readmission within 30 days is a big focus of hospitals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Need/product/money triad justified: reimbursement/OEM path revisable without changing sensor stack; awareness gap is market assumption. Feature laundry list not split (v1.3.2 #5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-861",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:10+02:00"
+  }
+}

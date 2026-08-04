@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-601",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-volume hiring with keyword/prestige-based evaluation overlooks high-potential candidates and produces false positives across diverse backgrounds",
+      "status": "explicit",
+      "evidence_span": "evaluations today are based on criteria such as well-known schools or well-known companies. They favor prestige over potential"
+    },
+    {
+      "id": "P2",
+      "text": "Deep learning qualifies experiences, projects, education, and transitions on resumes, including hidden correlations traditional keyword systems miss",
+      "status": "explicit",
+      "evidence_span": "Our unique deep learning technology is able to qualify every experience project, education, or transition people can write down in their resumes"
+    },
+    {
+      "id": "P3",
+      "text": "The system assesses technical and non-technical jobs, scales across languages, and handles multiple media formats",
+      "status": "explicit",
+      "evidence_span": "we are able to assess both technical and non-technical jobs. We are able to scale to all languages. And finally, we can deal with all media formats, from PDF to images"
+    },
+    {
+      "id": "P4",
+      "text": "Candidate capture integrations (e.g., embeddable chatbot) simplify applications and increase candidate volume",
+      "status": "explicit",
+      "evidence_span": "It allows you to capture four times more candidates by tremendously simplifying the application experience"
+    },
+    {
+      "id": "P5",
+      "text": "AI layers combine general career-path learning with company-specific custom learning, including continuous learning from recruiter actions",
+      "status": "explicit",
+      "evidence_span": "we built two artificial intelligence layers. The first, it's a general layer based on the millions of career paths we analyzed. The second, it's a custom layer based on the internal data of the company"
+    },
+    {
+      "id": "P6",
+      "text": "Pricing starts low and scales with growth so recruiters can focus on emotionally intelligent tasks",
+      "status": "explicit",
+      "evidence_span": "our pricing starts only at $99 and scales as you grow"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "prestige-biased high-volume hiring problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "deep learning resume assessment",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "candidate capture and pricing",
+      "premise_ids": ["P4", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reveal candidates' full potential beyond prestige filters so recruiters find more relevant talent with fewer interviews",
+      "status": "explicit",
+      "evidence_span": "we reveal people's full potential"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They favor prestige over potential"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify three times more relevant talents in their initial pools"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capture four times more candidates by tremendously simplifying the application experience"
+    },
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Analyzing career paths and not only the set of skills is not just a technical detail. It allows us to get a better picture of the candidate"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "§4.1.6: prestige bias, keyword limits, and false positives folded as one hiring-pain bundle (P1). Coverage across job types/languages/formats kept as one capability package (P3) per enumeration rule 1. Demo market-insights/interest tabs folded into career-path AI (P5). 3x talent / 80% interview reduction treated as performance of P2, not separate premises. Beta traction excluded."
+}

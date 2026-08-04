@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-585",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:46:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cars today can be hacked so steering, braking, and acceleration leave the driver's control",
+      "status": "explicit",
+      "evidence_span": "Critical control functions, such as steering, braking, and acceleration, is out of your hands and in the hands of the hacker"
+    },
+    {
+      "id": "P2",
+      "text": "Secure IoT software—with registered patents—combines encryption, authentication, key management, firewall, OTA updates, and big-data modules into a multi-layered defense",
+      "status": "explicit",
+      "evidence_span": "We protect vehicles from hacker attacks through a combination of encryption, authentication, key management, firewall, over-the-air updates, and big data management modules"
+    },
+    {
+      "id": "P3",
+      "text": "Offered as cybersecurity-as-a-service to fleet owners for $10 per vehicle per month including continuous updates, delivered through OEM deployment and partner subscription distribution",
+      "status": "explicit",
+      "evidence_span": "We charge $10 per vehicle per month to protect them from outside attacks. This includes continuous updates to the fleet"
+    },
+    {
+      "id": "P4",
+      "text": "Secure onboard systems are required before autonomous drive, full EV deployment, and intended ride sharing can scale",
+      "status": "explicit",
+      "evidence_span": "Until we have cyber secure vehicles, we will never have autonomous drive. We will never have full deployment of electric vehicles. We will never have ride sharing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Connected-vehicle hack risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Patented multi-layer Secure IoT",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fleet CaaS with partner distribution",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Mobility-enabling security premise",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop car hacking so fleets and future mobility can operate securely",
+      "status": "explicit",
+      "evidence_span": "what we're doing is we're stopping car hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This threat is real today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "multi-layered solution to protect from outside attacks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cybersecurity as a service offering that we offer to fleet owners"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fundamental component to deploy these next paradigm for mobility"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "v1.3.1 applied: patents not split from Secure IoT; price and partner revenue-share not split. Singleton D2/D3/D4 retained as independently framed modules (product, commercial, mobility dependency). Partner list is channel detail inside P3."
+}

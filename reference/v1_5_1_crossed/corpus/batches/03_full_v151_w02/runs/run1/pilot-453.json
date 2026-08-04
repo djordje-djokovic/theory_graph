@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-453",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clients expect personalized portfolios and individualized advice, but advisors lack time/tools and dump clients into generic mutual funds and ETFs while relationships remain their strength",
+      "status": "explicit",
+      "evidence_span": "Clients expect personalized portfolios tailored to their needs, but instead are getting dumped into generic buckets of mutual funds and ETFs"
+    },
+    {
+      "id": "P2",
+      "text": "AI builds personalized portfolios of stocks/bonds/assets around client goals, risk, constraints, and firm or client strategies, and automates ongoing management and rebalancing",
+      "status": "explicit",
+      "evidence_span": "VizEye is an artificial intelligence platform tailored to investment advisors so they can automate portfolio construction and management"
+    },
+    {
+      "id": "P3",
+      "text": "Portfolio intelligence / NLG explains the why behind holdings so advisors can tell clients a clear story",
+      "status": "explicit",
+      "evidence_span": "We then provide the portfolio intelligence for them to be able to explain those investment decisions and the why behind their portfolio to the clients"
+    },
+    {
+      "id": "P4",
+      "text": "Low AUM fee (~20 bps) sold direct to advisors, with distribution via large financial institutions and Riskalyze",
+      "status": "explicit",
+      "evidence_span": "We charge a low AUM fee of 20 basis points, selling direct to investment advisors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Generic portfolios vs personalized advice gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI portfolio construction and intelligence",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Advisor AUM fee and distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advisors deliver personalized portfolios and clearer client stories while focusing time on trusted relationships",
+      "status": "explicit",
+      "evidence_span": "advisors can focus their time on what they do best, building great client relationships"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "advisors don't have the time, tools, or technology to deliver"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "VizEye empowers advisors to be able to build personalized portfolios around their clients' values, goals, and dreams"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnered with Fortune 100 financial institutions and a successful trailblazer in space, Riskalyze, to give us a distribution advantage to over 25,000 advisors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Goal/risk/structure/strategy UI steps folded into portfolio-construction premise (rule 7). Portfolio intelligence kept separate as distinct client-explanation job. Quant+ML vs historical-only treated as detail of construction. Anti-template justified."
+}

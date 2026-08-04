@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1135",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:36:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contextual game-mechanic communication drives highly engaged web audiences",
+      "status": "explicit",
+      "evidence_span": "They use contextual communication to the user to drive behavior at that right moment in time"
+    },
+    {
+      "id": "P2",
+      "text": "Web publishers lack tools to recognize and reward online loyalty the way offline programs do",
+      "status": "explicit",
+      "evidence_span": "online, it's very difficult for us to get recognized and rewarded for our attention and our loyalty. Right? What's missing is publishers don't really have the tools to do so"
+    },
+    {
+      "id": "P3",
+      "text": "Publishers can flexibly define behaviors, rewards, iconography, and points on the platform",
+      "status": "explicit",
+      "evidence_span": "Our platform allows publishers to have a highly flexible way to define their behaviors and their rewards"
+    },
+    {
+      "id": "P4",
+      "text": "The platform supplies engagement analytics on top users, behaviors, and community health",
+      "status": "explicit",
+      "evidence_span": "Who are your top users? What behaviors are they performing? How engaged are they? What's the health of your community?"
+    },
+    {
+      "id": "P5",
+      "text": "Install is easy via registration plug-in, embed codes, turnkey widgets, or API",
+      "status": "explicit",
+      "evidence_span": "we give you all of the embed codes as a publisher so that you can immediately start tracking"
+    },
+    {
+      "id": "P6",
+      "text": "Users can import social graphs and invite friends to compete on the publisher site",
+      "status": "explicit",
+      "evidence_span": "I can actually import my social graph into this site and compare my performance here with my friends"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Publisher engagement need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Configurable rewards and social competition",
+      "premise_ids": [
+        "P3",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Engagement analytics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize engagement for web publishers",
+      "status": "explicit",
+      "evidence_span": "We're here to maximize engagement for publishers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create highly engaged audiences"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage proven techniques from game mechanics"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These are the kinds of analytics we can provide to our clients"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained: analytics presented as its own publisher-facing module. Revenue/customer traction excluded. Demo behaviors (badges, leaderboards) treated as instances of P3, not extra premises."
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1147",
+    "coder_session_id": "session_06",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators needing hires, jobs, introductions, or experts rely on asking trusted people because search and Rolodex tools fail at matching",
+      "status": "explicit",
+      "evidence_span": "You're looking to hire, you're looking to be hired, you're looking for an introduction, or maybe an expert"
+    },
+    {
+      "id": "P2",
+      "text": "Social graphs from Facebook, Twitter, and LinkedIn plus real-time infrastructure enable publishing, routing, and matching of business opportunities",
+      "status": "explicit",
+      "evidence_span": "We take the power of your social graph, meaning Facebook, Twitter, and LinkedIn, and couple it with our real-time infrastructure"
+    },
+    {
+      "id": "P3",
+      "text": "Smart routing sends opportunities across contacts and followers, and recipients can re-route them through their networks",
+      "status": "explicit",
+      "evidence_span": "it's going out across my graph using our smart routing algorithm"
+    },
+    {
+      "id": "P4",
+      "text": "Users can apply or make introductions in-line from the opportunity stream",
+      "status": "explicit",
+      "evidence_span": "we have the ability to apply for these things in line, to apply or, if it's the relevant opportunity, to make introductions"
+    },
+    {
+      "id": "P5",
+      "text": "Declared expertise plus endorsements build a business expertise graph that underpins trusted matching",
+      "status": "explicit",
+      "evidence_span": "we're building out the business expertise graph, the key component in commerce for real"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "trusted-network matching pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "opportunity routing stream",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "expertise endorsement graph",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Match supply with demand for business opportunities through the trusted business graph",
+      "status": "explicit",
+      "evidence_span": "Markets are about matching supply with demand"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Community for sharing business opportunities and knowledge",
+      "evidence_span": "Namesake is a community for sharing business opportunities and knowledge"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "make publishing, routing, and matching happen like magic"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You ask the people you trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we use the stream to match with the experts, the jobs, and the services that you're looking for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the business expertise graph, the key component in commerce for real"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Pitch cut off noting more endorsement types. Hire/be-hired/intro/expert folded as one creator pain-set. Routing/re-routing/apply-inline treated as one opportunity-routing product surface with cascade detail; expertise graph kept separate as speaker's 'key component'. Prior company bios excluded."
+}

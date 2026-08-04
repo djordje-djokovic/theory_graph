@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "coder_session_id": "session_02",
+    "session_case_index": 19,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise knowledge is siloed in email, IM, and conversations so people repeat work and cannot find who knows what",
+      "status": "explicit",
+      "evidence_span": "all the knowledge was siloed. It was siloed in emails, IMs, conversations"
+    },
+    {
+      "id": "P2",
+      "text": "A Quora-for-enterprise Q&A plus wiki creates an organically growing, searchable company knowledge base organized around questions",
+      "status": "explicit",
+      "evidence_span": "Quora for the enterprise"
+    },
+    {
+      "id": "P3",
+      "text": "Voting and enterprise-context anonymity help endorse answers and surface important 'stupid' questions",
+      "status": "explicit",
+      "evidence_span": "We have a voting mechanic that allows people to stand behind and endorse certain answers"
+    },
+    {
+      "id": "P4",
+      "text": "Corporate-email signup and powerful search find prior answers inside the verified company network",
+      "status": "explicit",
+      "evidence_span": "signs up for Opsy using their corporate email address, which we then verify"
+    },
+    {
+      "id": "P5",
+      "text": "Email and listserv integration lets people ask/answer in Outlook and indexes relevant questions",
+      "status": "explicit",
+      "evidence_span": "we allow people to ask questions directly by email, answer them directly by replying to an email"
+    },
+    {
+      "id": "P6",
+      "text": "Use cases span engineering, sales/CS, and law/consulting to retain intellectual capital",
+      "status": "explicit",
+      "evidence_span": "Put it in law firms and consulting firms where you're paying employees a high amount"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed enterprise knowledge",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "enterprise Q&A wiki product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "email workflow integration",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "high-value knowledge work verticals",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people at companies share knowledge so the knowledge base is the first place they turn for answers",
+      "status": "explicit",
+      "evidence_span": "help people at companies share knowledge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not being able to know what other people already knew"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "organically growing, really easily searchable knowledge base for the enterprise"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people and companies live in their Outlook email boxes"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "retain the intellectual capital that they're building over time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Wiki/voting/anonymous/search folded with care: wiki+Q&A as core product; voting/anonymity as enterprise engagement facets kept with product (§4.1.7). Intelligent email routing treated as near-term extension folded into email integration. YC/investors/waitlist excluded (§4.2)."
+}

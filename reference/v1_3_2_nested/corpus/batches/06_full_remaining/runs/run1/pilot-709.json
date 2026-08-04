@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Human password behavior is the weak link behind most breaches",
+      "status": "explicit",
+      "evidence_span": "over 86% of breaches today are caused by users and not by hackers"
+    },
+    {
+      "id": "P2",
+      "text": "Existing password tools fail wide adoption because they require teaching users new habits or heavy IT integrations",
+      "status": "explicit",
+      "evidence_span": "They either require teaching the user something new, or require integrations which take time, money, and most importantly, a dedicated IT department"
+    },
+    {
+      "id": "P3",
+      "text": "SSO, IAM, and enterprise password managers store sensitive credentials in the cloud, creating a single point of failure",
+      "status": "explicit",
+      "evidence_span": "All of these tools put your sensitive information in the cloud, creating a single point of failure"
+    },
+    {
+      "id": "P4",
+      "text": "MyKey authenticates on the phone and pushes username, password, and 2FA tokens to the browser without service-provider integrations",
+      "status": "explicit",
+      "evidence_span": "MyKey is going to push her username, her password, and even the additional SMS token for two-factor authentication, directly from her phone to her browser"
+    },
+    {
+      "id": "P5",
+      "text": "Admin portal gives real-time visibility plus revoke/grant, privilege, geo/time/IP rules, and background password changes",
+      "status": "explicit",
+      "evidence_span": "As the admin, I have a real-time view of the portal, gives me full visibility and control over users' accounts"
+    },
+    {
+      "id": "P6",
+      "text": "Product is free for first five users then about $4.99 per additional user per month, aimed first at 10–50 user companies",
+      "status": "explicit",
+      "evidence_span": "MyKey is free for the first five users and then starts at $5, $4.99 per additional user per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Password and cloud-tool failures",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Phone-push auth and admin controls",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Seat pricing and SMB focus",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Teams manage digital workspace access securely without complicated, expensive, time-consuming security tools",
+      "status": "explicit",
+      "evidence_span": "security doesn't have to be something complicated, expensive, and time consuming"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solves the password problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "swiftly and securely"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free for the first five users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo feature list (geo fences, scheduled rotations, group provisioning) folded into P5 per §4.1(5). No-integration claim kept inside P4. Early-customer counts excluded as traction. Price and mid-market target kept as one commercial premise per §4.1(3).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-709",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

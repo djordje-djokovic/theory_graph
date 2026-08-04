@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Future of online commerce depends on knowing who you are doing business with in real time",
+      "status": "explicit",
+      "evidence_span": "the future of online internet commerce is about knowing who you're doing business with"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time identity verification uses social fingerprinting plus behavioral and transactional data to score authenticity",
+      "status": "explicit",
+      "evidence_span": "We're a real-time online identity verification platform. We focus on using social fingerprinting, and we focus on letting you know who you're doing business with. Our platform uses social data as a primary. We add in behavioral data, transactional data. We give the merchant a score, and that score is all about authenticity"
+    },
+    {
+      "id": "P3",
+      "text": "During browsing, platform collects device, behavior, and order data; social sign-in augments with fingerprinting of profile and posts",
+      "status": "explicit",
+      "evidence_span": "As a merchant or as a customer goes through the website, it collects data about the customer's device, their behavior, and the order they're doing. So when the customer checks out, they'd be asked to sign in with a social network"
+    },
+    {
+      "id": "P4",
+      "text": "Social graph signals mapped to real-world location are compared to IP, addresses, device fingerprint, behavior, and order history for a 0-100 trust score",
+      "status": "explicit",
+      "evidence_span": "We compare all the socially graphed information back to the IP address, delivery address, the billing address, the device fingerprint, the behavior of the customer, and the order history. And combining all this information together, we can report back to the customer, or to the merchant, a score of zero to 100"
+    },
+    {
+      "id": "P5",
+      "text": "Verified social data pre-populates checkout to make transactions smoother and more secure",
+      "status": "explicit",
+      "evidence_span": "we pre-populate the online checkout form with the customer's data, so their name, their address, and their email, making the online transaction smoother, easier, and a more secure experience for the customer"
+    },
+    {
+      "id": "P6",
+      "text": "Simple per-transaction pricing with no annual contracts or monthly minimums",
+      "status": "explicit",
+      "evidence_span": "it's per transaction. You just pay for what you use. There's no annual contracts. There's no monthly minions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Social fingerprint identity verification",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Checkout pre-population UX",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-transaction fraud pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "End online fraud by knowing the customer is who they say they are without destroying conversions",
+      "status": "explicit",
+      "evidence_span": "we're here to bring about an end to online fraud"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Smoother secure checkout for customers",
+      "evidence_span": "making the online transaction smoother, easier, and a more secure experience for the customer"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "knowing that the person that's buying from you is the person that they say they are"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more secure experience for the customer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's really like Stripe for fraud"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Post/check-in verification steps treated as parts of one scoring mechanism (§4.1.2). Seed/Telefonica milestones excluded. Anti-template: verification/UX/pricing separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-939",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:46:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

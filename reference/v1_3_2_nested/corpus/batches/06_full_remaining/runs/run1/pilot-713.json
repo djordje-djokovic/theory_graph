@@ -1,0 +1,135 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional lawn care booking and payment is painful: slow quotes, no-shows, and cash/check hassle",
+      "status": "explicit",
+      "evidence_span": "This is a very, very typical experience in the lawn care industry"
+    },
+    {
+      "id": "P2",
+      "text": "Robin gives instant address-based quotes, scheduled crews that show up, and credit-card payment with ratings",
+      "status": "explicit",
+      "evidence_span": "enter your address, and get an instant quote with nothing but your address"
+    },
+    {
+      "id": "P3",
+      "text": "Human crews cannot reliably clear weather/breakdown/illness backlogs because capacity is capped and night shifts are impossible",
+      "status": "explicit",
+      "evidence_span": "With human lawn crews, there is just no way to beat human nature"
+    },
+    {
+      "id": "P4",
+      "text": "Consumer robotic mowers are costly, hard to install, and incomplete (no edging, trimming, fertilizer, weeding)",
+      "status": "explicit",
+      "evidence_span": "Robotic mowers to this point have not offered enough of a solution to customers to make them worth their while"
+    },
+    {
+      "id": "P5",
+      "text": "Robin offers a robotic lawn service: Pro installs base and perimeter wire, remotely monitors, and maintains the mower",
+      "status": "explicit",
+      "evidence_span": "We then schedule a Robin Pro to come to your home and install the base, the perimeter wire, and program your mower"
+    },
+    {
+      "id": "P6",
+      "text": "Battery robotic mowers are emissions-free and cheap to power versus gas mowers' carbon footprint",
+      "status": "explicit",
+      "evidence_span": "These mowers are battery operated, emissions free, and consume just 11 kilowatt hours a month of electricity"
+    },
+    {
+      "id": "P7",
+      "text": "Service costs $99/month less than traditional lawn service, with optional paid add-ons already staffed",
+      "status": "explicit",
+      "evidence_span": "For just $99 a month, your lawn will always be mowed"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Human lawn service reliability limits",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Robotic lawn service offering",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription pricing and add-ons",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A more reliable, eco-friendly, and affordable way to keep a lawn maintained",
+      "status": "explicit",
+      "evidence_span": "A more reliable, more eco-friendly, and affordable way to maintain a lawn"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Put the lawn on autopilot literally via robotic mowing",
+      "evidence_span": "put your lawn on autopilot"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "Until today. Today, at TechCrunch Disrupt, we are announcing the world's first robotic lawn service"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "service delays happen"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more reliable, more eco-friendly, and affordable way to maintain a lawn"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it costs less than a traditional lawn service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "7k customers/70k jobs excluded as traction. Existing human Robin service is context for the robotic launch; P2 kept as continuing digital booking mechanism. Safety blade-stop detail folded into robotic service.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-713",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

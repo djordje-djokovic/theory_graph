@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-453",
+    "coder_session_id": "session_04",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clients expect personalized portfolios and advice but get generic mutual-fund/ETF buckets because advisors lack time and tools",
+      "status": "explicit",
+      "evidence_span": "Clients expect personalized portfolios tailored to their needs, but instead are getting dumped into generic buckets of mutual funds and ETFs"
+    },
+    {
+      "id": "P2",
+      "text": "Advisor–client trusted relationships are irreplaceable by tools and must remain the focus",
+      "status": "explicit",
+      "evidence_span": "They've built lasting and trusted relationships with their clients"
+    },
+    {
+      "id": "P3",
+      "text": "AI builds personalized portfolios of stocks, bonds, and other assets around client goals, values, and constraints",
+      "status": "explicit",
+      "evidence_span": "VisAI analyzes a client's investment needs and builds them a personalized portfolio of stocks, bonds, and other assets"
+    },
+    {
+      "id": "P4",
+      "text": "Portfolio intelligence generates the story and justifications advisors need to explain decisions to clients",
+      "status": "explicit",
+      "evidence_span": "we provide the portfolio intelligence for them to be able to explain those investment decisions and the why behind their portfolio to the clients"
+    },
+    {
+      "id": "P5",
+      "text": "Platform automates management and rebalancing so advisors spend time on relationships",
+      "status": "explicit",
+      "evidence_span": "VisAI automates all of the management, rebalancing, and everything"
+    },
+    {
+      "id": "P6",
+      "text": "Advanced quant models coupled with ML, plus proprietary NLG, drive personalization and explanations",
+      "status": "explicit",
+      "evidence_span": "We couple advanced quant models with machine learning models to build a personalized portfolio to each client"
+    },
+    {
+      "id": "P7",
+      "text": "Distribution partnerships with Fortune 100 institutions and Riskalyze reach large advisor networks",
+      "status": "explicit",
+      "evidence_span": "We have partnered with Fortune 100 financial institutions and a successful trailblazer in space, Riskalyze, to give us a distribution advantage to over 25,000 advisors"
+    },
+    {
+      "id": "P8",
+      "text": "Sold direct to advisors at a low 20 basis point AUM fee",
+      "status": "explicit",
+      "evidence_span": "We charge a low AUM fee of 20 basis points, selling direct to investment advisors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Advisor personalization gap and relationships",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "AI portfolio construction and intelligence",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Advisor distribution and AUM pricing",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advisors deliver personalized portfolios and client explanations while focusing on relationships",
+      "status": "explicit",
+      "evidence_span": "advisors can focus their time on what they do best, building great client relationships"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Clients expect personalized portfolios tailored to their needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empower advisors to be able to build personalized portfolios around their clients' values, goals, and dreams"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling direct to investment advisors"
+    },
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "So the advisors can focus their time on what they do best, building great client relationships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo portfolio-creator steps (goals, structure, strategy, review, scenarios) folded as cascade of personalized construction (P3). Price and direct sales kept one commercial premise with partner distribution split as channel module. Anti-template note: D1/D2/D3 map to need/product/money but are separately revisable per transcript (problem vs AI product vs distribution/pricing)."
+}

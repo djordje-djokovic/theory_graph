@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1002",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data-mining and machine-learning feeds deliver marketing ideas tailored to a business's industry, location, and preferences",
+      "status": "explicit",
+      "evidence_span": "My feeds are based on data mining and machine learning algorithms and are tailored to my business, location, and preferences"
+    },
+    {
+      "id": "P2",
+      "text": "Campaign templates can run across multiple channels including email, postcards, text, and social media",
+      "status": "explicit",
+      "evidence_span": "I can run it across multiple marketing channels, emails, postcards, text, and social media"
+    },
+    {
+      "id": "P3",
+      "text": "Alliances let businesses jointly run campaigns to reach each other's customers",
+      "status": "explicit",
+      "evidence_span": "Alliances allow businesses to run marketing campaigns together, reaching a huge number of new customers"
+    },
+    {
+      "id": "P4",
+      "text": "A marketing calendar plus analytics and ROI tracking organizes campaigns",
+      "status": "explicit",
+      "evidence_span": "all of my campaigns are put into a marketing calendar, which gives me the big picture view, as well as analytics and ROI information"
+    },
+    {
+      "id": "P5",
+      "text": "The system can automate local SEO tasks such as Google Places setup",
+      "status": "explicit",
+      "evidence_span": "Alicanto realized I'm not on Google Places. It will actually do it for me"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium with contextual sponsored suggestions, amplified by viral alliance invites",
+      "status": "explicit",
+      "evidence_span": "our revenue model is freemium, with contextual sponsored suggestions built in"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI marketing recommendations",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "alliance co-marketing",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "freemium monetization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Small businesses run sophisticated multi-channel marketing that grows customers and revenue",
+      "status": "explicit",
+      "evidence_span": "It handles all of your marketing needs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes it easy. It handles all of your marketing needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helping each other reach more customers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "revenue model is freemium"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Template edit/submit and channel list folded into multi-channel campaign capability. Calendar/analytics and Google Places kept as distinct jobs under recommendation product domain (§4.1 School Bridge shape). Alliance split as independently revisable co-marketing module. Beta KPI claims treated as traction for value, not premises. Anti-template: product suite, alliances, and freemium separately revisable."
+}

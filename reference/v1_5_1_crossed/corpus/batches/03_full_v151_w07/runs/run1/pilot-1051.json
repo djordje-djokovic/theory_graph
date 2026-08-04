@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1051",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people rarely check bills and lose money to hidden charges, errors, forgotten subscriptions, scams, and fraud that banks only partially catch",
+      "status": "explicit",
+      "evidence_span": "the average American will lose over $300 this year to stuff we simply miss"
+    },
+    {
+      "id": "P2",
+      "text": "BillGuard daily-scans registered cards with many automated tests and emails when attention is required, with no ongoing user effort",
+      "status": "explicit",
+      "evidence_span": "BillGuard will do a daily scan of your credit card activity and email you when your attention is required"
+    },
+    {
+      "id": "P3",
+      "text": "People-powered flags, web complaint scouring, and bank transaction data feed a brain that scores merchants and explains suspicious charges",
+      "status": "explicit",
+      "evidence_span": "harness all of that collective knowledge"
+    },
+    {
+      "id": "P4",
+      "text": "Better-than-free model: free primary-card protection, then premium unlimited cards for about $4/month",
+      "status": "explicit",
+      "evidence_span": "upgrade to our premium version for only $4 a month later this year"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via direct consumers plus bank partnerships and identity-theft/antivirus channels",
+      "status": "explicit",
+      "evidence_span": "in talks with three of the top US banks to deliver BillGuard as a native part of their banking experience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unchecked bill leakage and fraud",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "people-powered bill antivirus",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium monetization and bank distribution",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop losing money on bad charges by getting alerts when bill items need review—safer together",
+      "status": "explicit",
+      "evidence_span": "we're now safer together"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We almost never check our bills"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the world's first antivirus for bills"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when you start using BillGuard, you stop losing money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hidden charges/errors/subscriptions/scams/fraud folded as one bill-loss problem (§4.1.6). 100 tests, flag/cancel instructions, metadata, reliability score, Q&A, recurring filters folded into scan+collective-intelligence product (§4.1.7). Phase-two money-back and cell-bill expansion are roadmap—folded lightly into product/GTM, not extra premises. Transcript ends mid-sentence (truncated)."
+}

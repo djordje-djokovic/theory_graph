@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-588",
+    "coder_session_id": "session_04",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote video monitoring for small and retail businesses is underserved; human-only monitoring is about ten times more expensive and limited to special use cases",
+      "status": "explicit",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    },
+    {
+      "id": "P2",
+      "text": "Deep-learning active threat detection flags identity concealment such as masks and weapons in video frames and alerts remote analysts in real time to contact police",
+      "status": "explicit",
+      "evidence_span": "we're actually the only ones that we know of who are working on active threat detection"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market runs through security integrators (e.g., March Networks, South American integrators) with an open beta offering free monitoring to small and retail businesses",
+      "status": "explicit",
+      "evidence_span": "we're currently in talks with March Networks to perform testing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "untapped retail remote monitoring",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "active threat detection AI",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "integrator and open-beta GTM",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Small and retail businesses get affordable real-time remote security that catches active threats",
+      "status": "explicit",
+      "evidence_span": "help us bring security surveillance technology into the 21st century"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10 times more expensive than our platform"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detections would be sent to a remote monitoring analyst in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide two months of free monitoring for small and retail businesses"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Opens mid-demo (truncated). Mask/gun detection cascade folded into one active-threat mechanism. Market-size ARR claims and board hire excluded as traction/credentials. All three singletons retained as separately revisable market, product, and channel modules."
+}

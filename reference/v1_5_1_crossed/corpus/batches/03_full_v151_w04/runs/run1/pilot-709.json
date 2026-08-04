@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-709",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Passwords create a human weak link, and existing SSO/IAM/password tools either demand heavy IT adoption or centralize secrets in the cloud as a single point of failure",
+      "status": "explicit",
+      "evidence_span": "over 86% of breaches today are caused by users and not by hackers"
+    },
+    {
+      "id": "P2",
+      "text": "MyKey lets users authenticate from the phone with biometrics while admins share, revoke, privilege-limit, geo/time/IP-rule, and rotate passwords without service-provider integrations",
+      "status": "explicit",
+      "evidence_span": "fundamentally changing the way teams manage access to the digital workspace"
+    },
+    {
+      "id": "P3",
+      "text": "Initial go-to-market targets medium companies with 10–50 users at free-for-five then about $4.99 per additional user per month, with later upmarket custom integrations and on-prem",
+      "status": "explicit",
+      "evidence_span": "initially targeting medium-sized companies that have between 10 and 50 users"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Password and cloud-access failure modes",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "MyKey team access management",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "SMB freemium then upmarket GTM",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Secure team access to the digital workspace without complicated, expensive security tooling",
+      "status": "explicit",
+      "evidence_span": "security doesn't have to be something complicated, expensive, and time consuming"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All of these tools put your sensitive information in the cloud, creating a single point of failure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MyKey solves the password problem"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MyKey is free for the first five users and then starts at $5, $4.99 per additional user per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "User login push, admin portal, privilege levels, geo/time/IP rules, background password change, and no-integration claim folded as cascade of one access-management mechanism (§4.1.7). Early-customer traction and team credentials excluded. Anti-template: problem, product, and SMB pricing/GTM are separately revisable."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1135",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:39:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A handful of sites capture engagement advantages from contextual rewards and competition",
+      "status": "explicit",
+      "evidence_span": "We think it's outrageous that a handful of sites get to have these kinds of capabilities"
+    },
+    {
+      "id": "P2",
+      "text": "Badgeville is a loyalty and rewards platform that brings game mechanics to any web publisher",
+      "status": "explicit",
+      "evidence_span": "We're a loyalty and rewards platform for web publishers to drive engagement"
+    },
+    {
+      "id": "P3",
+      "text": "Marketers can configure valued behaviors and rewards quickly, including embed/API tracking",
+      "status": "explicit",
+      "evidence_span": "We've made it really easy for marketers, community managers to implement this very quickly"
+    },
+    {
+      "id": "P4",
+      "text": "Publishers get insight into valued behaviors and friction points via analytics",
+      "status": "explicit",
+      "evidence_span": "I can start to get insight into what behaviors are happening across my site right now"
+    },
+    {
+      "id": "P5",
+      "text": "Social-graph import and friend invites deepen competitive engagement",
+      "status": "explicit",
+      "evidence_span": "if my friends aren't on this site, I can invite them to compete with me"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Democratizing engagement mechanics",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Publisher configuration and tracking",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Behavior analytics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drive and measure engagement on publisher sites",
+      "status": "explicit",
+      "evidence_span": "loyalty and rewards platform for web publishers to drive engagement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "offer this to the entire web"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recognize them for the behaviors that publishers value"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify friction points where maybe users are getting lost"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Slightly coarser: flexible rewards and install path merged into P3. Booked revenue excluded per 4.2."
+}

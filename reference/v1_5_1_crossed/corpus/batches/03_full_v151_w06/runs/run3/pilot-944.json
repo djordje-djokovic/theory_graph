@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-944",
+    "coder_session_id": "session_01",
+    "session_case_index": 15,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer wearables and GPS are motivators, not professional tools—GPS is ~15 feet inaccurate and sports improvement needs inch-accurate multi-point tracking of position, acceleration, and speed",
+      "status": "explicit",
+      "evidence_span": "They are more motivators than real professional tools"
+    },
+    {
+      "id": "P2",
+      "text": "QOSP/Beastar inch-accurate motion tracker uses differential GNSS with access-point fusion of motion readings for multi-device real-time sport feedback (patented)",
+      "status": "explicit",
+      "evidence_span": "the only device with which you can do that, in which you can have multiple observation points as well as an inch-accurate positioning response"
+    },
+    {
+      "id": "P3",
+      "text": "Platform APIs expose acceleration, position, and speed for gaming, drones, animation, etc., but go-to-market focuses on team sports where no real-time tactic/injury/scouting tech exists",
+      "status": "explicit",
+      "evidence_span": "we are going to keep a razor sharp focus on the team sport market"
+    },
+    {
+      "id": "P4",
+      "text": "Patents on sensor networks and indoor/outdoor positioning create a distinctive competitive advantage",
+      "status": "explicit",
+      "evidence_span": "Beastar owns several patents on sensor networks, on our indoor and outdoor positioning system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "imprecise consumer sport trackers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "inch-accurate QOSP motion platform",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "team sport market focus",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Athletes and teams get professional inch-accurate multi-point motion data so they can improve performance (e.g. cut times, improve strokes)",
+      "status": "explicit",
+      "evidence_span": "Tracking your development is the answer for those who want to achieve a goal"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "GPS is not precise enough"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "inch-accurate position technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no technological solution for teams"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Ski/tennis examples folded as applications of the precision need (§4.1.2). Differential GNSS/access-point fusion and tennis multi-wearable demo folded into QOSP mechanism; patents kept inside that mechanism per §4.1.1. API generality noted but team-sport focus coded as GTM condition. Market spend stats as framing. ASR Beastar/B-Star/Vistar/Wasp variants left in spans. Three domains; not a need/product/money triad."
+}

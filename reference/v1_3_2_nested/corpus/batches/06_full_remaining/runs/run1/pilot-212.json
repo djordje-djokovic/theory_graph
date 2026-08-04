@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developers waste large amounts of time in toil from software complexity, harming happiness and retention",
+      "status": "explicit",
+      "evidence_span": "developers spend half their week in toil"
+    },
+    {
+      "id": "P2",
+      "text": "Observability and security tools leave developers lost in data and tools away from coding",
+      "status": "explicit",
+      "evidence_span": "Developers are lost in a maze of tools they don't control, away from the coding they love to do"
+    },
+    {
+      "id": "P3",
+      "text": "AppMap delivers personal observability, performance, and security analysis inside the code editor as developers write",
+      "status": "explicit",
+      "evidence_span": "AppMap delivers personal observability, performance, and security analysis to developers when they work to reduce toil"
+    },
+    {
+      "id": "P4",
+      "text": "AppMaps capture accurate runtime behavior across environments, data stores, and service boundaries—not static analysis",
+      "status": "explicit",
+      "evidence_span": "AppMap is real code execution, not a static code analysis"
+    },
+    {
+      "id": "P5",
+      "text": "Automatic analysis alerts on issues such as performance and security flaws while developers work",
+      "status": "explicit",
+      "evidence_span": "AppMap automatically analyzes this information to find issues why developers work, and it alerts them if it finds a problem"
+    },
+    {
+      "id": "P6",
+      "text": "Deep language/framework integrations and open source enable adoption across communities",
+      "status": "explicit",
+      "evidence_span": "AppMap integrates deeply with popular languages and frameworks. And AppMap is open source to integrate with new languages and new communities"
+    },
+    {
+      "id": "P7",
+      "text": "Free for individuals, students, and open source via VS Code and JetBrains marketplaces",
+      "status": "explicit",
+      "evidence_span": "AppMap is free for individuals, students, and open source projects from the VS Code and JetBrains marketplaces"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Developer toil from tool maze",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Editor-native runtime observability",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace freemium distribution",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Development teams reduce toil and ship more performant, secure, reliable code faster",
+      "status": "explicit",
+      "evidence_span": "AppMap helps development teams reduce toil and ship more performant, secure, and reliable code faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Organizations gain faster onboarding and much lower mean time to repair",
+      "evidence_span": "faster time to code onboarding and reduce mean time to repair flaws from weeks down to minutes"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "toil makes them unhappy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see the behavior of their software as they write code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "free for individuals, students, and open source projects"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Market-size/$85B and adoption counts excluded as framing/traction. Demo issue types folded into analysis capability (§4.1(5)). Postman partnership treated as illustration of editor runtime data, not separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-212",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

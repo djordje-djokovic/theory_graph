@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-912",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile app development requires many languages and frameworks, so it is expensive and slow even for simple apps",
+      "status": "explicit",
+      "evidence_span": "mobile application development is hard. It requires knowledge of many programming languages, technologies, and frameworks. And because of that, it's expensive"
+    },
+    {
+      "id": "P2",
+      "text": "A PowerPoint-like drag-and-drop editor with a flexible component library lets non-technical users build customizable apps",
+      "status": "explicit",
+      "evidence_span": "a non-technical user can drag and drop components and build their own awesome mobile app"
+    },
+    {
+      "id": "P3",
+      "text": "Apps built on the platform are native for look, feel, and performance",
+      "status": "explicit",
+      "evidence_span": "the apps that are built are native. And the reason that's important to the user, it gives them the best look, feel, and performance"
+    },
+    {
+      "id": "P4",
+      "text": "A preview app lets builders test and interact with the application live on a mobile device while building",
+      "status": "explicit",
+      "evidence_span": "We also have a preview app. This allows you to test and interact with the application as you're building it live on your mobile device"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard expensive mobile development",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "visual native app builder",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Non-technical users can build real mobile apps as easily as PowerPoint",
+      "status": "explicit",
+      "evidence_span": "building mobile apps was as easy as PowerPoint"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "An average app takes $27,000 to create"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you can build a PowerPoint slide deck, you too can become a mobile app developer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo feature list (map, RSS, gallery, social buttons) folded into drag-drop component-library mechanism (§4.1.7). Native output and live preview split because speaker highlights them as distinct product conditions. Future WordPress/marketplace roadmap treated as vision framing and omitted (§4.1.4). Market-size framing excluded. Two-domain partition."
+}

@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers miss hidden charges and fraud on bills they rarely review",
+      "status": "explicit",
+      "evidence_span": "Things like hidden charges, billing errors, forgotten subscriptions"
+    },
+    {
+      "id": "P2",
+      "text": "BillGuard harnesses collective complaint knowledge as a people-powered antivirus for bills",
+      "status": "explicit",
+      "evidence_span": "What if you could actually harness all of that collective knowledge?"
+    },
+    {
+      "id": "P3",
+      "text": "Automated daily card scans distill 100+ tests into a clean score and review list",
+      "status": "explicit",
+      "evidence_span": "For every transaction that came into my card, BillGuard ran over 100 automated tests"
+    },
+    {
+      "id": "P4",
+      "text": "One-click flagging shares cancel guidance and strengthens the shared detection brain",
+      "status": "explicit",
+      "evidence_span": "BillGuard makes it one-click easy for anyone to flag a transaction on their bill"
+    },
+    {
+      "id": "P5",
+      "text": "Free primary card then $4/month unlimited premium monetizes when users stop losing money",
+      "status": "explicit",
+      "evidence_span": "We call it Better Than Free. Because when you start using BillGuard, you stop losing money"
+    },
+    {
+      "id": "P6",
+      "text": "Native bank embedding and antivirus/identity partners distribute at scale",
+      "status": "explicit",
+      "evidence_span": "deliver BillGuard as a native part of their banking experience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missed bill charges",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Collective bill scanning",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Better Than Free",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Partner distribution",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect consumers' money by catching bad bill charges automatically",
+      "status": "explicit",
+      "evidence_span": "BillGuard is in the business of protecting your money"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Users are safer together via shared flags",
+      "evidence_span": "With BillGuard, we're now safer together"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hidden charges, billing errors, forgotten subscriptions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people-powered antivirus for our bills"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you stop losing money"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "native part of their banking experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Web complaint scouring and bank transaction analysis folded into collective scanning domain. Merchant reliability score roadmap item folded into product, not split (§4.1(5)). Transcript cuts off at BillGuard.com CTA.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1051",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:09+02:00"
+  }
+}

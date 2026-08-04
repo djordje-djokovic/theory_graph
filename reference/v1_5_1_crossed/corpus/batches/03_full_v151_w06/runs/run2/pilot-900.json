@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-900",
+    "coder_session_id": "session_03",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Valuable web data is trapped in HTML without APIs, so only organizations with developers can access it",
+      "status": "explicit",
+      "evidence_span": "this data is not available to everyone. The majority of sites do not have an API, and creating one is complex"
+    },
+    {
+      "id": "P2",
+      "text": "A point-and-click data browser turns any webpage into a table and live API without writing code",
+      "status": "explicit",
+      "evidence_span": "turn any website. into a table of data or an API in a matter of minutes without writing code"
+    },
+    {
+      "id": "P3",
+      "text": "Users can combine many site APIs into one streaming call at scale",
+      "status": "explicit",
+      "evidence_span": "Combining the API that I just created with other APIs is very easy"
+    },
+    {
+      "id": "P4",
+      "text": "Data Factory Chrome extension gives anyone access to a library of prebuilt APIs or the ability to request ones not built",
+      "status": "explicit",
+      "evidence_span": "The data factory is a chrome extension that will allow anybody to get access to our library of APIs or requests that won't be built"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "trapped web data without APIs",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "no-code web-to-API browser",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "shared API library via Data Factory",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can easily access and use data trapped in websites",
+      "status": "explicit",
+      "evidence_span": "data on the web would be easily accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's just trapped, trapped inside the HTML of the page"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with a couple of clicks, I've turned a web page into a table of data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instantly, the data is extracted from the site, formatted, and placed into a table"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "User/API/page traction counts excluded (§4.2.3). Combine-APIs treated as scale facet of browser platform but kept as distinct composition claim speaker demonstrates. Free forever noted as commercial detail inside product, not separate premise. Red Cross/HP examples as applications of same mechanism. Singleton D3 for separately launched Data Factory. Anti-template noted for access-gap / builder / library partition."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-868",
+    "coder_session_id": "session_02",
+    "session_case_index": 23,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inside companies, getting from a question to insight requires a slow, expensive pipeline of engineers, data scientists, and programmers",
+      "status": "explicit",
+      "evidence_span": "From question to insight, it can take several weeks. And especially if you're a small company, it can be extremely expensive"
+    },
+    {
+      "id": "P2",
+      "text": "Company data is fragmented across SaaS silos such as analytics and payments tools",
+      "status": "explicit",
+      "evidence_span": "all our data is fragmented across different services. Analytics data in Mixpanel, payments data in Stripe"
+    },
+    {
+      "id": "P3",
+      "text": "PatternEQ unifies data by connecting services and automatically extracts patterns / builds predictive models from a selected column",
+      "status": "explicit",
+      "evidence_span": "Pattern EQ unifies all your data by connecting to all your different services and lets you extract patterns out of it automatically"
+    },
+    {
+      "id": "P4",
+      "text": "Models score future customers for outcomes such as churn risk",
+      "status": "explicit",
+      "evidence_span": "This model can actually predict how your future subscribers can behave"
+    },
+    {
+      "id": "P5",
+      "text": "Automatic segmentation/clustering finds groups that behave similarly and explains why",
+      "status": "explicit",
+      "evidence_span": "click on the Segments button. And what it's doing behind the scenes is clustering your data to find groups that behave similarly"
+    },
+    {
+      "id": "P6",
+      "text": "SaaS pricing starts around $1,000 per month and scales with volume",
+      "status": "explicit",
+      "evidence_span": "we start at a very affordable rate of $1,000 per month that increases based on your volume"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "data divide and silos",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "automated predictive analytics product",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS pricing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make data science accessible so non-specialists can get predictive insights themselves",
+      "status": "explicit",
+      "evidence_span": "analytic software that simplifies data science and makes it accessible to everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empower everyone with data science skills"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "an analyst coming into the service can get deep insights that typically require you to be a data scientist"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We make it super simple for you to use Predictive Insights"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Predictions and segments treated as distinct product capabilities (enumeration rule 2). Demo factor list folded into automatic model-building in P3. Singleton D3 justified as pricing module."
+}

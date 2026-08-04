@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People want automatic phone charging without removing devices from pocket or bag",
+      "status": "explicit",
+      "evidence_span": "phone charge automatically without taking them out of your pocket or bag"
+    },
+    {
+      "id": "P2",
+      "text": "COTA is a charger-plus-receiver system small enough for phones or AAA batteries delivering ~1W at 30 feet",
+      "status": "explicit",
+      "evidence_span": "The charger would be the size of this box, and the receiver would be small enough to fit inside a smartphone or even a AAA battery. Kota is the only wireless power technology that can deliver one watt of power at a 30-foot distance"
+    },
+    {
+      "id": "P3",
+      "text": "Beacon-guided return paths power only the target device and avoid people",
+      "status": "explicit",
+      "evidence_span": "send out regularly a beacon signal that travels the environment and finds ways, paths, to the charger, which in turn returns the power signal only through the open paths"
+    },
+    {
+      "id": "P4",
+      "text": "Non-line-of-sight operation reaches devices behind walls and around corners",
+      "status": "explicit",
+      "evidence_span": "powering devices behind walls and around corners without interfering with electronic equipment"
+    },
+    {
+      "id": "P5",
+      "text": "More transmitters increase efficiency in consumer designs",
+      "status": "explicit",
+      "evidence_span": "current designs we have in the lab reach 3,000 transmitters, and our consumer version has 20,000 transmitters within it. The more transmitters, the higher the efficiency"
+    },
+    {
+      "id": "P6",
+      "text": "Marketed as built-in, battery, or dongle form factors so users need not replace all devices",
+      "status": "explicit",
+      "evidence_span": "built into devices and phones, built into standard batteries, and as dongles for current devices so we don't have to purchase new devices to use it"
+    },
+    {
+      "id": "P7",
+      "text": "Commercialization relies on electronics OEM partnerships (with industrial markets in the meantime)",
+      "status": "explicit",
+      "evidence_span": "we're working with other markets, such as the oil and gas industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Automatic remote charging demand",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "COTA RF power delivery mechanism",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Form factors and partner channels",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Always-ready devices powered wirelessly at a distance",
+      "status": "explicit",
+      "evidence_span": "always on, always ready"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need wireless power"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this phone is charging wirelessly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partner with electronics manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Oil/gas mentioned as interim market; coded with OEM channel premise rather than as primary value. Four core patents not split out (v1.3.1 IP rule).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

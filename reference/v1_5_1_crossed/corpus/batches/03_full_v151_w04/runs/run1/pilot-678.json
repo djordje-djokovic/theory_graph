@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-678",
+    "coder_session_id": "session_02",
+    "session_case_index": 9,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contaminated drinking water with heavy metals is widespread, while common filters miss small particles like lead/mercury/salt and under-sink RO systems are hard to install and only about 20% efficient",
+      "status": "explicit",
+      "evidence_span": "these kind of filters do not clean out any other smaller particles, such as mercury, lead, or even salt"
+    },
+    {
+      "id": "P2",
+      "text": "WaterO is a next-generation reverse-osmosis purifier with a multi-filter recycling cycle that reaches about 80% efficiency and reduces waste versus traditional RO",
+      "status": "explicit",
+      "evidence_span": "we're able to achieve 80% efficiency"
+    },
+    {
+      "id": "P3",
+      "text": "The device exposes TDS before/after filtration and filter-life meters, and pairs over Wi-Fi so a smartphone can control the unit and share TDS readings",
+      "status": "explicit",
+      "evidence_span": "we're also a smart device where your smartphone is actually enabled with the device through Wi-Fi"
+    },
+    {
+      "id": "P4",
+      "text": "Replacement filter sets are about $80 and purified water costs about $0.03 versus roughly $0.60 bottled water; pre-sale unit price is $399 with a Water Is Life donation partnership",
+      "status": "explicit",
+      "evidence_span": "offer this at a pre-sale for $399"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "contaminated water and weak filters",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "efficient RO purifier and smart monitoring",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "filter economics and pre-sale offer",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Convenient access to pure, drinkable water from contaminated sources",
+      "status": "explicit",
+      "evidence_span": "Our solution is to provide clean water"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Donating purifiers to families through Water Is Life campaign",
+      "evidence_span": "donating to thousands of families through our campaign"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solve the contaminated water and actually provide pure water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "results pure H2O"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Watero, it's going to give you $0.03"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Heavy-metal contamination plus inadequate consumer filters treated as one problem-set (§4.1.6). Four-filter recycle path, TDS demo numbers, and US-made filter stack folded as process/performance package of one RO purifier (§4.1.7–8). Flint love/Obama framing and market-size figures excluded as traction/context. Singleton D1/D3 retained. Anti-template: problem, product, and commercial offer separately revisable."
+}

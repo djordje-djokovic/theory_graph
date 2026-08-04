@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most household bikes sit unused while shop and bike-share rentals are expensive for leisure rides",
+      "status": "explicit",
+      "evidence_span": "about 70% of US households actually have a bicycle, but only 0.6% of them are used daily"
+    },
+    {
+      "id": "P2",
+      "text": "SpinLister is an infrastructure-light peer marketplace that lists owner bikes for travelers and locals at owner-set prices",
+      "status": "explicit",
+      "evidence_span": "looking to do that with SpinLister in a location-independent way that is extremely infrastructure-light"
+    },
+    {
+      "id": "P3",
+      "text": "Platform reviews listings, shows nearest bikes, and facilitates insured owner-renter handoffs with messaging",
+      "status": "explicit",
+      "evidence_span": "We review each listing to make sure that it looks good and is a compelling offering for our marketplace"
+    },
+    {
+      "id": "P4",
+      "text": "Bikes are insured up to $5,000 with institutional backup coverage",
+      "status": "explicit",
+      "evidence_span": "We insure bicycles up to $5,000. And we have institutional insurance, as well"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underused bikes vs costly rentals",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Peer bike marketplace",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Rental insurance",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect travelers and locals to individual bike owners for exploration rides",
+      "status": "explicit",
+      "evidence_span": "allow individual bike owners to rent out their bikes to travelers and locals looking to explore"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Owners deliver personalized local tips and flexible pickup as part of the rental experience",
+      "evidence_span": "allow this lister to really own the customer service experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "huge pool of bicycles that are not being capitalized on"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking this excess supply of bicycles and meeting it with the demand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have enough rules in place to make it safe"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Average $20 price treated as marketplace evidence rather than separate premise. Listing UI filters folded into P3. Traction excluded. Singleton D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1028",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "epistemic_markers": []
+}

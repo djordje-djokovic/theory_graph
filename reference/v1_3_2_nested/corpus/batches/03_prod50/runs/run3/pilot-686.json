@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Accessible non-surgical neurostimulation via tDCS replaces surgically implanted systems for broader use",
+      "status": "explicit",
+      "evidence_span": "we were frustrated by the lack of accessibility, and that is due to the surgical nature of this product. So we founded Halo with really just one question in mind, and that is, can we make neurostimulation more accessible?"
+    },
+    {
+      "id": "P2",
+      "text": "Priming motor cortex plasticity during workouts improves athletes' strength and skill gains",
+      "status": "explicit",
+      "evidence_span": "pair this neuropriming technology with your workout. And here, grossly oversimplified, is what we would expect neurologically. The signals would become more organized. So this gets that skill. Signals would also become more robust. This gets that power and strength"
+    },
+    {
+      "id": "P3",
+      "text": "Halo Sport form factor: headphone cans with proprietary primer electrodes and phone app control",
+      "status": "explicit",
+      "evidence_span": "There's a custom electronics board built into the cans connected to this area. These are our proprietary electrodes that we call primers"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware sales of headsets and semi-disposable primers/ear pads plus future premium app features",
+      "status": "explicit",
+      "evidence_span": "Halo is a hardware company and we plan on selling headsets, semi-disposable primers, semi-disposable ear pads. Our app for now is free, but you can imagine that we'll build in premium features that we could charge money for"
+    },
+    {
+      "id": "P5",
+      "text": "Same neurostimulation approach can extend to medical motor disability after stroke",
+      "status": "explicit",
+      "evidence_span": "Half the people who have had a stroke, suffer from some sort of motor disability, and we can help these people with neurostimulation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Athlete neuropriming product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware monetization",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Medical movement applications",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "World's first neurostimulation system designed specifically for athletes' training gains",
+      "status": "explicit",
+      "evidence_span": "Halo Sport, which is the world's first neurostimulation system designed specifically for athletes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "neurostimulation system designed specifically for athletes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling headsets, semi-disposable primers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sports is really just the beginning"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Medical path coded as separate domain (speaker marks sports as beginning). Ellipsis in P5 evidence avoided — used contiguous fragments. Patents not split from proprietary primers (§4.1.1).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-686",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:39:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

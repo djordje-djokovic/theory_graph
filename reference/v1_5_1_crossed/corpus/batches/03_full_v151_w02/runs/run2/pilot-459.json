@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-459",
+    "coder_session_id": "session_04",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Uniform whole-field fertilizer rates from random sampling waste fertilizer and yield",
+      "status": "explicit",
+      "evidence_span": "assigning the rate of the fertilizer, which is the same for the whole field"
+    },
+    {
+      "id": "P2",
+      "text": "Precision satellite-guided prescription maps put fertilizer only where and when needed using infrared farm imagery",
+      "status": "explicit",
+      "evidence_span": "We generate actionable prescription maps for fertilizer application using infrared pictures of the farms"
+    },
+    {
+      "id": "P3",
+      "text": "Farmers see crop stress up to 10 days sooner than with traditional methods",
+      "status": "explicit",
+      "evidence_span": "farmers can see the stress of their crops up to 10 days sooner that they can see it with traditional methods"
+    },
+    {
+      "id": "P4",
+      "text": "Platform guides sampling, calibrates nitrogen maps with lab tests, analytics, and zoning for variable tractor rates",
+      "status": "explicit",
+      "evidence_span": "agronomist is guided where to go sample the crop, and then uses the crop test results from the lab to plug into the platform to calibrate the nitrogen maps"
+    },
+    {
+      "id": "P5",
+      "text": "Integrates with existing farm management software to tailor prescriptions with farm historical data",
+      "status": "explicit",
+      "evidence_span": "integrated straight into existing farm management software"
+    },
+    {
+      "id": "P6",
+      "text": "Hyperspectral sensing pinpoints the stressor behind crop stress, unlike limited multispectral competitors",
+      "status": "explicit",
+      "evidence_span": "Our hyperspectral sensing is allowing farmers to see the crop stress sooner and, moreover, pinpoint the stressor behind it"
+    },
+    {
+      "id": "P7",
+      "text": "Sold via annual subscriptions to commercial and independent agronomists, starting in wheat, canola, barley, and cotton",
+      "status": "explicit",
+      "evidence_span": "Annual subscriptions, this is how we sell our product"
+    },
+    {
+      "id": "P8",
+      "text": "Agronomy firm partners are channels to market",
+      "status": "explicit",
+      "evidence_span": "multiple agronomy firms, which are including world's largest, which are our channels to market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Uniform fertilizer inefficiency",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Satellite prescription maps and sensing",
+      "premise_ids": ["P2", "P3", "P4", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Farm software integration",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Agronomist subscriptions and channels",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Grow more with less by applying fertilizer precisely where needed",
+      "status": "explicit",
+      "evidence_span": "start growing more with less"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce environmental damage from wasted fertilizer",
+      "evidence_span": "costing our planet $10 billion in environmental damage"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "up to 30% of all fertilizer applied is wasted"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fertilizer can go only where it's needed exactly when it's required"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provide actionable data that can be used right there on the farm"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Annual subscriptions, this is how we sell our product"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo workflow steps folded into platform workflow premise P4 as one agronomist operating surface. Earlier stress detection kept with sensing/maps; hyperspectral stressor ID split as distinct sensing claim. Farm revenue traction excluded."
+}

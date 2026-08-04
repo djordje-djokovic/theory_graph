@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-920",
+    "coder_session_id": "session_04",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Camera capture of geometric and photorealistic space data (with modified DSLR hardware) enables photoreal 3D scenes, including digitally removing construction material",
+      "status": "explicit",
+      "evidence_span": "We start by capturing geometric and photorealistic data using this camera"
+    },
+    {
+      "id": "P2",
+      "text": "Spaces can be rendered in multiple occupancy scenarios (as-is, empty, furnished) and streamed on web and iPad",
+      "status": "explicit",
+      "evidence_span": "We can show you the space exactly as it is, like with the townhouse, or we can show you a full space, empty, or an empty space, full"
+    },
+    {
+      "id": "P3",
+      "text": "End users can edit the 3D model in real time—time of day/lighting, furniture placement, materials, and layouts",
+      "status": "explicit",
+      "evidence_span": "the capability for an end user to edit the 3D model directly"
+    },
+    {
+      "id": "P4",
+      "text": "Commercial real estate marketing spends heavily on manual floor plans and print materials that 3D VR can replace",
+      "status": "explicit",
+      "evidence_span": "$30 billion a year is spent on commercial real estate marketing services"
+    },
+    {
+      "id": "P5",
+      "text": "Adjacent opportunities exist in interior design, architecture, and construction beyond CRE marketing",
+      "status": "explicit",
+      "evidence_span": "we're also seeing all these adjacent opportunities in interior design architecture and construction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "photoreal 3D capture and interactive design",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "commercial real estate marketing replacement",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "adjacent physical-space markets",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how people communicate about real estate (and physical space) with practical interactive 3D instead of 2D floor plans",
+      "status": "explicit",
+      "evidence_span": "changing the way that we communicate about real estate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is a practical application of virtual reality"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "would you ever want to go back and look at a 2D floor plan?"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changing the way that we communicate about physical stuff period"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.68
+  },
+  "notes": "Transcript starts mid-demo (truncated/thin). Furniture/lighting edit cascade folded into P3 as one interactive design mechanism. Team composition excluded as not a market-condition premise. Long-run physical-stuff vision kept as value framing with adjacent markets as optional expansion premise."
+}

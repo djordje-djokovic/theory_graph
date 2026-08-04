@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "HPC/HTC users currently spend months wiring many cloud instances together",
+      "status": "explicit",
+      "evidence_span": "they have teams of people that will spend months deploying software and writing tools and technologies to make hundreds or thousands of cloud instances work together"
+    },
+    {
+      "id": "P2",
+      "text": "CPUsage distributes virtually any HPC/HTC app across any cloud at any scale in minutes",
+      "status": "explicit",
+      "evidence_span": "we allow any developer the opportunity to distribute virtually any high-performance or high-throughput application across any cloud at any scale in a matter of minutes, not months"
+    },
+    {
+      "id": "P3",
+      "text": "Workflow: configure one sandbox instance, auto-replicate across nodes, then start",
+      "status": "explicit",
+      "evidence_span": "You come to us, and you configure a single sandbox, a single virtual instance. We take that instance, and we automatically distribute it and replicate it across hundreds or thousands of compute nodes in the cloud"
+    },
+    {
+      "id": "P4",
+      "text": "API builder turns command-line apps into a custom submit API",
+      "status": "explicit",
+      "evidence_span": "a tool that we've built to build a custom API specific to your command line application. And you do that as simple as typing the command line arguments that you would normally type into that application"
+    },
+    {
+      "id": "P5",
+      "text": "Public beta supports AWS now; Azure and Google Compute Engine next; then private cloud",
+      "status": "explicit",
+      "evidence_span": "Today we support Amazon Web Services and over the next few months will add support for other infrastructure such as Microsoft Windows Azure and Google Compute Engine"
+    },
+    {
+      "id": "P6",
+      "text": "Vision: consume compute like electricity without thinking about configuration or location",
+      "status": "explicit",
+      "evidence_span": "you should be able to plug in any compute application, consume as much compute power as you want, without having to think about configuration, how the compute gets to you, or even where the compute comes from"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud HPC distribution platform",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Multi-cloud and private-cloud roadmap",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Utility compute vision",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make high-performance cloud compute as simple and universal as plugging in electricity",
+      "status": "explicit",
+      "evidence_span": "we have a vision for Compute that looks a lot like that"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll be up and running in just a matter of minutes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "distribute virtually any high-performance or high-throughput application across any cloud"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "vision for compute that looks a lot like electricity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Market-size figures excluded as context. Singleton D2/D3: cloud expansion and utility thesis separately revisable from core sandbox product.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

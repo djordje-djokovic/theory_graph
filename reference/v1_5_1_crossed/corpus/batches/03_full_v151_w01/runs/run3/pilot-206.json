@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-206",
+    "coder_session_id": "session_04",
+    "session_case_index": 6,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:12:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Labor shortages across construction, agriculture, restaurants, and manufacturing create large economic damage",
+      "status": "explicit",
+      "evidence_span": "There is a labor crisis in the US across the construction, agriculture, restaurant, and manufacturing industries"
+    },
+    {
+      "id": "P2",
+      "text": "Factory industrial robots with external control boxes, strain-wave gears, and extreme precision do not fit everyday automation jobs",
+      "status": "explicit",
+      "evidence_span": "Robotic innovation has focused on factory automation that doesn't translate well to everyday automation"
+    },
+    {
+      "id": "P3",
+      "text": "Affordable planetary gears, onboard power from standard outlets or 48V DC, and a novel joint design make the arm cheaper and more deployable",
+      "status": "explicit",
+      "evidence_span": "We've opted for proven planetary gears that are 97% efficient and 20% the cost of strain wave gears"
+    },
+    {
+      "id": "P4",
+      "text": "Quick-change actuators and application-specific robotic skins make the arm easy to service and adapt across environments",
+      "status": "explicit",
+      "evidence_span": "anyone will be able to service the robot just like replacing the batteries in your flashlight"
+    },
+    {
+      "id": "P5",
+      "text": "Imitation learning and microbehaviors let non-experts program the arm by demonstration instead of costly professional training",
+      "status": "explicit",
+      "evidence_span": "even my five-year-old will be able to program the robot by showing it, and the robot will then repeat that task"
+    },
+    {
+      "id": "P6",
+      "text": "NVIDIA Isaac edge compute, AI, and simulation accelerate development tools usable by anyone, not only developers",
+      "status": "explicit",
+      "evidence_span": "collaborating with NVIDIA to adopt the Isaac platform for edge compute, AI, and simulation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Everyday automation labor gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Affordable serviceable Ally Arm hardware",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Demonstration learning and AI stack",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smart, affordable, easy-to-service robotic arms that anyone can train for everyday automation",
+      "status": "explicit",
+      "evidence_span": "The Ally Arm is the smartest, most affordable, easy-to-service, and simple-to-train robotic arm"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We must create the right tool for the right job"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly expand the market for robotic technology and everyday automation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most affordable, easy-to-service"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simple-to-train robotic arm"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hardware cost/power/joint features folded into P3 as one affordability mechanism; skins and quick-change kept as serviceability/adaptability. LOI and monthly services traction excluded per 4.2. Anti-template: labor need, hardware, and learning stack are separately revisable."
+}

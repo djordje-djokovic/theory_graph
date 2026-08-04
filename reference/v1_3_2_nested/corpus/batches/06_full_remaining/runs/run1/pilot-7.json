@@ -1,0 +1,111 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Software built by a grower for growers uniquely fits farm workflows",
+      "status": "explicit",
+      "evidence_span": "it was built by a grower for growers, by a farmer for farmers. And that makes it one of a kind"
+    },
+    {
+      "id": "P2",
+      "text": "Farms must track who does what, when, and where for H-2A labor compliance and operations",
+      "status": "explicit",
+      "evidence_span": "AgriTrack captures the most vital data that farmers need, which is labor. In other words, who is doing what, when, and where"
+    },
+    {
+      "id": "P3",
+      "text": "Most farms still use pen and paper, which makes compliance impractical and audits often find violations",
+      "status": "explicit",
+      "evidence_span": "84% of farms today are still tracking everything with pen and paper"
+    },
+    {
+      "id": "P4",
+      "text": "Dashboard, field tablet with NFC clock-in, and geotagged phone apps digitize labor data into one system",
+      "status": "explicit",
+      "evidence_span": "Agritrack accomplishes this in three different apps"
+    },
+    {
+      "id": "P5",
+      "text": "Labor audit reports package Department of Labor–ready documentation on demand",
+      "status": "explicit",
+      "evidence_span": "the labor audit report. It's named that way for a reason, because it has everything that's in step with the Department of Labor"
+    },
+    {
+      "id": "P6",
+      "text": "Software calculates hour, piece-rate, and overtime pay so payroll that took a day finishes in minutes",
+      "status": "explicit",
+      "evidence_span": "what used to take a day or more to run payroll and do that process is now actually being done in minutes with AgriTrack"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Farm labor compliance burden",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Grower-built labor digitization suite",
+      "premise_ids": [
+        "P1",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Farms get accurate, compliance-ready labor data and faster payroll with confidence",
+      "status": "explicit",
+      "evidence_span": "farms can utilize AgriTrack to have confidence in the data that they're collecting, knowing that it's accurate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "So AgriTrack helps solve this problem by digitizing the whole process"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "difficult to stay compliant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We do all the heavy lifting for them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Future traceability/spray modules treated as roadmap and folded/excluded per §4.1(5). ARR and farm-count traction excluded. Founder grower credential coded because speaker asserts it as causal for product uniqueness.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-7",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

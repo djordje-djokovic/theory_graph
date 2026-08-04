@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people rarely check bills and lose hundreds yearly to hidden charges, errors, forgotten subscriptions, scams, and fraud",
+      "status": "explicit",
+      "evidence_span": "We almost never check our bills. And the sad truth is, it's not only hackers, but legitimate merchants that are taking advantage of us. So much so that the average American will lose over $300 this year to stuff we simply miss"
+    },
+    {
+      "id": "P2",
+      "text": "Banks catch only about a third of card fraud, leaving consumers to catch the rest",
+      "status": "explicit",
+      "evidence_span": "Card fraud alone will cost consumers over $7 billion this year, and the banks will catch only a third of it. The rest is up to us"
+    },
+    {
+      "id": "P3",
+      "text": "Crowdsourced flags alert you when a charge on your bill was flagged by others",
+      "status": "explicit",
+      "evidence_span": "get an alert any time a charge on your bill is flagged by anyone else out there on theirs"
+    },
+    {
+      "id": "P4",
+      "text": "After card registration, daily scans run 100+ automated tests and email when attention is required",
+      "status": "explicit",
+      "evidence_span": "BillGuard will do a daily scan of your credit card activity and email you when your attention is required"
+    },
+    {
+      "id": "P5",
+      "text": "Better Than Free model: free primary-card protection, then $4/month premium for unlimited cards",
+      "status": "explicit",
+      "evidence_span": "you can find out absolutely free with your primary card. When you're convinced and want to protect all the cards in your wallet, you can upgrade to our premium version for only $4 a month later this year"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution via direct-to-consumer plus bank, identity-theft, and antivirus partnerships",
+      "status": "explicit",
+      "evidence_span": "we're in talks with three of the top US banks to deliver BillGuard as a native part of their banking experience. And later this year, we'll make announcements with leading identity theft and antivirus companies for major distribution to their customers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unchecked bill losses",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "People-powered bill antivirus",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Better Than Free pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Bank and security partnerships",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect consumers' money by catching bad bill charges automatically",
+      "status": "explicit",
+      "evidence_span": "BillGuard is in the business of protecting your money"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lose over $300 this year to stuff we simply miss"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people-powered antivirus for our bills"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when you start using BillGuard, you stop losing money"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "major distribution to their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Cancel instructions, merchant reliability badge, and community Q&A folded into daily-scan product (§4.1(5)). Personal scam story treated as framing for P1. Cell-phone bill expansion roadmap folded into product vision, not a separate premise. Anti-template: need/product/price/channel separately evidenced. Transcript cuts off at BillGuard.com CTA.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1051",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:09+02:00"
+  }
+}

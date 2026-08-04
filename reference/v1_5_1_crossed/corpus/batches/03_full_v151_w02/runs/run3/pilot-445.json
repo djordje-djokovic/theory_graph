@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-445",
+    "coder_session_id": "session_02",
+    "session_case_index": 21,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Satellites have only one tank of fuel; when fuel runs out or orbits are wrong they must be destroyed, destroying large amounts of capital and revenue",
+      "status": "explicit",
+      "evidence_span": "In the last decade, almost 200 satellites worth about 100 billion dollars have had to be destroyed because they've run out of fuel"
+    },
+    {
+      "id": "P2",
+      "text": "Drop-in replacement fueling port enables safe, reliable, self-aligning on-orbit refueling without expensive robotic attendants",
+      "status": "explicit",
+      "evidence_span": "This fueling port allows satellites to be refueled safely and reliably in orbit"
+    },
+    {
+      "id": "P3",
+      "text": "OrbitFab launches tanks on available vehicles and manages orbital logistics to deliver the right fuel to customers when needed",
+      "status": "explicit",
+      "evidence_span": "We build tanks, we put them onto any available launch vehicle so we get the best deal putting them into space. In space, we manage the logistics and the orbital mechanics, and we deliver the right fuel to our customers when they need them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Single-tank satellite fuel limit",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "On-orbit fueling port standard",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Tanker logistics fuel delivery",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop throwing satellites away by enabling on-orbit refueling that recovers lost satellite value",
+      "status": "explicit",
+      "evidence_span": "It is time to stop throwing satellites away"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Customers can save ~50% CapEx; provider targets high gross margins",
+      "evidence_span": "Our customers can save 50 percent on their capital expenditure, and we take home gross margins of 90 percent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have the opportunity to recover billions of dollars of lost revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Because this is a drop-in replacement, we're getting rapid customer adoption"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're building gas stations in space"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Catch-22 framing motivates fueling port as separately sold enabling module vs tanker logistics service (split). Alignment arms and ISS water demo folded into port/logistics mechanisms. Heinlein solar-system vision not coded as premise (rule 4)."
+}

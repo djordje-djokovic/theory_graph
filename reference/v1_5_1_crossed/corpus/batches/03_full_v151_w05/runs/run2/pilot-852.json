@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-852",
+    "coder_session_id": "session_01",
+    "session_case_index": 22,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users juggle multiple desktops and consoles, duplicating hardware, software licenses, and suffering slow console browsing",
+      "status": "explicit",
+      "evidence_span": "That's a lot of hardware clutter. It's a pain in the butt to upgrade the software across all these devices"
+    },
+    {
+      "id": "P2",
+      "text": "A pocket PC delivers mainstream office, CAD, and mid-core gaming power and docks via inexpensive stations to peripherals",
+      "status": "explicit",
+      "evidence_span": "Tango has a computing power as that of a mainstream PC"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending dock cooling lets Tango be fanless, ventless, user-upgradable, and only 200 grams while delivering high wattage",
+      "status": "explicit",
+      "evidence_span": "through our patent-pending technology, we have been able to outsource the cooling job to the docking station"
+    },
+    {
+      "id": "P4",
+      "text": "Retail partners and Kickstarter launch address large desktop, console, and PC-gaming markets plus BYOD enterprises",
+      "status": "explicit",
+      "evidence_span": "We have relationship with Best Buy and Amazon and other large retailers whom we'll partner to distribute the product"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-device PC clutter",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "pocket dockable PC",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "retail Kickstarter and BYOD GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hands-free, hassle-free PC mobility that saves hardware and software cost",
+      "status": "explicit",
+      "evidence_span": "Tango gives you mobility that's hands-free and hassle-free"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I no longer need many devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "carry Tango in my pocket and simply connect it to any dock"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We will be launching a Kickstarter campaign this weekend"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Multi-desktop clutter, license duplication, and slow console browsers folded as one problem set (§4.1.6). Pocket PC performance, $89 docks, and docked cooling/upgrade form-factor folded as one product mechanism with patents inside (§4.1.1, §4.1.7). Market unit counts as framing; Best Buy/Amazon/Kickstarter/BYOD as GTM. ODM relationship as ops detail folded into product feasibility. iPod analogy as vision framing. Singleton D1/D3 retained. Anti-template: problem, product, and GTM separately revisable."
+}

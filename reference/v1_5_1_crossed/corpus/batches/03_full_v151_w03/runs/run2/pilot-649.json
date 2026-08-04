@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-649",
+    "coder_session_id": "session_05",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:45:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A media streaming platform focused on mostly local content (movies, TV shows, music videos)",
+      "status": "explicit",
+      "evidence_span": "we are building a media streaming platform for mostly local content"
+    },
+    {
+      "id": "P2",
+      "text": "Content can be streamed on mobile via an app and on TV",
+      "status": "explicit",
+      "evidence_span": "You can stream Tango TV on your mobile phone. We have an amazing mobile app. I can demo it to you later. And on your TV"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "local-content streaming platform",
+      "premise_ids": ["P1", "P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Access to local media content via streaming on phone and TV",
+      "status": "inferred",
+      "evidence_span": "media streaming platform for mostly local content"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building a media streaming platform for mostly local content"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.25
+  },
+  "notes": "Pitch cuts off mid financing ask; almost no causal content beyond local-content streaming on mobile/TV. Financing ask excluded per §4.2. One monolithic domain because no separately revisable modules are asserted."
+}

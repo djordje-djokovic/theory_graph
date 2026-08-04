@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home smart devices are connected and easily hacked because makers ignore intranet security",
+      "status": "explicit",
+      "evidence_span": "the companies making those devices are clueless about intranet security"
+    },
+    {
+      "id": "P2",
+      "text": "Once on the network, attackers can reach other devices, files, and sensitive information",
+      "status": "explicit",
+      "evidence_span": "Once they're on your network, they can get to the rest of your devices"
+    },
+    {
+      "id": "P3",
+      "text": "Plug-and-play Cujo gateway auto-discovers every device on the home network",
+      "status": "explicit",
+      "evidence_span": "It's plug and play. When you first connect it, it populates every single device on your network automatically"
+    },
+    {
+      "id": "P4",
+      "text": "Gateway sends metadata to cloud for threat intelligence and ML behavioral models",
+      "status": "explicit",
+      "evidence_span": "Cujo itself is a gateway. It takes metadata, sends it off to the cloud"
+    },
+    {
+      "id": "P5",
+      "text": "Blocks only anomalous device behavior while leaving the device working",
+      "status": "explicit",
+      "evidence_span": "we block that particular behavior, only that behavior. Your device is still working"
+    },
+    {
+      "id": "P6",
+      "text": "Threats blocked on one Cujo update all other Cujos in real time",
+      "status": "explicit",
+      "evidence_span": "when my Cujo is attacked and when I block a threat, everyone else's Cujos are updated in real time"
+    },
+    {
+      "id": "P7",
+      "text": "Sold at $99 plus $8.99/month for business-level protection of every device",
+      "status": "explicit",
+      "evidence_span": "Cujo is for sale for $99 as well as an $8.99 a month fee to keep every single device on your network protected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Home IoT hacking threat",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cujo gateway protection system",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware plus subscription pricing",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect the home network and smart devices from remote cyber threats",
+      "status": "explicit",
+      "evidence_span": "the smart way to fight home hacking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these same criminals are hacking your home and the smart devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect to your network to keep you safe against all kinds of cyber threats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep every single device on your network protected on a business level"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Unit sales and Amazon/Indiegogo promo excluded. Team years experience excluded as bio. Singleton D3: price/subscription is separately revisable. §4.1.3: $99 and monthly fee kept as one commercial premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-684",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:29:11+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

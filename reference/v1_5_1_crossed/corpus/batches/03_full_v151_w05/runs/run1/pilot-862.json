@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-862",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Anglers struggle to find and book fishing charters abroad (many phone calls for prices), while captains lack proper online marketing",
+      "status": "explicit",
+      "evidence_span": "Finding and booking fishing charters online is hard and time consuming"
+    },
+    {
+      "id": "P2",
+      "text": "Marketplace lets customers find, book, compare, and review charters; captains get free profiles to manage availability and get customers, with post-trip review collection",
+      "status": "explicit",
+      "evidence_span": "a website where customers can easily find, book, and compare, and review fishing charters"
+    },
+    {
+      "id": "P3",
+      "text": "Customer acquisition is mostly search at about $40 CAC with about $125 earned per booking (~300% ROAS)",
+      "status": "explicit",
+      "evidence_span": "We use mostly search to acquire customers. And it costs us about $40 to get one person to book a fishing trip through our website"
+    },
+    {
+      "id": "P4",
+      "text": "Differentiation includes seven-day customer service, 100% verified/interviewed captains, and high review/report rates on booked trips",
+      "status": "explicit",
+      "evidence_span": "we have seven-day customer service. All of our captains are 100% verified, and we interview each of them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard charter discovery for anglers and captains",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "fishing charter marketplace",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "search-driven unit economics",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anglers easily book memorable fishing charter experiences; captains get customers more easily",
+      "status": "explicit",
+      "evidence_span": "customers can easily find, book, and compare, and review fishing charters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you don't have a way to market your business properly"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "captains get a free profile. They can manage their business, their availability, and get customers more easily"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We earn about $125, which is a return on advertising spend of about 300%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-sentence (truncated=true). Angler booking friction and captain marketing gap folded as one two-sided discovery problem (§4.1.6). Find/book/compare/review and captain profiles folded as marketplace cascade (§4.1.7); verification/CS/reviews kept as trust package within product domain. $250k GMV and growth as traction. Market-size framing excluded. Anti-template: problem, marketplace, and acquisition economics separately revisable."
+}

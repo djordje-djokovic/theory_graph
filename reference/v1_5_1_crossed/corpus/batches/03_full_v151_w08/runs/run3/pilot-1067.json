@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1067",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sharing and getting breaking local news currently sucks—not real-time, accurate, local, or relevant",
+      "status": "explicit",
+      "evidence_span": "sharing and getting news right now kind of sucks"
+    },
+    {
+      "id": "P2",
+      "text": "A location-based mobile news desk lets users report, update, and read local news mapped to pins with rich media",
+      "status": "explicit",
+      "evidence_span": "allowing you to report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "id": "P3",
+      "text": "Eyewitness check-in lets on-scene users add accounts and media to a story",
+      "status": "explicit",
+      "evidence_span": "we allow anybody to post news and it gets pinpointed to a map"
+    },
+    {
+      "id": "P4",
+      "text": "Badges/press passes and a store redeem rewards to incentivize posting local news",
+      "status": "explicit",
+      "evidence_span": "we also have a rewards program that we've built out in the app as well to reward people for posting the news"
+    },
+    {
+      "id": "P5",
+      "text": "Web search mirrors the app map and newswire for local news discovery",
+      "status": "explicit",
+      "evidence_span": "how it all integrates into the web"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via promoted stories, publisher data syndication, in-app/web ads, and category sponsorships",
+      "status": "explicit",
+      "evidence_span": "how we plan to make the big bucks at MePorter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken local news sharing",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "location citizen news product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "promoted syndication ads sponsorships",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users decide and get important local news as it happens on mobile",
+      "status": "explicit",
+      "evidence_span": "allowing you to decide what local news is important"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "getting breaking news is not the best way right now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "report, update, and read local news as it happens on your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've actually been talking to a lot of publishers about data syndication deals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Map/list/categories/directions/post demo folded as cascade of location news desk (§4.1.7). Check-in and rewards kept as stated product slants. Multiple monetization paths folded as one commercial package. Contest/Million Man launch promo excluded (§4.2)."
+}

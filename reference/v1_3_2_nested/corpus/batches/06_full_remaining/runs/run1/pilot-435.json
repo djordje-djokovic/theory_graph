@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People attend events for both great content and socialization",
+      "status": "explicit",
+      "evidence_span": "People come to events for two reasons. To learn from great content and to socialize with people"
+    },
+    {
+      "id": "P2",
+      "text": "Livestreams, webinars, and AMAs deliver content but not socialization",
+      "status": "explicit",
+      "evidence_span": "they could livestream, in which case people can learn from great content, but they can't socialize"
+    },
+    {
+      "id": "P3",
+      "text": "Teo places customized avatars in a shared virtual venue where hundreds of real people can move and talk",
+      "status": "explicit",
+      "evidence_span": "You appear inside of a venue. This is my avatar that I customized"
+    },
+    {
+      "id": "P4",
+      "text": "Distributed communities need a way to bring members into the same virtual room",
+      "status": "explicit",
+      "evidence_span": "no way to bring them together into the same room. With Teo, now they can"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue is a monthly venue fee plus a share of ticket sales and virtual sponsorship",
+      "status": "explicit",
+      "evidence_span": "charging organizations a monthly fee to have access to our venues. And then we also take a percentage of ticket sales and virtual sponsorship"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Event dual-benefit gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Avatar virtual venue",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Venue and sponsorship monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Online events that deliver both learning from content and real socialization",
+      "status": "explicit",
+      "evidence_span": "a product that gives the two benefits of why we are all here at this event online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "People come to events for two reasons. To learn from great content and to socialize with people"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gives the two benefits of why we are all here at this event online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can move around and actually talk to people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charging organizations a monthly fee to have access to our venues"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained as separately revisable monetization. Session-length/traction observations excluded as metrics. Offline sponsorship market size treated as framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-435",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

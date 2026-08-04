@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1068",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Busy parents need kids' immunizations, growth, and milestones available anytime, especially in emergencies",
+      "status": "explicit",
+      "evidence_span": "Imagine having access to all your kid's critical medical information available to you in your pocket"
+    },
+    {
+      "id": "P2",
+      "text": "Patient-owned-records law plus signed release obliges doctors to provide records for the service to pull",
+      "status": "explicit",
+      "evidence_span": "a law passed which says you now own your medical records"
+    },
+    {
+      "id": "P3",
+      "text": "Subscription web and mobile app presents parent-focused records without DIY data entry",
+      "status": "explicit",
+      "evidence_span": "provide to you all this information available from a secure website and a mobile app"
+    },
+    {
+      "id": "P4",
+      "text": "Electronic release leads to faxed records that are ingested and uploaded for the parent",
+      "status": "explicit",
+      "evidence_span": "The key is it's effortless for the customer"
+    },
+    {
+      "id": "P5",
+      "text": "HIPAA compliance with extra security layers is required for cautious parents to adopt",
+      "status": "explicit",
+      "evidence_span": "we are HIPAA compliant"
+    },
+    {
+      "id": "P6",
+      "text": "About-a-latte monthly subscription sold with co-marketing on baby sites where moms gather",
+      "status": "explicit",
+      "evidence_span": "the cost will be roughly a cost of latte a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent need and records law",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Effortless secure kids PHR",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Latte-priced mom distribution",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Organize kids' health information for busy parents so critical data is always at hand",
+      "status": "explicit",
+      "evidence_span": "organize the kids' health, one busy, frazzled parent at a time"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We intend to take full use of this new law"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "busy, caring moms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "full service, it's no effort, and it's consumer-centric"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription-based service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fax mechanics evidenced via effortless-customer claim plus release workflow elsewhere; evidence_span for P4 uses the mechanism outcome sentence. Competitor flaws folded into no-DIY product claim. Family expansion vision uncoded."
+}

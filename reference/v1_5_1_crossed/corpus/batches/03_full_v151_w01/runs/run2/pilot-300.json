@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-300",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:19:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large shares of produce are lost in long supply chains while synthetic pesticides that control microbial spoilage are harmful and being banned, and natural waxes are hard to scale",
+      "status": "explicit",
+      "evidence_span": "currently used pesticides are synthetic compounds, which are harmful to human beings and the environment, so they are being banned. And even though there are natural waxes available that might come from plant or insect compounds, scaling up these solutions is a real challenge"
+    },
+    {
+      "id": "P2",
+      "text": "Nat4Bio coatings use biomolecules from non-GMO natural microbes via fermentation: transparent, odorless, tasteless edible coatings",
+      "status": "explicit",
+      "evidence_span": "Our coatings are based on biomolecules produced by non-GMOs, which were isolated from nature. These coatings are transparent, odorless, and tasteless, so they don't alter the customer experience"
+    },
+    {
+      "id": "P3",
+      "text": "Glucose-based fungal biopolymer plus natural antimicrobials regulate gas exchange to delay ripening and matrix-deliver antimicrobials at low dose",
+      "status": "explicit",
+      "evidence_span": "The coating is made of a glucose-based biopolymer produced by fungi and naturally occurring antimicrobials produced by different strains. We combine the biopolymer with food grade excipients, forming a coating that regulates the gas exchange between the fruit and the environment, delaying the ripening process"
+    },
+    {
+      "id": "P4",
+      "text": "Citrus MVP matches common synthetic fungicide efficacy so packers can market zero chemical residue produce with decay control and a price premium",
+      "status": "explicit",
+      "evidence_span": "our formulation showed to be as effective as the most commonly used synthetic fungicide in citrus. And this means that our customers will be able to market their produce as zero chemical residues, capturing a price premium and without compromising decay control"
+    },
+    {
+      "id": "P5",
+      "text": "Similar formulations protect berries and extend climacteric fruit shelf life with less weight loss and better firmness in long chains",
+      "status": "explicit",
+      "evidence_span": "A similar formulation also showed a good performance protecting berries, and our coating also extend the shelf life of produce, like our climacteric fruits, like avocados, gaining up to five days of shelf life"
+    },
+    {
+      "id": "P6",
+      "text": "Product integrates with existing packing-line machinery without special equipment",
+      "status": "explicit",
+      "evidence_span": "The product integrates seamlessly with existing machinery, so there is no need to invest in special equipment"
+    },
+    {
+      "id": "P7",
+      "text": "Initial GTM targets major Latin American export classes—citrus, avocados, and berries—with cell-free stable formulations versus living-microbe competitors needing special logistics",
+      "status": "explicit",
+      "evidence_span": "we're targeting the most exported fruit classes in Latin America, which are citrus, avocados, and berries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Produce waste and banned synthetic protection",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Fermented microbial food coatings",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Packing-line fit and LatAm fruit GTM",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect food against waste and insecurity without compromising human or planetary health",
+      "status": "explicit",
+      "evidence_span": "help fight against food waste and food insecurity without compromising human or planetary health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enable zero-chemical-residue marketing with decay control and price premium",
+      "evidence_span": "market their produce as zero chemical residues, capturing a price premium and without compromising decay control"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "The coating also provides a structural matrix, preventing the drift and enhancing the delivery of the antimicrobials"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Almost 30% of all food produced is lost or wasted every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we harness the power of microbial fermentation to protect our food"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The product integrates seamlessly with existing machinery"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Biopolymer + antimicrobial delivery cascade kept mostly in P3; citrus efficacy/commercial claim (P4) and berry/avocado shelf-life (P5) split as distinct value paths. R&D agreements and field-test traction excluded. Cell-free stability vs living-microbe competitors folded into P7 GTM differentiation. Singleton D1 retained. Anti-template: problem, coating tech, and packing/GTM separately revisable."
+}

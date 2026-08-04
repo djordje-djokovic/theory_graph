@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1149",
+    "coder_session_id": "session_06",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise knowledge is siloed in emails, IMs, and conversations, so people repeat work and cannot find who already knows the answer",
+      "status": "explicit",
+      "evidence_span": "all the knowledge was siloed. It was siloed in emails, IMs, conversations"
+    },
+    {
+      "id": "P2",
+      "text": "A Quora-like Q&A melded with wiki flexibility creates an organically growing, searchable enterprise knowledge base organized around questions",
+      "status": "explicit",
+      "evidence_span": "we take the power of a Q&A site, meld it with the flexibility of wikis to create a really organically growing, really easily searchable knowledge base"
+    },
+    {
+      "id": "P3",
+      "text": "Voting, enterprise anonymity for 'stupid but important' questions, and wiki crowdsourcing improve answer quality and contribution",
+      "status": "explicit",
+      "evidence_span": "We have a voting mechanic that allows people to stand behind and endorse certain answers"
+    },
+    {
+      "id": "P4",
+      "text": "Users can ask and answer by email and listserv content is extracted into the searchable index",
+      "status": "explicit",
+      "evidence_span": "We allow people to ask questions directly by email, answer them directly by replying to an email"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "siloed enterprise knowledge",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "question-centric searchable KB",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "email and listserv integration",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help people at companies share knowledge so the first place they turn for answers is the shared base",
+      "status": "explicit",
+      "evidence_span": "help people at companies share knowledge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There was no good knowledge base"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all our content is organized around questions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "people and companies live in their Outlook email boxes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Corporate email verification folded into enterprise KB access. Intelligent email routing described as 'working on' and omitted as not yet a required condition. Eng/sales/CS/law use cases are applications of one platform, not separate premises. Seed investors and waitlist traction excluded. Voting/anon/wiki treated as one Q&A surface feature package (P3) alongside core Q&A+wiki premise (P2)."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-212",
+    "coder_session_id": "session_06",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:16:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developer toil from software complexity wastes large amounts of time and drives unhappiness and attrition",
+      "status": "explicit",
+      "evidence_span": "developers spend half their week in toil"
+    },
+    {
+      "id": "P2",
+      "text": "AppMap delivers personal runtime observability inside the code editor as developers write code, including across data stores and services",
+      "status": "explicit",
+      "evidence_span": "see the behavior of their software as they write code"
+    },
+    {
+      "id": "P3",
+      "text": "Automatic analysis alerts on performance and security issues found in runtime behavior while coding",
+      "status": "explicit",
+      "evidence_span": "automatically analyzes this information to find issues why developers work, and it alerts them if it finds a problem"
+    },
+    {
+      "id": "P4",
+      "text": "Deep language/framework integration and open source enable adoption across communities; maps are shareable for collaboration",
+      "status": "explicit",
+      "evidence_span": "AppMap is open source to integrate with new languages and new communities"
+    },
+    {
+      "id": "P5",
+      "text": "Free for individuals, students, and open-source projects, with partnership path to accelerate other developer tools from inside the editor",
+      "status": "explicit",
+      "evidence_span": "AppMap is free for individuals, students, and open source projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "developer toil problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "editor-native runtime observability",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "individual free and partner GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce developer toil and ship more performant, secure, and reliable code faster",
+      "status": "explicit",
+      "evidence_span": "reduce toil and ship more performant, secure, and reliable code faster"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Toil robs 25 million developers of the joy of coding"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personal observability, performance, and security analysis to developers when they work to reduce toil"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Delivering the developer observability experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Performance and security demo findings treated as examples of P3 analysis, not separate premises. Marketplace ratings and Postman partnership treated as traction/GTM evidence supporting P5. Incumbent DAST/APM disruption framed as market opportunity, not premise."
+}

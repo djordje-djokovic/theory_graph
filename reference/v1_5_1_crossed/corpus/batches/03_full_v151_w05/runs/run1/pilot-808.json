@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-808",
+    "coder_session_id": "session_06",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drones crash near obstacles in cities and infrastructure because they lack onboard sensing and autonomy and need one operator each",
+      "status": "explicit",
+      "evidence_span": "These drones do not have eyes and a brain, and they're only as capable as the operator on the ground, and they also require one operator for every drone"
+    },
+    {
+      "id": "P2",
+      "text": "Guardian is a platform-agnostic sensor-software suite that automatically detects and avoids obstacles",
+      "status": "explicit",
+      "evidence_span": "a platform agnostic sensor software suite that automatically detects obstacles in the environment and avoids them"
+    },
+    {
+      "id": "P3",
+      "text": "System overrides unsafe operator inputs and wind gusts with adjustable safety distance and swappable sensors",
+      "status": "explicit",
+      "evidence_span": "It alters the flight path even if the operator is trying to crash the drone or if a wind gust comes and pushes it toward the obstacle"
+    },
+    {
+      "id": "P4",
+      "text": "Enables non-expert operators and aerial work for farming, infrastructure inspection, and delivery",
+      "status": "explicit",
+      "evidence_span": "finally allow people that are not highly trained pilots to use drones"
+    },
+    {
+      "id": "P5",
+      "text": "GTM partners with infrastructure inspection commercial users such as Upwind Solutions",
+      "status": "explicit",
+      "evidence_span": "going to market by partnering with major infrastructure inspection, commercial users that want to use drones today"
+    },
+    {
+      "id": "P6",
+      "text": "Roadmap extends avoidance to other aircraft in shared airspace using NSF SBIR work",
+      "status": "explicit",
+      "evidence_span": "not only will it avoid obstacles near it, it will also avoid other aircraft in the airspace"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Obstacle-dense drone flight limits",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Guardian obstacle avoidance suite",
+      "premise_ids": ["P2", "P3", "P4", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Infrastructure inspection partnerships",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safe autonomous obstacle avoidance that unlocks commercial aerial drone workforces",
+      "status": "explicit",
+      "evidence_span": "solve one of the biggest problems in drones today and finally enable companies to unlock their aerial workforce"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They're very challenging to fly in that up-close airspace"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically detects obstacles in the environment and avoids them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnering with major infrastructure inspection, commercial users"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Farmer/inspector/delivery uses folded as applications of unlocked aerial workforce (same avoidance mechanism). Adjustable distance and sensor swaps are configuration facets of Guardian—kept with override behavior as one safety-control package with P3. Early-adopter program is GTM detail folded into partnership path. Team competitions/accelerator bio excluded. Singletons D1 and D3 retained as independently revisable problem and channel modules."
+}

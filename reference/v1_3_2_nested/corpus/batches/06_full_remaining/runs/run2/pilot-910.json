@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-910",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "3DLT is a marketplace for selling professional 3D-printable designs like iStock for 3D printing",
+      "status": "explicit",
+      "evidence_span": "Think of us as the iStock photo of 3D printing"
+    },
+    {
+      "id": "P2",
+      "text": "Anyone from grandmother to grandson can find designs spanning frames to furniture to shoes",
+      "status": "explicit",
+      "evidence_span": "everyone, from your grandmother to your grandson, can find and buy designs on 3DLT"
+    },
+    {
+      "id": "P3",
+      "text": "Buyers without printers use customization plus a 1,000-shop network for local pickup or shipping",
+      "status": "explicit",
+      "evidence_span": "consumers that don't have their own 3D printers? With 3DLT, it's built right in"
+    },
+    {
+      "id": "P4",
+      "text": "Business model takes design revenue and print profit while printers compete down price",
+      "status": "explicit",
+      "evidence_span": "Our system allows 3D printers to compete for your business. With competition comes commoditization, and that means lower pricing for you"
+    },
+    {
+      "id": "P5",
+      "text": "Designers open stores in minutes and earn passive income; buyers can also commission designers",
+      "status": "explicit",
+      "evidence_span": "You can work directly with our designers to fast-track the innovation to new products"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Design marketplace two-sided",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fulfillment and pricing system",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how people buy by letting them choose manufacture timing, place, and method",
+      "status": "explicit",
+      "evidence_span": "3DLT advances how you buy things"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cheaper, greener, better-quality printable products than mass manufacture",
+      "evidence_span": "products that are cheaper, greener, and better quality than anything that is currently mass manufactured"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "buy designs on 3DLT"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "choose when, where, and how the products you buy are manufactured"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Market-flip-by-2020 and 'everyone will want what we sell' treated as vision (§4.1(4)); secondary_value captures greener/cheaper claim. Promo credits excluded. Two-domain structure this run."
+}

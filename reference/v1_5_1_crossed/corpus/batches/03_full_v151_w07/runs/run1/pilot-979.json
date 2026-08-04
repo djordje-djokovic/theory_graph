@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-979",
+    "coder_session_id": "session_03",
+    "session_case_index": 18,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Local businesses leave spend on the table because punch cards and check-in apps are high-friction and not personalized",
+      "status": "explicit",
+      "evidence_span": "85% of their customers are not meeting their maximum potential and spending as much as they could at that store"
+    },
+    {
+      "id": "P2",
+      "text": "Cardify awards personalized VIP points/rewards when customers simply swipe their existing credit cards—no NFC or phone at register",
+      "status": "explicit",
+      "evidence_span": "I get points at these local places by simply swiping my credit card"
+    },
+    {
+      "id": "P3",
+      "text": "Businesses can offer tailored perks, competitions, and redemptions with zero software/hardware integration",
+      "status": "explicit",
+      "evidence_span": "there is zero software integration, zero hardware integration for the business"
+    },
+    {
+      "id": "P4",
+      "text": "Real-time presence CRM shows who is in-store with spend and social context plus bottom-line insights",
+      "status": "explicit",
+      "evidence_span": "Cardify, in real time, will show Fig & Olive who is at their store right now"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via Citigrid Media and Urban Spoon reaches ~half a million US merchants",
+      "status": "explicit",
+      "evidence_span": "Cardify has a partnership with Citigrid Media and with Urban Spoon, which gets us to about half a million merchants across the US"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken loyalty and under-monetized customers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "swipe-to-earn personalized rewards",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "in-store CRM insights",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "merchant distribution partnerships",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get tailored VIP perks effortlessly; local businesses recognize and engage customers and grow spend",
+      "status": "explicit",
+      "evidence_span": "get VIP rewards and perks at your favorite places that are custom-tailored towards you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "none of these solutions are personalized for me"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I simply do what I normally do. I pay. And I instantly get points in Cardify"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is pretty much your next generation's CRM system for local businesses"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the most disruptive products without distribution is nothing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript truncated mid-announcement. Revenue concentration + punch-card/app friction folded as one loyalty problem (§4.1.6). Card link, auto points, notifications, perk catalog, and zero integration folded as rewards product cascade (§4.1.7). Presence CRM split as merchant ops module. Partner distribution as GTM. Four domains."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-878",
+    "coder_session_id": "session_01",
+    "session_case_index": 24,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small businesses need logos and brand assets but face expensive crowdsourcing or low-quality DIY branding",
+      "status": "explicit",
+      "evidence_span": "Either pay hundreds and thousands of dollars for online crowdsource services, or if you're like most businesses who can't afford that, you end up doing something on your own and compromise for really low quality branding"
+    },
+    {
+      "id": "P2",
+      "text": "Taylor is a learning system that studies a business and generates template-free brand designs from design rules",
+      "status": "explicit",
+      "evidence_span": "Taylor is a learning system that turns your computer into a graphic designer"
+    },
+    {
+      "id": "P3",
+      "text": "For $50, customers get logo, business card, letterhead, and brand book with pay-only-when-thrilled transparency",
+      "status": "explicit",
+      "evidence_span": "for just 50 bucks"
+    },
+    {
+      "id": "P4",
+      "text": "The service continues designing offline and online assets and surfaces brand/trend insights as a learning system",
+      "status": "explicit",
+      "evidence_span": "Taylor is not just a design tool. It's a service, and it's going to walk with your company and design everything it can possibly need"
+    },
+    {
+      "id": "P5",
+      "text": "Tens of millions of small businesses form a large branding market addressable via promo-driven online signup",
+      "status": "explicit",
+      "evidence_span": "Over 80 million small businesses out there want branding, need branding, but can't really afford it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unaffordable small-business branding",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI brand generation service",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "SMB branding market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Every small business gets accessible, high-quality branding competitive with big companies",
+      "status": "explicit",
+      "evidence_span": "they can look as good as any Fortune 500 company with Taylor"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "can't really afford it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put an in-house designer in every business across the world for just 50 bucks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Taylor is well positioned to take over this industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Crowdsource cost vs DIY quality folded as one affordability problem (§4.1.6). Design-rules engine, visual references, no-templates, and large option space folded as one generation mechanism; $50 package and pay-when-thrilled as commercial packaging of that offer (§4.1.3, §4.1.7). Ongoing assets and insights as service-extension module in product domain. Stripe/Wix analogy as framing. Promo codes as GTM detail of market entry. Singleton D1/D3 retained. Anti-template: problem, product/service, and market separately revisable."
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-812",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise design-to-manufacturing is cumbersome across heterogeneous machines, operators, file shares, and decentralized sites",
+      "status": "explicit",
+      "evidence_span": "all day, they go back and forth with Excel files, spreadsheets, file shares. It's a very cumbersome process"
+    },
+    {
+      "id": "P2",
+      "text": "A cloud manufacturing platform connects 3D printers, CNC, water jets, robots, and assembly workflows for remote one-click production",
+      "status": "explicit",
+      "evidence_span": "connecting all these machines and workflows in the cloud, anytime, anywhere"
+    },
+    {
+      "id": "P3",
+      "text": "Enterprises pay large per-site licenses to run the platform as they scale worldwide",
+      "status": "explicit",
+      "evidence_span": "we charge 200K per site license"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented factory workflow pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cloud one-click manufacturing OS",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise site licensing",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Go from idea to real manufactured object instantly, anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "taking an idea to a real object instantly, anytime, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "time to market is one of the most important things when you're trying to beat your competition"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our vision is one-click manufacturing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to be more efficient as they scale worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Heterogeneous machine software and multi-site decentralization folded as one manufacturing-workflow pain (v1.5.1 §4.1.6). Prior 3D-print OS traction and Ford/Cisco names treated as evidence/customers of the cloud platform and licensing, not separate premises; drone/CNC/robot/assembly/factory-duplicate demos folded as cascade of one cloud OS (§4.1.7). Anti-template: problem, platform, and licensing separately revisable."
+}

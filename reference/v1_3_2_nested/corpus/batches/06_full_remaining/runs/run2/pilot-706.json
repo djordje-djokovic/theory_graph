@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travel-agent-led medical tourism creates unvetted doctors and poor outcomes that destroy trust",
+      "status": "explicit",
+      "evidence_span": "unvetted doctors and poor outcomes, leads to a lack of trust"
+    },
+    {
+      "id": "P2",
+      "text": "US costs can bankrupt patients, wait times abroad are long in socialized systems, and some life-saving procedures are unavailable at home",
+      "status": "explicit",
+      "evidence_span": "Healthcare costs in the United States are a black box, often leaving patients bankrupt"
+    },
+    {
+      "id": "P3",
+      "text": "Launch marketplace covers Mexico, Costa Rica, and the Cayman Islands for North American patients",
+      "status": "explicit",
+      "evidence_span": "Today, we are launching with Mexico, Costa Rica, and the Cayman Islands"
+    },
+    {
+      "id": "P4",
+      "text": "Credential review, interviews, and sometimes live observation admit only a small share of doctor applicants",
+      "status": "explicit",
+      "evidence_span": "We review credentials, we conduct personal interviews, and in some cases, we watch these doctors operate"
+    },
+    {
+      "id": "P5",
+      "text": "Patients see availability, ratings, experience, and transparent pricing then chat, video, and share files in a HIPAA-compliant center",
+      "status": "explicit",
+      "evidence_span": "Janet is able to view availability, ratings, experience, and transparent pricing"
+    },
+    {
+      "id": "P6",
+      "text": "The marketplace handles administrative documents, records, and payments for booked care",
+      "status": "explicit",
+      "evidence_span": "collecting documents, records, and payments, so doctors can do best, do what they do best"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Trust and access reasons to travel",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Vetted destination doctor supply",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Transparent booking and care ops",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect patients to top-rated international doctors they can trust",
+      "status": "explicit",
+      "evidence_span": "connect with one of our top-rated doctors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "MedRepublic was built to service the needs of these three travelers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "strict vetting process led by our U.S. Board of Physicians"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Using our HIPAA-compliant communication center"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Father cancer story motivational, excluded as premise. 60 doctors/10 specialties launch detail folded into marketplace supply.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-706",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers need third-wave taste with single-serve convenience that pods fail to deliver sustainably",
+      "status": "explicit",
+      "evidence_span": "make a machine that combines the quality of the third wave coffee roasters with the convenience of a single serve pod system"
+    },
+    {
+      "id": "P2",
+      "text": "Patented centrifugal brew with connected fresh-bean grinding replaces pods and filters",
+      "status": "explicit",
+      "evidence_span": "We don't use any pods, filters, or wasteful materials"
+    },
+    {
+      "id": "P3",
+      "text": "Marketplace auto-ordering from local roasters ends coffee downtime",
+      "status": "explicit",
+      "evidence_span": "we're going to solve the biggest problem in coffee history, coffee downtime"
+    },
+    {
+      "id": "P4",
+      "text": "Monetize via machine margins and marketplace order cuts",
+      "status": "explicit",
+      "evidence_span": "We're manufacturing the machine, and we take a cut of every order"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Quality-plus-convenience need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected centrifugal system",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "IoT marketplace economics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Spin fresh third-wave coffee at home with automatic bean supply",
+      "status": "explicit",
+      "evidence_span": "we're spinning coffee"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "the machine uses fresh beans to grind and brew your coffee. The beans get ordered automatically"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "quality of the third wave coffee roasters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Spin Coffee Maker"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Giveaway/rewards CTA excluded. Steel filter / residue container details folded into P2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:58:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

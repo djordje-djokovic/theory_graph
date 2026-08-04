@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "coder_session_id": "session_02",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z",
+    "case_id": "pilot-362",
+    "session_case_index": 10,
+    "extraction_run": 1
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outdoor maintenance still relies on gasoline/diesel equipment amid a long-term labor shortage",
+      "status": "explicit",
+      "evidence_span": "traditional equipment is gasoline or diesel powered, and there's a long-term labor shortage"
+    },
+    {
+      "id": "P2",
+      "text": "Modular 100% electric outdoor work robot platform with quick-attach tools, swappable batteries, and heavy payload for many operations including snow and vegetation",
+      "status": "explicit",
+      "evidence_span": "We've developed a powerful modular platform for not just grass cutting and snow plowing, but dozens of different operations"
+    },
+    {
+      "id": "P3",
+      "text": "Solar-farm-specific electric rough-cut and offset cutting decks cut thick vegetation and reach under panels around I-beams where typical equipment cannot",
+      "status": "explicit",
+      "evidence_span": "we've developed the world's first 100% electric rough cut deck that is especially made to cut down that thick vegetation that grows on solar sites"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fossil outdoor equipment and labor gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Modular electric outdoor robot platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Solar vegetation cutting decks",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make outdoor work equipment 100% electric and sustainable, starting with robotic solar vegetation management",
+      "status": "explicit",
+      "evidence_span": "our mission is to make outdoor work equipment 100% electric"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Join us in making outdoor work equipment sustainable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're building an outdoor work robotics platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our solution was robotic vegetation management for solar farms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Gasoline/diesel and labor shortage kept as one outdoor-maintenance pain set (rule 6). Quick-attach, battery swap, hydraulics, and payload folded into modular platform. Solar rough-cut and offset decks split as launch-use-case mechanism that could fail independently of the general platform (tie-break split). Signed-agreement traction excluded."
+}

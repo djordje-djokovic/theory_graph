@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-806",
+    "coder_session_id": "session_04",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People want home security but traditional systems are hard to install, non-portable for renters, overreactive, and decor-unfriendly, so adoption stays under 20%",
+      "status": "explicit",
+      "evidence_span": "the solutions that are available today are both broken and outdated"
+    },
+    {
+      "id": "P2",
+      "text": "Sentry is an all-in-one self-install hub with camera, motion, environmental sensors, mobile app, customizable themes, and control of Nest/Hue/Wemo devices",
+      "status": "explicit",
+      "evidence_span": "an all-in-one solution to know and control your home from one single destination"
+    },
+    {
+      "id": "P3",
+      "text": "Primary early segments are urban dwellers and pet parents who need portable security",
+      "status": "explicit",
+      "evidence_span": "the urban dweller market as well as pet parents"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware-as-platform business: unit plus cloud video/media services and Android developer apps, offered around $299",
+      "status": "explicit",
+      "evidence_span": "our business is really one of hardware as a platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken traditional home security",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "portable all-in-one Sentry hub",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "urban/pet segments and platform packaging",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Modern households protect what matters with simple, elegant, portable home awareness and control",
+      "status": "explicit",
+      "evidence_span": "help protect what matters most"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "while the majority of Americans, including myself, want to have home security, less than 20% of us actually do"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-installation process that takes minutes versus hours of expert installation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "being able to take this solution on to go with them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Install friction, non-portability, false alerts, and aesthetics folded as one broken-security problem (§4.1.6). Sensors, app, themes, smart-home integrations, and touchscreen roadmap folded as Sentry feature cascade (§4.1.7). Kickstarter $400k treated as traction. Anti-template: problem, hub product, and segment/platform packaging separately revisable."
+}

@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many diagnostic tools are inaccessible to remote clinics due to cost and bulk",
+      "status": "explicit",
+      "evidence_span": "not accessible because they are expensive or too bulky"
+    },
+    {
+      "id": "P2",
+      "text": "Tablet ultrasound enables local diagnosis and specialist linkage",
+      "status": "explicit",
+      "evidence_span": "new ultrasound solution working on an iPad"
+    },
+    {
+      "id": "P3",
+      "text": "App supports imaging adjustments, captures, measurements, and notes/voice",
+      "status": "explicit",
+      "evidence_span": "I can use speech to text to be more productive, or maybe record a voice memo"
+    },
+    {
+      "id": "P4",
+      "text": "Image sharing and live calls let distant specialists advise quickly",
+      "status": "explicit",
+      "evidence_span": "Some decisions need to be made quickly, some from far away, and some quickly from far away"
+    },
+    {
+      "id": "P5",
+      "text": "Priced at roughly one third of conventional ultrasound for emergency settings",
+      "status": "explicit",
+      "evidence_span": "This is one third of the price of the regular ultrasound device"
+    },
+    {
+      "id": "P6",
+      "text": "Future path includes emerging-clinic trials, regulated US/EU entry, and possible consumer use",
+      "status": "explicit",
+      "evidence_span": "we are in trials with local clinics in emerging market countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Clinic equipment gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Oscult product and tele-expertise",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Price and market expansion path",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve patient health via better local diagnosis and specialist connection",
+      "status": "explicit",
+      "evidence_span": "improve the patient's health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not equipped to meet patients' needs"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better diagnose and connect to specialists"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "great tool for emergency"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Education broadcast folded into expansion path this run. Demo network failures ignored.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-824",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

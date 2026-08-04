@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-675",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People spend most time indoors where exhaled CO2 rises far above outdoor levels and impairs cognitive performance",
+      "status": "explicit",
+      "evidence_span": "we typically have three times the concentrations than outside"
+    },
+    {
+      "id": "P2",
+      "text": "Conventional ventilation mostly recirculates indoor air and takes little outdoor air because conditioning that air is energy-intensive",
+      "status": "explicit",
+      "evidence_span": "Most of them just recirculate the same air, taking minimum from outside"
+    },
+    {
+      "id": "P3",
+      "text": "A microfluidic high-density photobioreactor with LED-powered photosynthetic algae biochips converts indoor CO2 to oxygen as a self-sustained, wall-mountable system with replaceable cartridges",
+      "status": "explicit",
+      "evidence_span": "the system itself is microfluidic high-density photobioreactor"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market starts by selling custom and standard units to businesses via direct sales and HVAC distribution partners",
+      "status": "explicit",
+      "evidence_span": "we're targeting businesses, selling our custom systems as well as standard units"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial launch comes first, with forthcoming expansion to residential",
+      "status": "explicit",
+      "evidence_span": "launch of first generation of systems to commercial segment with forthcoming expansion to residential"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "indoor CO2 and ventilation gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "algae photobioreactor fresh-air system",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "business sales and rollout sequence",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fresh air made indoors that improves indoor air quality where people spend their time",
+      "status": "explicit",
+      "evidence_span": "improving indoor air quality by making fresh air"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It might not be the work that's making you sick, but the actual air that you breathe"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've created a system that makes fresh air indoors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fresh air in offices and making healthier homes"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Indoor CO2 harms, ventilation failure, and symptoms folded as one problem set with ventilation status quo kept separate as a distinct condition (v1.5.1 §4.1.6). Photobioreactor parts, cartridge maintenance, maple-tree/demo performance, and office/home/hospital uses folded as one mechanism plus performance package (§4.1.7–8). Singleton D2 retained as the core product module. Anti-template: problem, product, and GTM/rollout are separately revisable. Team/advisor credentials excluded."
+}

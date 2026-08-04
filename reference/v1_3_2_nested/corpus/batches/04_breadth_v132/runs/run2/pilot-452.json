@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The vision system detects berries, decides which to pick, and locates them on the plant",
+      "status": "explicit",
+      "evidence_span": "Our vision system detects the berries in that image, decides which to pick, figures out the position of that berry"
+    },
+    {
+      "id": "P2",
+      "text": "A unique patented gripper closes with defined force so it can grab produce of different sizes without crushing or dropping it",
+      "status": "explicit",
+      "evidence_span": "We close the fingers with a defined amount of force, allowing us to grab objects of different sizes without crushing or dropping them."
+    },
+    {
+      "id": "P3",
+      "text": "The self-contained system operates continuously in real field conditions with all compute on board",
+      "status": "explicit",
+      "evidence_span": "Our system does all this in real time while hanging off the back of a tractor and moving continuously over real strawberry fields."
+    },
+    {
+      "id": "P4",
+      "text": "Year-round strawberry harvest is a more valuable target than the low-value or seasonal tasks competitors chose",
+      "status": "explicit",
+      "evidence_span": "some startups target low-value activities like weeding, only worth $1,000 to $2,000 per acre, or they harvest fruits like apples, where they're only needed a few months a year"
+    },
+    {
+      "id": "P5",
+      "text": "Deployment requires no change in the growing process",
+      "status": "explicit",
+      "evidence_span": "We don't require any change in growing process, providing a smooth path for deployment."
+    },
+    {
+      "id": "P6",
+      "text": "Growers pay 23 cents per pound for a full picking service, slightly less than their current spend",
+      "status": "explicit",
+      "evidence_span": "growers will pay us 23 cents per pound. This is slightly less than the current spend."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Field-ready picking platform",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Strawberry go-to-market and service model",
+      "premise_ids": ["P4", "P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Growers outsource strawberry harvest to robots at slightly below their current picking cost",
+      "status": "explicit",
+      "evidence_span": "We pick strawberries, and growers will pay us 23 cents per pound."
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Saving the world's food production system by automating work people do not want to do",
+      "evidence_span": "saving the world's food production system by automating the work people don't want to do"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "it plans a path to grab it, and our software commands the robot arm to move the gripper to the berry"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it operates all day, every day, for months and years on end"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Traptic focuses on year-round strawberry harvest."
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Field robustness and on-board compute merged into one self-contained-operation premise (both describe operating the same machine in situ). Grower partnerships and next-year commercial deployment read as traction and excluded. Master-plan revenue ladder and 'future of robotics is outdoors' treated as vision framing, uncoded per v1.3.2 clarification 4; the food-production claim recorded as a secondary value criterion. Two domains: one machine module, one market-and-service module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-452",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:27:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

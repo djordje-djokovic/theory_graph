@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1016",
+    "coder_session_id": "session_03",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing EV cars are slow/expensive/inefficient/limited-range; developing-world two-wheelers are unsafe, hard to drive, limited utility, and pollute",
+      "status": "explicit",
+      "evidence_span": "these take forever to get to market. They're incredibly expensive to develop. They're expensive to purchase. They're not actually that efficient. And they have limited range"
+    },
+    {
+      "id": "P2",
+      "text": "Need a motorcycle-profile vehicle with car safety, weather/off-road versatility, easy driving, affordability, and unprecedented efficiency",
+      "status": "explicit",
+      "evidence_span": "something with a small profile and the quick-to-market deployment of a motorcycle. It has to have the safety of a car"
+    },
+    {
+      "id": "P3",
+      "text": "C1 is a narrow aerodynamic enclosed electric motorcycle with car controls and car-like safety (airbags, belts, reinforced doors, roll cage)",
+      "status": "explicit",
+      "evidence_span": "We made an efficient, incredibly romantic motorcycle, but with the safety and the comfort of a car"
+    },
+    {
+      "id": "P4",
+      "text": "Light platform with off-the-shelf batteries yields ~200 miles/charge on ~1/4 LEAF pack size and ~1/10 car parts for cheap manufacture/maintenance",
+      "status": "explicit",
+      "evidence_span": "because it is so light, it gets 200 miles per charge. And that's a one-fourth the battery pack size of a Nissan LEAF"
+    },
+    {
+      "id": "P5",
+      "text": "Patented dual-gyroscope self-balancing keeps the vehicle upright without rider balance skill",
+      "status": "explicit",
+      "evidence_span": "the Lit Motor C1 is the first self-balancing, fully electric motorcycle when we have 15 patents on this technology"
+    },
+    {
+      "id": "P6",
+      "text": "Deliver at ~$19k in 2014 (scale to ~$10k by 2017) with 200 mi / 100 mph / ~$1 charge via disciplined BOM engineering plan",
+      "status": "explicit",
+      "evidence_span": "2014 for $19,000, and we believe we can get this to scale for only $10,000 in 2017"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken car and scooter alternatives",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "enclosed electric C1 with gyro balance",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "2014 price and production plan",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safe, efficient, affordable personal transportation anyone can drive",
+      "status": "explicit",
+      "evidence_span": "Anyone can drive it. And we're making a safe version"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Address traffic, parking, environmental destruction as transportation outcomes",
+      "evidence_span": "transportation is a huge problem. And it goes anywhere from personal annoyances like driving through traffic or finding a parking spot to major issues like environmental destruction and war"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "So we really need a new solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can have safety in an accessible motorcycle that's incredibly efficient and affordable and safe"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is how you start a real vehicle company"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "US EV and developing-world two-wheeler failures folded with required attributes as one problem/requirement set (§4.1.6). Vehicle form, range/parts efficiency, and gyro balancing folded as product cascade; patents as IP detail on balancing (§4.1.1). Price/delivery plan as commercial packaging. Team bio excluded. Joke app ignored. Three domains—anti-template."
+}

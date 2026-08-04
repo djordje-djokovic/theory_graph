@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-605",
+    "coder_session_id": "session_03",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A large share of smartphone users lack internet access, creating life-critical and socio-economic connectivity gaps",
+      "status": "explicit",
+      "evidence_span": "66% of the world has a smartphone in their hands, but 53% of the population does not have access to internet"
+    },
+    {
+      "id": "P2",
+      "text": "An SDK lets existing apps work offline by connecting phones over Bluetooth mesh networks with hop routing and a flood/battery-aware algorithm",
+      "status": "explicit",
+      "evidence_span": "SDK that apps integrate onto their own code so they can work offline"
+    },
+    {
+      "id": "P3",
+      "text": "The mesh stack uniquely supports Android-to-iOS integration and is encrypted and patented",
+      "status": "explicit",
+      "evidence_span": "only ones in the market with Android to iOS integration. We are encrypted, and we're patented"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is B2B to developers who already have user density rather than building a rival consumer app",
+      "status": "explicit",
+      "evidence_span": "working on a B2B model. We cater to developers that already have this user density"
+    },
+    {
+      "id": "P5",
+      "text": "Pricing charges on monthly active users who use the partner app thanks to the offline technology",
+      "status": "explicit",
+      "evidence_span": "charge based on monthly active users that use your app thanks to our technology each month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "offline smartphone connectivity gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Bluetooth mesh offline SDK",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B developer distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "MAU-based SDK pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Apps and people can communicate without internet, including in emergencies that can save lives",
+      "status": "explicit",
+      "evidence_span": "being able to connect with rescue corps"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Open and grow markets for developers, translating into revenue",
+      "evidence_span": "You open up new markets. You open and you blow up existing ones. So that translates into revenue"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "difference between life and death"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connects phones directly using their Bluetooth antennas"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cater to developers that already have this user density"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when developers make this revenue, we also make it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "WhatsApp/Uber/broadcast examples folded as uses of the same mesh SDK. IP/encryption folded into mesh feasibility with cross-platform claim. Fundraising and user-count traction excluded. Closing vision partly truncated."
+}

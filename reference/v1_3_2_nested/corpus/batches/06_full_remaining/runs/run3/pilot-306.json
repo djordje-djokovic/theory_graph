@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Marketers waste spend because they lack design analytics that show what drives sales",
+      "status": "explicit",
+      "evidence_span": "There has never been an analytics tool for designers and for design until OmniKey"
+    },
+    {
+      "id": "P2",
+      "text": "Computer vision and AI quantify creative features that drive marketing results",
+      "status": "explicit",
+      "evidence_span": "We use computer vision to quantify and turn every single design element into data points"
+    },
+    {
+      "id": "P3",
+      "text": "Generative AI produces personalized on-brand ads launched only after customer approval",
+      "status": "explicit",
+      "evidence_span": "generate personalized content based on real-time marketing data"
+    },
+    {
+      "id": "P4",
+      "text": "Deep ad-platform integrations make generated content data-backed across channels",
+      "status": "explicit",
+      "evidence_span": "ensure that the content we generate actually drives results, actually is backed by real data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Missing design analytics",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Generative performance creative platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Data-driven generative ads that convert",
+      "status": "explicit",
+      "evidence_span": "Omnike is the first data-driven generative AI platform"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "25% of marketing budgets are wasted every year on ineffective content"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "backed by real-time marketing data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Approval, brand guidelines, and creator marketplace folded into personalized generation premise as one control loop.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-306",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

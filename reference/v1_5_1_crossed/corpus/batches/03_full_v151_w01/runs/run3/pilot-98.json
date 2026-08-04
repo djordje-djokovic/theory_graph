@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-98",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Greener energy scale requires greener batteries because current battery metals are toxic and scarce",
+      "status": "explicit",
+      "evidence_span": "The metals that we use in our current battery tech are not only toxic, but very scarce as well"
+    },
+    {
+      "id": "P2",
+      "text": "Hydrogel-reinforced cellulose paper batteries using zinc and manganese are compostable, flexible, and safe when damaged",
+      "status": "explicit",
+      "evidence_span": "We have invented what we call hydrogel-reinforced cellulose paper, and utilize zinc and manganese as the two sides of the battery"
+    },
+    {
+      "id": "P3",
+      "text": "Paper cells can be stacked into plug-and-play shapes that replace lithium batteries using existing manufacturing processes",
+      "status": "explicit",
+      "evidence_span": "stack up these paper batteries into the required shape and size, and we practically have a plug-and-play solution to replace any type of lithium batteries"
+    },
+    {
+      "id": "P4",
+      "text": "Abundant materials make the paper batteries about ten times cheaper than alternatives",
+      "status": "explicit",
+      "evidence_span": "the cost of making our paper batteries isn't two times or three times cheaper, but it's 10 times cheaper"
+    },
+    {
+      "id": "P5",
+      "text": "Specialized paper-battery variants can serve energy storage, consumer tech, and EVs by tuning capacity, weight, and volume",
+      "status": "explicit",
+      "evidence_span": "three versions of specialized paper batteries for a focused area of application"
+    },
+    {
+      "id": "P6",
+      "text": "Industry partners in energy storage and other verticals adopt the batteries into their products",
+      "status": "explicit",
+      "evidence_span": "we are working with Collins and Powers, one of Singapore's largest energy storage solution providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "need for greener batteries",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "paper battery technology and cost",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "application markets and partners",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer, more sustainable, and cost-efficient batteries for a greener future",
+      "status": "explicit",
+      "evidence_span": "Sustainable, cost-effective, and so much safer than the ones we're using today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a dream of a greener future demands greener batteries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "safer, more sustainable, and cost-efficient future in battery tech"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you finally have the dream of having green batteries in your EVs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Compostable/flexible/cut-safe benefits folded into P2 as feature cascade of the paper chemistry. Energy-storage/consumer/EV uses folded into one specialized-variant premise (same mechanism, multiple applications). Revenue projections and team bios excluded. Singleton D1 retained as separately revisable market-need module."
+}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-697",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Under-$5,000 digital tools (hobby lasers, 3D printers, desktop CNC) cannot cut hard flat materials, so makers still cut them by hand",
+      "status": "explicit",
+      "evidence_span": "If you want to cut something hard and flat, you pretty much have to do it by hand"
+    },
+    {
+      "id": "P2",
+      "text": "Wazer is a desktop waterjet that cuts any material with digital precision, compact and contained for clean, safe, quiet use",
+      "status": "explicit",
+      "evidence_span": "It's a digital tool that uses water to cut through any material"
+    },
+    {
+      "id": "P3",
+      "text": "The product is a ground-up redesign of water-cutting technology with patents pending, priced under $4,000",
+      "status": "explicit",
+      "evidence_span": "ground-up redesign of water-cutting technology, with four separate patents pending. Now available for under $4,000"
+    },
+    {
+      "id": "P4",
+      "text": "Industrial waterjets already pressurize water with abrasive at high velocity, but cost over $100,000; Wazer brings that process to the desktop",
+      "status": "explicit",
+      "evidence_span": "They cost over $100,000"
+    },
+    {
+      "id": "P5",
+      "text": "Diverse makers—jewelers, artisans, homeowners, hobbyists, makerspaces, and students—need versatile hard-material cutting",
+      "status": "explicit",
+      "evidence_span": "needed by lots of different types of makers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard flat cutting gap under $5k tools",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "desktop waterjet product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "maker and workshop users",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Makers get desktop digital cutting of any hard material they previously had to cut by hand",
+      "status": "explicit",
+      "evidence_span": "bringing this amazing technology to workshops everywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's what we're solving with Wazer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "first desktop waterjet cutter. It cuts any material"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "needed by lots of different types of makers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Material list (aluminum/stone/ceramic/carbon fiber/steel) folded into any-material cutting mechanism. Industrial process explanation is quantitative/process detail of the waterjet premise, kept as P4 only for the cost/scale contrast that justifies desktop redesign. Kickstarter raise excluded as financing/traction. Team praise excluded."
+}

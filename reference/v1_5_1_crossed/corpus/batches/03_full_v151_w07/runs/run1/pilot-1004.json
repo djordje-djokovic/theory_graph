@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1004",
+    "coder_session_id": "session_04",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Apartment search is broken: sparse listings, dead links, and Craigslist spam/reposts dominate over unique apartments, with little tenant-tailored neighborhood guidance",
+      "status": "explicit",
+      "evidence_span": "Apartment rentals are broken, we all know that"
+    },
+    {
+      "id": "P2",
+      "text": "Zumper listings are curated directly from brokers, landlords, and property managers rather than scraped",
+      "status": "explicit",
+      "evidence_span": "these are all curated. They're not scraped"
+    },
+    {
+      "id": "P3",
+      "text": "Neighborhood pages with content/video plus followable neighborhood newsfeeds tailor search to places renters care about",
+      "status": "explicit",
+      "evidence_span": "we created Neighborhood Pages"
+    },
+    {
+      "id": "P4",
+      "text": "A messaging tool lets qualified renters share credentials with brokers and lets landlords compare interested profiles efficiently",
+      "status": "explicit",
+      "evidence_span": "we created a messaging tool to help with that"
+    },
+    {
+      "id": "P5",
+      "text": "Supply is built bottom-up via business development with leading landlords and brokers city by city",
+      "status": "explicit",
+      "evidence_span": "We're doing a lot of business development with the leading landlords and brokers in the States to build this bottom up"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken apartment search",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "curated listings and neighborhood discovery",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "qualified renter messaging",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "broker-landlord BD supply",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Tenants can search and inquire for apartments quickly with curated listings and an edge in competitive markets",
+      "status": "explicit",
+      "evidence_span": "on Zumper you can search for and make an inquiry for an apartment in under three minutes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Brokers and landlords efficiently compare qualified renter profiles",
+      "evidence_span": "it's tremendously efficient for them, especially when they're dealing with a lot of people"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's a really poor user experience, and we all know that"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can search curated content alongside curated listings"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's really useful for the renter because it gives them an edge"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build this bottom up"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Neighborhood content gap, thin listing text/photos, 404s, and Craigslist spam/repost volume folded as one search problem (§4.1.6). Neighborhood pages, follow, and newsfeed folded as one discovery surface (§4.1.7). Open-house video and Zillow IPO framing excluded as demo/market framing. Market-size tenant figures treated as framing inside GTM. Singletons D3/D4 retained: messaging and BD supply separately revisable."
+}

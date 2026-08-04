@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-965",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:38:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cash remittance pickup forces costly travel, waits, and high transfer taxes",
+      "status": "explicit",
+      "evidence_span": "Western Union taxes them up to 10%"
+    },
+    {
+      "id": "P2",
+      "text": "An SMS pin credit on the recipient phone pays everyday needs like a gift card",
+      "status": "explicit",
+      "evidence_span": "her sister gets a unique SMS pin code that she can use to pay for food at the local supermarket. It works just like a gift card"
+    },
+    {
+      "id": "P3",
+      "text": "Acquisition works through an online path and offline mom-and-pop partners",
+      "status": "explicit",
+      "evidence_span": "visit us online or can visit us offline at one of 200 partner mom and pop stores"
+    },
+    {
+      "id": "P4",
+      "text": "Credits can be partially re-gifted across a recipient network",
+      "status": "explicit",
+      "evidence_span": "transfer part of those funds to a family member or another friend who typically also has family in the US"
+    },
+    {
+      "id": "P5",
+      "text": "Access to thousands of Latin American retail locations funds a cheap flat fee to senders",
+      "status": "explicit",
+      "evidence_span": "we already have the contracts that gives us access to 7,200 retail locations in eight different countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remittance friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "SMS pin payment product",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner retail economics",
+      "premise_ids": [
+        "P3",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Send support for food and bills home through a phone credit",
+      "status": "explicit",
+      "evidence_span": "put food on the table for her sister back in Latin America"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I've been sending money back home every single month"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all via an SMS"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "up to 70% cheaper than any alternative"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Retail portfolio and subsidized $3 fee bundled in P5 as one how-the-offer-is-sold commercial mechanism. Neighborhood traction figures excluded."
+}

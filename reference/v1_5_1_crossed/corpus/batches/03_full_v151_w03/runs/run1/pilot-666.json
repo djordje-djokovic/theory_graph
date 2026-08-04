@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-666",
+    "coder_session_id": "session_01",
+    "session_case_index": 8,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:36:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Choosing drug targets and compounds is lengthy, expensive, and often subjective/manual, causing large losses and filtering out good targets",
+      "status": "explicit",
+      "evidence_span": "$1 billion per drug is lost due to inefficient and suboptimal choice of those drug targets"
+    },
+    {
+      "id": "P2",
+      "text": "A genomics, AI, and text-mining platform comprehensively scores proteins to find new targets or retarget compounds for novel therapeutic uses",
+      "status": "explicit",
+      "evidence_span": "we're using genomics, artificial intelligence, and text mining to identify new drug targets or to retarget existing compounds"
+    },
+    {
+      "id": "P3",
+      "text": "Researchers configure disease, data-source ratings, and genomic uploads; outputs rank targets by confidence and druggability scores with deep feature views",
+      "status": "explicit",
+      "evidence_span": "the proteins here are sorted according to two scores"
+    },
+    {
+      "id": "P4",
+      "text": "B2B pricing depends on the amount of compounds or targets analyzed",
+      "status": "explicit",
+      "evidence_span": "our pricing depends on the amount of compounds or targets to be analyzed"
+    },
+    {
+      "id": "P5",
+      "text": "Prior cloud genomic-analysis platform experience and Illumina collaboration support discovery go-to-market",
+      "status": "explicit",
+      "evidence_span": "we started by building a cloud-based platform for genomic analysis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "costly subjective target selection",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI genomic discovery platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-target B2B pricing",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "genomics platform experience and partners",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drug discovery becomes faster and cheaper through better automated target and compound choice",
+      "status": "explicit",
+      "evidence_span": "we make drug discovery faster and cheaper"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the process is lengthy and expensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make the process of the drug target discovery fast, automated, objective, and comprehensive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pricing depends on the amount of compounds or targets to be analyzed"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that experience, which helped us understand broader problem industry and create our discovery platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Gene/chemical/structure evaluation steps and multi-day cloud processing folded into discovery platform mechanism. Demo workflow treated as UI cascade of that mechanism rather than separate premises. Lab-count usage treated as capability evidence for prior platform, not traction metric. Singleton pricing and partner domains retained as independently revisable commercial and GTM modules. Truncated ending."
+}

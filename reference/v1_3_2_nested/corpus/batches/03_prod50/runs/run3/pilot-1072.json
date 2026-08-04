@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Social influence among friends is a primary driver of what people buy",
+      "status": "explicit",
+      "evidence_span": "You see, friends do help friends discover products"
+    },
+    {
+      "id": "P2",
+      "text": "Sneak Peek shows friend peeks and real-person product viewing as social proof",
+      "status": "explicit",
+      "evidence_span": "you also get to see which of your friends have peeked or looked at that product before"
+    },
+    {
+      "id": "P3",
+      "text": "Daily curated store from aspirational brand partners personalized by likes",
+      "status": "explicit",
+      "evidence_span": "to curate a selection for you. We use what you and your friends like on Sneak Peek to create a store every single day just for you"
+    },
+    {
+      "id": "P4",
+      "text": "Limited peeks drop price competitively until purchase",
+      "status": "explicit",
+      "evidence_span": "every peek drops the price for everyone peeking. It drops it intelligently until someone buys"
+    },
+    {
+      "id": "P5",
+      "text": "One-click purchase after peeking and sizing",
+      "status": "explicit",
+      "evidence_span": "it all takes one click to purchase a product"
+    },
+    {
+      "id": "P6",
+      "text": "Serendipity, friends data, and game mechanics jointly drive discovery and sales",
+      "status": "explicit",
+      "evidence_span": "serendipity really drives discovery"
+    },
+    {
+      "id": "P7",
+      "text": "Long-term brand partnerships for impulse sales and social-channel engagement",
+      "status": "explicit",
+      "evidence_span": "For our brands, we form long-term partnerships"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer social commerce loop",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Brand partnership model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make shopping social again so discovery leads to purchase",
+      "status": "explicit",
+      "evidence_span": "move us from discovery to purchase"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When I find a friend that I trust, then I'm more likely to buy a product"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help them deliver meaningful sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Pilot learnings (serendipity/friends/game mechanics) coded as one continuing mechanism premise P6. Channel surfaces not separately coded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1072",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

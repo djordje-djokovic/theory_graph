@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People have lost control of digital life history that storage keeps forever",
+      "status": "explicit",
+      "evidence_span": "Storage is cheap, it is everywhere, and it is forever. We are all out of control"
+    },
+    {
+      "id": "P2",
+      "text": "Enterprise users such as clinicians need controlled messaging that would otherwise be illegal on ordinary apps",
+      "status": "explicit",
+      "evidence_span": "if they were having this conversation today on Yammer, or almost any other site on the internet for that matter, it would be illegal"
+    },
+    {
+      "id": "P3",
+      "text": "Social Fortress protects data across enterprise, mobile, and consumer apps in real time without being a VPN or encryption gateway",
+      "status": "explicit",
+      "evidence_span": "we are not a VPN. We are not a single sign-on. We are not Defector Authentication. We are not DRM. We are not MDM. And we are not an encryption gateway"
+    },
+    {
+      "id": "P4",
+      "text": "Protection follows messages and photos anywhere in the world on any device or platform",
+      "status": "explicit",
+      "evidence_span": "brings Jason Bourne to all your messages, all your photos, anywhere in the world at any time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Uncontrolled digital exposure",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social Fortress data companion",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Regain control of data shared on everyday applications",
+      "status": "explicit",
+      "evidence_span": "They're in control of their data. That's the actual conversation"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "relinquished real control of our digital life"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in control of their data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "HIPAA-style enterprise illegality kept as a distinct problem warrant alongside general consumer loss of control. Negated competitor categories folded into the platform identity premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1027",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:28:40+02:00"
+  }
+}

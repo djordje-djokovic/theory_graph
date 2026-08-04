@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-802",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Geographic expansion beyond USA/Canada (e.g. Brazil) adds large pools of potential customers for the product",
+      "status": "explicit",
+      "evidence_span": "you add another country, for example Brazil, you have four more million potential customers for this product"
+    },
+    {
+      "id": "P2",
+      "text": "A later childcare product line for parents addresses an underexplored market for parental safety and comfort",
+      "status": "explicit",
+      "evidence_span": "create later a new line of products, childcare products designed for parents"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market starts on Kickstarter at $180, then own and other web stores, then large specialized retail distribution",
+      "status": "explicit",
+      "evidence_span": "The product will be sold on Kickstarter for $180"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "country expansion and parent line",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Kickstarter to retail channel path",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reach more customers and get a working childcare product to market through crowdfunding and distribution",
+      "status": "inferred",
+      "evidence_span": "we need to raise some money to get to market"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is why we can really grow"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in the end, we will go to large distribution and sell it in a specialized store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.35
+  },
+  "notes": "Transcript begins mid-pitch (truncated/thin): core product mechanism and earlier problem framing absent. Coded only present expansion, future parent line, and Kickstarter→web→retail packaging. Financing ask excluded except as market-entry condition wording for value. Singleton D2 retained as independently revisable channel path."
+}

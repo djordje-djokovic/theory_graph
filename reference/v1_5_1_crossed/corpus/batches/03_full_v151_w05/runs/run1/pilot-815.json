@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-815",
+    "coder_session_id": "session_04",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Building a scalable distributed backend today requires stitching many stores (relational, document, blob, search) and then wrestling sharding, sync, and replication at scale",
+      "status": "explicit",
+      "evidence_span": "building that today, even today, is really hard. You have to combine a lot of different technologies"
+    },
+    {
+      "id": "P2",
+      "text": "Crate is an elastic distributed SQL data store that is simple to install/run/program, self-heals missing nodes while staying available, and supports fast real-time queries",
+      "status": "explicit",
+      "evidence_span": "It gives you real-time SQL in a distributed environment"
+    },
+    {
+      "id": "P3",
+      "text": "Open-source core with paid enterprise licenses",
+      "status": "explicit",
+      "evidence_span": "We're an open-source software, and on top, we sell enterprise licenses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard distributed backend stack",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "elastic distributed SQL store",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "open-source plus enterprise licenses",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers get scalable, reliable SQL backends that scale with application success without the usual distributed-systems pain",
+      "status": "explicit",
+      "evidence_span": "bring distributed SQL backends in the hand of every developer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Scaling turns out to be more difficult than you thought"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It gives you everything that you need to run a scalable backend"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Create is available for download now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Multi-store stitching and scale/shard/replication pains folded as one backend problem (§4.1.6). Docker/cloud/on-prem install, self-healing, and query speed folded as one Crate mechanism plus performance package (§4.1.7–8). IoT/telco/ads use cases treated as applications of the same store (§4.1.2). Founder prior-company credentials excluded. Anti-template: problem, product, and licensing separately revisable."
+}

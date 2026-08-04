@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Half of heart-attack deaths occur before hospital treatment, so speed of ECG access matters",
+      "status": "explicit",
+      "evidence_span": "50% of the people who died from a heart attack died before arriving to a hospital and getting medical treatment"
+    },
+    {
+      "id": "P2",
+      "text": "SmartHeart delivers a field-proven hospital-grade full ECG via phone in tens of seconds",
+      "status": "explicit",
+      "evidence_span": "field-proven reality doing exactly that"
+    },
+    {
+      "id": "P3",
+      "text": "Designed for non-professional use at home, office, or on the road with shareable results",
+      "status": "explicit",
+      "evidence_span": "whether at home, in your office, or on the road"
+    },
+    {
+      "id": "P4",
+      "text": "Commercial offer is about $499 plus free applications and monthly or pay-per-use packages",
+      "status": "explicit",
+      "evidence_span": "We will provide the SmartHealth applications for free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pre-hospital cardiac risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Anywhere ECG product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Price and service model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase survival chances with hospital-grade ECG available to any person anytime",
+      "status": "explicit",
+      "evidence_span": "enable any person, whether healthy or patient with a cardiovascular disease, significantly increase the chances of surviving a heart attack"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Time is the most crucial factor in cardiac events"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Hospital-grade ECG, disrupt"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better health care and quality of living"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "12-lead technical detail folded into hospital-grade product premise. Biographical heart-attack story is motive framing, not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1071",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

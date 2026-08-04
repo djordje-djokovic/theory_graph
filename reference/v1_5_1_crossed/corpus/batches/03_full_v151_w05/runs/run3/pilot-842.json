@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-842",
+    "coder_session_id": "session_04",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mass retail cannot stock niche colors while prestige selection is expensive, so buyers face a selection-versus-price tradeoff driven by supply-chain volume constraints",
+      "status": "explicit",
+      "evidence_span": "Walmart can't offer you all the colors that expensive prestige stores can, like Sephora"
+    },
+    {
+      "id": "P2",
+      "text": "Mink is a proprietary inkjet-like desktop printer that turns any image/hex color into FDA-compliant wearable cosmetics using commodity ink and substrates—no new software required",
+      "status": "explicit",
+      "evidence_span": "Mink is a desktop printer that prints makeup"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware retails around $300 with commodity-priced ink and substrates",
+      "status": "explicit",
+      "evidence_span": "I'm going to retail this for about $300 initially"
+    },
+    {
+      "id": "P4",
+      "text": "Initial target is girls ages 13–21 who experiment with makeup online and have not formed brand habits",
+      "status": "explicit",
+      "evidence_span": "My initial target market, they're girls, ages 13 to 21"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "mass vs prestige color tradeoff",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "home makeup printer hardware",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "price and teen experimenter segment",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Girls control the definition of beauty rather than corporations, by printing any color they choose",
+      "status": "explicit",
+      "evidence_span": "the definition of beauty is something that they should be able to control, not our corporations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Prestige-level color selection with mass/home convenience",
+      "evidence_span": "It gives you the selection of prestige and it combines it with the convenience of mass"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they do this by charging a huge premium on one thing that technology provides for free"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The Mink enables the web to become the biggest beauty store in the world"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's how we're going to change how the world buys makeup"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mass vs Sephora selection/price folded as one color-access problem (§4.1.6). Inkjet workflow, hex picker, eyeshadow/lipstick roadmap, and FDA ink/substrates folded as one printer mechanism (§4.1.7). Speaker's stated priority (beauty control) used as primary value; selection+convenience as secondary_value. Founder bio and $55B market framing excluded. Anti-template: problem, hardware, and commercial/segment modules separately revisable."
+}

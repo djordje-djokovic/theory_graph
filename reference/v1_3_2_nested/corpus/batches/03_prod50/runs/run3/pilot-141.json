@@ -1,0 +1,84 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web3 game economies need tools so they do not crash once they have traction",
+      "status": "explicit",
+      "evidence_span": "your biggest problem is how do I make sure my economy doesn't crash? How do I keep the economy healthy? And that's the problem that we help games to solve"
+    },
+    {
+      "id": "P2",
+      "text": "Platform features enact produce-and-tax principles via minigames, crafting, rewards, leaderboards, and security bots",
+      "status": "explicit",
+      "evidence_span": "based on those two principles, we offer a variety of features on our platform that help games maintain healthy economies. So we have on-chain minigames, on-chain crafting, Minecraft style"
+    },
+    {
+      "id": "P3",
+      "text": "Monetize via $1000/month economy monitoring and $0.10 per infrastructure interaction",
+      "status": "explicit",
+      "evidence_span": "we charge $1,000 per month to anyone who wants to know what's going on in an on-chain economy. And then for game projects, we charge as an infrastructure provider. We charge them $0.10 per interactions that their users make against our platform, against our smart contracts and our APIs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Economy health tooling for Web3 games",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Monitoring and infrastructure fees",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Healthy Web3 game economies that do not crash",
+      "status": "explicit",
+      "evidence_span": "help games maintain healthy economies"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "maintain healthy economies"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "know what's going on in an on-chain economy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Principles+features merged as one enacted mechanism. Soft count at 3. Transaction volume excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-141",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:45:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

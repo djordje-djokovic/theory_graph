@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile work makes lawyers and similar professionals miss billing evening, errand, and weekend calls",
+      "status": "explicit",
+      "evidence_span": "Chances are when you're getting called in the evenings, afternoons when you're running errands, or on the weekends, you forget to bill those calls"
+    },
+    {
+      "id": "P2",
+      "text": "Existing methods make building and capturing billable call time too time-consuming",
+      "status": "explicit",
+      "evidence_span": "there's not a really good method to actually build those calls and capture that time"
+    },
+    {
+      "id": "P3",
+      "text": "Third button on the mobile call screen automatically starts billing tracking",
+      "status": "explicit",
+      "evidence_span": "adding a third button to the mobile call screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Forgotten mobile billing",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Call-screen tracking button",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobile billing for professionals who bill call time with clients",
+      "status": "explicit",
+      "evidence_span": "BillsEye is a mobile billing solution for attorneys, consultants, life coaches"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you forget to bill those calls"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically starts tracking that call for billing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Why-forget explanation split from forgetting-behavior as related need premises in one domain. Seed round excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-56",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

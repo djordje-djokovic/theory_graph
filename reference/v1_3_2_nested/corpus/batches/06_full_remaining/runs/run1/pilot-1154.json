@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumer product companies lack targeting and waste half of marketing spend on the wrong customers",
+      "status": "explicit",
+      "evidence_span": "they know 50% of that budget is misspent and wasted on the wrong customers. The trouble is, they don't know which 50%. And here's why. They have no targeting"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone barcode product check-ins with social sharing deliver friend opinions in-store at purchase time",
+      "status": "explicit",
+      "evidence_span": "We want you to zap the barcode, check in, and then share it with your friends and followers on Facebook and Twitter"
+    },
+    {
+      "id": "P3",
+      "text": "Comic-book unlocks and sarcastic dragon quips hook users into product check-ins",
+      "status": "explicit",
+      "evidence_span": "as you check into different combinations of products, you unlock these comic books"
+    },
+    {
+      "id": "P4",
+      "text": "Check-in behavior gives consumer product marketers the targeting tools they need",
+      "status": "explicit",
+      "evidence_span": "By finally giving consumer product marketers the targeting tools that they need"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CPG targeting gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Check-in game with twist",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Marketer targeting tools",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reinvent how consumer product companies market to customers with targeting wrapped in a fun game",
+      "status": "explicit",
+      "evidence_span": "we want to fundamentally reinvent how consumer product companies market to their customers"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Consumers get hooked on a fun product check-in gaming experience",
+      "evidence_span": "wrapping the whole thing in this fun gaming experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They have no targeting"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "product check-ins that unlock a comic book adventure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving consumer product marketers the targeting tools that they need"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Vision of disrupting the $2.2T market excluded per v1.3.2 §4.1(4). Fanship leaderboards and Quips folded into the comic/dragon twist premise per §4.1(5). Singleton D1/D3 retained: targeting problem vs tools vs consumer game are separately revisable. Coupon print volume treated as industry framing, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1154",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:01+02:00"
+  }
+}

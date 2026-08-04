@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-532",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:42:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Electrical lighting is responsible for massive CO2 emissions, 15% of global electricity consumption, and widespread light pollution",
+      "status": "explicit",
+      "evidence_span": "Electrical lighting is responsible for 1.7 billion tons of CO2 emissions, is 15% of global electricity consumption"
+    },
+    {
+      "id": "P2",
+      "text": "Nature already produces light biologically, offering a proven model to imitate",
+      "status": "explicit",
+      "evidence_span": "more than 80% of marine organisms know exactly how to produce light biologically"
+    },
+    {
+      "id": "P3",
+      "text": "Squid bioluminescence genes are synthesized and inserted into lab-grown bacteria engineered for efficient light production",
+      "status": "explicit",
+      "evidence_span": "we synthesize some genes coding for bioluminescent inside squids. Then we insert into lab-grown bacteria"
+    },
+    {
+      "id": "P4",
+      "text": "The liquid biological solution can fill any shape or kind of casing",
+      "status": "explicit",
+      "evidence_span": "our light can take basically any shape, any kind of casing, because it's a liquid solution"
+    },
+    {
+      "id": "P5",
+      "text": "The natural light's wavelength offers health benefits such as relaxation and improved cognitive functions",
+      "status": "explicit",
+      "evidence_span": "the wavelength that it has also offers health benefits, such as relaxing and improving cognitive functions"
+    },
+    {
+      "id": "P6",
+      "text": "Two product forms exist: Glow Events for temporary spaces lasting up to a week and the continuous Pipelight system",
+      "status": "explicit",
+      "evidence_span": "The first one is called Glow Events, and it's an ephemeral light to light temporal spaces, and it can light up to one week. The second one is Pipelight. It's a continuous lighting system"
+    },
+    {
+      "id": "P7",
+      "text": "Pipelight is a waste-fed bioreactor: microbes grown on industrial waste produce unlimited light and organic byproducts",
+      "status": "explicit",
+      "evidence_span": "pipeline is a bioreactor. The microbes are continuously grown inside the system when you feed them"
+    },
+    {
+      "id": "P8",
+      "text": "Licensing the technology to energy providers who operate the systems is the scaling model",
+      "status": "explicit",
+      "evidence_span": "we license to them our technology, and they operate the system"
+    },
+    {
+      "id": "P9",
+      "text": "Events educate people and raise consumer awareness as the strategy from events to revolution",
+      "status": "explicit",
+      "evidence_span": "events are great because they educate people. They raise consumer awareness"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lighting's environmental problem and nature's proof",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Engineered bioluminescent material",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Light products and circular operation",
+      "premise_ids": ["P6", "P7"]
+    },
+    {
+      "id": "D4",
+      "name": "Licensing scale model and event awareness",
+      "premise_ids": ["P8", "P9"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable, healthy biological lighting for more livable cities",
+      "status": "explicit",
+      "evidence_span": "we want to design more livable and sustainable cities for tomorrow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in order to reduce the environmental impact, to improve wellness thanks to the quality of this natural light"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the quality of light is amazing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we have an unlimited light resource and some neutral or valuable 100% organic byproducts"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For them, it's a great new business opportunity. And for us, it's an amazing way to scale"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Nine premises: the pitch is unusually dense, and the material-production method (P3) is split from the liquid form factor (P4) because the casing flexibility could fail while the engineered organism still glows; this is a judgment call flagged per the 4.1 granularity check rather than a count target. The patent is folded into P4 as IP detail per v1.3.1 clarification 1. 'Bioluminescence will replace electric lighting' is vision framing per v1.3.2 clarification 4; 6,000-unit sales and the Eiffel Tower event are traction per 4.2; the hospitality launch is roadmap detail inside P6. No plainly asserted premise-prerequisite."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-489",
+    "coder_session_id": "session_03",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes management is hard because many life factors affect blood sugar, and existing apps only add manual logging and analysis work",
+      "status": "explicit",
+      "evidence_span": "all they do is provide us with fancy tools so that we can do hard work of logging details and then manually analyzing them or sharing them"
+    },
+    {
+      "id": "P2",
+      "text": "Spike automatically collects routine, activity, and vitals data and proactively gives insulin tips, reminders, and food suggestions",
+      "status": "explicit",
+      "evidence_span": "By automatically collecting details about your life, your routine, your activity, and your vitals, Spike proactively provides you with the right insulin tips and reminders with food suggestions"
+    },
+    {
+      "id": "P3",
+      "text": "Connected glucometers and patches feed readings, and guardians and doctors get real-time alerts on unusual patterns",
+      "status": "explicit",
+      "evidence_span": "they are informed in real time about her situation"
+    },
+    {
+      "id": "P4",
+      "text": "The app is free for diabetics and paid for by insurers, self-insured employers, and others who value productivity",
+      "status": "explicit",
+      "evidence_span": "spike is free forever for diabetics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual diabetes app burden",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "proactive diabetes assistant",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "payer-funded freemium model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less-worry diabetes management that acts before incidents happen",
+      "status": "explicit",
+      "evidence_span": "We changed it from more work to less worry"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Living with diabetes is incredibly difficult"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the problem lies before the incident happens, not after it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "insurance companies Self-insured employers and many others who want to enhance your productivity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Food suggestions, insulin tips, stress/hypoglycemia alerts, and device integrations treated as cascade of one proactive-assistant mechanism, with caregiver alerting kept as a related but separately revisable stakeholder path inside D2. DAU and funding figures excluded as traction. Anti-template justified by distinct need, product, and payer modules."
+}

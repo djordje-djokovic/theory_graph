@@ -1,0 +1,104 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional databases only store, organize, and look up data",
+      "status": "explicit",
+      "evidence_span": "storing, organizing, and letting you look things up in your data"
+    },
+    {
+      "id": "P2",
+      "text": "A predictive database can predict missing values and surface relationships in the data",
+      "status": "explicit",
+      "evidence_span": "instead of just looking things up, it actually tells you interesting things. In fact, it can predict. missing values based on your data"
+    },
+    {
+      "id": "P3",
+      "text": "SQL-familiar users issue PREDICT-style commands without building custom ML",
+      "status": "explicit",
+      "evidence_span": "Now you can have a database that understands your data"
+    },
+    {
+      "id": "P4",
+      "text": "Same predictive tech works across domains such as dating profiles, disease-symptom links, and customer-product relations",
+      "status": "explicit",
+      "evidence_span": "It also works across application domains"
+    },
+    {
+      "id": "P5",
+      "text": "Nonparametric Bayesian MCMC models return predictions with confidence intervals",
+      "status": "explicit",
+      "evidence_span": "We've built state-of-the-art nonparametric Bayesian statistics powered by Markov chain Monte Carlo"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lookup-only databases",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Predictive database with simple SQL-like API",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Application builders get predictions and relationships without hiring data science or doing the math",
+      "status": "explicit",
+      "evidence_span": "give you the capability of doing these sorts of things without having to understand all the math"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "so that no one in this audience ever has to worry about what those words mean ever again"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they're just more efficient ways of performing these sorts of lookup operations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if you can use SQL, you can use Veritable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Jokes about disrupting databases/data science/math/blanks treated as vision framing per §4.1(4), not premises. Dating demo is illustrative of P2/P3. Oracle comparison and SQL headcount at Yahoo/Yammer excluded as framing/traction. $80B database industry size is market framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1024",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

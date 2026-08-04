@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1005",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:27:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "TV-scale audiences create a real-time processing and broadcast problem that has kept TV one-way for decades",
+      "status": "explicit",
+      "evidence_span": "It's for this reason that TV for the last 80 years has been a one-way broadcast medium"
+    },
+    {
+      "id": "P2",
+      "text": "One cloud package combines data-stream processing with data broadcast/push, including storing results at scale",
+      "status": "explicit",
+      "evidence_span": "we provide both data stream processing as well as data broadcast and push in one package"
+    },
+    {
+      "id": "P3",
+      "text": "Easy API, web dashboard, and cloud pricing dramatically lower the barrier versus building Twitter/CIA/Wall-Street-class backends",
+      "status": "explicit",
+      "evidence_span": "through our easy-to-use API, our web-based dashboard, and our cloud-based pricing model, we're dramatically lowering the barrier to entry"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market is direct self-service for innovative developers across social TV, metrics, gaming, and mobile",
+      "status": "explicit",
+      "evidence_span": "we're engaging developers directly through a self-service model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "One-way TV audience scale barrier",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Complete real-time processing and push cloud",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Developer self-service adoption",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make sophisticated real-time stream processing and push easy for app developers",
+      "status": "explicit",
+      "evidence_span": "makes it easy to do two key things. To take large streams of data that are in flight, real-time, and to process them"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Give audiences real-time insight into collective sentiment (social TV)",
+      "evidence_span": "giving you an unprecedented insight into the sentiment of the audience in real time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is the problem that Bright Context Platform solves"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We believe you need both to have a complete solution"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sign up for free. And I challenge you to build the next great app on our platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Quant/through channel UI details folded into complete-platform premise. Twilio analogy is framing only. Founder bios excluded. Partition need/platform/GTM justified by separate revisability of self-service motion."
+}

@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Development environments never match production, so engineers waste time chasing bugs they should not have to fix",
+      "status": "explicit",
+      "evidence_span": "our development environments never matched up with our production environments"
+    },
+    {
+      "id": "P2",
+      "text": "Long-running tests leave engineers idle and unproductive while they wait",
+      "status": "explicit",
+      "evidence_span": "when your tests take a long time to run, your engineers essentially are not doing work"
+    },
+    {
+      "id": "P3",
+      "text": "Build breaks block the entire team from doing work",
+      "status": "explicit",
+      "evidence_span": "When a build break happens, your entire team is blocked from doing work"
+    },
+    {
+      "id": "P4",
+      "text": "Quality holds each pushed change in limbo isolation, spins up production-like cloud replicas, and runs the automation suite in parallel so changes are tested like production without breaking the shared build",
+      "status": "explicit",
+      "evidence_span": "it takes that change and holds it in a limbo state. So this first isolates it from all the other engineers on his team"
+    },
+    {
+      "id": "P5",
+      "text": "Making existing engineers more effective is a better path to capacity than external hiring because finding talent is hard",
+      "status": "explicit",
+      "evidence_span": "Instead of looking externally at the problem, perhaps we should turn to the engineers we already have and look internally"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Engineering productivity pains",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Quality isolation and parallel testing platform",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Internal effectiveness versus hiring",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unleash engineers and make development teams substantially more effective",
+      "status": "explicit",
+      "evidence_span": "quality can make your development team 20% more effective"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Happier engineers who like their jobs more when they are more effective",
+      "evidence_span": "if you make us happier, or if you make us more effective, you make us much, much happier"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this clearly isn't good for productivity"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this gives the test really fast turnaround time, and it means devs don't have to wait for tests"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "quality can make your development team 20% more effective"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 and D3 retained: platform mechanism and internal-vs-hiring thesis are separately revisable. Limbo, replicas, and parallelization folded into one product premise per v1.3.2 §4.1(5). Traction charts, six-figure deals, 20M engineers market size, and Palantir credentials excluded per §4.2. Need/product/commercial triad justified: pains, platform, and hiring-substitution thesis revise independently.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-958",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

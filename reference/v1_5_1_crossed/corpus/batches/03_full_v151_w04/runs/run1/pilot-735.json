@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-735",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:58Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMBs are surrounded by energy data but rarely use it, so they cannot make good energy choices and waste money",
+      "status": "explicit",
+      "evidence_span": "Businesses are surrounded by energy data, but few of them use it"
+    },
+    {
+      "id": "P2",
+      "text": "Uploading an energy bill lets the platform extract, organize, and analyze cost, consumption, and carbon data",
+      "status": "explicit",
+      "evidence_span": "All they need is an energy bill"
+    },
+    {
+      "id": "P3",
+      "text": "Automated insights cover weather-driven waste, best-in-class benchmarks, and supplier price comparisons for savings",
+      "status": "explicit",
+      "evidence_span": "We automatically create insights that will warn Sean when this is happening to prevent it happening in the future"
+    },
+    {
+      "id": "P4",
+      "text": "Anyone can use the system free by uploading a bill; deeper ongoing analysis is under one pound per day per site, with an API for utilities and professionals",
+      "status": "explicit",
+      "evidence_span": "Anybody can use the Energy Elephant system. for free if they have an energy bill"
+    },
+    {
+      "id": "P5",
+      "text": "Smart-meter rollouts and European building energy-certificate rules will expand available data and compliance needs the system can serve",
+      "status": "explicit",
+      "evidence_span": "with the rollout of smart meters, even larger data sets are going to become available"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB unused energy data waste",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "bill-upload analytics and insights",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "freemium pricing and compliance data wave",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help SMBs understand energy data to make better decisions and cut costs and environmental impact",
+      "status": "explicit",
+      "evidence_span": "helps small and medium businesses understand, make better energy decisions by organizing and analyzing their energy data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "very difficult for them to make good energy choices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build, visualize, and analyze their energy data"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge a fee of less than one pound per day per site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Consultant-on-shelf story folded into unused-data pain. Dashboard categories are feature cascade of bill analytics. Average 15% savings excluded as traction. ASR 'Energy Elfin' ignored in premise text."
+}

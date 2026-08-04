@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1061",
+    "coder_session_id": "session_02",
+    "session_case_index": 24,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A custom digital gnome lives on only one device at a time, travels with check-ins and photos, and can be handed to friends who continue its journey with notifications to prior holders",
+      "status": "explicit",
+      "evidence_span": "a gnome can only live on one device"
+    },
+    {
+      "id": "P2",
+      "text": "Lift transfers a gnome between devices through a camera viewfinder in a magical handoff",
+      "status": "explicit",
+      "evidence_span": "we're calling this process lift"
+    },
+    {
+      "id": "P3",
+      "text": "Lyft enables drag-and-drop transfer of photos and objects across separate devices through the screen",
+      "status": "explicit",
+      "evidence_span": "a different way of device interconnectivity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "nonstop gnome social object",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "cross-device Lyft transfer",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Playful persistent digital objects and richer interconnectivity across personal devices",
+      "status": "explicit",
+      "evidence_span": "wouldn't it be cool to have a gnome in your pocket"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take pictures with him, to take him to different venues"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect them in a more interesting way"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Churn Labs greenfield exploration framing not coded as premise. Custom create vs lift handoff folded into one unique-device gnome object with transfer as mechanism package; Lyft photo drag-drop split as separately demoed interconnectivity module. Mileage/traction of Lebowski excluded. Humorous anti-need opener treated as framing. Two domains."
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1060",
+    "coder_session_id": "session_05",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "America has massive car overpopulation: hundreds of millions of cars sit parked most of the day",
+      "status": "explicit",
+      "evidence_span": "over 250 million cars in America that sit parked 22 hours each day"
+    },
+    {
+      "id": "P2",
+      "text": "GetAround is a peer-to-peer car-sharing marketplace where nearby owners set price/availability and renters book via an iPhone app with ratings and reviews",
+      "status": "explicit",
+      "evidence_span": "a marketplace for peer-to-peer car sharing, the Airbnb for cars"
+    },
+    {
+      "id": "P3",
+      "text": "The Getaround Car Kit enables smartphone keyless unlock/locate with Wi-Fi and GPS, installable in minutes without fleet-management complexity",
+      "status": "explicit",
+      "evidence_span": "device that combines a keyless remote with Wi-Fi and GPS"
+    },
+    {
+      "id": "P4",
+      "text": "Insurance is included in each rental via a carrier deal that enables national expansion",
+      "status": "explicit",
+      "evidence_span": "Getaround provides insurance as part of each rental"
+    },
+    {
+      "id": "P5",
+      "text": "Peer-to-peer model works beyond dense urban Zipcar-style fleets; platform takes commission while owners earn and renters avoid buying",
+      "status": "explicit",
+      "evidence_span": "The peer-to-peer model is not limited to dense urban areas like Zipcar"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "car overpopulation idle assets",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "P2P marketplace and car kit",
+      "premise_ids": ["P2", "P3", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "included rental insurance",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Rent a nearby car instantly instead of buying; owners earn by sharing—redefining car ownership",
+      "status": "explicit",
+      "evidence_span": "Instead of buying a car, you can rent one instantly from someone nearby"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large-scale sharing would cut cars on the road and CO2 emissions",
+      "evidence_span": "CO2 emissions would drop by a whopping 48 billion pounds per year"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solving a problem we call car overpopulation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With it, you can unlock the car and locate the car, all from your iPhone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How does insurance work? Getaround provides insurance as part of each rental"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Owner pricing, SF/Bay listings, request/confirm, ratings folded into marketplace; Car Kit kept as distinct hardware module that enables hassle-free access (§4.1.5 split). 40% commission folded into marketplace commercial facet with P5. Million-car/CO2 vision is secondary_value not a premise (§4.1.4). Free car-kit giveaway and no membership fees are promo/pricing detail on availability. Carrier name in evidence avoided in premise text where possible—span uses general insurance claim."
+}

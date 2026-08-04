@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-428",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Email can be turned into a task card on a Kanban board without leaving the inbox",
+      "status": "explicit",
+      "evidence_span": "take that email, turn it into a task card, and add it to his Trello-like Kanban board"
+    },
+    {
+      "id": "P2",
+      "text": "Gmail boards visually represent email conversations and related projects and tasks",
+      "status": "explicit",
+      "evidence_span": "Gmail's boards give you a visual representation of your email conversations and all of the projects and tasks that follow"
+    },
+    {
+      "id": "P3",
+      "text": "A platform-agnostic model will expand the product beyond Gmail/G Suite",
+      "status": "explicit",
+      "evidence_span": "Our platform agnostic model will further expand our potential"
+    },
+    {
+      "id": "P4",
+      "text": "The product serves professionals and teams who must communicate, collaborate, and get work done in email-heavy workflows",
+      "status": "explicit",
+      "evidence_span": "we need to communicate with our stakeholders, we need to collaborate with our team, and we need to get work done"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inbox-native Kanban tasking",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "platform expansion and teamwork market",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simplified teamwork and collaboration from the email inbox",
+      "status": "explicit",
+      "evidence_span": "empowering teams and improving collaboration"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is all without leaving his inbox"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "is your company ready to simplify teamwork"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.55
+  },
+  "notes": "Transcript opens mid-sentence (truncated). User/traction counts and YC mention excluded as traction/credentials. Kanban UI actions (drag/drop, dates) folded into P1/P2 as one inbox-board mechanism. ASR name variants (Yoda/Gimelist/Chemeleth) treated as same product."
+}

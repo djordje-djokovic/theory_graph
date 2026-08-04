@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "coder_session_id": "session_05",
+    "session_case_index": 21,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Construction wastes large shares of materials through paper-based, error-prone measurement and execution workflows",
+      "status": "explicit",
+      "evidence_span": "almost 20% of materials on a given job site being completely wasted and in the dumpster"
+    },
+    {
+      "id": "P2",
+      "text": "A connected hardware and software ecosystem captures, shares, annotates, and turns measurements into tasks without paper steps",
+      "status": "explicit",
+      "evidence_span": "connected ecosystem of hardware and software products to significantly reduce these errors"
+    },
+    {
+      "id": "P3",
+      "text": "The Rock Jobsite mobile app consolidates measurement capture, calculators, and plan-related workflows for workers",
+      "status": "explicit",
+      "evidence_span": "The Rock Jobsite app is a simple and easy to use platform that works on any mobile device"
+    },
+    {
+      "id": "P4",
+      "text": "Digital jobsite tools (tape measure, saw caliper, QR labels) capture and execute measurements and link them into the app",
+      "status": "explicit",
+      "evidence_span": "the T1 Tomahawk really represents the core of our hardware ecosystem"
+    },
+    {
+      "id": "P5",
+      "text": "Every worker on site, not only supervisors, can use the equipment and app",
+      "status": "explicit",
+      "evidence_span": "every worker on the job site can use the equipment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "construction measurement waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "connected Rock app and digital tools",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Jobsite measurement and execution with far fewer avoidable errors and material waste",
+      "status": "explicit",
+      "evidence_span": "significantly reduce these errors and streamline operations on the job site"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over $100 billion wasted in construction each year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating many of the human touch points in the process"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "T1/M1/QR devices folded into one hardware-tools premise as facets of the connected measurement ecosystem; Rock app kept separate as the software hub. Two-domain partition (problem vs connected system) rather than a need/product/money triad."
+}

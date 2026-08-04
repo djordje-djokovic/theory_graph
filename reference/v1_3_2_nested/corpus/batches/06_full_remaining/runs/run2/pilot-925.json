@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Setup captures health goals and preferences so weekly menus fit the individual and stay flexible",
+      "status": "explicit",
+      "evidence_span": "we asked him his health goals and his likes and dislikes"
+    },
+    {
+      "id": "P2",
+      "text": "The platform learns preferences over time to improve recommendations",
+      "status": "explicit",
+      "evidence_span": "Every single time that Josh does this, we learn about his user preferences"
+    },
+    {
+      "id": "P3",
+      "text": "Healthy Out uses local restaurants as on-demand healthy-food suppliers with hour-scale delivery",
+      "status": "explicit",
+      "evidence_span": "using our data and our platform to convert your local restaurant kitchen into a supplier of healthy food"
+    },
+    {
+      "id": "P4",
+      "text": "Asset-light model: no inventory and partner restaurants handle delivery",
+      "status": "explicit",
+      "evidence_span": "Not like those diet meal delivery guys, we don't hold inventory"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue mixes ~$28 subscription and ~$16 restaurant commissions per user per month",
+      "status": "explicit",
+      "evidence_span": "That's $44 per user per month. That's virtually all gross profit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Preference-driven personalization",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Restaurant-powered fulfillment",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription plus commission model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Busy people get personalized healthy restaurant food without hassle",
+      "status": "explicit",
+      "evidence_span": "convenience of a personal assistant with the personalization of a nutritionist, but all done through technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized menu that's tailored to just him"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your food shows up looking like this"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The unit economics of our business model are simple"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "New-segment claim folded into value rather than a separate premise this run. Singleton commercial domain noted as independently revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-925",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

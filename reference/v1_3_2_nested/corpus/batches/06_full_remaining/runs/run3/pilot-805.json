@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A billion existing AC units are not addressable by smart thermostats designed for central heating systems",
+      "status": "explicit",
+      "evidence_span": "One billion, like I said"
+    },
+    {
+      "id": "P2",
+      "text": "Sensible pod makes those ACs app-controllable and applies efficiency, occupancy, and lifestyle algorithms that cut energy ~40%",
+      "status": "explicit",
+      "evidence_span": "not only we can control it via an app, we can actually save a huge amount of energy"
+    },
+    {
+      "id": "P3",
+      "text": "Commercial offer prices a $160 base kit and $80 per additional conditioned unit",
+      "status": "explicit",
+      "evidence_span": "for each additional air conditioner you have in your home or office, it's another $80"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unsmarted AC market",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connect-and-optimize pod",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-unit kit pricing",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Any air conditioner becomes smart with large energy and bill savings",
+      "status": "explicit",
+      "evidence_span": "We make any air conditioner smart"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there are one billion of these kinds of air conditioners"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's the energy benefits"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're taking pre-orders now on our site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Control and savings kept as one product premise. Wearables plan excluded as roadmap vision.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-805",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-564",
+    "coder_session_id": "session_03",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pre-consumer food waste and rising protein scarcity are twin problems that converting waste into protein can address together",
+      "status": "explicit",
+      "evidence_span": "if somehow we can convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    },
+    {
+      "id": "P2",
+      "text": "A hatchery-and-incubator insect process converts food waste into marketable fertilizer and dried insect protein powder",
+      "status": "explicit",
+      "evidence_span": "produces the next generation protein from a specific edible insect by converting food waste into fertilizer"
+    },
+    {
+      "id": "P3",
+      "text": "The same production system is resource-efficient versus other protein sources on water, land, grain, and carbon",
+      "status": "explicit",
+      "evidence_span": "needs minimal water and land, requires zero grain, and almost produces zero carbon emission"
+    },
+    {
+      "id": "P4",
+      "text": "Companies pay to dispose food waste while insect protein and fertilizer are also sold",
+      "status": "explicit",
+      "evidence_span": "Companies pay us to get rid of their food waste. So we get revenue by taking our raw material and by selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "id": "P5",
+      "text": "Insect protein powder is denser in protein, calcium, and phosphorus than regular meat",
+      "status": "explicit",
+      "evidence_span": "two times more protein, 100 times more calcium, and four times more phosphorus than regular meat"
+    },
+    {
+      "id": "P6",
+      "text": "Pet B2C growth uses influencers and B2B growth uses pet-shop partners",
+      "status": "explicit",
+      "evidence_span": "work with influencers and we also have pet shops as our B2B partners"
+    },
+    {
+      "id": "P7",
+      "text": "Edible-insect and related rules make the market comparatively easy to enter, including European legality",
+      "status": "explicit",
+      "evidence_span": "easy to access due to law regulations"
+    },
+    {
+      "id": "P8",
+      "text": "Human go-to-market starts with athletes, renal and cancer patients, and people allergic to regular meat",
+      "status": "explicit",
+      "evidence_span": "athletes who already use whey protein additional to their diet. And there are renal and cancer patients"
+    },
+    {
+      "id": "P9",
+      "text": "The insect species is FAO-approved as edible and protein results are certified-lab tested",
+      "status": "explicit",
+      "evidence_span": "the species that we produce is approved as edible by FAO"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "food waste and protein shortage problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "insect hatchery conversion to protein and fertilizer",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "waste-fee plus product sales revenue",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "influencer and pet-shop channels",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "edible-insect regulatory access",
+      "premise_ids": [
+        "P7",
+        "P9"
+      ]
+    },
+    {
+      "id": "D6",
+      "name": "athlete patient and allergy human segments",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable next-generation protein (and fertilizer) produced by converting pre-consumer food waste",
+      "status": "explicit",
+      "evidence_span": "convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Healthier and more sustainable protein sources for humans",
+      "evidence_span": "producing much healthier and more sustainable protein sources for humans"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainable solution for both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dry and grind the insect into protein powder, which is ready for consumption"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "revenue by taking our raw material and by selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "To grow our B2C customers, we work with influencers"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy to access due to law regulations"
+    },
+    {
+      "from": "D6",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they need other alternatives"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Process efficiency metrics folded into process package with P3 kept as the efficiency claim attached to the same system (v1.5.1 §4.1.8). Nutrition kept separate as product-quality condition. Competitor cost critiques treated as framing. Traction, grants, and bio credentials excluded. Q&A tasting excluded. Singleton D3/D4/D6 noted as separately revisable commercial, channel, and segment modules."
+}

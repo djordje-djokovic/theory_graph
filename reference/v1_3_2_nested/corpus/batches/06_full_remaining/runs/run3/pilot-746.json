@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-746",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:36:30+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Engineers collecting site data with pen and paper must redraw messy notes on desktop, wasting effort",
+      "status": "explicit",
+      "evidence_span": "All this math, wasted effort. This isn't just a problem for Chuck. It is a problem for every professional out in the field"
+    },
+    {
+      "id": "P2",
+      "text": "ArcSight converts freehand iPad input into precise geometry in real time with live dimensions",
+      "status": "explicit",
+      "evidence_span": "ArcSight converts his freehand input into perfect, precise geometry"
+    },
+    {
+      "id": "P3",
+      "text": "The recognizer handles arbitrary line/arc combinations and predicts tangency",
+      "status": "explicit",
+      "evidence_span": "When other apps are still having difficulties in recognizing just one arc, ArcSight can recognize any combinations of lines and arcs"
+    },
+    {
+      "id": "P4",
+      "text": "Blueprint and photo overlays with on-drawing measurements keep field evidence organized for desktop export",
+      "status": "explicit",
+      "evidence_span": "he can insert a photo at a specific location on the blueprint. And he can also sketch and measure on top of the photo"
+    },
+    {
+      "id": "P5",
+      "text": "Free Basic launches now; Pro will add cloud collaboration like Evernote for field professionals",
+      "status": "explicit",
+      "evidence_span": "it will be just like Evernote for professionals in the field"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pen-and-paper field redo",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Real-time sketch recognition",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Organized capture and Pro cloud",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eliminate recreate-from-scratch site investigation work and save time",
+      "status": "explicit",
+      "evidence_span": "This totally eliminates the need to recreate everything from scratch. That is a huge time saver"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasted effort"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "perfect, precise geometry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all the data is well organized"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Independent run: split core recognizer capability from blueprint/photo organization; merged Pro cloud with organization rather than separate GTM singleton. Industry size framing excluded."
+}

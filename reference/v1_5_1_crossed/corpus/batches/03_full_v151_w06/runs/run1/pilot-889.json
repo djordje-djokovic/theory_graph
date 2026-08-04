@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "coder_session_id": "session_03",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes care tools fail because manual logging is tedious, hardware/software are incompatible, and no platform connects patients to their support network",
+      "status": "explicit",
+      "evidence_span": "proper care for diabetes is inadequate and in many countries broken due to the following usability and technical problems"
+    },
+    {
+      "id": "P2",
+      "text": "A smart audio-jack cable connects most existing glucometers to smart devices without buying new meters",
+      "status": "explicit",
+      "evidence_span": "this smart cable is compatible with majority of the glucometers in the market"
+    },
+    {
+      "id": "P3",
+      "text": "App color-codes readings, tags context/meds, graphs data, and can share with doctors",
+      "status": "explicit",
+      "evidence_span": "the app color codes some of the readings purple or orange if certain numbers are out of range"
+    },
+    {
+      "id": "P4",
+      "text": "Partner function lets remote family view stats, send encouragement, and get alerts if sync/tests or numbers go wrong",
+      "status": "explicit",
+      "evidence_span": "I from Taiwan can use any one of my smart devices and view her stats"
+    },
+    {
+      "id": "P5",
+      "text": "Patient-centric platform enables third-party interactions such as insurers, pharmacies, rewards, and future API services",
+      "status": "explicit",
+      "evidence_span": "HealthiSync also enables a patient-centric platform. enabling new forms of interaction with third parties to the patient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken diabetes data usability",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "legacy glucometer smart cable and app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "care partner monitoring network",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "third-party platform extensions",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People regain control of diabetes by aggregating glucose data and connecting support networks",
+      "status": "explicit",
+      "evidence_span": "Health to Sync aggregates glucose data, ultimately giving control back to you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manually recording is considered tedious"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking legacy devices, bringing them to the digital age, and making them smarter"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data availability to the support network"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "new forms of third-party interaction"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three enumerated diabetes tool failures folded as one problem set (§4.1.6). Cable + tagging/graphing app folded as product cascade; partner alerts kept as distinct care-network module. Future insurer/pharmacy/API as platform extension premise. Indiegogo ask excluded. Four domains."
+}

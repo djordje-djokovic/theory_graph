@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Restaurant tables are perishable inventory sold at flat prices across peak and off-peak demand",
+      "status": "explicit",
+      "evidence_span": "If a restaurant is not able to sell a table at 7 o'clock in the evening, it's a lost opportunity for the restaurants"
+    },
+    {
+      "id": "P2",
+      "text": "Lack of yield management leaves ~40% of inventory underutilized and drives high failure and food waste",
+      "status": "explicit",
+      "evidence_span": "about 40% of the restaurant inventory is underutilized due to lack of revenue or yield management"
+    },
+    {
+      "id": "P3",
+      "text": "ResGuru automatically changes restaurant prices based on demand and supply",
+      "status": "explicit",
+      "evidence_span": "allows the restaurants to automatically change their prices based on demand and supply"
+    },
+    {
+      "id": "P4",
+      "text": "Integrated reservation diary and analytics surface utilization and RevPASH across channels",
+      "status": "explicit",
+      "evidence_span": "consolidated snapshot of my reservation diary, which is seamlessly integrated with my point of sale system"
+    },
+    {
+      "id": "P5",
+      "text": "Forecasting from many variables yields per-slot pricing under goals like RevPASH, overbooking, and channel commissions",
+      "status": "explicit",
+      "evidence_span": "taking into account 21 different variables, macro and micro data points, and along with historical trends to forecast the demand for me and give me a pricing strategy for each time slot during the day"
+    },
+    {
+      "id": "P6",
+      "text": "Better pricing also aims to reduce daily restaurant food waste from poor forecasting",
+      "status": "explicit",
+      "evidence_span": "restaurants, A, are not able to forecast properly, B, they are not able to price their product optimally to sell it at the right point"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underused perishable restaurant seats",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dynamic pricing GDS",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Optimize restaurant revenue and utilization with demand-based pricing",
+      "status": "explicit",
+      "evidence_span": "help them optimize their revenue"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Offer diners better deals when restaurants price optimally",
+      "evidence_span": "get you better deals in your restaurants"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of the restaurant inventory is underutilized"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "change their prices automatically based on demand and supply"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Independent run3: food-waste/forecasting failure coded as part of problem domain (P6) rather than only secondary_value. Menu-engineering UI folded into pricing engine. Traction excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-877",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:41:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

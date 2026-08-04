@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-943",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:14:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile team work needs more than email—file share, talk, and calendar—in one place because phones have become dysfunctional offices",
+      "status": "explicit",
+      "evidence_span": "email doesn't really cut it for us all the time"
+    },
+    {
+      "id": "P2",
+      "text": "Zula is a structured messaging stream with in-stream file sharing, dynamic polls, and a shared-files view integrated with Dropbox and Google Drive",
+      "status": "explicit",
+      "evidence_span": "we started off with a very standard messaging stream, a structured messaging stream"
+    },
+    {
+      "id": "P3",
+      "text": "Team calendar events and searchable conversation history keep work findable over long-running streams",
+      "status": "explicit",
+      "evidence_span": "we can create a calendar event, calendar integration, boom. The whole team gets it"
+    },
+    {
+      "id": "P4",
+      "text": "Invites pull contacts from Zula, phone, Facebook, LinkedIn, Google+ via deep links straight into the conversation",
+      "status": "explicit",
+      "evidence_span": "I can pull them in from people I met in Zula. I can pull them in from my contacts, Facebook, LinkedIn, Google+"
+    },
+    {
+      "id": "P5",
+      "text": "One-tap conference calling rings teammates with push notifications and join without phone numbers; calls can be kept/recorded",
+      "status": "explicit",
+      "evidence_span": "we have one tap conference calling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "structured team messaging with files and calendar",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "social-contact invites into streams",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "one-tap conference calling",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce email and get team work done through structured mobile conversation",
+      "status": "explicit",
+      "evidence_span": "reducing email and moving into a much more structured way of communicating as a team"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "really helps us get things done and obviously has way reduced our email"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When I invite someone to this conversation, they come straight here"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I need to actually have a synchronous conversation"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "File share, poll, and mini-Dropbox treated as facets of the structured stream (enumeration atomicity rule 1). Calendar+search kept as findability/coordination of the same stream domain. Conference calling split as separately revisable synchronous module."
+}

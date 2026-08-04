@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personalized flexible menus with confirm/cancel/swap texts beat rigid diet schedules",
+      "status": "explicit",
+      "evidence_span": "Ninety minutes before every single meal, he gets a text message to confirm, cancel, or swap out the dish"
+    },
+    {
+      "id": "P2",
+      "text": "Restaurant-kitchen supply yields fresher healthy meals than preservative warehouse diet delivery",
+      "status": "explicit",
+      "evidence_span": "It's mass produced in a regional warehouse. It's loaded with preservatives so it can survive a multi-day track"
+    },
+    {
+      "id": "P3",
+      "text": "Local restaurants cook to health and taste preferences and deliver within the hour",
+      "status": "explicit",
+      "evidence_span": "custom made to your health and taste preferences and hand delivered to you within the hour"
+    },
+    {
+      "id": "P4",
+      "text": "Partners deliver; Healthy Out avoids inventory and a proprietary delivery network",
+      "status": "explicit",
+      "evidence_span": "Our restaurant partners deliver"
+    },
+    {
+      "id": "P5",
+      "text": "Monthly subscription plus restaurant commissions create high-gross-profit unit economics",
+      "status": "explicit",
+      "evidence_span": "We charge consumers $28 in the form of a monthly subscription fee"
+    },
+    {
+      "id": "P6",
+      "text": "Superior food quality drives better attraction and retention versus diet meal delivery",
+      "status": "explicit",
+      "evidence_span": "we have a far superior ability to attract and retain customers over those diet meal delivery guys"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Personalized ordering experience",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Local restaurant supply chain",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Unit economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "High-quality restaurant food delivered home/office with nutritionist-like personalization",
+      "status": "explicit",
+      "evidence_span": "high quality restaurant food that can be delivered to your home and office"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "which is why we have a far superior ability to attract and retain customers"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's convenient, it's no hassle healthy, and it's seriously delicious food"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hand delivered to you within the hour"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's virtually all gross profit"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Contrast with warehouse diet food coded as part of the supply mechanism. Financing ask excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-925",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

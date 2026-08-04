@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-558",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:37:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A cable-driven robot with automated pulleys prints accurately, installs and dismantles easily on site, and scales across print sizes",
+      "status": "explicit",
+      "evidence_span": "we designed and assembled a cable-driven robot, including an automated pulley system"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary printable concrete mix is stronger, sets far faster, flows through the printer, bonds layers instantly, and is environmentally friendly",
+      "status": "explicit",
+      "evidence_span": "this mix is two times stronger than the traditional mixes, has 20 times faster setting time"
+    },
+    {
+      "id": "P3",
+      "text": "Unlike rail-frame or center-mounted competitors, free cable motion avoids long setup and can close the building",
+      "status": "explicit",
+      "evidence_span": "we took these drawbacks of our competitors and developed the cable robot, where the printing plate can move freely throughout the cables"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term path prints small/medium projects and custom outdoor products at market-like prices but faster, then scales to single-story houses with a large MENA construction partner",
+      "status": "explicit",
+      "evidence_span": "we started taking small and medium construction projects"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cable robot construction printer",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "printable high-performance concrete",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "SME projects to houses GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Build homes fast, safely, and with less risk, including where disasters and wars destroy cities",
+      "status": "explicit",
+      "evidence_span": "giving families homes where natural disasters and wars destroy whole cities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Building is changing the way houses are built"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instant layer bonding, which is critical in 3D printing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so we can print single-story houses by the end of 2019"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript opens mid-sentence. Strength/set time/flow/bonding/eco metrics folded as process+performance package for the mix (v1.5.1 §4.1.8). Motor/cable demo facets folded into cable-robot mechanism. Market-size figures excluded. Strategic-deal language treated as GTM condition, not financing ask."
+}

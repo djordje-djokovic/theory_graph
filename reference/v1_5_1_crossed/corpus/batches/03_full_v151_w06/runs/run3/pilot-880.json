@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-880",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In-car technology goes obsolete quickly and owners cannot upgrade without buying a new car, leaving over a billion vehicles behind",
+      "status": "explicit",
+      "evidence_span": "aren't you afraid that a year from now, this technology will be completely outdated, and the only way to change that is to buy a new car"
+    },
+    {
+      "id": "P2",
+      "text": "A small plug-in device plus Vinly app catalog turns post-1996 cars into connected cars that can run apps immediately",
+      "status": "explicit",
+      "evidence_span": "The VINLY platform uses this small device to connect and communicate with your car"
+    },
+    {
+      "id": "P3",
+      "text": "Day-one first-party apps cover safety, money-saving, and fun driving use cases on the platform",
+      "status": "explicit",
+      "evidence_span": "We already built a number of apps on the platform so consumers can use Vinly from day one"
+    },
+    {
+      "id": "P4",
+      "text": "Consumer hardware is sold at $49.99 basic and $149.99 complete tiers",
+      "status": "explicit",
+      "evidence_span": "$49.99 for our vinly basic device, at $149.99 for our vinly complete"
+    },
+    {
+      "id": "P5",
+      "text": "Enterprises can plug Vinly into fleets for business apps such as Fleet Tracker at $149.99 per year including device and data",
+      "status": "explicit",
+      "evidence_span": "companies can buy Vinly devices, plug it into their fleet, and start using business applications"
+    },
+    {
+      "id": "P6",
+      "text": "An open developer platform with a simple API lets developers build connected-car apps across makes and models without OEM silos",
+      "status": "explicit",
+      "evidence_span": "developers can build applications for the connected car, regardless of their make and model, because we simplified the complicated car into a simple API call"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "outdated car technology problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "consumer connected-car device and apps",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "enterprise fleet applications",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "open developer platform",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Existing cars become smarter with connected apps and services without buying a new car",
+      "status": "explicit",
+      "evidence_span": "make a car manufactured after 1996, which is almost every car on the road right now, smarter than a car that just left the assembly line"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What about more than one billion vehicles on the road right now"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "download the Vinly app catalog and start using apps right away"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "applications like Fleet Tracker, which enables them to manage and track their fleet"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable developers to get a huge piece of this market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Car-outdatedness and billion-vehicle gap folded as one problem set (§4.1.6). Safety/money/fun apps folded as day-one catalog cascade (§4.1.7); developer tooling/SDKs/Backpack folded into open-API platform premise. Traction counts and Disrupt prize excluded (§4.2). Singleton D1/D3/D4 retained as separately revisable need, fleet, and developer modules. Anti-template: four domains, not need/product/money triad."
+}

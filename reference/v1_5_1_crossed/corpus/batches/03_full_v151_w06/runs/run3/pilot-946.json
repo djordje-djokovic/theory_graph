@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-946",
+    "coder_session_id": "session_02",
+    "session_case_index": 23,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:12:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most men hate clothes shopping online because they distrust fit and do not know where to start, so they still shop offline",
+      "status": "explicit",
+      "evidence_span": "93% of men still shop for clothes offline"
+    },
+    {
+      "id": "P2",
+      "text": "A marketplace connects men who hate shopping with style-savvy shoppers who find gear across the web and boutiques",
+      "status": "explicit",
+      "evidence_span": "Branded is a marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "id": "P3",
+      "text": "MAIL collects sizes, likes, and style so shoppers match on brand ID and improve recommendations from real-time feedback",
+      "status": "explicit",
+      "evidence_span": "Mail collects a bunch of data about what Joe likes to wear and what he doesn't, his sizes and his style"
+    },
+    {
+      "id": "P4",
+      "text": "Try-on with best-in-class pickup returns solves fit without repackaging or post-office trips; keepers are charged plus shopper tip",
+      "status": "explicit",
+      "evidence_span": "giving him the best return service in the industry. We call it return like a man"
+    },
+    {
+      "id": "P5",
+      "text": "Shopper supply can scale from underemployed stylish people across many backgrounds who want to earn by shopping for men",
+      "status": "explicit",
+      "evidence_span": "finding people that would love to make money by shopping for our men isn't a hard sell"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "men's online shopping friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "shopper marketplace and style engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "try-on return service",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "shopper labor supply",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Average men get trusted personal shopping online with try-before-you-buy fit",
+      "status": "explicit",
+      "evidence_span": "connects men who hate shopping with people that love to shop. And we let you try stuff on before you buy it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when it comes to shopping online, he has no idea where to even start"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "he's got someone to help him shop"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Joe doesn't have to lift a finger"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plenty of time to make money by shopping for our men"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript ends mid-CTA (truncated=true). Fit distrust and online starting friction folded as one men's shopping problem (§4.1.6). Marketplace matching and MAIL profile/feedback cascade folded into marketplace+engine domain with MAIL as distinct matching mechanism. Return-like-a-man split as independently claimed fit module. Waitlist traction excluded (§4.2). Team credentials excluded. Anti-template: problem, marketplace/engine, returns, and labor supply separately revisable."
+}

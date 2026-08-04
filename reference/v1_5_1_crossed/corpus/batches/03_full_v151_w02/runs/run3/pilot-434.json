@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-434",
+    "coder_session_id": "session_03",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Volatile weather creates unpredictable food supply and prices that businesses cannot easily hedge because soft commodities are hard to standardize and trade",
+      "status": "explicit",
+      "evidence_span": "Volatile weather creates unpredictable supply"
+    },
+    {
+      "id": "P2",
+      "text": "A large local-index insurance platform matches physical-goods risk to highly targeted indexes with automatic payouts",
+      "status": "explicit",
+      "evidence_span": "match the risk, the risk of your physical goods, to a local index, highly, highly targeted"
+    },
+    {
+      "id": "P3",
+      "text": "Clients buy protection through a simple three-question flow while algos price using historical simulations, futures signals, and portfolio diversification",
+      "status": "explicit",
+      "evidence_span": "she answers one of three questions"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market sells B2B to corporates and reaches farmers through aggregators such as banks, insurers, and co-ops",
+      "status": "explicit",
+      "evidence_span": "we sell B2B to corporate clients, and for farmers, obviously huge cost of acquisition problem, we go through aggregators"
+    },
+    {
+      "id": "P5",
+      "text": "Lloyd's cover-holder status and global underwriters underwrite the insured risk",
+      "status": "explicit",
+      "evidence_span": "We already are a Lloyd's cover holder"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unhedgeable food price and supply risk",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "index insurance product and pricing",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "channels and underwriting capacity",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Financial confidence for food businesses and farmers managing commodity price risk",
+      "status": "explicit",
+      "evidence_span": "Stable is delivering financial confidence to our clients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "volatile prices kill businesses"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we pay out automatically to replace that lost income"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Global underwriters underwrite the risk"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Weather/supply/price/hedging difficulties coded as one problem set (v1.5.1). Index matching, 48-hour payout, UX, and pricing algos treated as one insurance-platform mechanism with quantitative/process detail folded into P2–P3. Singleton D1 retained as the motivating risk condition."
+}

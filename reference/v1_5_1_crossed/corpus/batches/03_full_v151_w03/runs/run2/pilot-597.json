@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-597",
+    "coder_session_id": "session_06",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Exploding multi-partner data sources, formats, and access frequency make inter-company data management hard technically and operationally",
+      "status": "explicit",
+      "evidence_span": "This explosion in data makes managing inter-company data very hard, both technically and operationally"
+    },
+    {
+      "id": "P2",
+      "text": "A data operations platform handles how companies give and get data so teams focus on using data rather than integrating it",
+      "status": "explicit",
+      "evidence_span": "Nexla is a data operations platform that takes care of how you give and get the data"
+    },
+    {
+      "id": "P3",
+      "text": "The platform is easy for operations teams, secure with encryption/access control/anonymization, and smart about schema, quality, and volume changes",
+      "status": "explicit",
+      "evidence_span": "Nexla is easy to use, secure, and smart"
+    },
+    {
+      "id": "P4",
+      "text": "No-code transforms, sharing, destinations, and anomaly monitoring automate inter-company data workflows without specialized in-house pipeline builds",
+      "status": "explicit",
+      "evidence_span": "It took our user no time to set this up, and no coding was required"
+    },
+    {
+      "id": "P5",
+      "text": "Built to run in every infrastructure environment for complex multi-partner ecosystems",
+      "status": "explicit",
+      "evidence_span": "Nexla was built from the ground up to run in every infrastructure environment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inter-company data operations problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data ops platform capabilities",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less time integrating data and more time creating business value through scalable secure data operations",
+      "status": "explicit",
+      "evidence_span": "Less time integrating, more time creating business value"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "managing inter-company data very hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Less time integrating, more time creating business value"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Easy/secure/smart and demo transform/monitor cascade treated as facets of one data-ops platform (§4.1.7) with P3 capturing stated triad and P4 the no-code automation path. Beta customer names treated as traction, excluded. Founder bio excluded."
+}

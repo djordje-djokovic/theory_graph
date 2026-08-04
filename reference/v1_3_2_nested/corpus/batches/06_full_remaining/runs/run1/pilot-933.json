@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Doctors make bad decisions because they cannot feed clinical experience back into reference tools",
+      "status": "explicit",
+      "evidence_span": "Good doctors, like me and Mark, wind up making bad decisions because we have no way to share our experience"
+    },
+    {
+      "id": "P2",
+      "text": "A platform structures and shares doctors' experience with upvote-ranked treatments, dosing detail, and peer comments",
+      "status": "explicit",
+      "evidence_span": "share practice structures and shares doctor's experience"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in sharing to doctor contacts virally acquires new users while capturing structured answers",
+      "status": "explicit",
+      "evidence_span": "Viral model is baked right in, and it's working beautifully"
+    },
+    {
+      "id": "P4",
+      "text": "A proprietary medical ontology unifies variance in medical terminology across diagnosis and treatment databases",
+      "status": "explicit",
+      "evidence_span": "SharePractice built a proprietary medical ontology that took multiple databases, treatment databases, diagnosis databases, put them all together"
+    },
+    {
+      "id": "P5",
+      "text": "The platform uniquely captures why doctors choose particular treatments, data valuable in the analytics market",
+      "status": "explicit",
+      "evidence_span": "only SharePractice knows why"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Experience-sharing failure in medicine",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Collaborative clinical reference product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Unique prescribing-rationale data",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients get the best treatment because every doctor can draw on a large shared pool of clinical experience",
+      "status": "explicit",
+      "evidence_span": "share practice puts a million doctors in every doctor's pocket, and you're going to get the benefit of all of that experience"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Global doctor collaboration may surface new cures and better treatment knowledge",
+      "evidence_span": "global collaboration of doctors sharing their experience"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "In order to account for all the variance in medical terminology, SharePractice built a proprietary medical ontology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making bad decisions because we have no way to share our experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "puts a million doctors in every doctor's pocket"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're getting data that doesn't exist anywhere"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D1 retained: the experience-gap diagnosis is separately revisable from the product. Singleton D3 retained: analytics/'why' data is framed as its own path to value in a $10B analytics market. Contact-list growth tactic kept inside viral model P3. Vision of Uganda/new cures recorded in secondary_value.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-933",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:27:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

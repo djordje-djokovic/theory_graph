@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-918",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:48:12+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People worldwide already share food via home restaurants and underground dining",
+      "status": "explicit",
+      "evidence_span": "Whatever they call them, it's everywhere"
+    },
+    {
+      "id": "P2",
+      "text": "Marketplace wraps authentic dining with structure, safety, trust, verified hosts, and guaranteed events",
+      "status": "explicit",
+      "evidence_span": "put business structure, safety, and trust around this phenomena"
+    },
+    {
+      "id": "P3",
+      "text": "Secure online checkout includes EatWith commission",
+      "status": "explicit",
+      "evidence_span": "The payment already includes the itwith commission"
+    },
+    {
+      "id": "P4",
+      "text": "Both tourists and locals book experiences, including parties and corporate events",
+      "status": "explicit",
+      "evidence_span": "Our hosts started getting requests for birthday parties, social events, cooking classes, company events, even singles nights"
+    },
+    {
+      "id": "P5",
+      "text": "Users want great food, interesting people, and unforgettable experiences whether traveling or local",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Trusted dining marketplace",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-audience authentic dining demand",
+      "premise_ids": [
+        "P1",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Diners get authentic local food experiences with interesting people",
+      "status": "explicit",
+      "evidence_span": "we want great food, interesting people, and unforgettable experiences"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Hosts earn income while sharing cooking passion",
+      "evidence_span": "earning some extra income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "community marketplace for authentic dining experiences"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Most of the tourists want to meet the locals and to have an authentic dining experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "P5 borders value language; retained as demand condition because speaker frames it as what travelers and locals require for the category to work. Opening NYC announcement treated as launch news, not premise."
+}

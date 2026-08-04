@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "App users expect data continuity across devices, but that requires a backend developers often struggle to provide",
+      "status": "explicit",
+      "evidence_span": "app users expect to have access to their most recent data anytime, anywhere. Over 90% of developers want to build cross-platform apps. But to have data sync across different devices, they first need a back end"
+    },
+    {
+      "id": "P2",
+      "text": "Existing options are Apple-only iCloud, months of self-built backends with storage costs, or expensive BaaS at scale",
+      "status": "explicit",
+      "evidence_span": "There's iCloud, but that only works for Apple devices, and a lot of developers hate working with it. You can build a back-end yourself, but that can take months, and you still pay for storage costs. Or you can use a third-party back-end as a service, but that gets extremely expensive as you start to scale"
+    },
+    {
+      "id": "P3",
+      "text": "Nimbus Base stores app data on users' personal clouds such as Dropbox and Google Drive as a cross-platform backend",
+      "status": "explicit",
+      "evidence_span": "Nimbus Base is the first mobile and web backend to leverage app users' personal clouds, like Dropbox and Google Drive, to store app data"
+    },
+    {
+      "id": "P4",
+      "text": "Data stores locally first and syncs when online, enabling offline-friendly continuity across authorized devices",
+      "status": "explicit",
+      "evidence_span": "If you're offline, that data is first stored locally and then synced to be online when you do have a connection"
+    },
+    {
+      "id": "P5",
+      "text": "Users personally control and can delete their app data from their own cloud rather than opaque third-party servers",
+      "status": "explicit",
+      "evidence_span": "With Nimbus Base, you can be sure. With just a few clicks of your mouse, you can personally delete your data for your apps"
+    },
+    {
+      "id": "P6",
+      "text": "Few lines of code cut backend setup from months to minutes and remove developer storage costs so scale is free",
+      "status": "explicit",
+      "evidence_span": "Nimbus Base reduces the time developers spend setting up a back end from months to minutes and lets them focus on what's really important, the user experience. And second, we save them a ton of money. Because we build on top of free personal cloud, there are no data storage costs for the developer, and he can scale from one user to millions for free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cross-device continuity need and backend gaps",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personal-cloud sync backend",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Developer time and cost savings",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy, free-to-scale backend that gives users data continuity across devices with control over their data",
+      "status": "explicit",
+      "evidence_span": "we built a back end that's easy to implement, free to scale, and works everywhere"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Users get complete control over app data",
+      "evidence_span": "lets you have complete control over all your data"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lack of data continuity across devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage app users' personal clouds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale from one user to millions for free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Developer license payment mentioned as commercial aside; not coded as full pricing model. Personal-cloud ubiquity framing folded into P3.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-930",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:36:40+02:00"
+  }
+}

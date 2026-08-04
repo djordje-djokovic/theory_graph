@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1074",
+    "coder_session_id": "session_02",
+    "session_case_index": 3,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:33Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Gen Y spenders do not know where their money goes and need better budgeting/tracking",
+      "status": "explicit",
+      "evidence_span": "I have no idea where my money goes"
+    },
+    {
+      "id": "P2",
+      "text": "Expense inputs on phone must complete in under three seconds with pattern-aware tags",
+      "status": "explicit",
+      "evidence_span": "input any expense in under three seconds"
+    },
+    {
+      "id": "P3",
+      "text": "The app never asks for credit card, bank information, or even name",
+      "status": "explicit",
+      "evidence_span": "We'll never ask you for your credit card or bank information, not even your name"
+    },
+    {
+      "id": "P4",
+      "text": "Game mechanics—experience points, tokens, achievements, and leveling—encourage tracking habits",
+      "status": "explicit",
+      "evidence_span": "we add those same principles to encourage them to track their cash"
+    },
+    {
+      "id": "P5",
+      "text": "Users can create subcategory budgets that track tagged spending against a goal",
+      "status": "explicit",
+      "evidence_span": "we've gone one step farther and allowed for subcategorization"
+    },
+    {
+      "id": "P6",
+      "text": "Demographic You Versus Them insights compare a user's spending to their age group",
+      "status": "explicit",
+      "evidence_span": "with the You Versus Them feature, I can show you insights like never before"
+    },
+    {
+      "id": "P7",
+      "text": "Tokens unlock merchant deals; monetization places the right deals with the right audience",
+      "status": "explicit",
+      "evidence_span": "Spends Tokens unlock deals"
+    },
+    {
+      "id": "P8",
+      "text": "Spends remains free for users forever",
+      "status": "explicit",
+      "evidence_span": "For users, Spends will always be free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Gen Y budgeting problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "fast private gamified tracking product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "deals monetization and free consumer",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun, fast budgeting and spending tracking so users know where money goes",
+      "status": "explicit",
+      "evidence_span": "solve the problem of budgeting and tracking your money. Not like everybody else, but fun and fast"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I have no idea where my money goes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make inputs fast, super fast"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For users, Spends will always be free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "XP/tokens/achievements/levels folded as one gamification mechanism (§4.1.7). Web dashboard treated as surface of same tracking product, not a separate premise. Bootstrap/launch timing excluded as traction (§4.2). Three domains—anti-template: problem, product capabilities, and deals/free model are separately revisable."
+}

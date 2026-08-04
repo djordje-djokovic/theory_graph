@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A mesh networking application lets users share mobile internet among phone, tablet, and laptop by crowdsourcing connectivity",
+      "status": "explicit",
+      "evidence_span": "OpenGarden is a mesh networking application that enables you to share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "id": "P2",
+      "text": "Installing the application also gives users faster and more reliable mobile internet",
+      "status": "explicit",
+      "evidence_span": "you also benefit from a faster mobile internet and more reliable mobile internet"
+    },
+    {
+      "id": "P3",
+      "text": "More people on the Open Garden network improve connectivity for everyone",
+      "status": "explicit",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    },
+    {
+      "id": "P4",
+      "text": "The application is available on Android, Mac, and Windows laptops",
+      "status": "explicit",
+      "evidence_span": "It is available on Android, Mac, and Windows laptop"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mesh crowdsourced connectivity",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-device availability",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get shared, faster, and more reliable mobile internet connectivity",
+      "status": "explicit",
+      "evidence_span": "faster mobile internet and more reliable mobile internet"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "the more people on the OpenGallery network, the better connectivity we can all achieve together"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share your mobile internet among your phone, tablet, and laptop"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "available on Android, Mac, and Windows laptop"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Much of the pitch is TechCrunch thanks, fundraising anecdote, install counts, and hiring—excluded under §4.2. Singleton D2 retained as platform-availability condition separately revisable from the mesh mechanism. Hurricane/Japan/India stories treated as usage illustrations, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-988",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

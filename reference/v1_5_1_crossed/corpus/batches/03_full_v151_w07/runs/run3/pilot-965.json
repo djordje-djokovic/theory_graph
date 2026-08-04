@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-965",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:17:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cash remittances force recipients into agency travel, long waits, bill-pay trips, and high Western Union fees",
+      "status": "explicit",
+      "evidence_span": "They have to pay for a bus to go to an agency, wait online for two hours, then go to another agency to pay their utility bills"
+    },
+    {
+      "id": "P2",
+      "text": "Immigrants send SMS-usable credit to family phones in Latin America for food, medicine, utilities, and tuition",
+      "status": "explicit",
+      "evidence_span": "hardworking immigrants can send a credit directly to their family cell phone in Latin America"
+    },
+    {
+      "id": "P3",
+      "text": "Senders use online or ~200 mom-and-pop partner stores; recipients redeem via SMS PIN like a gift card",
+      "status": "explicit",
+      "evidence_span": "her sister gets a unique SMS pin code that she can use to pay for food at the local supermarket"
+    },
+    {
+      "id": "P4",
+      "text": "Recipients can transfer part of funds onward, making the remittance experience inherently viral",
+      "status": "explicit",
+      "evidence_span": "transfer part of those funds to a family member or another friend"
+    },
+    {
+      "id": "P5",
+      "text": "Contracts already cover 7,200 retail locations in eight countries enabling LatAm scale",
+      "status": "explicit",
+      "evidence_span": "we already have the contracts that gives us access to 7,200 retail locations in eight different countries"
+    },
+    {
+      "id": "P6",
+      "text": "Retailer fees subsidize a $3 flat customer fee up to 70% cheaper than alternatives",
+      "status": "explicit",
+      "evidence_span": "a low flat fee of just $3, up to 70% cheaper than any alternative"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMS remittance to family phones",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "viral fund forwarding",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "retail network and flat fee",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Let immigrants pay for family's basic needs back home via SMS remittance",
+      "status": "explicit",
+      "evidence_span": "We allow immigrants to pay for all of their family's basic needs back home, all via an SMS"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay for food, medicine, utility bills, even tuition"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We are building a social network on top of the remittance experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subsidize how much we charge our customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Traction metrics (67% WoW, 5,000 customers) excluded as evidence of past performance. $69B LatAm remittance figure used as market context for scale premise via retail contracts. Vision 'future of global remittances' not coded as premise."
+}

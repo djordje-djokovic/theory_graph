@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-998",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T13:30:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Brand buyers want others to know what they have and what they wear",
+      "status": "explicit",
+      "evidence_span": "They want others get to know what they have, what they wear"
+    },
+    {
+      "id": "P2",
+      "text": "Seeing an appealing item triggers a desire to identify the brand and where to buy it",
+      "status": "explicit",
+      "evidence_span": "you realize you want the same one. But how to know what brand it is and where to buy it?"
+    },
+    {
+      "id": "P3",
+      "text": "One integrated service — brand-in tags, iPhone app, and brand-loyalty web service — lets users tag brands, ask the community, and get fast purchase advice",
+      "status": "explicit",
+      "evidence_span": "the main part of it is a powerful web service which brings people together on the basis of their brand's loyalty"
+    },
+    {
+      "id": "P4",
+      "text": "Brands will pay to communicate with their fans and with competitors' fans",
+      "status": "explicit",
+      "evidence_span": "brands can communicate with their fans and even with fans of their competitors. Brands will love it. And they will pay us for it"
+    },
+    {
+      "id": "P5",
+      "text": "A store marketplace attaches purchase links to brandings automatically via keyword analysis of store price lists",
+      "status": "explicit",
+      "evidence_span": "we are creating special marketplace for stores which appears in a branding area"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Brand display and curiosity",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated brand-tagging service",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Brand and store monetization",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People who love brands get to show, identify, and choose the brands around them",
+      "status": "explicit",
+      "evidence_span": "TechBrand is going to be a big brand for people who love brands"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How to satisfy their curiosity?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will get the right choice"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Brands will love it. And they will pay us for it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Per v1.3.2 clarification 5, the app, the brand-in tag, and the web service are folded into one integrated-service premise P3: the speaker explicitly frames the app as 'a little tip of the huge iceberg' whose main part is the web service, so the product is one offering. D2 is a singleton on that basis — one separately revisable product module. The ask for investments and team credentials are excluded per 4.2; app-approval and international-expansion plans are roadmap items left uncoded. No plainly asserted premise-prerequisite."
+}

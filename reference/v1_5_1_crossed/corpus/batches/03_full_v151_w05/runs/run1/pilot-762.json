@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-762",
+    "coder_session_id": "session_01",
+    "session_case_index": 1,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile-device users still rely on outlets and plug-in chargers for everyday battery power",
+      "status": "explicit",
+      "evidence_span": "scurrying around trying to find an outlet just to get a little bit more juice in your phone"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary RF-harvesting smartphone case captures wasted phone RF energy, converts it to electricity, and extends battery life without plugging in",
+      "status": "explicit",
+      "evidence_span": "Our case is embedded with a harvesting antenna that is proprietary that captures that wasted RF energy and then takes it through a conversion process to convert it into electricity and then dumps it back into the phone"
+    },
+    {
+      "id": "P3",
+      "text": "A large share of US smartphone users already buy products to get more phone power",
+      "status": "explicit",
+      "evidence_span": "out of the 220 million smartphone users in the United States, over 30% have purchased some sort of product to help them get a little more power in their phone"
+    },
+    {
+      "id": "P4",
+      "text": "The case launches via Kickstarter as the go-to-market channel",
+      "status": "explicit",
+      "evidence_span": "in one month, we are launching this product. And we will be doing that on Kickstarter"
+    },
+    {
+      "id": "P5",
+      "text": "A follow-on wireless charger will provide near- and far-field powering where consumers are",
+      "status": "explicit",
+      "evidence_span": "Our next product that we're going to bring to the market is a wireless charger that will provide near field and far field powering solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "outlet-dependent mobile power problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "RF harvesting case and wireless roadmap",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "power-accessory market and Kickstarter launch",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers get passive extra phone battery life from wasted RF without hunting for outlets",
+      "status": "explicit",
+      "evidence_span": "it gives you extra power that you need to get from sunup to sundown"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Green harvesting of wasted energy instead of plug-in battery packs",
+      "evidence_span": "It is a green technology that simply harvests wasted energy and converts it into DC power"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you as a consumer deserve a better solution for power for your mobile devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "extend your battery life by 30% simply using wasted energy transmitted from your phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over 30% have purchased some sort of product to help them get a little more power in their phone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Outlet-hunting and plug-in charger dependence folded as one pain (§4.1.6). Antenna/conversion/dump-back/30%/unplugged vs battery cases folded as one RF-harvest case mechanism (§4.1.7). IoT ambient-sensor uses treated as applications of the same RF harvesting (§4.1.2). Ubiquitous wireless-power dream treated as vision framing; concrete next wireless-charger product retained. OSU inventors treated as credentials. Singleton D1 retained as separately revisable problem premise. Anti-template: problem, product roadmap, and market/GTM separately revisable."
+}

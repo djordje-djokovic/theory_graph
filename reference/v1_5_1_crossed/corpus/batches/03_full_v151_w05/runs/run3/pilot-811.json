@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-811",
+    "coder_session_id": "session_04",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Early-stage circuit-board prototyping via China fab is slow and costly (hundreds of dollars and ~two weeks), and mistakes restart the wait loop",
+      "status": "explicit",
+      "evidence_span": "Most designers outsource fabrication to facilities in China, pay a couple hundred dollars, and wait two weeks for delivery"
+    },
+    {
+      "id": "P2",
+      "text": "Volterra prints circuit boards in about lunch-break time using silver nanoparticle ink, including multi-layer boards and solder-paste dispense/bake for beta units",
+      "status": "explicit",
+      "evidence_span": "a printer that can create a circuit board in the time it takes to go get lunch"
+    },
+    {
+      "id": "P3",
+      "text": "Customers buy the printer and purchase replacement ink cartridges and substrates through the website",
+      "status": "explicit",
+      "evidence_span": "our customers will be able to purchase replacement ink cartridges and substrates directly through our website"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware developers across large tech, startups, academia, and hobbyists need faster in-house electronics prototyping (desk-side printer goal)",
+      "status": "explicit",
+      "evidence_span": "They all agree that hardware developers need a faster way to prototype electronics"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "slow costly PCB prototype loop",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "desktop circuit board printer",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "consumables and developer segments",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Custom circuits in under about an hour instead of weeks, helping people reach manufacturing faster and save cost",
+      "status": "explicit",
+      "evidence_span": "help people get there faster and save huge costs along the way"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the choice between lead times of two weeks or just 60 minutes is an easy one to make"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Volterra, if you need custom circuits, just press print"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's our goal to put a printer on every one of their designers' desks"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "China fab wait/cost/error restart and hobbyist toxic etching folded as one prototyping-access problem (§4.1.6). Ink, multi-layer sandwich, and solder-paste/bake folded as feature cascade of one printer (§4.1.7). RFID/Arduino/hobbyist uses treated as applications of the same mechanism (§4.1.2). Market-size framing excluded. Anti-template: problem, printer, and GTM/consumables separately revisable."
+}

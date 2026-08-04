@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-439",
+    "coder_session_id": "session_02",
+    "session_case_index": 20,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After major wildfires, insurers stop writing near wildfire areas because third-party wildfire models are inaccurate and cannot separate low-risk from high-risk homes",
+      "status": "explicit",
+      "evidence_span": "insurance companies came to realize that the third-party data models, the wildfire models that they were buying, were incredibly inaccurate"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary AI wildfire risk models outperform industry models to identify and price low-risk homes inside catastrophe regions (wildfire first, hurricane next)",
+      "status": "explicit",
+      "evidence_span": "we have created our own proprietary wildfire models that vastly outperform the models that are available in the industry"
+    },
+    {
+      "id": "P3",
+      "text": "Policies include active monthly risk-mitigation outreach telling homeowners how risk changed and what to fix",
+      "status": "explicit",
+      "evidence_span": "our policy comes along with an active risk mitigation service. We reach out to every homeowner once a month"
+    },
+    {
+      "id": "P4",
+      "text": "MGA writes policies sold through independent agents while carriers pay claims; also sells analytics side product to other insurers",
+      "status": "explicit",
+      "evidence_span": "We're launching as a Managing General Agent, or MGA"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inaccurate wildfire models and coverage retreat",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Proprietary wildfire underwriting model",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Active homeowner risk mitigation",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "MGA agent and analytics distribution",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Profitable property insurance for lower-risk homes in catastrophe regions that others avoid",
+      "status": "explicit",
+      "evidence_span": "writes insurance specifically for low-risk homes within catastrophe regions"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This creates a huge opportunity for a company that does understand that risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what areas are low risk and offer insurance to homes that other insurance companies simply would stay away from"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the top things they can change about their home to protect themselves from wildfire"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're selling through independent agents"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Temperature/wind/satellite/micro-model layers folded into proprietary model premise (rule 7). Analytics side product folded into MGA/distribution commercial premise as second channel for the same risk model. Team credentials excluded."
+}

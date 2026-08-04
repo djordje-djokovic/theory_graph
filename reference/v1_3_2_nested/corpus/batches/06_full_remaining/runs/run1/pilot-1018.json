@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile search should get tasks done with natural voice interaction, not return a sea of web links",
+      "status": "explicit",
+      "evidence_span": "all you get is a sea of web links, not direct results that help you make a decision immediately"
+    },
+    {
+      "id": "P2",
+      "text": "Maluba is a voice-activated do engine that returns actionable results across categories with the same UI for voice and touch",
+      "status": "explicit",
+      "evidence_span": "It's a voice-activated do engine that helps you get tasks done"
+    },
+    {
+      "id": "P3",
+      "text": "Natural-language technology classifies questions into the most relevant category with high accuracy and expands to new verticals fast",
+      "status": "explicit",
+      "evidence_span": "breakthrough natural language technology, which classifies your question into the most relevant category with incredibly high accuracy"
+    },
+    {
+      "id": "P4",
+      "text": "An open ecosystem partners with many content providers and is not locked to Apple or Google",
+      "status": "explicit",
+      "evidence_span": "we're partnering up with more than 15 different industry-leading content providers, including Twitter, Facebook, Wolfram Alpha, and many more. We're not tied to an ecosystem just like Apple or Google"
+    },
+    {
+      "id": "P5",
+      "text": "Cross-platform mobile presence plus an SDK lets developers build on the natural language platform",
+      "status": "explicit",
+      "evidence_span": "we're releasing an SDK so that you guys can develop amazing applications using our natural language platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Task-done mobile search need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Voice do-engine and NL classification",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Open content ecosystem and SDK",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help users get tasks done immediately via voice-activated search with direct actionable results",
+      "status": "explicit",
+      "evidence_span": "a voice-activated do engine that helps you get tasks done"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "All this is powered by a breakthrough natural language technology"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "not direct results that help you make a decision immediately"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps you get tasks done"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We want to provide you the best possible experience"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Timeline, share, and touch-interface demo features folded into the do-engine premise (v1.3.2 4.1(5)). 'Future of search' / open-ecosystem belief coded as partnership condition P4, not bare vision. Expanding to hundreds of domains treated as capability of the NL algorithm (in P3), not a separate vision premise. Singleton D1: search-as-tasks-done market assumption is separately revisable from product tech.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1018",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:30+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

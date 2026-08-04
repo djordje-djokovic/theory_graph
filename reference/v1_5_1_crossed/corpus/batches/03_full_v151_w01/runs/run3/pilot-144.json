@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-144",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:15:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Monoclonal antibody drugs are hard to use and unaffordable because they cannot cross many tissue barriers, lack cold-chain-free stability, and have high manufacturing costs",
+      "status": "explicit",
+      "evidence_span": "monoclonal antibodies, which have significant challenges, like their incapability to cross through most tissue barriers on the body, lack of stability out of cold chain, and high manufacturing costs"
+    },
+    {
+      "id": "P2",
+      "text": "Those limits confine antibodies to narrow applications and block drugs for many diseases affecting global populations",
+      "status": "explicit",
+      "evidence_span": "This limits their use into a very narrow set of applications, making impossible the development of new antibody drugs for hundreds of diseases that affect most of the global population"
+    },
+    {
+      "id": "P3",
+      "text": "AMP platform fuses shark antibody CDR3 regions to a synthetic sea-snail conoprotein scaffold using molecular and AI processes without in vivo transgenic or cellular models",
+      "status": "explicit",
+      "evidence_span": "Our synthetic antibody mimetic protein platform, or AMP for short, uses CDR3 regions from single-domain shark antibodies fused to a synthetic conoprotein scaffold from a sea snail"
+    },
+    {
+      "id": "P4",
+      "text": "AMPs are much smaller than monoclonal antibodies yet retain biological function, with tissue crossing, limited immunogenicity, hard-to-reach antigen targeting, and heat resistance",
+      "status": "explicit",
+      "evidence_span": "Our AMPs are 40 times smaller than a monoclonal antibody, but with the same biological functions. Our AMPs can cross through tissue barriers, generate limited immune reactions even with no humanization, can target very small and hard to reach antigens, and are heat resistant"
+    },
+    {
+      "id": "P5",
+      "text": "Those properties enable previously impossible delivery forms such as aerosol, eye drops, viral delivery, or transdermal release",
+      "status": "explicit",
+      "evidence_span": "the ability to develop Antibody drugs that have been impossible to develop, like antibody drugs in aerosol, in eye drops, viral delivery, or trans-thermal release"
+    },
+    {
+      "id": "P6",
+      "text": "Business model develops and preclinical-validates AMPs then out-licenses to pharma for upfront, milestone, and royalty payments",
+      "status": "explicit",
+      "evidence_span": "we out-license our AMPs to pharmaceutical companies, generating revenue from upfront payments, clinical phase and approval milestones, and then royalties over sales of the marketed products"
+    },
+    {
+      "id": "P7",
+      "text": "Lead AMP1 for diabetic retinopathy aims to replace risky costly eye injections with home eye drops via proven tissue penetration and therapeutic activity",
+      "status": "explicit",
+      "evidence_span": "you will be able to take your treatment in simple eye drops at home, no need for an eye injection"
+    },
+    {
+      "id": "P8",
+      "text": "Respiratory AMP leads show nanomolar neutralization of respiratory virus on lung cell culture comparable to approved antibody drugs",
+      "status": "explicit",
+      "evidence_span": "Our AMP4 shown full neutralization capability over the COVID-19 virus on lung cell culture at nanomolar level. This is similar to FDA approved COVID-19 antibody drugs on the market"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Monoclonal antibody delivery and cost limits",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic AMP protein platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Pharma out-licensing and lead programs",
+      "premise_ids": ["P6", "P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make antibody drugs as affordable, accessible, and easy to use as common pharmaceuticals",
+      "status": "explicit",
+      "evidence_span": "make antibody drugs as affordable, accessible, and easy to use as common pharmaceutical drugs"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Our AMPs are 40 times smaller than a monoclonal antibody, but with the same biological functions"
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "These advantages gives our AMP platform the ability to develop Antibody drugs that have been impossible to develop"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "But these are not easy to use or affordable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "designing synthetic antibody mimetic proteins to replace monoclonal antibodies in novel first-in-class therapeutics"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take your treatment in simple eye drops at home, no need for an eye injection"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "AMP property list (size, barrier crossing, immunogenicity, antigen reach, heat) folded into P4 as cascade of the mimetic mechanism; delivery-form list kept as consequence premise P5. Diabetic retinopathy injection pain folded into P1/P7 rather than split per pain label. Founder history excluded. Anti-template: problem, platform, and licensing/leads separately revisable."
+}

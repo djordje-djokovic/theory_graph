@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1061",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users can build a custom gnome, take it to places, photograph it, and hand it to friends' devices",
+      "status": "explicit",
+      "evidence_span": "build your very own custom gnome and take him with you, to take pictures with him"
+    },
+    {
+      "id": "P2",
+      "text": "A gnome uniquely resides on one device at a time",
+      "status": "explicit",
+      "evidence_span": "a gnome can only live on one device"
+    },
+    {
+      "id": "P3",
+      "text": "Lift transfers a gnome from one device to another using the camera viewfinder",
+      "status": "explicit",
+      "evidence_span": "he's going to leave my iPhone, where he resides currently, and he's going to end up on the iPad in a process that we call lift"
+    },
+    {
+      "id": "P4",
+      "text": "Prior holders get notifications and can comment when the gnome checks in somewhere new",
+      "status": "explicit",
+      "evidence_span": "everybody who has had Lebowski, or Disrupt in this case, on his device will actually get a notification"
+    },
+    {
+      "id": "P5",
+      "text": "Lyft drag-and-drop moves photos and content through screens between devices",
+      "status": "explicit",
+      "evidence_span": "drag and drop through the screen"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Traveling digital gnome",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-device Lyft",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A shared gnome journey across people and places",
+      "status": "explicit",
+      "evidence_span": "record that gnome at that spot"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Interesting multi-device interconnectivity beyond one screen",
+      "evidence_span": "connect them in a more interesting way"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hand that beautiful gnome off to a friend"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "device interconnectivity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Greenfield exploration framing not coded as a premise this run (§4.1(4)); focus on product conditions. Lyft singleton retained as separately demoed second product. Demo travel anecdotes excluded."
+}

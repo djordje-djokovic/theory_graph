@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-83",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Eye disease is asymptomatic until late, so prevention requires regular screening especially for diabetics",
+      "status": "explicit",
+      "evidence_span": "The only way to achieve it is to do regular screening. And they do it for the risk groups of patients. But still, the problem is too big. For example, the biggest risk group is diabetic patients"
+    },
+    {
+      "id": "P2",
+      "text": "Diabetic patient volume is rising while ophthalmologist supply is flat",
+      "status": "explicit",
+      "evidence_span": "Only 15 years ago, only in the Netherlands, there were 400,000 diabetic patients. Today, this number is tripled, and it's still growing by 1,200 weekly. But the number of doctors, of termological doctors who help them, are still the same"
+    },
+    {
+      "id": "P3",
+      "text": "CNN AI on retina images returns diagnosis in about a minute at >95% accuracy",
+      "status": "explicit",
+      "evidence_span": "you just drag and drop the photo. Convolutional neural networks do all of the job, and you receive your diagnosis within one minute. And what's even better, accuracy is above 95%"
+    },
+    {
+      "id": "P4",
+      "text": "First customers are optician chains, GPs, and telemedicine as first-line eye care",
+      "status": "explicit",
+      "evidence_span": "We see our first customers as optician chains, general practitioners, and telemedicine companies, as they are the first line of eye care today"
+    },
+    {
+      "id": "P5",
+      "text": "Subscription pricing starts at about €5 per image versus ~€25 market screening price",
+      "status": "explicit",
+      "evidence_span": "subscription model based on how much images they use monthly, starting with only five euros per image, comparing to the lowest price on Dutch market today is 25 euros per screening"
+    },
+    {
+      "id": "P6",
+      "text": "Collaboration with EyeClinic Rotterdam will build a first-in-world glaucoma screening image set and validate a new standard",
+      "status": "explicit",
+      "evidence_span": "we've signed papers with EyeClinic Rotterdam, which is the biggest and best eye hospital in the Netherlands. During the next 12 months, we're going to collect and annotate together with them more than 100,000 specialized images for glaucoma screening. And it will be the first glaucoma screening solution in the world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Screening capacity gap for diabetics",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Retina AI diagnosis assistant",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "First-line channels and per-image pricing",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Glaucoma hospital partnership pathway",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Faster, more accurate eye-disease screening that helps prevent late blindness",
+      "status": "explicit",
+      "evidence_span": "We want to prevent it. That's why ophthalmological doctors all around the world are doing their best to reveal the problem before it hurts you that bad"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Future extension from retina imaging to cardiovascular and neurological disease detection",
+      "evidence_span": "it gives us opportunity to discover cardiovascular diseases and neurological diseases also"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you don't screen your retina regularly, the risk of getting eye complications, which causes blindness, goes up to 90%"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "artificial intelligence assistant that can help doctor to make diagnosis just in a couple of seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "starting with only five euros per image, comparing to the lowest price on Dutch market today is 25 euros per screening"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "validate our solution as the new standard in ophthalmology"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 retained as the core AI mechanism. Awards, fundraising ask, and team size excluded per 4.2. Smartphone-retinoscopy vision treated as future framing, not a premise; related health-expansion recorded in secondary_value."
+}

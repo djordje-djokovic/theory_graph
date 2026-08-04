@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-679",
+    "coder_session_id": "session_03",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents' only options to monitor kids' online risks are invasive manual phone checks that undermine independence and create daily friction",
+      "status": "explicit",
+      "evidence_span": "my only options are to pick up his phone, scan through his messages, or to save his passwords and randomly spot check his activity online"
+    },
+    {
+      "id": "P2",
+      "text": "ML algorithms on social and messaging content detect issues like cyberbullying, sexting, and depression/suicide signs and alert parents with recommended actions without full message access",
+      "status": "explicit",
+      "evidence_span": "machine learning-based algorithms to detect issues like cyberbullying, sexting, signs of depression or suicide"
+    },
+    {
+      "id": "P3",
+      "text": "Parents connect many social accounts, configure age-appropriate notification types, and receive weekly digests or issue alerts with confirmable feedback",
+      "status": "explicit",
+      "evidence_span": "We support 15 social media accounts"
+    },
+    {
+      "id": "P4",
+      "text": "Priced at $9 per month per family with unlimited children and accounts, plus school/nonprofit affiliate distribution",
+      "status": "explicit",
+      "evidence_span": "BARC is just $9 per month per family, unlimited children, unlimited connected accounts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual parental monitoring friction",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "ML alerts with privacy-preserving controls",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "family pricing and school affiliates",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Children stay safer online while keeping privacy and family trust",
+      "status": "explicit",
+      "evidence_span": "keep children safe online while allowing them privacy and helping their families build trust"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This manual process is a daily friction point"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If we detect an issue, we send an alert to the parent along with recommended actions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working directly with schools and nonprofits to provide them affiliate revenue"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Bullying/sexting/depression examples and manual-check pain folded as one parental-safety problem set (v1.5.1 §4.1.6). Detection types are facets of one ML alert mechanism; onboarding conversation tips and psychologist-authored recommendations folded as cascade of the product UX (§4.1.7). Message-volume/issue-rate stats excluded as traction. Price and school affiliate channel kept as one commercial premise. Anti-template: problem, product, and monetization/distribution separately revisable."
+}

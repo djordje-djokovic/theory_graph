@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Electrochemical deposition works for bulk metals but not competitively for rare earths used in electronics and batteries",
+      "status": "explicit",
+      "evidence_span": "electrochemical deposition that's been used to purify bulk metals like copper and nickel for over 100 years. But for low abundance metals like the rare earth ones"
+    },
+    {
+      "id": "P2",
+      "text": "Nanotube mesh conductivity and surface area enable coffee-cup-scale charged filtration that precipitates and separates metals from solution",
+      "status": "explicit",
+      "evidence_span": "delivering a charge across the mesh of carbon nanotube filters to try and precipitate metals contained in a liquid solution as solid materials"
+    },
+    {
+      "id": "P3",
+      "text": "Metal supply concentration creates price and ethics risk for top global product firms",
+      "status": "explicit",
+      "evidence_span": "China reduced the supply of rare earth elements to the global markets"
+    },
+    {
+      "id": "P4",
+      "text": "nth cycle targets manufacturing effluent recovery now and component digestion later, requiring coffee-cup productization",
+      "status": "explicit",
+      "evidence_span": "Our long-term market goal is to help them digest those individual components and reclaim the individual metals"
+    },
+    {
+      "id": "P5",
+      "text": "Series filter stacks recover specific oxides (e.g., copper, europium, cobalt, nickel) at high purity from mixed waste",
+      "status": "explicit",
+      "evidence_span": "we have relatively high purity, high recovery rates for those particular metals that were introduced"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rare metal supply problem",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Filter stack recovery",
+      "premise_ids": [
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "OEM recovery roadmap",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Put reclaimed metals back into manufacturers' new processes from floor scrap and old products",
+      "status": "explicit",
+      "evidence_span": "put new life into new process from reclaimed metals, both from their manufacturing floor as well as from old products"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "securing the metal supply chain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "individually recover those metals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "returns control of the metal supply chain to the manufacturer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Team slide excluded. 'Reinvention of material supply chain' goal treated as value-adjacent framing; primary value from reclaimed-metals claim.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-395",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:38:15+02:00"
+  }
+}

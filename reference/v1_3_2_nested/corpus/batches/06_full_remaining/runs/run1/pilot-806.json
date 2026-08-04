@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people want home security but few have it because systems are hard to install, non-portable, overreactive, and ugly",
+      "status": "explicit",
+      "evidence_span": "while the majority of Americans, including myself, want to have home security, less than 20% of us actually do"
+    },
+    {
+      "id": "P2",
+      "text": "All-in-one Sentry self-installs in minutes with camera, motion, and environmental sensors",
+      "status": "explicit",
+      "evidence_span": "self-installation process that takes minutes versus hours of expert installation"
+    },
+    {
+      "id": "P3",
+      "text": "Mobile app plus themes and device control (Nest, Hue, Wemo) let users know and control the home from one place",
+      "status": "explicit",
+      "evidence_span": "know and control your home from one single destination"
+    },
+    {
+      "id": "P4",
+      "text": "Portable hardware-as-platform serves urban dwellers and pet parents; cloud video and Android apps extend it",
+      "status": "explicit",
+      "evidence_span": "hardware as a platform, where the Sentry unit is just a beginning"
+    },
+    {
+      "id": "P5",
+      "text": "Priced around $299, a fraction of traditional security systems",
+      "status": "explicit",
+      "evidence_span": "for only $299 at a fraction of the cost of traditional security systems"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken security adoption",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Elegant all-in-one home hub",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Portable platform and price",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect what matters with simple, portable home monitoring and control",
+      "status": "explicit",
+      "evidence_span": "protect what matters most"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solutions that are available today are both broken and outdated"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all-in-one solution to know and control your home"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "portability and being able to take this solution on to go"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Kickstarter traction excluded. Touchscreen add-on folded into product (v1.3.2 #5). Taipei/SF footprint is org detail not coded unless causal; manufacturing location mentioned but not treated as theory condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-806",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:02:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

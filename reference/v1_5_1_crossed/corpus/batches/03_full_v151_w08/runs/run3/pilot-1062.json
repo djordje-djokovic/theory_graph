@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1062",
+    "coder_session_id": "session_03",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plush toys remain a large market while customers increasingly design custom products online",
+      "status": "explicit",
+      "evidence_span": "We're combining these two trends to create something truly cool and unique for our customers"
+    },
+    {
+      "id": "P2",
+      "text": "An online toy designer lets users customize colors, body parts, decorations, and names into a personal unique plush",
+      "status": "explicit",
+      "evidence_span": "they can design their own custom plush toy"
+    },
+    {
+      "id": "P3",
+      "text": "After online design, the company physically manufactures and ships the toy",
+      "status": "explicit",
+      "evidence_span": "we actually manufacture the toy, physically manufacture the toy and send it to you"
+    },
+    {
+      "id": "P4",
+      "text": "Launch targets individual consumers, with later expansion to small businesses and organizations for branded runs",
+      "status": "explicit",
+      "evidence_span": "Our initial website launch is targeted mostly at individuals"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "plush plus custom-online market trends",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "design-to-manufacture custom plush",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "individual then business customers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users create cool, cute, and crazy custom plush toys online and receive unique personal toys",
+      "status": "explicit",
+      "evidence_span": "create cool, cute, and crazy custom plush toys online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combining these two trends"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "truly make a unique and custom experience for our customers"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeted mostly at individuals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Q&A pricing after judges' questions excluded (§4.2.5). Designer customization cascade folded (§4.1.7); physical manufacture split as separately failable secret sauce. Anti-template: market trends, product, and segment focus separately revisable."
+}

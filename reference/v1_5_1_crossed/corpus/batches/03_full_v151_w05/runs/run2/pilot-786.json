@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-786",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home cannabis growing requires prohibitive specialized knowledge (lighting, nutrients, medium) and ugly room/tent setups",
+      "status": "explicit",
+      "evidence_span": "I was baffled by the amount of knowledge required in order to grow high-quality cannabis"
+    },
+    {
+      "id": "P2",
+      "text": "A plug-in appliance with cannabis-specific LED and automated nutrient/pH/temperature/humidity/odor control grows plants via smartphone",
+      "status": "explicit",
+      "evidence_span": "Leaf is a plug-in plant system that automatically grows cannabis and is controlled by your smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "A grower community shares live plant streams and custom recipes that can be one-click synced to another Leaf",
+      "status": "explicit",
+      "evidence_span": "in one click, I can sync his recipe directly to my leaf"
+    },
+    {
+      "id": "P4",
+      "text": "Consumables (nutrients, carbon filters, etc.) are shipped to the door each grow",
+      "status": "explicit",
+      "evidence_span": "sending you directly to your door every grow, nutrients, carbon filters, anything you need to grow"
+    },
+    {
+      "id": "P5",
+      "text": "Strategic partnership with Advanced Nutrients supplies leading cannabis nutrients",
+      "status": "explicit",
+      "evidence_span": "we're announcing a strategic partnership and investment from the world's leading cannabis nutrient company, Advanced Nutrients"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home grow knowledge barriers",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automated Leaf appliance",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "community recipes and consumables",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy home production of high-quality, high-potency medical cannabis",
+      "status": "explicit",
+      "evidence_span": "growing your own cannabis has never been easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The barriers to entry are just too high"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize for the best size, weight, density, and of course the potency of the medicine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nutrients, that is the most important part in a high quality cannabis plant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Lighting/nutrients/medium/tent pain list folded as one barrier bundle (§4.1.6). Automated control feature cascade (LED, dosing, pH, climate, odor, design) kept as one appliance mechanism (§4.1.7). Community recipe sync and doorstep consumables treated as separately revisable engagement/supply modules; Advanced Nutrients as partnership condition for nutrient quality. Beta deposit excluded as financing/traction. Singleton D2 retained as core independently learnable product mechanism."
+}

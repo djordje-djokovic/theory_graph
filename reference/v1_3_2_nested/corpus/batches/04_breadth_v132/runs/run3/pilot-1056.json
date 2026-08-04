@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Interactive touchscreens are rapidly taking over classrooms",
+      "status": "explicit",
+      "evidence_span": "More than a quarter of United States classrooms have one of these in them."
+    },
+    {
+      "id": "P2",
+      "text": "Fragmented manufacturer software locks each piece of content into its platform",
+      "status": "explicit",
+      "evidence_span": "every single one of them has a different piece of software for building interactive content"
+    },
+    {
+      "id": "P3",
+      "text": "A browser-based version of the lesson software runs on any device with a browser",
+      "status": "explicit",
+      "evidence_span": "completely browser-based. It's inside the Safari browser"
+    },
+    {
+      "id": "P4",
+      "text": "Students and teachers interact with the same content simultaneously from their own devices",
+      "status": "explicit",
+      "evidence_span": "multiple people can interact with this content simultaneously"
+    },
+    {
+      "id": "P5",
+      "text": "Equation and graphing tools offer a new way of interacting with math on a computer",
+      "status": "explicit",
+      "evidence_span": "a totally new way of interacting with math"
+    },
+    {
+      "id": "P6",
+      "text": "The publish feature distributes lessons via links, embeds, PDFs, and offline downloads",
+      "status": "explicit",
+      "evidence_span": "We have embed code for this so you can share it on a learning management system or in a blog, you can link to this, you can view it as a PDF"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Classroom content lock-in",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Browser interactive platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Lesson publishing",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive lesson content that teachers and learners can use and share with the world",
+      "status": "explicit",
+      "evidence_span": "share this with the world"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "This means two things. One, it means it works on any device that has a browser. The other, it means that multiple people can interact with this content simultaneously."
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That means your content is locked not only into your platform"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "works on any device that has a browser"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's going to now be a fully published, accessible lesson"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Finer reading: touchscreen adoption is coded as its own market-shift premise separate from the lock-in consequence, and publishing is a singleton distribution domain (independently revisable sharing pipeline, announced as its own feature launch). The browser-to-collaboration dependency is coded from the explicit 'this means two things' warrant. Funding and registration announcements excluded; 'future of education' framing not coded per v1.3.2 clarification 4.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1056",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:36:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

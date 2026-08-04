@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1056",
+    "coder_session_id": "session_05",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:22Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Interactive classroom whiteboard content is locked to each manufacturer's software and to the classroom, so teachers and students cannot access it from home",
+      "status": "explicit",
+      "evidence_span": "your content is locked not only into your platform, but it's locked into the classroom"
+    },
+    {
+      "id": "P2",
+      "text": "Browser-based interactive lessons work on any device with a browser and support simultaneous multi-user interaction without installed software",
+      "status": "explicit",
+      "evidence_span": "this is now completely browser-based"
+    },
+    {
+      "id": "P3",
+      "text": "An equation tool with live graphing lets users type math that auto-formats and updates graphs as equations change",
+      "status": "explicit",
+      "evidence_span": "you can see the graph updating as you change the equation, a totally new way of interacting with math"
+    },
+    {
+      "id": "P4",
+      "text": "Publish makes lessons globally accessible with embeds, links, PDF, and offline classroom downloads",
+      "status": "explicit",
+      "evidence_span": "a fully published, accessible lesson"
+    },
+    {
+      "id": "P5",
+      "text": "Professional publishers can build rich interactive lessons with the tools in hours instead of native software",
+      "status": "explicit",
+      "evidence_span": "building it in hours instead of a native piece of software"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "locked interactive classroom content",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "browser interactive lessons and math",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "publish and professional authoring",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive educational content usable on any browser device, including from home, not locked to classroom hardware",
+      "status": "explicit",
+      "evidence_span": "it works on any device that has a browser"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "End Texas Instruments' classroom graphing monopoly with computer-based math interaction",
+      "evidence_span": "Texas Instruments, your monopoly on graphing in the classroom is over"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can't access it from home. Teachers can't access it from home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "replicate downloadable software and put it in browser"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a million people can look at this simultaneously, interact with it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Geography/drag demos folded into browser interactive lessons. Math graphing kept as distinct capability the speaker frames as solving another education problem. Publish and McGraw-Hill authoring speed grouped as content distribution/authoring module. Financing and alpha invite code excluded. 'Future of education' framing not a premise (§4.1.4)."
+}

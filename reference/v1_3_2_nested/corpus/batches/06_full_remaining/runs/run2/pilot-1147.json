@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hiring and finding experts via Google or LinkedIn fails; people ask trusted contacts instead",
+      "status": "explicit",
+      "evidence_span": "LinkedIn's a fantastic social Rolodex, but that's about the extent of it. I know what all of you do. You ask the people you trust"
+    },
+    {
+      "id": "P2",
+      "text": "A business stream routes opportunities using social-graph cues and smart algorithms",
+      "status": "explicit",
+      "evidence_span": "we're giving the system some cues so its smart routing algorithms can figure out who gets it"
+    },
+    {
+      "id": "P3",
+      "text": "Recipients re-route opportunities onward and applicants respond in real time",
+      "status": "explicit",
+      "evidence_span": "other people are seeing it in their stream and sending it along to other people who they think are relevant"
+    },
+    {
+      "id": "P4",
+      "text": "Identity profiles with declared expertise and endorsements establish online trust",
+      "status": "explicit",
+      "evidence_span": "the first piece of trust online is identity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Trusted hiring and expert discovery",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Opportunity routing stream",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Identity and expertise trust",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Route and match business opportunities across your business graph",
+      "status": "explicit",
+      "evidence_span": "using your business graph to route business opportunities"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You ask the people you trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "another opportunity matched on namesake"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "business graph is about trust"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Inline apply folded into routing/response domain. Facebook/Twitter/LinkedIn sources kept inside graph routing, not separate channel premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1147",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:10+02:00"
+  }
+}

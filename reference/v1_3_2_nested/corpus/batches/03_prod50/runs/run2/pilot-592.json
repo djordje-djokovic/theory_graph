@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "FactGem answers complex questions across datasets without writing code",
+      "status": "explicit",
+      "evidence_span": "with the applications that Fact Gem is launching here today, I can answer this quickly and without writing a line of code"
+    },
+    {
+      "id": "P2",
+      "text": "Whiteboarder models and dynamically links heterogeneous data sources",
+      "status": "explicit",
+      "evidence_span": "modeled my crime data using FactGem's whiteboarder, and now I will easily model my weather data and dynamically link it to my crime data"
+    },
+    {
+      "id": "P3",
+      "text": "Uploader maps data automatically with drag-drop for unmapped fields",
+      "status": "explicit",
+      "evidence_span": "most of my weather data automatically maps. For the few fields that don't map, it's easy. I will use Fact Gem's drag and drop tool"
+    },
+    {
+      "id": "P4",
+      "text": "Can build linked models across stores and customers at Fortune 500 scale in hours",
+      "status": "explicit",
+      "evidence_span": "We built a linked model across all stores and customers. We exposed new insight. And we did this in six hours, not 24"
+    },
+    {
+      "id": "P5",
+      "text": "Connecting data relationships is a prerequisite for AI and machine learning ambitions",
+      "status": "explicit",
+      "evidence_span": "These companies also want artificial intelligence and machine learning. They can't get there without first connecting their data and understanding the relationships within it"
+    },
+    {
+      "id": "P6",
+      "text": "FactGem connects relational data instantly without code, unlike tools that need training or engineering",
+      "status": "explicit",
+      "evidence_span": "FactGem can do this instantly and without writing any code"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Whiteboarder and uploader linking",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fast enterprise insight delivery",
+      "premise_ids": [
+        "P1",
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Data relationships enable AI",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Insight from connected data relationships without coding delay",
+      "status": "explicit",
+      "evidence_span": "put your data together and expose new insights in 24 hours"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dynamically link it to my crime data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "expose new insights in 24 hours"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connecting their data and understanding the relationships within it"
+    },
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "They can't get there without first connecting their data and understanding the relationships within it. FactGem can do this instantly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Explicit prerequisite that AI needs connected relationships coded as exploratory dependency. Truncated start.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-592",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

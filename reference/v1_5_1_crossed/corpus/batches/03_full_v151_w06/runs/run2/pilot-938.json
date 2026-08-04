@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-938",
+    "coder_session_id": "session_01",
+    "session_case_index": 22,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Messaging forces a choice between text and voice: voice-in-text apps are error-prone and voice apps are unusable in meetings/class",
+      "status": "explicit",
+      "evidence_span": "you won't have to choose whether you type or talk or read or listen, because Talks always has both formats in every message"
+    },
+    {
+      "id": "P2",
+      "text": "Talks puts text and voice in every message so recipients can tap to hear or read, with original audio backing imperfect transcription",
+      "status": "explicit",
+      "evidence_span": "Talks incorporates text and voice into every message"
+    },
+    {
+      "id": "P3",
+      "text": "Same app supports rich social/messaging media (pictures, voice, video, doodles, music, location) and easy Twitter/Facebook posting",
+      "status": "explicit",
+      "evidence_span": "fully featured messaging app that supports pictures, voice, video, doodles, music, and location"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-platform launch (iOS then Android, Windows Phone, Blackberry) and ability to message anyone without the app drive virality",
+      "status": "explicit",
+      "evidence_span": "talks doesn't require the receiver to have the app so I can send messages literally to anyone"
+    },
+    {
+      "id": "P5",
+      "text": "Voice cloning learns the user's voice so messages and social posts can be read in their voice or celebrity voices",
+      "status": "explicit",
+      "evidence_span": "we created a technology called voice cloning"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "text versus voice messaging tradeoff",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "dual-format Talks messages",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "rich media and social posting",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "cross-platform and no-app-required reach",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D5",
+      "name": "voice cloning",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Communicate without choosing text or voice—every message works for typing, talking, reading, or listening contexts",
+      "status": "explicit",
+      "evidence_span": "you won't have to choose whether you type or talk or read or listen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Voice applications are great if you're in the car driving, but if you're in a meeting or in class, they're basically unusable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "text and audio in every message"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communicate on social networks with your people as easily as it is to send a message to one of your friends"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This will help talks be more viral than any other messaging app"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "read out in your voice or the voice of your favorite celebrity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Text/voice format problem stated as the core gap; dual-format message is the primary mechanism. Media types folded as one rich-messaging package (§4.1.7); multi-platform + no-app-required kept as one reach/virality GTM premise; voice cloning split as separately introduced tech module. Team speech-tech downloads excluded as credentials (§4.2.2). Celebrity-voice promo treated as launch tactic. Five-domain partition; not a need/product/money triad."
+}

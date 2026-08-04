@@ -1,0 +1,102 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without on-orbit refueling, satellites that exhaust their single tank of fuel are destroyed and their revenue is lost",
+      "status": "explicit",
+      "evidence_span": "almost 200 satellites worth about 100 billion dollars have had to be destroyed because they've run out of fuel"
+    },
+    {
+      "id": "P2",
+      "text": "OrbitFab flies fuel tanks on available launchers and manages orbital logistics to deliver propellant when customers need it",
+      "status": "explicit",
+      "evidence_span": "we manage the logistics and the orbital mechanics, and we deliver the right fuel to our customers when they need them"
+    },
+    {
+      "id": "P3",
+      "text": "A compact drop-in fueling port with tolerant self-aligning connectors enables safe high-pressure propellant transfer in orbit",
+      "status": "explicit",
+      "evidence_span": "This fueling port has been built at a small size, a small weight, small cost, the same exactly as the fill ports that they currently use to fill up satellites on the ground"
+    },
+    {
+      "id": "P4",
+      "text": "Refueling lets satellite owners cut capital expenditure roughly in half while the service earns high gross margins",
+      "status": "explicit",
+      "evidence_span": "customers can save 50 percent on their capital expenditure, and we take home gross margins of 90 percent"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Satellite fuel exhaustion problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Orbital gas-station infrastructure",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "CapEx savings and margins",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stop throwing satellites away by refueling them so they continue earning for owners",
+      "status": "explicit",
+      "evidence_span": "it goes off to an orbit where it can make more money for its owners"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "No system exists for safely and reliably fueling a satellite in space. So we set out to solve that problem first"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stop throwing satellites away"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "refueled safely and reliably in orbit"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save 50 percent on their capital expenditure"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Industry standard with 20 companies folded into drop-in adoption claim inside P3 rather than a separate premise. ISS demo and named contracts excluded as traction. Heinlein/solar-system line treated as vision. Singletons D1 and D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-445",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

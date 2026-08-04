@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-811",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:12+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outsourced PCB fab for prototyping is expensive and slow, and mistakes restart the wait",
+      "status": "explicit",
+      "evidence_span": "pay a couple hundred dollars, and wait two weeks for delivery"
+    },
+    {
+      "id": "P2",
+      "text": "Volterra prints boards in about 60 minutes using silver nanoparticle conductive ink",
+      "status": "explicit",
+      "evidence_span": "Our technology uses a silver nanoparticle conductive ink to create the electrical traces"
+    },
+    {
+      "id": "P3",
+      "text": "Designers keep their existing CAD software and print from it",
+      "status": "explicit",
+      "evidence_span": "design their circuit in whatever software they're already comfortable with, and then, as my co-founder Jesus is about to show us, they just press print"
+    },
+    {
+      "id": "P4",
+      "text": "The tool prints multi-layer boards and can dispense solder paste and bake for beta builds",
+      "status": "explicit",
+      "evidence_span": "it'll even dispense solder paste and bake the board for you"
+    },
+    {
+      "id": "P5",
+      "text": "Recurring revenue from replacement ink cartridges and substrates sold online",
+      "status": "explicit",
+      "evidence_span": "purchase replacement ink cartridges and substrates directly through our website"
+    },
+    {
+      "id": "P6",
+      "text": "Engineers and hobbyists want faster electronics prototyping than two-week fab cycles",
+      "status": "explicit",
+      "evidence_span": "hardware developers need a faster way to prototype electronics"
+    },
+    {
+      "id": "P7",
+      "text": "In-house printing lets larger businesses keep new development on-site against IP leakage",
+      "status": "explicit",
+      "evidence_span": "The larger businesses can protect against IP infringement by keeping all the new development in-house"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Print technology and workflow",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Website consumables",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Prototyping speed and IP need",
+      "premise_ids": [
+        "P1",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hardware developers get custom circuits much faster and cheaper toward manufacturing",
+      "status": "explicit",
+      "evidence_span": "just help people get there faster and save huge costs along the way"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Press-print custom circuits without toxic hobby etching",
+      "evidence_span": "if you need custom circuits, just press print"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With our printer, you need less than two hours"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save huge costs along the way"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hardware developers need a faster way to prototype electronics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "IP-in-house benefit coded as separate customer-condition premise because speaker presents it as a distinct enterprise reason to adopt. Consumables singleton retained as commercial module. Not replacing mass manufacturing treated as positioning, not premise."
+}

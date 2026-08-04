@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-145",
+    "coder_session_id": "session_02",
+    "session_case_index": 20,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Beekeepers lose ~40% of bees yearly to pesticides, parasites, and disease, threatening pollination-dependent food and a large rental-hive industry",
+      "status": "explicit",
+      "evidence_span": "Every year, we lose about 40% of our bees because of pesticides, parasites, and diseases"
+    },
+    {
+      "id": "P2",
+      "text": "Manual hive inspections across large multi-site operations discover problems too late, after colonies die",
+      "status": "explicit",
+      "evidence_span": "by the time the beekeeper discovers that a hive is having an issue, the hive will die, along with 40% of the whole bee yard"
+    },
+    {
+      "id": "P3",
+      "text": "Sensor devices translate hive temperature, humidity, sound, weight, and geolocation into a remote health/behavior interface",
+      "status": "explicit",
+      "evidence_span": "The beekeepers install our sensor devices in the hive, and we translate its temperature, humidity, sound frequencies, or really the signals that the bees send each other, the weight of the hive and its geolocation"
+    },
+    {
+      "id": "P4",
+      "text": "Affordable analytics packages (not expensive raw data) improve decision-making to prevent disease and raise apiary profitability",
+      "status": "explicit",
+      "evidence_span": "We offer affordable analytics instead of expensive raw data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hive loss and inspection lag",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor AI management platform",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give honeybees a voice so beekeepers can keep hives healthy and provide sustainable pollination",
+      "status": "explicit",
+      "evidence_span": "we give honeybees a voice"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More profitable apiaries",
+      "evidence_span": "have a more profitable apiary"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "beekeepers are struggling to keep their bees alive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prevent diseases instead of reacting to them"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Sensor modalities folded into P3 cascade. Three analytic plan SKUs folded into P4 commercial packaging of same analytics offer. Five-hive save / 100 connected hives treated as validation/traction. Expansion-to-10k-hives vision not coded as a separate premise."
+}

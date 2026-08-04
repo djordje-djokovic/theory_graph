@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite massive annual spend, 98% of educational content stays static and linear",
+      "status": "explicit",
+      "evidence_span": "200 billion is being spent on generating educational content every year. However, 98% of this content is both static and linear."
+    },
+    {
+      "id": "P2",
+      "text": "It is no longer clear what learners will need to solve tomorrow or which jobs to train for",
+      "status": "explicit",
+      "evidence_span": "It's no longer clear what problems our learners need to solve tomorrow, nor is it clear what jobs will be available or what we should train them for."
+    },
+    {
+      "id": "P3",
+      "text": "Knowledge AI produces interactive bite-sized e-learning packages 100 times faster, with the full learning apparatus generated alongside",
+      "status": "explicit",
+      "evidence_span": "100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "id": "P4",
+      "text": "Knowledge LX builds goal-based learning experiences from a latent space of concepts between current understanding and the goal",
+      "status": "explicit",
+      "evidence_span": "generating a latent space of all the concepts that lie between the learner's current understanding and their learning goal"
+    },
+    {
+      "id": "P5",
+      "text": "An embedded B2B model routes through LMS partners such as Canvas, Google Classroom, Microsoft, and Ilias",
+      "status": "explicit",
+      "evidence_span": "We've worked carefully with the teams at Canvas, Google Classroom, Microsoft, and Ilias to launch the first few integrations right here on stage today"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Content production mismatch",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Generative learning engine",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Embedded partner distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Courses generated in real time replace static, linear content for institutions and learners",
+      "status": "explicit",
+      "evidence_span": "what if we could generate courses in real time?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Learning driven by intrinsic motivation, illustrated by the exoskeleton learning build",
+      "evidence_span": "tap into the learner's intrinsic motivation and generate real-life learning experiences in real time"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our educational systems are forced to guess"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100 times faster, plug-and-play ready for any learning environment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "already being used by multiple platforms who can simply plug us in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Partner model and the named LMS integrations coded as one distribution premise per v1.3.1 clarification 3 (channel structure of the same offer). Institutional cost-reduction and completion/retention reports treated as outcome evidence rather than premises. Anti-template note per 4.5(5): content-market mismatch, the generation engine, and the embedded partner channel are separately revisable — the speaker can re-aim integrations without touching the AI, and LX extends the engine without changing the problem read.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-148",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:34:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

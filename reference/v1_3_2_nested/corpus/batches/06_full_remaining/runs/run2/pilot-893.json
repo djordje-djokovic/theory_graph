@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Forgetfulness and steep ramps cause walk-related fall injuries for seniors using walkers",
+      "status": "explicit",
+      "evidence_span": "these steep ramps and forgetfulness is what causes walk-related fall injuries"
+    },
+    {
+      "id": "P2",
+      "text": "Traditional walkers lack safety features that stop the walker from running away",
+      "status": "explicit",
+      "evidence_span": "Traditional walkers lack the additional safety features that prevent walkers from running away"
+    },
+    {
+      "id": "P3",
+      "text": "Smart electronics with sensors and programming receive user intention and apply gradual brakes appropriately",
+      "status": "explicit",
+      "evidence_span": "Through the array of sensors and some programming, it's capable of receiving the user intention and reacting appropriately to reduce the risk of injuries"
+    },
+    {
+      "id": "P4",
+      "text": "Technology is licensed to walker manufacturers who integrate it as walkers leave the factory",
+      "status": "explicit",
+      "evidence_span": "license it to walker manufacturers. They integrate it into their walkers as they leave the factory"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Walker fall problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smart braking product",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "OEM licensing GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Minimize seniors' fall injury risk with a smarter walker",
+      "status": "explicit",
+      "evidence_span": "actuating appropriately to minimize the risk of injuries"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Traditional walkers lack the additional safety features that prevent walkers from running away. This smart walker here would automatically apply gradual breaks"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "walk-related fall injuries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce the risk of injuries"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license it to walker manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "P1 merges forgetfulness and steep-ramp causes as one fall-injury condition (speaker treats them as joint cause). Need/product/GTM triad justified: OEM licensing revisable without changing sensor stack. Bio and financing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-893",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

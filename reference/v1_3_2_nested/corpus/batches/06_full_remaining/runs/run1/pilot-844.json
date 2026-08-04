@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A fundability score compares a company's data to past successful and unsuccessful raises and tells the CEO how to improve",
+      "status": "explicit",
+      "evidence_span": "looks at a company's data and compares it with the data of companies that have successfully and unsuccessfully raised capital in the past"
+    },
+    {
+      "id": "P2",
+      "text": "The score is built from large private-offering datasets including the Australian Small Scale Offering Board plus US and global databases",
+      "status": "explicit",
+      "evidence_span": "we took the largest data set of small private offerings in the world, which is the Australian Small Scale Offering Board's data set"
+    },
+    {
+      "id": "P3",
+      "text": "Signup is free; the platform takes a 2% success fee on deals that transact via a broker-dealer partnership",
+      "status": "explicit",
+      "evidence_span": "For any deals that transact on the platform, we take a 2% success fee"
+    },
+    {
+      "id": "P4",
+      "text": "Optional full-service investment banking is offered at an additional 5%, or via specialty niche banks",
+      "status": "explicit",
+      "evidence_span": "If you want to engage us as your full service investment bank, it's another 5%"
+    },
+    {
+      "id": "P5",
+      "text": "Global deal inventory comes through partnerships with platforms, deal sourcers, and brokers across countries",
+      "status": "explicit",
+      "evidence_span": "We've made partnerships with global platforms, deal sourcers, and brokers to bring in deals from multiple countries"
+    },
+    {
+      "id": "P6",
+      "text": "Significant investors already use the platform and are looking for companies to invest in alongside them",
+      "status": "explicit",
+      "evidence_span": "they're looking for people to invest alongside them. They're looking for companies to invest in"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fundability score and data",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Marketplace fees and banking",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Global deals and investor demand",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Issuers improve fundability and connect with investors on a capital-raising platform",
+      "status": "explicit",
+      "evidence_span": "provides the CEO information about what they can do to improve that score"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P1",
+      "type": "premise-premise",
+      "evidence_span": "we put a great team to work using that data set to develop the fundability score"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve your fundability as a company"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "For any deals that transact on the platform, we take a 2% success fee"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They're looking for companies to invest in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript truncated mid-sentence. Team credentials and listing/fundraise dollar traction excluded per 4.2. Jobs Act market-size framing not coded as a premise (v1.3.2 clarification 4). Three domains: score/data, fee model, and two-sided deal/investor inventory.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-844",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

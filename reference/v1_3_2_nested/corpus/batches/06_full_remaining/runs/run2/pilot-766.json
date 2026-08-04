@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-766",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:22:41+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Dynamic pricing and complex price-match processes leave consumers outmatched and unpaid for drops they are owed",
+      "status": "explicit",
+      "evidence_span": "We, as consumers, are totally outmatched"
+    },
+    {
+      "id": "P2",
+      "text": "A web app uses OAuth inbox access, shopping-account links, price scraping, coupon detection, policy checks, and NLP to auto-file refund claims",
+      "status": "explicit",
+      "evidence_span": "we'll use a combination of price scraping, coupon detection algorithms, and keep finding ways to save you money"
+    },
+    {
+      "id": "P3",
+      "text": "Receipt pull uses subject/sender webhooks without reading other email contents, with bank-level security on stored data",
+      "status": "explicit",
+      "evidence_span": "We placed customized webhooks to pull receipts and store communications based on subject and sender alone, without ever touching the contents of your other emails"
+    },
+    {
+      "id": "P4",
+      "text": "Paribus supports major online stores across categories so shoppers are covered wherever they buy",
+      "status": "explicit",
+      "evidence_span": "Paribus already supports 20 of the largest stores online"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue is a cut of recovered savings after the user is paid, reducible via referrals",
+      "status": "explicit",
+      "evidence_span": "Our standard fee is charged 25% of the money we earn you. If you share it with your friends, you can bring this down to zero"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer pricing disadvantage",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automated claims with privacy-preserving inbox access",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cut of recovered savings",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Effortlessly recover money owed after online price drops",
+      "status": "explicit",
+      "evidence_span": "Get it effortlessly with Parabis"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Nobody does it. And by your estimates and results so far, we estimate that online consumers are leaving $10 billion on the table"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Paribus, it's all automated"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Paribus earns is after we save you money first"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Security treated as a separately stated condition for trust in the automation stack but kept in the product domain (not a singleton). ASR 'Parabis' left in value evidence_span verbatim. Traction ($10k saved) excluded. Data-driven discrimination closing treated as framing, not a premise."
+}

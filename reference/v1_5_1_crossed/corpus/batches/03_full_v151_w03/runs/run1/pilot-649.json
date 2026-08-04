@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-649",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A media streaming platform focuses on mostly local Tanzanian movies, TV shows, and music videos available on mobile and TV",
+      "status": "explicit",
+      "evidence_span": "we are building a media streaming platform for mostly local content"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "local content streaming",
+      "premise_ids": ["P1"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users stream local movies, shows, and music videos on phone or TV",
+      "status": "inferred",
+      "evidence_span": "You can stream Tango TV on your mobile phone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stream Tango TV on your mobile phone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.35
+  },
+  "notes": "Severely truncated after product one-liner into financing ask (excluded). Single domain/premise only what the transcript supports; no invented GTM or monetization."
+}

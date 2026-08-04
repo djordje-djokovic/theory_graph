@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sales reps will not keep CRM current, so managers cannot reliably run the pipe",
+      "status": "explicit",
+      "evidence_span": "Sales reps don't comply with the corporate policy to put the data in the application"
+    },
+    {
+      "id": "P2",
+      "text": "Fortuit auto-ingests unstructured communication with pipeline data to predict deal success or failure",
+      "status": "explicit",
+      "evidence_span": "tells me whether I'm gonna succeed or whether I'm gonna fail on certain deals"
+    },
+    {
+      "id": "P3",
+      "text": "Visual pipeline and timeline explain why deals are at risk so the rep can self-triage before management review",
+      "status": "explicit",
+      "evidence_span": "The sales rep was able to triage his own pipe, come up with his own solution, and in a very clear manner, visual, show the manager he's in control"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "CRM data chore problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fortuit predictive sales app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Know if you will make the quarter and why deals will or will not close",
+      "status": "explicit",
+      "evidence_span": "will I make my quarter? Doesn't matter if you're a rep or management, you want to know the answer to that question"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "garbage in, neatly packaged garbage out"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our engine is incredibly predictive"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Free/no-IT install folded into product adoption detail within D2 rather than singleton commercial domain. Truncation flagged.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1059",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:48:00+02:00"
+  }
+}

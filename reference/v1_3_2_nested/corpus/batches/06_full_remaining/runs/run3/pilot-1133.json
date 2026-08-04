@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Language learning today is time-intensive, dull, and disconnected from the learner's life",
+      "status": "explicit",
+      "evidence_span": "It's time intensive, it's dull, and it lacks any relevant connection to your life"
+    },
+    {
+      "id": "P2",
+      "text": "Turning topical content learners already consume into three-minute educational modules served on SMS, mobile, and web makes classrooms ubiquitous",
+      "status": "explicit",
+      "evidence_span": "First, we take topical content that you're actually reading anyway, and we convert it into educational program. These are your new textbooks. Then, we take that, break it into three-minute, very small, bite-sized modules, and we serve it to you everywhere"
+    },
+    {
+      "id": "P3",
+      "text": "Adaptive personalized pedagogy uses L1 support, required output, scaffolding, and skill-level passages",
+      "status": "explicit",
+      "evidence_span": "Voxy's adaptive, synchronous, and personalized language curriculum"
+    },
+    {
+      "id": "P4",
+      "text": "Streaks, words, and points game mechanics motivate consistency, mastery, and interactive practice",
+      "status": "explicit",
+      "evidence_span": "we use streaks, words, and points for that"
+    },
+    {
+      "id": "P5",
+      "text": "Compelling unit economics: ~$1 student acquisition with low-cost leadership and strong willingness to pay",
+      "status": "explicit",
+      "evidence_span": "the unit economics are quite compelling"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Uninteresting language learning status quo",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Life-integrated topical curriculum and games",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Unit economics and acquisition",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Teach languages from the learner's life with a solution that integrates seamlessly into daily routines",
+      "status": "explicit",
+      "evidence_span": "an innovative language learning solution that integrates seamlessly into your life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Scale beyond English launch into other languages",
+      "evidence_span": "we're launching in English, but very soon we're scaling to other languages"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "But Voxy's going to change that"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your classrooms are everywhere"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's a lot of willingness to pay"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run3 keeps product as topical modules + pedagogy + games in one revisable learning-product domain. Acquisition/pricing as singleton commercial domain. Scaling-to-other-languages coded as secondary_value not vision premise per §4.1(4).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1133",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:33:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

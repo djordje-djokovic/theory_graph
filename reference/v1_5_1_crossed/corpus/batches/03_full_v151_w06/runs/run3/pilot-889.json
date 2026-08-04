@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "coder_session_id": "session_05",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Diabetes care is inadequate because manual logging is tedious, digital tools are incompatible/hard to use, and no platform connects patients to their support network",
+      "status": "explicit",
+      "evidence_span": "proper care for diabetes is inadequate and in many countries broken due to the following usability and technical problems"
+    },
+    {
+      "id": "P2",
+      "text": "A smart audio-jack cable connects existing glucometers to smart devices and is compatible with most meters, including in emerging markets, so users need not buy new hardware",
+      "status": "explicit",
+      "evidence_span": "this smart cable is compatible with majority of the glucometers in the market, even those in emerging markets"
+    },
+    {
+      "id": "P3",
+      "text": "Companion software color-codes out-of-range readings, tags meals/meds/context, and shares interpretable graphs with doctors",
+      "status": "explicit",
+      "evidence_span": "the data is also easily transferred as interpretable graphs, where it's for her benefit, or she can email or send it to the doctor"
+    },
+    {
+      "id": "P4",
+      "text": "A partner function lets family remotely view stats, send encouragement, and get alerts if the patient forgets to sync/test or numbers go out of range",
+      "status": "explicit",
+      "evidence_span": "I can pre-set notifications that would alert me should grandma forget to sync to test herself or if her numbers are out of whack"
+    },
+    {
+      "id": "P5",
+      "text": "A patient-centric platform enables third-party interactions such as flexible insurance premiums, pharmacy marketing/rewards, and future API/service partnerships",
+      "status": "explicit",
+      "evidence_span": "HealthiSync also enables a patient-centric platform. enabling new forms of interaction with third parties to the patient"
+    },
+    {
+      "id": "P6",
+      "text": "Go-to-market launches in Europe, China, U.S., and Taiwan with U.S. service-provider partnership discussions underway",
+      "status": "explicit",
+      "evidence_span": "we will be launching in markets like Europe, China, U.S., Taiwan, and partnership discussions with service providers in the U.S."
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken diabetes care tooling",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart cable and patient software",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "third-party patient platform",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "multi-market launch partnerships",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients regain control of diabetes by aggregating glucose data and sharing it with their care network",
+      "status": "explicit",
+      "evidence_span": "Health to Sync aggregates glucose data, ultimately giving control back to you"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This smart solution, along with the software that we're offering, basically solved three issues"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "To control diabetes is about controlling glucose"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enabling new forms of interaction with third parties to the patient"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will be launching in markets like Europe, China, U.S., Taiwan"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three numbered usability pains folded as one problem set (§4.1.6). App tagging/graphs and partner alerts treated as cascade of the cable+software patient experience (§4.1.7). Third-party insurance/pharmacy/API path split as separately revisable platform module. Indiegogo ask excluded (§4.2.1). Four-domain partition; not a need/product/money triad."
+}

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-599",
+    "coder_session_id": "session_01",
+    "session_case_index": 5,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aspiring music artists lack access to quality producers or cannot afford a music career",
+      "status": "explicit",
+      "evidence_span": "they either don't have access to quality producers or they can't afford to pursue a career in music"
+    },
+    {
+      "id": "P2",
+      "text": "Producers with great beats lack relationships with artists to sell production and give beats away hoping to be discovered",
+      "status": "explicit",
+      "evidence_span": "he doesn't have relationships with artists to sell his production"
+    },
+    {
+      "id": "P3",
+      "text": "An all-in-one mobile production marketplace, studio, and social network lets users create original songs with producers for under $5 from a phone",
+      "status": "explicit",
+      "evidence_span": "an all-in-one mobile production marketplace, a recording studio, and a social network that allows our users to create original songs with award-winning music producers for under $5"
+    },
+    {
+      "id": "P4",
+      "text": "Producers pay subscription fees to upload beats; the platform takes a cut of leases/sales and shares royalties back",
+      "status": "explicit",
+      "evidence_span": "We basically charge producers $9.99 a month or $90 a year to upload our beats to our platform"
+    },
+    {
+      "id": "P5",
+      "text": "Growth uses affiliate marketers, field evangelists, and celebrity fan outreach rather than major-label licensing dependence",
+      "status": "explicit",
+      "evidence_span": "we're not relying on major label licensing because we're an original content platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "artists and producers discovery gap",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile all-in-one creation marketplace",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "producer subscription and royalty take",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "affiliates celebrities original-content GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can awaken their inner musician by creating and sharing original songs affordably on mobile",
+      "status": "explicit",
+      "evidence_span": "the ability to awaken their inner musician"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make money for producers while giving artists access and cost savings",
+      "evidence_span": "we make money for producers like Tony, and we provide access and save money for guys like Willie"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Rekogram solves both Tony and Willie's problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create original songs with award-winning music producers for under $5"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when those beats are leased or sold through our platform, we take 20% of the in-app purchase"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "their fans are going to react, and they're going to react by downloading the RecordGram app"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Discover/write/record/video/share steps folded as feature cascade of one mobile creation marketplace (v1.5.1 §4.1.7). Price under $5 kept inside product premise; producer subscription/royalty split is a separate commercial module. Competitor fundraising figures excluded as market context/traction. Dual artist-producer pain kept as one problem-set domain."
+}

@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-123",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:15:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Widely adopted Kubernetes clusters store critical assets and are increasingly targeted in breaches",
+      "status": "explicit",
+      "evidence_span": "Kubernetes clusters are often a target for cybersecurity"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time automated Kubernetes security stops threats proactively rather than waiting for incidents",
+      "status": "explicit",
+      "evidence_span": "only real-time solution in our space today that allows for you to get automated results in a proactive way"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Kubernetes cluster attack surface",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "real-time KSOC platform",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep enterprise Kubernetes clusters from being compromised",
+      "status": "explicit",
+      "evidence_span": "don't leave your Kubernetes clusters vulnerable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what happens when this data is compromised"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we stop it immediately"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Founder exits, headcount, and named customers treated as bio/traction, not premises. Short booth-style pitch with two clear need vs product modules."
+}

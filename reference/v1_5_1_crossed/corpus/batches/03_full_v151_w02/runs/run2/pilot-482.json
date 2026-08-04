@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-482",
+    "coder_session_id": "session_05",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:22:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "AI from field photos calculates exact disease severity per plant and highlights diseased tissue",
+      "status": "explicit",
+      "evidence_span": "the AI system calculating exact disease severity percentage of each and every individual plant and even highlighting the diseased tissues in yellow color"
+    },
+    {
+      "id": "P2",
+      "text": "Time-series analysis yields disease severity, progression, and likelihood of infection for future plants from the same seeds",
+      "status": "explicit",
+      "evidence_span": "our platform provides information on disease severity, progression of disease, and likelihood of infection for future plants from the same set of seeds"
+    },
+    {
+      "id": "P3",
+      "text": "Computer-vision AI trained on field crop images works across handheld, drone, and hyperspectral satellite capture to predict yield in advance",
+      "status": "explicit",
+      "evidence_span": "our technology is independent of the image-capturing method, either by handle devices or by drones, or even with hyperspectral satellite imagery to predict yield in advance"
+    },
+    {
+      "id": "P4",
+      "text": "Provides accurate, fully automated, in-field, real-time phenotyping unlike manual/lab competitors that pull plants and introduce bias",
+      "status": "explicit",
+      "evidence_span": "Imago AI provide accurate, completely automated, in-field and real-time solution"
+    },
+    {
+      "id": "P5",
+      "text": "Initial customers are seed companies; food companies also use it for quality inspection, sold via yearly license plus per-image fees",
+      "status": "explicit",
+      "evidence_span": "While our initial target is for the seed companies, Imago AI is used by the food companies as well to inspect their quality parameters"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI in-field disease phenotyping",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Seed and food company licensing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "AI-enabled quality parameter assessment that saves seed and food companies millions",
+      "status": "explicit",
+      "evidence_span": "looking for AI-enabled quality parameter assessment, go to Imagowai today and save millions of dollars"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "calculating exact disease severity percentage of each and every individual plant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seed manufacturing companies and food processing companies looking for AI-enabled quality parameter assessment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-pitch and ends in judge Q&A; Q&A excluded per §4.2. Disease-severity/progression outputs treated as related phenotyping capabilities. Capture-method independence folded with yield prediction into tech premise P3. Client logos/pilots excluded as traction."
+}

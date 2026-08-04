@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-956",
+    "coder_session_id": "session_05",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online/retail furniture shopping is high risk because homeowners cannot see how items will look in their own homes, and existing 3D tools are too hard, expensive, or slow for homeowners",
+      "status": "explicit",
+      "evidence_span": "furniture shopping is high risk"
+    },
+    {
+      "id": "P2",
+      "text": "Inside Maps lets anyone create a 3D model of their home with a smartphone by capturing wall photos plus gyro/accelerometer/magnetometer data",
+      "status": "explicit",
+      "evidence_span": "the only homeowner-friendly solution that allows anyone to create a 3D model of their own home with just a smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Homeowners place catalog and personal furniture in the model, measure fit, use designer boards/collections, and collaborate via browser links and sticky notes",
+      "status": "explicit",
+      "evidence_span": "She opens a link to her model and takes a sofa from the Crate and Barrel catalog and puts it in her living room"
+    },
+    {
+      "id": "P4",
+      "text": "Cloud GPU algorithms turn multi-image captures into point clouds, detect structure, and render photorealistic WebGL models in minutes",
+      "status": "explicit",
+      "evidence_span": "we're able to do this in a few minutes using GPU compute power on the cloud"
+    },
+    {
+      "id": "P5",
+      "text": "Business model connects retailers to homeowners so retailers upsell, reach new customers, and lower returns",
+      "status": "explicit",
+      "evidence_span": "Our business opportunity is to connect retailers with homeowners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "high-risk furniture shopping without home context",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smartphone home 3D capture and staging",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "retailer-homeowner connection GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Homeowners shop furniture with confidence by seeing items photorealistically in their own rooms; home becomes the showroom",
+      "status": "explicit",
+      "evidence_span": "your home becomes the ultimate showroom, that your home becomes the ideal place to shop for furniture"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers make more money via upsell, new customers, and lower returns",
+      "evidence_span": "our experience will make them more money, It will help them upsell to new accessories. It will also help them reach new customers, and it will lower their returns"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's just hard to see how something that you choose online or even in a retail store will look in your own home"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Inside Maps democratizes interior design"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "By working with retailers and connecting them to homeowners and providing the ideal shopping experience for homeowners, we will revolutionize the $50 billion furniture market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fit uncertainty and hard/expensive/slow 3D tools folded as one homeowner problem set (§4.1.6). Capture sensors, staging/collaboration UI, and cloud reconstruction/photorealism folded as cascade/packages of one homeowner 3D platform (§4.1.7–8). Top-10 retailer deal treated as GTM traction for the retailer-connection premise. Market-size figure is framing inside that GTM claim. Three domains problem/product/retail GTM—anti-template: retailer channel economics separately revisable from capture tech."
+}

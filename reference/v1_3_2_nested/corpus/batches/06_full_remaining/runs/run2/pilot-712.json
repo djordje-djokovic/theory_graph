@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-712",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:12:45+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Single outbreaks can devastate livestock livelihoods and food prices while most emerging human diseases and antibiotic resistance originate on farms",
+      "status": "explicit",
+      "evidence_span": "Just one single virus in 2014 decimated the pig population, destroying livelihoods but also dramatically affecting the price of pork"
+    },
+    {
+      "id": "P2",
+      "text": "A big-data precision-medicine approach for animal health integrates clinical records with genomics for visualization and analytics",
+      "status": "explicit",
+      "evidence_span": "take that same big data approach to bring precision medicine to the animal health industry"
+    },
+    {
+      "id": "P3",
+      "text": "Platform supports point-of-care diagnosis, outbreak detection, treatment selection via resistance maps, and faster pharma target discovery",
+      "status": "explicit",
+      "evidence_span": "livestock veterinarians can more accurately and efficiently diagnose disease at point of care"
+    },
+    {
+      "id": "P4",
+      "text": "REX sells annual tool/data subscriptions to livestock and pharma firms and charges extra for collaborative custom projects",
+      "status": "explicit",
+      "evidence_span": "we charge them an annual subscription fee to access our tools and data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Farm disease economic and public-health stakes",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Precision animal-health software",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription access model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Catch and manage livestock disease earlier and more precisely",
+      "status": "explicit",
+      "evidence_span": "This is where Rex comes in"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Make drug development faster by predicting causal resistance genes",
+      "evidence_span": "making drug development faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's a huge economic risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're able to predict the causal genes for this emerging trait"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We take advantage of a natural network effect from their customer-vendor relationships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Happy-cows precision husbandry roadmap not coded as premise. Demo Salmonella story illustrates platform capability already in P2/P3. Customer logos excluded as traction."
+}

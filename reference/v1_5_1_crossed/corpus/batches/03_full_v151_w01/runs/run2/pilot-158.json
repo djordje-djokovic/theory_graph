@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-158",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security teams cannot easily answer company-wide questions about where sensitive files and PII live and who accesses them",
+      "status": "explicit",
+      "evidence_span": "a security team has no easy way to answer any of the questions I ask, especially company-wide"
+    },
+    {
+      "id": "P2",
+      "text": "Traditional DLP forces users to choose between security and productivity and is slow and burdensome to deploy",
+      "status": "explicit",
+      "evidence_span": "Existing cyber solutions make humans responsible for security actions, when in reality, security actions often get in the way of getting a job done"
+    },
+    {
+      "id": "P3",
+      "text": "Identity-tied per-file encryption secures unused files while leaving only actively used files exposed",
+      "status": "explicit",
+      "evidence_span": "If you have 1,000 files on your computer and you're only using one, then you expose that one while 999 files are secured by Phalanx"
+    },
+    {
+      "id": "P4",
+      "text": "The overlay works inside users' existing document workflows so everyday double-click access remains familiar",
+      "status": "explicit",
+      "evidence_span": "we overlay that into the existing environments that they're already in"
+    },
+    {
+      "id": "P5",
+      "text": "Identity-based automation deploys in less than a day with zero weekly maintenance versus months of rules-based DLP setup",
+      "status": "explicit",
+      "evidence_span": "we're deployable in less than a day and requires zero weekly maintenance"
+    },
+    {
+      "id": "P6",
+      "text": "A digital map and API make file access who/what/where/how visible and actionable across workspaces",
+      "status": "explicit",
+      "evidence_span": "Phalanx provides a digital map of every file across every existing workspace"
+    },
+    {
+      "id": "P7",
+      "text": "Go-to-market reaches mid/large enterprise via per-user sales and SMBs via channel partners",
+      "status": "explicit",
+      "evidence_span": "dual-pronged go-to-market strategy where we focus on mid- to large-scale enterprise by doing per-user requirements"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "DLP visibility and productivity conflict",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Identity-based file encryption overlay",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "File risk map and channel GTM",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cybersecurity that protects data without forcing humans to sacrifice productivity",
+      "status": "explicit",
+      "evidence_span": "cybersecurity that lets humans be human"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Phalanx's mission focuses on the core problem that users have to make security decisions, and they pit that against productivity decisions"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why does it feel like we can't let humans be human"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those 999 unused secured files don't impact your productivity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "SysOs can finally see who's accessing what, where, and how across their workspaces"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "60% risk-reduction traction excluded. Visibility map split from encryption mechanism as separately asserted capability."
+}

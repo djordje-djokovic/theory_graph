@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1141",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:04Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online gaming is static: anonymous tags, no control over who you play with, and women avoid voice chat",
+      "status": "explicit",
+      "evidence_span": "You don't know who you're playing with. You're dealing with anonymous gamer tags that come in and out of games"
+    },
+    {
+      "id": "P2",
+      "text": "Rich profiles, blogs, pictures, chat, and videos enable deep social engagement before/during play",
+      "status": "explicit",
+      "evidence_span": "We offer rich user profiles, deep engagements with other users, including profiles that include blogs, pictures, and you're able to chat online, you can post your videos"
+    },
+    {
+      "id": "P3",
+      "text": "Payer pays to play; play date earns money—monetarily addressing supply and demand",
+      "status": "explicit",
+      "evidence_span": "The payer, as we call it, pays, and the play date actually makes money playing that game"
+    },
+    {
+      "id": "P4",
+      "text": "Respectful ratings and invites give play dates control over who they accept",
+      "status": "explicit",
+      "evidence_span": "she can actually see my respectful rating, which is what I've earned by playing other play dates before me"
+    },
+    {
+      "id": "P5",
+      "text": "Flash games in UI plus option to play console games off-platform",
+      "status": "explicit",
+      "evidence_span": "We have a number of Flash games available on our UI, or you can go off and play console games on your own"
+    },
+    {
+      "id": "P6",
+      "text": "Game developers can earn more than traditional ad CPMs via the platform payout model",
+      "status": "explicit",
+      "evidence_span": "we can pay out much greater than the CPMs you get in traditional advertising models"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "anonymous uncontrolled online play problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "social paid play-date platform",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "developer payout economics",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A fun, inviting, secure place to meet gamers and play them online—like buying someone a game",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure. You can come in, meet gamers, and play them online"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Game Crush offers something completely different"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It offers greater control of your environment and monetarily addresses the issues of supply and demand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay out much greater than the CPMs you get in traditional advertising models"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Profile/blog/pic/chat/video folded as one rich-engagement surface (§4.1.7). 10k viral users excluded as traction. Zynga/ChatRoulette metaphor is framing. Singleton D3: developer CPM alternative is separately revisable commercial module. Anti-template: problem, social play product, developer econ separately revisable."
+}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-704",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:50:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Warehouse inventory tracking is highly manual, slow, and inaccurate, causing lost items and large error-related losses",
+      "status": "explicit",
+      "evidence_span": "The biggest problem in every one of these warehouses is keeping track of inventory. Today, that is a highly manual and incredibly slow process"
+    },
+    {
+      "id": "P2",
+      "text": "Flying robots achieve centimeter-accurate autonomous indoor flight without GPS using computer vision and specialized hardware",
+      "status": "explicit",
+      "evidence_span": "fly autonomously indoors with centimeter accuracy without any external systems"
+    },
+    {
+      "id": "P3",
+      "text": "The offering combines a robot fleet, on-site infrastructure, and real-time analytics for high-bay selective-rack warehouses with palletized labeled goods",
+      "status": "explicit",
+      "evidence_span": "Our product consists of three things, a fleet of these flying robots, on-site infrastructure to relay the information we collect to the workers, and real-time analytics software"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware and installation sell for an upfront setup fee while software is sold on subscription with data-driven premiums",
+      "status": "explicit",
+      "evidence_span": "selling the hardware, just like traditional industrial automation equipment, into the warehouses for an upfront setup fee"
+    },
+    {
+      "id": "P5",
+      "text": "Automated scanning is far faster than manual counting and reduces the need to hold extra safety-stock inventory",
+      "status": "explicit",
+      "evidence_span": "we can turn over warehouses in 400 times the speed of manual inventory counting"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual inventory error costs",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "indoor autonomous flying inventory system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "hardware plus software subscription sales",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make warehouse inventory errors a thing of the past and improve enterprise operational efficiency",
+      "status": "explicit",
+      "evidence_span": "make inventory errors a thing of the past"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Companies lose billions of dollars because of inventory errors every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automate inventory counting using flying robots"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the software on a subscription basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team credentials excluded. Test-customer industries treated as GTM learning, not premises. $4M savings figure is quantitative detail of speed/safety-stock benefit (P5)."
+}

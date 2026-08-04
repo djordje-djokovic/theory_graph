@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1072",
+    "coder_session_id": "session_05",
+    "session_case_index": 16,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Friends drive product discovery; e-commerce search is solitary and need-focused, missing social influence",
+      "status": "explicit",
+      "evidence_span": "friends do help friends discover products"
+    },
+    {
+      "id": "P2",
+      "text": "Sneak Peek shows real people viewing curated aspirational products and which friends peeked, creating mall-like social proof and personalized daily stores from likes",
+      "status": "explicit",
+      "evidence_span": "the first thing you will see is real people looking at real products"
+    },
+    {
+      "id": "P3",
+      "text": "Peeking flips the price tag: limited daily peeks intelligently drop price for everyone peeking until someone buys, with urgency",
+      "status": "explicit",
+      "evidence_span": "every peek drops the price for everyone peeking. It drops it intelligently until someone buys"
+    },
+    {
+      "id": "P4",
+      "text": "One-click advice/share/friend activity and one-click purchase; available on web, Facebook, and tablets",
+      "status": "explicit",
+      "evidence_span": "in a single click on Sneak Peek, she can get advice from friends"
+    },
+    {
+      "id": "P5",
+      "text": "Long-term brand partnerships deliver impulse sales and social-channel engagement for aspirational brands",
+      "status": "explicit",
+      "evidence_span": "For our brands, we form long-term partnerships, and we help them deliver meaningful sales"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "solitary e-commerce discovery",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "social peek commerce product",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "brand partnership model",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Move shoppers from social discovery to purchase with friend proof and game mechanics",
+      "status": "explicit",
+      "evidence_span": "having social or friends data in it really helps people move from discovery to the purchase phase"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the experience has become very solitary, almost like a chore"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This adds the social proof we all need to move us from discovery to purchase"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we help them deliver meaningful sales, which are mostly impulse"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Social-influence vs solitary search folded as one discovery problem. Visual social feed, peek-price mechanic, and one-click social/purchase surfaces kept as product facets of one commerce mechanism (§4.1.7) with peek-price as core distinct game mechanic still inside product domain. Brand partnerships separately revisable. Pilot metrics/100 brands as traction (§4.2)."
+}

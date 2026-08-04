@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Robots should learn like humans with the right tool for the job rather than costly hard-to-train industrial arms",
+      "status": "explicit",
+      "evidence_span": "why can't robots learn the same way? Why are they so expensive and difficult to train?"
+    },
+    {
+      "id": "P2",
+      "text": "Many tasks need only millimeter-level precision, not extreme factory repeatability",
+      "status": "explicit",
+      "evidence_span": "I don't need plus or minus 0.01 millimeters of repeatability when one millimeter is good enough"
+    },
+    {
+      "id": "P3",
+      "text": "Hardware stack: planetary gears, no external control box, dual-power options, coupled joints, quick-change actuator, swappable skins",
+      "status": "explicit",
+      "evidence_span": "We've removed the external control box, and you can power the Ally arm from a standard 110 AC outlet"
+    },
+    {
+      "id": "P4",
+      "text": "Machine vision, imitation learning, and AI translate human gestures into repeatable microbehaviors",
+      "status": "explicit",
+      "evidence_span": "translating human gestures into robotic motion"
+    },
+    {
+      "id": "P5",
+      "text": "Built from the ground up for AI/learning with NVIDIA Isaac tooling for anyone, not only developers",
+      "status": "explicit",
+      "evidence_span": "first robotic arm designed from the ground up with AI and learning at the core"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Right-tool everyday robotics thesis",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Low-cost adaptable hardware",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gesture-to-skill learning platform",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, easy-to-train everyday robotic automation for anyone, anywhere",
+      "status": "explicit",
+      "evidence_span": "enabling robotics for anyone, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly expand the market for robotic technology and everyday automation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smartest, most affordable, easy-to-service, and simple-to-train robotic arm"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "program the robot by showing it, and the robot will then repeat that task"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Labor crisis magnitude folded into everyday-automation thesis rather than separate premise. Soft count 5.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-206",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

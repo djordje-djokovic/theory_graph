@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-933",
+    "coder_session_id": "session_04",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Doctors make bad treatment decisions because they lack a way to share clinical experience; static reference tools and ad-hoc texts do not feed experience back into the system",
+      "status": "explicit",
+      "evidence_span": "Good doctors, like me and Mark, wind up making bad decisions because we have no way to share our experience"
+    },
+    {
+      "id": "P2",
+      "text": "SharePractice ranks treatments by doctor upvotes/downvotes with clinically relevant dosing detail and peer comments explaining choices",
+      "status": "explicit",
+      "evidence_span": "these treatments are actually ranked by doctors upvoting and downvoting these treatments"
+    },
+    {
+      "id": "P3",
+      "text": "Doctors can follow expert peers and contribute votes so they both consume and participate in the curated experience",
+      "status": "explicit",
+      "evidence_span": "I got the information I needed, and I was actually able to participate in the process"
+    },
+    {
+      "id": "P4",
+      "text": "In-product share to doctor contacts generates structured invitations that viral-acquire new verified physician users",
+      "status": "explicit",
+      "evidence_span": "Share Practice generates the email for you. Hey, Andrew wants to know how you treat a UTI, click here to respond"
+    },
+    {
+      "id": "P5",
+      "text": "A proprietary medical ontology reconciles terminology variance across diagnosis and treatment databases",
+      "status": "explicit",
+      "evidence_span": "SharePractice built a proprietary medical ontology that took multiple databases, treatment databases, diagnosis databases, put them all together"
+    },
+    {
+      "id": "P6",
+      "text": "The platform uniquely captures why doctors choose treatments—data valuable in the analytics market that does not exist elsewhere",
+      "status": "explicit",
+      "evidence_span": "we're getting data that doesn't exist anywhere"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "doctor experience sharing and treatment ranking",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "viral physician acquisition via share",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "medical ontology and unique why-data",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patients get better treatment because share practice puts collective doctor experience in every doctor's pocket",
+      "status": "explicit",
+      "evidence_span": "share practice puts a million doctors in every doctor's pocket, and you're going to get the benefit of all of that experience"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unique why-prescribed analytics data for the healthcare analytics market",
+      "evidence_span": "the most valuable customer in a $10 billion analytics market"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "structures and shares doctor's experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Viral model is baked right in, and it's working beautifully"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only SharePractice knows why"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "UTI demo flow treated as illustration of P2/P3. Global collaboration vision folded into value. Analytics market coded as secondary_value; primary patient-facing value is best treatment via shared experience."
+}

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1010",
+    "coder_session_id": "session_03",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fashion lacks personalization—shoppers cannot know fit on standard models, so most fashion stays in-store",
+      "status": "explicit",
+      "evidence_span": "What's missing in online fashion shopping is personalization. People still don't know how clothes fit when they're buying online"
+    },
+    {
+      "id": "P2",
+      "text": "Create a personal 3D model from two brand/size questions and true-to-size try-on/styling in a browser fitting room",
+      "status": "explicit",
+      "evidence_span": "Creating a model is as simple as answering just two basic questions"
+    },
+    {
+      "id": "P3",
+      "text": "No special hardware/downloads; delivered in browser on PC, Mac, or iPad",
+      "status": "explicit",
+      "evidence_span": "No need for special hardware or downloadable software, no creepy webcams or scanners. It's all delivered in browser"
+    },
+    {
+      "id": "P4",
+      "text": "Digitize designer collections at scale and offer retailers via API with pay-as-you-go, higher sales, fewer returns, and size/style analytics",
+      "status": "explicit",
+      "evidence_span": "We work with fashion designers and digitize their collection"
+    },
+    {
+      "id": "P5",
+      "text": "Digitized fashion platform path toward mass customization to move remaining offline fashion online",
+      "status": "explicit",
+      "evidence_span": "This is the path to mass customization, which is the Holy Grail of fashion"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "online fit personalization gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "in-browser true-to-size fitting room",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "designer digitize and retailer API",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "mass customization digital fashion platform",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shoppers pick styles and sizes that fit perfectly online; retailers get sales, fewer returns, and analytics",
+      "status": "explicit",
+      "evidence_span": "It looks great. It fits perfect"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Retailers get increased sales, reduced returns, and consumer size/style analytics",
+      "evidence_span": "They get increased sales, reduced returns, and they get access to this amazing data"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Because 90% of fashion is still sold in store"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is true to size"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the retailers have no upfront costs. They pay us as they go"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this is how we're going to get the remaining 90% of fashion market online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Fit/personalization gap as problem. Model creation, drag-drop 3D try-on, size compare, outfit styling, Facebook share folded as fitting-room cascade (§4.1.7). Browser delivery as delivery surface of that product. Designer digitize+retailer API/analytics as B2B module. Mass-customization platform claim as separately asserted path to market. Partner traction logos excluded as metrics. Four domains."
+}

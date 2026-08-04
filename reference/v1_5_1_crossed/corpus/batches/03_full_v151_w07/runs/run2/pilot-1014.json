@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1014",
+    "coder_session_id": "session_01",
+    "session_case_index": 20,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:19:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Modern packaged food is chemical-heavy; calories and fat alone cannot judge healthfulness",
+      "status": "explicit",
+      "evidence_span": "looking at calories and fat, it's just not enough today"
+    },
+    {
+      "id": "P2",
+      "text": "Catalog of 250k+ products plus 15k researched ingredients encyclopedia",
+      "status": "explicit",
+      "evidence_span": "We've come out with a catalog with over 250,000 products"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in dietitian personalizes guidance to medical and cultural concerns",
+      "status": "explicit",
+      "evidence_span": "a nutritionist and dietitian built into our platform that will actually personalize the information custom to the user"
+    },
+    {
+      "id": "P4",
+      "text": "Search, barcode scan, and ingredient breakdowns flag avoid/moderation/safe/special with origin and health effects",
+      "status": "explicit",
+      "evidence_span": "InterFood breaks down the ingredients by avoid, moderation, safe, and special"
+    },
+    {
+      "id": "P5",
+      "text": "MyPlate tracker analyzes frequency of consumed ingredients over time with charts and filters",
+      "status": "explicit",
+      "evidence_span": "MyPlate calculates the frequency of consumed ingredients"
+    },
+    {
+      "id": "P6",
+      "text": "Aggregate user analytic data could reveal common dietary denominators linked to disease outcomes",
+      "status": "explicit",
+      "evidence_span": "take their analytical information, cross-reference it, and actually find out the common denominator"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "personalized ingredient intelligence",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "MyPlate consumption analytics",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "population dietary research",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Know where food comes from, how it's made, and how it affects personal health",
+      "status": "explicit",
+      "evidence_span": "you will also know exactly where your food comes from, how it's made, and also how it affects your personal health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Educate behavior to improve healthcare outcomes via better food choices",
+      "evidence_span": "the only way to influence someone's behavior is by actually educating them and teaching them right choices"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will never see your food the same way again"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see exactly what you're eating and when"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That is the power of In Our Food"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "InnerFood/InterFood/In Our Food ASR variants. Catalog+encyclopedia folded with personalization as one intelligence surface; tracker and population research split as separately claimed paths. Disqus discussions folded into product info UX."
+}

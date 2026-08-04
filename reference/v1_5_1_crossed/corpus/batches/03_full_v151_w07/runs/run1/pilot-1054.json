@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1054",
+    "coder_session_id": "session_02",
+    "session_case_index": 16,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Websites need Time Machine-like backup and one-button revert when wanted or unwanted changes occur",
+      "status": "explicit",
+      "evidence_span": "We are a time machine for your website"
+    },
+    {
+      "id": "P2",
+      "text": "FTP/SFTP snapshots monitor code for changes and update a Git-backed repository only when something changes",
+      "status": "explicit",
+      "evidence_span": "we back up your site. Right now, we use FTP or SFTP"
+    },
+    {
+      "id": "P3",
+      "text": "Users can configure monitoring frequency and auto-repair by pushing the last good version when changes are detected",
+      "status": "explicit",
+      "evidence_span": "I can choose here whether I want to have it monitor daily, hourly, or never"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "website change risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Git-backed site backup",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Site owners can undo unwanted website changes and keep sites protected without being Git experts",
+      "status": "explicit",
+      "evidence_span": "website protection for the rest of us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "if anything happens to your site"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "undo any changes if you need to"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "cPanel plugins as roadmap detail of backup product. Change-only snapshots and one-button undo folded into backup mechanism. Auto-repair/malware/blacklist vignette kept as configurable package of monitoring. Beta spots/promo code excluded as traction/CTA. Two domains."
+}

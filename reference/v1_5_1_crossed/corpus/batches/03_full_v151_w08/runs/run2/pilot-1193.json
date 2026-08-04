@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1193",
+    "coder_session_id": "session_05",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "RedBeacon lets consumers request local services and book from providers who quote price and appointment times online for transparency and convenience",
+      "status": "explicit",
+      "evidence_span": "it's a website where you can request virtually any kind of local service"
+    },
+    {
+      "id": "P2",
+      "text": "Providers pay only when a consumer books and work is done—full pay-for-performance—easing marketplace chicken-and-egg signup",
+      "status": "explicit",
+      "evidence_span": "we're only going to charge businesses if a consumer books the job with them and actually does work"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers need rich trust info before booking—friends/family recommendations, references, web ratings/reviews, background checks—so the product must be social",
+      "status": "explicit",
+      "evidence_span": "consumers actually needed a lot more information than we thought they would before they'll book a job online"
+    },
+    {
+      "id": "P4",
+      "text": "Geographic expansion from Bay Area learning market into Seattle and more cities with high-quality providers",
+      "status": "explicit",
+      "evidence_span": "officially, Red Beacon is open in Seattle now"
+    },
+    {
+      "id": "P5",
+      "text": "Embeddable customized widget exposes the provider network on partner sites with occupation filters, branding, recommendations, dashboard, and generous revenue share",
+      "status": "explicit",
+      "evidence_span": "we're creating an embeddable widget which basically makes our high-quality service provider network available to any website"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "bookable local services marketplace",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "city expansion",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "partner embed widget",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy online booking of local services with price transparency like booking a flight",
+      "status": "explicit",
+      "evidence_span": "increase the price transparency and make it very easy to schedule jobs online, which is just incredibly convenient"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "local businesses who've signed up for Red Beacon receive the job, and they're able to quote a price and offer appointment times"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Red Beacon is open in Seattle now. And there'll be many other markets coming soon"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These are now available to your users if you own a website with one line of JavaScript"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Core marketplace + pay-for-performance + social trust info kept as one revisable marketplace theory (lessons learned as continuing conditions). Bootstrap/fundraising narrative excluded (§4.2). Seattle expansion and embed widget split as separately announced go-to-market modules. Named media partners treated as traction of widget GTM, not extra premises. Live demo customization folded into widget premise (§4.1.7)."
+}

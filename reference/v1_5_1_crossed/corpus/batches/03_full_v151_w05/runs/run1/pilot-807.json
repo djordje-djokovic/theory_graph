@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-807",
+    "coder_session_id": "session_05",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students and busy households lack time/skill for home cooking; microwave meals are poor substitutes",
+      "status": "explicit",
+      "evidence_span": "We'll have limited time and ability to make food. Many of us don't know how to cook"
+    },
+    {
+      "id": "P2",
+      "text": "Cookie automates cooking via pre-portioned trays, induction cooktop, and robotic arm controlled by a one-button Foodie app",
+      "status": "explicit",
+      "evidence_span": "Cookie, a push-of-a-button automated cooking device from Serenity Kitchen"
+    },
+    {
+      "id": "P3",
+      "text": "Foodie recipe store lets users buy/schedule recipes and chefs teach Cookie motions step-by-step",
+      "status": "explicit",
+      "evidence_span": "Foodie also presents a way to access our upcoming recipe store to buy food and recipes"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware sold or rented (~$600 retail or subscription) with ~$4 fresh pre-portioned meals competing with mid-tier frozen",
+      "status": "explicit",
+      "evidence_span": "A Serenity meal is typically priced at around $4 per meal. The app is free, and cookie will retail at $600"
+    },
+    {
+      "id": "P5",
+      "text": "Pre-portioned kits reduce household food waste and support healthier eating versus spoil and overconsumption",
+      "status": "explicit",
+      "evidence_span": "By pre-portioning just the right amount of healthy fresh ingredients into meal kits and reducing the amount of work required to prepare these meals, we not only help save people time, but we also help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard home cooking for students",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Cookie robot and Foodie recipes",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "meal kit pricing and waste reduction",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Push-button home-cooked fresh meals without cooking skill or spatula work",
+      "status": "explicit",
+      "evidence_span": "cook a recipe meal from a recipe database without picking up a spatula"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Conserve food and encourage healthier eating via portioned fresh kits",
+      "evidence_span": "help conserve food and encourage healthier eating habits"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage our new responsibilities while still continuing to eat right"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Think of it as a Keurig for cooking fresh food using robotics"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our meals are made with fresh ingredients and real food"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Five cooking parameters + trays/cooktop/arm folded as one Cookie automation mechanism. Young professionals/moms/celebrity-chef sharing treated as applications of recipe store/platform. Demo malfunctions noted; coded intended product claims. Crowdfunding ask excluded. College-first then broader market folded into P1/P3 GTM framing rather than separate premise."
+}

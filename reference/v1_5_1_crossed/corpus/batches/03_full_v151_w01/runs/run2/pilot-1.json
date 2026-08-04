@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing analyzers cover only a handful of indications and customers cannot afford the cost of ownership for the tests they need",
+      "status": "explicit",
+      "evidence_span": "These existing blood analyzers can only detect a handful of indications, and most customers can't really pay the cost of ownership in order to cover the tests that they need"
+    },
+    {
+      "id": "P2",
+      "text": "A phone-connected disposable device eliminates the analyzer by integrating sample prep, spectrophotometry, and USB readout in one tiny cartridge",
+      "status": "explicit",
+      "evidence_span": "eliminating the analyzer altogether. We've done that by integrating into this tiny device, we've integrated the centrifuge, basically the drop of blood sample prep. We've integrated the spectrophotometer, and this also connects to your USB"
+    },
+    {
+      "id": "P3",
+      "text": "ALT and AST liver enzyme tests complement blood-gas analyzer menus for veterinary emergency rapid screens before anesthesia or drugs",
+      "status": "explicit",
+      "evidence_span": "they complement the existing menus of blood gas analyzers, but they could only be measured spectrophotometrically. So we're launching this into the veterinary space, where emergency veterinarians could use it to run rapid screens for anesthesia or drugs before they admit the patients"
+    },
+    {
+      "id": "P4",
+      "text": "Home pet liver monitoring and small-animal research toxicity studies are additional use paths for the same drop-of-blood test",
+      "status": "explicit",
+      "evidence_span": "We also have customers that are monitoring dogs at home for liver disease. And finally, we're also interested in the research market, where you could tailnick a mouse, get a small drop of blood"
+    },
+    {
+      "id": "P5",
+      "text": "A broader veterinary rapid-chemistry segment with generic analytes and no low-cost competitors enables menu expansion beyond liver",
+      "status": "explicit",
+      "evidence_span": "there's a rapid chemistry segment, which is about $2 billion. Now, this is a pretty interesting market in the sense that it has no low-cost competitors. It has only about 20 analytes that are all generic"
+    },
+    {
+      "id": "P6",
+      "text": "A single-use disposable model replaces the traditional razor-and-blade analyzer economics",
+      "status": "explicit",
+      "evidence_span": "changing the model from a razor razor blade to a single-use disposable"
+    },
+    {
+      "id": "P7",
+      "text": "Vertical integration of designed assembly controls manufacturing cost",
+      "status": "explicit",
+      "evidence_span": "This is how we control costs. We're vertically integrated. We've designed everything"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Analyzer cost and coverage problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Phone blood-test device",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Veterinary and research markets",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "Disposable model and cost control",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easier and more affordable blood testing without a traditional analyzer",
+      "status": "explicit",
+      "evidence_span": "making testing easier and more affordable, not with a universal analyzer, but by eliminating the analyzer altogether"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Research liver toxicity studies without anesthetizing or terminally bleeding the mouse",
+      "evidence_span": "You don't have to anesthetize the mouse or have a terminal bleed"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making testing easier and more affordable"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating the analyzer altogether"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "emergency veterinarians could use it to run rapid screens"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is how we control costs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D1 and D2 retained as separately revisable need vs integrated-device mechanism. Demo UI steps, cuvette/optic/microchip cascade, and UC Davis R-squared folded into P2 or excluded as traction. Menu expansion via reagent swaps treated as facet of P2 modular design, not a separate premise."
+}

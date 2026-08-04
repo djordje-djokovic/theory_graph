@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Credit-gated descending auctions let shoppers lock in falling prices on scarce in-season items",
+      "status": "explicit",
+      "evidence_span": "She can click Buy Now at any time to lock in the current price of the item"
+    },
+    {
+      "id": "P2",
+      "text": "Missed sales still yield brand gift cards so shoppers and brands both win",
+      "status": "explicit",
+      "evidence_span": "we'll follow up with her afterwards by email with a gift card or another incentive for her to make a purchase from the same brand"
+    },
+    {
+      "id": "P3",
+      "text": "Unit economics combine wholesale-to-sale markup and entrance fees at high margin",
+      "status": "explicit",
+      "evidence_span": "this results in a gross margin of about 60%, significantly higher than the 35-40% average gross margin at traditional retailers"
+    },
+    {
+      "id": "P4",
+      "text": "High ARPU and viral referrals support efficient paid and SEO acquisition",
+      "status": "explicit",
+      "evidence_span": "this results in an ARPU between $50 to $75"
+    },
+    {
+      "id": "P5",
+      "text": "Format creates buzz for brands' in-season merchandise at wholesale economics others cannot match",
+      "status": "explicit",
+      "evidence_span": "No one is able to buy in-season merchandise at the full wholesale cost and resell it for a significant discount because it's just not profitable"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Game sale mechanic",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Margins and acquisition",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Brand differentiation",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Members feel they won on coveted bags while brands get demand buzz",
+      "status": "explicit",
+      "evidence_span": "she always feels like she won, and brands get one of those cost-effective marketing techniques in years"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she always feels like she won"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We make money in two ways"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create buzz around their in-season merchandise"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Credit packages and notify-me folded into sale mechanic. Price/partner economics kept one commercial bundle with acquisition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1159",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

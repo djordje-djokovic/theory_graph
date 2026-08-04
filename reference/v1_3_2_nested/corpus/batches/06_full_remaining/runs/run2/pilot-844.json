@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fundability score uses company inputs versus historical raise outcomes to recommend improvements",
+      "status": "explicit",
+      "evidence_span": "provides the CEO information about what they can do to improve that score"
+    },
+    {
+      "id": "P2",
+      "text": "Changing board composition or ask size can statistically improve the fundability score",
+      "status": "explicit",
+      "evidence_span": "we know statistically both of those things will improve your likelihood of success as a company"
+    },
+    {
+      "id": "P3",
+      "text": "Score training data combines ASSOB private-offering data with other US and global public and private databases",
+      "status": "explicit",
+      "evidence_span": "we layered in data from other US and global databases, both public and private"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue comes from a 2% success fee on platform transactions through a broker-dealer, with optional higher-touch banking fees",
+      "status": "explicit",
+      "evidence_span": "we take a 2% success fee. And we can do that through our partnership with a broker dealer"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with global platforms and brokers supply multi-country deal inventory",
+      "status": "explicit",
+      "evidence_span": "partnerships with global platforms, deal sourcers, and brokers to bring in deals from multiple countries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fundability analytics",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Transaction fees and deal supply",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Companies raise capital more successfully by improving fundability and accessing investors on the platform",
+      "status": "explicit",
+      "evidence_span": "improve your fundability as a company"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "improve your fundability as a company"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have a global inventory of deals"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.65
+  },
+  "notes": "Pitch cuts off mid-sentence. Investor-name-dropping treated as traction evidence of the marketplace, not a separate premise. Free signup folded into the fee model premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-844",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

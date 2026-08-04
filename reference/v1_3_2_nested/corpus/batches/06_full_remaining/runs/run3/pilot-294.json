@@ -1,0 +1,109 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People consume microplastics daily including from PVA in detergent pods that re-enter food and water",
+      "status": "explicit",
+      "evidence_span": "you and your children are eating five grams of microplastic every single day"
+    },
+    {
+      "id": "P2",
+      "text": "Patented upcycling turns agri waste into USDA-certified biobased resins for existing plastics equipment",
+      "status": "explicit",
+      "evidence_span": "developed a proprietary technology that's been patented. We upcycle a variety of agriculture waste"
+    },
+    {
+      "id": "P3",
+      "text": "Brewing-like bacterial process produces polymer that partners convert into products such as bio-based laundry pods",
+      "status": "explicit",
+      "evidence_span": "The bacteria will then produce the type of polymer we needed that can be modified, made into the resin"
+    },
+    {
+      "id": "P4",
+      "text": "Strategic partnerships with Unilever, Monosol, and beverage waste suppliers enable commercial scale-up",
+      "status": "explicit",
+      "evidence_span": "developing a JDA, Joint Development Agreement, with Unilever"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial production expected to undercut PVA cost by 10–30% while using less energy and emitting less CO2",
+      "status": "explicit",
+      "evidence_span": "unit cost to be 10 to 30% cheaper than the conventional PVA"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Microplastic PVA harm",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Waste-to-biopolymer technology",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner-led commercialization",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help build a safer greener world by replacing PVA microplastics",
+      "status": "explicit",
+      "evidence_span": "help the future generation build a safer and greener world"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't want to drink microplastics or eat microplastics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "world's first and only solution to replace PVA"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale up and lower our costs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Coarser partition merging cost with partnerships. Team credentials and competition-win R&D center plans excluded. 'bulb-based'/'BAU-based' ASR left verbatim in spans; premise text lightly normalized to biobased.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:41:00+02:00"
+  }
+}

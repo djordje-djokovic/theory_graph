@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1147",
+    "coder_session_id": "session_05",
+    "session_case_index": 12,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:55Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Creators need trusted help hiring, getting hired, introductions, and experts—hard work usually done by asking people you trust; Google/LinkedIn alone are insufficient",
+      "status": "explicit",
+      "evidence_span": "You're looking to hire, you're looking to be hired, you're looking for an introduction, or maybe an expert. This is hard work"
+    },
+    {
+      "id": "P2",
+      "text": "Namesake couples Facebook/Twitter/LinkedIn social graph with real-time infrastructure for publishing, routing, and matching business opportunities",
+      "status": "explicit",
+      "evidence_span": "We take the power of your social graph, meaning Facebook, Twitter, and LinkedIn, and couple it with our real-time infrastructure"
+    },
+    {
+      "id": "P3",
+      "text": "Opportunity posts with type, skills, location, and call-outs are smart-routed across contacts/followers; peers re-route; applicants respond in-stream",
+      "status": "explicit",
+      "evidence_span": "we're giving the system some cues so its smart routing algorithms can figure out who gets it"
+    },
+    {
+      "id": "P4",
+      "text": "In-line apply and introductions plus opportunity pages collect applications for matching",
+      "status": "explicit",
+      "evidence_span": "we have the ability to apply for these things in line, to apply or, if it's the relevant opportunity, to make introductions"
+    },
+    {
+      "id": "P5",
+      "text": "Business profiles with declared expertise and endorsements build a business expertise graph of trust",
+      "status": "explicit",
+      "evidence_span": "we're building out the business expertise graph, the key component in commerce for real"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "trusted opportunity matching need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "graph routing opportunities",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "expertise endorsement graph",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Match business supply and demand in real time via your trusted graph",
+      "status": "explicit",
+      "evidence_span": "Markets are about matching supply with demand"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We ask the people we trust"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Namesake makes this happen like magic"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the business graph is about trust"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Hire/hired/intro/expert pains folded as one trusted-matching need (§4.1.6). Stream cockpit, opportunity posting, smart routing, and in-line apply folded as cascade of routing product (§4.1.7). Expertise endorsements split as separately framed trust/identity module. Prior company credentials excluded (§4.2). Cut off on other endorsement types—coded only what was shown."
+}

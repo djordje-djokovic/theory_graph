@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Non-invasive electrical brain stimulation (tDCS) can deliver neurostimulation without surgery",
+      "status": "explicit",
+      "evidence_span": "thousands of articles published using an electrical means to stimulate the brain non-invasively. It's called transcranial direct current stimulation"
+    },
+    {
+      "id": "P2",
+      "text": "Motor-cortex priming increases plasticity so athletes learn strength and skill faster from training",
+      "status": "explicit",
+      "evidence_span": "What happens if you prime this part of the brain so that it can be more plastic? Can you get more out of your training neurologically if you do this first? And it turns out that you can"
+    },
+    {
+      "id": "P3",
+      "text": "Halo Sport headphones with proprietary primers pair to an app that activates neurostim during workouts",
+      "status": "explicit",
+      "evidence_span": "put on Halo Sport, like a regular set of headphones, You would turn it on and pair it with an app on your phone. The app merely just turns on the neurostimulator"
+    },
+    {
+      "id": "P4",
+      "text": "Sell headsets plus semi-disposable primers and ear pads; app free with future paid premium features",
+      "status": "explicit",
+      "evidence_span": "we plan on selling headsets, semi-disposable primers, semi-disposable ear pads. Our app for now is free, but you can imagine that we'll build in premium features that we could charge money for"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Neuropriming training system",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Headset and consumables business model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved athletic power and skill from the same training",
+      "status": "explicit",
+      "evidence_span": "Signals would become more organized. So this gets that skill. Signals would also become more robust. This gets that power and strength"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Future medical applications for movement disabilities after stroke",
+      "evidence_span": "Half the people who have had a stroke, suffer from some sort of motor disability, and we can help these people with neurostimulation"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get more out of your training neurologically"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling headsets, semi-disposable primers, semi-disposable ear pads"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patents treated as IP detail on proprietary headset/primers and not split (§4.1.1). Elite athlete trial results treated as evidence of P2, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-686",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:38:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

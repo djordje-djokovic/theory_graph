@@ -1,0 +1,113 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home-row keys form under resting fingers so users need not feel for keys",
+      "status": "explicit",
+      "evidence_span": "The Home Rule forms underneath Scott's fingers"
+    },
+    {
+      "id": "P2",
+      "text": "Accelerometer detects typing thumps while touch tracks position, distinguishing taps from rests",
+      "status": "explicit",
+      "evidence_span": "when you type, you thump on the screen. That thumping makes a vibration. We sense that vibration with the accelerometer sensor"
+    },
+    {
+      "id": "P3",
+      "text": "Nearly all people have some no-look memory typing ability, so Drift is not limited to ten-finger typists",
+      "status": "explicit",
+      "evidence_span": "You don't have to be 10-finger typist to use Drift. You can be two-finger or four-finger"
+    },
+    {
+      "id": "P4",
+      "text": "Distribution follows a Swype-like model: license to OEMs and embed the dynamic keyboard in apps to reach hundreds of millions of users",
+      "status": "explicit",
+      "evidence_span": "How are we going to get this to hundreds of millions of users? We're going to license this to OEMs directly"
+    },
+    {
+      "id": "P5",
+      "text": "Current performance is about double today's tablet keyboards",
+      "status": "explicit",
+      "evidence_span": "about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dynamic keys and dual-sensor tap detection",
+      "premise_ids": ["P1", "P2", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "Broad memory-typing user base",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM and developer licensing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dramatically faster no-look typing on tablets via Drift's touch-and-tap keyboard",
+      "status": "explicit",
+      "evidence_span": "Scott's typing on this about 50, 60 words a minute right now"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Impact enterprise field and school tablet use cases",
+      "evidence_span": "how Drift can impact the lives of everybody for any type of enterprise application in the field and in the school"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combine two sensors, touch and tap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those people are who Drift are for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get this to hundreds of millions of users"
+    },
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "If we're going to let people rest their fingers and move the keyboard on the screen, how are we going to determine when they're typing?"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 codes explicit dependency: moving keys under resting fingers requires a tap-detection method. Demo WPM treated as value evidence of speed benefit. Early-testing signups excluded as traction. Truncated start flagged.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-950",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:56:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

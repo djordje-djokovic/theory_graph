@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-59",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:50:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Incomplete ultrasound screenings and operator-dependent errors drive fetal abnormality misdiagnosis",
+      "status": "explicit",
+      "evidence_span": "a third of patients in the United States receive incomplete screenings. And if there's an abnormality in one of these regions that doesn't get captured, then the patient is almost always misdiagnosed"
+    },
+    {
+      "id": "P2",
+      "text": "AI processes prenatal exams to ensure required anatomical views are captured and prompts re-scan of missing planes",
+      "status": "explicit",
+      "evidence_span": "providing feedback to Dr. Sham if he missed any key regions"
+    },
+    {
+      "id": "P3",
+      "text": "The same platform performs guided diagnostics by localizing malformations such as spinal defects",
+      "status": "explicit",
+      "evidence_span": "Here's an example of a pregnant patient with a fetal malformation in the fetal spine. Our AI was able to localize this fetal malformation"
+    },
+    {
+      "id": "P4",
+      "text": "Vendor-agnostic cloud deployment integrates with hospital ultrasound fleets over standard APIs",
+      "status": "explicit",
+      "evidence_span": "integrate with any ultrasound machine over a standard API"
+    },
+    {
+      "id": "P5",
+      "text": "Hospitals purchase hybrid subscription and volume API pricing for ROI from time savings, fewer callbacks, malpractice mitigation, and future NTAP reimbursements",
+      "status": "explicit",
+      "evidence_span": "Hospitals are incentivized to leverage our solution because of the valuable ROI we're providing through time savings"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Incomplete screening misdiagnosis",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "AI completeness and guided diagnostics",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hospital ROI commercial model",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect fetal abnormalities earlier and more reliably in prenatal ultrasound",
+      "status": "explicit",
+      "evidence_span": "Biotics AI helps detect fetal abnormalities in ultrasound earlier with greater frequency and higher efficiency"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Documentation automation value for clinicians",
+      "evidence_span": "save up to eight minutes per patient on documentation"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "patient is almost always misdiagnosed"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "AI has validated the completeness of the scan"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "valuable ROI we're providing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Third pass merges automated reporting into secondary value rather than a separate premise; completeness feedback and guided diagnostics kept as product mechanisms. Pricing and ROI kept one commercial premise."
+}

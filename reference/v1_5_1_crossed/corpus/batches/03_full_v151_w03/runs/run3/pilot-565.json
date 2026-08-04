@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-565",
+    "coder_session_id": "session_04",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Proprietary algorithms analyze U.S. stocks daily, extract features, cluster stocks, and classify winners versus losers in an adaptive everyday-learning forecasting model",
+      "status": "explicit",
+      "evidence_span": "The proprietary Neotech algorithms analyze daily all U.S. stocks' financial markets data, extract features and labels, group stocks into clusters, and classify them as winners or losers accordingly"
+    },
+    {
+      "id": "P2",
+      "text": "Traders can automate live order execution on Collective2-connected brokers without writing code, unlike coding-required competitors",
+      "status": "explicit",
+      "evidence_span": "Competitors like Quantopian offer data to coders to do backtesting, but they require traders to know how to write codes, while Neotic doesn't"
+    },
+    {
+      "id": "P3",
+      "text": "Customers are acquired through specialized forums, email campaigns, Google AdWords, articles, and broker referrals",
+      "status": "explicit",
+      "evidence_span": "We acquire our customers through specialized forums, email campaigns, Google AdWords, publishing articles, and referral by our connected brokers"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing is per backtest, forecast, and automated traders at about $400 per user per year after a free trial",
+      "status": "explicit",
+      "evidence_span": "We charge per number of backtest, forecast, and automated traders average $400 per user per year"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "adaptive stock forecasting",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "no-code live automation",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "acquisition and pricing",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Individual investors make better equity returns via automated winning-stock strategies",
+      "status": "explicit",
+      "evidence_span": "start making some good returns on your money instead of keeping it under your belt"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "classify them as winners or losers accordingly"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "start automated orders"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Every user is entitled to a free trial"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript opens mid-demo (truncated). Algorithm feature/cluster/classify cascade folded into one forecasting mechanism. Collective2 registration steps folded into no-code automation premise. Early-adopter counts and team bios excluded as traction/credentials. Singletons D1/D2 retained as separately revisable product modules."
+}

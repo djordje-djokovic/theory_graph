@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Healthy cows produce high-quality milk while sick cows produce lower yields of low-quality milk",
+      "status": "explicit",
+      "evidence_span": "healthy cows produce high yields of good milk, while sick cows produce lower yields of low-quality milk"
+    },
+    {
+      "id": "P2",
+      "text": "Technicians still hand-collect samples for distant labs, so farmers get tests only about once a month",
+      "status": "explicit",
+      "evidence_span": "dairy farmers only offer testing once a month"
+    },
+    {
+      "id": "P3",
+      "text": "Mastitis inflames the udder, cuts yield and quality, raises antibiotic use, and costs the industry billions",
+      "status": "explicit",
+      "evidence_span": "It is also the most common yet expensive disease that costs the dairy industry $32 billion annually"
+    },
+    {
+      "id": "P4",
+      "text": "Field optical sensing with ML analyzes light-milk interactions at molecular level without reagents",
+      "status": "explicit",
+      "evidence_span": "optical sensing with enhanced machine learning"
+    },
+    {
+      "id": "P5",
+      "text": "Smartphone/desktop dashboard syncs herd and individual cow milk-quality trends to catch mastitis before herd spread",
+      "status": "explicit",
+      "evidence_span": "identifies mass status before it spreads among herd and cause major economic losses"
+    },
+    {
+      "id": "P6",
+      "text": "Remote veterinary partners supply best-practice recommendations on top of the data",
+      "status": "explicit",
+      "evidence_span": "a remote veterinary support from our animal care partners for best practices and recommendations"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Monthly lab testing and mastitis risk",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Reagent-free optical analyzer",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Continuous monitoring and vet support",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automatic field testing that improves animal health and dairy profitability",
+      "status": "explicit",
+      "evidence_span": "By providing automatic testing and improving animal health and profitability, we can really reshape the dairy industry"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Having safe and high-quality milk is essential for consumers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brings the lab testing technology to the field"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reliable and continuous data to monitor the health of their herd"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Supply-chain scaling claim folded into value narrative rather than a separate GTM premise this run. Future applications uncoded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-281",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

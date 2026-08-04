@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Current efforts to connect the offline world via big-tech internet buildout or offline apps are not scalable soon enough",
+      "status": "explicit",
+      "evidence_span": "we don't feel that this is scalable. We don't feel that this is going to actually get to a lot of people real soon"
+    },
+    {
+      "id": "P2",
+      "text": "Bridgefy SDK makes third-party apps function offline over Bluetooth mesh",
+      "status": "explicit",
+      "evidence_span": "The way BridgeFi works is that it connects phones directly using their Bluetooth antennas"
+    },
+    {
+      "id": "P3",
+      "text": "Mesh hopping plus an algorithm keeps networks from flooding and controls battery use",
+      "status": "explicit",
+      "evidence_span": "the network is not going to be flooded, the messages are not going to live forever, and battery consumption is not going to be a problem"
+    },
+    {
+      "id": "P4",
+      "text": "Cross-platform Android-iOS support with encryption and patents",
+      "status": "explicit",
+      "evidence_span": "Android to iOS integration"
+    },
+    {
+      "id": "P5",
+      "text": "Sell to developers (B2B) rather than replacing WhatsApp-scale consumer apps",
+      "status": "explicit",
+      "evidence_span": "we don't think that we would be ever able to create an app that hundreds of millions of people would use instead of the ones that they use every day"
+    },
+    {
+      "id": "P6",
+      "text": "Usage-based fees on MAUs enabled by the technology",
+      "status": "explicit",
+      "evidence_span": "If they don't use it with our technology, we don't charge"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Scalable offline gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mesh offline SDK",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Developer revenue share",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Offline-capable apps open and expand markets for developers and users",
+      "status": "explicit",
+      "evidence_span": "You open up new markets. You open and you blow up existing ones"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "that's how when developers make this revenue, we also make it"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "53% of the population does not have access to internet"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "so they can work offline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that translates into revenue"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Team composition excluded as bio. Red Cross/earthquake app mentions treated as traction examples.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-605",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

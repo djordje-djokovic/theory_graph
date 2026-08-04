@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Average apps cost tens of thousands and take months before anything ships",
+      "status": "explicit",
+      "evidence_span": "An average app takes $27,000 to create, and even a simple app is going to cost you $4,000 to $10,000"
+    },
+    {
+      "id": "P2",
+      "text": "If you can build a PowerPoint deck, you can assemble an app from drag-and-drop screens and components",
+      "status": "explicit",
+      "evidence_span": "if you can build a PowerPoint slide deck, you too can become a mobile app developer"
+    },
+    {
+      "id": "P3",
+      "text": "Editor supports flexible layout, styles, and actions competitors' cookie-cutter builders cannot match",
+      "status": "explicit",
+      "evidence_span": "Our competitors can't do that. And with them, all their apps look identical"
+    },
+    {
+      "id": "P4",
+      "text": "Output apps are native; a preview app enables live device testing during build",
+      "status": "explicit",
+      "evidence_span": "First, the apps that are built are native"
+    },
+    {
+      "id": "P5",
+      "text": "Building blocks will expand via third-party developers and a marketplace",
+      "status": "explicit",
+      "evidence_span": "we'll extend it to other developers to build on top of our platform"
+    },
+    {
+      "id": "P6",
+      "text": "Today supports iPhone/iPad with future multi-platform support",
+      "status": "explicit",
+      "evidence_span": "Today, we support iOS, iPhone, and iPad"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cost and skill barrier to mobile apps",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Easy flexible native editor",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Platform extensibility roadmap",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Non-technical users can create custom native mobile apps quickly and affordably",
+      "status": "explicit",
+      "evidence_span": "non-technical users creating it"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "App Architect is a solution to that problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our app editor is very easy and flexible"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "WordPress for mobile"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Soft count 6. Demo museum content treated as illustration of one editor, not separate premises (§4.1.2).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-912",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

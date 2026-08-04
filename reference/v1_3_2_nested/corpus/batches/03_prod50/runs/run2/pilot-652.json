@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Broadcast brings games to fans but not fan energy back into stadiums",
+      "status": "explicit",
+      "evidence_span": "Broadcast has been a tremendous tool for the sports industry, bringing the game from the stadium to millions of fans around the world. Vivecast now enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Smartphone app gestures and sensors contribute to live VibeBoard displays",
+      "status": "explicit",
+      "evidence_span": "I can contribute to it using, for example, a Vivecast application in a smartphone"
+    },
+    {
+      "id": "P3",
+      "text": "Global real-time fan map and country decibel comparison extend stadium noise metrics",
+      "status": "explicit",
+      "evidence_span": "We can now compare that with the loudness of fans all around the world"
+    },
+    {
+      "id": "P4",
+      "text": "Stadium integration component developed with major venues",
+      "status": "explicit",
+      "evidence_span": "Wembley Stadium has helped us develop our stadium integration component"
+    },
+    {
+      "id": "P5",
+      "text": "CRM data, connected merch chips, apps, and sponsor contexts are the B2B offer",
+      "status": "explicit",
+      "evidence_span": "we capture a unique set of data that can feed into your CRM activities. Second, we create the future of connected merchandise"
+    },
+    {
+      "id": "P6",
+      "text": "Core promise is making all fans part of the game",
+      "status": "explicit",
+      "evidence_span": "It's all about the fans. And with Fan Mode, you can make all fans part of the game"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Vivecast fan participation tech",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "B2B sports monetization stack",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Fan-centric value thesis",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn the world into a stadium for sports fans",
+      "status": "explicit",
+      "evidence_span": "make the world a stadium for sports fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "transmit their energy straight into the stadium"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we offer a unique context for brand integration"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all fans part of the game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Singleton D3: fan-centric claim treated as separately stated priority module. Soft merge of CRM/merch/sponsor into one B2B premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

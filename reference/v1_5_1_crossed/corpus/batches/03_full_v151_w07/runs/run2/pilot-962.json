@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-962",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Modern digital play is isolating versus childhood physical face-to-face play; need magic in real-world play",
+      "status": "explicit",
+      "evidence_span": "It's all digital. It's isolating. And the interactions happen through devices"
+    },
+    {
+      "id": "P2",
+      "text": "Tangible play blends board games and video games via an iPad system recognizing ordinary physical pieces",
+      "status": "explicit",
+      "evidence_span": "Imagine board games meet video games"
+    },
+    {
+      "id": "P3",
+      "text": "iPad accessory redirects the front camera plus local AI tracks unmarked pieces in real time on any background/lighting without calibration or Wi-Fi",
+      "status": "explicit",
+      "evidence_span": "a simple iPad accessory that redirects iPad's front camera to capture the surface in front of it"
+    },
+    {
+      "id": "P4",
+      "text": "Near-term model sells physical games with iPad apps at affordable prices (~$15–30 games, base under $30); later a platform",
+      "status": "explicit",
+      "evidence_span": "our business model is to sell physical games that comes with an iPad app"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "isolating digital play",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "board-meets-video AI capture",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "sell physical games with apps",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Social real-world play that combines board-game and video-game experiences",
+      "status": "explicit",
+      "evidence_span": "what you just saw is a board game experience as well as a video game experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "How can we bring magic to real-world play?"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "One of the great thing about board games is they are inherently social"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The games will be somewhere between $15 to $30, really affordable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Isolating digital play as problem. Word/tangram demos folded into tangible board+video claim. Camera accessory + local AI no-marker real-time properties folded as one tech cascade (§4.1.7). Physical+app sales and price as commercial package; future platform/DnD/chess as vision framing (§4.1.4). Team bios excluded. Three domains—anti-template."
+}

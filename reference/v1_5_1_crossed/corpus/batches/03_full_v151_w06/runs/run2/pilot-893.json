@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-893",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Seniors using walkers face fall injuries from forgetting to engage brakes before sitting and from steep ramps/hills that make traditional walkers run away, with high treatment costs and lasting fear/quality-of-life loss",
+      "status": "explicit",
+      "evidence_span": "steep ramps and forgetfulness is what causes walk-related fall injuries"
+    },
+    {
+      "id": "P2",
+      "text": "Smart walker uses pressure sensors, encoders, and accelerometers to perceive user intention and environment and automatically/gradually brake to reduce injury risk",
+      "status": "explicit",
+      "evidence_span": "capable of perceiving user intention, the environment around us, and actuating appropriately to minimize the risk of injuries"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is licensing the technology to walker manufacturers for factory integration",
+      "status": "explicit",
+      "evidence_span": "license it to walker manufacturers. They integrate it into their walkers as they leave the factory"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "walker fall injuries from brakes and hills",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "intention-aware smart walker",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "license to walker manufacturers",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safeguard seniors from falls so they keep a higher quality of life instead of wheelchair dependence and fear",
+      "status": "explicit",
+      "evidence_span": "These features safeguard seniors from falls, leading them to a higher quality of life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce fall-related healthcare expenses",
+      "evidence_span": "alleviate healthcare expenses"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "less likely to recover and could be bedridden for the rest of their life"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically brakes kicks in and prevents a fall from happening"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrate it into their walkers as they leave the factory"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Forgetful-brake and steep-ramp/runaway pains plus cost/QoL consequences folded as one senior-fall problem (§4.1.6). Sit-auto-brake and ramp gradual-brake sensor demos folded as one smart-walker mechanism (§4.1.7). Founder biography and market-size framing excluded. Transcript appears to include host intro and possibly repeated pitch segments; coded the product claims once. Three domains; not a need/product/money triad."
+}

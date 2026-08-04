@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "coder_session_id": "session_06",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Combustion power plants are inefficient, inflexible, and emit large amounts of CO2",
+      "status": "explicit",
+      "evidence_span": "They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "id": "P2",
+      "text": "Combining solid oxide fuel cells with CO2 separation and methanation in a closed cycle eliminates combustion",
+      "status": "explicit",
+      "evidence_span": "Our technology combines three major building blocks in a new and unique way"
+    },
+    {
+      "id": "P3",
+      "text": "Closed-cycle design achieves near-full fuel conversion and about 80% electric efficiency with water and pure CO2 outputs",
+      "status": "explicit",
+      "evidence_span": "we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "id": "P4",
+      "text": "The system is reversible, producing green hydrogen or renewable methane from excess power for long-term storage",
+      "status": "explicit",
+      "evidence_span": "our new system design is reversible, meaning it can also produce gas from excess power"
+    },
+    {
+      "id": "P5",
+      "text": "Biogas plants are the first target market for renewable power plus biogenic CO2 separation enabling negative emissions",
+      "status": "explicit",
+      "evidence_span": "Biogas plants are our first target market"
+    },
+    {
+      "id": "P6",
+      "text": "Higher efficiency and reversible operation multiply customer electricity and overall income",
+      "status": "explicit",
+      "evidence_span": "the doubling in electric efficiency first of all means doubling revenues from electricity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Combustion plant inefficiency problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Closed-cycle SOFC power plant",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas market and customer economics",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Decentralized, carbon-negative, highly efficient power generation",
+      "status": "explicit",
+      "evidence_span": "provide the world with decentralized, carbon negative, and highly efficient power plants"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Customer revenue uplift from efficiency and reversible operation",
+      "evidence_span": "they can overall more than fivefold their income"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "By adding the two components that we showed before to the fuel cells and operating the system in a closed cycle, we achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They are highly inefficient, they are not flexible, and they emit millions of tons of CO2"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It is fully reversible. It is plug and play, and it even has a carbon negative footprint"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Long-term storage of this biogenic CO2, in turn, enables negative CO2 emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Process+performance package (80% efficiency, water/CO2 outputs, 100% conversion) folded into P3 per v1.5.1 boundary 8. Demo component cascade (PSA, compressor, cleaning, humidification, exchangers) folded into closed-cycle mechanism P2/P3. Vision of replacing all fossil plants treated as market framing, not a separate premise. Singleton D1: combustion failure modes are the problem module separately revisable from the plant design."
+}

@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Guild blends social gaming with career advancement so professionals compete, connect, and advance",
+      "status": "explicit",
+      "evidence_span": "Guild is where social gaming meets career advancement for technology professionals. Professionals compete on Guild, connect, and advance their careers"
+    },
+    {
+      "id": "P2",
+      "text": "Sponsored competitions include varied challenges from brain teasers to coding",
+      "status": "explicit",
+      "evidence_span": "This is a brain buster, just types of things you can expect. And a second one is more of a coding question"
+    },
+    {
+      "id": "P3",
+      "text": "Profile/career center imports resumes and tracks certifications and achievements",
+      "status": "explicit",
+      "evidence_span": "Here's my resume information, what you would expect on a profile. I can import it from LinkedIn or Facebook"
+    },
+    {
+      "id": "P4",
+      "text": "Skills scoring and 30+ topic certifications with portable badges",
+      "status": "explicit",
+      "evidence_span": "We offer over 30 different topics and certifications. It tells me how I scored there, and I've earned a bronze badge, which I can take with me wherever I want"
+    },
+    {
+      "id": "P5",
+      "text": "Jobs are recommended with pre-apply skill feedback and post-apply ranking guidance",
+      "status": "explicit",
+      "evidence_span": "it is recommending jobs that I should be applying for, where I have a good chance of getting an interview"
+    },
+    {
+      "id": "P6",
+      "text": "Hiring managers sponsor competitions and browse ranked participants to invite",
+      "status": "explicit",
+      "evidence_span": "I see that almost 3,500 people came and competed in this competition"
+    },
+    {
+      "id": "P7",
+      "text": "Free for talent; charge employers; direct connection without agencies",
+      "status": "explicit",
+      "evidence_span": "Guild is free for professionals. We monetize by charging employers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Talent-side Guild experience",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Employer competition recruiting",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Business model",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Professionals advance careers by competing and connecting on Guild",
+      "status": "explicit",
+      "evidence_span": "for professionals, Guild is a place to compete, connect, and advance their careers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is the problem Guild solves"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how does Guild Help me as an employer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We monetize by charging employers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "3500 competitors figure is competition-scale mechanism evidence kept inside employer premise rather than pure traction.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1143",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

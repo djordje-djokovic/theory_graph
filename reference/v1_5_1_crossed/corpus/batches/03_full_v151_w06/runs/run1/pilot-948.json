@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-948",
+    "coder_session_id": "session_01",
+    "session_case_index": 8,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Scientists and tech teams spend months deploying software and tools so hundreds or thousands of cloud instances work together for HPC/HTC workloads",
+      "status": "explicit",
+      "evidence_span": "spend months deploying software and writing tools and technologies to make hundreds or thousands of cloud instances work together"
+    },
+    {
+      "id": "P2",
+      "text": "CPUsage lets any developer distribute virtually any HPC/HTC application across any cloud at any scale in minutes by configuring one sandbox that auto-replicates, with a custom CLI API builder",
+      "status": "explicit",
+      "evidence_span": "distribute virtually any high-performance or high-throughput application across any cloud at any scale in a matter of minutes, not months"
+    },
+    {
+      "id": "P3",
+      "text": "Platform starts on AWS and will add Azure, Google Compute Engine, then private cloud for enterprise compute",
+      "status": "explicit",
+      "evidence_span": "Today we support Amazon Web Services and over the next few months will add support for other infrastructure such as Microsoft Windows Azure and Google Compute Engine"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "months to scale cloud HPC",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "minutes-to-scale CPUsage platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-cloud then private cloud coverage",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Compute works like electricity: plug in any application and consume scale without thinking about configuration, delivery, or where compute comes from",
+      "status": "explicit",
+      "evidence_span": "plug in any compute application, consume as much compute power as you want, without having to think about configuration, how the compute gets to you, or even where the compute comes from"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll spend months"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you'll be up and running in just a matter of minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "massive opportunity for platforms to change the way the enterprises compute"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Sandbox OS/tools, install-like-single-machine, API builder, and 1000-instance Blender demo folded as one distribution mechanism (§4.1.7). Light-bulb electricity analogy used as value criterion (speaker presents it as the compute vision that must work), not as a separate premise. HPC market-size and PaaS growth framing excluded. Three domains: problem, product, infrastructure coverage—not a need/product/money triad."
+}

@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "More cattle weight means more money, so frequent weight monitoring is critical yet rarely obtained today",
+      "status": "explicit",
+      "evidence_span": "To summarize it, more weight, more money"
+    },
+    {
+      "id": "P2",
+      "text": "Portable 3D camera software monitors weight variation frequently, stress-free, and ten times faster",
+      "status": "explicit",
+      "evidence_span": "monitor weight variation frequently at a stress-free manner for the cow, at a rate that is 10 times faster than the traditional process"
+    },
+    {
+      "id": "P3",
+      "text": "With the data, farmers know when to sell, change feed, treat sick cows, dose medicine, and pick genetics",
+      "status": "explicit",
+      "evidence_span": "farmers know when to sell, change feed and supplement, treat sick cows, prescribe the right amount of medicine, identify the best genetics for the next purchase"
+    },
+    {
+      "id": "P4",
+      "text": "Automatic pass-through design serves all farm sizes versus still-photo tools for small farms only",
+      "status": "explicit",
+      "evidence_span": "they are only suitable for small farms. Olho do Dono works automatically as the cow passes in front of it"
+    },
+    {
+      "id": "P5",
+      "text": "Portable hardware and R$1 per animal-month pricing plus product-commission recommendations beat expensive installed scales",
+      "status": "explicit",
+      "evidence_span": "Passage scale competitors are expensive to install, and one scale must be installed in every place that the cattle stays"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Weight-equals-money monitoring need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Automatic portable weight sensing",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Decision recommendations from weight data",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Affordable portable economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase beef cattle productivity and profitability with continuous weight insight",
+      "status": "explicit",
+      "evidence_span": "Let's increase the beef cattle productivity and profitability while maintaining the well-being of the cow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Weight indicates the cow's health, genetic evolution, right time to sell, and the financial value of livestock"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "10 times faster than the traditional process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We help farmers to grow their bottom lines"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we charge R$ 1 per animal month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Expansion geography treated as vision/roadmap (4.1(4)). Team experience excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-551",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  }
+}

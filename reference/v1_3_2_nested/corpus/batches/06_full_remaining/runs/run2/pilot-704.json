@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-704",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Manual warehouse inventory counting is slow and inaccurate, causing lost goods and large error costs",
+      "status": "explicit",
+      "evidence_span": "things get lost in the warehouse all the time, and workers spend hours every week searching for missing items"
+    },
+    {
+      "id": "P2",
+      "text": "Computer-vision flying robots achieve centimeter-accurate autonomous indoor flight without GPS",
+      "status": "explicit",
+      "evidence_span": "We are using our computer vision software as well as specialized computing hardware to achieve centimeter accurate indoor autonomous flight"
+    },
+    {
+      "id": "P3",
+      "text": "Robots plus on-site relay infrastructure and real-time analytics scan high-bay selective-rack warehouses between shifts",
+      "status": "explicit",
+      "evidence_span": "This happens in between shifts once the workers leave the warehouse"
+    },
+    {
+      "id": "P4",
+      "text": "Software tells workers how to update SAP or fix warehouse issues when scans find discrepancies",
+      "status": "explicit",
+      "evidence_span": "our software would tell them how to update SAP or actually fix the issue in the warehouse"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial model pairs upfront hardware/installation fees with subscription software and data-driven premiums",
+      "status": "explicit",
+      "evidence_span": "an upfront setup fee that takes care of the hardware and installation. At the same time, we're selling the software on a subscription basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Warehouse inventory error problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Indoor flying inventory robots",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Industrial automation sales model",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Automate inventory counting to improve enterprise operational efficiency and eliminate inventory errors",
+      "status": "explicit",
+      "evidence_span": "improve the operational efficiency of enterprises"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Turn over aisles far faster than manual counting and cut buffer inventory costs",
+      "evidence_span": "we can turn over warehouses in 400 times the speed of manual inventory counting"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The biggest problem in every one of these warehouses is keeping track of inventory"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we automate inventory counting using flying robots"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the hardware, just like traditional industrial automation equipment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "SAP-update workflow kept inside product domain as part of analytics delivery rather than a separate module. Team PhDs excluded. High-bay constraint folded into robot deployment premise. Anti-template note: pricing is traditional industrial automation sale motion revisable independently of indoor autonomy tech."
+}

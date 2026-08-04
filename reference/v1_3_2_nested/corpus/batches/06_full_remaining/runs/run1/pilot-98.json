@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional battery metals are toxic and scarce, so recycling cannot scale green-energy storage far enough",
+      "status": "explicit",
+      "evidence_span": "The metals that we use in our current battery tech are not only toxic, but very scarce as well"
+    },
+    {
+      "id": "P2",
+      "text": "Hydrogel-reinforced cellulose paper with zinc and manganese makes rechargeable paper batteries",
+      "status": "explicit",
+      "evidence_span": "We have invented what we call hydrogel-reinforced cellulose paper, and utilize zinc and manganese as the two sides of the battery"
+    },
+    {
+      "id": "P3",
+      "text": "Batteries are compostable, flex/cut-safe while operating, and stack into plug-and-play lithium replacements",
+      "status": "explicit",
+      "evidence_span": "our batteries are fully compostable"
+    },
+    {
+      "id": "P4",
+      "text": "Production uses existing manufacturing processes and equipment",
+      "status": "explicit",
+      "evidence_span": "We used existing manufacturing processes and equipment"
+    },
+    {
+      "id": "P5",
+      "text": "Abundant materials make the batteries about ten times cheaper",
+      "status": "explicit",
+      "evidence_span": "the cost of making our paper batteries isn't two times or three times cheaper, but it's 10 times cheaper"
+    },
+    {
+      "id": "P6",
+      "text": "Specialized versions target energy storage, consumer/wearables, and eventually EVs with industry partners",
+      "status": "explicit",
+      "evidence_span": "we decided to come up with three versions of specialized paper batteries for a focused area of application"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Toxic scarce battery materials",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Paper battery materials and form",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cost advantage and application focus",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer, more sustainable, cost-efficient batteries that enable a greener energy future",
+      "status": "explicit",
+      "evidence_span": "a safer, more sustainable, and cost-efficient future in battery tech"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "thanks to our proprietary tech and knowledge, we have unlocked three new features"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "dream of a greener future demands greener batteries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Paper batteries"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most practical solution in the market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three product features (compostable, adaptive/flexible, cut-safe) plus stackability folded into P3 per §4.1(5). Performance roadmap charts not coded as separate premises. Revenue projections excluded. Partner names kept only as support for application-focus premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-98",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

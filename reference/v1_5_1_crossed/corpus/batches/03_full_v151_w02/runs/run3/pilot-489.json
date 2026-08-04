@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-489",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Living with diabetes requires constant blood-sugar management that is hard because many life factors affect sugar and people miss injections or miscalculate doses",
+      "status": "explicit",
+      "evidence_span": "Living with diabetes is incredibly difficult because everything affects my sugar"
+    },
+    {
+      "id": "P2",
+      "text": "Existing diabetes apps only add logging and manual analysis rather than proactive help",
+      "status": "explicit",
+      "evidence_span": "all they do is provide us with fancy tools so that we can do hard work of logging details and then manually analyzing them or sharing them"
+    },
+    {
+      "id": "P3",
+      "text": "Spike automatically collects life, activity, and vital details to give proactive insulin tips, reminders, and food suggestions",
+      "status": "explicit",
+      "evidence_span": "By automatically collecting details about your life, your routine, your activity, and your vitals, Spike proactively provides you with the right insulin tips and reminders with food suggestions"
+    },
+    {
+      "id": "P4",
+      "text": "Integrations with patches and glucometers automatically capture glucose readings",
+      "status": "explicit",
+      "evidence_span": "Supporting more than 10 other glucometers spike would automatically get a reading"
+    },
+    {
+      "id": "P5",
+      "text": "Context such as entering a restaurant triggers top food options with approximate carb counts",
+      "status": "explicit",
+      "evidence_span": "she would automatically get the top three food options she would have with approximate carb count"
+    },
+    {
+      "id": "P6",
+      "text": "Guardians and doctors get real-time status and alerts on unusual patterns",
+      "status": "explicit",
+      "evidence_span": "they are informed in real time about her situation. But they are also alerted if unusual pattern is detected or something is wrong"
+    },
+    {
+      "id": "P7",
+      "text": "Spike is free for diabetics while insurers and self-insured employers pay",
+      "status": "explicit",
+      "evidence_span": "spike is free forever for diabetics"
+    },
+    {
+      "id": "P8",
+      "text": "Differentiation is intervening before incidents rather than after",
+      "status": "explicit",
+      "evidence_span": "the problem lies before the incident happens, not after it"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard diabetes self-management",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Proactive Spike assistant and device data",
+      "premise_ids": ["P3", "P4", "P5", "P8"]
+    },
+    {
+      "id": "D3",
+      "name": "Guardian and doctor alerting",
+      "premise_ids": ["P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Free-for-patients payer model",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make diabetes management less work and less worry for diabetics",
+      "status": "explicit",
+      "evidence_span": "making diabetes management less diabetic"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce productivity loss and prevent mismanagement-related deaths",
+      "evidence_span": "she would be part of the $90 billion loss of productivity from diabetics in the US only"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Living with diabetes is incredibly difficult"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We changed it from more work to less worry"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they are informed in real time about her situation"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spike is free forever for diabetics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Missed injections/miscalculated doses folded into diabetes management difficulty pain-bundle. Device integrations and restaurant food tips split as distinct capability mechanisms. Funding/DAU excluded. Medical partnerships noted as traction unless framed as continuing condition—omitted."
+}

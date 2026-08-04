@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Talented professionals are reduced to resumes in piles when job hunting",
+      "status": "explicit",
+      "evidence_span": "when we go look for a job, we get reduced to this. Just another resume and a pile of paper"
+    },
+    {
+      "id": "P2",
+      "text": "Company-sponsored low-stakes competitions let tech professionals compete and stand out",
+      "status": "explicit",
+      "evidence_span": "Competitions are sponsored by companies. They are low stakes"
+    },
+    {
+      "id": "P3",
+      "text": "Skills engine recommends, scores, and certifies abilities across many topics with badges",
+      "status": "explicit",
+      "evidence_span": "Skills is the heart of Guild. This is what truly differentiates us. Based on everything I do on Guild, Guild is recommending skills that I may want to add to my repertoire"
+    },
+    {
+      "id": "P4",
+      "text": "Job recommendations and applications include skill-fit feedback and ranking odds",
+      "status": "explicit",
+      "evidence_span": "Guild is telling me what are some key skills that are important for this job, and how am I doing against those"
+    },
+    {
+      "id": "P5",
+      "text": "Employers see ranked competitors/applicants from sponsored competitions and can invite passively",
+      "status": "explicit",
+      "evidence_span": "I can go down and flip through every single person who participated, and they are ranked and how they performed"
+    },
+    {
+      "id": "P6",
+      "text": "Free for professionals; monetize by charging employers; no agencies",
+      "status": "explicit",
+      "evidence_span": "Guild is free for professionals. We monetize by charging employers. And a really important point, Guild is a place for professionals and employers to connect directly. No third parties, no agencies on Guild"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Professional compete-connect-advance product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Employer recruiting tools",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Two-sided monetization",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help technology professionals stand out and advance careers through social gaming-style competition",
+      "status": "explicit",
+      "evidence_span": "Guild is where social gaming meets career advancement for technology professionals"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help employers target and find the best people",
+      "evidence_span": "Guild also helps employers target and find the best people"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Professionals compete on Guild, connect, and advance their careers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps employers target and find the best people"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Guild is free for professionals. We monetize by charging employers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Signup traction excluded. Employer value recorded as secondary. Soft anti-template: product / employer / money each separately revisable in transcript.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1143",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

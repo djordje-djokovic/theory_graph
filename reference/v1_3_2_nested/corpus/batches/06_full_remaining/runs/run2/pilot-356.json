@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "P2P apps keep float returns while users' idle balances lose to inflation",
+      "status": "explicit",
+      "evidence_span": "if you left idle cash in there, you just took a cut"
+    },
+    {
+      "id": "P2",
+      "text": "Stacks is a peer-to-peer payment designed so each transaction can generate wealth in stock",
+      "status": "explicit",
+      "evidence_span": "the first peer-to-peer payment designed to generate wealth with every single transaction"
+    },
+    {
+      "id": "P3",
+      "text": "A fast, simple, secure stock-send path replaces taxes, paperwork, high fees, and delays",
+      "status": "explicit",
+      "evidence_span": "we built a fast, simple, and secure way to send stock"
+    },
+    {
+      "id": "P4",
+      "text": "Recipients accept as stock, switch favorites, or take cash when cash converts on accept",
+      "status": "explicit",
+      "evidence_span": "She can accept the stock as is, she can switch the stock to another one of her favorites, or she can accept it as cash"
+    },
+    {
+      "id": "P5",
+      "text": "Social public activity democratizes investing data other platforms conceal",
+      "status": "explicit",
+      "evidence_span": "we create data transparency that other platforms conceal and close off to their users"
+    },
+    {
+      "id": "P6",
+      "text": "Alpaca brokerage partnership covers large cash and portfolio balances",
+      "status": "explicit",
+      "evidence_span": "using our brokerage partner, Alpaca"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "P2P float problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Wealth-generating stock payments",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Social layer and protected custody",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Generate wealth with every peer-to-peer transaction",
+      "status": "explicit",
+      "evidence_span": "generate wealth with every single transaction"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring new individuals into the markets via existing pay habits",
+      "evidence_span": "bringing a whole new group of individuals into the markets"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving nothing behind for their users"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "contributed to her long-term wealth goals"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "democratizing investing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Desire-to-invest framing folded into value rather than a separate premise this run. Business platform plug-ins left as future extension, not coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-356",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:29:40+02:00"
+  }
+}

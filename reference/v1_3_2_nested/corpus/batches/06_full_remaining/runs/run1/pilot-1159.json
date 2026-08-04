@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Women want coveted in-season handbags and accessories that rarely go on sale, at a price they choose",
+      "status": "explicit",
+      "evidence_span": "choose the price they want to pay for the most coveted handbags and accessories that either never or rarely go on sale"
+    },
+    {
+      "id": "P2",
+      "text": "Members buy credits and enter descending-price sales where price falls faster as more players join",
+      "status": "explicit",
+      "evidence_span": "This price drops lower every second. In fact, it drops faster as more and more members join the sale"
+    },
+    {
+      "id": "P3",
+      "text": "Limited inventory ends the game; losers get brand gift cards or incentives",
+      "status": "explicit",
+      "evidence_span": "There's only a limited amount of inventory in each sale, and as soon as it's sold out, the game ends"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue from merchandise markup plus entrance fees yields ~60% gross margin",
+      "status": "explicit",
+      "evidence_span": "we collect a markup between the wholesale cost of an item and its final sale price on the site. Second, we collect entrance fees from each player"
+    },
+    {
+      "id": "P5",
+      "text": "Acquisition via targeted PPC, SEO, and incentivized referrals at ARPU that covers CAC",
+      "status": "explicit",
+      "evidence_span": "we looked at our current conversion rate for our pay-per-click ads, SEO work, and our referral program"
+    },
+    {
+      "id": "P6",
+      "text": "Brands get cost-effective buzz for in-season goods as they hit department stores",
+      "status": "explicit",
+      "evidence_span": "helping to create buzz around their in-season merchandise just as it's hitting the department store floors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Descending-price credit sales",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Markup and fee economics",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Brand buzz proposition",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "In-season luxury accessories at member-chosen prices with game-driven demand",
+      "status": "explicit",
+      "evidence_span": "focus on in-season merchandise while using a game-like element to build buzz and create new demand"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Luxury brands gain accessible buzz without traditional ad spend alone",
+      "evidence_span": "making brands more accessible to consumers and consumers more accessible to brands"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "game-like element to build buzz and create new demand"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gross margin of about 60%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "value proposition for brands is just as strong"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team credentials and billion-dollar aspiration excluded. Competitor-map framing used to warrant differentiation, not coded as premises. Singleton D3: brand-side value is separately revisable from consumer game.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1159",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

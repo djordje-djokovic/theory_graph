@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Illegal rebate rules push brokers to deliver free software/services instead of cash kickbacks",
+      "status": "explicit",
+      "evidence_span": "illegal for them to rebate any portion of that commission to their clients"
+    },
+    {
+      "id": "P2",
+      "text": "Free HR-as-a-service covers payroll, benefits, and admin work paid by insurance commissions",
+      "status": "explicit",
+      "evidence_span": "HR as a service platform, where we take on and manage all of your payroll, all of your benefits, all of the associated HR administrative work"
+    },
+    {
+      "id": "P3",
+      "text": "Two-way connections to existing payroll and a simple broker-of-record letter attach carriers",
+      "status": "explicit",
+      "evidence_span": "this is a two-way connection. So you'll see later on, we also push information back into the payroll system"
+    },
+    {
+      "id": "P4",
+      "text": "Software automates employee onboarding through offer letters, payroll, immigration, and benefit enrollment",
+      "status": "explicit",
+      "evidence_span": "it is literally the least amount of work that is physically possible to do for you to hire someone"
+    },
+    {
+      "id": "P5",
+      "text": "Because 80% of HR is administrative, free automation drives switching",
+      "status": "explicit",
+      "evidence_span": "80% of it is administrative"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broker commission model",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Integrations and automated onboarding",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Admin HR willingness to switch",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Employers get payroll and benefits headaches handled free via broker economics",
+      "status": "explicit",
+      "evidence_span": "if we can do all of that for free, because we make money on the health insurance side, why wouldn't you switch to us"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "do all of it for free, because we make money on the insurance commissions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This stuff never crosses your desk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's got to make sense for you to switch to us"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Anti-template: commission model, product automation, and admin-share demand separately revisable. Nothing-changes-about-plans detail folded into broker-of-record/connect premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-914",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:00+02:00"
+  }
+}

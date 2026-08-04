@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-716",
+    "coder_session_id": "session_02",
+    "session_case_index": 14,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Application security lags development: audits can't keep up with code changes, scanners flood false positives, and firewalls stay too permissive—leaving a gap between devops tooling and security",
+      "status": "explicit",
+      "evidence_span": "Security is left behind"
+    },
+    {
+      "id": "P2",
+      "text": "Screen protects apps at runtime by monitoring critical in-app functions with logic-based blocking of unknown vulnerabilities and low false positives, installable like a normal dependency",
+      "status": "explicit",
+      "evidence_span": "a security solution that protects your application at runtime"
+    },
+    {
+      "id": "P3",
+      "text": "A developer dashboard shows attack status, suspicious user activity such as account takeover/brute force, and debugger-like details including backtraces for blocked events",
+      "status": "explicit",
+      "evidence_span": "we provide them directly in the interface, like if you were using your debugger"
+    },
+    {
+      "id": "P4",
+      "text": "Pricing starts at $99/month and scales with hosts; available for Python, Rails, and Node.js applications",
+      "status": "explicit",
+      "evidence_span": "our pricing starts at only $99 per month and scales as you grow with the number of hosts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "dev-security tooling gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "runtime protection and developer visibility",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "host-based pricing and language support",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Simple application security that developers can actually use to protect apps and users",
+      "status": "explicit",
+      "evidence_span": "we make application security simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this gap every day between development and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Screen blocks the attack immediately"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable all developers to protect their application"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Audit/scanner/firewall pains folded as one security-gap problem (§4.1.6). Three-command install and SQL-injection blueprint demo folded into runtime protection mechanism; dashboard features as same product's visibility surface (§4.1.7). Apple bio and million-attacks/400-users traction excluded. Singleton D1/D3 retained. Anti-template noted."
+}

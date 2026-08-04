@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Corporate apps behind firewalls block tablet BYOD; MDM is heavy-handed and adds data-center boxes",
+      "status": "explicit",
+      "evidence_span": "Forrester has called MDM heavy-handed, locking down the entire device, defeating the whole purpose for BYOD"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot isolates managed work apps/docs while leaving the device personal",
+      "status": "explicit",
+      "evidence_span": "Introducing WorkSpot, the one place where IT manages and the rest of the device remains personal"
+    },
+    {
+      "id": "P3",
+      "text": "One-click SSL VPN access using existing enterprise auth and major VPN vendors",
+      "status": "explicit",
+      "evidence_span": "We just did it in one click and seconds, traversing through a live SSL VPN"
+    },
+    {
+      "id": "P4",
+      "text": "Encrypted local virtual file system and selective remote wipe protect documents",
+      "status": "explicit",
+      "evidence_span": "If Stacey happens to lose her device, Bobin IT simply remote wipes only WorkSpot as needed"
+    },
+    {
+      "id": "P5",
+      "text": "Mobile virtualization and virtual network stack give IT secure access and control",
+      "status": "explicit",
+      "evidence_span": "We built an entire virtual file system and a virtual network stack so that Bob and IT can deliver very secure access and control"
+    },
+    {
+      "id": "P6",
+      "text": "Granular work activity telemetry feeds Insights and Events apps for IT",
+      "status": "explicit",
+      "evidence_span": "We've created two big apps for IT, Insights and Events"
+    },
+    {
+      "id": "P7",
+      "text": "Disrupt incumbents by free access/control and paid activity-data monetization",
+      "status": "explicit",
+      "evidence_span": "We disrupt this multi-billion dollar business by giving access and control for free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "BYOD problem with MDM",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "WorkSpot secure delivery platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Data-driven IT business model",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "BYOD that works: secure enterprise work on personal tablets without locking the device",
+      "status": "explicit",
+      "evidence_span": "simplify Bring Your Own Device, or BYOD, for enterprises"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cannot get their work done today on those devices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one place for work with the rest of the device remaining personal"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Anti-template justified: problem diagnosis, product architecture, and data monetization are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Malaria infects 500 million people every year across more than 100 endemic countries",
+      "status": "explicit",
+      "evidence_span": "Malaria infects 500 million people around the world every single year"
+    },
+    {
+      "id": "P2",
+      "text": "Gold-standard microscopy diagnosis is slow and costs a family's daily earnings",
+      "status": "explicit",
+      "evidence_span": "they take about one hour to prepare the sample, and it costs all of his family's majority earnings for that day"
+    },
+    {
+      "id": "P3",
+      "text": "Clinicians miss low-level infections, so untreated patients keep the transmission cycle going",
+      "status": "explicit",
+      "evidence_span": "Well, neither could the clinician. There was actually a low-level infection"
+    },
+    {
+      "id": "P4",
+      "text": "RAM is a reusable device pairing refrigerator magnets and a laser pointer with a consumable cuvette and patient database",
+      "status": "explicit",
+      "evidence_span": "It's a reusable device that matches refrigerator magnets and a laser pointer with a consumable plastic cuvette and a patient database"
+    },
+    {
+      "id": "P5",
+      "text": "Magnetic biomarkers let the device quantify infection level from changes in light transmission",
+      "status": "explicit",
+      "evidence_span": "manipulate these magnets in a way that changes the amount of light that comes through the sample"
+    },
+    {
+      "id": "P6",
+      "text": "The test requires no clinical expertise to run",
+      "status": "explicit",
+      "evidence_span": "because it doesn't require any clinical expertise"
+    },
+    {
+      "id": "P7",
+      "text": "A Bosch Healthcare partnership provides distribution in India",
+      "status": "explicit",
+      "evidence_span": "we've partnered with Bosch Healthcare in India for distribution"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Malaria burden and the misdiagnosis cycle",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "RAM device and magnetic biomarker detection",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "India distribution partnership",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, inexpensive, expertise-free malaria diagnosis that quantifies infection at the point of care",
+      "status": "explicit",
+      "evidence_span": "That gives us not only a binary decision on yes or no if he has an infection, but also how large that is"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Patient records can be tracked over time for epidemiology studies",
+      "evidence_span": "track his diagnoses over time, even do an epidemiology study for the WHO"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why malaria is a $12 billion problem today"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving us a quantitative diagnosis for that blood sample"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnered with Bosch Healthcare in India for distribution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript cut off mid-sentence at the call to action ('...help us reach 1 billion people and stay'). Multi-disease 'Magneto obstacle platform' roadmap framed as future vision, not coded as premise (v1.3.2 4.1(4)-(5)); 95% sensitivity across 1,000 trial patients excluded as performance evidence per 4.2; IDEO's donated design services treated as a resource announcement, not a continuing condition. Singleton D3: the distribution partnership is independently revisable from the device.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-816",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

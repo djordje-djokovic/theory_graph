@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1185",
+    "coder_session_id": "session_05",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Employers drown in irrelevant applications on Craigslist/Monster/CareerBuilder while job seekers cannot get noticed or know if applications were viewed",
+      "status": "explicit",
+      "evidence_span": "That system is broken. Let's have a look on the other side of the coin for the job seekers"
+    },
+    {
+      "id": "P2",
+      "text": "LocalBacon offers dynamic job search with save, uniform handpicked full-time quality listings (no MLM/scams)",
+      "status": "explicit",
+      "evidence_span": "we handpick every single job that's posted on our site. That means that they're all full-time opportunities"
+    },
+    {
+      "id": "P3",
+      "text": "Job seekers pay to apply via discounted job credits starting at $0.99, which employers notice; employers agree to feedback and view notifications",
+      "status": "explicit",
+      "evidence_span": "job seekers pay to apply on LocalBacon. And they notice that"
+    },
+    {
+      "id": "P4",
+      "text": "Application center with in-site iPaper resume viewing and employer triage (new/flagged/shelved) plus ATS handoff and candidate transparency emails",
+      "status": "explicit",
+      "evidence_span": "This lands the job in our application center. This is mission control for a job seeker"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken hiring marketplace",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "curated pay-to-apply marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "application workflow tools",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fix fundamental hiring problems for both job seekers and employers—signal quality candidates and reduce noise",
+      "status": "explicit",
+      "evidence_span": "we created LocalBacon to fix the fundamental problems that exist for both job seekers and employers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Monster, CareerBuilder, and Craigslist, they're broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Job seekers want to get noticed. On our website, the employers and recruiters that we work with know that job seekers pay to apply"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "as an employer, I gain credibility for giving transparency to my process without changing my behavior"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Employer noise + seeker invisibility folded as one two-sided hiring pain (§4.1.6). Handpicked listings and pay-to-apply+feedback kept as marketplace commercial mechanism with price as detail (§4.1.3). Ajax search/save folded into curated marketplace surface. Application center/iPaper/flag-shelve/ATS cascade folded as one workflow toolset (§4.1.7). Survey willingness-to-pay treated as evidence for pay-to-apply, not traction metric. Transcript ends mid-sentence."
+}

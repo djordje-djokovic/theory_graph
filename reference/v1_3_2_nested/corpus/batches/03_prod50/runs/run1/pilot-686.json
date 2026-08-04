@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Neurostimulation can be made accessible without requiring surgery via non-invasive tDCS",
+      "status": "explicit",
+      "evidence_span": "can we make neurostimulation more accessible? Can we do this in a way that didn't require surgery? And it turns out that you can"
+    },
+    {
+      "id": "P2",
+      "text": "Priming the motor cortex increases plasticity so athletes get more strength and skill from the same training",
+      "status": "explicit",
+      "evidence_span": "what happens if you prime this part of the brain so that it can be more plastic? Can you get more out of your training neurologically if you do this first? And it turns out that you can"
+    },
+    {
+      "id": "P3",
+      "text": "Halo Sport is worn like headphones with proprietary primer electrodes, paired to a phone app that turns on neurostimulation during workouts",
+      "status": "explicit",
+      "evidence_span": "you would just put on Halo Sport, like a regular set of headphones, You would turn it on and pair it with an app on your phone. The app merely just turns on the neurostimulator. And you would get at it. You would pair this neuropriming technology with your workout"
+    },
+    {
+      "id": "P4",
+      "text": "Proprietary elements including 27 patents filed make the technology defensible",
+      "status": "explicit",
+      "evidence_span": "multiple proprietary elements, so we have a defensible technology, 27 patents filed"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue from selling headsets, semi-disposable primers and ear pads, with free app and future premium features",
+      "status": "explicit",
+      "evidence_span": "Halo is a hardware company and we plan on selling headsets, semi-disposable primers, semi-disposable ear pads. Our app for now is free, but you can imagine that we'll build in premium features that we could charge money for"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Non-invasive motor-cortex neuropriming for athletes",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware and primer monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Greater athletic training gains in strength and skill via neuropriming",
+      "status": "explicit",
+      "evidence_span": "the Halo group achieved about 12% gains in leg strength versus a control group that did the exact same training program"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Potential medical help for stroke-related motor disability",
+      "evidence_span": "Half the people who have had a stroke, suffer from some sort of motor disability, and we can help these people with neurostimulation"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pair this neuropriming technology with your workout"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling headsets, semi-disposable primers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Patents kept with proprietary product mechanism (§4.1.1) — borderline but speaker ties patents to defensible tech of same headset. Credentials and partner logos excluded as traction. Medical use as secondary_value.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-686",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:37:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

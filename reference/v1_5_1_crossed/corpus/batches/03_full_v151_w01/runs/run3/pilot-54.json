@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-54",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:12:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aviation must fill a large CO2 gap to reach net-zero by 2050",
+      "status": "explicit",
+      "evidence_span": "there's an urgent need to decarbonize aviation"
+    },
+    {
+      "id": "P2",
+      "text": "Electric aviation must start from light aircraft to fill the emissions gap",
+      "status": "explicit",
+      "evidence_span": "we are convinced aviation will be electric. That's a solution to fill this gap. However, we need to start from the light aircraft"
+    },
+    {
+      "id": "P3",
+      "text": "Hydrogen balances energy efficiency and aircraft range/speed/payload better than batteries or SAF for their jet",
+      "status": "explicit",
+      "evidence_span": "hydrogen in the middle has good enough energy efficiency and a good enough aircraft performance"
+    },
+    {
+      "id": "P4",
+      "text": "An integrated hydrogen-to-propeller powertrain in an aircraft is ready for test flight",
+      "status": "explicit",
+      "evidence_span": "an 85 kilowatt powertrain from hydrogen tanks to a propeller"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market is a six-to-eight passenger pressurized business jet matching existing missions via scalable hydrogen architecture",
+      "status": "explicit",
+      "evidence_span": "it's a six to eight passengers aircraft pressurized, so you fly in altitude with speed and range of existing aircraft"
+    },
+    {
+      "id": "P6",
+      "text": "European airports must be ready to supply hydrogen for the jet",
+      "status": "explicit",
+      "evidence_span": "we're working with 50 of them to bring hydrogen for our aircraft"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "aviation decarbonization need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "hydrogen-electric aircraft",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "airport hydrogen readiness",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Comparable business-aviation performance without direct emissions",
+      "status": "explicit",
+      "evidence_span": "we propose comparable performance without the direct emissions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-run scale to regional and commercial platforms with large CO2 reduction potential",
+      "evidence_span": "Beyond Aero has a possible CO2 reduction contribution possible of 350 megaton of CO2 equivalent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's what we want to develop at Beyond Aero"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully electric thanks to hydrogen technology"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "work with European airports for them to be ready for our jet"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Battery vs SAF comparison folded into hydrogen choice (P3). Powertrain subsystem cascade folded into P4. LOIs and investor-clients treated as traction. Regional/commercial scale coded as secondary value. Singleton D3 retained: airport hydrogen readiness is separately revisable from the aircraft."
+}

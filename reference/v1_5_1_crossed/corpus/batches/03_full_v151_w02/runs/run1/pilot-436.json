@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-436",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:22:15Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Home gardening is hard because people water incorrectly, struggle with what and where to plant, and face toxic chemical products",
+      "status": "explicit",
+      "evidence_span": "Gardening is really hard"
+    },
+    {
+      "id": "P2",
+      "text": "A fully assembled portable self-watering planter uses proprietary sub-irrigation hardware so plants draw water as needed",
+      "status": "explicit",
+      "evidence_span": "the first fully-assembled, self-watering garden that you can just bring anywhere with you"
+    },
+    {
+      "id": "P3",
+      "text": "A coaching app and Grow team give climate- and season-specific guidance, including photo-based troubleshooting",
+      "status": "explicit",
+      "evidence_span": "we have a coaching app to keep you active, engaged and get all your questions answered before you even know that you have them"
+    },
+    {
+      "id": "P4",
+      "text": "The planter ships with soil, accessory connection points, insulation, plant plans, and a long warranty for climate-flexible growing",
+      "status": "explicit",
+      "evidence_span": "It has come fully assembled and with soil, which means he doesn't need any tools"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard home gardening",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "self-watering planter hardware",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "coaching app and grow support",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can grow food outdoors more easily, anywhere",
+      "status": "explicit",
+      "evidence_span": "With Avalo, you can grow anything, anywhere"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Direct positive climate impact by growing some food at home",
+      "evidence_span": "have a direct positive impact right now by just growing a little bit of food outside"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Gardening should not be this hard"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you never ever have to worry that your plants are getting what they need"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give him advice before he even knows that he needs it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Watering/planting/chemical pains kept as one gardening problem set. Vertical growing, cold frames, insulation, soil, plans, and warranty folded into planter package cascade. Coaching kept separate as a distinct capability. Anti-template: need, hardware, and coaching support separately revisable."
+}

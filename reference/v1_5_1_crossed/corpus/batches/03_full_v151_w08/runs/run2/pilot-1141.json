@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1141",
+    "coder_session_id": "session_06",
+    "session_case_index": 11,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online gaming today is anonymous and static: players cannot control who they play with, and women often avoid voice chat",
+      "status": "explicit",
+      "evidence_span": "You don't know who you're playing with. You're dealing with anonymous gamer tags"
+    },
+    {
+      "id": "P2",
+      "text": "Rich profiles with blogs, pictures, video, chat, and game preferences enable deep social engagement before and during play",
+      "status": "explicit",
+      "evidence_span": "We offer rich user profiles, deep engagements with other users, including profiles that include blogs, pictures"
+    },
+    {
+      "id": "P3",
+      "text": "The payer pays to play while the play date earns money, addressing supply and demand monetarily",
+      "status": "explicit",
+      "evidence_span": "The payer, as we call it, pays, and the play date actually makes money playing that game"
+    },
+    {
+      "id": "P4",
+      "text": "A respectful rating earned from prior play dates helps recipients decide whether to accept invites",
+      "status": "explicit",
+      "evidence_span": "she can actually see my respectful rating, which is what I've earned by playing other play dates before me"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "anonymous unsafe online play",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "social play-date profiles and ratings",
+      "premise_ids": ["P2", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "pay-to-play earnings model",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A fun, inviting, secure place to meet gamers and play them online—like buying someone a drink, but for games",
+      "status": "explicit",
+      "evidence_span": "we are a fun, inviting place to play. We're secure"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you can buy a girl a drink in a sports bar, why can't you buy a girl a game online"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "come in, meet gamers, and play them online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "monetarily addresses the issues of supply and demand"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Flash vs console game surfaces folded into the social play product. Viral 10k users without ads excluded as traction. Developer CPM payout pitch treated as ask/partnership outreach, not a core value premise. Singleton D1/D3: problem diagnosis and pay model separately revisable from profiles."
+}

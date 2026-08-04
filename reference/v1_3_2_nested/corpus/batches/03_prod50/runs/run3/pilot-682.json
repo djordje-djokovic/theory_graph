@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High-inflation emerging-market populations are largely unbanked without credit access for online shopping",
+      "status": "explicit",
+      "evidence_span": "most of the population in this country is unbanked and also doesn't have access to credit"
+    },
+    {
+      "id": "P2",
+      "text": "Emerging-market online commerce share is far below the US partly due to missing online credit",
+      "status": "explicit",
+      "evidence_span": "share of online commerce in the US is more than 10%, but across emerging markets is average on 2%"
+    },
+    {
+      "id": "P3",
+      "text": "Ripio Credit lets users buy on installments in local currency at Bitcoin-accepting merchants worldwide",
+      "status": "explicit",
+      "evidence_span": "pay online on installments in local currency in any of our merchants or the hundreds of thousands of merchants that accept Bitcoin payments worldwide"
+    },
+    {
+      "id": "P4",
+      "text": "Identity photos, social/external data, ML, and fraud systems produce a score to approve credit",
+      "status": "explicit",
+      "evidence_span": "it's also processed by our fraud prevention system. With all this information, we build a score"
+    },
+    {
+      "id": "P5",
+      "text": "Years of prior LatAm credit underwriting experience let the team approve credit for these users",
+      "status": "explicit",
+      "evidence_span": "our team has been working on this problem for several years before BitPagos"
+    },
+    {
+      "id": "P6",
+      "text": "Underbanked repay via phone statements using bank transfer or cash at partnered Pago Fácil/Boleto/Oxxo locations",
+      "status": "explicit",
+      "evidence_span": "in Argentina with Pago Fácil, in Brazil with Boleto Bancario, in Mexico in many stores like Oxxo or 7-Eleven"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unbanked online commerce problem",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Credit scoring and underwriting capability",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Installment Bitcoin payments and cash collection",
+      "premise_ids": [
+        "P3",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable unbanked emerging-market consumers to shop online on affordable local-currency credit installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no online shopping, no purchasing Netflix, or buying that video game"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "approve this credit to our user and being able to start paying online"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Anti-template note: three domains map to problem, underwriting, and payment/collection modules that are separately revisable in the pitch (not a forced need/product/money triad). Soft count 6; merchant-network traction merged into P3.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:23:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hospital-grade ECG today requires a clinic machine, cables, gel, and a trained technician, while many die before reaching hospital",
+      "status": "explicit",
+      "evidence_span": "50% of the people who died from a heart attack died before arriving to a hospital"
+    },
+    {
+      "id": "P2",
+      "text": "SmartHeart plus a smartphone app performs a hospital-grade 12-lead ECG in about 30 seconds with one button",
+      "status": "explicit",
+      "evidence_span": "within 30 seconds, I will be able to perform a hospital-grade full ECG exam"
+    },
+    {
+      "id": "P3",
+      "text": "Non-professionals can use it anywhere and send results to doctors or hospitals by email or fax",
+      "status": "explicit",
+      "evidence_span": "It can be used by anyone, anywhere, anytime"
+    },
+    {
+      "id": "P4",
+      "text": "Device is sold around $499 with free apps and monthly or pay-per-use service packages",
+      "status": "explicit",
+      "evidence_span": "The SmartHealth price is estimated $499"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ECG access and time-to-treatment gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pocket hospital-grade ECG",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Device and service offer",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Significantly increase chances of surviving a heart attack via faster hospital-grade ECG anywhere",
+      "status": "explicit",
+      "evidence_span": "significantly increase the chances of surviving a heart attack"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Better health care and quality of living for families",
+      "evidence_span": "enjoy better health care and quality of living"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Time is the most crucial factor in cardiac events"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The sooner you'll be in a hospital getting medical treatment, the higher your chances to survive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hospital-grade full ECG exam"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "better health care and quality of living"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Heart-disease prevalence stats treated as framing, not premises. Size/weight vs iPhone folded into product form (v1.3.2 #5). Price+service one commercial premise (§4.1 #3).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1071",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:53:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

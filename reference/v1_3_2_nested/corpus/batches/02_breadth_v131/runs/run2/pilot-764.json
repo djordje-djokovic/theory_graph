@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web publishing is broken because non-developers cannot freely create or tweak pages without agencies",
+      "status": "explicit",
+      "evidence_span": "There's a part of the internet that's fundamentally broken"
+    },
+    {
+      "id": "P2",
+      "text": "PageCloud turns the browser into an unrestricted visual editor where saves go live immediately",
+      "status": "explicit",
+      "evidence_span": "When we hit Save to look at our changes, they are immediately live on the web. There's no other platform on the planet that gives you this creative freedom"
+    },
+    {
+      "id": "P3",
+      "text": "URL drag-and-drop embeds functional third-party widgets including e-commerce tickets",
+      "status": "explicit",
+      "evidence_span": "go to Eventbrite and drag that URL right onto our page as well. And just like that, we've e-commerce enabled our site"
+    },
+    {
+      "id": "P4",
+      "text": "Mobile mode reflows desktop designs for phone layouts",
+      "status": "explicit",
+      "evidence_span": "enter mobile mode. And in seconds, you can reflow your content to make sure it looks gorgeous on a mobile device"
+    },
+    {
+      "id": "P5",
+      "text": "Copy-page analyzes any web page into PageCloud-editable root content; Photoshop paste is supported",
+      "status": "explicit",
+      "evidence_span": "PageCloud will analyze everything that's going on on this page, break it down into its root content and rebuild it in PageCloud editable format. It's pixel-for-pixel accurate"
+    },
+    {
+      "id": "P6",
+      "text": "Preorder pricing at $75/year with conference promo code",
+      "status": "explicit",
+      "evidence_span": "using the Disrupt Promo Code, you're going to get an amazing price of just $75 for the year for your site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Web publishing access problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Visual live web editor capabilities",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Annual site pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Create the web the way it was meant to be—without restriction",
+      "status": "explicit",
+      "evidence_span": "experience the web the way it was always meant to be"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fundamentally broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "complete creative freedom"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$75 for the year"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "HTML/CSS 1% statistic folded into the broken-publishing premise. Patents not split out.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-764",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

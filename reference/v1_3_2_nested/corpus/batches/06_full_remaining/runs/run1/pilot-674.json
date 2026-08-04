@@ -1,0 +1,123 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents of school-going children face a communication gap with school authorities and teachers",
+      "status": "explicit",
+      "evidence_span": "communication gap with the school authorities and the teachers"
+    },
+    {
+      "id": "P2",
+      "text": "Parents need better safety, security, and health visibility for their child",
+      "status": "explicit",
+      "evidence_span": "safety, security and health of the child"
+    },
+    {
+      "id": "P3",
+      "text": "Parents want instant progress and behavioural reports rather than delayed paper report cards",
+      "status": "explicit",
+      "evidence_span": "instant progress reports and behavioural reports"
+    },
+    {
+      "id": "P4",
+      "text": "Fee payment currently requires physical presence at school",
+      "status": "explicit",
+      "evidence_span": "physical presence required for the fee payments"
+    },
+    {
+      "id": "P5",
+      "text": "Daily student needs such as uniforms and stationery should be obtainable online with home delivery",
+      "status": "explicit",
+      "evidence_span": "daily needs of a student, uniforms, stationery"
+    },
+    {
+      "id": "P6",
+      "text": "School Bridge is a single app bundling two-way notifications, instant report cards, GPS tracking, payment gateway, and school e-commerce",
+      "status": "explicit",
+      "evidence_span": "This is our product. First, we have notification"
+    },
+    {
+      "id": "P7",
+      "text": "Beachhead is India's private mid- to upper-high-end schools rather than all 30 lakh schools",
+      "status": "explicit",
+      "evidence_span": "we are targeting a market of the private mid-high and upper high-end schools, which are 30,000 in number"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent school-management pain points",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "School Bridge app suite",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Private school beachhead",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Parents can manage school communication, safety, progress, fees, and daily needs in one app",
+      "status": "inferred",
+      "evidence_span": "find a need and solve the problem"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "five major pain points that a parent faces with regard to their school-going children"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how are we actually solving the problem by giving you a live demo of the app"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "targeting a market of the private mid-high and upper high-end schools"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Five numbered parent pains kept as separate premises because each could fail independently as a demand condition; product features folded into one School Bridge suite premise (v1.3.2 #5 speaker-listed features of one offering). Financing ask excluded. Soft granularity warning: 7 premises at upper end; pains are speaker-enumerated distinct conditions.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-674",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:12:00+02:00"
+  }
+}

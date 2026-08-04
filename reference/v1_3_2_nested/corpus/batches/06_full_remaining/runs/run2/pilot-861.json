@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers and caregivers lack easy control over meaningful personal health measurements",
+      "status": "explicit",
+      "evidence_span": "empowering you to take control of your health"
+    },
+    {
+      "id": "P2",
+      "text": "Dyno is a thermometer-simple multi-sensor device delivering dozens of metrics including cuffless BP to phone or cradle in one minute",
+      "status": "explicit",
+      "evidence_span": "It works just as simple as a digital thermometer, and it takes only 60 seconds to get it done"
+    },
+    {
+      "id": "P3",
+      "text": "Analytic software can surface unknown conditions in elderly-care settings, enabling specialist referral and preventive intervention",
+      "status": "explicit",
+      "evidence_span": "these individuals and their care organization had no idea of these conditions"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market spans elderly care, chronic disease, hospital discharge under ACA incentives, and consumers, monetized by subscription, OEM/licensing, and data mining",
+      "status": "explicit",
+      "evidence_span": "In addition to elderly care, there are many other markets that we can go into"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Multi-metric Dyno device",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Clinical alerting value",
+      "premise_ids": [
+        "P1",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Market and revenue model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Preventive care that improves quality of care and avoids costly acute events",
+      "status": "explicit",
+      "evidence_span": "A true step forward in preventive care"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "track 33 different health metrics"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "how much it can save the system"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowered to better understand and control their own health"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Score/grade UI folded into device premise. Stroke cost figures treated as illustrative outcome, not separate premise. Singleton device domain: hardware/sensor stack independently learnable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-861",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:33:22+02:00"
+  }
+}

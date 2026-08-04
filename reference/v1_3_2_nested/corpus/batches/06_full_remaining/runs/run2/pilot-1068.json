@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1068",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents often cannot recall critical kids' medical details in emergencies or for daycare requests",
+      "status": "explicit",
+      "evidence_span": "they constantly ask you for this information. Daycare, sports team, it doesn't matter. You always need to have access to it, and it's annoying"
+    },
+    {
+      "id": "P2",
+      "text": "Law gives patients ownership of records and obliges timely doctor release after signing",
+      "status": "explicit",
+      "evidence_span": "you now own your medical records. And once a proper release is signed, a doctor has to provide it to you in a timely fashion"
+    },
+    {
+      "id": "P3",
+      "text": "Mother Nose is a full-service, no-effort, parent-centric PHR focused on immunizations, growth, and milestones",
+      "status": "explicit",
+      "evidence_span": "Mother knows it's full service, it's no effort, and it's consumer-centric targeted at parents"
+    },
+    {
+      "id": "P4",
+      "text": "Faxed records are ingested and uploaded by customer service after an electronic release",
+      "status": "explicit",
+      "evidence_span": "We've built a system to ingest all these faxes. Our customer service team will take out all the data layers that you just guys saw, and we will upload it for you"
+    },
+    {
+      "id": "P5",
+      "text": "HIPAA compliance plus extra security layers reassure cautious parents",
+      "status": "explicit",
+      "evidence_span": "we are HIPAA compliant. And actually, we've added extra special layers of security to make sure that even the most cautious of parents will feel good with it"
+    },
+    {
+      "id": "P6",
+      "text": "Subscription of about a latte per month distributed via co-marketing with baby sites",
+      "status": "explicit",
+      "evidence_span": "we are already working on some co-marketing partnerships with them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent record access need and law",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Fax ingest parent PHR",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription and mom-site GTM",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Put kids' critical medical information in parents' pockets anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "all your kid's critical medical information available to you in your pocket, accessible anytime, from anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We intend to take full use of this new law and bring electronic medical records to the masses"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "starting with those who need it most, busy, caring moms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's effortless for the customer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "cost will be roughly a cost of latte a month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Competitor three fatal flaws used as warrant for full-service design inside D2. Camera milestones folded into parent-centric product features. Senior expansion vision uncoded. Promo first-year free for 100 users excluded."
+}

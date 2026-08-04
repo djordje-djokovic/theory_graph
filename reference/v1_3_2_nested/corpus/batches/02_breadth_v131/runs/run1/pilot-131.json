@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-131",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:42:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Physical-world businesses rely on bills/receipts as cost truth and must validate, code, and enter each bill",
+      "status": "explicit",
+      "evidence_span": "bills and receipts are the source of truth for your costs"
+    },
+    {
+      "id": "P2",
+      "text": "Complex bill formats plus disconnected approvers make hygienic AP fail under manual entry",
+      "status": "explicit",
+      "evidence_span": "bills are hard. Some are very long. Others are structurally complex"
+    },
+    {
+      "id": "P3",
+      "text": "Spatial mapping and language models extract and reconcile tens of thousands of bill data points",
+      "status": "explicit",
+      "evidence_span": "We extract more than 50,000 data points from every page"
+    },
+    {
+      "id": "P4",
+      "text": "Contextualized workflow routes approvers, suggests job coding, syncs accounting, and pays with discount capture",
+      "status": "explicit",
+      "evidence_span": "a single click approves the bill, auto-creates the associated record in the accounting system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken manual AP for physical businesses",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Data-enriched capture and AP workflow",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Effortless, accurate accounts-payable operations with better cost data",
+      "status": "explicit",
+      "evidence_span": "prosecute their AP tasks more effortlessly and more efficiently"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "Because we can read and contextualize the data, we can ensure the smart routing of this bill"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "saved 70 hours a month on AP tasks"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data-enriched accounts payable operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Customer hour-savings figures treated as evidence of the pain/value, with mechanism coded in P3–P4. Single integrated AP workflow kept as two domains (pain vs product), not a need/product/money triad."
+}

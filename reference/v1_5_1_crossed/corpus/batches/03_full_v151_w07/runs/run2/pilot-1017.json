@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1017",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:17:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing recommendation systems fail because they rely on strangers' reviews, average ratings that ignore personal taste, and widespread fake reviews",
+      "status": "explicit",
+      "evidence_span": "all of these systems are dependent on giving you reviews and recommendations from strangers"
+    },
+    {
+      "id": "P2",
+      "text": "LiveStar surfaces high-quality recommendations from professional critics as a trusted source",
+      "status": "explicit",
+      "evidence_span": "The first group are professional critics, people with genuine expertise"
+    },
+    {
+      "id": "P3",
+      "text": "Friends are a trusted recommendation source, aided by Q&A that reaches non-users via email/SMS/Facebook with easy pre-populated surveys",
+      "status": "explicit",
+      "evidence_span": "The second group are your friends"
+    },
+    {
+      "id": "P4",
+      "text": "An algorithm finds people with the same taste and surfaces their recommendations",
+      "status": "explicit",
+      "evidence_span": "LiveStar algorithmically measures your taste and then compares it to other people"
+    },
+    {
+      "id": "P5",
+      "text": "One app covers multiple categories including restaurants, menu items, music, and movies",
+      "status": "explicit",
+      "evidence_span": "you can go to LiveStar for restaurants, what to eat when you're at the restaurant, what music to listen to, and what movie to watch"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken stranger-average review systems",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "trusted multi-source recommendations",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "multi-category recommendation destination",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fast, personalized, high-quality recommendations from critics, friends, and taste-alikes",
+      "status": "explicit",
+      "evidence_span": "give you access to high-quality reviews from trusted sources"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the existing solutions are broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "provides fast access to high quality sources across a range of common real world scenarios"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're a one-stop destination"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three enumerated review failures folded as one problem set (§4.1.6). Critic/friend/taste-alike kept as separately asserted source mechanisms (distinct paths to trusted recs). Category coverage split as one-stop destination claim. Demo date narrative treated as illustration of the same product."
+}

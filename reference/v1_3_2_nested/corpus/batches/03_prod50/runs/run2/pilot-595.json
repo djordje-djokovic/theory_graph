@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Audio data transmission is sold as SaaS priced per device per year",
+      "status": "explicit",
+      "evidence_span": "We sell data over audio as a service per device per year"
+    },
+    {
+      "id": "P2",
+      "text": "Venue ticketing uses ultrasonic mobile authentication for near-instant fraud-free entry",
+      "status": "explicit",
+      "evidence_span": "identifying your mobile device, then having authentication for the moment of access"
+    },
+    {
+      "id": "P3",
+      "text": "Ultrasonic packets encode, broadcast, decode, and demodulate entirely locally",
+      "status": "explicit",
+      "evidence_span": "a smart home being created encoded with a small packet of data then broadcast it decoded and demodulated from the receiving device happening completely local"
+    },
+    {
+      "id": "P4",
+      "text": "Same protocol embeds in TV audio, POS, and cars for outside/inside connectivity",
+      "status": "explicit",
+      "evidence_span": "We can even be embedded and enabled in a device, like a car, or allow in-car connectivity, whether you're inside the car or outside the car"
+    },
+    {
+      "id": "P5",
+      "text": "Listener leads the internet-of-sound as next-generation device connection protocol",
+      "status": "explicit",
+      "evidence_span": "We are leading and pioneering the internet of sound"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Audio transmission technology",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Commercial service and ticketing use",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Identify and connect devices better via the internet of sound",
+      "status": "explicit",
+      "evidence_span": "focusing on identifying and connecting devices better. We are leading and pioneering the internet of sound"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What you saw was ultrasonic data transmission in a live environment"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ticketing companies have chosen us as their mobile authentication tool"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.5
+  },
+  "notes": "Truncated/thin opening. Competitor comparison and market-size boasts largely excluded; mechanism premises retained.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-595",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

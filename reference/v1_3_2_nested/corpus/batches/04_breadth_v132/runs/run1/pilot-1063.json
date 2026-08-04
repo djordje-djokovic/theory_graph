@@ -1,0 +1,149 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile business management and invoicing is not properly addressed",
+      "status": "explicit",
+      "evidence_span": "felt that the mobile aspect of it was not being properly addressed"
+    },
+    {
+      "id": "P2",
+      "text": "A fully integrated cloud-powered business management tool has a consistent UI on all mobile operating systems",
+      "status": "explicit",
+      "evidence_span": "a fully integrated cloud-powered business management tool with a consistent user interface on all mobile operating systems"
+    },
+    {
+      "id": "P3",
+      "text": "Lowest-common-denominator integration with leading accounting and B2B platforms maximizes reach",
+      "status": "explicit",
+      "evidence_span": "fully integrated with as many accounting platforms as possible and integrated with the leading B2B platforms"
+    },
+    {
+      "id": "P4",
+      "text": "Photo, audio, and geotag attachments close the documentation gap in mobile invoicing",
+      "status": "explicit",
+      "evidence_span": "the most valuable is the ability to attach a picture"
+    },
+    {
+      "id": "P5",
+      "text": "Saved invoices instantly jump to the cloud and produce a shareable URL",
+      "status": "explicit",
+      "evidence_span": "When you save this, it instantly jumps to our cloud, archives all the data"
+    },
+    {
+      "id": "P6",
+      "text": "Attachments and a payment button get invoices approved or paid faster",
+      "status": "explicit",
+      "evidence_span": "The idea is that that will cause the invoice to be either approved or paid faster"
+    },
+    {
+      "id": "P7",
+      "text": "Freemium pricing: free unlimited invoices, $7 a month for storage and payment, $10 for platform attachment",
+      "status": "explicit",
+      "evidence_span": "To activate the data storage and enable payment, we ask $7 a month per user"
+    },
+    {
+      "id": "P8",
+      "text": "The product is enterprise-ready as an order management system with sales orders",
+      "status": "explicit",
+      "evidence_span": "in an enterprise situation, you're really talking about an OMS, or an order management system. And so we're basically ready for that with sales orders"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud-powered mobile business management",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Accounting and B2B integrations",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Attachment documentation and faster payment",
+      "premise_ids": [
+        "P4",
+        "P6"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Freemium pricing and enterprise readiness",
+      "premise_ids": [
+        "P7",
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Run an entire business from a phone and get invoices approved and paid faster",
+      "status": "explicit",
+      "evidence_span": "you can completely manage your entire business"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "The idea is that that will cause the invoice to be either approved or paid faster"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely manage your entire business"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reach about 300,000 companies"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "approved or paid faster"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we ask $7 a month per user"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript ends mid-sentence ('Okay? That's invoice'). Singleton D2 retained: third-party platform integrations are separately revisable partnerships. The 300,000-company reach is kept as detail of the integration premise; media-display and payment-button roadmap items folded into the attachment premise (v1.3.2 4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1063",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:26:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

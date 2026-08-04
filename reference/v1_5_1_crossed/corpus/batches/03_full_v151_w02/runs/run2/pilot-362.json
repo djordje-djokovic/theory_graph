@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-362",
+    "coder_session_id": "session_03",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:21:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Outdoor maintenance still depends on gasoline/diesel equipment amid a long-term labor shortage",
+      "status": "explicit",
+      "evidence_span": "traditional equipment is gasoline or diesel powered, and there's a long-term labor shortage"
+    },
+    {
+      "id": "P2",
+      "text": "After solar plants are built, vegetation cutting is the largest ongoing operating expense",
+      "status": "explicit",
+      "evidence_span": "the biggest expense is actually cutting the vegetation and the grass on site"
+    },
+    {
+      "id": "P3",
+      "text": "A modular 100% electric outdoor robot platform supports quick-swap attachments and batteries for many operations",
+      "status": "explicit",
+      "evidence_span": "We've developed a powerful modular platform for not just grass cutting and snow plowing, but dozens of different operations"
+    },
+    {
+      "id": "P4",
+      "text": "Solar-specific rough-cut and offset decks cut thick vegetation under panels and around I-beams",
+      "status": "explicit",
+      "evidence_span": "world's first 100% electric rough cut deck that is especially made to cut down that thick vegetation that grows on solar sites"
+    },
+    {
+      "id": "P5",
+      "text": "Solar vegetation management is the launch use case for a broader outdoor work robotics platform",
+      "status": "explicit",
+      "evidence_span": "we started in snow, we graduated to solar, and we're building an outdoor work robotics platform"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "diesel outdoor work and solar vegetation cost",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "modular electric robot and solar cutting decks",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "solar launch use case to platform expansion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Sustainable electric robotic outdoor work equipment, starting with solar farm vegetation management",
+      "status": "explicit",
+      "evidence_span": "making outdoor work equipment sustainable"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "these massive 1,000-acre solar farms were a huge headache to maintain"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our solution was robotic vegetation management for solar farms"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're building an outdoor work robotics platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Safety sensors and night/snow features folded into robot platform cascade. Signed-agreement and investment claims excluded as traction. Drive-line/I-beam constraints folded into solar-deck premise rather than separate pains."
+}

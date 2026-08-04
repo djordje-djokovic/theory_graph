@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1060",
+    "coder_session_id": "session_01",
+    "session_case_index": 16,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:18:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "America's cars sit parked most of the day, creating car overpopulation",
+      "status": "explicit",
+      "evidence_span": "We have over 250 million cars in America that sit parked 22 hours each day"
+    },
+    {
+      "id": "P2",
+      "text": "Peer-to-peer marketplace lets people rent nearby owners' cars; owners set price/availability and GetAround takes ~40% with insurance",
+      "status": "explicit",
+      "evidence_span": "Owners that pricing and availability, Getaround provides insurance and takes a 40% commission"
+    },
+    {
+      "id": "P3",
+      "text": "P2P model works beyond dense urban Zipcar-like footprints across the Bay Area and toward national scale",
+      "status": "explicit",
+      "evidence_span": "The peer-to-peer model is not limited to dense urban areas like Zipcar"
+    },
+    {
+      "id": "P4",
+      "text": "iPhone app handles browsing, requests, and smartphone unlock/locate of the car",
+      "status": "explicit",
+      "evidence_span": "With it, you can unlock the car and locate the car, all from your iPhone"
+    },
+    {
+      "id": "P5",
+      "text": "Getaround Car Kit is a low-cost self-install keyless/Wi-Fi/GPS device for secure smartphone sharing",
+      "status": "explicit",
+      "evidence_span": "the first ever device designed to securely share access to your car using only a smartphone"
+    },
+    {
+      "id": "P6",
+      "text": "Berkshire Hathaway insurance deal enables nationwide coverage as part of each rental",
+      "status": "explicit",
+      "evidence_span": "we've secured a unique deal with an amazing insurance carrier that will help us expand our coverage across the entire country"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "P2P car sharing marketplace",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "iPhone unlock and car kit",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Berkshire rental insurance",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Redefine car ownership via instant nearby car sharing that earns owners money and reduces overpopulation",
+      "status": "explicit",
+      "evidence_span": "a new way for people to share cars"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Large-scale sharing would cut CO2 emissions substantially",
+      "evidence_span": "CO2 emissions would drop by a whopping 48 billion pounds per year"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Instead of buying a car, you can rent one instantly from someone nearby"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes peer-to-peer car sharing hassle-free"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Getaround provides insurance as part of each rental"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Million-car vision coded only as secondary climate impact, not a premise (§4.1.4). Free Car Kit giveaway excluded as promo. Zipcar comparison supports P3 geographic claim. Commission+insurance in P2; Berkshire national expansion kept as separate insurance-module condition."
+}

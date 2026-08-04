@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-873",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small businesses depend on freight brokers whose quotes take days with hidden fees, documents/status updates are slow, margins are fat, and brokers disappear when things go wrong",
+      "status": "explicit",
+      "evidence_span": "it takes days to get quotes that are full of hidden fees"
+    },
+    {
+      "id": "P2",
+      "text": "Shipster gives transparent rated access to trucking, warehouse, customs, and ocean providers with unified documents/communication and reliability insights from customs data, completing in minutes what took days and saving 30–60%",
+      "status": "explicit",
+      "evidence_span": "Shipster provides you transparent access to those service providers"
+    },
+    {
+      "id": "P3",
+      "text": "A sister site lets service providers onboard, update pricing, and manage shipments",
+      "status": "explicit",
+      "evidence_span": "Shipster has a sister site that allows service providers to be onboarded, update their pricing, and manage their shipments"
+    },
+    {
+      "id": "P4",
+      "text": "Initial focus is Ningbo–Los Angeles trade serving SME electronics/textile importers, targeted via public customs data and a call center",
+      "status": "explicit",
+      "evidence_span": "Shipster is focusing on Ningbo, China, the seventh busiest port in the world, to Los Angeles, California"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "opaque expensive freight brokerage",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "transparent shipping marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Ningbo-LA SME beachhead GTM",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "SMEs book international ocean shipping faster, cheaper, and with transparent control over providers",
+      "status": "explicit",
+      "evidence_span": "Today, what takes days, Shipster does in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Any industry that delivers poor service for a high price deserves to be disrupted"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we save you 30% to 60% in the process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tens of thousands of small and medium-sized businesses that import from the electronic and textile factories surrounding Ningbo"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Broker quote/doc/fee/disappearance pains folded as one brokerage problem (§4.1.6). Provider selection, reliability data, booking, team room, and news/weather folded as marketplace cascade (§4.1.7); sister provider site kept as supply-side module within product domain. Global expansion vision omitted as aspiration (§4.1.4). Ice-cream bio excluded. Anti-template: problem, marketplace, and beachhead GTM separately revisable."
+}

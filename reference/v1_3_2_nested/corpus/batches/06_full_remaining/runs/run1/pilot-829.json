@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-829",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Retailers face an analytical divide and cannot make fast competitive pricing decisions across tens of thousands of SKUs against online rivals without losing profitability",
+      "status": "explicit",
+      "evidence_span": "There's a huge analytical divide. Retailers just don't have the firepower to make quick decisions for all their products"
+    },
+    {
+      "id": "P2",
+      "text": "Boomerang is a dynamic price-optimization platform (not mere price matching) connected to the retailer's e-commerce stack for competitive positioning and strategy setting",
+      "status": "explicit",
+      "evidence_span": "We are a price optimization company"
+    },
+    {
+      "id": "P3",
+      "text": "What-if simulation uses historical data to project revenue and profit before a pricing strategy is submitted",
+      "status": "explicit",
+      "evidence_span": "Before I hit submit, I want to simulate a what-if strategy. Boomerang has looked up the past historical data and has given me some projections in terms of revenue and profits"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS monetization via monthly subscription fees",
+      "status": "explicit",
+      "evidence_span": "We are a SaaS product, which means we monetize with monthly subscription fees"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Retail pricing firepower gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Dynamic price optimization platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "SaaS subscription",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Dynamically price e-commerce items for competitiveness and profitability",
+      "status": "explicit",
+      "evidence_span": "dynamically price your items for competitiveness and profitability"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "An average retailer is just not able to compete in this new world of e-commerce"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a dynamic price optimization platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "monetize with monthly subscription fees"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Sales-lift traction and booking numbers excluded as performance metrics. Dashboard UI steps folded into price-optimization premise; what-if simulation retained as a distinct learnable capability that could fail independently. Partition is need/product/money triad; justified because subscription pricing is revisable without changing the optimization engine, and the analytical-divide problem is a separate market assumption. Singleton D1 and D3 noted accordingly."
+}

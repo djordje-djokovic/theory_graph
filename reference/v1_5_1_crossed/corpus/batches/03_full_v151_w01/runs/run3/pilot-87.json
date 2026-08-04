@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-87",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:12:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Heavy industry needs heat that is simultaneously cheap, reliable, and flame-hot, which zero-carbon options today cannot deliver affordably",
+      "status": "explicit",
+      "evidence_span": "There is no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "id": "P2",
+      "text": "A thermal battery can store cheap renewable or off-peak electricity as on-demand industrial heat delivered as hot gas",
+      "status": "explicit",
+      "evidence_span": "takes in electricity from renewables or off-peak nuclear or hydro whenever it's cheap, whenever it's abundant, whenever it's available"
+    },
+    {
+      "id": "P3",
+      "text": "The system reaches ~1,800 Celsius heat while remaining at least three times cheaper than hydrogen",
+      "status": "explicit",
+      "evidence_span": "we can keep it affordable, at least three times cheaper than hydrogen"
+    },
+    {
+      "id": "P4",
+      "text": "The battery retrofits existing furnaces, boilers, and kilns by piping in hot gas without radically changing the process",
+      "status": "explicit",
+      "evidence_span": "We can attach to your existing process, pipe in our hot gas to your furnace, your boiler, even your turbine"
+    },
+    {
+      "id": "P5",
+      "text": "Semiconductor-doped electrically conductive fire bricks enable hotter, longer-lasting electric heating than existing heaters",
+      "status": "explicit",
+      "evidence_span": "We use semiconductor doping to make them electrically conductive"
+    },
+    {
+      "id": "P6",
+      "text": "Stacked e-bricks form a three-in-one heater, thermal store, and heat exchanger from cheap abundant refractory materials",
+      "status": "explicit",
+      "evidence_span": "It's a giant electric heater. It's a giant thermal store. And it's a giant heat exchanger that gets the energy out, all built from cheap, affordable, abundant bricks"
+    },
+    {
+      "id": "P7",
+      "text": "In high-renewable regions the system can pay back in about five years while offsetting most site carbon, or beat electric boilers on time-of-use rates",
+      "status": "explicit",
+      "evidence_span": "We can pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Affordable reliable industrial heat need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Joule Hive e-brick thermal battery",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Site economics versus fossil and boiler alternatives",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable, reliable, retrofit-ready electrified heat that decarbonizes heavy industry",
+      "status": "explicit",
+      "evidence_span": "decarbonize the hottest industries with electrified heat"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "We stack these up to massive scales to build our dual high thermal battery"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "with this device, we can turn the power from those sources into reliable industrial heat"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no affordable way to decarbonize our heavy industries"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn the power from those sources into reliable industrial heat"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pay back in five years while offsetting 80% of your carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Hot/cheap/reliable performance of the same thermal-battery process folded with P2–P3 per process+performance package (v1.5.1 rule 8); e-brick material kept separate as the enabling mechanism. Singleton D1 and D3 retained as independently revisable need and site-economics claims. Customer LOIs and 2030 revenue targets excluded as traction/ask framing."
+}

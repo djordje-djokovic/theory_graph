@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wireless power should be remote, automatic, and effortless for everyday devices",
+      "status": "explicit",
+      "evidence_span": "wireless means remote, automatic, effortless"
+    },
+    {
+      "id": "P2",
+      "text": "COTA charger plus small receivers deliver watt-scale power across a home to multiple devices",
+      "status": "explicit",
+      "evidence_span": "deliver one watt of power at a 30-foot distance, spanning an entire home, powering multiple devices safely"
+    },
+    {
+      "id": "P3",
+      "text": "Path-focused power delivery follows the device and avoids people",
+      "status": "explicit",
+      "evidence_span": "returns the power signal only through the open paths between it and the receiver, powering it and avoiding people or anything that absorbs its energy"
+    },
+    {
+      "id": "P4",
+      "text": "System works without line of sight and without interfering with electronics",
+      "status": "explicit",
+      "evidence_span": "works without line of sight, powering devices behind walls and around corners without interfering with electronic equipment"
+    },
+    {
+      "id": "P5",
+      "text": "Consumer form factors include built-in receivers, standard batteries, and dongles",
+      "status": "explicit",
+      "evidence_span": "built into devices and phones, built into standard batteries, and as dongles for current devices"
+    },
+    {
+      "id": "P6",
+      "text": "Partnering with electronics manufacturers is the path to enable products at scale",
+      "status": "explicit",
+      "evidence_span": "partner with electronics manufacturers to use our components, design, and technology to enable their products to be used to their maximum potential"
+    },
+    {
+      "id": "P7",
+      "text": "Technology is in final stages of FCC certification",
+      "status": "explicit",
+      "evidence_span": "currently in final stages of FCC certification"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Effortless remote power need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "COTA safe directed power system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "OEM productization and partnerships",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Remote wireless charging so devices stay powered without cables or pockets emptied",
+      "status": "explicit",
+      "evidence_span": "phone charge automatically without taking them out of your pocket or bag"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need wireless power"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this phone is charging wirelessly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "built into devices and phones, built into standard batteries, and as dongles"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Patents again folded into the COTA mechanism (v1.3.1). FCC certification coded as an institutional condition bundled with the tech domain because the speaker lists it among the challenges COTA must satisfy. Transmitter-count efficiency detail kept inside P2 rather than split.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

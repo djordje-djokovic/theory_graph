@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-919",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:10:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Public data is valuable as a reflection of the real world but is inaccessible across siloed formats so search and cross-source connections are impossible",
+      "status": "explicit",
+      "evidence_span": "While this data is public, and while it is out there, it's not really accessible"
+    },
+    {
+      "id": "P2",
+      "text": "A scalable infrastructure acquires, indexes, and searches large volumes of public datasets so users can find and manipulate records",
+      "status": "explicit",
+      "evidence_span": "building a scalable infrastructure for acquiring, indexing, and searching public data"
+    },
+    {
+      "id": "P3",
+      "text": "Search and discovery surface unexpected relevant datasets and relationships across sources",
+      "status": "explicit",
+      "evidence_span": "discovering new data sets you didn't even know existed or were relevant"
+    },
+    {
+      "id": "P4",
+      "text": "A browser plugin highlights entities on web pages and routes users into Enigma at matching granularity",
+      "status": "explicit",
+      "evidence_span": "with our browser plugin, it's on the right"
+    },
+    {
+      "id": "P5",
+      "text": "Web app and API launch with strategic partners across finance, news, and academia",
+      "status": "explicit",
+      "evidence_span": "we're launching our web app and API with partners who really share this vision"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inaccessible siloed public data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "index search and discovery platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "browser plugin surface",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "partner web app and API launch",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users can search, discover, and work with public data that was previously hidden in silos",
+      "status": "explicit",
+      "evidence_span": "search and discovery platform for public data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What public data needs is an infrastructure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "let you find and manipulate the data you're looking for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "All of the entities on the page light up"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leveraging it in their work and in their thinking"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Demo queries (Google H-1B, DOE electricity) treated as applications of the same index/search mechanism (§4.1.2). Discovery of unknown datasets kept as distinct discovery path within platform. Plugin split as separately demoed surface. Structured-web vision framing not coded as premise (§4.1.4). Partner names as GTM launch condition, not traction metrics. Anti-template: problem, core platform, plugin, and partner launch separately revisable."
+}

@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-451",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Analysts spend a large share of time hunting market research across fragmented Google and aggregator portals that miss or bury the right reports",
+      "status": "explicit",
+      "evidence_span": "The average analyst spends 19 percent of their day researching. For every five that show up to work, one shows up to search"
+    },
+    {
+      "id": "P2",
+      "text": "UX unified industry classification is ~10x more granular than NAICS for mapping industries and adjacencies",
+      "status": "explicit",
+      "evidence_span": "UX is T4's Unified Industry Classification System, a method of classifying industries that is 10 times more granular than NAICS, the industry standard"
+    },
+    {
+      "id": "P3",
+      "text": "Tom human-in-the-loop indexing aggregates a complete market-research set per industry and indexes quantitative data inside reports",
+      "status": "explicit",
+      "evidence_span": "Tom is T4's proprietary, human-in-the-loop indexing process. Tom ensures that we aggregate a complete set of market research within each industry and index the quantitative data within each report"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS search tells analysts which paid or free reports contain needed data (with sources/page numbers), sold per-seat to consulting/investing/strategy analysts",
+      "status": "explicit",
+      "evidence_span": "A web platform lets analysts quickly find comprehensive industry data. Tell T4 what you're looking for, T4 tells you what reports contain the data you need"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Painful fragmented market research search",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "UX taxonomy and Tom indexing",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Analyst SaaS report discovery",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Find the exact industry data needed in seconds instead of hours of portal searching",
+      "status": "explicit",
+      "evidence_span": "What normally takes hours, Sarah just did in 30 seconds"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies are paying analysts billions of dollars every year to look for market research"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is possible because UX and Tom enabled T4 to comprehensively index granular data that AI does not have the capability to process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you want to save hours of research every single day"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "UX and Tom kept as separately named competencies that could fail independently (enumeration rule 2 / tie-break), grouped in one indexing domain because they must be learned together for the search product. Pricing amount folded into SaaS premise."
+}

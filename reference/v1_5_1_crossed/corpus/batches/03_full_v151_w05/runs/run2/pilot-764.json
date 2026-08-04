@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-764",
+    "coder_session_id": "session_03",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most people cannot freely edit the web without hiring developers or living inside rigid templates",
+      "status": "explicit",
+      "evidence_span": "if you wanted to make even the slightest change to a page on the Web, like moving something one inch to the right, you better be willing to call a developer or agency"
+    },
+    {
+      "id": "P2",
+      "text": "PageCloud gives browser-based freeform editing—drag media and widgets, paste from design tools, go live instantly—including mobile reflow and copy-from-page rebuilds",
+      "status": "explicit",
+      "evidence_span": "everyone with a web browser gets complete creative freedom, not just to surf the web or to fill in the blanks, but to really create it"
+    },
+    {
+      "id": "P3",
+      "text": "Patent-pending deep technology differentiates the editable rebuild and creative-control experience",
+      "status": "explicit",
+      "evidence_span": "There's some deep technology at work here. One of PageCloud's 18 patent-pending inventions"
+    },
+    {
+      "id": "P4",
+      "text": "Sites can be preordered at a promotional annual price for early public release",
+      "status": "explicit",
+      "evidence_span": "you're going to get an amazing price of just $75 for the year for your site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken web publishing experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "freeform browser publishing platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "preorder pricing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can create and update live web pages with unrestricted creative control",
+      "status": "explicit",
+      "evidence_span": "This is content creation and manipulation without restriction"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's a part of the internet that's fundamentally broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's no other platform on the planet that gives you this creative freedom"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "preorder today and become one of the first people to truly experience the web the way it was always meant to be"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Developer/agency wait and paint-by-numbers templates folded as one publishing-freedom pain (v1.5.1 §4.1.6). Restaurant edits, YouTube/Eventbrite widgets, Photoshop paste, mobile mode, and copy-page demo folded as feature cascade of one freeform platform (§4.1.7); patents kept as IP detail on that mechanism (§4.1.1). Developer source/widget-store mention treated as roadmap detail inside the platform. Anti-template: problem, product, and pricing separately revisable."
+}

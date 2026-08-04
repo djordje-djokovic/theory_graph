@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Freight brokers give SMBs slow, opaque, expensive international shipping and disappear when problems arise",
+      "status": "explicit",
+      "evidence_span": "things go wrong and they disappear. And then so do your service providers"
+    },
+    {
+      "id": "P2",
+      "text": "Shipster lets shippers choose rated providers across trucking, warehouse, customs, and ocean with unified documents and team communication",
+      "status": "explicit",
+      "evidence_span": "You can select service providers based off of rating. You have insight into their reliability"
+    },
+    {
+      "id": "P3",
+      "text": "End-to-end quoting that once took days completes in minutes and cuts cost 30–60%",
+      "status": "explicit",
+      "evidence_span": "And we save you 30% to 60% in the process"
+    },
+    {
+      "id": "P4",
+      "text": "Beachhead is Ningbo to Los Angeles, selling to SMB importers known from public customs data via a call center",
+      "status": "explicit",
+      "evidence_span": "we know all these companies through public customs data, and we plan to open up a call center to target all of these"
+    },
+    {
+      "id": "P5",
+      "text": "Service providers manage pricing and shipments through a sister onboarding site",
+      "status": "explicit",
+      "evidence_span": "sister site that allows service providers to be onboarded, update their pricing, and manage their shipments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broker pain and transparent marketplace",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Asia–US SMB beachhead",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Provider sister site",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Transparent, fast, lower-cost container shipping for small businesses",
+      "status": "explicit",
+      "evidence_span": "Today, what takes days, Shipster does in minutes"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Shipster provides you transparent access to those service providers"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "initial customers. Those are the tens of thousands of small and medium-sized businesses"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "service providers to be onboarded, update their pricing, and manage their shipments"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Customs reliability analytics folded into provider-selection premise. Global scaling vision not coded as premise. Problem and product kept in one domain as jointly revised theory of broker replacement.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-873",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

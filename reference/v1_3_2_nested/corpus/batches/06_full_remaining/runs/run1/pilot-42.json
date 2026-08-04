@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-42",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:21:45+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Humanity needs ~60% more agricultural output while climate-related crop failures rise, creating urgent unmet need for new resilient crop varieties",
+      "status": "explicit",
+      "evidence_span": "We have an urgent and unmet need to deliver new and resilient crop varieties to farmers"
+    },
+    {
+      "id": "P2",
+      "text": "GWAS discovery is mostly not useful (~14%, sometimes 1%), and GMO or traditional breeding then takes years and up to $100M",
+      "status": "explicit",
+      "evidence_span": "only about 14% of the things that they return are actually useful, and sometimes it's as low as 1%"
+    },
+    {
+      "id": "P3",
+      "text": "Interpretable machine-learning discovery identifies causal gene targets at about 90% precision",
+      "status": "explicit",
+      "evidence_span": "allows us to identify causal gene targets with 90% precision"
+    },
+    {
+      "id": "P4",
+      "text": "An AI recommendation system suggests plant crosses that produce desired traits using about a hundredth of the usual data and forecasts outcomes before breeding",
+      "status": "explicit",
+      "evidence_span": "an AI-enabled recommendation system that suggests which plant crosses might produce the traits that we're looking for. And it does that with only a hundredth of the data that's normally required"
+    },
+    {
+      "id": "P5",
+      "text": "Cost and time efficiency make any crop economically feasible, so Avalo enters partners' breeding pipelines and builds its own new seed products",
+      "status": "explicit",
+      "evidence_span": "we can actually work on any crop in the world. So even crops that were too complicated or too costly to work on are now economically feasible for us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Urgent resilient-crop need and discovery bottleneck",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Interpretable ML discovery and cross recommendations",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Any-crop economics and partner seed pipelines",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accelerate creation of new productive, climate-resilient crop varieties for farmers",
+      "status": "explicit",
+      "evidence_span": "accelerate the creation of new and productive crop varieties"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Enable a more sustainable and resilient agricultural future",
+      "evidence_span": "a more sustainable and resilient world is still possible"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "urgent and unmet need to deliver new and resilient crop varieties"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increase the process of discovery and development by up to 77%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get our technology into their existing breeding pipelines so that they can reap the time and cost advantages"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team bios and Duke collaboration excluded. Broccoli experiment treated as validation of the recommendation mechanism, not a separate premise. Greener-tomorrow closing treated as vision/secondary. Singleton D3 retained: partner/own-seed go-to-market is revisable without changing the ML stack. Partition is need/tech/GTM triad; justified because pipeline partnership economics can fail while discovery precision still holds."
+}

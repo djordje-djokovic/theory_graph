@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Workers cannot remember meeting content, people, and follow-ups because artifacts live in different places",
+      "status": "explicit",
+      "evidence_span": "his calendar tells him when the meeting was and who was in it, whiteboard photos are stored in a photo library, a meeting summary is written in a notebook, and his inbox is filled with follow-up tasks"
+    },
+    {
+      "id": "P2",
+      "text": "Retrace collects meeting outlines, collaboratively documents notes/photos/tasks, and supports later review",
+      "status": "explicit",
+      "evidence_span": "designed to make it extremely easy for you to collect all the information about your meetings"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market mirrors Dropbox/Yammer: individual value first, then company premium integrations",
+      "status": "explicit",
+      "evidence_span": "Our go-to-market strategy is similar to that of Dropbox and Yammer"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented meeting memory",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Retrace capture and review app",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Bottom-up then premium GTM",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make meetings and the people in them more productive",
+      "status": "explicit",
+      "evidence_span": "making meetings and the people in them more productive"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Best way to remember and organize the story of your meetings",
+      "evidence_span": "best way to remember and organize the story of your meetings"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Meetings are a waste of time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everyone is better prepared and on the same page"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delivering tremendous amounts of value and control to the end user"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Trace/retrace/succeed phases folded into one product premise. Anti-template note: three domains track problem, product, and GTM modules explicitly sequenced by the speakers.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-932",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:37:10+02:00"
+  }
+}

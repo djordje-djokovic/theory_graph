@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1077",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Status and project communications full of business information stay trapped in person-to-person email, so decisions are worse, work is duplicated, and companies lose money",
+      "status": "explicit",
+      "evidence_span": "these communications that are loaded with valuable business information are sent by email from one person to another, and the rest of the company can't access them"
+    },
+    {
+      "id": "P2",
+      "text": "Managers can set who reports, when, and what template in about 30 seconds, with automated prompting so managers need not chase writers",
+      "status": "explicit",
+      "evidence_span": "who you want status reports from, when you want them, and what information they should include"
+    },
+    {
+      "id": "P3",
+      "text": "Status reports are shared across the team and projects can be followed like a social feed, with a managed recipient list",
+      "status": "explicit",
+      "evidence_span": "They're shared among all the people on their team"
+    },
+    {
+      "id": "P4",
+      "text": "Searching across company status reports reveals people-project relationships and expertise that would otherwise stay in inboxes",
+      "status": "explicit",
+      "evidence_span": "we're mapping the relationships between people and projects in a company"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email-siloed status communications",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "scheduled shared status reporting",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "business graph search",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People across the organization understand the whole puzzle so they can align people and resources",
+      "status": "explicit",
+      "evidence_span": "making status reports more accessible, by making them more consistent, and more powerful to align people and resources across an organization"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "when you look at them across an entire company, you can start to map the relationships between people and projects"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "decisions are less informed, work is duplicated, and ultimately, companies lose money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "status reports are more consistent than they've ever been"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "each person understanding the entire puzzle and where their pieces fit in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript cuts off mid-sentence at the close. Pain consequences (decisions/duplication/money) folded into one problem-set premise. Consistency/timeliness/shared/auto-nag treated as facets of the scheduled shared-reporting mechanism where bundled; business-graph search kept separate as a distinct leverage path. Product name drift ThinkView/ThinkFuse left as transcript ASR."
+}

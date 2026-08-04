@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personal tablets cannot reach firewall-protected enterprise apps; MDM defeats BYOD purpose",
+      "status": "explicit",
+      "evidence_span": "Most of those devices today are used for personal entertainment. The bad news is that people working within traditional enterprises cannot get their work done today on those devices"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot delivers managed work apps and documents with the rest of the device personal",
+      "status": "explicit",
+      "evidence_span": "She launches WorkSpot, the one place for work with the rest of the device remaining personal"
+    },
+    {
+      "id": "P3",
+      "text": "Leverages existing security investments and top SSL VPN integrations; no new data-center boxes",
+      "status": "explicit",
+      "evidence_span": "No new boxes to install in the data center, and he's up and running in minutes"
+    },
+    {
+      "id": "P4",
+      "text": "Built-in viewers, encrypted virtual files, and selective wipe support offline secure review",
+      "status": "explicit",
+      "evidence_span": "We've built a complete virtual file system within WorkSpot so that Stacey can view any document offline"
+    },
+    {
+      "id": "P5",
+      "text": "Extensible platform can launch native apps from the work container",
+      "status": "explicit",
+      "evidence_span": "architected WorkSpot to be a platform that can be extended to support things like native apps"
+    },
+    {
+      "id": "P6",
+      "text": "Industry-first scale of BYOD activity data monetized instead of access/control fees",
+      "status": "explicit",
+      "evidence_span": "We believe that this scale of data collection is an industry first for BYOD"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Enterprise BYOD access gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Work container product",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Activity data business model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Seamless secure work on personal devices for employees and IT",
+      "status": "explicit",
+      "evidence_span": "personal, seamless, and immersive user experience"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simplify Bring Your Own Device"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "rest of the device remaining personal"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Free access/control detail folded into P6 monetization framing this run.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

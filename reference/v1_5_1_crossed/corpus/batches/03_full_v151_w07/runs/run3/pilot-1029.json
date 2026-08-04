@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "coder_session_id": "session_02",
+    "session_case_index": 22,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peers learn far more from each other than from videos or professors, yet almost all edtech is top-down",
+      "status": "explicit",
+      "evidence_span": "peers learn seven times more from each other than they do from any video content"
+    },
+    {
+      "id": "P2",
+      "text": "A smart campus platform connects classmates with an algorithm that recommends study buddies",
+      "status": "explicit",
+      "evidence_span": "the first algorithm in the world that recommends people with whom you should study"
+    },
+    {
+      "id": "P3",
+      "text": "Course pages, Q&A, note sharing, and live study sessions make academic collaboration easier in one place",
+      "status": "explicit",
+      "evidence_span": "all of your courses in one place"
+    },
+    {
+      "id": "P4",
+      "text": "A peer marketplace lets students list and buy books and study guides",
+      "status": "explicit",
+      "evidence_span": "list it for sale"
+    },
+    {
+      "id": "P5",
+      "text": "University pilots and a large honor-society partnership seed distribution across hundreds of schools",
+      "status": "explicit",
+      "evidence_span": "We've successfully piloted programs at AU, Georgetown, Cornell University, Harvard, and Yale"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via the peer marketplace and partnerships with online learning platforms",
+      "status": "explicit",
+      "evidence_span": "We built a peer-to-peer marketplace. We can partner with online universities"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "top-down edtech gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "peer study platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "marketplace and partnerships",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Students connect with classmates and make academic life easier through peer learning",
+      "status": "explicit",
+      "evidence_span": "connect with your classmates and make your academic life easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "capturing the power of peer-to-peer learning"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect with your classmates, find your peers, and study in real time"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peer-to-peer marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript ends abruptly (truncated=true). Facebook/Blackboard contrast folded into peer-learning problem. Buddy algorithm, courses, notes, sessions, gamified ratings folded into platform cascade with marketplace split as distinct commerce module (§4.1.7). Pilots/honor society as GTM conditions. edX/Khan/Coursera as partnership monetization path. Anti-template avoided by grouping marketplace with partnership commerce rather than need/product/money triad alone."
+}

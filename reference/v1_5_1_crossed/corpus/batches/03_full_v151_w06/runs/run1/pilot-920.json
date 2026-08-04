@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-920",
+    "coder_session_id": "session_03",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Capture geometric and photorealistic space data with a specialized camera rig, including modified hardware for textures and lighting",
+      "status": "explicit",
+      "evidence_span": "We start by capturing geometric and photorealistic data using this camera"
+    },
+    {
+      "id": "P2",
+      "text": "Construct streamed web and iPad 3D scenes that can show spaces as-is, emptied, or furnished for commercial real estate clients",
+      "status": "explicit",
+      "evidence_span": "every single space that we construct is both streamed through the web and then also onto the iPad"
+    },
+    {
+      "id": "P3",
+      "text": "End users can edit the 3D model in real time—lighting, furniture, materials, and layouts",
+      "status": "explicit",
+      "evidence_span": "the capability for an end user to edit the 3D model directly"
+    },
+    {
+      "id": "P4",
+      "text": "Targets commercial real estate marketing spend and adjacent interior design, architecture, and construction communication",
+      "status": "explicit",
+      "evidence_span": "$30 billion a year is spent on commercial real estate marketing services"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "3D capture and photoreal reconstruction",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "real-time end-user virtual design",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "commercial real estate and adjacent markets",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Communicate about real estate and physical spaces in practical 3D rather than 2D floor plans",
+      "status": "explicit",
+      "evidence_span": "changing the way that we communicate about real estate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "would you ever want to go back and look at a 2D floor plan"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is virtual design at its best"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "commercial real estate industry rushing to adopt this"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript starts mid-demo and ends mid-sentence (truncated=true). Digitally removing construction / panoramic views folded into reconstruction cascade (§4.1.7). Team/engineering bio excluded. Market figure coded as target-market premise for CRE marketing services. Three domains."
+}

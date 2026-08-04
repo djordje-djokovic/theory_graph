@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-778",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pulmonary patients struggle with burdensome manual medication routines, symptom logging, and outdated clinic spirometry, driving non-adherence and poor outcomes",
+      "status": "explicit",
+      "evidence_span": "it's no wonder that Jillian has a hard time keeping up with the manual logging and routine of remembering to take her medication twice daily"
+    },
+    {
+      "id": "P2",
+      "text": "Wireless inhaler sensors objectively track medication utilization, adherence, and technique in real time",
+      "status": "explicit",
+      "evidence_span": "wireless medication inhaler sensors to track her medication utilization and adherence in real time"
+    },
+    {
+      "id": "P3",
+      "text": "A clinical-grade ultra-portable mobile spirometer measures lung function from home",
+      "status": "explicit",
+      "evidence_span": "A clinical grade and ultra-portable mobile spirometer which measures her lung function from home"
+    },
+    {
+      "id": "P4",
+      "text": "Patient-facing mobile apps plus a HIPAA-compliant clinician portal connect devices and enable tailored treatment outside clinic",
+      "status": "explicit",
+      "evidence_span": "Both of these devices sync wirelessly to our highly engaging mobile applications. And on the back end, we enable access via our HIPAA compliant portal for stakeholders and practitioners"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market centers on health systems with high-volume Pharma and Payer channels (B2B-primary)",
+      "status": "explicit",
+      "evidence_span": "our system is set up for high-volume sales channels such as Pharma and Payer. But while our system is primarily focused on B2B"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "burdensome respiratory self-management",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart inhaler spirometer and apps",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "health system Pharma Payer GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improved medication adherence and better pulmonary patient outcomes via smarter connected tools",
+      "status": "explicit",
+      "evidence_span": "making respiratory devices data smart to enable improved adherence, leading to better patient outcomes for pulmonary patients"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "drugs don't work in patients who don't take them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowering respiratory patients to take control of their treatment and also have transparency with regards to how that treatment is improving their health"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our system is set up for high-volume sales channels such as Pharma and Payer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Jillian pain enumeration (controller/rescue/spacer/paper plan/bulky spirometer) folded as one problem set (§4.1.6). Inhaler sensors, home spirometer, and app/portal coded as distinct capability modules (§4.1.2). FDA clearance and Mount Sinai adherence/ER metrics excluded as traction/regulatory milestone numbers; team bios excluded. Singleton D3 retained as independently revisable B2B channel condition."
+}

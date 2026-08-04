@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1050",
+    "coder_session_id": "session_06",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Healthcare works best and costs least when patient and provider partner continuously outside the brief office visit that current health IT is built around",
+      "status": "explicit",
+      "evidence_span": "healthcare works best and costs least when there's a partnership between the patient and the provider"
+    },
+    {
+      "id": "P2",
+      "text": "Avado patient relationship management delivers care-plan trackers, check-in connected health records, a patient health dashboard, and provider-fed messaging",
+      "status": "explicit",
+      "evidence_span": "there's a demand for a new category of software we call patient relationship management"
+    },
+    {
+      "id": "P3",
+      "text": "Early adopters span wellness-oriented primary care, continuous/chronic and family care, and programs training the next generation of doctors",
+      "status": "explicit",
+      "evidence_span": "There's a few key segments. There's wellness-oriented primary care"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization uses freemium features that drive use and virality plus Avado and third-party services",
+      "status": "explicit",
+      "evidence_span": "the straightforward premium business model, the features that are free are ones that actually drive use and virality"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "patient-provider partnership outside the visit",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "patient relationship management platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "adopter segments and freemium services model",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A healthcare partnership that helps people live longer, higher-quality lives while paying less",
+      "status": "explicit",
+      "evidence_span": "you can live a longer life, higher quality, and actually pay less in the process"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that other 99% that is so critical to maintaining or returning you or a family member to health"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "salesforce.com for healthcare, with the key exception being the customer, aka the patient, is actually using the software as well"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the healthcare partnership that we empower"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cost-explosion framing and chronic-spend stats folded into partnership/99%-outside-visit problem (§4.1.6/8). Pregnancy tracker, services framework, check-in record, dashboard, and provider feed folded as one PRM cascade (§4.1.7). Anti-template: problem insight, PRM product, and segment+monetization separately revisable."
+}

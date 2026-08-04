@@ -1,0 +1,134 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Prenatal checkups are inconvenient, expensive, and limited by outdated technology, leaving expecting moms with ongoing uncertainty",
+      "status": "explicit",
+      "evidence_span": "these trips are inconvenient, expensive, and ultimately limited by 50-year-old antiquated technology"
+    },
+    {
+      "id": "P2",
+      "text": "A medical-grade wearable sensor under the belly noninvasively measures biopotentials from mom, uterus, and baby",
+      "status": "explicit",
+      "evidence_span": "Bloom Life works by measuring biopotentials in motion"
+    },
+    {
+      "id": "P3",
+      "text": "The app delivers real-time contraction activity, patterns, and trends so moms can interpret sensations and communicate with doctors",
+      "status": "explicit",
+      "evidence_span": "get a validated second opinion on what she's feeling"
+    },
+    {
+      "id": "P4",
+      "text": "Same sensor tracks pregnancy-specific parameters like fetal movement and heart rate via over-the-air software updates",
+      "status": "explicit",
+      "evidence_span": "All of these features will be made available via over-the-air software updates"
+    },
+    {
+      "id": "P5",
+      "text": "Commercial path starts DTC monthly subscription for sensor and patches, then referrals and channels, then FDA clearance and reimbursement toward standard of care",
+      "status": "explicit",
+      "evidence_span": "We will first offer Bloom Life direct to consumers via monthly subscription"
+    },
+    {
+      "id": "P6",
+      "text": "Crowdsourced maternal-fetal data will power cloud ML so doctors can predict and manage complications earlier",
+      "status": "explicit",
+      "evidence_span": "crowdsource the largest and most comprehensive data set on maternal and fetal health ever collected"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Prenatal uncertainty gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Wearable sensor and app",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Subscription to reimbursement GTM",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Crowdsourced complication prediction",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reassure expecting moms and give doctors better information to improve birth outcomes",
+      "status": "explicit",
+      "evidence_span": "reassure expecting moms and provide doctors with better information to improve birth outcomes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help prevent lost pregnancies and produce more healthy babies",
+      "evidence_span": "Saving millions of families from the heartache of a lost child, and making more healthy babies"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving moms with many more questions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "need-to-know information about her body and her baby at her fingertips"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "become standard of care, fully reimbursed"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help doctors better predict and manage pregnancy complications before it's too late"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "App UI details folded into contraction/information premise. Clinical study and beta shipment counts excluded as traction. Singleton D4 retained: speaker frames crowdsourced ML as a separately exciting module with its own path to doctor value. 'Future of prenatal care' framing not coded as a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-625",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

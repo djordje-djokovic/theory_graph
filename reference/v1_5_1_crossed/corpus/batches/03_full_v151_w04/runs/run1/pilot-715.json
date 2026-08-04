@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-715",
+    "coder_session_id": "session_01",
+    "session_case_index": 6,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:45:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Presentation work is fragmented across PowerPoint, email, Slack, Drive/Dropbox, and separate sharing/presenting tools, causing version and formatting failures",
+      "status": "explicit",
+      "evidence_span": "people are creating their presentation in PowerPoint, sharing it via email, having a conversation about it on Slack"
+    },
+    {
+      "id": "P2",
+      "text": "Slides is an end-to-end cloud platform for creating, presenting, and sharing with a stacked-slide format and collaborative customizable editor",
+      "status": "explicit",
+      "evidence_span": "Slides is an end-to-end platform for creating, presenting, and sharing presentations"
+    },
+    {
+      "id": "P3",
+      "text": "Offerings include free signup plus individual/team plans and Enterprise deployment behind the corporate firewall",
+      "status": "explicit",
+      "evidence_span": "we just started rolling out Slides for Enterprise, which takes our product and puts it behind the corporate firewall"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented presentation workflow",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Slides create-present-share platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Individual team and Enterprise plans",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy collaborative work on better presentations",
+      "status": "explicit",
+      "evidence_span": "We make it easy to work together on presentations"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is absolutely crazy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "changed the way teams work together on presentations"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We offer plans for individuals and teams"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Live embeds, stacked details, comments, team templates, media library, live/offline/link present, and mobile rendering folded as cascade of one end-to-end platform (§4.1.7). User/visitor traction excluded. Anti-template: workflow pain, product platform, and plan tiers are separately revisable."
+}

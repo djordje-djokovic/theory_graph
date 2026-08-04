@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-683",
+    "coder_session_id": "session_01",
+    "session_case_index": 17,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:55:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Google ignores large shares of e-commerce, travel, and classified pages, so ignored pages cannot drive traffic or revenue",
+      "status": "explicit",
+      "evidence_span": "Google can't see and index every valuable page existing on the web"
+    },
+    {
+      "id": "P2",
+      "text": "Botify crawls sites and compares crawl data to server log traces to identify pages Google ignored and why",
+      "status": "explicit",
+      "evidence_span": "comparing what we have seen with the Botify crawler with what Google discovered on the website"
+    },
+    {
+      "id": "P3",
+      "text": "Marketers use Botify reports and API to decide SEO changes and monitor results that improve how Google understands the site",
+      "status": "explicit",
+      "evidence_span": "identify content ignored, to understand why pages are ignored, to decide changes, and to monitor the results"
+    },
+    {
+      "id": "P4",
+      "text": "Botify is sold as a monthly SaaS subscription available to all businesses",
+      "status": "explicit",
+      "evidence_span": "available to all businesses through a monthly SaaS subscription model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Google ignored-page traffic loss",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Crawl-plus-log SEO analytics",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Monthly SaaS subscription",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "More Google-visible pages driving website traffic and revenue",
+      "status": "explicit",
+      "evidence_span": "drive more revenue on your website"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "when a page is ignored by Google, it can't drive traffic, and therefore, any revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they increase traffic by 35% in less than six months"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get noticed by Google"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Depth/crawl charts and report filters folded as cascade of crawl+log analytics (§4.1.7). 35% traffic lift treated as performance claim of the optimization loop, not a separate premise. Named-customer traction excluded. Anti-template: ignored-page problem, analytics product, and SaaS GTM are separately revisable."
+}

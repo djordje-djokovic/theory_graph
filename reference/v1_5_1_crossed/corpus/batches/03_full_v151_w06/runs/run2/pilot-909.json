@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-909",
+    "coder_session_id": "session_05",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing voice-control apps fail because they do not work with the most popular apps people actually use and they limit the technology to only a few apps",
+      "status": "explicit",
+      "evidence_span": "All of them have two big problems. And the first one is, they don't work with the most popular apps out there. And the second is, they limit their technology to only a few apps"
+    },
+    {
+      "id": "P2",
+      "text": "VoiceSphere lets users talk to popular apps from a personal app feed without leaving VoiceSphere, starting with many of the most popular apps",
+      "status": "explicit",
+      "evidence_span": "VoiceSphere, the app that lets you talk to everything on your phone"
+    },
+    {
+      "id": "P3",
+      "text": "An API hub/IDE lets developers integrate new apps into VoiceSphere quickly with only a few lines of code",
+      "status": "explicit",
+      "evidence_span": "the API hub is really advanced technology that allows us to integrate more and more apps really fast"
+    },
+    {
+      "id": "P4",
+      "text": "Businesses with APIs can integrate into an enterprise store so professionals buy voice access to complex software, and VoiceSphere takes a share of each sale",
+      "status": "explicit",
+      "evidence_span": "We make our API hub open to every business product with an API. They can integrate their application and sell the VoiceSphere access to their customers inside our enterprise store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken consumer voice control",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "talk-to-any-app consumer product",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "fast API integration hub",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "enterprise store monetization",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users and professionals reach favorite apps and complex business software efficiently by voice",
+      "status": "explicit",
+      "evidence_span": "a voice control app that lets you talk to all your favorite apps and that lets complex software benefit from our technology"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Today, we're presenting you a product that solves both problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I don't even have to leave the app"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "From now on, everybody can access TechCrunch just with their voice"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Professionals can buy the integrations to make their work more easy and efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two numbered voice-app failures folded as one problem set (§4.1.6). Instagram/SoundCloud/Spotify/YouTube demos treated as applications of the talk-to-apps mechanism, not separate premises. API hub split from consumer app as independently revisable integration module; enterprise store+20% take rate as commercial path. Demo technical difficulties ignored as non-content. Four-domain partition; not a need/product/money triad."
+}

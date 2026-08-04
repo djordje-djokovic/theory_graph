@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1148",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most site traffic is one-shot/low-frequency while a tiny true-fan segment drives disproportionate page views and engagement",
+      "status": "explicit",
+      "evidence_span": "more than 84% of a site's traffic visits just once a month or less frequently"
+    },
+    {
+      "id": "P2",
+      "text": "Publishers wrongly spend on SEO/SMO for one-shot traffic instead of engaging true fans",
+      "status": "explicit",
+      "evidence_span": "companies are spending millions of dollars every month engaged in SEO and social media optimization so that they can get more of this crappy one-shot traffic"
+    },
+    {
+      "id": "P3",
+      "text": "Product credits fan activity with good-natured gameplay, leaderboards, and presence of who is on the page",
+      "status": "explicit",
+      "evidence_span": "We give them credit, give players credit for their activities, and give them a bit of good natured gameplay"
+    },
+    {
+      "id": "P4",
+      "text": "Surfaces friends and others who love the same content, including via Twitter and planned social integrations",
+      "status": "explicit",
+      "evidence_span": "we always want you to know the people who love the same content that you do"
+    },
+    {
+      "id": "P5",
+      "text": "Users control check-in privacy; browsing history is never fully shared",
+      "status": "explicit",
+      "evidence_span": "You have complete control over where you check in, if you want to check in automatically on a site"
+    },
+    {
+      "id": "P6",
+      "text": "Enables sites to identify and connect with most valuable users, including silent non-commenters",
+      "status": "explicit",
+      "evidence_span": "We enable sites to better identify and connect with their most valuable users, even those that would otherwise be invisible"
+    },
+    {
+      "id": "P7",
+      "text": "Business model: loyalty rewards program for the web brokering tangible rewards via premier site partners",
+      "status": "explicit",
+      "evidence_span": "We are going to become the loyalty rewards program for the web"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "true fans vs one-shot traffic problem",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "fan gameplay and content social graph",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "publisher identification and loyalty rewards",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Engage sites' true fans so loyalty and engagement replace chase for one-shot traffic",
+      "status": "explicit",
+      "evidence_span": "They would be far better served by engaging their true fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true fans, small percentage of the overall traffic, but they make up a huge percentage of page views"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "give players credit for their activities, and give them a bit of good natured gameplay"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "loyalty rewards program for the web"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-demo (truncated=true)—opening product framing may be missing. Leaderboard/blog-log/Twitter surface folded into social fan product cascade. Publisher stats APIs roadmap folded lightly into publisher module. Private alpha installs excluded as traction. Anti-template: traffic problem, fan product, publisher loyalty biz separately revisable."
+}

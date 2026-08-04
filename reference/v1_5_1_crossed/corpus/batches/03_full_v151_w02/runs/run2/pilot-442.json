@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "coder_session_id": "session_04",
+    "session_case_index": 13,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Designing how to synthesize drug-like molecules is a slow, error-prone bottleneck requiring manual literature search",
+      "status": "explicit",
+      "evidence_span": "Designing how to synthesize a given molecule is highly inefficient and prone to errors"
+    },
+    {
+      "id": "P2",
+      "text": "AI designs novel chemical synthesis routes from commercially available molecules within seconds",
+      "status": "explicit",
+      "evidence_span": "Molecule One leverages artificial intelligence to design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "id": "P3",
+      "text": "Routes are ranked by user-preferred criteria and supported with lab-tested evidence",
+      "status": "explicit",
+      "evidence_span": "found ways are ranked according to user-preferred criteria, presented to the user, and supported with lab-tested evidence"
+    },
+    {
+      "id": "P4",
+      "text": "Deep learning proposes viable novel steps and assembles them into multi-step pathways to the target",
+      "status": "explicit",
+      "evidence_span": "It utilizes information about previous experiments to find out what kinds of transformations between different molecules are viable"
+    },
+    {
+      "id": "P5",
+      "text": "Initial focus is drug discovery SaaS (seats/data points) with enterprise on-prem options; later fine chemicals and agrochemistry",
+      "status": "explicit",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem"
+    },
+    {
+      "id": "P6",
+      "text": "Industry partnerships and trials with molecule marketplaces, AWS, and pharma companies drive adoption",
+      "status": "explicit",
+      "evidence_span": "MoleculeOne has several partnerships with industry leaders"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Chemical synthesis bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI synthesis design and evidence ranking",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Drug-discovery SaaS and partnerships",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make medicines faster by optimizing chemical synthesis pipelines",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster. Cure patients faster"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "UI cascade of input→search→atom trace→lab reference folded into AI design + ranking premises. Patent-pending treated as IP detail on the AI mechanism. Competitor UI critique not coded as premise."
+}

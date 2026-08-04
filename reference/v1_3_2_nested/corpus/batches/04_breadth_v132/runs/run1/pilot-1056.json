@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Interactive touchscreens are spreading, but each manufacturer's proprietary software locks content into the platform and the classroom",
+      "status": "explicit",
+      "evidence_span": "every single one of them has a different piece of software for building interactive content. That means your content is locked not only into your platform, but it's locked into the classroom."
+    },
+    {
+      "id": "P2",
+      "text": "Building the software browser-based makes content work on any device with a browser",
+      "status": "explicit",
+      "evidence_span": "this is now completely browser-based. It's inside the Safari browser. This means two things. One, it means it works on any device that has a browser."
+    },
+    {
+      "id": "P3",
+      "text": "Multiple people can interact with the same content simultaneously, with no installed software",
+      "status": "explicit",
+      "evidence_span": "it means that multiple people can interact with this content simultaneously"
+    },
+    {
+      "id": "P4",
+      "text": "Browser math tools with auto-formatting equations and live graphing end the graphing-calculator monopoly",
+      "status": "explicit",
+      "evidence_span": "the graph updating as you change the equation, a totally new way of interacting with math"
+    },
+    {
+      "id": "P5",
+      "text": "A publish feature turns lessons into accessible content a million people can use at once, online or offline",
+      "status": "explicit",
+      "evidence_span": "it's going to now be a fully published, accessible lesson"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Content lock-in problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Browser-native interactive learning platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Lesson publishing and sharing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interactive educational content freed from platform lock-in, usable and shareable from anywhere",
+      "status": "explicit",
+      "evidence_span": "You can't access it from home. Teachers can't access it from home. We have a solution."
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "This means two things. One, it means it works on any device that has a browser. The other, it means that multiple people can interact with this content simultaneously."
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That means your content is locked not only into your platform, but it's locked into the classroom."
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no installed software, all browser-based"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "now I want to share this with the world"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "The $800,000 financing and alpha-registration announcement excluded per 4.2. The McGraw Hill demo lesson is treated as validation evidence for the authoring platform, not a separate premise. 'Changing the future of education' treated as vision framing, not coded (v1.3.2 clarification 4). Singleton D1 (the lock-in need) and singleton D3 (the publish/share mechanism) each name independently revisable modules; partition resembles need/product/channel, justified because the publishing pipeline is a separately testable distribution bet from the browser runtime.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1056",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T13:24:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

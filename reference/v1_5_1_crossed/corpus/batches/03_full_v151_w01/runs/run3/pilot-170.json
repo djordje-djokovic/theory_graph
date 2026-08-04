@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "coder_session_id": "session_01",
+    "session_case_index": 13,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:15:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Construction is plagued by paper-based disjointed processes and human measurement errors that waste materials and over $100B annually",
+      "status": "explicit",
+      "evidence_span": "A variety of these disjointed processes combined with oftentimes simple human errors result in almost 20% of materials on a given job site being completely wasted and in the dumpster"
+    },
+    {
+      "id": "P2",
+      "text": "Recon builds a connected hardware-and-software ecosystem that streamlines measurement operations, sharing, annotation, and tasks for every worker on residential to commercial sites",
+      "status": "explicit",
+      "evidence_span": "Recon Tools has set out to create a connected ecosystem of hardware and software products to significantly reduce these errors and streamline operations on the job site"
+    },
+    {
+      "id": "P3",
+      "text": "Rock Jobsite mobile app captures measurements into calculators and utilities and replaces writing measurements and office spreadsheet entry",
+      "status": "explicit",
+      "evidence_span": "The Rock Jobsite app is a simple and easy to use platform that works on any mobile device, tablet, and allows everything from measurement capture, automatic putting into calculators, utilities, and other common actions"
+    },
+    {
+      "id": "P4",
+      "text": "T1 Tomahawk digital tape captures measurements on a backlit and e-paper log and auto-sends them to the app",
+      "status": "explicit",
+      "evidence_span": "the T1 Tomahawk really represents the core of our hardware ecosystem and allows measurements to be captured on a large backlit display"
+    },
+    {
+      "id": "P5",
+      "text": "M1 caliper clamps onto existing saws to display the cut measurement and remove interpretation guessing",
+      "status": "explicit",
+      "evidence_span": "the M1 caliper is an augmented tool that clamps onto existing saws that contractors already own, and very simple, just outputs the display and measurement on it"
+    },
+    {
+      "id": "P6",
+      "text": "QR code labels replace Sharpie notes with printable worker info and app-linked traceability",
+      "status": "explicit",
+      "evidence_span": "I can print out a QR code label, which has both information printed on the label for a worker, as well as a QR code which links to the specific location in the app for traceability purposes"
+    },
+    {
+      "id": "P7",
+      "text": "GTM aims to make digital measuring tools as ubiquitous as drills and make Rock the daily app for individual jobsite workers, not only PMs",
+      "status": "explicit",
+      "evidence_span": "make digital measuring tools as synonymous to a job site as a drill or a hammer"
+    },
+    {
+      "id": "P8",
+      "text": "Differentiation is end-to-end day-to-day jobsite granularity versus incremental tool OEMs and hyper-specific enterprise point tools",
+      "status": "explicit",
+      "evidence_span": "Recon Tools is the only system that has the granularity needed to execute day-to-day operations on the job site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Jobsite measurement error and waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Connected measure-cut hardware and Rock app",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Ubiquitous contractor toolkit positioning",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Measure once and cut once by eliminating avoidable jobsite measurement errors and paper steps",
+      "status": "explicit",
+      "evidence_span": "With Recon Tools, you can measure runs and cut ones"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "were automatically sent over there to it. So it really streamlines the process"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "over $100 billion wasted in construction each year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating many of the human touch points in the process of executing daily occurrence tasks"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "having that in every person's toolkit is certainly the first step"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "T1, M1, QR label, and Rock app split as distinct hardware/software modules in the connected ecosystem (capability split). Founder biography excluded. Singleton D1 retained as problem module. Anti-template: problem, product ecosystem, and GTM positioning separately revisable."
+}

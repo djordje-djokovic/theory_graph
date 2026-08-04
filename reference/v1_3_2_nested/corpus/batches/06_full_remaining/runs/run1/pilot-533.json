@@ -1,0 +1,89 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ethereum and 0x enable name lookup by repurposing old technology that does not need blockchain to function",
+      "status": "explicit",
+      "evidence_span": "Ethereum and the 0x project enable name lookup by repurposing old technology that does not need blockchain to function"
+    },
+    {
+      "id": "P2",
+      "text": "IoV builds new technology from the ground up in a well-documented manner",
+      "status": "explicit",
+      "evidence_span": "IoV solves these issues by building new technology from the ground up in a well-documented manner"
+    },
+    {
+      "id": "P3",
+      "text": "IoV technology is free for non-commercial use by private developers to aid adoption",
+      "status": "explicit",
+      "evidence_span": "provides it for free for non-commercial use for private developers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Competitor name-lookup critique",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Ground-up IoV technology",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "Free non-commercial developer access",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Adoption of IoV technology among private developers is aided by free non-commercial access to purpose-built tools",
+      "status": "explicit",
+      "evidence_span": "This will aid adoption of our technology among that group"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "IoV solves these issues by building new technology from the ground up"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building new technology from the ground up in a well-documented manner"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This will aid adoption of our technology among that group"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.4
+  },
+  "notes": "Transcript begins mid-sentence; founder Lisp mainnet biography and market-cap figure excluded. Vision/ecosystem-center framing at cut opening not coded as premise (v1.3.2 clarification 4). All domains singletons: competitor critique, ground-up build, and free-access policy are separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-533",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

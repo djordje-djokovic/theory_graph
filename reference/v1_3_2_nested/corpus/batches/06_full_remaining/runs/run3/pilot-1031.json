@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional social streams are too noisy for busy people to find what they care about",
+      "status": "explicit",
+      "evidence_span": "Oftentimes, the stuff that we most care about gets lost in stuff like this"
+    },
+    {
+      "id": "P2",
+      "text": "Undrip community excludes status/check-ins/games and focuses on link gems with social context",
+      "status": "explicit",
+      "evidence_span": "Sort of like a path, but for links"
+    },
+    {
+      "id": "P3",
+      "text": "Ingests connected networks and ranks content using habits, relationships, and popularity without explicit interest setup",
+      "status": "explicit",
+      "evidence_span": "The beauty of UNDRIP is I didn't have to say, I'm interested in this, this, this, and this. I didn't have to say, these are my circles of friends who I care about most. It's all implicit"
+    },
+    {
+      "id": "P4",
+      "text": "Interactions return to originating networks; users drip-reshare and can follow tastemakers into their feed mix",
+      "status": "explicit",
+      "evidence_span": "I can interact, and all the interactions will go back to the originating social networks"
+    },
+    {
+      "id": "P5",
+      "text": "Ships as mobile apps on iPhone and iPad",
+      "status": "explicit",
+      "evidence_span": "We're on the iPhone. We're on the iPad. We're in the App Store"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lost gems in noisy social",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Implicit social ranking community",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Mobile app surfaces",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mobile community to discover and share web gems with relevance and serendipity",
+      "status": "explicit",
+      "evidence_span": "helps you discover and share the gems of the web"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gets lost"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimizing for relevance, but we're open and happy to see serendipity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it's all mobile"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.73
+  },
+  "notes": "Path analogy used as evidence of focused link-community positioning.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1031",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:40+02:00"
+  }
+}

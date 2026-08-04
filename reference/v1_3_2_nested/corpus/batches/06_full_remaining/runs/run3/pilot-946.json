@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Average men hate clothes shopping, distrust online fit, and still buy mostly offline",
+      "status": "explicit",
+      "evidence_span": "I know how much men hate shopping for clothes"
+    },
+    {
+      "id": "P2",
+      "text": "Branded is a marketplace pairing shopping-averse men with people who love to shop, enabled by MAIL style/size profiles",
+      "status": "explicit",
+      "evidence_span": "Branded is a marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "id": "P3",
+      "text": "Human shoppers discover inventory across the web and boutiques and refine picks via in-app feedback",
+      "status": "explicit",
+      "evidence_span": "his shopper can use this data to give him better recommendations in real time"
+    },
+    {
+      "id": "P4",
+      "text": "Return-like-a-man pickup returns charge only kept items plus a shopper tip after collection",
+      "status": "explicit",
+      "evidence_span": "As soon as his return's collected, he gets charged for the items that he kept, plus a tip that goes to his shopper"
+    },
+    {
+      "id": "P5",
+      "text": "Shoppers need style sense and time, not formal fashion credentials, drawing from underemployed creative workers",
+      "status": "explicit",
+      "evidence_span": "you don't have to be a fashion expert to be a shopper at Branded"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Men's shopping aversion",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Matched human shopping marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Fit returns and shopper pay",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "Shopper eligibility and supply",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Average men can shop for clothes online with human help and frictionless returns",
+      "status": "explicit",
+      "evidence_span": "We built Branded for the average Joe"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "93% of men still shop for clothes offline"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "let you try stuff on before you buy it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "return like a man"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make money by shopping for our men"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Companion-shopping observation folded into marketplace premise rather than separate. Waiting-list traction excluded. Truncated CTA.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-946",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-694",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Good cafe-quality coffee is hard at home; single-serve pods waste, cost a lot, and use stale grounds, while home makers lack third-wave quality innovation",
+      "status": "explicit",
+      "evidence_span": "it's kind of hard to make a good quality coffee at home"
+    },
+    {
+      "id": "P2",
+      "text": "Spin uses patented centrifugal brewing that controls barista-like brew elements without pods or filters, grinding fresh beans and spinning out dry residue",
+      "status": "explicit",
+      "evidence_span": "uses patented centrifugal force technology to brew your coffee"
+    },
+    {
+      "id": "P3",
+      "text": "A connected app is remote control plus marketplace for local roasters, with sensor-triggered auto-replenishment of a bean playlist/queue",
+      "status": "explicit",
+      "evidence_span": "The app is both a remote control for our machine and an online marketplace for local coffee roasters"
+    },
+    {
+      "id": "P4",
+      "text": "Business model takes margins on machines and a cut of marketplace bean orders",
+      "status": "explicit",
+      "evidence_span": "we're going to make margins on the machines and the beans"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "home coffee quality and pod waste",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "centrifugal brewer and bean marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "machine and marketplace margins",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Third-wave coffee quality at home with single-serve convenience and no coffee downtime",
+      "status": "explicit",
+      "evidence_span": "combines the quality of the third wave coffee roasters with the convenience of a single serve pod system"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That wave is not sustainable. It creates a lot of waste"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solve the biggest problem in coffee history, coffee downtime"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Internet of Things meets coffee marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Pod waste/staleness/home-innovation gap folded as one home-coffee problem (§4.1.6). RPM styles, steel filter, residue fertilizer as feature cascade of centrifugal brew; patents folded into mechanism (§4.1.1/7). Auto-replenish kept with marketplace as one connected supply module. Singleton D1/D3 retained. Anti-template: problem, product+marketplace, and monetization separately revisable."
+}

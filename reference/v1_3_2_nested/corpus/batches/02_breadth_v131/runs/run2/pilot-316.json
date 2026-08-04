@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-316",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:42:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nematodes are ubiquitous hard-to-eliminate pests that infect or eat crops",
+      "status": "explicit",
+      "evidence_span": "They are everywhere, and they infect everything, and if they don't infect it, they will eat it. They are very hard to get rid of"
+    },
+    {
+      "id": "P2",
+      "text": "Farmers need pest control while markets and rules push eco-friendly alternatives over conventional pesticides",
+      "status": "explicit",
+      "evidence_span": "This leads to farmers demanding eco-friendly alternatives"
+    },
+    {
+      "id": "P3",
+      "text": "Discovered pheromone behaviors, including dispersal, provide a way to control nematodes",
+      "status": "explicit",
+      "evidence_span": "when you add the pheromones, they disperse and they look for new food"
+    },
+    {
+      "id": "P4",
+      "text": "Ferrocote applied to seeds before planting protects vulnerable roots from parasitic nematodes",
+      "status": "explicit",
+      "evidence_span": "It effectively tells them to go find something else to eat"
+    },
+    {
+      "id": "P5",
+      "text": "Nemastim turns beneficial nematodes into stronger insect biocontrol organisms",
+      "status": "explicit",
+      "evidence_span": "we make them into better biocontrols. Nemastim makes beneficial nematodes up to 200% more effective"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Eco-friendly nematode control need",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pheromone seed treatment and biocontrol enhancers",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eco-friendly products that control nematodes so farmers grow more food",
+      "status": "explicit",
+      "evidence_span": "eco-friendly products control nematodes, so farmers can grow more food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We've taken this technology and used it to create our first two products"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "farmers lose roughly 12% of their crops"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help us bring eco-friendly pest control"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Independent coding of thin/truncated pitch. Indoor-ag future application not coded as a separate premise (aspirational market mention)."
+}

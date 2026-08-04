@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Seniors using walkers face fall injuries from unlocked brakes when sitting and from descending steep ramps",
+      "status": "explicit",
+      "evidence_span": "And so these steep ramps and forgetfulness is what causes walk-related fall injuries"
+    },
+    {
+      "id": "P2",
+      "text": "Pressure, motion, and speed sensors enable automatic and gradual braking that matches user intention",
+      "status": "explicit",
+      "evidence_span": "A variety of sensors from pressure sensors, so when a senior sits on the walker, automatically brakes kicks in"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is licensing the smart-walker technology into manufacturers' factory walkers",
+      "status": "explicit",
+      "evidence_span": "And our go-to-market strategy is to take this technology, license it to walker manufacturers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Senior walker fall hazards",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor-driven smart braking",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Manufacturer licensing",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Higher quality of life for seniors by preventing walker-related falls",
+      "status": "explicit",
+      "evidence_span": "safeguard seniors from falls, leading them to a higher quality of life"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Avoid high costs of diagnosing and treating fall injuries",
+      "evidence_span": "it can cost on average of $17,500 to diagnose and treat"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These features safeguard seniors from falls"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leading them to a higher quality of life"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license it to walker manufacturers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Three premises after merging dual fall causes. Singleton domains justified as separately learnable need, product, and channel modules. ASR 'breaks' left verbatim in spans. Population explosion framing not coded as premise (vision/need-now rhetoric).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-893",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

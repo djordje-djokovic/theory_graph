@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Day-to-day language barriers are poorly served by machine translation alone",
+      "status": "explicit",
+      "evidence_span": "there must be a better way than machine translation"
+    },
+    {
+      "id": "P2",
+      "text": "Babelverse crowdsources real-time human interpreters globally",
+      "status": "explicit",
+      "evidence_span": "it's crowdsourcing of real-time human interpreters all around the globe"
+    },
+    {
+      "id": "P3",
+      "text": "Product delivers live real-time video and conference interpretation",
+      "status": "explicit",
+      "evidence_span": "what we have right now is a product for live video, live real-time video, and conferences"
+    },
+    {
+      "id": "P4",
+      "text": "Interpreter profiles capture languages, dialects, accents, availability, and domain expertise",
+      "status": "explicit",
+      "evidence_span": "we collect the dialects and the accents too"
+    },
+    {
+      "id": "P5",
+      "text": "Hybrid model mixes professional interpreters with crowdsourced talent trained and rated up a ladder",
+      "status": "explicit",
+      "evidence_span": "this is a hybrid crowdsource kind of solution. So we have professionals"
+    },
+    {
+      "id": "P6",
+      "text": "Network aims to cover nearly every spoken language, not only major pairs",
+      "status": "explicit",
+      "evidence_span": "There are nearly 7,000 active spoken languages in the world, and we want to cover every single one of those"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Language barrier beyond MT",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Crowdsourced live interpretation network",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "People get real-time human interpretation matched to language, dialect, and expertise",
+      "status": "explicit",
+      "evidence_span": "you get somebody in your dialect, in your accent, in your language, which is really important"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-run vision of speaking any language anywhere without a de facto lingua franca",
+      "evidence_span": "you can travel anywhere in the world and be able to speak with anybody regardless of what language they speak"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there must be a better way than machine translation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "crowdsourcing of real-time human interpreters all around the globe"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Babel-fish vision in secondary_value only (§4.1(4)). Interpreter count and crisis story as traction/illustration, not premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-976",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

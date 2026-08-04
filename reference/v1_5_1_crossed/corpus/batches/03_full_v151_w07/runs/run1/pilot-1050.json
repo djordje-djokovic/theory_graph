@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1050",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Healthcare spending growth and new care/payment models create demand for patient relationship management software used by both providers and patients",
+      "status": "explicit",
+      "evidence_span": "there's a demand for a new category of software we call patient relationship management"
+    },
+    {
+      "id": "P2",
+      "text": "Healthcare works best and costs least when patient and provider partner continuously, especially for the 99% of life outside the office visit and for chronic care",
+      "status": "explicit",
+      "evidence_span": "healthcare works best and costs least when there's a partnership between the patient and the provider"
+    },
+    {
+      "id": "P3",
+      "text": "Avado's services framework delivers care-plan trackers, notifications, and provider-fed news to keep patients on plan",
+      "status": "explicit",
+      "evidence_span": "this pregnancy tracker is a set of notifications that remind her about upcoming appointments"
+    },
+    {
+      "id": "P4",
+      "text": "Patients use a connected health-record check-in and Mint-like health dashboard aggregating meds, conditions, allergies, and insurance",
+      "status": "explicit",
+      "evidence_span": "it's bringing in the latest information of your medications, your conditions, your allergies, insurance information"
+    },
+    {
+      "id": "P5",
+      "text": "Business model is freemium features that drive use/virality plus paid Avado and third-party services",
+      "status": "explicit",
+      "evidence_span": "the straightforward premium business model, the features that are free are ones that actually drive use and virality"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "patient-provider partnership need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "care-plan and health dashboard product",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium services monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Patient-provider partnership enabling longer, higher-quality life at lower cost",
+      "status": "explicit",
+      "evidence_span": "you can live a longer life, higher quality, and actually pay less in the process"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that partnership is our core focus"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that other 99% is our focus"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the services is some of the magic in our business model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Spend-curve framing and chronic-care $1.8T figure folded into partnership/need domain rather than separate premises (§4.1.6/8). Tracker notifications, check-in, dashboard, and provider newsfeed folded as PRM product cascade (§4.1.7). Early-adopter segments treated as GTM framing inside product need. Three domains—anti-template: freemium/services monetization separately revisable from care-plan UX."
+}

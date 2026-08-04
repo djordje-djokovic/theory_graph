@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "coder_session_id": "session_05",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Manual chemical synthesis design is highly inefficient and error-prone and is the overlooked bottleneck in drug discovery",
+      "status": "explicit",
+      "evidence_span": "Designing how to synthesize a given molecule is highly inefficient and prone to errors. It involves chemists manually digging through tens and hundreds of scientific publications. Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "id": "P2",
+      "text": "AI designs novel chemical synthesis routes from commercially available molecules within seconds instead of hours or days",
+      "status": "explicit",
+      "evidence_span": "Molecule One leverages artificial intelligence to design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "id": "P3",
+      "text": "Found synthesis routes are ranked by user-preferred criteria and supported with lab-tested evidence",
+      "status": "explicit",
+      "evidence_span": "found ways are ranked according to user-preferred criteria, presented to the user, and supported with lab-tested evidence"
+    },
+    {
+      "id": "P4",
+      "text": "Deep learning on prior experiments proposes viable novel steps assembled into multi-step pathways to the target",
+      "status": "explicit",
+      "evidence_span": "The system is based on deep learning. It utilizes information about previous experiments to find out what kinds of transformations between different molecules are viable"
+    },
+    {
+      "id": "P5",
+      "text": "Competitor software does not use AI on chemical datasets for synthesis planning and often fails to generalize to novel molecules",
+      "status": "explicit",
+      "evidence_span": "Software of our competitors does not utilize AI to leverage chemical datasets for synthesis planning and often has trouble generalizing to novel molecules"
+    },
+    {
+      "id": "P6",
+      "text": "Initial focus is the drug discovery ecosystem, with SaaS priced by seats or data points plus enterprise custom integrations and optional on-premise deployment",
+      "status": "explicit",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem, which craves for the utilization of recent advances in artificial intelligence"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Chemical synthesis bottleneck in drug discovery",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI synthesis design and ranking",
+      "premise_ids": ["P2", "P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Drug discovery SaaS and enterprise go-to-market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make medicines faster by optimizing the synthesis pipeline",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster. Cure patients faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cure patients faster",
+      "evidence_span": "Cure patients faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "UI cascade (atom tracing, dive into lab references, under-a-minute results) folded into AI design/ranking premises. Patent-pending treated as IP detail on the technology. Partnerships and trial traction excluded as evidence. Price/seat structure kept with market focus in P6 per §4.1 #3. Vision 'future of chemical synthesis' not coded as premise."
+}

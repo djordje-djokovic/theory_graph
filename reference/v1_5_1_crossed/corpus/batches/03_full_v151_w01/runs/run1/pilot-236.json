@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-236",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Technology applied to concrete captures large amounts of carbon while making buildings 20–30% stronger and longer-lived",
+      "status": "explicit",
+      "evidence_span": "one use of this technology cannot only capture Enough carbon to take as many as 29 or 30 million cars off the road But actually make our buildings 20 to 30 percent stronger as well and potentially give them much longer lives"
+    },
+    {
+      "id": "P2",
+      "text": "Carbon-to-product path must show a sustainable economic case for real on-the-ground adoption, not only an environmental case",
+      "status": "explicit",
+      "evidence_span": "these carbon emissions are not only creating an environmental case, but also a sustainable economic case that makes sure that there is actual real adoption on the ground"
+    },
+    {
+      "id": "P3",
+      "text": "Canadian startup seeks European partners in infrastructure, concrete, plastics, coatings, batteries, or automobiles to make tangible products from carbon emissions",
+      "status": "explicit",
+      "evidence_span": "looking to engage with institutions or individuals that are active in infrastructure, concrete, plastics, or coatings, or just in reducing emissions in batteries or automobiles as well"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Carbon-to-concrete performance",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "European industry partnerships",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Turn carbon emissions into tangible products with real adoption",
+      "status": "explicit",
+      "evidence_span": "create a real tangible product from carbon emissions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stronger, longer-lived buildings",
+      "evidence_span": "make our buildings 20 to 30 percent stronger as well and potentially give them much longer lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sustainable economic case that makes sure that there is actual real adoption on the ground"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "create a real tangible product from carbon emissions"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-pitch and lacks full product mechanism detail; coded only asserted claims. Team-size/geography framing not coded as premises. thin_transcript and truncated both true."
+}

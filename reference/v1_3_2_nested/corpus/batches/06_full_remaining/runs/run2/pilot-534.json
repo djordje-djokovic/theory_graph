@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Smooth travel planning is impossible across disconnected discovery and booking tools",
+      "status": "explicit",
+      "evidence_span": "Inspiration platforms like Instagram provide discoverability, but a breakdown occurs once you want to start planning or booking your journey"
+    },
+    {
+      "id": "P2",
+      "text": "Mapify unifies sources and lets travelers share and consume journey visualizations as global hosts",
+      "status": "explicit",
+      "evidence_span": "by enabling every single traveler to be a global host for the places they visit and the activities they experience"
+    },
+    {
+      "id": "P3",
+      "text": "Interest-based feed, collaborative trip planning, and magic itinerary generation with transport and lodging recommendations",
+      "status": "explicit",
+      "evidence_span": "Based on our combined interests, Mapify now looks for spots that could be relevant for both of us"
+    },
+    {
+      "id": "P4",
+      "text": "Proprietary AI ranks experiences by geo relevance, quality, and personal importance",
+      "status": "explicit",
+      "evidence_span": "Our proprietary algorithm sorts entire trips by geographic relevance, quality, and personal importance"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue from brand/affiliate partnerships focused first on European millennial leisure travel",
+      "status": "explicit",
+      "evidence_span": "We're focusing on monetizing the European subsegment first"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Planning breakdown",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Community AI travel guide",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partnership monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One platform that unifies services and curates relevant personal travel experiences",
+      "status": "explicit",
+      "evidence_span": "integrates everything you've just seen into one single platform"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Create whole travel journeys in a few seconds",
+      "evidence_span": "create your whole travel journey in just a few seconds"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smooth travel planning process impossible"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized feed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "brand and affiliate partnerships"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Merged magic button with personalization. Host framing kept as platform condition contributing to content supply.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-534",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:36:20+02:00"
+  }
+}

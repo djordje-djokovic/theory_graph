@@ -1,0 +1,96 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A patented dissolvable shell material is critical: after the build, hot water leaves a production-quality part",
+      "status": "explicit",
+      "evidence_span": "The shell material that he's washing off is a world first and a patented Collider invention that is critical to our process"
+    },
+    {
+      "id": "P2",
+      "text": "Orchid is many times faster and cheaper than CNC or molding, with a large materials catalog",
+      "status": "explicit",
+      "evidence_span": "Orchid is five to 60 times faster. three to 125 times less expensive, and has a potential materials catalog of hundreds"
+    },
+    {
+      "id": "P3",
+      "text": "Operation is simple: wall power, materials cartridge, no skilled labor or special ventilation",
+      "status": "explicit",
+      "evidence_span": "You just press a button to start, plug it into the wall, and there's no skilled labor or special ventilation required"
+    },
+    {
+      "id": "P4",
+      "text": "Initial go-to-market targets service bureaus and rapid prototyping shops",
+      "status": "explicit",
+      "evidence_span": "We're initially targeting service bureaus and rapid prototyping shops"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dissolvable-shell production process",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Service bureau GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enable a new category of manufacturing with production-quality parts",
+      "status": "explicit",
+      "evidence_span": "Collider is enabling an entirely new category of manufacturing"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Customization that improves quality of life (e.g., prosthetics) at lower cost",
+      "evidence_span": "Collider can change the quality of someone's life with customization"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leaving a production quality part"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sign up to lease a beta today"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript begins mid-demo (truncated=true); coded only present content. Application examples (motorcycle, footwear, prosthetics) folded as uses of one process (§4.1(2)). Print speed/volume specs kept inside simplicity/capability bundle.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-587",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:35:10+02:00"
+  }
+}

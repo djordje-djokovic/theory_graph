@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-448",
+    "coder_session_id": "session_03",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:22:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Hosting on public clouds forces costly, tedious, error-prone server and networking management",
+      "status": "explicit",
+      "evidence_span": "businesses spend billions of dollars in engineering costs just to manage servers on AWS"
+    },
+    {
+      "id": "P2",
+      "text": "Git push triggers fully automated build, deploy, secure updates, scaling, load balancing, and alerting without managing servers",
+      "status": "explicit",
+      "evidence_span": "Simply push your code to Git. We automate everything from there"
+    },
+    {
+      "id": "P3",
+      "text": "Built-in service discovery, private networking, load balancing, managed SSDs with backups, and one-file infrastructure-as-code differentiate the managed cloud",
+      "status": "explicit",
+      "evidence_span": "every Render service gets built-in service discovery, private networking, and load balancing"
+    },
+    {
+      "id": "P4",
+      "text": "The offering combines Heroku-like ease with greater flexibility and lower cost than stagnant managed clouds",
+      "status": "explicit",
+      "evidence_span": "Amazing ease of use combined with tremendous flexibility"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "painful cloud server management",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automated git-to-production cloud",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "ease plus flexibility positioning",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Developers deploy apps faster without managing servers, saving engineering cost",
+      "status": "explicit",
+      "evidence_span": "deploy anything from a simple static site to complex application clusters"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hosting them was agonizing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "without managing servers at all"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to save big on engineering costs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three launch innovations folded as feature cascade of one managed-cloud mechanism with git automation (v1.5.1). Heroku price comparison kept inside positioning premise rather than separate viability module. Revenue growth and request volume excluded as traction."
+}

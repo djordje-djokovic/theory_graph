@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users cannot see, control, or secure the personal data corporations harvest from them",
+      "status": "explicit",
+      "evidence_span": "the average user has no idea what data they're generating or who can see it, let alone how to actually secure their data"
+    },
+    {
+      "id": "P2",
+      "text": "Syncing Facebook/Google organizes personal data anonymized and encrypted",
+      "status": "explicit",
+      "evidence_span": "Simply sync your platforms, like Facebook and Google, to see all of your personal data organized in simple categories, fully anonymized and encrypted"
+    },
+    {
+      "id": "P3",
+      "text": "Encrypted ML matches only data the user wants to share with targeted offers under user private keys",
+      "status": "explicit",
+      "evidence_span": "Our patented technology encrypts your data and only you have the private key. Ozone then runs encrypted machine learning to match only the data you want to share with offers that are targeted for you"
+    },
+    {
+      "id": "P4",
+      "text": "Reverse subscription: approved companies pay for anonymized data subscriptions; users get monthly payments",
+      "status": "explicit",
+      "evidence_span": "Ozone offers a reverse subscription model where companies you approve can pay to subscribe to your anonymized data. For each subscription, you receive a monthly payment directly into your Venmo, PayPal, or bank account of your choice"
+    },
+    {
+      "id": "P5",
+      "text": "Businesses buy pre-approved audiences and pay for conversions not eyeballs",
+      "status": "explicit",
+      "evidence_span": "companies get pre-approved audiences and only pay for conversions, not just eyeballs like on Facebook"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Encrypted personal data control stack",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "User-approved data monetization for businesses",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "User-controlled data with ability to reclaim monetization from big data",
+      "status": "explicit",
+      "evidence_span": "Take back control of your data, and take back the billions that big data is earning on you"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Ethically sourced user-controlled data for companies",
+      "evidence_span": "This is ethically sourced data that's controlled by the user"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fully anonymized and encrypted"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies you approve can pay to subscribe to your anonymized data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Merged freemium pay-for-conversions with advertiser audience offer as one commercial premise (§4.1.3). Patents not split (§4.1.1).",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-447",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:27:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

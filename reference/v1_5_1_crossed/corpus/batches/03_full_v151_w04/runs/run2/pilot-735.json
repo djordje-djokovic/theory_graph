@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-735",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "SMBs are surrounded by energy data they rarely use, making good energy choices hard and leaving them paying more than large businesses",
+      "status": "explicit",
+      "evidence_span": "Businesses are surrounded by energy data, but few of them use it"
+    },
+    {
+      "id": "P2",
+      "text": "Uploading an energy bill extracts, organizes, and analyzes data into dashboards for cost, consumption, carbon, weather effects, peer benchmarks, and supplier savings",
+      "status": "explicit",
+      "evidence_span": "helping businesses build, visualize, and analyze their energy data. All they need is an energy bill"
+    },
+    {
+      "id": "P3",
+      "text": "Basic use is free with a bill upload; deeper ongoing analysis is under one pound per day per site, with an API for utilities and professionals",
+      "status": "explicit",
+      "evidence_span": "Anybody can use the Energy Elephant system. for free if they have an energy bill"
+    },
+    {
+      "id": "P4",
+      "text": "Smart-meter rollout and building energy-certificate legislation expand the data and compliance opportunity",
+      "status": "explicit",
+      "evidence_span": "with the rollout of smart meters, even larger data sets are going to become available"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "SMB unused energy data problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "bill-upload energy analytics product",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium SaaS and utility API",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "smart meters and certificate regulation",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help SMBs understand energy data to make better decisions and reduce costs and environmental impact",
+      "status": "explicit",
+      "evidence_span": "helps small and medium businesses understand, make better energy decisions by organizing and analyzing their energy data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This makes it very difficult for them to make good energy choices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all the data contained in those bills is extracted, organized, and analyzed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we've identified cost savings of an average of 15% for our paying customers"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every building in Europe will need an energy certificate of some sort"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cost/consumption/carbon/weather/benchmark/supplier views folded as feature cascade of one bill-analytics product (§4.1.7). Consultant-on-shelf story treated as problem framing inside P1. Founder CV excluded. Singleton D2–D4 retained as product, commercial, and regulatory modules. Anti-template avoided (four domains, not need/product/money triad alone)."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-710",
+    "coder_session_id": "session_04",
+    "session_case_index": 5,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Product managers scatter feedback across delivery-oriented tools, spreadsheets, and disorganized backlogs, so they fail to understand user needs and build unwanted features",
+      "status": "explicit",
+      "evidence_span": "we are stuck with tools that are optimized and designed for product delivery, not the crucial part of product discovery"
+    },
+    {
+      "id": "P2",
+      "text": "Product Board is a system of record that aggregates feedback via integrations, links insights to feature ideas organized by user needs, scores impact, and auto-generates shareable roadmaps",
+      "status": "explicit",
+      "evidence_span": "Product Board is a system of record for product management that helps product people understand what people need, prioritize what to build, and automate interactive roadmaps"
+    },
+    {
+      "id": "P3",
+      "text": "Prioritized features can be pushed to JIRA or other engineering delivery systems with real-time progress updates",
+      "status": "explicit",
+      "evidence_span": "push the features to JIRA or other engineering delivery systems"
+    },
+    {
+      "id": "P4",
+      "text": "Sold as a per-user subscription starting at $24/month, reached via content marketing and inside sales",
+      "status": "explicit",
+      "evidence_span": "We offer a subscription service with a per user tiered pricing starting at $24 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "product discovery tooling gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Product Board discovery and delivery handoff",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription pricing and sales motion",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Product teams make products people want by understanding needs and prioritizing the right work",
+      "status": "explicit",
+      "evidence_span": "help you make products people want"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "wasting energy building features and products that nobody wants"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what people need, prioritize what to build, and automate interactive roadmaps"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we reach our customers via combination of content marketing and inside sales"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Research inbox, need-linked features, impact scoring, and roadmap automation folded as one discovery system of record (v1.5.1 §4.1.7). Beta company count excluded. Singleton D1/D3 retained as separately revisable problem and GTM modules."
+}

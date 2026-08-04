@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Salon and service owners need vetted sub-renters to offset leases; word-of-mouth and Craigslist are ineffective",
+      "status": "explicit",
+      "evidence_span": "finding sub-renters in a niche vertical remains incredibly inefficient"
+    },
+    {
+      "id": "P2",
+      "text": "High sub-renter turnover creates operational and financial burden for space owners",
+      "status": "explicit",
+      "evidence_span": "high sub-renter turnover, which yields an operational nightmare and huge financial burden"
+    },
+    {
+      "id": "P3",
+      "text": "Service professionals face geographic lease limits and inflexible rental options when relocating or growing",
+      "status": "explicit",
+      "evidence_span": "service coverage limitations due to a lease's geography"
+    },
+    {
+      "id": "P4",
+      "text": "Marketplace listings let owners attract vetted renters and let sub-renters filter by industry, location, and hourly/daily/weekly/monthly terms",
+      "status": "explicit",
+      "evidence_span": "a marketplace for renters and sub-renters"
+    },
+    {
+      "id": "P5",
+      "text": "Mission is maximizing utilization of existing space toward 24/7 earning potential",
+      "status": "explicit",
+      "evidence_span": "maximize the usage of existing space"
+    },
+    {
+      "id": "P6",
+      "text": "Supply-side-first scaling across beauty then industry-agnostic service verticals drives network effects",
+      "status": "explicit",
+      "evidence_span": "we decided to focus on the supply side because it was the most challenging to scale"
+    },
+    {
+      "id": "P7",
+      "text": "Renly Circle expands into consumer discovery, booking, managing, and paying for any service in one platform",
+      "status": "explicit",
+      "evidence_span": "discover, book, Manage, pay, or provide any service you want"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient service-space subletting",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Two-sided space marketplace",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "All-in-one service platform expansion",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Maximize service-space utilization and give professionals flexible access to credible rental stations",
+      "status": "explicit",
+      "evidence_span": "maximize the usage of existing space"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "One platform for discovering and running any service",
+      "evidence_span": "any service, any time, any place"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "platform that allows you to source credible, vetted, reliable sub-renters"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Renly offered an optimal solution for both Stephanie, the sub-renter, and my wife, the owner"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Simply one place, one platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Listing/traction metrics excluded as achievements; supply strategy coded as continuing GTM condition. Soft count 7.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-600",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

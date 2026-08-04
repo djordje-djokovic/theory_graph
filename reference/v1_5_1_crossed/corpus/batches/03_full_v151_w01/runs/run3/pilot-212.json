@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-212",
+    "coder_session_id": "session_01",
+    "session_case_index": 14,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:15:40+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Developers spend much of the week in toil from complexity, which wastes hours, costs businesses, and drives unhappy developer attrition",
+      "status": "explicit",
+      "evidence_span": "developers spend half their week in toil. Toil is the tedious work in software creation that arises from complexity"
+    },
+    {
+      "id": "P2",
+      "text": "Observability, monitoring, and security stacks bury developers in tool mazes away from coding while hunting performance and security fixes",
+      "status": "explicit",
+      "evidence_span": "Developers toil in mountains of data, looking for information to fix performance issues, remediate security flaws, and rework broken code. Developers are lost in a maze of tools they don't control"
+    },
+    {
+      "id": "P3",
+      "text": "AppMap delivers personal observability with runtime performance and security analysis inside the code editor as developers write code",
+      "status": "explicit",
+      "evidence_span": "AppMap delivers personal observability, performance, and security analysis to developers when they work to reduce toil. And AppMap is in the tool developers love the most, their code editor"
+    },
+    {
+      "id": "P4",
+      "text": "AppMaps capture accurate runtime behavior across environments including uncommitted code, data stores, and service boundaries—not static analysis",
+      "status": "explicit",
+      "evidence_span": "App maps are accurate, up-to-date, runtime information about the behavior of software as it is at any moment for any environment"
+    },
+    {
+      "id": "P5",
+      "text": "Automatic analysis alerts on issues such as N+1 performance queries and broken access-control security flaws while coding",
+      "status": "explicit",
+      "evidence_span": "AppMap automatically analyzes this information to find issues why developers work, and it alerts them if it finds a problem"
+    },
+    {
+      "id": "P6",
+      "text": "Deep language/framework integration and open source enable community expansion; maps are shareable and report fixes for org tracking",
+      "status": "explicit",
+      "evidence_span": "AppMap integrates deeply with popular languages and frameworks. And AppMap is open source to integrate with new languages and new communities"
+    },
+    {
+      "id": "P7",
+      "text": "Runtime editor insights can accelerate adoption of other developer tools, exemplified by Postman OpenAPI sync",
+      "status": "explicit",
+      "evidence_span": "AppMap generates open API data in the code editor and syncs it automatically with Postman collections"
+    },
+    {
+      "id": "P8",
+      "text": "Free for individuals, students, and open source via VS Code and JetBrains marketplaces, with partnering for developer-focused organizations",
+      "status": "explicit",
+      "evidence_span": "AppMap is free for individuals, students, and open source projects from the VS Code and JetBrains marketplaces"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Developer toil and tool maze",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Editor-native runtime personal observability",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace distribution and tool partnerships",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce developer toil so teams ship more performant, secure, reliable code faster",
+      "status": "explicit",
+      "evidence_span": "AppMap helps development teams reduce toil and ship more performant, secure, and reliable code faster"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "AppMap automatically analyzes this information to find issues why developers work, and it alerts them if it finds a problem"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Toil robs 25 million developers of the joy of coding"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "software developers can see the behavior of their software as they write code"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "runtime data in the code editor can accelerate adoption of developer tools from inside the code editor"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Performance and security demo findings treated as cascade examples of automatic analysis (P5), not separate premises. Adoption metrics and marketplace ratings excluded as traction. Free individual tier plus partner motion coded as distribution (P8). Anti-template: problem, product, distribution separately revisable."
+}

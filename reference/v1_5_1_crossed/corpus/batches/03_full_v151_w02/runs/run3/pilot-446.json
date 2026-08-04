@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-446",
+    "coder_session_id": "session_03",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Companies share data with far more vendors than they realize and lack an easy way to track sharing or meet privacy obligations",
+      "status": "explicit",
+      "evidence_span": "there is no easy way to track what's happening with all of that data, and there's no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "id": "P2",
+      "text": "A proprietary vendor privacy dataset scores vendors' practices, lawsuits, and policies for risk decisions",
+      "status": "explicit",
+      "evidence_span": "Utilizing our proprietary data set of 7,000 different vendors, Osano provides a 360-degree view of each vendor's privacy practices"
+    },
+    {
+      "id": "P3",
+      "text": "A fully managed cookie-consent solution makes websites compliant across many countries with one line of code",
+      "status": "explicit",
+      "evidence_span": "Osano includes a fully managed cookie consent solution, so that with one line of code, websites can immediately become compliant with the laws of 40 different countries"
+    },
+    {
+      "id": "P4",
+      "text": "A developer API lets builders embed data privacy into applications and workflows",
+      "status": "explicit",
+      "evidence_span": "Asono offers a developer API so that developers can quickly build data privacy into their applications and their workflows"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market targets the majority of companies underserved by expensive point solutions, converting freemium compliance users",
+      "status": "explicit",
+      "evidence_span": "Osana was targeting the 90 percent of companies who are not served by the expensive point solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "vendor data-sharing compliance gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "vendor risk scoring",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "cookie consent and developer privacy tools",
+      "premise_ids": ["P3", "P4"]
+    },
+    {
+      "id": "D4",
+      "name": "mid-market freemium go-to-market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Easy data-privacy compliance and vendor-risk visibility for companies",
+      "status": "explicit",
+      "evidence_span": "Osano's data privacy platform makes it easy for companies to identify which vendors are best to work with, to comply with laws"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no easy way for companies to comply with their privacy obligations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making it easy for companies to identify where they have risk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "their website automatically becomes compliant"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we are already their compliance vendor of record"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Vendor opacity and compliance difficulty kept as one pain bundle. Vendor scoring, cookie consent, and developer API split as distinct capabilities (v1.5.1 School Bridge pattern). Lawsuit/policy browsing folded into vendor-scoring premise. User counts treated as traction."
+}

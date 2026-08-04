@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "LightShot is a sensor-based mobile platform for fully interactive gaming anywhere",
+      "status": "explicit",
+      "evidence_span": "sensor based mobile gaming platform that allows completely interactive gaming anywhere in the world"
+    },
+    {
+      "id": "P2",
+      "text": "Hardware loop: lighter IR beam to puck, phone confirms mission and next timer",
+      "status": "explicit",
+      "evidence_span": "lighter. It shoots an infrared beam to the light puck. which immediately registers here and if you bring up the phone you can see that the mission has been completed and the timer is already ticking down"
+    },
+    {
+      "id": "P3",
+      "text": "Cloud-based open-source software and hardware let players build games and peripherals",
+      "status": "explicit",
+      "evidence_span": "with the platform both being open source software and open source hardware. you're able to develop your own games and your own peripherals"
+    },
+    {
+      "id": "P4",
+      "text": "Multi-sensor programmable lighter supports many genres; kits enable custom peripherals",
+      "status": "explicit",
+      "evidence_span": "array of sensors, a Bluetooth, IR, accelerometers, and others that you can program for whatever type of game you want"
+    },
+    {
+      "id": "P5",
+      "text": "Gameplay automates the game master with customizable rule sets across connected IoT devices",
+      "status": "explicit",
+      "evidence_span": "no longer do you need a game master for each of these interactive-type games. Now all of it's automated, and you have the ability to customize your own game with own rule sets"
+    },
+    {
+      "id": "P6",
+      "text": "HUD shows live health, stats, and teammate locations",
+      "status": "explicit",
+      "evidence_span": "Players can see what other location of their teammates, they can see their health stats, depending on what game they're playing"
+    },
+    {
+      "id": "P7",
+      "text": "Revenue from first-party apps/peripherals plus third-party developer hosting",
+      "status": "explicit",
+      "evidence_span": "own apps that we're creating, and as you can see, the peripherals, as well as the STL files, but we're developing this as an open community and hosting the third-party game developers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Interactive anywhere gaming product",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Open cloud sensor platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "First- and third-party monetization",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Look-up, real-world multiplayer games powered by phone and IoT sensors",
+      "status": "explicit",
+      "evidence_span": "play mobile games without sitting there staring at this tiny little screen"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "completely interactive gaming anywhere in the world"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverages all of the Internet of Things"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hosting the third-party game developers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Run2 merges thesis into the product identity premise and keeps open-source with cloud as one platform condition. Kickstarter excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-801",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:22:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

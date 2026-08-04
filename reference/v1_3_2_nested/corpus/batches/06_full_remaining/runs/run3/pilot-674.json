@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents face multiple school-related pains including communication, safety, reports, fee payment presence, and daily student supplies",
+      "status": "explicit",
+      "evidence_span": "five major pain points that a parent faces with regard to their school-going children"
+    },
+    {
+      "id": "P2",
+      "text": "School Bridge app delivers notifications, instant report cards, GPS tracking, online payments, and e-commerce for uniforms/stationery",
+      "status": "explicit",
+      "evidence_span": "Fifth is e-commerce solution for all the daily needs of the child"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market focuses on roughly 30,000 private mid- and upper-high-end Indian schools with a goal of enrolling 300 schools in two years",
+      "status": "explicit",
+      "evidence_span": "we are aiming to enroll 300 schools in the first two years"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parent pain points",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "School Bridge product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Private school enrollment plan",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One app that solves parents' school communication, safety, reporting, payment, and supply needs",
+      "status": "inferred",
+      "evidence_span": "solving the problem by giving you a live demo of the app"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "struggle of my parents in regard to my little sister's daily schooling activities"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is our product"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "School Bridge has a tremendous potential in this growing Indian education market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Coarsest coding: five feature tabs folded into one product premise as parts of one offering (v1.3.2 #5). Financing ask excluded. Anti-template: problem/product/GTM triad justified by separately revisable parent pains, app suite, and school enrollment plan.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-674",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:14:00+02:00"
+  }
+}

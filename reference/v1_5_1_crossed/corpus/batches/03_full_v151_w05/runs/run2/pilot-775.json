@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-775",
+    "coder_session_id": "session_03",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Digital media creation for games and film remains mostly manual, driving very high time and cost",
+      "status": "explicit",
+      "evidence_span": "The $80 billion video game industry spends on average 61% of their project budgets on digital media creation. The reason is that it's still an almost entirely manual process"
+    },
+    {
+      "id": "P2",
+      "text": "Artomatix example-based AI generates controllable artistic content across images and 3D data while keeping the artist in the loop",
+      "status": "explicit",
+      "evidence_span": "Artematics is an example-based way of making art. That means you give the computer an example of something you want, and it makes more"
+    },
+    {
+      "id": "P3",
+      "text": "Video games are the beachhead market, with Artomatix Cloud SaaS expanding to the broader industry",
+      "status": "explicit",
+      "evidence_span": "we've identified that video games are our beachhead, and we've already achieved significant traction in this space"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is a software-as-a-service business model",
+      "status": "explicit",
+      "evidence_span": "We're going to monetize through a software-as-a-service business model"
+    },
+    {
+      "id": "P5",
+      "text": "Core IP is controlled and protected through patents and trade secrets",
+      "status": "explicit",
+      "evidence_span": "we control all of the IP, and we're protecting it through a combination of patents and trade secrets"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "manual digital art cost problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "controllable generative art AI",
+      "premise_ids": ["P2", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "games beachhead and SaaS",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Cut digital art time and cost while expanding creative variety for artists and games",
+      "status": "explicit",
+      "evidence_span": "Our goal is to half the time and half the cost of this process through automation"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Richer game worlds with much greater variety of generated content",
+      "evidence_span": "We can take gaming to the next level. Imagine a world hundreds of times larger than you've ever seen before"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we solve the problem that art costs too much and it takes too long"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have built an artificial intelligence system that can mimic human-like artistic creativity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Artomatix Cloud, which can address the entire industry, big to small"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Avatar/GTA budget examples and tedious brick/background jobs folded into one manual-creation cost pain (v1.5.1 §4.1.6). Banana/forest/3D-ear demos folded as applications of one example-based mechanism (§4.1.2/7). NVIDIA win, AAA traction, and acquisition offer excluded as credentials/traction. Team bio excluded; patents kept with product IP. Anti-template: problem, AI product, and GTM/SaaS separately revisable."
+}

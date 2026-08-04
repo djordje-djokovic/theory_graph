@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-915",
+    "coder_session_id": "session_06",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:07:19Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Last-minute personal-service booking by dialing many merchants is inefficient while idle local capacity goes unused",
+      "status": "explicit",
+      "evidence_span": "painful process of dialing all of those merchants just to find one that was willing to take my money"
+    },
+    {
+      "id": "P2",
+      "text": "Customers can place a personal-service request on web or mobile and name their own price and terms",
+      "status": "explicit",
+      "evidence_span": "place a request for personal service, and you can even name your own price"
+    },
+    {
+      "id": "P3",
+      "text": "Accepted bids charge the customer's card and schedule the service on both calendars",
+      "status": "explicit",
+      "evidence_span": "When this merchant hits accept, my credit card is immediately charged and the service is scheduled on both of our calendars"
+    },
+    {
+      "id": "P4",
+      "text": "Merchants get customer acquisition with no upfront cost, prepaid bottom-of-funnel demand, timing certainty, and accept only when they have excess capacity",
+      "status": "explicit",
+      "evidence_span": "A merchant working with BidZ faces no upfront investment at all"
+    },
+    {
+      "id": "P5",
+      "text": "The platform flips listings so the customer offers themselves and BidZ solicits many local merchants at once",
+      "status": "explicit",
+      "evidence_span": "flips the equation and allows a customer to offer themselves to a business"
+    },
+    {
+      "id": "P6",
+      "text": "Services are fulfilled only by verified, rated local businesses rather than peer consumers",
+      "status": "explicit",
+      "evidence_span": "BidZ is only connecting you with a verified, rated local business"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "reverse-bid customer marketplace",
+      "premise_ids": ["P1", "P2", "P3", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "merchant acquisition on their terms",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "verified local-business trust",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customers get personal services on their terms while merchants monetize idle capacity",
+      "status": "explicit",
+      "evidence_span": "A customer gets an appointment on their terms, and a business gets a paying customer through the door"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "When you submit a bid on BidZ, we are effectively knocking on 200 doors for you"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we give customers the deals and the services that they want on their terms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we allow merchants to bring more money through their door"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "prefer to get our hair cut by a professional instead of getting it cut by our neighbor"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Haircut/nail/dog-walking service list folded as one personal-services marketplace surface. Merchant channel pains (expensive/complicated/risky/no control) folded into P4 as one acquisition-terms package. Singletons D2 and D3 retained as independently revisable merchant-economics and trust modules."
+}

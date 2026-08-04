@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-923",
+    "coder_session_id": "session_01",
+    "session_case_index": 12,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "High school STEM students build remarkable projects that colleges and employers never see because Facebook, team sites, and current channels do not reach that audience",
+      "status": "explicit",
+      "evidence_span": "Students are still having trouble exposing their projects, collaborating with one another, and organizing those projects"
+    },
+    {
+      "id": "P2",
+      "text": "GradFly is a visual portfolio platform where students upload multimedia project stories, search projects, earn commendations and badges, and build prestige",
+      "status": "explicit",
+      "evidence_span": "GradFly is a visual LinkedIn for high school science, technology, engineering, and math students showcasing their most groundbreaking projects"
+    },
+    {
+      "id": "P3",
+      "text": "An algorithm matches students to college programs based on project interests (e.g. robotics) with school info and social feeds",
+      "status": "explicit",
+      "evidence_span": "We've created an algorithm that pairs the student to a particular college"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hidden high school STEM projects",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "GradFly portfolio platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "college matching algorithm",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "STEM students leverage projects to get into top schools and into internships/co-ops at high-tech companies",
+      "status": "explicit",
+      "evidence_span": "leverage these projects that students are working on to get into schools like MIT, RPI, Caltech, Cooper Union"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "no one knows about them"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "portfolio platform for the nation's most innovative minds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pair her with robust college programs out there that are geared towards robotics"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Expose/collaborate/organize pains folded as one high-school-to-college visibility problem (§4.1.6). Upload multimedia, search, commendations, and badges folded as portfolio cascade (§4.1.7); college-match algorithm split as separately demoed path to school outcomes. Ed-tech market size and waitlist/app roadmap treated as framing/traction. Three domains; not a need/product/money triad."
+}

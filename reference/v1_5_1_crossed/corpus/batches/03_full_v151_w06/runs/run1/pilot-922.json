@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-922",
+    "coder_session_id": "session_04",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:13:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contract processes across drafts, approvals, negotiations, and signatures become chaotic at scale across many reps and deals",
+      "status": "explicit",
+      "evidence_span": "your contract process very quickly turns into this. Welcome to contract management as we know it today"
+    },
+    {
+      "id": "P2",
+      "text": "Visual workflow builder composes request, approval, and signature steps so Glider runs requests and reminders without babysitting",
+      "status": "explicit",
+      "evidence_span": "simple visual building blocks that each represent common tasks, things like requesting documents, getting approvals, and getting signatures"
+    },
+    {
+      "id": "P3",
+      "text": "Blockers get links to view history, comment, approve, or sign in one click with immediate team notifications",
+      "status": "explicit",
+      "evidence_span": "Glider automatically sends a link where they can quickly view the entire document history, make quick comments, or approve and sign in just one click"
+    },
+    {
+      "id": "P4",
+      "text": "Management dashboard shows where deals are stuck (legal, negotiations, out for signature) without manual status chasing",
+      "status": "explicit",
+      "evidence_span": "Glider gives you a dashboard where you can see in one place how many deals are off in legal land"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "structured contract workflow automation",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "deal-status visibility for managers",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Drop-dead-simple contract management that shortens close times and keeps teams working together",
+      "status": "explicit",
+      "evidence_span": "make managing this process drop dead simple"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "see how close each of your deals are to closing and keep track of which deals need your immediate attention"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shortening close times and keeping teams working together seamlessly"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Sales-contract builder demo cascade folded into P2. CRM/e-signature sandwich framing treated as market positioning for value, not separate premises. Funding and pilot customers excluded as traction."
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-437",
+    "coder_session_id": "session_04",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:25:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nonprofits still rely on pen and paper for scheduling, volunteer tracking, and donations despite volunteers' outsized giving",
+      "status": "explicit",
+      "evidence_span": "Many still rely on pen and paper for core processes like scheduling, volunteer tracking, and even donations"
+    },
+    {
+      "id": "P2",
+      "text": "Automated volunteer hour tracking via geofenced mobile app, self-service kiosk, and staff check-in",
+      "status": "explicit",
+      "evidence_span": "three different ways for nonprofits to track volunteer hours"
+    },
+    {
+      "id": "P3",
+      "text": "Integrated micro-donations convert volunteers to donors at peak inspiration moments using volunteer data",
+      "status": "explicit",
+      "evidence_span": "integrated micro-donations platform that will allow for nonprofits to automatically convert volunteers to donors"
+    },
+    {
+      "id": "P4",
+      "text": "Architecture enables seamless data sharing across nonprofits, volunteers, and corporations",
+      "status": "explicit",
+      "evidence_span": "uniquely built to serve the full market, allowing for seamless data sharing between nonprofits, volunteers, and corporations"
+    },
+    {
+      "id": "P5",
+      "text": "Sold as monthly SaaS to nonprofits, with expansion into CRM-adjacent CSR and donation processing",
+      "status": "explicit",
+      "evidence_span": "These clients pay between $25 to $450 a month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Underserved nonprofit operations",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Volunteer tracking and micro-donations",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Nonprofit SaaS pricing",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how nonprofits operate and engage supporters for greater community impact",
+      "status": "explicit",
+      "evidence_span": "fundamentally change how nonprofits operate and engage their supporters"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Automatically convert volunteers to donors",
+      "evidence_span": "automatically convert your volunteers to donors"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "nonprofits continue to be underserved by our tech community"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamless volunteer management and a way to automatically convert your volunteers to donors"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "clients pay between $25 to $450 a month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Three tracking methods folded as one volunteer-management mechanism (enumeration rule 1). Micro-donations split as distinct conversion module. Client-count traction excluded; monthly fee retained as commercial condition."
+}

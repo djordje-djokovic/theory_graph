@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "coder_session_id": "session_05",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "User-data-only ad targeting makes video ads irrelevant, so content providers, brands, and users all lose",
+      "status": "explicit",
+      "evidence_span": "These ads are not relevant. And because of that, everybody is losing"
+    },
+    {
+      "id": "P2",
+      "text": "A recognition engine detects faces, objects, logos, music, gender, age, and emotion in video to target ads to content moments",
+      "status": "explicit",
+      "evidence_span": "Our engine able to detect today faces, objects, logos, music, gender, age, and even emotion to better target advertising"
+    },
+    {
+      "id": "P3",
+      "text": "Content metadata is downloaded nightly and matched to the right second for pre-roll, mid-roll, or second-screen ads",
+      "status": "explicit",
+      "evidence_span": "We know exactly the second that the metadata appears, and we know the frequency. We download them every night from the content provider"
+    },
+    {
+      "id": "P4",
+      "text": "Customers are digital TV/operators, online video platforms, media companies, and brands",
+      "status": "explicit",
+      "evidence_span": "Our customers are the digital TVs and operators like Fox, RTL, the online platform like YouTube, Dailymotion, and the media companies and the brands like GroupM"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue comes from selling recognition data plus campaign management",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "irrelevant user-data video ads",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "content recognition targeting engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "platform customers and data fees",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Relevant video ads matched to on-screen content so users enjoy content and brands control where ads land",
+      "status": "explicit",
+      "evidence_span": "they enjoy show video content and be inspired by related ads"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody is losing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match on the right second the relevant advertising"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable any programmatic party to use our solution as part of a new standard marketing solution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Loser triad (provider/brand/user) folded into one irrelevance pain-bundle. Detection attribute list folded into one recognition mechanism; second-level matching kept as delivery timing facet of same engine unless split—kept with engine ops as P3 for nightly metadata pipeline. BMW/Fox CTR and patent treated as traction/IP detail on the mechanism. Team bios excluded."
+}

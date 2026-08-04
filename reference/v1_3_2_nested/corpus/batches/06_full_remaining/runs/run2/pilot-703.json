@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Big businesses already use flexible custom currency in targeted marketing to drive site visits and spend",
+      "status": "explicit",
+      "evidence_span": "big businesses have figured out that they can use custom currency in their targeted marketing to get you to their site and compel you to spend"
+    },
+    {
+      "id": "P2",
+      "text": "Building custom currency requires tracking codes and user interactions, controlling spend rules, and associating promo value with gift cards and refunds",
+      "status": "explicit",
+      "evidence_span": "You have to track every code, every user's interaction with the code. You have to make it easy for your team to access, control how, when, and who can spend it"
+    },
+    {
+      "id": "P3",
+      "text": "GiftBit is a SaaS web app and API that lets merchants create, distribute, and manage gift cards, refund credits, and promotional currency",
+      "status": "explicit",
+      "evidence_span": "a software as a service platform to solve this problem"
+    },
+    {
+      "id": "P4",
+      "text": "Marketers can create code orders with type, amount, time window, and quantity and pass files to distribution partners",
+      "status": "explicit",
+      "evidence_span": "marketing teams get all the tools they need to be able to control, send, and track their custom currency"
+    },
+    {
+      "id": "P5",
+      "text": "Unused gift value can be reactivated with reminders plus time-limited promo top-ups that clear gift cards as revenue",
+      "status": "explicit",
+      "evidence_span": "Rita gets a reminder email to spend the value, plus she gets an extra $10 in promotional value"
+    },
+    {
+      "id": "P6",
+      "text": "$90/month for 1,000 active codes (then $15 per additional 1,000) plus checkout integrations (e.g., Shopify Plus) reach businesses of any size",
+      "status": "explicit",
+      "evidence_span": "$90 a month gets you 1,000 active codes. It's $15 a month per 1,000 codes thereafter"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Custom currency marketing need",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Issue, distribute, and reactivate currency",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Code-based SaaS pricing and integrations",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give online businesses the right custom-currency tools to grow without building their own stack",
+      "status": "explicit",
+      "evidence_span": "Successful businesses need the right tools to grow"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're here to fix that problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The company gets a new customer and clears that gift card as revenue"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accessible to businesses of any size"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Run2 keeps reactivation as part of product value path. Price and partner integrations kept in one commercial premise per §4.1(3). Beta/ClassPass mentions excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-703",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:41:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-766",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:23:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Retailers change prices rapidly and less transparently, including personalized prices that make consumers pay more",
+      "status": "explicit",
+      "evidence_span": "They're changing prices faster and faster and less transparently than ever before"
+    },
+    {
+      "id": "P2",
+      "text": "Store price-protection policies are too complex and time-consuming for consumers to use, so refunds go unclaimed",
+      "status": "explicit",
+      "evidence_span": "Not only are the policies often complex by design, it takes a ton of time to price compare, figure out if you're owed money back"
+    },
+    {
+      "id": "P3",
+      "text": "Paribus automatically detects purchases and price drops and files claims against store policies on the user's behalf",
+      "status": "explicit",
+      "evidence_span": "when we think you're eligible for a claim, we'll check it against our internal database of official and unofficial store policies"
+    },
+    {
+      "id": "P4",
+      "text": "The company charges only after successful savings, typically 25% of recovered money",
+      "status": "explicit",
+      "evidence_span": "The only time that Paribus earns is after we save you money first"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Opaque dynamic pricing",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Unusable price-protection process",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Automated claim filing product",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Post-savings fee",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Get shoppers refunds they are owed without lifting a finger",
+      "status": "explicit",
+      "evidence_span": "Almost $45 more dollars in my pocket, and I didn't have to lift a finger"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "use your own data against you to get you to pay more through custom prices"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Nobody does it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically file a claim on your behalf, as if you were to send it yourself"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charged 25% of the money we earn you"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Split pricing abuse vs claim-hassle as separately revisable market assumptions. Inbox OAuth/security/store-count folded into automated-claim product. Demo Xbox story used only as illustration. Singletons retained with notes that each can fail independently."
+}

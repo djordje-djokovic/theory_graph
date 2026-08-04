@@ -1,0 +1,128 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Car repair forces owners into shop trips, borrowed rides, and risk of being ripped off",
+      "status": "explicit",
+      "evidence_span": "don't waste your time going to a shop, begging friends for a ride, and then hoping and maybe praying that you don't get ripped off"
+    },
+    {
+      "id": "P2",
+      "text": "Customers book online in under 60 seconds with transparent prices vs dealers/shops, ratings, and seven-day scheduling at home or office",
+      "status": "explicit",
+      "evidence_span": "you can take care of your car problems in less than 60 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Symptom search plus on-site inspection via mobile app produces an on-the-spot estimate when owners do not know what is wrong",
+      "status": "explicit",
+      "evidence_span": "Simply go online and say, smoke from the car. We'll immediately tell you what are the possible reasons"
+    },
+    {
+      "id": "P4",
+      "text": "Integration with the three largest North American parts suppliers and half a billion labor/parts data points yields a fixed fair price with no shady markups",
+      "status": "explicit",
+      "evidence_span": "We are fully integrated with the three largest car parts suppliers in North America. We have half a billion data points on labor time and parts"
+    },
+    {
+      "id": "P5",
+      "text": "Independent mechanics with their own tools can perform about 80% of repairs and earn more while customers save versus shop rates",
+      "status": "explicit",
+      "evidence_span": "all of us mechanics own our own scanners and tools to perform about 80% of all car repairs"
+    },
+    {
+      "id": "P6",
+      "text": "Target is out-of-warranty cars older than five years in a large annual repair spend market",
+      "status": "explicit",
+      "evidence_span": "There are 200 million cars on the road that are older than five years"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Car repair pain and market",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Booking and fixed pricing",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Mechanic marketplace supply",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Mechanics fix your car at your location with a fixed fair price and a better repair experience",
+      "status": "explicit",
+      "evidence_span": "This awesome mechanic, Mike, will fix your car at your home, your office, or wherever you are"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mechanics make more while customers save",
+      "evidence_span": "When you hire me through your mechanic, you save money, I make more, and everyone wins"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "And this allows us to give you a fixed, fair price every time"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hoping and maybe praying that you don't get ripped off"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "fixed, fair price every time. No shady markups, and no last minute surprises"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you save money, I make more, and everyone wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Investor backing and $25 certificate excluded. Airbnb analogy treated as framing. Photos as traction excluded. Anti-template: need/booking/supply separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1003",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:10+02:00"
+  }
+}

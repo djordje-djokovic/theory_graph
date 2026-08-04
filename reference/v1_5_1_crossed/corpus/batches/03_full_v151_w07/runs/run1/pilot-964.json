@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-964",
+    "coder_session_id": "session_04",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:18:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Government policy is still created and communicated as unstructured text, so the public barely engages despite large personal income impacts",
+      "status": "explicit",
+      "evidence_span": "we've been creating and communicating government policies through unstructured text documents"
+    },
+    {
+      "id": "P2",
+      "text": "A microsimulation of the US economy from tax returns and census data lets people configure policies and see projected impacts on real people and maps",
+      "status": "explicit",
+      "evidence_span": "merging millions of tax returns and census records to create a model of the US economy"
+    },
+    {
+      "id": "P3",
+      "text": "Citizens can endorse preferred outcomes so governments see analytics that shape policy (aided representation)",
+      "status": "explicit",
+      "evidence_span": "this response gets recorded on the government's analytics, helping them shape policies around what people want"
+    },
+    {
+      "id": "P4",
+      "text": "Users can simulate alternative tax rates and budget line items in real time against large populations",
+      "status": "explicit",
+      "evidence_span": "it'll calculate this new rate against the spending patterns of over 6 million people"
+    },
+    {
+      "id": "P5",
+      "text": "Outline is a turnkey government solution cheaper than bloated SAP/Accenture-style consulting tools that the public cannot access",
+      "status": "explicit",
+      "evidence_span": "Outline, though, is a turnkey solution that not only saves governments money, but produces better governing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "inaccessible text-based policy",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "public policy simulation and endorsement",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "turnkey government software sales",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Participation in government becomes direct, intelligent, and easy as part of daily internet use",
+      "status": "explicit",
+      "evidence_span": "making participation in government direct, intelligent, and easy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Better, cheaper governing for states and cities",
+      "evidence_span": "saves governments money, but produces better governing"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "most of us just don't have the patience to engage"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "participation in government can now be part of your daily internet experience"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Outline, though, is a turnkey solution that not only saves governments money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Text-document inertia and public non-engagement folded as one problem (§4.1.6). Personal impact, zip map, endorse, and counterfactual sliders folded as cascade of one policy-simulator product (§4.1.7) with endorse kept as civic feedback path inside that product. Prior 4M-use tool and Massachusetts procurement treated as traction (§4.2). Three domains—anti-template: government turnkey sales separately revisable from citizen simulator UX."
+}

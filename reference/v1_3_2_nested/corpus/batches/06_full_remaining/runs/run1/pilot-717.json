@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-717",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:05+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Nav apps precompute routes and assume traffic stays fixed during a drive, so they miss the true fastest path and reroute often",
+      "status": "explicit",
+      "evidence_span": "They assume traffic doesn't change during the course of your drive"
+    },
+    {
+      "id": "P2",
+      "text": "Minute-level traffic data from sources like loop detectors enables truly real-time routing",
+      "status": "explicit",
+      "evidence_span": "minute-level traffic data ingestion, prediction, accidents, and routing"
+    },
+    {
+      "id": "P3",
+      "text": "Time-dependent routing prices each road stretch by when the driver is expected to reach each turn",
+      "status": "explicit",
+      "evidence_span": "time-dependent routing, where the cost of each stretch of road is calculated based on when you're actually expected to reach each turn"
+    },
+    {
+      "id": "P4",
+      "text": "Businesses that move people or goods lack embeddable real-time turn-by-turn navigation and rely on costly workarounds",
+      "status": "explicit",
+      "evidence_span": "embeddable navigation simply doesn't exist today"
+    },
+    {
+      "id": "P5",
+      "text": "A Navigation SDK lets any company embed real-time turn-by-turn navigation into existing apps with minimal code",
+      "status": "explicit",
+      "evidence_span": "any company can embed real-time, turn-by-turn navigation directly into their existing apps"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Time-dependent routing accuracy",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Embeddable navigation SDK",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Actual fastest routes and in-app real-time navigation for businesses that move people or things",
+      "status": "explicit",
+      "evidence_span": "This ensures we find the actual fastest route"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This ensures we find the actual fastest route"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "embed real-time, turn-by-turn navigation directly into their existing apps"
+    },
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "This IP enables us to provide what's called time-dependent routing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "SaaS-revolution vision omitted (§4.1(4)). Five SDK install steps folded into P5. USC research origin treated as bio/history except as support for the routing IP. Multi-stop fleet instructions treated as use of the same SDK capability."
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1053",
+    "coder_session_id": "session_01",
+    "session_case_index": 8,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:16:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Business still runs on chaotic reply-all email threads that waste time",
+      "status": "explicit",
+      "evidence_span": "Businesses almost all run on these kind of reply all threads"
+    },
+    {
+      "id": "P2",
+      "text": "A loop is a named email-addressable smart mailing list backed by SaaS search, share, and history",
+      "status": "explicit",
+      "evidence_span": "The loop is a smart mailing list easy to search, easy to share, easy to create"
+    },
+    {
+      "id": "P3",
+      "text": "Loops are created and used through ordinary email with no downloads, accounts, or IT tickets at first",
+      "status": "explicit",
+      "evidence_span": "There was no IT help desk request. No one had to download anything"
+    },
+    {
+      "id": "P4",
+      "text": "Web interface provides searchable threads, attachments, profiles, and suggested related loops",
+      "status": "explicit",
+      "evidence_span": "web interface has all the threads, all the content, all the attachments. It has great search"
+    },
+    {
+      "id": "P5",
+      "text": "Open company loops, digests, and footer/website invites create viral followership across teams and partners",
+      "status": "explicit",
+      "evidence_span": "email lists are just intrinsically viral"
+    },
+    {
+      "id": "P6",
+      "text": "Freemium customers pay for customization, admin, and integrations with Google Apps, Dropbox, Salesforce",
+      "status": "explicit",
+      "evidence_span": "customers have told us they'll pay for customization"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "email-native loops product",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "viral loop distribution",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D3",
+      "name": "freemium customization and integrations",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make workplace email more productive, collaborative, and social without throwing email away",
+      "status": "explicit",
+      "evidence_span": "make email more productive, so you waste less time in it, more collaborative, and more social"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We don't ask for behavior changes, because it's just email"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that gives us huge virality"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "virality is it makes the freemium model really easy"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript cuts off mid beta invite (truncated=true). Team/investor bios excluded. Suggested loops and digests folded into web/search and viral followership respectively. Explicit because→virality→freemium noted in D2-D3 link evidence but coded as domain-value only (no premise-premise)."
+}

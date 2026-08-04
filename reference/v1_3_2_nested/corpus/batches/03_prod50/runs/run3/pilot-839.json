@@ -1,0 +1,137 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "No safe weight-loss tools exist for kids; adult options rely on calorie counting",
+      "status": "explicit",
+      "evidence_span": "$60 billion a year is spent on weight loss for adults, and none of it is safe for kids"
+    },
+    {
+      "id": "P2",
+      "text": "Stanford's effective program is priced and scheduled out of reach for working parents",
+      "status": "explicit",
+      "evidence_span": "it's $3,500 and has weekday afternoon sessions, so completely not available for working parents"
+    },
+    {
+      "id": "P3",
+      "text": "Curbo licenses Stanford methods into a mobile platform for kids",
+      "status": "explicit",
+      "evidence_span": "we licensed the Stanford program, and we created a mobile, scalable version of their approach"
+    },
+    {
+      "id": "P4",
+      "text": "Kids choose an avatar that delivers personalized food advice",
+      "status": "explicit",
+      "evidence_span": "if kids pick their avatar, they're much more likely to pay attention to the advice that it gives them"
+    },
+    {
+      "id": "P5",
+      "text": "Nutritious red/yellow/green tracking with gradual goal reduction drives weight loss without calorie counting",
+      "status": "explicit",
+      "evidence_span": "as they slowly make changes in their diet they end up losing weight"
+    },
+    {
+      "id": "P6",
+      "text": "Challenges, therapy-informed progress screens, and avatar reminders reinforce learning",
+      "status": "explicit",
+      "evidence_span": "We've been working on progress screens with therapists where we incorporate a lot of therapy into our program"
+    },
+    {
+      "id": "P7",
+      "text": "Weekly coach contact replaces parental food policing and lowers household tension",
+      "status": "explicit",
+      "evidence_span": "reducing the emotional tension in the household"
+    },
+    {
+      "id": "P8",
+      "text": "Free tracker plus paid messaging/coaching; scale via insurers, hospitals, and classrooms",
+      "status": "explicit",
+      "evidence_span": "we are talking to health insurers like Humana and UnitedHealthcare"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Pediatric weight-tool gap",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mobile behavior-change product",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Go-to-market economics",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Kids eat healthier, feel great, and lose weight",
+      "status": "explicit",
+      "evidence_span": "eat healthier feel great and lose weight"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "we licensed the Stanford program, and we created a mobile, scalable version of their approach"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Childhood obesity is the number one concern for parents"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Curbo is a mobile platform to enable children to eat healthier and to lose weight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help millions of kids worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Singleton D3: pricing-plus-institutional channels presented as one commercial scale module. Soft count at 8.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-839",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

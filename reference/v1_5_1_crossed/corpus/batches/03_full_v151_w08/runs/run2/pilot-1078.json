@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "coder_session_id": "session_06",
+    "session_case_index": 10,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Typical search stacks force separate changes to database, search index, and web server whenever the index is modified",
+      "status": "explicit",
+      "evidence_span": "every time we wanted to modify the index, we had to change the system in three separate places"
+    },
+    {
+      "id": "P2",
+      "text": "ThriftDB combines database, search index, and web server into one database-with-search system",
+      "status": "explicit",
+      "evidence_span": "ThriftDB is just combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P3",
+      "text": "Data is modeled natively as objects with attributes so apps put objects in, get objects back, and search across them",
+      "status": "explicit",
+      "evidence_span": "we designed ThriftDB to handle objects natively"
+    },
+    {
+      "id": "P4",
+      "text": "Schema changes can be uploaded without taking the site down, cutting development time",
+      "status": "explicit",
+      "evidence_span": "Now we just upload a new schema, and that's it"
+    },
+    {
+      "id": "P5",
+      "text": "ThriftDB is delivered as an on-demand cloud service with a free beta signup",
+      "status": "explicit",
+      "evidence_span": "launching it today as a on-demand cloud service"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "multi-component search infra pain",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "unified object search database",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "cloud on-demand delivery",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make implementing powerful search simple for application builders",
+      "status": "explicit",
+      "evidence_span": "make search really simple to implement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "in order to make search really simple, we had to solve two big problems"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "search is still too difficult to implement"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's a database with search built in"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.9
+  },
+  "notes": "Speaker's two problems (infra + object modeling) kept as distinct solution premises P2/P3. Fast/scalable filters and demo apps treated as cascade evidence of the unified DB, not extra premises. Flexible schema kept as separately failable ops condition. Octopart origin is evidence, not a second product premise."
+}

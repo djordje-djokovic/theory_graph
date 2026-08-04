@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Status-quo synthetic pesticides are being banned and natural waxes struggle to scale",
+      "status": "explicit",
+      "evidence_span": "even though there are natural waxes available that might come from plant or insect compounds, scaling up these solutions is a real challenge"
+    },
+    {
+      "id": "P2",
+      "text": "Glucose-based fungal biopolymer plus strain-produced antimicrobials form an edible protective coating",
+      "status": "explicit",
+      "evidence_span": "The coating is made of a glucose-based biopolymer produced by fungi and naturally occurring antimicrobials produced by different strains"
+    },
+    {
+      "id": "P3",
+      "text": "Coating delays ripening, controls decay comparably to synthetic fungicides, and extends shelf life",
+      "status": "explicit",
+      "evidence_span": "delaying the ripening process"
+    },
+    {
+      "id": "P4",
+      "text": "Applicators need no special equipment because the coating runs on existing packing lines",
+      "status": "explicit",
+      "evidence_span": "The product integrates seamlessly with existing machinery, so there is no need to invest in special equipment"
+    },
+    {
+      "id": "P5",
+      "text": "Stable cell-free formulations avoid the storage and logistics burdens of living microbes",
+      "status": "explicit",
+      "evidence_span": "they use living microbes in their formulations, which require special storage and logistic conditions. Our cell-free formulations are stable and can be easily stored"
+    },
+    {
+      "id": "P6",
+      "text": "Initial commercial focus is Latin America's most exported fruit classes: citrus, avocados, and berries",
+      "status": "explicit",
+      "evidence_span": "we're targeting the most exported fruit classes in Latin America, which are citrus, avocados, and berries"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Post-harvest protection problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Edible antimicrobial coating",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Packhouse fit and crop focus",
+      "premise_ids": [
+        "P4",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Natural protection that reduces food waste while keeping produce marketable",
+      "status": "explicit",
+      "evidence_span": "help fight against food waste and food insecurity without compromising human or planetary health"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "food waste is such a huge issue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "protect our food"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "integrates seamlessly with existing machinery"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Efficacy, ripening delay, and shelf-life claims merged into P3 as one coating-performance condition. Target-crop focus kept with packhouse fit as commercial/deployment module. Team credentials and $3.5B market framing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-300",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

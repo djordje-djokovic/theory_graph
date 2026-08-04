@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-232",
+    "coder_session_id": "session_01",
+    "session_case_index": 7,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:13:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Privacy regulation and fines make getting data access for AI slow because data is locked or must pass privacy engineering, legal, and security reviews",
+      "status": "explicit",
+      "evidence_span": "data privacy to be the biggest challenge for companies to build AI software today. We have spoken to hundreds of data and AI teams located in AI startups, enterprises like banks and insurance, and governments, and they all face the same problem. It takes a long time to get access to data"
+    },
+    {
+      "id": "P2",
+      "text": "BetterData converts private real data into fully anonymized synthetic data with the same properties for analytics and ML",
+      "status": "explicit",
+      "evidence_span": "We convert private real data into 100% anonymized synthetic data that has the same properties as the real data"
+    },
+    {
+      "id": "P3",
+      "text": "Confidential computing lets jobs run on encrypted data so BetterData cannot see customer data",
+      "status": "explicit",
+      "evidence_span": "We introduced confidential computing, where you can compute on encrypted data, so companies don't have to trust us with data because we can't even see it"
+    },
+    {
+      "id": "P4",
+      "text": "Data tokenization with tamper-proof locks keeps companies as full owners of their data tokens",
+      "status": "explicit",
+      "evidence_span": "data tokenization. Companies own their data fully, and we have tamper-proof locks for that as well"
+    },
+    {
+      "id": "P5",
+      "text": "Encrypted multi-party collaboration produces combined synthetic datasets without plaintext sharing between parties",
+      "status": "explicit",
+      "evidence_span": "companies can collaborate on data sets together and understand more about their combined and common customers, all while the data remains encrypted for all parties involved"
+    },
+    {
+      "id": "P6",
+      "text": "Each synthetic dataset ships with a QA report showing ML performance comparable to models trained on real data",
+      "status": "explicit",
+      "evidence_span": "Every single synthetic data we produce comes with a quality assurance report. And this ensures that synthetic data can be used just like the real data for your analytics, for your machine learning"
+    },
+    {
+      "id": "P7",
+      "text": "Licensing and support model covers on-premise, private, and public cloud via APIs or web UI",
+      "status": "explicit",
+      "evidence_span": "We have a licensing and support business model, and we support on-premise, private, and public cloud"
+    },
+    {
+      "id": "P8",
+      "text": "Close work with regulators ensures synthetic data is privacy-safe to use",
+      "status": "explicit",
+      "evidence_span": "we work very closely with regulators to ensure that our synthetic data is privacy safe to use"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Slow privacy-gated data access for AI",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Synthetic data, confidential compute, and tokenization platform",
+      "premise_ids": ["P2", "P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Licensing deployment and regulatory safety",
+      "premise_ids": ["P7", "P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Innovate on data in days not months while protecting customer privacy",
+      "status": "explicit",
+      "evidence_span": "an AI synthetic data platform that allows you to innovate on data in days and not months"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "the encrypted data from both banks will go into the confidential computing environment, combined together, and a synthetic data will be produced"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It takes a long time to get access to data. Data is either locked away, or they have to go through a long process"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "companies are able to access data in days and not months, retain full ownership over their data, and safely collaborate with others"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "ensure that our synthetic data is privacy safe to use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Upload/encrypt/tokenize demo steps folded as cascade of P3/P4. Synthetic, confidential compute, tokenization, and collaboration split as separately named product mechanisms (unsure→SPLIT). Pilots, grants, and team credentials excluded per 4.2. Singleton D1 retained as independently revisable customer-problem module."
+}

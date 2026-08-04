@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing apps force a choice between imperfect text-with-voice and context-limited voice-only messaging",
+      "status": "explicit",
+      "evidence_span": "Texting apps have tried to add voice, for instance, Siri and iMessage. But if you've ever used it, you know that you could spend more time correcting mistakes than if you just typed in the first place. Voice applications are great if you're in the car driving, but if you're in a meeting or in class, they're basically unusable"
+    },
+    {
+      "id": "P2",
+      "text": "Talks puts text and voice into every message so senders and receivers never choose format",
+      "status": "explicit",
+      "evidence_span": "Talks incorporates text and voice into every message. So starting today, you won't have to choose whether you type or talk or read or listen, because Talks always has both formats in every message"
+    },
+    {
+      "id": "P3",
+      "text": "Original audio remains available if transcription is imperfect",
+      "status": "explicit",
+      "evidence_span": "even if the transcription is not perfect, you always have the original audio"
+    },
+    {
+      "id": "P4",
+      "text": "Same ease extends to social posts with pictures, voice, video, doodles, music, and location",
+      "status": "explicit",
+      "evidence_span": "Talks allows you to communicate on social networks with your people as easily as it is to send a message to one of your friends"
+    },
+    {
+      "id": "P5",
+      "text": "Launching on iOS then Android, Windows Phone, and Blackberry",
+      "status": "explicit",
+      "evidence_span": "it's coming out on 4 platforms starting today with iOS and in the coming weeks on Android, Windows Phone and Blackberry"
+    },
+    {
+      "id": "P6",
+      "text": "Receivers need not have the app, enabling viral reach to any device",
+      "status": "explicit",
+      "evidence_span": "talks doesn't require the receiver to have the app so I can send messages literally to anyone no matter what device they have or what apps they have"
+    },
+    {
+      "id": "P7",
+      "text": "Voice cloning learns the user's voice to read messages aloud as them (or celebrities)",
+      "status": "explicit",
+      "evidence_span": "we created a technology called voice cloning. Over time, it learns your voice when you speak to the app, and it creates a voice clone of you on the cloud"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dual-format messaging product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cross-platform viral distribution",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Voice cloning",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how people communicate by always delivering both text and voice",
+      "status": "explicit",
+      "evidence_span": "talks which is going to change the way you communicate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Talks always has both formats in every message"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This will help talks be more viral than any other messaging app"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make a message that you send to a friend or that you post on Facebook and Twitter read out in your voice"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Team speech-tech credentials largely excluded per 4.2; voice cloning coded as product mechanism. Celebrity promo voices not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-938",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T12:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

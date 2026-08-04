@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-265",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:32:01+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cyclical non-fertility hormone data barely exists and doctors lack visibility into hormonal health",
+      "status": "explicit",
+      "evidence_span": "let doctors make decisions on our hormonal health completely blind"
+    },
+    {
+      "id": "P2",
+      "text": "Multiple timed blood tests per cycle with multi-day waits fail as a convenient, affordable way to manage individual hormone levels",
+      "status": "explicit",
+      "evidence_span": "drawing blood and waiting days for your test results is not a convenient or cost efficient solution"
+    },
+    {
+      "id": "P3",
+      "text": "Non-invasive patent-pending urine testing without a lab returns results in 15 minutes at roughly five times lower cost",
+      "status": "explicit",
+      "evidence_span": "patent-pending non-invasive urine test have completely removed the need for a lab"
+    },
+    {
+      "id": "P4",
+      "text": "Combined test and mobile app let women understand hormones at home",
+      "status": "explicit",
+      "evidence_span": "a test that, combined with our mobile app, empowers women to understand their hormones from the comfort of our home"
+    },
+    {
+      "id": "P5",
+      "text": "Algorithm-guided testing of three key hormones plus quantitative app readout yields individual hormone patterns and life/treatment tips",
+      "status": "explicit",
+      "evidence_span": "Based on each individual user's cycle, the unique hormonal algorithm indicates the three testing days per cycle"
+    },
+    {
+      "id": "P6",
+      "text": "Regular monitoring confirms menopause risk, fertility issues, and other life-impacting hormonal changes",
+      "status": "explicit",
+      "evidence_span": "help to confirm if you're going into menopause, will have problems getting pregnant, or pick up any hormonal changes"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Blind hormonal care",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "At-home test platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Ongoing monitoring outcomes",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "End-to-end at-home hormone understanding and monitoring for women",
+      "status": "explicit",
+      "evidence_span": "It is the definition of an end-to-end solution"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Narrow the gender data gap",
+      "evidence_span": "narrowing that gender data gap"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "let doctors make decisions on our hormonal health completely blind"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowers women to understand their hormones from the comfort of our home"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help to confirm if you're going into menopause, will have problems getting pregnant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Singleton D3 retained: ongoing clinical monitoring uses are framed as a separately claimed contribution beyond the core test UX. Demo steps folded into P3–P5. First-mover/blue-ocean not coded as premises."
+}

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-54",
+    "coder_session_id": "session_04",
+    "session_case_index": 10,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Aviation must decarbonize to close the gap to net-zero 2050 commitments",
+      "status": "explicit",
+      "evidence_span": "there's an urgent need to decarbonize aviation"
+    },
+    {
+      "id": "P2",
+      "text": "Hydrogen offers a better balance of energy efficiency and aircraft range/speed/payload than batteries or sustainable aviation fuel",
+      "status": "explicit",
+      "evidence_span": "hydrogen in the middle has good enough energy efficiency and a good enough aircraft performance"
+    },
+    {
+      "id": "P3",
+      "text": "Electrifying aviation should start with light aircraft and business jets before scaling to regional and commercial platforms",
+      "status": "explicit",
+      "evidence_span": "we need to start from the light aircraft"
+    },
+    {
+      "id": "P4",
+      "text": "A scalable hydrogen powertrain architecture (tanks, fuel cell, air supply, batteries, electric motors) can match existing business-jet missions without direct emissions",
+      "status": "explicit",
+      "evidence_span": "comparable performance without the direct emissions"
+    },
+    {
+      "id": "P5",
+      "text": "Aircraft integration around the powertrain includes tank placement under the cabin and thermal management",
+      "status": "explicit",
+      "evidence_span": "how to integrate the tanks below the cabin of an aircraft, and how to integrate thermal management system"
+    },
+    {
+      "id": "P6",
+      "text": "Working with European airports to supply hydrogen is required for jet readiness",
+      "status": "explicit",
+      "evidence_span": "work with European airports for them to be ready for our jet"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Aviation decarbonization and hydrogen choice",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Hydrogen-electric aircraft architecture",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Airport hydrogen readiness",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Zero-direct-emission business aviation with performance matching existing missions",
+      "status": "explicit",
+      "evidence_span": "comparable performance without the direct emissions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Long-run contribution to large-scale aviation CO2 reduction",
+      "evidence_span": "possible CO2 reduction contribution possible of 350 megaton of CO2 equivalent"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "That's why we are choosing hydrogen at Beyond Aero to develop our first aircraft"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "aviation will be electric. That's a solution to fill this gap"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can match the existing missions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring hydrogen for our aircraft"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Battery vs SAF comparison folded into single hydrogen-choice premise P2. LOI traction excluded. Singleton D3 retained: airport hydrogen partnership framed as separately revisable go-to-market condition."
+}

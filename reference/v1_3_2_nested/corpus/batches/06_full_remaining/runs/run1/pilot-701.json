@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A hospital is mostly an administrative layer (registration, billing, shared records) that technology can replace while doctors remain the care heroes",
+      "status": "explicit",
+      "evidence_span": "The hospital itself is mostly an administrative layer that handles things like registration, billing, and shared access to medical records. Turns out, you can replace most of these things with technology"
+    },
+    {
+      "id": "P2",
+      "text": "The world's largest hospital will be a ubiquitous technology platform that connects patients with doctors rather than buildings",
+      "status": "explicit",
+      "evidence_span": "the world's largest hospital won't be about buildings. Instead, it's going to be a ubiquitous technology platform that connects us with our doctors"
+    },
+    {
+      "id": "P3",
+      "text": "Onboarding is completed by scanning an insurance card and minimal setup instead of long registration forms",
+      "status": "explicit",
+      "evidence_span": "You just scan your insurance card. And you're good to go, we get all the information we need from your carrier"
+    },
+    {
+      "id": "P4",
+      "text": "The app presents a condition-organized health snapshot with records and actionable workflows (prescriptions, appointments, referrals, imaging prices, vitals)",
+      "status": "explicit",
+      "evidence_span": "It's a snapshot of your health organized by the conditions that you have"
+    },
+    {
+      "id": "P5",
+      "text": "Patients and doctors share messaging history and the real medical chart, with the doctor experience designed as carefully as the patient experience",
+      "status": "explicit",
+      "evidence_span": "we've painstakingly designed the doctor experience as well as the patient experience, because it's very important"
+    },
+    {
+      "id": "P6",
+      "text": "A seamless hybrid of virtual and in-person care keeps clinic doctors in context of virtual interactions and allows virtual follow-ups",
+      "status": "explicit",
+      "evidence_span": "we basically built a hybrid, a seamless hybrid of virtual and in-person care so that when you get to the clinic, your clinic doctor has all the context of your virtual interactions"
+    },
+    {
+      "id": "P7",
+      "text": "Controlling physician apps, patient apps, and third-party integrations enables experiences impossible for traditional providers",
+      "status": "explicit",
+      "evidence_span": "since you control your experience all the way from the physician applications to the patient applications and integrations with third parties, we are able to design an experience that would be impossible for the traditional health care providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hospital as replaceable admin layer",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Patient-doctor Carbon platform and hybrid care",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Full-stack experience control",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect patients with doctors so they receive the best possible collaborative care",
+      "status": "explicit",
+      "evidence_span": "doctors, nurses, labs, pharmacies, all across the country can collaborate to give the best possible care to their patients"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Design the future of healthcare via a ubiquitous technology platform",
+      "evidence_span": "Let's design the future of healthcare together"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you can replace most of these things with technology"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "seamless hybrid of virtual and in-person care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design an experience that would be impossible for the traditional health care providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "P2 coded because speaker presents platform-not-buildings as a condition for the care theory (not mere aspiration). UI feature list largely folded into P4 per §4.1(5). Mom biography and Udemy story excluded except as motivating framing. Pilot clinic opening is rollout not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-701",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:46:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

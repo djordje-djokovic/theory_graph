@@ -1,0 +1,116 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Savvy travelers juggle many reward cards and need one place to see balances and personal value",
+      "status": "explicit",
+      "evidence_span": "Both savvy travelers start pulling out their various reward card, credit card, showing off their elite status"
+    },
+    {
+      "id": "P2",
+      "text": "Superfly aggregates accounts and warns about losing points or status while benchmarking peers",
+      "status": "explicit",
+      "evidence_span": "give you a sense if you're at risk of losing your points or losing your status"
+    },
+    {
+      "id": "P3",
+      "text": "Deep analysis recommends specific cards or flights that boost rewards and status without changing travel patterns",
+      "status": "explicit",
+      "evidence_span": "the United Mileage Plus card will give you 450 extra dollars in rewards without changing your travel patterns"
+    },
+    {
+      "id": "P4",
+      "text": "Vacation planning compares points vs cash and ranks tickets by value, not only cheapest fare",
+      "status": "explicit",
+      "evidence_span": "not necessarily the cheapest one. So in this case, a Delta ticket, which is more expensive, actually gives you more value"
+    },
+    {
+      "id": "P5",
+      "text": "Free consumer service monetizes via credit-card/reward referrals and lead generation",
+      "status": "explicit",
+      "evidence_span": "comprised largely of credit card, reward referrals, lead generation"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Account aggregation and status coaching",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Value-based trip booking help",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Partner referral economics",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intelligent suggestions to earn more points, hit status faster, or spend points more wisely",
+      "status": "explicit",
+      "evidence_span": "give them intelligent suggestions about how to earn more points, get the status faster, or spend the points more wisely"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "But really, the key is the technology that we developed to track your value over time and project it forward"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "earn more points, get the status faster"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spend the points more wisely"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "referral fee"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.77
+  },
+  "notes": "Mint analogy treated as business-model framing inside P5, not a separate premise. Enterprise play mentioned but not detailed—left uncoded. Movie clip is illustrative, not coded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

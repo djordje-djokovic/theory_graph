@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parking scarcity makes drivers agitated and generates circling traffic",
+      "status": "explicit",
+      "evidence_span": "half of the traffic in Brooklyn is actually caused by people circling for a parking spot"
+    },
+    {
+      "id": "P2",
+      "text": "Curb Karma is a smartphone social network that finds and reserves parking spots between strangers",
+      "status": "explicit",
+      "evidence_span": "Curb Karma is an app for your smartphone available for the very first time today. And with Curb Karma, you can participate in a social network for parking"
+    },
+    {
+      "id": "P3",
+      "text": "Two purchasable Karma Credits reserve a spot; the giver earns one credit and the platform keeps one",
+      "status": "explicit",
+      "evidence_span": "A Karma Credit is worth $1 and available for purchase in the App Store. And so Marissa needs two Karma Credits to reserve a spot"
+    },
+    {
+      "id": "P4",
+      "text": "App workflow publishes spots, matches seekers, notifies accept/reserve, and rates the exchange",
+      "status": "explicit",
+      "evidence_span": "by her third click, she has a list of spots that are available"
+    },
+    {
+      "id": "P5",
+      "text": "Messaging without personal contacts plus GPS navigation enable the physical handoff",
+      "status": "explicit",
+      "evidence_span": "Marissa can use the built-in navigation feature using GPS to navigate to the spot"
+    },
+    {
+      "id": "P6",
+      "text": "Capture a small share of high-demand spot exchanges and expand to high parking-pain cities worldwide",
+      "status": "explicit",
+      "evidence_span": "Our plan is to expand to cities all over the world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Parking problem and city expansion",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Matching app and handoff",
+      "premise_ids": [
+        "P2",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Karma credit settlement",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "End parking madness by matching leavers and seekers to curb spots",
+      "status": "explicit",
+      "evidence_span": "end that madness and to disrupt parking"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "parking is a big problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finds you parking where and when you need it"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Everybody wins"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D3 retained: credit take-rate is an independently revisable commercial module. Demo feature list treated as one app-workflow premise (P4) per §4.1.2.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-986",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

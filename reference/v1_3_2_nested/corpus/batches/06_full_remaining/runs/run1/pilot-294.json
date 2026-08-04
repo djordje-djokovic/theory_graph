@@ -1,0 +1,140 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "PVA in laundry pods and related uses breaks down into microplastics that re-enter water and food",
+      "status": "explicit",
+      "evidence_span": "these parts will break down into microplastics, flow into the ocean"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary process upcycles agricultural wastes into biobased polymer resins processable on existing plastic manufacturing equipment",
+      "status": "explicit",
+      "evidence_span": "We upcycle these waste using our technology, turn them into biobased polymer, which can then be processed into these biobased resins"
+    },
+    {
+      "id": "P3",
+      "text": "Partners can make final products on existing machines, enabling easy adoption and scale",
+      "status": "explicit",
+      "evidence_span": "make it into the final product using existing manufacturing machines, very easy for them"
+    },
+    {
+      "id": "P4",
+      "text": "Material is USDA bio-based certified with patents filed across countries",
+      "status": "explicit",
+      "evidence_span": "The material is USDA BAU-based certified, and we have already filed multiple patents in multiple countries"
+    },
+    {
+      "id": "P5",
+      "text": "Partnerships with major CPG and packaging players (e.g., Unilever, Monosol, Anheuser-Busch) enable bio-based laundry pod commercialization",
+      "status": "explicit",
+      "evidence_span": "creating the world's first 100% bio-based laundry pod made from beer waste"
+    },
+    {
+      "id": "P6",
+      "text": "At commercial scale, unit cost is expected to be 10–30% cheaper than conventional PVA with lower CO2 and energy in manufacturing",
+      "status": "explicit",
+      "evidence_span": "we expect our unit cost to be 10 to 30% cheaper than the conventional PVA"
+    },
+    {
+      "id": "P7",
+      "text": "Bacteria fermentation on inedible biomass (and even plastic waste) produces modifiable polymer like brewing beer",
+      "status": "explicit",
+      "evidence_span": "we create bacteria that can intake different type of inedible biomass waste and even plastic waste"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "PVA microplastic problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Biobased polymer upcycling tech",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CPG partnership go-to-market",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Cost and footprint advantage",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Replace PVA with biobased polymer so people ingest fewer microplastics",
+      "status": "explicit",
+      "evidence_span": "replace PVA with bulb-based polymer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Upcycle agricultural waste and cut CO2, water use, and microplastic pollution at scale",
+      "evidence_span": "we aim to upcycle 200 million kilos of agricultural waste, replacing 100 kilos of PVA"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "microplastic is found in everywhere in our day life"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "turn them into biobased polymer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "100% bio-based laundry pod made from beer waste"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "win-win situation for everybody"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Wide application list (construction, textile, cosmetics) folded into polymer capability (v1.3.2 #5). Revenue projections and Series A ask excluded. Press/awards and founder bios excluded. Patents stay with material premise (v1.3.1 #1). Unilever clip is non-founder speech—used only where founder restates partnership.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:39:00+02:00"
+  }
+}

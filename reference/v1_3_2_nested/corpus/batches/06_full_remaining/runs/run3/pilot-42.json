@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-42",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:23:54+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Farmers urgently need new resilient varieties because climate crop failures are rising while agricultural output must increase sharply",
+      "status": "explicit",
+      "evidence_span": "we're expecting a massive uptick in the number of climate-related crop failures"
+    },
+    {
+      "id": "P2",
+      "text": "Finding useful gene targets with GWAS is unreliable and producing a variety via GMO or traditional breeding takes years and large capital",
+      "status": "explicit",
+      "evidence_span": "it's at least five years and up to $100 million to produce even a simple genetically modified variety"
+    },
+    {
+      "id": "P3",
+      "text": "Interpretable ML opens black-box models of natural selection history to identify causal gene targets with about 90% precision",
+      "status": "explicit",
+      "evidence_span": "use techniques from interpretable machine learning to open up what would have otherwise been black box models"
+    },
+    {
+      "id": "P4",
+      "text": "AI recommendations simulate crosses, forecast outcomes, and cut discovery and development time dramatically with far less data",
+      "status": "explicit",
+      "evidence_span": "lets us increase the process of discovery and development by up to 77%"
+    },
+    {
+      "id": "P5",
+      "text": "Lower cost and time make previously uneconomic crops feasible and support partner pipeline insertion plus own seed products",
+      "status": "explicit",
+      "evidence_span": "even crops that were too complicated or too costly to work on are now economically feasible for us"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Climate-resilient crop demand and slow breeding",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Causal gene discovery platform",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cross recommendation and forecasting",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Any-crop commercial reach",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Deliver new productive crop varieties to farmers much faster and cheaper",
+      "status": "explicit",
+      "evidence_span": "accelerate the creation of new and productive crop varieties"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Plant the seeds for a greener, more sustainable tomorrow",
+      "evidence_span": "join us in planting the seeds for a greener tomorrow"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're just not going to meet the needs of billions of people in time"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "identify causal gene targets with 90% precision"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "forecast plant outcomes before they even happen"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get our technology into their existing breeding pipelines"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Split discovery vs recommendation as separately learnable tech modules (speaker validates crosses as a distinct stage). Academic bio excluded. Greenhouse broccoli demo not a premise. Singletons D2–D4 retained with independent paths to faster variety creation."
+}

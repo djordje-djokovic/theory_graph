@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Facebook/Twitter import seeds profile and friends without forms",
+      "status": "explicit",
+      "evidence_span": "pre-populate your friends list with your existing contacts from Facebook and Twitter"
+    },
+    {
+      "id": "P2",
+      "text": "Nearby people are visible and callable immediately after signup",
+      "status": "explicit",
+      "evidence_span": "You would be immediately able to interact with them"
+    },
+    {
+      "id": "P3",
+      "text": "Open profiles let both sides see who someone is before calling",
+      "status": "explicit",
+      "evidence_span": "You can immediately see open profiles of people, see who they are before calling them"
+    },
+    {
+      "id": "P4",
+      "text": "Works on Wi-Fi/cellular; ads with subscription to remove them",
+      "status": "explicit",
+      "evidence_span": "We work on Wi-Fi, 5G. And we are initially ads-based with a subscription to turn out the ads"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Instant social and nearby reach",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connectivity and ads model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time nearby video messaging without dating-site busywork",
+      "status": "explicit",
+      "evidence_span": "one-of-a-kind video messenger app"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spontaneous interactions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can actually call them right now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.72
+  },
+  "notes": "Sparks folded into nearby interaction product. Pitch is demo-heavy and thin on causal commercial structure beyond ads; confidence tempered.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1064",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

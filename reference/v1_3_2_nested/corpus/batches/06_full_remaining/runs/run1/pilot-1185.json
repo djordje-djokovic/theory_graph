@@ -1,0 +1,130 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Employers on traditional boards get flooded with mostly irrelevant applications and waste hours filtering",
+      "status": "explicit",
+      "evidence_span": "I spend hours sifting through the noise to find those 10 best"
+    },
+    {
+      "id": "P2",
+      "text": "Job seekers cannot get noticed and lack view and feedback signals on applications",
+      "status": "explicit",
+      "evidence_span": "I also want to know what my application's viewed. I also want to know what the employer thought of me"
+    },
+    {
+      "id": "P3",
+      "text": "Handpicked uniform full-time listings exclude scams and multi-level marketing",
+      "status": "explicit",
+      "evidence_span": "we handpick every single job that's posted on our site. That means that they're all full-time opportunities. There's no multi-level marketing. There's no scams"
+    },
+    {
+      "id": "P4",
+      "text": "Job seekers paying to apply causes employers and recruiters to notice them",
+      "status": "explicit",
+      "evidence_span": "employers and recruiters that we work with know that job seekers pay to apply on LocalBacon. And they notice that"
+    },
+    {
+      "id": "P5",
+      "text": "Employers agree to give feedback and notify seekers when applications are viewed",
+      "status": "explicit",
+      "evidence_span": "employers and recruiters agree to give feedback and allow the job seeker to know when they view their application"
+    },
+    {
+      "id": "P6",
+      "text": "Job credits priced from $0.99 with volume discounts monetize paid applications and add-on services",
+      "status": "explicit",
+      "evidence_span": "We're going to start at $0.99. And this is how our system works. When you go to apply to a job, as a job seeker, you can purchase job credits"
+    },
+    {
+      "id": "P7",
+      "text": "Familiar employer workflow with flag/shelve and ATS handoff preserves recruiter behavior while adding transparency",
+      "status": "explicit",
+      "evidence_span": "we tried to make it as familiar for the employer and recruiter to use so they're not changing their behavior"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken two-sided hiring process",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Curated pay-to-apply marketplace with feedback",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Job credits pricing",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fix hiring for both job seekers and employers via quality matching with notice and transparency",
+      "status": "explicit",
+      "evidence_span": "created LocalBacon to fix the fundamental problems that exist for both job seekers and employers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Job seekers want to get noticed. On our website, the employers and recruiters that we work with know that job seekers pay to apply"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That system is broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "quality jobs for our quality candidates"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all these things that we're giving job seekers, these are worth something"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Singleton D3 retained: job-credits pricing is a separately revisable commercial module. Ajax search, save panel, and iPaper resume streaming folded into the marketplace product per v1.3.2 §4.1(5). Survey WTP and $9 figures treated as evidence for monetization, not separate premises. Survey sample size excluded as traction.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1185",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

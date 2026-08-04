@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-590",
+    "coder_session_id": "session_05",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rent payment is rigid and fragmented across ACH/cards, certified checks, one-off loans, and accounting tools that lack lending/compliance integration",
+      "status": "explicit",
+      "evidence_span": "You can go and get a loan online, but the funding of your rent payment is still an issue"
+    },
+    {
+      "id": "P2",
+      "text": "Platform offers online certified payments and installment loans at checkout so residents can pay over time while owners receive good funds",
+      "status": "explicit",
+      "evidence_span": "we offer online certified payments, where someone can actually schedule a certified payment"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary resident data (identity, rent amount, bank history) enables near-instant credit decisions for rent",
+      "status": "explicit",
+      "evidence_span": "we have prioritary data access. We know where you live. We know who you are. We know exactly how much rent you pay. We have bank account access"
+    },
+    {
+      "id": "P4",
+      "text": "Integrated stack sits between property and resident: free for owners, monetized via loan origination and payment processing fees",
+      "status": "explicit",
+      "evidence_span": "We're 100% free for our owners"
+    },
+    {
+      "id": "P5",
+      "text": "GTM targets mid-to-large management groups controlling a large share of US rental households",
+      "status": "explicit",
+      "evidence_span": "Our cohort of communities that we go after and management groups controlling we're between 50 properties all up to 500 properties"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "rigid fragmented rent payment",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "certified payments and instant rent credit",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "owner-free property channel monetization",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Flexible rent payments that get owners paid while giving residents installment options without hunting down managers",
+      "status": "explicit",
+      "evidence_span": "Pay over time, and the owner-operator gets the money"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "don't have the technology to our available to deliver flexible payments"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can deliver to you credit within seconds"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We generate revenue from loan origination as well as payment processing fees"
+    },
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "So we can deliver to you credit within seconds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Transcript opens mid-demo and ends on market vision. §4.1.6: ACH/loan/certified-check/accounting gaps folded as one payment-pain bundle (P1). One-loan-at-a-time rule folded into credit product (P2). Accounting integration mentioned as feature of cohesive stack under P4. Half-trillion rent market and renter-renaissance framing excluded as vision."
+}

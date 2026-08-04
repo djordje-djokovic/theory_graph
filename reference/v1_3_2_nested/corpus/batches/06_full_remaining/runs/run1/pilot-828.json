@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-828",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Web growth scattered content across sites and apps, forcing users into fragmented tab- and app-hopping instead of fluid surfing",
+      "status": "explicit",
+      "evidence_span": "we've traded the fluidity and connectedness of surfing for stacks of browser tabs and single-purpose mobile apps"
+    },
+    {
+      "id": "P2",
+      "text": "VIRB weaves together the services people already use into one surfing experience on web and mobile",
+      "status": "explicit",
+      "evidence_span": "reinvent surfing the internet on web or mobile by weaving together services you use"
+    },
+    {
+      "id": "P3",
+      "text": "VIRB generates interactive cards from third-party services and keeps activity in a persistent stream that shares context across services",
+      "status": "explicit",
+      "evidence_span": "VIRB generates a card from services like IMDb and Rotten Tomatoes"
+    },
+    {
+      "id": "P4",
+      "text": "Activity streams can be saved into shareable collections that support collaborative planning and notifications",
+      "status": "explicit",
+      "evidence_span": "I can also save this entire activity stream into a collection, which I can share publicly or, in this case, with just my team"
+    },
+    {
+      "id": "P5",
+      "text": "Semantic search and recommendations build contextual bridges across services",
+      "status": "explicit",
+      "evidence_span": "To build these contextual bridges across services, we use data technologies like semantic search and recommendations"
+    },
+    {
+      "id": "P6",
+      "text": "New user interfaces and interaction paradigms are required alongside data technologies to weave services together",
+      "status": "explicit",
+      "evidence_span": "We also design from the ground up new user interfaces and interaction paradigms"
+    },
+    {
+      "id": "P7",
+      "text": "VIRB syncs activity and data across devices and deep-links into native mobile apps",
+      "status": "explicit",
+      "evidence_span": "VIRB syncs my activity and data across devices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented web problem",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Service-weaving product experience",
+      "premise_ids": ["P2", "P3", "P4", "P7"]
+    },
+    {
+      "id": "D3",
+      "name": "Semantic bridges and UI paradigms",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get things done in one place by fluidly surfing across linked services on any screen",
+      "status": "explicit",
+      "evidence_span": "Verb is an intelligent layer over the internet that helps you get things done in one place"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Bring back the magic of surfing from link to link across services and devices",
+      "evidence_span": "bring back the magic of surfing, fluidly moving from link to link, service to service, on any screen or device"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "when we can weave together these services, we can explore opportunities around this interconnected graph"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why do we need to settle on a fragmented web"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helps you get things done in one place"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "To build these contextual bridges across services, we use data technologies like semantic search and recommendations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Demo feature list (cards, theaters, restaurants, judges research) folded into the core weaving/stream premises per §4.1(5). Vision of reinventing surfing coded as secondary_value, not a premise (§4.1(4)). Singleton D1 justified as separately revisable market fragmentation assumption."
+}

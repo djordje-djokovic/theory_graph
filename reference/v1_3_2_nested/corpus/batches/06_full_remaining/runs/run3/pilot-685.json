@@ -1,0 +1,98 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Walls and alarms fail; hackable systems get hacked, including source code",
+      "status": "explicit",
+      "evidence_span": "anything that can be hacked will be hacked"
+    },
+    {
+      "id": "P2",
+      "text": "Encryption without searchability forces a convenience-versus-security choice",
+      "status": "explicit",
+      "evidence_span": "make a choice between convenience and security"
+    },
+    {
+      "id": "P3",
+      "text": "Overnest searches encrypted data quickly without revealing the key",
+      "status": "explicit",
+      "evidence_span": "search encrypted data as easily and as quickly as Google can search web pages, all without revealing your key"
+    },
+    {
+      "id": "P4",
+      "text": "Git Zero is encrypted Git hosting with searchable encrypted indexes",
+      "status": "explicit",
+      "evidence_span": "Git Zero, the world's first encrypted Git hosting"
+    },
+    {
+      "id": "P5",
+      "text": "Migration is one command and preserves familiar Git workflow",
+      "status": "explicit",
+      "evidence_span": "with just one command, Alex can take an existing, unencrypted repository and migrate it to git0.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Failed perimeter security",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Searchable encrypted Git",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Protect proprietary source code without losing search and normal Git work",
+      "status": "explicit",
+      "evidence_span": "encrypts your source code, at the same time, allows you to search while it's all encrypted"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enterprises, of course, they protect their source code"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encrypted search on an encrypted source code repository"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Cryptographer vetting folded into product security claim. Sign-up CTA excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-685",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:44:00+02:00"
+  }
+}

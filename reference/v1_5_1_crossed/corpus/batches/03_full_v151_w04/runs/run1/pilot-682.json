@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-682",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:52:58Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "In high-inflation emerging markets most people are unbanked and lack credit, making common online credit payments impossible",
+      "status": "explicit",
+      "evidence_span": "most of the population in this country is unbanked and also doesn't have access to credit"
+    },
+    {
+      "id": "P2",
+      "text": "Ripio Credit lets users pay online on installments in local currency at Ripio merchants and Bitcoin-accepting merchants worldwide",
+      "status": "explicit",
+      "evidence_span": "our users can pay online on installments in local currency in any of our merchants or the hundreds of thousands of merchants that accept Bitcoin payments worldwide"
+    },
+    {
+      "id": "P3",
+      "text": "Machine learning identity verification and fraud scoring from ID photos, social data, and external sources underwrites credit approval",
+      "status": "explicit",
+      "evidence_span": "processed by our back end using machine learning techniques, together with the information that the user provided, the social data, also pulling some external sources"
+    },
+    {
+      "id": "P4",
+      "text": "Users repay via monthly statements using a bank account or cash at thousands of partner locations such as Pago Fácil, Boleto, and Oxxo",
+      "status": "explicit",
+      "evidence_span": "they can use any of the 16,000 merchant locations that we have partnered with, where they can go and pay in cash"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unbanked online credit gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Bitcoin installment credit product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "cash and bank repayment network",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unbanked emerging-market consumers can shop online on affordable local-currency installments",
+      "status": "explicit",
+      "evidence_span": "pay on credit on affordable installments in local currency"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "impossible to do it in the most common way to do a payment online, which is on credit"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Ripio Credit, which is our solution to this problem"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes it very convenient for a user to start buying online"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Steam demo installment options folded into credit-payment mechanism. Prior BitPagos merchant payments are background. Team credit-scoring experience cited as enabling underwriting, folded into P3. Merchant counts excluded as traction."
+}

@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Tiny web-page changes still require developers/agencies, high cost, and days or weeks of wait",
+      "status": "explicit",
+      "evidence_span": "if you wanted to make even the slightest change to a page on the Web, like moving something one inch to the right, you better be willing to call a developer or agency, pay hundreds or thousands, and wait days or weeks"
+    },
+    {
+      "id": "P2",
+      "text": "Only a tiny share of people know HTML/CSS, so everyone else is stuck in rigid templates",
+      "status": "explicit",
+      "evidence_span": "the people that know how to do this, all the HTML, CSS, they're less than 1% of the population. So that means the other 99%, at best, are able to fill in the blanks of a rigid paint-by-numbers template"
+    },
+    {
+      "id": "P3",
+      "text": "In-browser PageCloud editing gives PowerPoint-like creative freedom with instant live saves",
+      "status": "explicit",
+      "evidence_span": "If you know how to use PowerPoint or Keynote or Photoshop, you already know how to use PageCloud"
+    },
+    {
+      "id": "P4",
+      "text": "Dragging third-party URLs onto the page creates live widgets such as video players and ticket commerce",
+      "status": "explicit",
+      "evidence_span": "go to YouTube and grab that URL and drag it right to our page. We automatically get a fully functional YouTube player"
+    },
+    {
+      "id": "P5",
+      "text": "Mobile mode lets users reflow content so pages look right on phones",
+      "status": "explicit",
+      "evidence_span": "Page Cloud dramatically simplifies the incredibly complex task of making Web pages mobile-friendly. Just enter mobile mode"
+    },
+    {
+      "id": "P6",
+      "text": "Designers can paste from Photoshop and copy existing pages into pixel-accurate editable PageCloud pages",
+      "status": "explicit",
+      "evidence_span": "copy a poster image right out of Photoshop and paste it directly in our browser. Straight from Photoshop to the web"
+    },
+    {
+      "id": "P7",
+      "text": "Disrupt preorder price is $75 per year for a site",
+      "status": "explicit",
+      "evidence_span": "get an amazing price of just $75 for the year for your site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken web publishing for non-developers",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Freeform browser web creation platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Launch preorder pricing",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Complete creative freedom for anyone with a browser to create and publish the web",
+      "status": "explicit",
+      "evidence_span": "everyone with a web browser gets complete creative freedom"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the experience of creating something, putting it online, and sharing it with the world"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's no other platform on the planet that gives you this creative freedom"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "$75 for the year for your site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.3.1 §4.1.1: patent-pending inventions mentioned as deep technology stay inside the product platform premises, not a separate IP premise. Developer source-access features mentioned briefly not coded as distinct module. Promo timing excluded as event detail of the price offer.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-764",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:21:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

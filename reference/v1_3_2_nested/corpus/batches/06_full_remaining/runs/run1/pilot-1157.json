@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Travelers' rewards value is fragmented across air, hotel, car, and card programs and hard to optimize",
+      "status": "explicit",
+      "evidence_span": "organizes all your points in one spot, scans all the rewards that are out there, and figure out which offer is best suited for you"
+    },
+    {
+      "id": "P2",
+      "text": "Dashboard totals balances, personal point value, status-risk, and peer ranking across accounts",
+      "status": "explicit",
+      "evidence_span": "We'll give you a snapshot of the total value, your personal value"
+    },
+    {
+      "id": "P3",
+      "text": "Analysis of spending patterns projects accrual and recommends cards or actions that reach status sooner",
+      "status": "explicit",
+      "evidence_span": "the key is the technology that we developed to track your value over time and project it forward"
+    },
+    {
+      "id": "P4",
+      "text": "Trip planning filters destinations and overlays points-versus-cash plus partner offers on flight results",
+      "status": "explicit",
+      "evidence_span": "we will go and filter and figure out which destinations are best suited for you, let you know if you're better off paying with points or cash"
+    },
+    {
+      "id": "P5",
+      "text": "Consumer product is free; revenue comes from referral fees paid by airlines, reward cards, and similar partners",
+      "status": "explicit",
+      "evidence_span": "When the user saves, we make money off the referral fee that we get not from the user, but rather from the airlines, the reward cards"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rewards dashboard and projections",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Trip offer overlay",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Referral monetization",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help travelers become savvy by maximizing rewards value and elite status",
+      "status": "explicit",
+      "evidence_span": "our goal at Superfly is to help you become one"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "which offer is best suited for you"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "overlay them with which offer is best suited for you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When the user saves, we make money"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Singleton D2 retained: destination/Kayak overlay is a separately presented planning module. Sign-up PIN flow folded into dashboard premise. Unused-points market size excluded as framing. Competitors listed only as contrast, not premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1157",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

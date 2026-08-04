@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-913",
+    "coder_session_id": "session_02",
+    "session_case_index": 11,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:09:50Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise workers cannot do real work on personal tablets because needed apps sit behind firewalls and MDM locks down the whole device",
+      "status": "explicit",
+      "evidence_span": "people working within traditional enterprises cannot get their work done today on those devices because the apps they need"
+    },
+    {
+      "id": "P2",
+      "text": "WorkSpot is a secured work container on the device that leaves the rest of the device personal, unlocking via existing auth",
+      "status": "explicit",
+      "evidence_span": "the one place where IT manages and the rest of the device remains personal"
+    },
+    {
+      "id": "P3",
+      "text": "One-click access traverses live SSL VPN to corporate apps and documents with encrypted offline virtual file system and remote wipe of only WorkSpot",
+      "status": "explicit",
+      "evidence_span": "We just did it in one click and seconds, traversing through a live SSL VPN"
+    },
+    {
+      "id": "P4",
+      "text": "IT deploys in minutes on existing security investments with integrations to major SSL VPN vendors covering most enterprise users",
+      "status": "explicit",
+      "evidence_span": "No new boxes to install in the data center, and he's up and running in minutes"
+    },
+    {
+      "id": "P5",
+      "text": "Patent-pending mobile virtualization and activity data power Insights and Events apps for UX, problem detection, audit, and compliance",
+      "status": "explicit",
+      "evidence_span": "We take that big data and we've created two big apps for IT, Insights and Events"
+    },
+    {
+      "id": "P6",
+      "text": "Access and control are free; revenue comes from charging for end-user activity data",
+      "status": "explicit",
+      "evidence_span": "giving access and control for free. What we do is change the revenue equation to charge for end user activity data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "BYOD work access failure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "secure work container and VPN access",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "activity data Insights and Events",
+      "premise_ids": ["P5"]
+    },
+    {
+      "id": "D4",
+      "name": "free access paid data model",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Enterprises get simple secure BYOD so employees work on personal devices while IT keeps control",
+      "status": "explicit",
+      "evidence_span": "We simplify Bring Your Own Device, or BYOD, for enterprises"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reinvent application delivery for BYOD"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the one place for work with the rest of the device remaining personal"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Insights is used to improve things like user experience"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "charge for end user activity data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "MDM/VPN/VDI pains folded as one BYOD access problem (§4.1.6). Container, VPN one-click, encrypted offline files, and wipe folded as secure-access cascade with IT deploy path; Insights/Events split as separately claimed data product module (§4.1.7). Team prior-generation credentials excluded (§4.2). Early customers as traction excluded. Anti-template: problem, access product, analytics module, and pricing separately revisable."
+}

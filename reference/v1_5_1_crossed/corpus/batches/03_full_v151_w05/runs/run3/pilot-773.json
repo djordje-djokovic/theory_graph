@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-773",
+    "coder_session_id": "session_02",
+    "session_case_index": 17,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:59:26Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor growers' sensor notes and yields are siloed raw data that force guesswork, consultant spend, or gut decisions",
+      "status": "explicit",
+      "evidence_span": "this is raw data. It doesn't talk to each other, and it doesn't tell Tom anything"
+    },
+    {
+      "id": "P2",
+      "text": "AgriList aggregates greenhouse data in one place via sensor sync, document upload, and manual entry with dashboards and graphs",
+      "status": "explicit",
+      "evidence_span": "AgriList can automatically sync with any hardware he has in the equipment, like sensors. He can upload documents. And he can even enter data manually"
+    },
+    {
+      "id": "P3",
+      "text": "Task management surfaces harvest/seed work and yield risks so growers can alert sales and adjust growing cycles",
+      "status": "explicit",
+      "evidence_span": "Agoralyst also acts as a task manager, showing Tom what he has to do on a day-to-day basis"
+    },
+    {
+      "id": "P4",
+      "text": "Energy recommendations tell growers when to turn lights on/off against time-varying electricity rates to cut costs",
+      "status": "explicit",
+      "evidence_span": "provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings"
+    },
+    {
+      "id": "P5",
+      "text": "Sold as a subscription priced per acre per month to indoor greenhouse growers in a large growing market",
+      "status": "explicit",
+      "evidence_span": "Our private beta was released at a subscription price at $1,000 per acre per month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "operations data platform",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "energy savings recommendations",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "subscription GTM",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help indoor farmers take control of operations, eliminate guesswork, save money, and grow better",
+      "status": "explicit",
+      "evidence_span": "a platform that helps indoor farmers take control of their operations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Feed the world more sustainably via efficient indoor growing",
+      "evidence_span": "We want to help feed the world"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all of Tom's data talks to each other, eliminating the guesswork from decision making"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Agilis analyzes and makes recommendations for Tom, saving him money"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With AgriList, it's a lot easier"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "ASR variants AgriList/Agoralyst/Agilis kept in evidence spans verbatim. Sensor list (lighting, temp, CO2…) folded as context for siloed data pain. Singletons D2 and D3 justified as separately revisable recommendation module and pricing."
+}

@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-934",
+    "coder_session_id": "session_03",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:59Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Retail shippers of diverse real items cannot easily get packing and shipping costs across fragmented carrier markets that only quote boxed freight",
+      "status": "explicit",
+      "evidence_span": "It's a problem because it's so hard to determine what it costs to pack and ship something"
+    },
+    {
+      "id": "P2",
+      "text": "ShipHawk aggregates carriers and converts real items into packed weights and dimensions for instant multi-carrier packing and shipping quotes",
+      "status": "explicit",
+      "evidence_span": "we have aggregated all of these different markets into one website"
+    },
+    {
+      "id": "P3",
+      "text": "Users can schedule pickup or drop off at network locations and complete pay/label in minutes, including local delivery",
+      "status": "explicit",
+      "evidence_span": "you get to schedule a pickup at your home or office"
+    },
+    {
+      "id": "P4",
+      "text": "Revenue is commission from shipping, packing, insurance, and other service providers sent business",
+      "status": "explicit",
+      "evidence_span": "ShipHawk makes money by collecting a commission from all the service providers that we send business to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "opaque fragmented shipping cost problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "multi-carrier quote and fulfillment platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "commission from service providers",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Shipping any real-world item becomes as easy and comparable as booking travel",
+      "status": "explicit",
+      "evidence_span": "we are to shipping what kayak is to travel"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "None of these guys will give you quotes unless your item is in a box"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "instant packing quotes, instant shipping quotes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "collecting a commission from all the service providers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Micro-niche retailer pains and carrier fragmentation folded as one quoting problem (§4.1.6). Aggregate markets, item-to-dimensions conversion, multi-carrier options, pickup/dropoff/labels folded as platform cascade (§4.1.7). Founder shipping-company bio excluded. Anti-template: problem, platform, and commissions separately revisable."
+}

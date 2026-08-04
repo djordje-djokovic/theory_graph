@@ -1,0 +1,103 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users need a way to find liked pictures in the daily flood of shared photos",
+      "status": "explicit",
+      "evidence_span": "how do you find pictures you like?"
+    },
+    {
+      "id": "P2",
+      "text": "Connects social interests to a large real-time photo ingest to build personal skylines",
+      "status": "explicit",
+      "evidence_span": "From Facebook, we collect the pages you have liked. From Twitter, we connect your saved searches and recently used hashtags"
+    },
+    {
+      "id": "P3",
+      "text": "Skyline is a Twitter-like real-time photo timeline with ranking, friends, and location modes",
+      "status": "explicit",
+      "evidence_span": "It's like a Twitter timeline. It's a real-time stream of photos with the most recent pictures shown on top"
+    },
+    {
+      "id": "P4",
+      "text": "Interest-targeted brand ads and embeddable widgets monetize while expanding reach",
+      "status": "explicit",
+      "evidence_span": "They can revenue share on our ads or pay us a monthly fee for an ad-free experience. This both increases our revenue and our reach"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Photo finding problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Interest-matched skyline product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Brand targeting and widgets",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Do for real-time photos what Google did for websites",
+      "status": "explicit",
+      "evidence_span": "we'll do real-time photos, what Google did for websites"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find pictures you like"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "everybody gets his own skyline"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "increases our revenue and our reach"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Multi-platform launch folded into product domain via D2 skyline delivery assumption; monetization separate.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1070",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:39:10+02:00"
+  }
+}

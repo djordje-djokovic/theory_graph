@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-588",
+    "coder_session_id": "session_05",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote video monitoring for small and retail businesses is an untapped market relative to expensive human-only monitoring",
+      "status": "explicit",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    },
+    {
+      "id": "P2",
+      "text": "Deep-learning platform performs active threat detection (e.g., mask and gun cues) and routes detections to remote analysts who contact police",
+      "status": "explicit",
+      "evidence_span": "we're actually the only ones that we know of who are working on active threat detection"
+    },
+    {
+      "id": "P3",
+      "text": "The platform is about ten times less expensive than traditional human-only remote video monitoring",
+      "status": "explicit",
+      "evidence_span": "which is 10 times more expensive than our platform"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market runs through security integrators serving banks, retail, and international partners",
+      "status": "explicit",
+      "evidence_span": "we're currently in talks with March Networks to perform testing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "small-business remote monitoring market",
+      "premise_ids": ["P1", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "active threat detection platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "security integrator channels",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable active threat detection for small and retail businesses via remote video monitoring",
+      "status": "explicit",
+      "evidence_span": "bring security surveillance technology into the 21st century"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "remote video monitoring for small and retail businesses is truly an untapped market"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "working on active threat detection"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in talks with March Networks to perform testing"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Mask/gun demo cues folded into active-threat mechanism P2 (§4.1.7). ARR/market-size capture and open-beta free months treated as traction/ask framing, not premises. Board hire excluded as credential. Singletons D2/D3 retained as separately revisable detection vs channel modules. Anti-template: market/price, product, and integrator channel are separately asserted modules."
+}

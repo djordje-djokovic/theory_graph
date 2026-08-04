@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-272",
+    "coder_session_id": "session_02",
+    "session_case_index": 8,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastics are economically essential yet mostly become persistent waste that recycling and industrial composting fail to solve at scale",
+      "status": "explicit",
+      "evidence_span": "Plastics are a critical part of our modern economy. They are an enabling technology in just about every single thing that you and I all love to use. They're a $600 billion industry"
+    },
+    {
+      "id": "P2",
+      "text": "Proprietary coating stabilizes enzymes so they can be packaged inside plastics and triggered to degrade materials from the inside out",
+      "status": "explicit",
+      "evidence_span": "We take enzymes and wrap them in our special proprietary coating that acts like PPE and enables us to take these fragile molecules and put them inside the plastics, where they can be triggered to degrade the materials from the inside out"
+    },
+    {
+      "id": "P3",
+      "text": "On-demand degradation with water and heat returns plastics to soil, enables warm-water baths / decentralized waste, and can support chemical recycling",
+      "status": "explicit",
+      "evidence_span": "the degradation is on demand. It requires water and heat. It doesn't happen just on its own"
+    },
+    {
+      "id": "P4",
+      "text": "End-to-end engineered degradation stops microplastics at the source",
+      "status": "explicit",
+      "evidence_span": "we're able to degrade from one end to the other through some clever engineering work that we were able to do, which means we stop microplastics at the source"
+    },
+    {
+      "id": "P5",
+      "text": "Drop-in enzyme additive starts with PLA to expand compostable design space, ease regulatory burdens, and widen favorable end-of-life conditions",
+      "status": "explicit",
+      "evidence_span": "We're developing a drop-in additive that's readily scalable. Enzymes are incredibly efficient, so we only need to use a little bit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Plastic waste vs essential plastics",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Enzyme-in-plastic degradation tech",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "PLA drop-in go-to-market",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Plastics that self-degrade when done so materials can live more harmoniously with nature",
+      "status": "explicit",
+      "evidence_span": "stabilize enzymes and package them up inside of the plastics so they can self-degrade when we're done with them"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stop microplastics at the source",
+      "evidence_span": "we stop microplastics at the source"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "6.3 billion tons of plastic on our land, oceans, air"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "self-degrade when we're done with them"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "expanded design space for products"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Recycling/compostable failures folded into P1 problem set. Nature/Science publication photos treated as validation of P2–P3, not premises. Warm-water bath and circular chemical recycling kept as performance/path facets of on-demand degradation (P3) per process+performance package. PLA market size and team/investor credentials excluded or folded into P5 GTM. Anti-template: D1 need / D2 tech / D3 GTM separately revisable per transcript (waste problem vs enzyme coating mechanism vs PLA additive entry)."
+}

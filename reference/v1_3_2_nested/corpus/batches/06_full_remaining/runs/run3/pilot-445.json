@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Space assets currently carry only one tank of fuel, so empty satellites must be destroyed",
+      "status": "explicit",
+      "evidence_span": "It is time to stop throwing satellites away"
+    },
+    {
+      "id": "P2",
+      "text": "Gas stations in space: tanks launched opportunistically, orbital logistics, and delivery of the right propellant on demand",
+      "status": "explicit",
+      "evidence_span": "We're building gas stations in space"
+    },
+    {
+      "id": "P3",
+      "text": "A standardized drop-in fueling port with self-aligning connection enables safe, reliable on-orbit refueling without costly robotic attendants",
+      "status": "explicit",
+      "evidence_span": "This fueling port allows satellites to be refueled safely and reliably in orbit"
+    },
+    {
+      "id": "P4",
+      "text": "Customers save about 50% CapEx and the operator targets very high gross margins",
+      "status": "explicit",
+      "evidence_span": "Our customers can save 50 percent on their capital expenditure, and we take home gross margins of 90 percent"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Single-tank satellite constraint",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Orbital refueling network and port",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "CapEx and margin economics",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Keep satellites operating and earning by refueling them in orbit",
+      "status": "explicit",
+      "evidence_span": "make more money for its owners"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Recover lost satellite revenue previously destroyed with empty craft",
+      "evidence_span": "recover billions of dollars of lost revenue"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "No system exists for safely and reliably fueling a satellite in space. So we set out to solve that problem first"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "stop throwing satellites away"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building gas stations in space"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save 50 percent on their capital expenditure"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "20-company standard and ISS water demo folded into port/adoption story inside P3; named contracts and bios excluded as traction/credentials. Solar-system vision line not coded as premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-445",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:31:20+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

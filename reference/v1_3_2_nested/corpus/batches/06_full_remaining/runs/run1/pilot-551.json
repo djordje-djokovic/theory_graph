@@ -1,0 +1,127 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cattle weight is crucial for health, genetics, sell timing, and financial value, but traditional weighing is labor-intensive, stressful, and rarely done",
+      "status": "explicit",
+      "evidence_span": "obtaining weight information is labor-intensive, time-consuming, and expensive, so it's rarely obtained"
+    },
+    {
+      "id": "P2",
+      "text": "A portable 3D camera with proprietary software estimates weight automatically as cattle pass, about ten times faster and stress-free",
+      "status": "explicit",
+      "evidence_span": "uses a portable 3D camera to estimate the weight of the cattle, allowing farmers to monitor weight variation frequently at a stress-free manner for the cow, at a rate that is 10 times faster than the traditional process"
+    },
+    {
+      "id": "P3",
+      "text": "A dashboard recommends how to optimize weight gain and profitability across sell, feed, treatment, and genetics decisions",
+      "status": "explicit",
+      "evidence_span": "farmers can see our dashboard with recommendations on how to optimize weight gain and profitability"
+    },
+    {
+      "id": "P4",
+      "text": "Automatic passage sensing works for all farm sizes unlike still-photo apps and undercuts expensive fixed passage scales with portable pricing",
+      "status": "explicit",
+      "evidence_span": "Olho do Dono works automatically as the cow passes in front of it. So we work for all size farms"
+    },
+    {
+      "id": "P5",
+      "text": "The platform also recommends products that optimize weight gain and earns a commission",
+      "status": "explicit",
+      "evidence_span": "Our platform also gives recommendations on products that can optimize weight gain and we make a commission fee on that"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly stressful weighing gap",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Portable 3D weight estimation",
+      "premise_ids": [
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Profitability recommendation dashboard",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Product-recommendation commissions",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help farmers grow bottom lines via frequent stress-free weight insight and optimization",
+      "status": "explicit",
+      "evidence_span": "We help farmers to grow their bottom lines"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Maintain cow well-being while raising productivity and profitability",
+      "evidence_span": "increase the beef cattle productivity and profitability while maintaining the well-being of the cow"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more weight, more money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "monitor weight variation frequently at a stress-free manner for the cow"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommendations on how to optimize weight gain and profitability"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "recommendations on products that can optimize weight gain"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Market-size and paid-beta counts excluded (4.2). Competitor price comparisons kept as detail of P4 portability/affordability condition. CV/ML development history folded into P2.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-551",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

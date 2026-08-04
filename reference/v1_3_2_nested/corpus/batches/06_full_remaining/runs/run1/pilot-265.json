@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-265",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:01+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Cyclical hormone data unrelated to fertility barely exists, so women lack guidance on whether hormonal changes are normal or abnormal",
+      "status": "explicit",
+      "evidence_span": "Today's data on cyclical hormone levels unrelated to fertility and pregnancy isn't just thin on the ground, it barely exists"
+    },
+    {
+      "id": "P2",
+      "text": "Hormones fluctuate throughout the month and must be tested on specific days to be understood",
+      "status": "explicit",
+      "evidence_span": "They need to be tested on specific days in order to be understood"
+    },
+    {
+      "id": "P3",
+      "text": "Blood draws with multi-day waits are not convenient or cost-efficient because multiple tests per cycle are required",
+      "status": "explicit",
+      "evidence_span": "Today's solution of drawing blood and waiting days for your test results is not a convenient or cost efficient solution"
+    },
+    {
+      "id": "P4",
+      "text": "A patent-pending non-invasive at-home urine test plus mobile app delivers convenient, accurate, affordable hormone results without a lab in about 15 minutes",
+      "status": "explicit",
+      "evidence_span": "our patent-pending non-invasive urine test have completely removed the need for a lab"
+    },
+    {
+      "id": "P5",
+      "text": "Testing the three most important female hormones determines a woman's individual hormone pattern",
+      "status": "explicit",
+      "evidence_span": "nailed down the three most important female hormones to test in order to determine a woman's individual hormone pattern"
+    },
+    {
+      "id": "P6",
+      "text": "A cycle-based hormonal algorithm schedules testing days and hormones; the app analyzes biomarkers into quantitative results that link symptoms to levels",
+      "status": "explicit",
+      "evidence_span": "the unique hormonal algorithm indicates the three testing days per cycle alongside which hormone to test"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hormone data gap and testing burden",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "At-home urine test and app",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Women understand their hormones from home with an end-to-end monitoring solution",
+      "status": "explicit",
+      "evidence_span": "empowers women to understand their hormones from the comfort of our home"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Narrow the gender data gap and improve women's health outcomes",
+      "evidence_span": "contribute to narrowing that gender data gap and improve health outcomes for women"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Today's solution of drawing blood and waiting days for your test results is not a convenient or cost efficient solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empowers women to understand their hormones from the comfort of our home"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Vision/baseline-for-medicine and blue-ocean first-mover claims omitted as framing (§4.1(4)). Pee/dip/scan demo steps folded into P4/P6 (§4.1(5)). Patents treated as IP detail on the urine-test mechanism. Two domains: need/burden vs product can be revised separately."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-917",
+    "coder_session_id": "session_02",
+    "session_case_index": 19,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:11:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Open-source software has bugs and missing features while support is hard to get because of a mismatch in knowledge and priority between users and developers",
+      "status": "explicit",
+      "evidence_span": "all this software has two properties in common, which is bugs and missing features"
+    },
+    {
+      "id": "P2",
+      "text": "Users can place paid incentives on issue pages via integrations with major issue trackers, including multi-user crowdfunding on one issue",
+      "status": "explicit",
+      "evidence_span": "a service which allows you to pay or get paid directly from an issue page"
+    },
+    {
+      "id": "P3",
+      "text": "Developers can one-click ask for an incentive or list an issue for crowdfunding from the same panel",
+      "status": "explicit",
+      "evidence_span": "with one click, they can reach out and ask for an incentive or list the issue for crowdfunding"
+    },
+    {
+      "id": "P4",
+      "text": "The company takes a 6% fee on successful incentives and shares fees with issue-system hosters running the integration",
+      "status": "explicit",
+      "evidence_span": "we take a 6% fee for each successful incentive"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution aims to put the panel on every bug and feature page, later expanding beyond open source to app stores",
+      "status": "explicit",
+      "evidence_span": "have our panel on every book page, every feature request, and in every support system"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard open-source support mismatch",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "issue-page incentive marketplace",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "fee model and distribution",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get needed software support or improvements and developers get paid to fix issues",
+      "status": "explicit",
+      "evidence_span": "place incentives for on demand software support"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "what we have is a mismatch in knowledge and priority between the user and the developer"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "with two clicks, a user can place an incentive"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "adding a monetization element to the entire open source market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Open-source examples list folded as framing of ubiquity, not separate premises. Bugs/missing features/support mismatch folded as one problem (§4.1.6). User place-incentive and developer ask-incentive are two sides of one marketplace mechanism but separately asserted jobs—kept as two premises under one product domain. ASR 'book' for bug left in spans. Anti-template: problem, marketplace product, and fee/distribution separately revisable."
+}

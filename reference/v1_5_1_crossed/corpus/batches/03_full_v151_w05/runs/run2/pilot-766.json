@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-766",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:37Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Stores use opaque dynamic pricing while price-drop guarantees are too complex and time-consuming for consumers to claim, so money owed goes unclaimed",
+      "status": "explicit",
+      "evidence_span": "it's a huge hassle. Not only are the policies often complex by design, it takes a ton of time to price compare"
+    },
+    {
+      "id": "P2",
+      "text": "Paribus scans inbox receipts (OAuth), tracks prices/coupons, checks store policies, and uses NLP to automatically file price-adjustment claims",
+      "status": "explicit",
+      "evidence_span": "It scans your inbox for receipts, tracks the prices on what you bought, and when they drop, automatically files claims to get you paid"
+    },
+    {
+      "id": "P3",
+      "text": "Receipts are pulled via subject/sender webhooks without reading other email contents, with bank-level security on stored data",
+      "status": "explicit",
+      "evidence_span": "We placed customized webhooks to pull receipts and store communications based on subject and sender alone, without ever touching the contents of your other emails"
+    },
+    {
+      "id": "P4",
+      "text": "Paribus takes 25% of money saved (reducible to zero via referrals) and only earns after the user is paid",
+      "status": "explicit",
+      "evidence_span": "Our standard fee is charged 25% of the money we earn you"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unclaimed dynamic pricing refunds",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "automated claim filing with privacy",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "success-based fee model",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers effortlessly recover money owed when prices drop after purchase",
+      "status": "explicit",
+      "evidence_span": "Paribus is a web app that gets you the money you're owed effortlessly"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "online consumers are leaving $10 billion on the table every year"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "With Paribus, it's all automated"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The only time that Paribus earns is after we save you money first"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Dynamic pricing and guarantee hassle folded as one consumer-refund problem (§4.1.6). Inbox scan, account linking, scraping/coupons, policy DB, and NLP filing folded as one automation mechanism (§4.1.7); privacy/security kept as separately emphasized trust condition in product domain. Store-count and beta savings treated as traction. Anti-template: problem, product/privacy, and fee model separately revisable."
+}

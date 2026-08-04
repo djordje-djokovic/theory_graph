@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "coder_session_id": "session_06",
+    "session_case_index": 15,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote sports fans are disconnected from stadium energy during live games",
+      "status": "explicit",
+      "evidence_span": "he was disconnected from the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Connected devices let remote fans transmit cheers and reactions into stadium VibeBoard visualizations in real time",
+      "status": "explicit",
+      "evidence_span": "enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P3",
+      "text": "Captured fan-energy data feeds team CRM activities",
+      "status": "explicit",
+      "evidence_span": "we capture a unique set of data that can feed into your CRM activities"
+    },
+    {
+      "id": "P4",
+      "text": "Connected merchandise via a low-cost fan chip and smartphone apps extends participation",
+      "status": "explicit",
+      "evidence_span": "we have developed a fan chip that can, for $4, just plug into any merchandise you have, making it connected"
+    },
+    {
+      "id": "P5",
+      "text": "Brand sponsors integrate into live cheer moments as a unique advertising context",
+      "status": "explicit",
+      "evidence_span": "we offer a unique context for brand integration"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Remote fan disconnection",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Live fan-energy transmission product",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CRM, merchandise, and brand modules",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Making the world a stadium by giving remote fans a voice in the live game",
+      "status": "explicit",
+      "evidence_span": "make the world a stadium for sports fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "disconnected from the stadium"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving millions of remote fans a voice in the game"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all fans part of the game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Clap/swipe/sound demo cascade folded into P2. Wembley/team traction excluded. CRM, merchandise chip, and brand integration split as distinct value paths for teams/sponsors (rule 2). Singleton D1/D2 retained."
+}

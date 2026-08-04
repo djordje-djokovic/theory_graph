@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1156",
+    "coder_session_id": "session_05",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:35Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Despite huge social networks, people make only about four valuable connections a year; existing networks reinforce known ties but do not discover hidden valuable people",
+      "status": "explicit",
+      "evidence_span": "four is the number of valuable, on average, valuable connections being made in a given year"
+    },
+    {
+      "id": "P2",
+      "text": "iPhone app lets users select contacts, request permission, make, manage, and track introductions on the go",
+      "status": "explicit",
+      "evidence_span": "Somazi's iPhone app allows you to make, manage, and track valuable introductions on the go"
+    },
+    {
+      "id": "P3",
+      "text": "Socializing Your Real-Time Needs web service broadcasts needs/opportunities across networks to leverage hidden networks of people you know, with dashboard analytics on reach and rebroadcasts",
+      "status": "explicit",
+      "evidence_span": "Socializing Your Real-Time Needs is a web service that allows you to intelligently connect to the masses"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "too few valuable connections",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mobile introduction app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "real-time needs broadcast",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intelligently connect people to people and opportunities they do not know but should",
+      "status": "explicit",
+      "evidence_span": "connect intelligently to the people and opportunities that you don't know, but should"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they're not designed to actually discover hidden networks of the people that you should be connected with"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "strengthen your relationships on a one-on-one basis"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect intelligently with the people in your network and their networks and their network's network"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Low valuable-connection count + networks reinforce-only folded as one discovery problem (§4.1.6). Mobile intro app and real-time needs broadcast split as speaker-enumerated two products that could fail independently (§4.1.5). Super-connector vision kept as value not extra premise (§4.1.4). ASR Somazi/Sumazi/Sumaiya left verbatim in spans. Singleton D2/D3 justified as separately announced modules."
+}

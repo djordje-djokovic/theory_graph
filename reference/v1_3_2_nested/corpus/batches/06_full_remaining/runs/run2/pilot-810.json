@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-810",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:32+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Consumers want smart home lighting but existing wired switches and smart bulbs make adoption painful",
+      "status": "explicit",
+      "evidence_span": "attempts to date have failed to make this easy"
+    },
+    {
+      "id": "P2",
+      "text": "Magnet-mounted mechanical actuator automates a standard light switch at similar price to alternatives",
+      "status": "explicit",
+      "evidence_span": "for about the same price as all these other products, you can install smart lighting like that, and you're done"
+    },
+    {
+      "id": "P3",
+      "text": "Phone control plus retained manual switch use, including timers that mimic natural behavior",
+      "status": "explicit",
+      "evidence_span": "they can even mimic your natural behavior"
+    },
+    {
+      "id": "P4",
+      "text": "Product works for renters/condos where in-wall installs are forbidden",
+      "status": "explicit",
+      "evidence_span": "if you live in an apartment or condo, you can't even use this option"
+    },
+    {
+      "id": "P5",
+      "text": "Launch path: pre-order campaign, experienced hardware manufacturer, Amazon/web, then retail in 2016",
+      "status": "explicit",
+      "evidence_span": "we hope to deliver to online retail, such as Amazon, and through our own website"
+    },
+    {
+      "id": "P6",
+      "text": "Designed for both techies and non-techies outside Silicon Valley norms",
+      "status": "explicit",
+      "evidence_span": "Switchmate can be used by both techies and non-techies alike"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Simple snap-on smart switch",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Smart lighting adoption friction",
+      "premise_ids": [
+        "P1",
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Crowdfunding to retail GTM",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get extremely simple smart lighting without painful install",
+      "status": "explicit",
+      "evidence_span": "makes smart lighting extremely simple without dealing with any of these issues"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Mission to make the smart home simple more broadly",
+      "evidence_span": "on a mission to make the smart home simple"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes smart lighting extremely simple"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "why this was the case"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will never compromise on making sure we make products that are extremely simple to use"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Apartment constraint coded as distinct customer-fit condition of the mechanical design. Hub-as-base-station roadmap not split into a second product premise."
+}

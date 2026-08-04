@@ -1,0 +1,115 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Security is the leading smart-home desire yet traditional installs fail apartment portability and decor needs",
+      "status": "explicit",
+      "evidence_span": "doesn't afford the portability most apartment dwellers, like myself, are looking for"
+    },
+    {
+      "id": "P2",
+      "text": "Sentry ships ready with camera, motion detector, and environmental sensors for immediate readouts",
+      "status": "explicit",
+      "evidence_span": "comes preloaded with a camera, motion detector, and sensors that track your home's environment"
+    },
+    {
+      "id": "P3",
+      "text": "Users customize look/feel and control connected devices from the hub and phone",
+      "status": "explicit",
+      "evidence_span": "connect and control different devices, including your Nest, Philips Hue light bulb, and a Belkin Wemo smart switch"
+    },
+    {
+      "id": "P4",
+      "text": "Urban dwellers and pet parents are the beachhead segments for portable security",
+      "status": "explicit",
+      "evidence_span": "two segments that really popped, which is the urban dweller market as well as pet parents"
+    },
+    {
+      "id": "P5",
+      "text": "Cloud recording and third-party Android apps extend beyond the hardware unit",
+      "status": "explicit",
+      "evidence_span": "offering cloud video recording and media archiving services"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Portable security need",
+      "premise_ids": [
+        "P1",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sentry hub experience",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud and developer platform",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Know what is happening at home and feel secure without traditional system friction",
+      "status": "explicit",
+      "evidence_span": "people who care about the safety of their homes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Personalize the home security experience",
+      "evidence_span": "consumers want to have the experience of personalizing their homes"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "want to have home security and want to know what's going on"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "simple, that was elegant and intelligent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Sentry unit is just a beginning"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "$299 price folded into value comparison rather than separate premise this run.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-806",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T16:03:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

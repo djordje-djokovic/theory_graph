@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Students learn much more from peers than from professors or video content, yet edtech is overwhelmingly top-down",
+      "status": "explicit",
+      "evidence_span": "Studies show that peers learn seven times more from each other than they do from any video content, anything hands down from the professors. Yet 99% of all educational technology is built for top down"
+    },
+    {
+      "id": "P2",
+      "text": "Facebook and Blackboard are poor tools for finding your course and classmates when you need academic help",
+      "status": "explicit",
+      "evidence_span": "on Facebook, you can't find your course, your classmates. You can't really, and you don't really want to do that through things like Blackboard. It's not as user-friendly"
+    },
+    {
+      "id": "P3",
+      "text": "Study Hall is a peer platform with study-buddy recommendations, shared course spaces, notes, live sessions, and gamified ratings",
+      "status": "explicit",
+      "evidence_span": "We built an incredibly easy way to connect with your classmates, find your peers, and study in real time"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization centers on a peer-to-peer marketplace for study materials and partnerships with online learning institutions",
+      "status": "explicit",
+      "evidence_span": "We built a peer-to-peer marketplace. We can partner with online universities where people go watch videos, but what do you do next?"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Peer learning gap in edtech",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Classmate connection platform",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Marketplace and online partners",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Capture peer-to-peer learning so students connect with classmates and ease academic life",
+      "status": "explicit",
+      "evidence_span": "We're capturing the power of peer-to-peer learning"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peers learn seven times more from each other"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "connect with your classmates and make your academic life easier"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "peer-to-peer marketplace"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Pilots at elite schools and honor society partnership treated as traction/GTM evidence, not core theory premises. Algorithm, notes, marketplace listing UI folded into platform vs money split: marketplace+partners kept as commercial module because speaker answers 'how could we make money' with those. Pitch truncates mid-monetization slide."
+}

@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Personalizing B2B websites requires knowing visitors, prioritizing segments, changing experience, and measuring impact",
+      "status": "explicit",
+      "evidence_span": "we needed to know who was coming to the website, prioritize between all of the different groups that were coming to the site, change their experience, and measure the impact so we could keep iterating"
+    },
+    {
+      "id": "P2",
+      "text": "Average marketing teams lack the technical staff to do that personalization in-house",
+      "status": "explicit",
+      "evidence_span": "To do that, we needed lots of engineers, data scientists, UX designers, and analysts"
+    },
+    {
+      "id": "P3",
+      "text": "Mutiny software covers visitor identity integrations, audience recommendations, visual editing, and analytics",
+      "status": "explicit",
+      "evidence_span": "Mutiny identifies the visitors to a website pre-built data integrations. It analyzes the website's traffic and conversion data to recommend the best audiences for personalization. It has a visual editor that lets any non-technical person change the experience of their website. And it has built-in analytics to measure the results"
+    },
+    {
+      "id": "P4",
+      "text": "Personalizing case studies and messaging by visitor industry or segment lifts conversions",
+      "status": "explicit",
+      "evidence_span": "uses Mutiny to tailor their website's customer case studies and logos for every single visitor based on their industry"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hard in-house personalization",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Mutiny personalization software",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Increase B2B leads by personalizing the website for each visitor",
+      "status": "explicit",
+      "evidence_span": "personalize their website for each visitor in order to convert the 99% of their traffic that bounces today"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's exactly why we built Mutiny"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this particular personalization has increased our conversion by 129%"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Customer logos/traction excluded as proof; industry-tailoring kept as mechanism condition. Stop-paying-for-leads CTA treated as value framing.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-443",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

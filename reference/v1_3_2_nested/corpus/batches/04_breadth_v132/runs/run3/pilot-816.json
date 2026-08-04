@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Malaria infects 500 million people annually, dwarfing other high-profile diseases",
+      "status": "explicit",
+      "evidence_span": "Malaria infects 500 million people around the world every single year"
+    },
+    {
+      "id": "P2",
+      "text": "The gold standard requires travel to a clinic, an hour of preparation, and a day's earnings",
+      "status": "explicit",
+      "evidence_span": "walk two miles to the nearest clinic and get his blood read through a microscope by a clinician"
+    },
+    {
+      "id": "P3",
+      "text": "Low-level infections escape microscope diagnosis and sustain transmission",
+      "status": "explicit",
+      "evidence_span": "Well, neither could the clinician. There was actually a low-level infection"
+    },
+    {
+      "id": "P4",
+      "text": "A reusable magnets-and-laser device keeps per-test cost low",
+      "status": "explicit",
+      "evidence_span": "He's very inexpensive because you can reuse him over and over and over again"
+    },
+    {
+      "id": "P5",
+      "text": "The device is fast enough to diagnose hundreds of patients per day",
+      "status": "explicit",
+      "evidence_span": "in one day, he could diagnose everybody in this room twice"
+    },
+    {
+      "id": "P6",
+      "text": "Magnetic biomarkers yield a quantitative infection score from light transmission",
+      "status": "explicit",
+      "evidence_span": "manipulate these magnets in a way that changes the amount of light that comes through the sample"
+    },
+    {
+      "id": "P7",
+      "text": "No clinical expertise is needed to operate the test",
+      "status": "explicit",
+      "evidence_span": "it doesn't require any clinical expertise"
+    },
+    {
+      "id": "P8",
+      "text": "Bosch Healthcare distributes the device in India",
+      "status": "explicit",
+      "evidence_span": "we've partnered with Bosch Healthcare in India for distribution"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Misdiagnosis-driven malaria transmission",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fast, cheap, quantitative RAM testing",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Distribution partnerships",
+      "premise_ids": [
+        "P8"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Affordable same-visit malaria diagnosis that catches infections microscopy misses",
+      "status": "explicit",
+      "evidence_span": "That gives us not only a binary decision on yes or no if he has an infection, but also how large that is"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "The Magneto-optical platform is planned to attack HIV and other neglected tropical diseases beyond malaria",
+      "evidence_span": "Malaria is the first out of HIV, other neglected tropical diseases that we can attack with this Magneto obstacle platform"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "got misdiagnosed, didn't get treated"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "diagnose everybody in this room twice"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnered with Bosch Healthcare in India for distribution"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Run 3 codes the platform-extensibility claim ('same physics... apply to other diseases') as secondary_value rather than dropping it entirely: it is a stated extension claim but framed as applicability, not a current operating condition. Trials/deployment counts remain excluded as traction; transcript truncated mid-sentence.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-816",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T13:56:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

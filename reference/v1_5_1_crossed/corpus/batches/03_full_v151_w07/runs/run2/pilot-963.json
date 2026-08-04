@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-963",
+    "coder_session_id": "session_04",
+    "session_case_index": 9,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:17:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users need remote, automatic, effortless wireless power that safely and efficiently powers only selected devices at a distance, including behind walls, with a path to FCC approval",
+      "status": "explicit",
+      "evidence_span": "How do you safely and efficiently power multiple devices and only those devices at a distance?"
+    },
+    {
+      "id": "P2",
+      "text": "Cota delivers about one watt within a 30-foot home radius via a charger and tiny receivers that can fit in phones or AAA batteries",
+      "status": "explicit",
+      "evidence_span": "the only wireless power technology that can deliver one watt of power at a 30-foot distance"
+    },
+    {
+      "id": "P3",
+      "text": "Beacon-guided focused return paths send power only through open paths to the receiver, avoiding people and absorbers, without line of sight",
+      "status": "explicit",
+      "evidence_span": "returns the power signal only through the open paths between it and the receiver"
+    },
+    {
+      "id": "P4",
+      "text": "Core US and international patents protect the technology",
+      "status": "explicit",
+      "evidence_span": "We have four core patents have been issued by the US Patent Office"
+    },
+    {
+      "id": "P5",
+      "text": "Go-to-market forms include built-in devices, standard batteries, and dongles, plus OEM partnerships with electronics manufacturers",
+      "status": "explicit",
+      "evidence_span": "built into devices and phones, built into standard batteries, and as dongles for current devices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "remote wireless power need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Cota focused wireless power tech",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM and form-factor distribution",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Devices charge automatically at a distance so a world of gadgets stays always on and ready",
+      "status": "explicit",
+      "evidence_span": "have your phone charge automatically without taking them out of your pocket or bag"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Industrial uses such as oil-and-gas spark-free sensor powering",
+      "evidence_span": "oil and gas industry, which has forever sought wireless power to eliminate the risk of disastrous sparking"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We need wireless power"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "this phone is charging wirelessly"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partner with electronics manufacturers to use our components"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Safety/distance/multi-device/FCC challenge list folded as one wireless-power problem (§4.1.6). Antenna-count efficiency, tracking, and Wi-Fi-like safety folded into focused-power mechanism cascade (§4.1.7). Patents asserted as separately useful IP but kept with the core tech domain (§4.1.1). Financing ask excluded (§4.2). Multi-device examples treated as applications of same mechanism. Three domains—anti-template: OEM form-factor GTM separately revisable from RF mechanism."
+}

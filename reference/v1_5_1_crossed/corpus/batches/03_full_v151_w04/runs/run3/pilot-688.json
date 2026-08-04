@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-688",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:45:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Large comedy fan interest exists but streaming has not caught up, so little comedy catalog and market share is available",
+      "status": "explicit",
+      "evidence_span": "streaming hasn't caught up. So now you only have about 10% of the comedy that's available and only 1% of the market"
+    },
+    {
+      "id": "P2",
+      "text": "A ground-up streaming app focused on stand-up comedy and spoken word hosts comedians and tracks",
+      "status": "explicit",
+      "evidence_span": "the very first app that's built from the ground up to focus on streaming comedy or specifically spoken word"
+    },
+    {
+      "id": "P3",
+      "text": "Spoken Word Project transcription of jokes enables profanity filtering and subject-matter radio stations",
+      "status": "explicit",
+      "evidence_span": "a technology which allows us to transcribe every single joke into text"
+    },
+    {
+      "id": "P4",
+      "text": "Monetization is ad-supported with an optional paid subscription for ad-free, offline, and exclusive content",
+      "status": "explicit",
+      "evidence_span": "everything is ad revenue-based, but for $7.99 a month, you get ad-free, you get offline play, and you get access to exclusive content"
+    },
+    {
+      "id": "P5",
+      "text": "Revenue share with comedians motivates them to promote the app to their followers for scale",
+      "status": "explicit",
+      "evidence_span": "we share revenue with them for every single stream, so these guys are promoting these apps for us"
+    },
+    {
+      "id": "P6",
+      "text": "Distribution partnerships with top record labels supply content access",
+      "status": "explicit",
+      "evidence_span": "we actually have distribution with lumber the top record labels"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "comedy streaming supply gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "spoken-word comedy streaming product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "ads and subscription monetization",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "comedian promotion and label distribution",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fans can stream stand-up comedy and spoken-word content built for that format",
+      "status": "explicit",
+      "evidence_span": "built from the ground up streaming app focused on stand-up comedy"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Comedians benefit from per-stream revenue share while driving scale",
+      "evidence_span": "the comedians also benefit because of the revenue share we've built"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "What that allows us to do is it allows us to, for example, search for profanity"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That creates a huge problem for all these big fans of comedy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focus on streaming comedy or specifically spoken word"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "for $7.99 a month, you get ad-free, you get offline play"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "By being able to work with the artist to promote their material"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Profanity filter and topic radio folded as consequences of Spoken Word transcription (§4.1.7). Catalog size/traction figures excluded. Singleton D1/D3 retained as separately revisable demand-gap and commercial modules. Anti-template: problem, product tech, monetization, and comedian/label GTM are separately revisable."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-721",
+    "coder_session_id": "session_06",
+    "session_case_index": 22,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:55:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The toy industry has had little innovation toward toys that learn and grow with a child over years",
+      "status": "explicit",
+      "evidence_span": "There hasn't really been a lot of innovation in the toy industry"
+    },
+    {
+      "id": "P2",
+      "text": "Internet-connected smart dinosaur toys deliver ongoing witty, educational conversation and play for kids",
+      "status": "explicit",
+      "evidence_span": "internet-connected smart toys that learn and grow with a child"
+    },
+    {
+      "id": "P3",
+      "text": "A parent panel dashboard gives engagement metrics and controls such as bedtime and future custom messages",
+      "status": "explicit",
+      "evidence_span": "we give parents access to what we're calling the parent panel dashboard"
+    },
+    {
+      "id": "P4",
+      "text": "Hardware sales plus subscription content and features create a platform with ongoing revenue beyond cyclical toy seasons",
+      "status": "explicit",
+      "evidence_span": "allows us to get away from the cyclical nature of the toy business. We can move into a subscription type model"
+    },
+    {
+      "id": "P5",
+      "text": "Dinos retail around $99.99 with strong hardware margins improving at scale",
+      "status": "explicit",
+      "evidence_span": "the dynos will retail for $99.99"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "stagnant learning-toy gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "connected educational dino product",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "hardware plus subscription platform",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun, witty, educational toy experiences that engage kids over weeks and years",
+      "status": "explicit",
+      "evidence_span": "We're supposed to be fun and educational"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "where would we like to see toys in a decade, and that's what we're creating"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking the interactive educational approach, engaging over the course of weeks and hopefully years"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a platform around the Dino"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Jokes, stories, scavenger hunts, and Q&A folded as feature cascade of one educational Cognitoy (§4.1.7). Watson challenge, Kickstarter, and Time award excluded as traction. Retail talks treated as GTM framing inside commercial domain via subscription/platform path. Anti-template: problem, product+parent controls, and commercial model separately revisable."
+}

@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-442",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:47:42+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Manual synthesis planning from publications is slow and error-prone versus the scale of molecules needed per marketed drug",
+      "status": "explicit",
+      "evidence_span": "It involves chemists manually digging through tens and hundreds of scientific publications"
+    },
+    {
+      "id": "P2",
+      "text": "Patent-pending AI designs novel chemical syntheses in seconds with ranked pathways and lab-tested references",
+      "status": "explicit",
+      "evidence_span": "It is then analyzed by our patent-pending technology"
+    },
+    {
+      "id": "P3",
+      "text": "Model learns viable molecule transformations from prior experiments and builds multi-step routes",
+      "status": "explicit",
+      "evidence_span": "Viable steps are then assembled into multi-step pathways that lead all the way from starting materials to the desired product"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS priced by seats or data points with enterprise custom/on-prem options",
+      "status": "explicit",
+      "evidence_span": "enterprise tier with custom integrations and optional on-premise deployment"
+    },
+    {
+      "id": "P5",
+      "text": "Drug discovery is the beachhead use case for AI synthesis planning",
+      "status": "explicit",
+      "evidence_span": "Our initial focus is the drug discovery ecosystem"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AI chemical synthesis designer",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Manual synthesis bottleneck",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Seat-based SaaS model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Chemists design viable syntheses in seconds so medicines can be made faster",
+      "status": "explicit",
+      "evidence_span": "Make medicines faster"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Cure patients faster by optimizing synthesis pipelines",
+      "evidence_span": "Cure patients faster"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "design novel chemical synthesis within seconds instead of hours or days"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Chemical synthesis is the overlooked bottleneck in drug discovery"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize your synthesis pipeline"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Competitor comparison omitted this run as restatement of differentiation already in AI capability. $500B market figure excluded as market-size framing."
+}

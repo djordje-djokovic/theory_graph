@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Users maintain too many PCs and consoles with duplicated software and slow console browsing",
+      "status": "explicit",
+      "evidence_span": "I ended up with many licenses for the same applications and the same games"
+    },
+    {
+      "id": "P2",
+      "text": "Miniaturized motherboard in a pocket PC plus docks that absorb connectors and cooling enable portable full PC power",
+      "status": "explicit",
+      "evidence_span": "we took the motherboard, miniaturized it, and packed it into this small PC"
+    },
+    {
+      "id": "P3",
+      "text": "Inexpensive docks at office, home, and TV replace multiple machines while keeping files, apps, and games accessible",
+      "status": "explicit",
+      "evidence_span": "By replacing all your PCs and gaming consoles with $89 docking stations"
+    },
+    {
+      "id": "P4",
+      "text": "Enterprise BYOD adoption plus TCO below virtual desktops expands beyond consumer retail",
+      "status": "explicit",
+      "evidence_span": "Tango not only is a perfect fit for a BYOD segment, but through some disruptive innovations under the covers, can actually reduce the total cost of ownership of enterprise PCs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Hardware and license sprawl",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dockable pocket PC architecture",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "BYOD enterprise economics",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Change how people use and carry PCs with pocket mobility",
+      "status": "explicit",
+      "evidence_span": "completely change the way we use and carry PCs"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Save money on hardware and software",
+      "evidence_span": "Tango can save you money on software because you don't need additional software licenses"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Today, Tango solves all these problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Tango truly keeps me hands-free and hassle-free"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduce the total cost of ownership of enterprise PCs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.81
+  },
+  "notes": "Upgradeability and ODM folded into architecture premise. Retail relationships treated as implied in dockable consumer offer rather than separate premise; enterprise BYOD kept as distinct commercial module.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-852",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

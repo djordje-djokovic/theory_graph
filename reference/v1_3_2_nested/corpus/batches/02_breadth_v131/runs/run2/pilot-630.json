@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-630",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:47:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Water leaks, rapid mold growth, and fire create unpredictable multi-million-dollar construction delays and insurance losses",
+      "status": "explicit",
+      "evidence_span": "Mold can grow within 48 hours given the right conditions"
+    },
+    {
+      "id": "P2",
+      "text": "Pillar’s job-site sensor network provides active damage warning, logistics-usable condition data, and a transferable building history",
+      "status": "explicit",
+      "evidence_span": "First, we do active warning and damage mitigation for those I mentioned before. Two, the data is actually usable for logistics. So we can help contractors better place equipment and better manage personnel exposure to potentially harmful conditions. And three, Now your building has a Carfax"
+    },
+    {
+      "id": "P3",
+      "text": "Multiple built-in mounting methods let sensors move easily through changing job-site conditions",
+      "status": "explicit",
+      "evidence_span": "There's multiple mounting methods built in here"
+    },
+    {
+      "id": "P4",
+      "text": "Site deployment uses floor-plan risk placement; alerts go to a dashboard and smartphone pushes because contractors resist new software",
+      "status": "explicit",
+      "evidence_span": "contractors don't want to learn a new piece of software. So that's why we push notifications directly to the smartphone"
+    },
+    {
+      "id": "P5",
+      "text": "Charged per square foot for install plus monthly service with hardware, firmware, software, and analytics bundled",
+      "status": "explicit",
+      "evidence_span": "$0.03 per square foot one-time installation fee, and $0.02 per square foot per month. Everything included"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Unmonitored job-site hazards",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Deployable environmental sensor system",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Per-square-foot bundled pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Prevent and mitigate commercial construction damage with job-site environmental monitoring",
+      "status": "explicit",
+      "evidence_span": "real-time, end-to-end environmental monitoring solution designed specifically for the job site"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delays the schedule, costs millions of dollars"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "active warning and damage mitigation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "incredibly easy to quote and incredibly easy to transfer the relationship"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "v1.3.1: three enumerated uses remain one premise. Secondary Carfax value folded into that premise this run rather than secondary_value."
+}

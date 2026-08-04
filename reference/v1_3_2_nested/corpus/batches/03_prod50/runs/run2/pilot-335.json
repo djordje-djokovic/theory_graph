@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Fossil combustion still dominates energy and fails on efficiency, flexibility, and emissions",
+      "status": "explicit",
+      "evidence_span": "producing up to 85% of our global energy demand through combustion-based power systems burning fossil fuels"
+    },
+    {
+      "id": "P2",
+      "text": "Solid oxide fuel cells plus CO2 separation and methanation in closed cycle remove combustion",
+      "status": "explicit",
+      "evidence_span": "The heart of the plan is a solid oxide fuel cell module"
+    },
+    {
+      "id": "P3",
+      "text": "Design achieves full fuel conversion and about 80% electric efficiency",
+      "status": "explicit",
+      "evidence_span": "achieve 100% fuel conversion and 80% electric efficiency"
+    },
+    {
+      "id": "P4",
+      "text": "Produces pure CO2 and water; reversible for power-to-gas storage",
+      "status": "explicit",
+      "evidence_span": "On top of that, there is no off-gas anymore, but we just produce water and pure CO2"
+    },
+    {
+      "id": "P5",
+      "text": "Biogas plants use it for renewable power, CO2 separation, and long-term energy storage",
+      "status": "explicit",
+      "evidence_span": "when there is not enough solar or wind power in the power grid, we produce renewable power from the biogas while separating pure CO2"
+    },
+    {
+      "id": "P6",
+      "text": "Customer economics: roughly 2x electricity revenue and >5x income with reversible mode",
+      "status": "explicit",
+      "evidence_span": "they can overall more than fivefold their income"
+    },
+    {
+      "id": "P7",
+      "text": "Containerized units can scale across biogas fleets toward replacing fossil plants",
+      "status": "explicit",
+      "evidence_span": "One single of our Revarium containers can provide up to 500 households with renewable gas and power"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Legacy combustion problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fuel-cell closed-cycle technology",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Biogas deployment economics",
+      "premise_ids": [
+        "P5",
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Carbon-negative highly efficient plug-and-play power plants",
+      "status": "explicit",
+      "evidence_span": "It is fully reversible. It is plug and play, and it even has a carbon negative footprint"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combustion power plants fail"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "true game changer in power generation"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "doubling revenues from electricity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Global market-size ending treated as scale implication of P7, not a separate premise. ASR Ivarian/ovarian/Revarium left in spans where used.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-335",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:40:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

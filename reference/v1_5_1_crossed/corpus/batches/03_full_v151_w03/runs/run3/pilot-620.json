@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-620",
+    "coder_session_id": "session_05",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Wired charging and pad-based wireless charging are poor experiences: tangled cables, unused phones on pads, and one device per pad section",
+      "status": "explicit",
+      "evidence_span": "Charging is a terrible experience"
+    },
+    {
+      "id": "P2",
+      "text": "A magnetic-field-bending breakthrough enables contactless charging of multiple devices at any angle from one unit",
+      "status": "explicit",
+      "evidence_span": "an historic mathematical proof that unlocked the solution to wireless power by the bending of magnetic fields"
+    },
+    {
+      "id": "P3",
+      "text": "Pi uses a safe magnetic charging approach that is affordable and FCC compliant, unlike blocked microwave/ultrasound/laser alternatives",
+      "status": "explicit",
+      "evidence_span": "we built Pi around a safe magnetic charging standard"
+    },
+    {
+      "id": "P4",
+      "text": "Direct-to-consumer sales of Pi units with high gross margins and multi-room lifetime value",
+      "status": "explicit",
+      "evidence_span": "we will sell Pi directly to consumers. We have over 50% gross margins and anticipate a very high lifetime value per customer"
+    },
+    {
+      "id": "P5",
+      "text": "The Pi platform is opened for use by existing consumer electronics OEMs",
+      "status": "explicit",
+      "evidence_span": "we are opening the Pi platform for use by existing consumer electronics OEMs"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken charging experience",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "contactless magnetic charging tech",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "consumer and OEM commercialization",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Truly contactless wireless charging that lets people use multiple devices while they charge safely",
+      "status": "explicit",
+      "evidence_span": "the world's first contactless wireless charging device"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Charging is a terrible experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our patented platform can power multiple devices at any angle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we will sell Pi directly to consumers"
+    },
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "thanks to our incredible team and Leeshan's breakthrough, our patented platform can power multiple devices at any angle. It's safe, it's affordable, and it's FCC compliant"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "§4.1.6: wire tangle, forgotten plugs, and pad limitations folded as one charging-pain bundle (P1). Demo multi-device/case/legacy facets folded into P2 mechanism (§4.1.7). Patents/safety/FCC treated as IP/compliance detail of magnetic approach (P3) per §4.1.1. Investor names, press, and reservation counts excluded as traction. Anti-template note: problem, tech, and commercial modules separately asserted."
+}

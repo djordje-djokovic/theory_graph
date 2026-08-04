@@ -1,0 +1,91 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing databases only look up what you already stored",
+      "status": "explicit",
+      "evidence_span": "their products only tell you what you already know"
+    },
+    {
+      "id": "P2",
+      "text": "Predictive database understands data well enough to impute and relate variables",
+      "status": "explicit",
+      "evidence_span": "a database that understands your data"
+    },
+    {
+      "id": "P3",
+      "text": "Anyone who can use SQL can use Veritable's predict interface",
+      "status": "explicit",
+      "evidence_span": "If you can use SQL, you can use Veritable"
+    },
+    {
+      "id": "P4",
+      "text": "Enables intelligent apps without hiring data scientists or mastering the underlying math",
+      "status": "explicit",
+      "evidence_span": "without having to understand all the math that we suffered through way too many years at MIT to learn"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Databases that only know knowns",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "No-math predictive database for builders",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smarter applications that fill blanks and predict outcomes",
+      "status": "explicit",
+      "evidence_span": "there's a lot of blanks and a lot of applications out there that we could fill in"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "only tell you what you already know"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lets you, if you know how to talk to a database"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cross-domain examples folded into understand/predict premise. Launch timing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1024",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

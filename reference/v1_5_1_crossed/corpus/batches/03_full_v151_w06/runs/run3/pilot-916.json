@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-916",
+    "coder_session_id": "session_01",
+    "session_case_index": 11,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People lose great ideas because files are scattered across desktop, Dropbox, email, and other repositories—another file-sharing tool is not the answer",
+      "status": "explicit",
+      "evidence_span": "We don't need 20 more file sharing solutions. We just need one place where all of our ideas are at our fingertips"
+    },
+    {
+      "id": "P2",
+      "text": "Docurated discovers files across repositories, strips formatting into indexed normalized components (pages/charts/text/images), and returns best pages by content+context relevance that learns with use and NLP without tagging",
+      "status": "explicit",
+      "evidence_span": "discover all of your files across any repository, email, desktop, third parties"
+    },
+    {
+      "id": "P3",
+      "text": "Ideas appear in a visual collage that can mash pages across formats, export to PowerPoint/PDF, share with visual email preview, or save for anywhere access",
+      "status": "explicit",
+      "evidence_span": "All of your ideas are in a visual, beautiful collage, each waiting to be used in a different and new way"
+    },
+    {
+      "id": "P4",
+      "text": "Product is for everyone with a Dropbox account, not only large enterprises spending billions on knowledge management",
+      "status": "explicit",
+      "evidence_span": "we don't believe that DocuRated only belongs to large enterprises. We believe that DocuRated belongs to everyone"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "lost ideas across repositories",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "brains search and indexing",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "beauty visual collage reuse",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "everyone not just enterprises",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Users get one worthy place where their best ideas/content are findable and reusable at their fingertips",
+      "status": "explicit",
+      "evidence_span": "one place where all of our ideas are at our fingertips"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Have you ever had a really good idea and then lost it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your best page appears to you in the order of relevance"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Each page can be mashed up from any other page, from any other file format"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you have a Dropbox account, DocuRated is yours"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Discover/strip/index/relevance-learning/NLP folded as one 'brains' search mechanism (§4.1.7). Mashup/export/share/save folded as one 'beauty' collage package. Customer testimonial treated as evidence, not premises. $9B enterprise spend as market framing. ASR Docurated/DocuRated/Doctorated variants left in spans. Four-domain partition; not a need/product/money triad."
+}

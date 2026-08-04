@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1012",
+    "coder_session_id": "session_06",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing competitive programming sites focus on textbook algorithms rather than real-world ML, AI, and distributed-systems problems",
+      "status": "explicit",
+      "evidence_span": "sites like ACM and Topcoder focus on a small set of textbook algorithms"
+    },
+    {
+      "id": "P2",
+      "text": "HackerRank hosts varied real-world challenges across difficulty levels with dynamic ranking, in-browser coding, and bot-versus-bot play",
+      "status": "explicit",
+      "evidence_span": "we are building the competitive lead for hackers to solve real world problems"
+    },
+    {
+      "id": "P3",
+      "text": "Companies contribute real datasets and problems so challenges mirror production work",
+      "status": "explicit",
+      "evidence_span": "we are inviting companies to give us real data sets or problems that they're actually working on"
+    },
+    {
+      "id": "P4",
+      "text": "Archived challenges release code snippets so hackers can learn optimal algorithms from others",
+      "status": "explicit",
+      "evidence_span": "archive the challenges every two weeks, and release all the code snippets"
+    },
+    {
+      "id": "P5",
+      "text": "HackerRank centralizes the world's most interesting programming problems and company contests in one place",
+      "status": "explicit",
+      "evidence_span": "We are building the largest collection of the world's most interesting problems for hackers to solve"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "textbook vs real-world contest gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "real-world challenge platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "centralized problem collection",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Hackers compete on and learn from real-world problems in one powerful online room",
+      "status": "explicit",
+      "evidence_span": "We are building that incredibly powerful room online at HackerRank"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in the real world, you work on things ranging from machine learning to artificial intelligence"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "competitive lead for hackers to solve real world problems"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "largest collection of the world's most interesting problems"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Challenge types, difficulty levels, bot battles, and in-browser compile folded as one competitive platform cascade (§4.1.7). Company-sourced datasets kept as distinct content supply. Sign-up/game traction excluded (§4.2). Anti-template: problem gap, platform+company content, and centralization claim separately revisable."
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-733",
+    "coder_session_id": "session_04",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:11Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most commerce is still offline, but brand–retailer collaboration via calls, emails, and expensive store visits fails, causing poor in-store execution and large lost revenue",
+      "status": "explicit",
+      "evidence_span": "the collaboration is broken"
+    },
+    {
+      "id": "P2",
+      "text": "Ubique lets brands set campaigns and collection forms, push tasks to stores, and monitor real-time in-store activity feeds and dashboards",
+      "status": "explicit",
+      "evidence_span": "Brands monitor their operations globally, retailers improve their execution remotely"
+    },
+    {
+      "id": "P3",
+      "text": "Store employees complete missions with training video, barcode stock updates, photo confirmation, and real-time object detection for shelf/facing counts; brands can also use a consumer crowdsourcing community",
+      "status": "explicit",
+      "evidence_span": "Ubique uses real-time object detection to automate continuous products"
+    },
+    {
+      "id": "P4",
+      "text": "SaaS charged per user per company, with a five-day go-live onboarding program",
+      "status": "explicit",
+      "evidence_span": "We have a SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken brand-retailer in-store collaboration",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Ubique campaign execution platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "per-user SaaS and go-live",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Improve field efficiency and merchandising ROI, increasing sales through better in-store execution",
+      "status": "explicit",
+      "evidence_span": "We increased sales for our customer by an average of 25%"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "poor in-store execution will result in 20 billion euro of lost revenue"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've improved field efficiency. We've maximized the merchandising return on investment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We'll get you up and running in production in less than a week"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Transcript ends mid-sentence (truncated=true). Mislabel/untrained-staff execution pains folded into collaboration-broken problem set (v1.5.1 §4.1.6). Campaign manager, store tasks, CV shelf counting, and crowdsourcing kept as feature cascade of one collaboration platform with CV/crowdsource as execution facets (§4.1.7). Brand/store traction counts excluded. Singleton D1/D3 retained."
+}

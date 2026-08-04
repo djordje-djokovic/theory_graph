@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Construction errors and paper processes waste a large share of materials and over $100B yearly",
+      "status": "explicit",
+      "evidence_span": "almost 20% of materials on a given job site being completely wasted"
+    },
+    {
+      "id": "P2",
+      "text": "Connected hardware and software ecosystem lets every trade capture, share, annotate, and task measurements without paper",
+      "status": "explicit",
+      "evidence_span": "connected ecosystem of hardware and software products to significantly reduce these errors"
+    },
+    {
+      "id": "P3",
+      "text": "Rock Jobsite app on any mobile device streamlines measurement capture into calculators and plan workflows",
+      "status": "explicit",
+      "evidence_span": "The Rock Jobsite app is a simple and easy to use platform that works on any mobile device"
+    },
+    {
+      "id": "P4",
+      "text": "T1 Tomahawk digital tape, M1 saw caliper, and QR labels capture and execute measurements with traceability",
+      "status": "explicit",
+      "evidence_span": "T1 Tomahawk really represents the core of our hardware ecosystem"
+    },
+    {
+      "id": "P5",
+      "text": "Unlike incremental tool makers or hyper-specific enterprise software, Recon has day-to-day jobsite granularity",
+      "status": "explicit",
+      "evidence_span": "the only system that has the granularity needed to execute day-to-day operations on the job site"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Jobsite error and waste",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Connected measure-and-execute stack",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Full-jobsite granularity positioning",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Reduce avoidable errors and streamline measurement operations so teams can measure once and cut once",
+      "status": "explicit",
+      "evidence_span": "you can measure runs and cut ones"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "significantly reduce these errors and streamline operations"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "eliminating many of the paper steps in the process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "granularity needed to execute day-to-day operations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "'Future of construction is digital' vision not a premise (v1.3.2 #4). Hardware SKUs folded as one ecosystem with optional split resisted except T1 named as core. Market $15B framing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-170",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T16:08:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

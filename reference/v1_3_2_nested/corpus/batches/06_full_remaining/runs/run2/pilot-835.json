@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-835",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:31:02+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Local network issues, fragmented camera brands, and customer-heavy deployment make custom camera software expensive",
+      "status": "explicit",
+      "evidence_span": "The camera industry is incredibly fragmented"
+    },
+    {
+      "id": "P2",
+      "text": "A hosted web API plus end-user connection tooling reduces complexity for developers writing camera software",
+      "status": "explicit",
+      "evidence_span": "We try and reduce all of that complexity and expose to the software developer a beautiful, modern, hosted web API"
+    },
+    {
+      "id": "P3",
+      "text": "Software written to the API works with any internet-connected camera and is as easy to deploy as phone apps",
+      "status": "explicit",
+      "evidence_span": "make it as easy to get software working on a camera as it is today to get it working on a phone"
+    },
+    {
+      "id": "P4",
+      "text": "Being a developer-first hosted API differentiates from hosted security products and local platforms",
+      "status": "explicit",
+      "evidence_span": "The difference is with our company, our product is an API"
+    },
+    {
+      "id": "P5",
+      "text": "Solutions generate recurring revenue per camera",
+      "status": "explicit",
+      "evidence_span": "generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Fragmented camera development",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "EverCam platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Recurring camera fees",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better customer service and camera-based software without developers owning the hardware complexity",
+      "status": "explicit",
+      "evidence_span": "Their customer is getting a better service"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Unleash live-image software development",
+      "evidence_span": "unleash a whole new category of software development based around the live image"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "When those problems reach the desk of the software developer, things get very expensive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enables it at scale for these software developers to not have to worry about the hardware"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "generating a recurring fee on a per-camera basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Customer examples treated as illustrations of the same platform, not separate premises. Traction months/dollars on failed internal build used only as problem evidence in P1."
+}

@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-812",
+    "coder_session_id": "session_05",
+    "session_case_index": 4,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprise design-to-manufacture handoffs across heterogeneous machines, software, and decentralized sites are cumbersome (Excel/file shares)",
+      "status": "explicit",
+      "evidence_span": "On one side, they have all these machines, and all these machines have different software and operators. And on the other side, you have designers. And all day, they go back and forth with Excel files, spreadsheets, file shares"
+    },
+    {
+      "id": "P2",
+      "text": "A cloud manufacturing platform connects 3D printers, CNC, water jets, robots, and assembly workflows for one-click remote job control",
+      "status": "explicit",
+      "evidence_span": "it's not just 3D printers, it's connecting all these machines and workflows in the cloud, anytime, anywhere"
+    },
+    {
+      "id": "P3",
+      "text": "Fog clients take over shop-floor machines that normally rely on SD cards and USB sticks",
+      "status": "explicit",
+      "evidence_span": "we've got a client that runs in what we call the fog, which connects to the cloud and takes control of the machine"
+    },
+    {
+      "id": "P4",
+      "text": "Factories and workflows can be duplicated and relocated across sites from the same cloud control plane",
+      "status": "explicit",
+      "evidence_span": "if I want to duplicate the factory, this is my San Francisco factory, I click Duplicate, and now I've got another factory"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is a per-site enterprise license",
+      "status": "explicit",
+      "evidence_span": "we charge 200K per site license"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "cumbersome decentralized manufacturing handoffs",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "cloud and fog machine control",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "site license monetization",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Take an idea to a real manufactured object instantly, anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "taking an idea to a real object instantly, anytime, anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "time to market is one of the most important things when you're trying to beat your competition"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our vision is one-click manufacturing"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "looking to be more efficient as they scale worldwide"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Machine types and assembly workflow UI treated as facets of one cloud manufacturing mechanism plus fog takeover and factory duplication as separately failable control/scale conditions. Prior 3D-printing OS part counts and Ford/Cisco logos excluded as traction. Singleton D3 retained as independently revisable pricing condition."
+}

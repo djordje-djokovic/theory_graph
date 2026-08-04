@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:20Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Typical search stacks separate database, search index, and web server so index changes require updates in three places—search is too hard to implement",
+      "status": "explicit",
+      "evidence_span": "every time we wanted to modify the index, we had to change the system in three separate places"
+    },
+    {
+      "id": "P2",
+      "text": "ThriftDB combines database, search index, and web server into one on-demand cloud database with search built in",
+      "status": "explicit",
+      "evidence_span": "ThriftDB is just combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P3",
+      "text": "Companies model data as objects with attributes; ThriftDB handles objects natively—put objects in, get objects back, search across them",
+      "status": "explicit",
+      "evidence_span": "we designed ThriftDB to handle objects natively. With ThriftDB, you put in objects, you get objects back, you search across them"
+    },
+    {
+      "id": "P4",
+      "text": "Delivers fast scalable attribute-aware search (filters, facets, schema upload without downtime) proven on HN, TechCrunch, and Octopart-scale catalogs",
+      "status": "explicit",
+      "evidence_span": "With ThriftDB, you get fast, scalable search right out of the box"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "fragmented search infrastructure",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "unified object search database",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make powerful search extremely simple to implement",
+      "status": "explicit",
+      "evidence_span": "It's a really powerful tool that's also extremely simple to use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "search is still too difficult to implement. And that's why we built ThriftDB"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we designed it from the ground up to make search really simple to implement"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.88
+  },
+  "notes": "Infrastructure three-place pain folded as one problem. Unified system, native objects, and fast attribute search/schema flexibility folded as facets of one ThriftDB mechanism with demos as applications (§4.1.7, §4.1.2). Free beta signup is promo detail. Two domains—anti-template note: problem vs product only, no forced triad."
+}

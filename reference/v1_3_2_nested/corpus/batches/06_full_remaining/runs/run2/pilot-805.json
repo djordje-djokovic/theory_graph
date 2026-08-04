@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Homes with conventional ACs lack a product that connects those units the way Nest connects thermostats",
+      "status": "explicit",
+      "evidence_span": "All I could find is smart thermostats like Nest. But I had this air conditioner in my home"
+    },
+    {
+      "id": "P2",
+      "text": "Sensible hardware and learning algorithms remotely control any remote/window/split AC and automate efficient climate",
+      "status": "explicit",
+      "evidence_span": "the sensible pod on the air conditioner unit. It works on any remote control air conditioner"
+    },
+    {
+      "id": "P3",
+      "text": "Energy features and lifestyle learning deliver large bill savings without requiring constant user control",
+      "status": "explicit",
+      "evidence_span": "the air conditioner is not a TV. You don't want to control it. You just want it to happen"
+    },
+    {
+      "id": "P4",
+      "text": "Sell starter kit at $160 with $80 add-on pods per additional unit",
+      "status": "explicit",
+      "evidence_span": "basic kit for Sensible costs $160"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Dumb AC installed base",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pod automation for any AC",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Hardware kit pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Smart, efficient climate from existing air conditioners with lower electricity bills",
+      "status": "explicit",
+      "evidence_span": "reduce your electricity bill"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Greener outcomes via lower CO2",
+      "evidence_span": "reduce co2 emissions"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a product that connects to the air conditioner"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "save to our pilot users an average of 40% on the energy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "taking pre-orders now on our site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Multi-room single-pane control folded into pod/app capability. Origin story email remote not coded as a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-805",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

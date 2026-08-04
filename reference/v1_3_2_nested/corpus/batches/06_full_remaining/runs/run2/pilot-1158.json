@@ -1,0 +1,90 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rating customer-service interactions on phones shines a light that improves service quality",
+      "status": "explicit",
+      "evidence_span": "allow people to rate the interactions they have so that by shining a bright light on it, customer service gets better"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers rate named employees quickly, share feedback socially, and can request business follow-up",
+      "status": "explicit",
+      "evidence_span": "we could even request a response from Oceanic Airlines"
+    },
+    {
+      "id": "P3",
+      "text": "Pre-visit lookup of employee ratings helps consumers choose whom to deal with",
+      "status": "explicit",
+      "evidence_span": "look at the ratings for the two people and know, hey, maybe I want to talk with Sam instead of Bob"
+    },
+    {
+      "id": "P4",
+      "text": "Businesses get a dashboard of ratings, employee rankings, peer benchmarks, and a customer-response inbox",
+      "status": "explicit",
+      "evidence_span": "aggregate all of those ratings together, and we will provide a portal, essentially, a dashboard for businesses"
+    },
+    {
+      "id": "P5",
+      "text": "Growth comes from app-store distribution, social promotion, location-app integrations, and partners who promote Tello at POS",
+      "status": "explicit",
+      "evidence_span": "conversations with other location-based apps for integrating this functionality into those apps"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer rating and lookup",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Business portal and GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Raise the bar on customer service by empowering phone-based ratings",
+      "status": "explicit",
+      "evidence_span": "Tello is all about raising the bar on customer service"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "empower people to rate customer service on their cell phones"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That's Tello for Business"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Two-domain cut: consumer side vs business+distribution. Investor shout-outs excluded. 14 million businesses treated as coverage framing for the rating system, not a separate premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1158",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

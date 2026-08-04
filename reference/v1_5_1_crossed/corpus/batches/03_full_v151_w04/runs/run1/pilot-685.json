@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-685",
+    "coder_session_id": "session_02",
+    "session_case_index": 10,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises must protect proprietary source code, but perimeter walls/alarms fail and ordinary encryption makes code unsearchable and unusable for software teams",
+      "status": "explicit",
+      "evidence_span": "encryption makes your data completely unsearchable and unusable"
+    },
+    {
+      "id": "P2",
+      "text": "Overnest searchable encryption lets teams search encrypted data quickly without revealing the key, using AES-256-class security vetted by cryptographers",
+      "status": "explicit",
+      "evidence_span": "search encrypted data as easily and as quickly as Google can search web pages, all without revealing your key"
+    },
+    {
+      "id": "P3",
+      "text": "Git Zero is encrypted Git hosting that encrypts code and history, builds an encrypted index, preserves familiar Git workflow, and keeps keys password-protected from the host",
+      "status": "explicit",
+      "evidence_span": "the world's first encrypted Git hosting that not only encrypts your source code, at the same time, allows you to search while it's all encrypted"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "source-code security vs usability tradeoff",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "searchable encryption and Git Zero hosting",
+      "premise_ids": ["P2", "P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Encrypt everything while still being able to search and use source code in the cloud with on-premise-grade privacy",
+      "status": "explicit",
+      "evidence_span": "you should encrypt everything and search anything"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they have to make a choice between convenience and security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Encrypted search on an encrypted source code repository"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.86
+  },
+  "notes": "Walls/alarms/breach stats folded into one security-usability problem (§4.1.6). AES/vetting treated as quantitative/security detail of searchable encryption; Git Zero demo cascade (migrate/encrypt/index/key) folded into hosting product (§4.1.7–8). FireEye credentials and university/telecom user mentions excluded as bio/traction. Singleton D1 retained as independently revisable problem module."
+}

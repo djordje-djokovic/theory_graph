@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-733",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:20+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most commerce still happens in physical stores where brands lack control over in-store execution despite large marketing spend",
+      "status": "explicit",
+      "evidence_span": "92% of commerce still takes place offline at physical retail stores"
+    },
+    {
+      "id": "P2",
+      "text": "Brand–retailer collaboration is broken because it relies on phone calls, emails, and expensive inefficient store visits",
+      "status": "explicit",
+      "evidence_span": "Brands and retailers are still relying on multiple phone calls and emails and very expensive and inefficient store visits"
+    },
+    {
+      "id": "P3",
+      "text": "Ubique is a collaboration platform where brands monitor operations globally, retailers improve execution remotely, and store employees focus on what matters",
+      "status": "explicit",
+      "evidence_span": "Brands monitor their operations globally, retailers improve their execution remotely, and in-store employees can focus on what really matters"
+    },
+    {
+      "id": "P4",
+      "text": "Campaign tools let brands build missions, push tasks to stores, and optionally use a crowdsourcing community to collect in-store data",
+      "status": "explicit",
+      "evidence_span": "she can decide to use our crowdsourcing community of 50,000 consumers to collect the data on her behalf"
+    },
+    {
+      "id": "P5",
+      "text": "Real-time object detection automates continuous product-facing and share-of-shelf measurement from store photos",
+      "status": "explicit",
+      "evidence_span": "Ubique uses real-time object detection to automate continuous products"
+    },
+    {
+      "id": "P6",
+      "text": "Combining sales data with merchandising info gives brands previously unavailable insights and live retailer notification",
+      "status": "explicit",
+      "evidence_span": "By combining sales data with merchandising info, she has now insights that were never available before"
+    },
+    {
+      "id": "P7",
+      "text": "SaaS pricing charges per user per company",
+      "status": "explicit",
+      "evidence_span": "We have a SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Broken in-store collaboration",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Ubique execution platform",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Per-user SaaS pricing",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better in-store execution that increases sales and merchandising ROI for brands and retailers",
+      "status": "explicit",
+      "evidence_span": "We've maximized the merchandising return on investment"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Increased sales for customers by an average of 25%",
+      "evidence_span": "We increased sales for our customer by an average of 25%"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We believe that in-store execution requires a new collaboration platform. That's why we built Ubique"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "in-store execution is key, but hardly happens"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We've improved field efficiency. We've maximized the merchandising return on investment"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We have a SaaS business model where we charge on a per-user, per-company basis"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript truncated mid-sentence at close. Traction metrics (30 brands, 10,000 stores) excluded per §4.2. Crowdsourcing community kept inside campaign tooling rather than a separate premise (§4.1(5)). Singleton D3 justified as independently revisable commercial model. Need/product/money triad noted with SaaS as separately stated module."
+}

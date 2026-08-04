@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-586",
+    "coder_session_id": "session_03",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:40:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A complete dashboard and data management system tracks player health across unlimited profiles",
+      "status": "explicit",
+      "evidence_span": "complete dashboard and data management system so you keep better track of your player's health"
+    },
+    {
+      "id": "P2",
+      "text": "Few-second tests yield substantial diagnostic information with rapid system implementation",
+      "status": "explicit",
+      "evidence_span": "so much information to be gained from just a few second tests"
+    },
+    {
+      "id": "P3",
+      "text": "Early adopters include high schools, a university, a hospital, and a major-league baseball partner for high-performance athlete testing",
+      "status": "explicit",
+      "evidence_span": "three high schools, one university, and one hospital already on board for phase one testing"
+    },
+    {
+      "id": "P4",
+      "text": "IP spans diagnostics from motor neural disease and infant autism toward drugs and intoxication on a path to automated mobile healthcare",
+      "status": "explicit",
+      "evidence_span": "IP covers a breadth of diagnostic services ranging from motor neural diseases and detection of autism at infancy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "player health dashboard and rapid testing",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "school hospital and MLB testing partners",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "broad diagnostic IP toward mobile healthcare",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Medically mobile automated healthcare via rapid diagnostic testing and health tracking",
+      "status": "explicit",
+      "evidence_span": "total automated mobile health care platform. Medically mobile, that's our mission"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "keep better track of your player's health"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "begin testing our methodology on high-performance athletes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "one step closer to a total automated mobile health care platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.45
+  },
+  "notes": "Transcript opens mid-sentence and is thin; coded only present claims. Partner list treated as one GTM/adoption premise. Diagnostic IP breadth folded as one feasibility roadmap premise rather than one premise per disease."
+}

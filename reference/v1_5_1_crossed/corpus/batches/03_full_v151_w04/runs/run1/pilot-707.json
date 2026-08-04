@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-707",
+    "coder_session_id": "session_06",
+    "session_case_index": 20,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:54:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Without rapid accessible diagnostics, outbreaks spread while patients wait months; dipsticks lack sensitivity and PCR is costly and not portable",
+      "status": "explicit",
+      "evidence_span": "Without rapid, accessible diagnostics to determine who is infected, diseases continue to spread"
+    },
+    {
+      "id": "P2",
+      "text": "FastChip is a vacuum-powered, zero-external-equipment isothermal amplification chip with smartphone optical readout in about an hour",
+      "status": "explicit",
+      "evidence_span": "a field-ready, affordable, sensitive, and trackable solution"
+    },
+    {
+      "id": "P3",
+      "text": "An app tracks GPS, patient info, and results to form a disease-tracking network for ministries of health",
+      "status": "explicit",
+      "evidence_span": "an app that tracks GPS data, patient info, and test results. So this becomes a powerful disease tracking network"
+    },
+    {
+      "id": "P4",
+      "text": "Launch first as a research toolkit, then as a human diagnostic kit after sample prep and FDA clearance",
+      "status": "explicit",
+      "evidence_span": "Initially, we plan to launch this as a research toolkit. Then, after integrating sample prep and clearing FDA approval, we'll market this as a human diagnostic kit"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "slow inaccessible outbreak diagnostics",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "portable FastChip molecular test",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "GPS disease tracking network",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "research-to-FDA diagnostic path",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fight epidemics with rapid decentralized molecular diagnostics",
+      "status": "explicit",
+      "evidence_span": "fight epidemics with rapid molecular diagnostics"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Patients are waiting months to get their results back"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Results come out within one hour, so patients don't have to wait for days"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "enable ministries of health to optimally deploy the resources in the hotspots"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "market this as a human diagnostic kit"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Dipstick vs PCR insufficiency folded into one diagnostics-gap problem-set (§4.1.6). Vacuum microwells, heat pack, fluorescence count, and cost-vs-PCR claims folded as process + performance package of FastChip (§4.1.8). Multi-disease future wells treated as roadmap detail inside the chip premise. Inventor/Gates bio excluded. Singletons retained as separately revisable modules."
+}

@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Conventional passwords and ID tokens fail to capture who you uniquely are",
+      "status": "explicit",
+      "evidence_span": "you're certainly not a password with a capital letter, a number, and a symbol"
+    },
+    {
+      "id": "P2",
+      "text": "Implicit authentication matches phone, computer, wearable, and nearby-device signals",
+      "status": "explicit",
+      "evidence_span": "Once you install UniFi ID, you don't need to deal with passwords or authentication again"
+    },
+    {
+      "id": "P3",
+      "text": "Gait, typing dynamics, places, and nearby-device signals feed ML that distinguishes individuals",
+      "status": "explicit",
+      "evidence_span": "This spans from the way you move, to the places you go, to the signals from the devices around you"
+    },
+    {
+      "id": "P4",
+      "text": "Passive factors identify the human behind the device without conscious user action",
+      "status": "explicit",
+      "evidence_span": "we use passive factors to identify the human behind the device. So we naturally work cross-device, and we don't require any conscious user action"
+    },
+    {
+      "id": "P5",
+      "text": "Partners need solutions for account takeover and password-reset help-desk load",
+      "status": "explicit",
+      "evidence_span": "Over 30% of their help desk calls are password reset calls. These are both problems we're solving for them immediately"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Password identity failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Passive behavioral biometric engine",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise ATO and reset use cases",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Secure, passwordless authentication that enhances security from human uniqueness",
+      "status": "explicit",
+      "evidence_span": "using what's unique about each individual to enhance security"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Humans have always been thought of as the weak link in security"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "authenticate and secure your identity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "preventing account takeover"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Streamlining/fraud/ATO applications folded with partner problems into D3. Notification of denied login treated as product detail inside implicit auth.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-718",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

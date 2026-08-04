@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "People track many life metrics but know little about health measurements that truly matter for themselves and loved ones",
+      "status": "explicit",
+      "evidence_span": "how much do you really know about measurements that truly matter? Your health. And the health of your loved ones"
+    },
+    {
+      "id": "P2",
+      "text": "Dyno uses nine integrated sensors and analytics to capture 33 health metrics in about 60 seconds like a digital thermometer, via Bluetooth or a 3G/Wi-Fi cradle",
+      "status": "explicit",
+      "evidence_span": "It's nine integrated sensors and analytics. It's able to track 33 different health metrics. It works just as simple as a digital thermometer, and it takes only 60 seconds to get it done"
+    },
+    {
+      "id": "P3",
+      "text": "Measurements include cuffless blood pressure and other complex indices summarized as a 0–100 health score",
+      "status": "explicit",
+      "evidence_span": "we also do blood pressure without requiring the use of a cuff"
+    },
+    {
+      "id": "P4",
+      "text": "In elderly care, analytics can identify and alert facilities to abnormalities patients and caregivers did not know about",
+      "status": "explicit",
+      "evidence_span": "our analytic software was able to identify and alert the facility of two abnormalities"
+    },
+    {
+      "id": "P5",
+      "text": "Additional markets include chronic-disease remote monitoring, hospital discharge/readmission prevention, and consumer self-care",
+      "status": "explicit",
+      "evidence_span": "We can help companies that focus on chronic disease care"
+    },
+    {
+      "id": "P6",
+      "text": "Monetization via subscriptions, OEM/licensing, and eventual data mining",
+      "status": "explicit",
+      "evidence_span": "Through subscription base, OEM and licensing revenue"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Health tracking need",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Dyno sensor analytics",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Markets and monetization",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower people to take control of their health through rapid multi-metric tracking and preventive alerts",
+      "status": "explicit",
+      "evidence_span": "our passion is empowering you to take control of your health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Avoid stroke costs and patient/family suffering via earlier detection",
+      "evidence_span": "imagine not just the money saved, but the pain and suffering that is avoided by the patient and the family"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "measurements that truly matter? Your health"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "A true step forward in preventive care"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "more individuals want to be empowered to better understand and control their own health"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Arterial stiffness/airway/STR/PBC list folded into sensor capability (v1.3.2 #5). Clinical pilot used as mechanism evidence, not traction count. China OEM deal treated as monetization condition not financing ask.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-861",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:29:35+02:00"
+  }
+}

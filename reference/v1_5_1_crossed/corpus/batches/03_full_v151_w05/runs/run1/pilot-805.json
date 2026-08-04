@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-805",
+    "coder_session_id": "session_03",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:00:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "About a billion existing remote/window/split air conditioners cannot be made smart by products like Nest thermostats",
+      "status": "explicit",
+      "evidence_span": "All I could find is smart thermostats like Nest. But I had this air conditioner in my home, and there are one billion of these kinds of air conditioners all around the world"
+    },
+    {
+      "id": "P2",
+      "text": "A Sensible pod connects those air conditioners to an app and automates efficient climate control that cuts energy use",
+      "status": "explicit",
+      "evidence_span": "We make any air conditioner smart"
+    },
+    {
+      "id": "P3",
+      "text": "Basic kit is about $160 plus about $80 per additional AC via site pre-orders",
+      "status": "explicit",
+      "evidence_span": "The first kit, the basic kit for Sensible costs $160, and then for each additional air conditioner you have in your home or office, it's another $80"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unconnected installed AC base",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "smart AC energy pod",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "kit pricing and pre-orders",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Comfortable automatic AC control that lowers energy bills and emissions",
+      "status": "explicit",
+      "evidence_span": "we want the world to be greener to reduce co2 emissions and of course to affect your electricity bill"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the only logical conclusion was to build a product that connects to the air conditioner"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We were able to save to our pilot users an average of 40% on the energy"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're taking pre-orders now on our site"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Efficient temperature, clogged filters, open window, occupancy, and lifestyle learning folded as energy-automation cascade of one pod product (v1.5.1 §4.1.7–8). Wearables roadmap treated as vision framing. Indiegogo award excluded as traction. Anti-template: installed-base need, product, and pricing/channel separately revisable."
+}

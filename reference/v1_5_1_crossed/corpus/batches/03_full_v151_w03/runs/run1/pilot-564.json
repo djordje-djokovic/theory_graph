@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-564",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Pre-consumer food waste and rising protein shortage can be addressed by converting food waste into edible-insect protein",
+      "status": "explicit",
+      "evidence_span": "if somehow we can convert pre-consumer food waste into protein, we can offer a sustainable solution for both problems"
+    },
+    {
+      "id": "P2",
+      "text": "A hatchery-to-incubator insect process turns food waste into fertilizer and dried insect protein powder with high efficiency and nutrition",
+      "status": "explicit",
+      "evidence_span": "converting food waste into fertilizer"
+    },
+    {
+      "id": "P3",
+      "text": "Revenue comes from being paid to take food waste and from selling insect protein powder and fertilizer",
+      "status": "explicit",
+      "evidence_span": "Companies pay us to get rid of their food waste"
+    },
+    {
+      "id": "P4",
+      "text": "First commercial path is pet feed (reptile, fish, bird) grown via influencers and pet-shop partners",
+      "status": "explicit",
+      "evidence_span": "We launched our first product in May for reptile, fish and bird"
+    },
+    {
+      "id": "P5",
+      "text": "Human go-to-market targets athletes, renal and cancer patients, and people allergic to regular meat, enabled by edible-insect legality",
+      "status": "explicit",
+      "evidence_span": "We first target three initial customer segments"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "waste-to-insect protein process",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "paid waste intake plus product sales",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "pet-first then human segments",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Healthier, more sustainable protein sourced by upcycling food waste",
+      "status": "explicit",
+      "evidence_span": "producing much healthier and more sustainable protein sources for humans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "convert pre-consumer food waste into protein"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling our insect-based protein powder and the fertilizer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they need other alternatives"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Water/land/carbon and protein/mineral comparisons folded into process premise as process+performance package (v1.5.1 §4.1.8). Competitor critiques of plant/artificial/cricket protein treated as framing for process superiority, not separate premises. Grants, accelerators, and customer-count traction excluded. Singleton D2 retained as independently revisable commercial module."
+}

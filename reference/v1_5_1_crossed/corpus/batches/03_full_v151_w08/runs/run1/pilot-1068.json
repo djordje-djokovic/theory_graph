@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1068",
+    "coder_session_id": "session_01",
+    "session_case_index": 2,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:35:02Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Parents lack ready access to kids' critical medical info in emergencies and routine asks",
+      "status": "explicit",
+      "evidence_span": "how many of you would know what's the last immunization your kid had if you were asked in the emergency room?"
+    },
+    {
+      "id": "P2",
+      "text": "A new law lets patients own medical records and require timely release after signed consent",
+      "status": "explicit",
+      "evidence_span": "a law passed which says you now own your medical records. And once a proper release is signed, a doctor has to provide it to you in a timely fashion"
+    },
+    {
+      "id": "P3",
+      "text": "Parent-focused PHR surfaces immunizations, growth charts, and milestones—not generic adult labs",
+      "status": "explicit",
+      "evidence_span": "what parents will be focused on are the immunizations, the growth charts, the last milestones, and it will not be your cholesterol levels"
+    },
+    {
+      "id": "P4",
+      "text": "Secure website plus mobile/iPhone app deliver the same records anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "all this information available from a secure website and a mobile app"
+    },
+    {
+      "id": "P5",
+      "text": "Effortless intake: electronic release, fax from doctors, ingest system, and CS upload the data",
+      "status": "explicit",
+      "evidence_span": "you have to sign an electronic release. We in turn take that release, send it to your doctor and your doctor will now use a new technology we like to call the fax"
+    },
+    {
+      "id": "P6",
+      "text": "Service is HIPAA compliant with extra security layers for cautious parents",
+      "status": "explicit",
+      "evidence_span": "we are HIPAA compliant. And actually, we've added extra special layers of security"
+    },
+    {
+      "id": "P7",
+      "text": "Existing PHRs fail: self-entry burden, single-provider silos, and non-parent UI",
+      "status": "explicit",
+      "evidence_span": "the existing players have three fatal flaws"
+    },
+    {
+      "id": "P8",
+      "text": "Target busy US moms via baby-site co-marketing; subscription ~cost of a latte/month",
+      "status": "explicit",
+      "evidence_span": "25 million moms living in the U.S. that spend $5-10 billion in the first year of a baby's life"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "parent medical-access need and law",
+      "premise_ids": ["P1", "P2", "P7"]
+    },
+    {
+      "id": "D2",
+      "name": "parent-centric records product and intake",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "mom market and subscription GTM",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Busy parents get kids' critical health info organized and available in their pocket anytime",
+      "status": "explicit",
+      "evidence_span": "access to all your kid's critical medical information available to you in your pocket, accessible anytime, from anywhere"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We intend to take full use of this new law and bring electronic medical records to the masses"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "starting with those who need it most, busy, caring moms"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The key is it's effortless for the customer"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "organize the kids' health, one busy, frazzled parent at a time"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Immunizations/growth/milestones/print/email/compare-siblings folded as parent-PHR cascade (§4.1.7). Three competitor flaws folded as one problem set (§4.1.6). Milestone camera tracking folded into product surface. First-100 free year is promo detail on subscription. Future seniors expansion is vision framing—not a separate premise. Anti-template: need/law, product/intake, and mom GTM separately revisable."
+}

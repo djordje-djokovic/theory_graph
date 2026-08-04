@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-876",
+    "coder_session_id": "session_06",
+    "session_case_index": 8,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:58:40Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "College students struggle to get on-demand help, find study groups, and share knowledge, widening the achievement gap",
+      "status": "explicit",
+      "evidence_span": "It's really hard for students to master a topic if they can't get help on demand. It's hard to find study groups if students cannot easily share knowledge or resources"
+    },
+    {
+      "id": "P2",
+      "text": "School-email signup connects students to classmates and course pages for collaborative study",
+      "status": "explicit",
+      "evidence_span": "any student can easily access the brainpower and knowledge of their entire class right on our platform"
+    },
+    {
+      "id": "P3",
+      "text": "Course pages support collaborative study guides, section selection, and free shared files including prior semesters",
+      "status": "explicit",
+      "evidence_span": "Michael can have access to all the files and resources shared by his classmates completely and absolutely free"
+    },
+    {
+      "id": "P4",
+      "text": "Campus founders plus first-day marketing and student invites drive viral campus adoption",
+      "status": "explicit",
+      "evidence_span": "we put together a campus founder program, and we do a big marketing and social media push the first day of class. After that, it's the students inviting their classmates"
+    },
+    {
+      "id": "P5",
+      "text": "Peer Mentor Program offers scalable affordable on-demand peer tutoring on course pages",
+      "status": "explicit",
+      "evidence_span": "allow every single college student to offer online, on-demand tutoring sessions and make some money while helping others"
+    },
+    {
+      "id": "P6",
+      "text": "Platform knowledge of when and which subject students need help enables highly targeted mentor matching",
+      "status": "explicit",
+      "evidence_span": "we know exactly when they need help. We know exactly the subject they need help with, and that allows us to be highly targeted like no other"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "College help and study-group gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Social class learning platform",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Peer mentor tutoring marketplace",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "College students get on-demand peer help and shared class knowledge",
+      "status": "explicit",
+      "evidence_span": "access the brainpower and knowledge of their entire class right on our platform"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Students can earn money as peer mentors while peers get cheap one-on-one help",
+      "evidence_span": "a way for students to make some money for college and a way for every single college student to get personalized one-on-one help"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P6",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "we know exactly when they need help. We know exactly the subject they need help with, and that allows us to be highly targeted like no other"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's really hard for students to master a topic if they can't get help on demand"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Students learn best by helping each other out, and that is exactly what they're doing on Study Room"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "get personalized one-on-one help right when they need it"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Help-on-demand / study-groups / achievement-gap pains folded as one student problem set. Collaborative guide, sections, and free files treated as facets of the class platform surface. Peer mentoring is a separately framed second product path. 40k student traction excluded per §4.2. Singleton D1 retained as independently stated demand module. Trailing Q&A excluded."
+}

@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1061",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:26:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The venture builds products in underexplored greenfield technology areas to learn by shipping",
+      "status": "explicit",
+      "evidence_span": "looking at areas of technology that we think haven't really been fully explored"
+    },
+    {
+      "id": "P2",
+      "text": "A digital gnome is a unique object that can live on only one device at a time",
+      "status": "explicit",
+      "evidence_span": "a gnome can only live on one device. He's a digital object, but he's uniquely placed in one physical location all the time"
+    },
+    {
+      "id": "P3",
+      "text": "Users create custom gnomes and transfer them between devices via a magical lift process",
+      "status": "explicit",
+      "evidence_span": "create a custom gnome, just like we created Lebowski"
+    },
+    {
+      "id": "P4",
+      "text": "Travel check-ins and photos notify everyone who has had the gnome along its path",
+      "status": "explicit",
+      "evidence_span": "everybody who's been along that path with Disrupt will actually get to comment and join in the fun"
+    },
+    {
+      "id": "P5",
+      "text": "Lyft enables drag-and-drop interconnectivity of content across different devices",
+      "status": "explicit",
+      "evidence_span": "a way of doing a different way of device interconnectivity"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Non-stop gnomes",
+      "premise_ids": ["P1", "P2", "P3", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "Lyft device interconnectivity",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Carry, share, and follow a personal digital gnome across places and friends",
+      "status": "explicit",
+      "evidence_span": "wouldn't it be cool to have a gnome in your pocket?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More interesting cross-device drag-and-drop interconnectivity",
+      "evidence_span": "how can I connect them in a more interesting way?"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "take him with you, to build your very own custom gnome"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "device interconnectivity"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Singleton D2 retained: speaker explicitly hands off to a second product (Lyft) framed as a separately interesting interconnectivity module (§4.1(5)). Customization UI, map following, and lift demo folded into the gnome mechanism. Travel miles and lab anecdotes excluded as demo/traction. Greenfield exploration coded as an operating strategy condition, not pure vision."
+}

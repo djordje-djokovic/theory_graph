@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1029",
+    "coder_session_id": "session_01",
+    "session_case_index": 22,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T15:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Peers learn far more from each other than from top-down video/professor content, yet most edtech is top-down",
+      "status": "explicit",
+      "evidence_span": "peers learn seven times more from each other than they do from any video content"
+    },
+    {
+      "id": "P2",
+      "text": "Algorithm recommends classmates to study with and surfaces courses in one secure place",
+      "status": "explicit",
+      "evidence_span": "the first algorithm in the world that recommends people with whom you should study"
+    },
+    {
+      "id": "P3",
+      "text": "Students post questions, share/organize notes by topic, and run live study sessions with classmates",
+      "status": "explicit",
+      "evidence_span": "connect with your classmates, find your peers, and study in real time"
+    },
+    {
+      "id": "P4",
+      "text": "Peer marketplace lists and sells books and study guides with gamified ratings",
+      "status": "explicit",
+      "evidence_span": "We built a peer-to-peer marketplace"
+    },
+    {
+      "id": "P5",
+      "text": "University pilots and honor-society partnership provide campus distribution",
+      "status": "explicit",
+      "evidence_span": "We've successfully piloted programs at AU, Georgetown, Cornell University, Harvard, and Yale"
+    },
+    {
+      "id": "P6",
+      "text": "Partnerships with online learning platforms could extend beyond campus video watching",
+      "status": "explicit",
+      "evidence_span": "We can partner with online universities where people go watch videos"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "peer study matching and sessions",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "peer academic marketplace",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "campus and online partnerships",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect classmates for peer learning that makes academic life easier",
+      "status": "explicit",
+      "evidence_span": "the smartest platform to connect with your classmates and make your academic life easier"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're capturing the power of peer-to-peer learning"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "If you want the rest of my study guide, it's for sale on my Marketplace"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "partnered up with one of the largest national honor societies in the country"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Transcript cut short by time (truncated=true). Course page, notes drag-drop, and live session folded as peer-learning surface. Marketplace monetization path separate. Pilots as continuing campus GTM condition; online partnerships aspirational but speaker presents as next revenue path—coded with residual doubt in confidence."
+}

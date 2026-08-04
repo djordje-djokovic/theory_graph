@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-981",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:41Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The GTAR hardware has matured into a sturdier, more reliable product with an interchangeable dock for different handsets",
+      "status": "explicit",
+      "evidence_span": "We've added some features like an interchangeable dock system"
+    },
+    {
+      "id": "P2",
+      "text": "Functionality has grown beyond a learning tool into an instrument usable with multiple G-tar compatible apps as different parts of a song",
+      "status": "explicit",
+      "evidence_span": "it's gone beyond being just kind of a learning tool for people who want to play guitar and become kind of an amazing instrument in and of itself"
+    },
+    {
+      "id": "P3",
+      "text": "Missed Kickstarter buyers can preorder online with inventory expected around June",
+      "status": "explicit",
+      "evidence_span": "we're taking preorders online now"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "matured GTAR hardware and instrument apps",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "online preorders and inventory",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A real guitar instrument product people can buy and play, not only a learning prototype",
+      "status": "explicit",
+      "evidence_span": "become kind of an amazing instrument in and of itself"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "become kind of an amazing instrument in and of itself"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're taking preorders online now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Kickstarter raise and fulfillment status excluded as financing/traction (§4.2). Sturdier/reliable plus interchangeable dock folded as one hardware maturity package (§4.1.7). Thin status-update pitch; singleton D2 retained as independently revisable availability channel."
+}

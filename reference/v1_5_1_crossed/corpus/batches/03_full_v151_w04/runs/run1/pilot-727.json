@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-727",
+    "coder_session_id": "session_02",
+    "session_case_index": 15,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Girls' toys under-serve tech ambition versus high-tech toys for boys; girls care about friendship and communication and deserve better STEM toys",
+      "status": "explicit",
+      "evidence_span": "Girls are just as smart and they deserve a lot better"
+    },
+    {
+      "id": "P2",
+      "text": "JewelBots are programmable friendship wearables with patent-pending mesh networking so devices communicate without requiring a phone",
+      "status": "explicit",
+      "evidence_span": "the first wearable device to communicate from device to device"
+    },
+    {
+      "id": "P3",
+      "text": "Features include color friendship groups with proximity glow/animations, customizable secret light/vibration messages, and open-source Arduino coding for custom effects",
+      "status": "explicit",
+      "evidence_span": "Jewelbots can be used to send messages"
+    },
+    {
+      "id": "P4",
+      "text": "Sold online in packs with interchangeable charms/bands, COPPA-compliant safe communication, and licensed character partnerships (e.g., Powerpuff Girls, Google Made with Code)",
+      "status": "explicit",
+      "evidence_span": "JewelBots are sold online for $69 for one, $99 for the two-pack, and $139 for the Bestie three-pack"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "unfair girls tech-toy gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "mesh wearable friendship and coding",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "pack pricing charms and licensing",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Empower girls toward engineering through a fun, social, codeable wearable",
+      "status": "explicit",
+      "evidence_span": "every girl feels empowered to become an engineer"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This is what we make for girls. This is awful and unfair"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "girls can code them to do whatever they imagine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Girls can collect and trade their favorite limited edition designs and characters"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Friendship/communication research folded into girls-toy problem framing (§4.1.6). Pairing/glow/messages/Arduino weather example as feature cascade of one wearable platform; patents folded into mesh mechanism (§4.1.1/7). Founder bio and $200k sales traction excluded. Price+charms+licensing kept as one commercial/brand module (§4.1.3). Singleton D1/D3 retained. Anti-template noted."
+}

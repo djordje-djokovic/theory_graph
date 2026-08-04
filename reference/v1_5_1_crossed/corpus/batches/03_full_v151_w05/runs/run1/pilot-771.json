@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-771",
+    "coder_session_id": "session_05",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:57:07Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Existing fitness trackers and logbooks fail strength/gym users who need exercise ID and rep counting, not just steps",
+      "status": "explicit",
+      "evidence_span": "I even went out and bought a brand new fitness tracker, but soon realized it only tracked my steps, not my exercises"
+    },
+    {
+      "id": "P2",
+      "text": "A smartwatch app uses consumer watch motion sensors to auto-identify exercises, count reps, and estimate calories, including custom-trained moves",
+      "status": "explicit",
+      "evidence_span": "the first and only smartwatch app that automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market via fitness influencers, gym/personal-trainer O2O logging, and viral CrossFit/bodybuilding communities",
+      "status": "explicit",
+      "evidence_span": "VemoFit will first leverage our strong relationships with popular fitness influencers to help us spread the word in the community"
+    },
+    {
+      "id": "P4",
+      "text": "Freemium model with trainer routines/feedback plus personalized product offers from fitness journey data",
+      "status": "explicit",
+      "evidence_span": "VmoFit will operate on a freemium business model, allowing your favorite personal trainers to create professional routines, give you feedback on your workouts"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "frictionful gym workout tracking",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "auto exercise recognition app",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "influencer gym freemium GTM",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Frictionless automatic tracking of strength and gym workouts on a smartwatch",
+      "status": "explicit",
+      "evidence_span": "VemoFit takes the friction out of tracking my workouts"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "there's just never been an easy way to do it"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automatically identifies your exercises, counts your repetitions, and tracks calories burned"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring new users into the tracking market because of VemoFit's lack of friction"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Rep/calorie/custom-train/indoor-cardio features folded into one recognition mechanism (§4.1.7); patent-pending and sensor-difficulty narrative treated as IP/feasibility detail on that mechanism. Follower/YouTube traction and team bios excluded. Anti-template: problem, product, and GTM/monetization separately asserted."
+}

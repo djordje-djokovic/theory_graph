@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Ingredient-to-skin-type matching plus ML product fit solves what to put on your face",
+      "status": "explicit",
+      "evidence_span": "match ingredients with someone's skin type, and then use machine learning to find out what products best fit, we can probably solve this problem"
+    },
+    {
+      "id": "P2",
+      "text": "Machines can learn skincare better than humans over time",
+      "status": "explicit",
+      "evidence_span": "we truly believe that machine can learn better than human over time"
+    },
+    {
+      "id": "P3",
+      "text": "Onboarding questions and photo narrow product set by preferences; quiz assigns skin profile",
+      "status": "explicit",
+      "evidence_span": "This allows the system to categorize a small set of product based on your preferences. And then it walks you through a fun quiz that's similar to a dermatologist visit. This allows the system to categorize what kind of skin profile you have"
+    },
+    {
+      "id": "P4",
+      "text": "Backend divides people into more than 30 skin types on five dimensions",
+      "status": "explicit",
+      "evidence_span": "we've divided people into more than 30 different skin types based on five dimensions"
+    },
+    {
+      "id": "P5",
+      "text": "Human advisor validates system output and narrows to one recommended product",
+      "status": "explicit",
+      "evidence_span": "it sends all these skin data to a real human advisor who will do a cross-check, validate the system, and then narrow it down to one product and send it to me"
+    },
+    {
+      "id": "P6",
+      "text": "Purchase completes through a personal checkout link supporting major payment methods",
+      "status": "explicit",
+      "evidence_span": "I get a personal checkout link, which I can use Apple Pay, PayPal, or any credit card to finish checkout process"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "ML skin profiling and product match",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human advisor validation",
+      "premise_ids": [
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Checkout link payments",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Achieve better skin and confidence without trial-and-error",
+      "status": "explicit",
+      "evidence_span": "achieve better skin and gain that confidence without going through all the trials and errors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "powered by a combination of human expertise and artificial intelligence"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "real human advisor who will do a cross-check"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "finish checkout process"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Split human advisor as separately revisable module from ML profiling. 30 skin types kept with profiling taxonomy rather than as separate value claim. Industry size excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-593",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T12:32:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

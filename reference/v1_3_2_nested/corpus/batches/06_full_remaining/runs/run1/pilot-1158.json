@@ -1,0 +1,106 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Customer service is widely poor; public ratings of interactions can improve service by shining a bright light on it",
+      "status": "explicit",
+      "evidence_span": "by shining a bright light on it, customer service gets better"
+    },
+    {
+      "id": "P2",
+      "text": "A mobile app lets consumers rate individual service employees in about 30 seconds with comments and social sharing",
+      "status": "explicit",
+      "evidence_span": "in 30 seconds or less, you just provided not only that employee, but also their manager with information about that interaction"
+    },
+    {
+      "id": "P3",
+      "text": "Consumers can look up employee ratings before choosing whom to deal with",
+      "status": "explicit",
+      "evidence_span": "before you went down to the car dealership, you could find out something about the people who are selling you the product"
+    },
+    {
+      "id": "P4",
+      "text": "A business dashboard aggregates ratings for benchmarking, employee performance, and customer-response requests",
+      "status": "explicit",
+      "evidence_span": "dashboard for businesses where they can go in and at a glance see what's going on with their business"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via app stores, social networks, location-app integrations, and partner promotion at points of sale drives rating coverage",
+      "status": "explicit",
+      "evidence_span": "they will actually promote Tello to their customers and have either buttons they wear or signs at the point of sale"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Consumer service rating app",
+      "premise_ids": ["P1", "P2", "P3"]
+    },
+    {
+      "id": "D2",
+      "name": "Tello for Business dashboard",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Distribution and partner promotion",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Customer service improves when people can rate service interactions on their phones",
+      "status": "explicit",
+      "evidence_span": "empower people to rate customer service on their cell phones"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Businesses get actionable visibility into employee service and customer follow-up requests",
+      "evidence_span": "they will find incredibly valuable"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "by shining a bright light on it, customer service gets better"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "compare themselves against other businesses on customer service"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "promote Tello to their customers"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.83
+  },
+  "notes": "Investor list and t-shirt promo excluded. Multiple demo flows folded into one consumer-rating premise (v1.3.2 clarification 5). Singleton D2/D3 retained as business portal and GTM modules separately revisable from the consumer app.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1158",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00"
+  }
+}

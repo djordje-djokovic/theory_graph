@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "A new economic model rewards app developers, IoT manufacturers, smartphone makers, and people for participating",
+      "status": "explicit",
+      "evidence_span": "we created a new economic model that basically rewards all the participants in the ecosystem"
+    },
+    {
+      "id": "P2",
+      "text": "More data moved yields more nodal cash earnings",
+      "status": "explicit",
+      "evidence_span": "the more data you move, the more value there is in the data you move, the more you earn nodal cash or cryptocurrency"
+    },
+    {
+      "id": "P3",
+      "text": "Participant smartphones act as IoT access points that forward humidity, temperature, and other sensor data to the cloud",
+      "status": "explicit",
+      "evidence_span": "these smartphones become IoT gateway or access points for IoT, if you prefer. And the blue dots are the sensors"
+    },
+    {
+      "id": "P4",
+      "text": "Rendezvous verifies identities on a decentralized blockchain architecture that scales better than centralized designs",
+      "status": "explicit",
+      "evidence_span": "It is built on blockchain. It is a fully decentralized technology. And guess what? It scales better on the blockchain than on the centralized architecture"
+    },
+    {
+      "id": "P5",
+      "text": "Enterprise packages ship with Rendezvous for asset tracking, sensor collection, or connecting things",
+      "status": "explicit",
+      "evidence_span": "we package our solution for enterprise, smart cities, large organizations, businesses, and all our solutions come built in with our communication and security protocol, Rendezvous"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nodal cash rewards",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Crowd IoT gateways",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Rendezvous and enterprise package",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect the next trillion things to the internet more efficiently, cost-effectively, and securely",
+      "status": "explicit",
+      "evidence_span": "connect more efficiently, more cost effectively, the next trillion things to the internet"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "rewards all the participants in the ecosystem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "smartphones become IoT gateway or access points for IoT"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "communication protocol that has security built in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "HTC/Cisco/Ledger partnership mentions treated as traction/distribution evidence folded out; core theory coded around rewards, phone gateways, and Rendezvous. Country/device DAU stats excluded as traction. Amazon Sidewalk/Apple Find My competitive framing excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-431",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:02+02:00"
+  }
+}

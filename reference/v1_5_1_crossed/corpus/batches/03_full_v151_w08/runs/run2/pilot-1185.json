@@ -1,0 +1,106 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Employers drown in low-quality applications and waste hours finding the few relevant candidates",
+      "status": "explicit",
+      "evidence_span": "I spend hours sifting through the noise to find those 10 best"
+    },
+    {
+      "id": "P2",
+      "text": "Job seekers struggle to get noticed and lack feedback on whether applications were viewed or how employers reacted",
+      "status": "explicit",
+      "evidence_span": "how does my resume or cover letter, the one that's spot on, the one that's perfect for the job I applied to, get noticed?"
+    },
+    {
+      "id": "P3",
+      "text": "LocalBacon handpicks quality full-time jobs in a uniform format—no MLM/scams—with dynamic search and saved jobs",
+      "status": "explicit",
+      "evidence_span": "we handpick every single job that's posted on our site"
+    },
+    {
+      "id": "P4",
+      "text": "Job seekers pay to apply (starting $0.99 via job credits), which makes employers notice applications",
+      "status": "explicit",
+      "evidence_span": "job seekers pay to apply on LocalBacon"
+    },
+    {
+      "id": "P5",
+      "text": "Employers agree to give feedback and notify seekers when applications are viewed; flagging can sync to ATS",
+      "status": "explicit",
+      "evidence_span": "employers and recruiters agree to give feedback and allow the job seeker to know when they view their application"
+    },
+    {
+      "id": "P6",
+      "text": "Employer UI categorizes candidates (new/flagged/shelved) with familiar workflows and transparency when shelving",
+      "status": "explicit",
+      "evidence_span": "we categorize candidates as new, as flagged, or as shelved"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "broken hiring marketplace problems",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "curated pay-to-apply job platform",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fix fundamental hiring problems for both job seekers and employers—signal and transparency instead of noise",
+      "status": "explicit",
+      "evidence_span": "fix the fundamental problems that exist for both job seekers and employers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "That system is broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "job seekers pay to apply on LocalBacon. And they notice that"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Employer and seeker pains folded as one broken two-sided hiring problem set but split into two premises under distinct stakeholder jobs (§4.1.6/tie-break). Search/save/iPaper apply UI cascade folded into curated platform. Survey willingness-to-pay treated as evidence for pay-to-apply premise not traction metric. Transcript ends mid-wrap. Two domains—not need/product/money triad.",
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1185",
+    "coder_session_id": "session_04",
+    "session_case_index": 14,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:31:30Z"
+  }
+}

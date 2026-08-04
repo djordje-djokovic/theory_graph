@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Paper logbooks make sharing and analyzing blood sugar data difficult",
+      "status": "explicit",
+      "evidence_span": "a logbook, is the typical tool that records blood sugar levels, which actually makes sharing and analyzing data difficult"
+    },
+    {
+      "id": "P2",
+      "text": "Smart cable bridges legacy glucometers to phones/tablets via audio jack across most devices including emerging markets",
+      "status": "explicit",
+      "evidence_span": "connecting glucometers to the smart devices via the audio jack"
+    },
+    {
+      "id": "P3",
+      "text": "Software reduces data tedium and preserves transfer integrity with graphs and secure upload",
+      "status": "explicit",
+      "evidence_span": "solved three issues. One, data tedium. Two, data transferability integrity"
+    },
+    {
+      "id": "P4",
+      "text": "Remote partners/family can monitor and receive proactive notifications",
+      "status": "explicit",
+      "evidence_span": "I can pre-set notifications that would alert me should grandma forget to sync to test herself"
+    },
+    {
+      "id": "P5",
+      "text": "Platform opens future third-party service models including insurers and pharmacies",
+      "status": "explicit",
+      "evidence_span": "insurance companies, and offering flexible insurance premiums"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual logging failure",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Hardware-software sync product",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Care network platform",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Usable digital diabetes care connecting patients to support networks",
+      "status": "explicit",
+      "evidence_span": "a platform connecting the patients to the support network doesn't exist"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manually recording is considered tedious"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making them smarter"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "data availability to the support network"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Value evidence uses the stated missing platform as the desired outcome criterion. Geographic launch list treated as roadmap traction, not a premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-889",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

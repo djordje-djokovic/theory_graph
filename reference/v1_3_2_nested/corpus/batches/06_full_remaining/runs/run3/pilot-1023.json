@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Multi-party bill support via cash/check fails last-mile delivery and co-payer visibility",
+      "status": "explicit",
+      "evidence_span": "Equally, if someone else is contributing to it, I don't get any visibility if they've paid their part of that bill"
+    },
+    {
+      "id": "P2",
+      "text": "PayTap is collaborative contribution with direct-to-biller settlement",
+      "status": "explicit",
+      "evidence_span": "We allow people to collaborate and contribute towards a bill with the money going directly to the biller"
+    },
+    {
+      "id": "P3",
+      "text": "Product supports no-signup share links, multiple payment methods, privacy, alerts, recurring, private mode, and merchant splits",
+      "status": "explicit",
+      "evidence_span": "I can put it in private mode so you only see your contribution to the bill"
+    },
+    {
+      "id": "P4",
+      "text": "Billers and online merchants can offer PayTap to drive completed payments",
+      "status": "explicit",
+      "evidence_span": "allowing billers and online merchants to offer Paytap to their users so that they can get payments made"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Shared payment last mile",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "PayTap collaboration platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Biller/merchant channel",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Stress-free shared payments organized elegantly with direct biller payout",
+      "status": "explicit",
+      "evidence_span": "We take out the stress, the steps, and all the hassle involved in making payments"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Works for cross-border family support as well as domestic bills",
+      "evidence_span": "where you've got people in different countries moving money back and forth"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Problem is last mile"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "money going directly to the biller"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "they can get payments made"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "UI features folded per §4.1(5). Cross-border as secondary_value.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-1023",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

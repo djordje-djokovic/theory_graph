@@ -1,0 +1,117 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Worldwide bicycle theft is large-scale and costly",
+      "status": "explicit",
+      "evidence_span": "over 5.7 billion euros of stolen bicycles every year"
+    },
+    {
+      "id": "P2",
+      "text": "Smart lock must combine alarm, security, GPS, and keyless access because prior products split these",
+      "status": "explicit",
+      "evidence_span": "what does a truly smart lock have to have"
+    },
+    {
+      "id": "P3",
+      "text": "Advanced onboard sensors detect cutting, drilling, impact, thermal attack, and cable breach",
+      "status": "explicit",
+      "evidence_span": "if someone tries to use a blowtorch or a cold spray on Lockheed, a temperature sensor will be able to detect this"
+    },
+    {
+      "id": "P4",
+      "text": "GPS tracking plus app notifications locate and alert on theft attempts",
+      "status": "explicit",
+      "evidence_span": "we have a tracker, a GPS tracker that no other bicycle lock has"
+    },
+    {
+      "id": "P5",
+      "text": "App also enables sharing bikes and renting locks for connected mobility",
+      "status": "explicit",
+      "evidence_span": "I can offer my bike to rent. To anyone"
+    },
+    {
+      "id": "P6",
+      "text": "Connected mobility scales with devices alone, not city infrastructure",
+      "status": "explicit",
+      "evidence_span": "We don't need connected infrastructure. We just need simple devices"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Theft and smart-lock requirements",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Sensor security and tracking",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Share/rent mobility layer",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A truly smart bicycle lock people can trust and share",
+      "status": "explicit",
+      "evidence_span": "make a truly smart lock that we could use"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Bicycle theft is a huge problem worldwide"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "tamper detected your bike might be a risk"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "share bikes easily with anyone that we want"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Requirements list kept as one premise (P2) bundling must-have attributes of the same lock.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-903",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

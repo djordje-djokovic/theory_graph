@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Clients pay for individualized advice but get generic fund buckets because tools lag expectations",
+      "status": "explicit",
+      "evidence_span": "Clients pay for individualized advice and education, but advisors don't have the time, tools, or technology to deliver"
+    },
+    {
+      "id": "P2",
+      "text": "Trusted advisor-client relationships cannot be replaced by tools and should be preserved",
+      "status": "explicit",
+      "evidence_span": "They've built lasting and trusted relationships with their clients. These are attributes that tools or technology will never be able to replace"
+    },
+    {
+      "id": "P3",
+      "text": "AI platform builds personalized stock/bond portfolios from goals, risk, behavior, and strategy constraints",
+      "status": "explicit",
+      "evidence_span": "we take a goal-based approach to investing, looking at the client's goals, risk criteria, behavioral details, and others, and building a customized portfolio around those constraints"
+    },
+    {
+      "id": "P4",
+      "text": "NLG portfolio intelligence supplies talking points that make advisors look smarter to clients",
+      "status": "explicit",
+      "evidence_span": "This is the story the advisor needs to tell to their client, the unique talking points and justifications"
+    },
+    {
+      "id": "P5",
+      "text": "Advanced quant plus machine learning, not only historical data, personalizes each portfolio",
+      "status": "explicit",
+      "evidence_span": "We couple advanced quant models with machine learning models to build a personalized portfolio to each client"
+    },
+    {
+      "id": "P6",
+      "text": "Institutional and Riskalyze partnerships provide distribution to tens of thousands of advisors",
+      "status": "explicit",
+      "evidence_span": "distribution advantage to over 25,000 advisors"
+    },
+    {
+      "id": "P7",
+      "text": "Direct-to-advisor pricing at 20 bps AUM undercuts high-fee generic competitors",
+      "status": "explicit",
+      "evidence_span": "We charge a low AUM fee of 20 basis points, selling direct to investment advisors"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Advisor delivery gap and relationships",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized AI portfolios and explanations",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Distribution and AUM fee",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advisors automate personalization while focusing on relationships",
+      "status": "explicit",
+      "evidence_span": "advisors can focus their time on what they do best, building great client relationships"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lasting and trusted relationships with their clients"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "build a personalized portfolio to each client"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling direct to investment advisors"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Rebalancing automation folded into personalized construction domain. Competitive robo/mutual-fund contrasts treated as framing for P7, not separate premises. Team credentials excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-453",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

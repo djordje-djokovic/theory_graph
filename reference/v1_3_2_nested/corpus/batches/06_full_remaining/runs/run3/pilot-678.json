@@ -1,0 +1,114 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Contaminated municipal and other water sources need purification beyond what pitcher filters and low-efficiency RO provide",
+      "status": "explicit",
+      "evidence_span": "If you were to put four gallons into this machine to process, one gallon would actually come out. 20% efficiency"
+    },
+    {
+      "id": "P2",
+      "text": "Four-filter reverse-osmosis unit with recycling achieves ~80% efficiency and verified low TDS on lead and salt water",
+      "status": "explicit",
+      "evidence_span": "we're able to achieve 80% efficiency. That's already four times better than your traditional reverse osmosis systems"
+    },
+    {
+      "id": "P3",
+      "text": "Smart Wi-Fi monitoring with TDS/filter meters supports a $399 consumer offer and ~20x cheaper water than Dasani-style bottles",
+      "status": "explicit",
+      "evidence_span": "With Watero, it's going to give you $0.03. That's actually 20 times a lot better than your typical brands here"
+    },
+    {
+      "id": "P4",
+      "text": "Nonprofit partnership donates units to thousands of families",
+      "status": "explicit",
+      "evidence_span": "We're going to be donating to thousands of families through our campaign that we'll be launching in the next few weeks"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inefficient purification status quo",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "WaterO RO hardware",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Consumer smart offer",
+      "premise_ids": [
+        "P3"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Donation partnership",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Provide clean pure water",
+      "status": "explicit",
+      "evidence_span": "Our solution is to provide clean water"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "solve the contaminated water and actually provide pure water"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "results pure H2O"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pre-sale for $399"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "donating to thousands of families"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Donation kept as separate impact module (singleton D4). Demo TDS numbers are evidence within P2, not separate premises.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-678",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:43:30+02:00"
+  },
+  "epistemic_markers": []
+}

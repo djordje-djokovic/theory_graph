@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-702",
+    "coder_session_id": "session_02",
+    "session_case_index": 12,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:46:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rising out-of-pocket costs push consumers to be proactive, but at-home health-and-wellness lab testing remains largely unavailable and clinic testing yields costly, hard-to-understand paper results",
+      "status": "explicit",
+      "evidence_span": "direct-to-consumer testing for health and wellness labs has been virtually untouched"
+    },
+    {
+      "id": "P2",
+      "text": "EverlyWell sells convenient at-home kits (blood/saliva/urine) for key wellness markers with understandable results, actionable guidance, and CLIA-lab accuracy under DTC regulations",
+      "status": "explicit",
+      "evidence_span": "convenient, at-home health tests with results you can actually understand"
+    },
+    {
+      "id": "P3",
+      "text": "A custom platform handles physician-authorized requisitions, multi-lab logistics, and translation of unstandardized lab data into a consumer results dashboard",
+      "status": "explicit",
+      "evidence_span": "we have built a custom platform to make this happen"
+    },
+    {
+      "id": "P4",
+      "text": "Kits priced $79–$399 online, with planned insurance contracts, corporate wellness partnerships, and telemedicine partnerships",
+      "status": "explicit",
+      "evidence_span": "We sell our kits online from $79 to $399"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "costly opaque consumer lab testing gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "at-home tests and results platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "kit pricing and partnership channels",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumer-controlled health and wellness testing on the user's time and terms",
+      "status": "explicit",
+      "evidence_span": "Your test, your time, your terms"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "forcing consumers to have to be more proactive with their health decisions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "results you can actually understand"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These costs are actually lower by test than out-of-pocket or not-covered costs per test"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.87
+  },
+  "notes": "Founder fatigue anecdote and deductible/market-size framing folded into DTC testing gap problem (§4.1.6). Eight-kit menu/expansion/regulatory compliance treated as facets of the at-home test offer; dashboard filters/elimination tips as UI cascade (§4.1.7). Beta customer counts excluded as traction. Singleton D1/D3 retained. Anti-template: problem, product/ops platform, and commercial channels separately revisable."
+}

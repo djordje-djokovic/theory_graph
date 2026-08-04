@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-874",
+    "coder_session_id": "session_03",
+    "session_case_index": 24,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Chronic unpredictable blackouts disrupt homes and force businesses onto backup generators that cost about four times grid power",
+      "status": "explicit",
+      "evidence_span": "it costs four times the amount to run a backup generator than it costs to get power from the grid"
+    },
+    {
+      "id": "P2",
+      "text": "Low-cost Android phones turned into community power sensors deliver real-time outage/restore push notifications, SMS access, and in-app outage reporting",
+      "status": "explicit",
+      "evidence_span": "we take low-cost Android phones, just like this, and we turn them into power sensors to let our users know when there's power available in their community"
+    },
+    {
+      "id": "P3",
+      "text": "Primary customers are power companies that use the platform to communicate with customers, with additional bill-pay and data opportunities",
+      "status": "explicit",
+      "evidence_span": "our main customers are the power companies, and they can use our platform to communicate directly with their customers"
+    },
+    {
+      "id": "P4",
+      "text": "African electricity demand shortfalls plus rapid smartphone growth create a large market for a power communications platform",
+      "status": "explicit",
+      "evidence_span": "the electricity market in Africa is a $27 billion market. And they're only producing 50% of the power that people actually need"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "blackout unpredictability costs",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "phone-based outage notification platform",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "utility customers and Africa market",
+      "premise_ids": ["P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Real-time power outage communications that help people and utilities adapt to blackouts",
+      "status": "explicit",
+      "evidence_span": "We provide real-time power outage notifications"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "imagine what businesses could adapt to with a little more predictability"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "she'll get a push notification that the power has been restored"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "SOP Notify will become the number one power communications platform in Africa"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Household disruption and generator cost/infrastructure failure folded as one blackout-pain set (v1.5.1 §4.1.6). Push/SMS/report-line demo folded into sensor platform mechanism (§4.1.7). Idibadan pilot treated as traction evidence of utility GTM, not a separate premise. Anti-template: problem, product, and utility/market GTM separately revisable."
+}

@@ -1,0 +1,100 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Students stuck before homework or finals cannot get on-demand peer help or easily form study groups, widening the achievement gap",
+      "status": "explicit",
+      "evidence_span": "It's really hard for students to master a topic if they can't get help on demand. It's hard to find study groups if students cannot easily share knowledge or resources. And overall, if students who really need the extra help can't get it, and this increases the achievement gap"
+    },
+    {
+      "id": "P2",
+      "text": "Study Room connects classmates via school email into course pages for collaborative guides and free shared files including prior semesters",
+      "status": "explicit",
+      "evidence_span": "Using a study room is as easy as signing up with your school email. And because we have all the course information, adding your classes is just a tap and a tap. Then you're immediately connected with everyone at your school, and most importantly, with your classmates"
+    },
+    {
+      "id": "P3",
+      "text": "Peer Mentor Program places platform-selected peer tutors on course pages for affordable on-demand one-on-one sessions",
+      "status": "explicit",
+      "evidence_span": "we're going to allow every single college student to offer online, on-demand tutoring sessions and make some money while helping others"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "On-demand campus help problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Social learning platform",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Peer Mentor Program",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Help college students master coursework with peer help when they need it",
+      "status": "explicit",
+      "evidence_span": "get personalized one-on-one help right when they need it"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Peer mentors earn money for college",
+      "evidence_span": "make some money while helping others"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hard for students to master a topic if they can't get help on demand"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "access the brainpower and knowledge of their entire class"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "personalized one-on-one help right when they need it"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Campus founder GTM folded into platform adoption narrative this run rather than a separate premise. Beta headcount excluded. Q&A excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-876",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "epistemic_markers": []
+}

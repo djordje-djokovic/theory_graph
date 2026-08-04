@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1071",
+    "coder_session_id": "session_06",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:33:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Many heart-attack deaths occur before hospital arrival, so time to medical treatment is critical",
+      "status": "explicit",
+      "evidence_span": "50% of the people who died from a heart attack died before arriving to a hospital"
+    },
+    {
+      "id": "P2",
+      "text": "A small SmartHeart device plus smartphone app lets non-professionals run a hospital-grade 12-lead ECG anywhere in about 30 seconds",
+      "status": "explicit",
+      "evidence_span": "within 30 seconds, I will be able to perform a hospital-grade full ECG exam"
+    },
+    {
+      "id": "P3",
+      "text": "ECG results can be viewed on the phone and sent to doctors, PHR, or hospital by email or fax",
+      "status": "explicit",
+      "evidence_span": "you can send the ECG to any third party"
+    },
+    {
+      "id": "P4",
+      "text": "Device is priced around $499 with free apps and monthly or pay-per-use service packages",
+      "status": "explicit",
+      "evidence_span": "The SmartHealth price is estimated $499"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "pre-hospital cardiac time criticality",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "portable hospital-grade ECG",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "device price and service packages",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Anyone can raise survival chances by getting hospital-grade ECG anytime, anywhere",
+      "status": "explicit",
+      "evidence_span": "significantly increase the chances of surviving a heart attack"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Better healthcare and quality of living for families",
+      "evidence_span": "your families and your loved ones will enjoy better health care and quality of living"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "Time is the most crucial factor in cardiac events"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The sooner you'll be in a hospital getting medical treatment, the higher your chances to survive"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hospital-grade ECG machine"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "You can use it on a monthly service packages or alternatively on a pay-per-use model"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Size/weight, connectivity indicators, and 12-lead detail folded into the portable ECG mechanism (feature cascade). Market epidemiology stats treated as framing, not separate premises. Singleton D1/D3: time-criticality diagnosis and commercial packaging are separately revisable from the device mechanism. P3 kept as send/share path that could fail independently of recording."
+}

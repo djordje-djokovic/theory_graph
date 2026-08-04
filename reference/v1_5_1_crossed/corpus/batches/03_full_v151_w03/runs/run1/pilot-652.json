@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-652",
+    "coder_session_id": "session_05",
+    "session_case_index": 23,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T14:50:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Remote sports fans watching broadcasts are disconnected from the stadium and lack a voice in the live game",
+      "status": "explicit",
+      "evidence_span": "he was disconnected from the stadium"
+    },
+    {
+      "id": "P2",
+      "text": "Connected-device fans can transmit energy/reactions into the stadium visualized on VibeBoards (claps, swipes, sound)",
+      "status": "explicit",
+      "evidence_span": "Vivecast now enables fans using connected devices to transmit their energy straight into the stadium"
+    },
+    {
+      "id": "P3",
+      "text": "Unique fan-energy data feeds team CRM activities",
+      "status": "explicit",
+      "evidence_span": "we capture a unique set of data that can feed into your CRM activities"
+    },
+    {
+      "id": "P4",
+      "text": "Connected merchandise via a low-cost fan chip plus smartware apps for existing devices",
+      "status": "explicit",
+      "evidence_span": "we have developed a fan chip that can, for $4, just plug into any merchandise you have, making it connected"
+    },
+    {
+      "id": "P5",
+      "text": "Brand integration lets sponsors carry world cheers into memorable stadium moments",
+      "status": "explicit",
+      "evidence_span": "we offer a unique context for brand integration. Vivecast sponsors can carry the cheers from the world during the moments that create lifetime memories"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "remote fan disconnection",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "stadium fan-energy transmission",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "CRM merchandise and sponsor monetization",
+      "premise_ids": ["P3", "P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make the world a stadium by giving remote fans a voice in the live game",
+      "status": "explicit",
+      "evidence_span": "make the world a stadium for sports fans"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "disconnected from the stadium"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "giving millions of remote fans a voice in the game"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make all fans part of the game"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "§4.1.7: clap/swipe/decibel demo facets folded into fan-energy transmission mechanism (P2). Wembley/team cheer counts treated as traction, not premises. Singleton D2 retained as core product mechanism separately revisable from monetization modules. Make-the-world-a-stadium slogan used as primary value criterion."
+}

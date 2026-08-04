@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-21",
+    "coder_session_id": "session_01",
+    "session_case_index": 9,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:14:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Enterprises face large portfolios of apps needing modernization where SI quotes are too costly and slow to scale across dozens to thousands of applications",
+      "status": "explicit",
+      "evidence_span": "They're getting quotes from system integrators and partners to help, but the costs are tremendously high, and the timelines are extremely long"
+    },
+    {
+      "id": "P2",
+      "text": "Technical debt accumulates across infrastructure, architecture, code, and dependencies, compounding cost and risk as emerging tech outpaces legacy upkeep",
+      "status": "explicit",
+      "evidence_span": "Over time, these pillars start to crumble as technical debt starts to accumulate. This leaves systems become susceptible to performance degradation, scalability issues, becomes a maintainability nightmare"
+    },
+    {
+      "id": "P3",
+      "text": "AppFactor is a continuous modernization product that identifies, cuts, and maintains technical debt via an automated repeatable process",
+      "status": "explicit",
+      "evidence_span": "AppFactor is a continuous modernization platform. It's a productized solution to help identify, cut, and maintain technical debt"
+    },
+    {
+      "id": "P4",
+      "text": "Platform builds an inventory system of record of infrastructure, applications, dependencies, and relationships and auto-identifies modernization candidates",
+      "status": "explicit",
+      "evidence_span": "It's built a system of record and an inventory of all of the infrastructure, applications, and their dependencies, and the relationships between all of those artifacts throughout the whole environment"
+    },
+    {
+      "id": "P5",
+      "text": "Automated wizard captures dependencies, generates Dockerfile and container image, and deploys cloud-native without manual code or YAML consultancy",
+      "status": "explicit",
+      "evidence_span": "it captures the application dependencies. It generates a Docker file which contains all of the artifacts and dependencies of the application. It builds that into a containerized image in this example, and it allows you to seamlessly deploy that as a native application"
+    },
+    {
+      "id": "P6",
+      "text": "ML classifications help architects identify, contextualize, and optimize architecture across major legacy stacks for daily BAU use",
+      "status": "explicit",
+      "evidence_span": "It's built on top of machine learning classifications that help our users identify, contextualize, and optimize application architecture"
+    },
+    {
+      "id": "P7",
+      "text": "Route to market is partnering with cloud providers inside programs that accelerate cloud spend and customer modernization outcomes",
+      "status": "explicit",
+      "evidence_span": "Our route to market is one that we see work very closely with the cloud providers"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Enterprise legacy portfolio technical debt",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Continuous automated modernization product",
+      "premise_ids": ["P3", "P4", "P5", "P6"]
+    },
+    {
+      "id": "D3",
+      "name": "Cloud-provider partner go-to-market",
+      "premise_ids": ["P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give enterprises modernization velocity that frees budget wasted on maintaining legacy technical debt",
+      "status": "explicit",
+      "evidence_span": "we're actually freeing up that 40% that's wasted maintaining legacy, that's simply eroded over time through technical debt"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "cutting out all of the manual processes around app discovery, trying to understand and analyze, is this indeed a candidate for us to modernize"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "40% of budget across all sectors is actually spent just maintaining that legacy"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "automate and simplify and create a repeatable, predictable process in how they transform existing software and technical debt"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "accelerate cloud revenue spend for the cloud providers, obviously support the outcomes that customers are looking to achieve"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Pitch cut off mid-differentiation. Discovery-to-deploy demo cascade largely in P4–P5; inventory vs transform automation split as distinct modules. Team FAANG experience excluded as credentials. Singleton D3 retained as independently revisable cloud-partner GTM. Anti-template: problem, product, and cloud GTM separately revisable."
+}

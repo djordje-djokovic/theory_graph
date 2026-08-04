@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Drift relocates on-screen keys under resting fingers and detects keystrokes via combined touch and accelerometer tap sensing",
+      "status": "explicit",
+      "evidence_span": "What we do is combine two sensors, touch and tap. That's what makes Drift and gives it some magic"
+    },
+    {
+      "id": "P2",
+      "text": "Target users are the large majority who already type without looking via memory typing",
+      "status": "explicit",
+      "evidence_span": "96% of people can type without looking at the keys to some form. Those people are who Drift are for"
+    },
+    {
+      "id": "P3",
+      "text": "Business model licenses to OEMs and embeds the dynamic keyboard in third-party apps, similar to Swype",
+      "status": "explicit",
+      "evidence_span": "our business model is going to be very similar to what we did at Swype"
+    },
+    {
+      "id": "P4",
+      "text": "Performance is estimated at roughly 2x current tablet typing solutions",
+      "status": "explicit",
+      "evidence_span": "we're about 2x the performance of today's tablet solutions"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Touch-and-tap Drift keyboard",
+      "premise_ids": ["P1", "P4"]
+    },
+    {
+      "id": "D2",
+      "name": "No-look memory typists",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "OEM and app embedding licensing",
+      "premise_ids": ["P3"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Disruptive faster tablet typing that can replace notebook-like productivity on tablets",
+      "status": "inferred",
+      "evidence_span": "2x the performance of today's tablet solutions"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Drive enterprise tablet adoption versus notebooks",
+      "evidence_span": "Drift can be that final nail in the notebook coffin and really excel the growth of tablets at the enterprise"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "gives it some magic"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those people are who Drift are for"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "license this to OEMs directly so they can embed it in the keyboard"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.7
+  },
+  "notes": "Run3 folds two sensor innovations into one product premise. Notebook-coffin line is secondary_value aspiration not a premise (§4.1(4)). Truncated beginning; prior problem statement absent. Feedback/signups excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-950",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:57:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

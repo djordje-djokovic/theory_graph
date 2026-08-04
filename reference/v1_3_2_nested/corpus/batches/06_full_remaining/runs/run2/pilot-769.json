@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-769",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Market leaders target video ads with user data and reach, producing irrelevant ads that users skip",
+      "status": "explicit",
+      "evidence_span": "all the market leader, like Google, Facebook, they all base targeting on user data and reach"
+    },
+    {
+      "id": "P2",
+      "text": "Content recognition layered on user data improves targeting, including where cookie targeting is disabled on mobile",
+      "status": "explicit",
+      "evidence_span": "Relevancy data bring the power of the content on top of the user data. And in the mobile advertising, where cookie-based targeting is disabled, a new standard on targeting solution"
+    },
+    {
+      "id": "P3",
+      "text": "Engine detects faces, objects, logos, music, demographics, and emotion and times ad placement to the matching second",
+      "status": "explicit",
+      "evidence_span": "We know exactly the second that the metadata appears, and we know the frequency"
+    },
+    {
+      "id": "P4",
+      "text": "Customers are digital TVs/operators, online video platforms, media companies, and brands",
+      "status": "explicit",
+      "evidence_span": "Our customers are the digital TVs and operators like Fox, RTL, the online platform like YouTube, Dailymotion, and the media companies and the brands like GroupM"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is selling recognition data plus campaign management",
+      "status": "explicit",
+      "evidence_span": "We earn money from selling the data. In addition, we offer a campaign management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "User-data-only ad irrelevance",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Content recognition ad engine",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Platform customers and data sales",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Advertisers control where ads land so users enjoy related ads with video content",
+      "status": "explicit",
+      "evidence_span": "they're able to control their ads. They're able to search where they want their ads will land"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Content providers stop losing money to skipped ads; brands improve ROI",
+      "evidence_span": "The content provider losing money because every click skip this ad"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These ads are not relevant"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "match on the right second the relevant advertising"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling the data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Campaign lift stats excluded as traction. Patent folded into engine. Mission statement and AOL quote treated as framing/vision. Customer list kept as GTM channel condition bundled with monetization."
+}

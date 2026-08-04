@@ -1,0 +1,127 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Weaning cows onto scales stresses animals, causes injuries, and loses weight—and money",
+      "status": "explicit",
+      "evidence_span": "weaning the cow is stressful for the animal, can lead to injuries, and the cow loses weight"
+    },
+    {
+      "id": "P2",
+      "text": "Farmers place a portable 3D camera where cattle naturally pass and software records each animal",
+      "status": "explicit",
+      "evidence_span": "The farmer just places the 3D camera where the cattle naturally pass"
+    },
+    {
+      "id": "P3",
+      "text": "Proprietary computer vision and ML, validated against scale weights, estimates kilos from 3D imagery",
+      "status": "explicit",
+      "evidence_span": "Our software has been developed over a four-year time frame, combining computer vision, data science, and machine learning"
+    },
+    {
+      "id": "P4",
+      "text": "Dashboard shows animals ready to sell, needing attention, or under-gaining, with lot and supplement comparisons",
+      "status": "explicit",
+      "evidence_span": "animals that are ready to sell, the ones that need attention that may be sick, the ones that are gaining less weight they should"
+    },
+    {
+      "id": "P5",
+      "text": "Portable camera around R$3,000 and R$1 per animal-month undercuts multi-thousand-real fixed scales",
+      "status": "explicit",
+      "evidence_span": "The 3D camera costs around R$ 3,000 and we charge R$ 1 per animal month"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Stressful traditional weighing",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Pass-through 3D weight sensing",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Livestock optimization dashboard",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Portable low per-animal pricing",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unprecedented livestock-management insight that raises farmer profitability",
+      "status": "explicit",
+      "evidence_span": "Olho do Dono provides unprecedented insight into livestock management"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Stress-free monitoring for cow well-being",
+      "evidence_span": "at a stress-free manner for the cow"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Less weight, less money"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "estimate the weight of the cattle"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "optimize weight gain and profitability"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Olho do Dono is portable"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.79
+  },
+  "notes": "Commission product recs folded into dashboard value this run rather than split. Training-image counts treated as validation detail inside P3, not traction metrics.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-551",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00"
+  }
+}

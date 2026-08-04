@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-438",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Rapid blood-type confirmation is required before emergency responders can administer non-O-negative blood",
+      "status": "explicit",
+      "evidence_span": "they cannot administer them without a rapid confirmation test"
+    },
+    {
+      "id": "P2",
+      "text": "Portable device types blood in three minutes anywhere outside traditional labs",
+      "status": "explicit",
+      "evidence_span": "we can execute the test anywhere, from ambulances, emergency helicopters, to small clinics or remote locations"
+    },
+    {
+      "id": "P3",
+      "text": "Cartridge microfluidics, device motion, and ML/CV algorithms deliver high accuracy suitable for FDA",
+      "status": "explicit",
+      "evidence_span": "We use microfluidics in the cartridge in order to split the blood evenly in all of the containers. We have a patent for the process"
+    },
+    {
+      "id": "P4",
+      "text": "US and EU regulatory clearance is the commercialization path",
+      "status": "explicit",
+      "evidence_span": "We are in the process of securing FDA and CMARC"
+    },
+    {
+      "id": "P5",
+      "text": "B2B hardware plus recurring cartridges and SaaS, sold through key distributors",
+      "status": "explicit",
+      "evidence_span": "this is a market that is owned by key distributors, where Cream already has letters of intent with most of them"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Emergency typing confirmation need",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Portable Cream testing system",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory and distributor GTM",
+      "premise_ids": ["P4", "P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Detect blood earlier so the right transfusion can happen without waiting or defaulting to O-negative",
+      "status": "explicit",
+      "evidence_span": "detect blood earlier on in the process and allow the right transfusion without having to wait or to give a negative"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Reduce healthcare costs and save lives",
+      "evidence_span": "reduce costs for the healthcare industry, and more important, saving lives"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "blood is a scarce resource"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "detects blood type in three minutes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Commercialization pass for cream is the regulatory one"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Distributor LOIs used as evidence span for B2B channel premise (mechanism is distributor-owned market). Offline autonomy folded into device. Team/advisors excluded. ASR 'CMARC' left in evidence as transcript reads."
+}

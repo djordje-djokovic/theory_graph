@@ -1,0 +1,127 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plastic gift cards get lost, stolen, or forgotten, leaving large unspent balances",
+      "status": "explicit",
+      "evidence_span": "gift cards end up lost, stolen, or forgotten"
+    },
+    {
+      "id": "P2",
+      "text": "Mobile wallet stores cards in the cloud with merchant upload, balance check, and phone redemption",
+      "status": "explicit",
+      "evidence_span": "My cards are now securely backed up in the cloud, and no more forgetting them at home"
+    },
+    {
+      "id": "P3",
+      "text": "Social sending via Facebook/email/text with personalization engine and birthday notifications",
+      "status": "explicit",
+      "evidence_span": "Our patent-pending personalization engine will suggest relevant merchants your friends will enjoy. And we'll even notify you around special events like birthdays"
+    },
+    {
+      "id": "P4",
+      "text": "Cross-phone receive plus regifting of unused cards",
+      "status": "explicit",
+      "evidence_span": "anyone can receive a card on gift, regardless of what type of phone you have"
+    },
+    {
+      "id": "P5",
+      "text": "Launch assortment from 200+ national retailers; later open APIs for retailer push into the wallet",
+      "status": "explicit",
+      "evidence_span": "we've secured over 200 national retail partners to launch with our app"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lost plastic gift cards",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Wallet store and redeem",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Social send and regift",
+      "premise_ids": [
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Retailer network and APIs",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make gift cards fun, social, and manageable from a phone",
+      "status": "explicit",
+      "evidence_span": "We're making gift cards fun, and we're making gift cards social"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help retailers by reducing forgotten unspent cards",
+      "evidence_span": "that's bad for consumers, but it's really bad for retailers"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "lost, stolen, or forgotten"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "manage all your gift card needs right from your mobile phone"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "sending gift cards to friends and family"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "largest mobile gift card store"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Independent run3: split wallet store/redeem from social send/regift as separately revisable modules. Funding/giveaways excluded. Scratch UI folded into redemption.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1011",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:50+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

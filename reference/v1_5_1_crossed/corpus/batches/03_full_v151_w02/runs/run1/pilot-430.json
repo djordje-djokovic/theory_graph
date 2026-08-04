@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-430",
+    "coder_session_id": "session_03",
+    "session_case_index": 19,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:22:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "The founding team has skills to bring a tax-free travel product to a global level, including gaming, VC, VAT taxation, and Revolut launch experience",
+      "status": "explicit",
+      "evidence_span": "our team has the necessary skills to bring this product to a global level"
+    },
+    {
+      "id": "P2",
+      "text": "Travelers can get tax-free purchasing through Innovat",
+      "status": "explicit",
+      "evidence_span": "join Innovat and get your tax-free, stress-free"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "team capability for global launch",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "tax-free traveler offer",
+      "premise_ids": ["P2"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Tax-free, stress-free experience for travelers",
+      "status": "explicit",
+      "evidence_span": "get your tax-free, stress-free"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "necessary skills to bring this product to a global level"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "join Innovat and get your tax-free, stress-free"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.2
+  },
+  "notes": "Transcript is a truncated closing fragment with almost no product mechanism. Team credentials coded only because speaker asserts them as necessary for the theory. Closing line cut off mid-phrase."
+}

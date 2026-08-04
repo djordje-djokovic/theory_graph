@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-670",
+    "coder_session_id": "session_04",
+    "session_case_index": 16,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:35:36Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Periodic wired vital-sign rounds wake all patients and miss deterioration in the long gaps between checks, while cameras alone cannot proactively alert",
+      "status": "explicit",
+      "evidence_span": "you wake them all up, irrespective of condition, and because four hours is a long time, and a lot can happen in that space"
+    },
+    {
+      "id": "P2",
+      "text": "Software with proprietary per-pixel algorithms turns ordinary video cameras into medical-grade vital-sign and activity monitors that push real-time alerts and optional video to nursing stations",
+      "status": "explicit",
+      "evidence_span": "We transform video cameras. We turn them into health monitors"
+    },
+    {
+      "id": "P3",
+      "text": "Go-to-market is phased: video analytics for in/out-of-bed activity first, then regulated medical analytics for vital signs as a medical device",
+      "status": "explicit",
+      "evidence_span": "We're going to market in two phases. The first is video analytics"
+    },
+    {
+      "id": "P4",
+      "text": "The platform should free scarce clinician time for urgent cases and enable step-down care from hospitals to nursing homes and homes",
+      "status": "explicit",
+      "evidence_span": "the scarce resource in our healthcare systems are doctors and nurses and their time"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "flawed intermittent ward monitoring",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "camera-to-health-monitor software",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "phased medical-device GTM",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "clinician time and step-down care",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Carers and doctors save lives with continuous camera-based vital signs, activity, and context alerts",
+      "status": "explicit",
+      "evidence_span": "help doctors save lives and improve healthcare for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "a lot can happen in that space"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "delivers to the nursing station real-time alerts, vital signs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "that's going to be a medical device"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put that time onto the most urgent situations with the best data"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Round/camera pain folded as one monitoring failure. Breathing/heart-rate/activity/cloud update cascade folded into one camera-monitor mechanism; clinical accuracy claims treated as evidence of that mechanism not separate premises. Two-phase GTM kept separate from care-setting value logic. Pipeline deal traction excluded."
+}

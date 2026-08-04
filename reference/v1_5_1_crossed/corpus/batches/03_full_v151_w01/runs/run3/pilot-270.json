@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-270",
+    "coder_session_id": "session_02",
+    "session_case_index": 23,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:11:06Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Data demand now outstrips what servers can deliver because heat throttles compute and today's cooling is inadequate",
+      "status": "explicit",
+      "evidence_span": "For the first time ever, our demand for data is bigger than what technology can handle. And it's not that technology is not there. It is, but we have a new issue. The heat"
+    },
+    {
+      "id": "P2",
+      "text": "Two-phase liquid-to-gas cooling on the CPU can go below ambient/room temperature, unlike air or water cooling on the market",
+      "status": "explicit",
+      "evidence_span": "this can allow us to go below ambient. That means we can go below room temperature, and there is no cooling system in the market that can do that today"
+    },
+    {
+      "id": "P3",
+      "text": "Drop-in in-cooling server integrates the two-phase system into a standard data-center form factor without facility redesign",
+      "status": "explicit",
+      "evidence_span": "It's a standard server. You can insert it in any data center today, so you don't have to change a thing"
+    },
+    {
+      "id": "P4",
+      "text": "Lower CPU temperatures accelerate workloads and cut energy (~50% less time and half the energy in client tests)",
+      "status": "explicit",
+      "evidence_span": "By going lower on the CPU, we both accelerate it, so we make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Server heat bottleneck",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Two-phase below-ambient cooling server",
+      "premise_ids": ["P2", "P3", "P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "World's fastest and most efficient servers that cool the planet one server at a time",
+      "status": "explicit",
+      "evidence_span": "cool down the planet one server at a time"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Faster, more energy-efficient compute for latency-sensitive users",
+      "evidence_span": "run their computing task almost 50% less time, whilst using only half of the energy"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "the solutions today are archaic and simply just not good enough"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make it go faster, and we can actually make it more energy efficient"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "LHC partnership treated as origin/validation of two-phase approach folded into P2, not a separate GTM premise. Banking/startup customer examples folded as applications of P4. Pilot-slot ask excluded. Demo 13°C reading is quantitative detail of P2/P4."
+}

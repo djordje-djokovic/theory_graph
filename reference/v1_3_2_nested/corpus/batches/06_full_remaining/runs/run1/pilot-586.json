@@ -1,0 +1,101 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "System supports rapid testing with unlimited profiles plus a dashboard for tracking player health data",
+      "status": "explicit",
+      "evidence_span": "It comes with a complete dashboard and data management system so you keep better track of your player's health"
+    },
+    {
+      "id": "P2",
+      "text": "Implementation is as rapid as the test, beginning with schools, a university, a hospital, and high-performance athletes via an MLB partner",
+      "status": "explicit",
+      "evidence_span": "implementation of our system is bound to be as rapid as the test itself"
+    },
+    {
+      "id": "P3",
+      "text": "IP roadmap extends the few-second diagnostic method beyond sports to motor-neural disease, infant autism detection, and intoxication",
+      "status": "explicit",
+      "evidence_span": "Our IP covers a breadth of diagnostic services ranging from motor neural diseases and detection of autism at infancy"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Rapid player-health testing platform",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Fast institutional rollout",
+      "premise_ids": [
+        "P2"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Broader diagnostic IP path",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better track player health toward an automated mobile healthcare platform",
+      "status": "explicit",
+      "evidence_span": "keep better track of your player's health"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Progress toward a total automated mobile healthcare platform",
+      "evidence_span": "one step closer to a total automated mobile health care platform"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "There's so much information to be gained from just a few second tests"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "testing our methodology on high-performance athletes"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Medically mobile, that's our mission"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": true,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.35
+  },
+  "notes": "Only closing fragment present; core product mechanism largely missing. School/hospital/MLB names coded as GTM rollout condition rather than traction counts. Mission line used for secondary value. Low confidence due to thin truncated text.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-586",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

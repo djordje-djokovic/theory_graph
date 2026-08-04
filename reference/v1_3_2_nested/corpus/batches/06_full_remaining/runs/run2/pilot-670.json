@@ -1,0 +1,126 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Four-hour wired monitoring rounds wake every patient and leave long unobserved gaps",
+      "status": "explicit",
+      "evidence_span": "Every four hours, you physically take a trolley down the corridor. You enter the room. And you attach wired monitoring devices to those patients. You wake them up"
+    },
+    {
+      "id": "P2",
+      "text": "Software with proprietary pixel algorithms turns ordinary video cameras into health monitors that push real-time alerts, vital signs, and optional video to the nursing station",
+      "status": "explicit",
+      "evidence_span": "We transform video cameras. We turn them into health monitors"
+    },
+    {
+      "id": "P3",
+      "text": "Clinical studies show algorithms as accurate as contact medical devices for respiration and heart rate",
+      "status": "explicit",
+      "evidence_span": "as accurate as a contact medical device on both respiration and heart rate"
+    },
+    {
+      "id": "P4",
+      "text": "Commercialization is sequenced as video activity analytics first, then regulated medical vital-sign analytics",
+      "status": "explicit",
+      "evidence_span": "The first is video analytics. That's the in and out of bed activity of a human being in a room. The second is medical analytics. That's the vital signs. And of course, that's going to be a medical device"
+    },
+    {
+      "id": "P5",
+      "text": "Clinician time is the scarce resource and must be focused on the most urgent situations with the best data",
+      "status": "explicit",
+      "evidence_span": "the scarce resource in our healthcare systems are doctors and nurses and their time. We have to put that time onto the most urgent situations with the best data"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Flawed four-hour rounds",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Camera-based vital monitoring",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Phased medical-device launch",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Scarce clinician time",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Give carers and doctors a transformative monitoring tool that saves lives and improves healthcare",
+      "status": "explicit",
+      "evidence_span": "help doctors save lives and improve healthcare for everyone by delivering these systems into every care setting globally"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Shift care from expensive hospitals to nursing homes and home settings",
+      "evidence_span": "step people down from expensive locations like hospitals to cheaper locations like nursing, care homes, and our own homes"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "four hours is a long time, and a lot can happen in that space"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can give you deterioration with medical accuracy through a camera"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We're going to market in two phases"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "put that time onto the most urgent situations with the best data"
+    }
+  ],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Cameras-alone limitation folded into problem framing this run. Product UI features folded into P2 (§4.1(5)). Singletons D1/D3/D4 retained. Traction pipeline excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-670",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:42:30+02:00"
+  },
+  "epistemic_markers": []
+}

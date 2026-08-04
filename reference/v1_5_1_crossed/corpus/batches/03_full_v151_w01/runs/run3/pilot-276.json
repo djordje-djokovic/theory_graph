@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-276",
+    "coder_session_id": "session_04",
+    "session_case_index": 8,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-08-01T14:12:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Orbital debris traveling at extreme speeds can destroy satellites and trigger cascading Kessler syndrome",
+      "status": "explicit",
+      "evidence_span": "a small fragment the size of a penny can destroy a multimillion-dollar satellite"
+    },
+    {
+      "id": "P2",
+      "text": "Manual collision-avoidance processes used by operators are falling apart under rising launch volume because they are error-prone and slow",
+      "status": "explicit",
+      "evidence_span": "the processes that satellite operators have traditionally used to avoid collisions are falling apart because they're manual and they're prone to human error and delays"
+    },
+    {
+      "id": "P3",
+      "text": "Pathfinder autonomously detects collision risk and cuts operator response time by more than 90%",
+      "status": "explicit",
+      "evidence_span": "an autonomous satellite collision avoidance solution that reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "id": "P4",
+      "text": "Near-real-time multi-source data feeds trajectory and optimization models that produce fuel-efficient, constraint-aware maneuver plans",
+      "status": "explicit",
+      "evidence_span": "massive amounts of data from solar radiation pressure to onboard GPS data to radar data ingested in near real time"
+    },
+    {
+      "id": "P5",
+      "text": "Operators can review visualizations, history, and pre/post maneuver analysis and uplink a chosen plan in about a minute",
+      "status": "explicit",
+      "evidence_span": "That took him about 60 seconds"
+    },
+    {
+      "id": "P6",
+      "text": "Gamit extends safety-of-flight coverage to launch vehicles and onboard payloads as a second product",
+      "status": "explicit",
+      "evidence_span": "Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Orbital debris collision risk",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Pathfinder autonomous avoidance",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Gamit launch safety product",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Safer spaceflight through fast, autonomous collision avoidance for satellites",
+      "status": "explicit",
+      "evidence_span": "building technologies that are making space flight safer"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Safety of flight for launch vehicles and payloads",
+      "evidence_span": "Gamit ensures safety of flight for launch vehicle and the onboard payload"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "which is why we've developed Pathfinder"
+    },
+    {
+      "from": "P4",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "All of that in a few minutes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "threatens other satellites"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "reduces the response time to potential collision events by more than 90%"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making space flight safer"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "UI demo cascade (visualization, history, maneuver options) folded into P5 as operator workflow of one Pathfinder mechanism. Customer/contract traction excluded. Singleton D3 retained: Gamit framed as separately announced second commercial product."
+}

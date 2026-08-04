@@ -1,0 +1,129 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Private aviation should combine convenience with pleasure between cattle-class and €5,000 jets",
+      "status": "explicit",
+      "evidence_span": "A solution that could combine convenience with pleasure"
+    },
+    {
+      "id": "P2",
+      "text": "Cost-sharing marketplace connects private pilots and passengers like Airbnb for aviation",
+      "status": "explicit",
+      "evidence_span": "Wingly makes private aviation accessible to everybody by connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "id": "P3",
+      "text": "Booked flights and on-demand Flight Requests are matched with pricing, vetting, payments, and insurance handled by the platform",
+      "status": "explicit",
+      "evidence_span": "the platform takes care of everything for you. Online payments, pricing algorithm, smart matching, flight suggestion, pilot vetting, and insurance"
+    },
+    {
+      "id": "P4",
+      "text": "Regulatory clarity plus Wingly's insurance innovation unlock the marketplace",
+      "status": "explicit",
+      "evidence_span": "thanks to regulatory and insurance advances that bring with them a lot of opportunities"
+    },
+    {
+      "id": "P5",
+      "text": "Millions of empty seats on private flights can be filled, and cost-sharing makes pilots fly up to three times cheaper",
+      "status": "explicit",
+      "evidence_span": "As we allow pilots to fly up to three times cheaper, it means that our actual market is more 30 million empty seats"
+    },
+    {
+      "id": "P6",
+      "text": "Unit economics take 15% plus €4 per shared-cost transaction",
+      "status": "explicit",
+      "evidence_span": "takes a commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Accessible private flying need",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Cost-share marketplace platform",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Regulation and insurance",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Commission model",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make private aviation accessible with convenience and pleasure via shared-cost flights",
+      "status": "explicit",
+      "evidence_span": "Wingly makes private aviation accessible to everybody"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combine convenience with pleasure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "makes private aviation accessible to everybody"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "regulatory and insurance advances"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "15% plus 4 euros"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "Flight Request folded into platform ops this run (§4.1(5) speaker-listed extension of same marketplace). €1M coverage detail kept inside insurance/regulatory domain via P4. Anti-template note: need/platform/reg/money are four separately revisable modules evidenced by distinct 'regulatory change', 'insurance product', 'commission', and marketplace demo blocks.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-528",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:04+02:00"
+  }
+}

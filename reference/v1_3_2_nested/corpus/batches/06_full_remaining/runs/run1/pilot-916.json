@@ -1,0 +1,122 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Good ideas get lost across desktop, Dropbox, inbox, and other repositories",
+      "status": "explicit",
+      "evidence_span": "Is it in my desktop? Is it in my Dropbox? Is it in my inbox? Where is my great idea?"
+    },
+    {
+      "id": "P2",
+      "text": "Docurated discovers files across repositories and strips them into reusable components such as pages, charts, text, and images",
+      "status": "explicit",
+      "evidence_span": "discover all of your files across any repository, email, desktop, third parties"
+    },
+    {
+      "id": "P3",
+      "text": "Indexed normalized components return the best page by content and context relevance from one search, improving with use and without tagging via NLP",
+      "status": "explicit",
+      "evidence_span": "your best page, not a file, your best page appears to you in the order of relevance"
+    },
+    {
+      "id": "P4",
+      "text": "Pages can be mashed into a visual collage and exported to PowerPoint or PDF regardless of original format, then shared or saved",
+      "status": "explicit",
+      "evidence_span": "export that collage into PowerPoint or PDF, irregardless of where the pages came from, irregardless of the file format"
+    },
+    {
+      "id": "P5",
+      "text": "The product is offered to individuals with Dropbox accounts, not only large enterprises",
+      "status": "explicit",
+      "evidence_span": "If you have a Dropbox account, DocuRated is yours"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Lost ideas across repositories",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Component discovery and relevance search",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Collage remix export and share",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Dropbox-user access motion",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "One place where ideas and best content are at your fingertips to find and reuse",
+      "status": "explicit",
+      "evidence_span": "one place where all of our ideas are at our fingertips"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Finding ideas is a huge problem"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "your best content, your best page, not a file, your best page appears to you"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Each page can be mashed up from any other page, from any other file format"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We believe that DocuRated belongs to everyone"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Customer testimonial (Paul Bree) excluded as non-founder speech (4.2.5). $9B enterprise spend treated as market framing. Brains feature list (index, learn, NLP) folded into P3 (v1.3.2 4.1(5)).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-916",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

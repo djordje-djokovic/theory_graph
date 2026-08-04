@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-362",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T10:33:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After solar plants are built, vegetation cutting is the largest operating expense and needs under-panel access",
+      "status": "explicit",
+      "evidence_span": "after a solar power plant is built, the biggest expense is actually cutting the vegetation and the grass on site"
+    },
+    {
+      "id": "P2",
+      "text": "A modular electric robot platform supports grass cutting, snow plowing, and many other outdoor attachments",
+      "status": "explicit",
+      "evidence_span": "We've developed a powerful modular platform for not just grass cutting and snow plowing, but dozens of different operations"
+    },
+    {
+      "id": "P3",
+      "text": "Quick-attach swaps and five-minute battery changes enable near 24/7 operation",
+      "status": "explicit",
+      "evidence_span": "batteries can be swapped in five minutes, enabling near 24-7 operation"
+    },
+    {
+      "id": "P4",
+      "text": "Purpose-built electric rough-cut and offset decks cut thick solar-site vegetation under panels and around I-beams",
+      "status": "explicit",
+      "evidence_span": "world's first 100% electric rough cut deck that is especially made to cut down that thick vegetation that grows on solar sites"
+    },
+    {
+      "id": "P5",
+      "text": "Launch offering is robotic vegetation management for solar farms",
+      "status": "explicit",
+      "evidence_span": "Our solution was robotic vegetation management for solar farms"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Solar vegetation maintenance cost",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Modular electric outdoor robot platform",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Solar vegetation management use case",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "100% electric outdoor work equipment for sustainable site maintenance",
+      "status": "explicit",
+      "evidence_span": "make outdoor work equipment 100% electric"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "batteries can be swapped in five minutes, enabling near 24-7 operation. This alone can triple monetization"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "biggest expense is actually cutting the vegetation"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "powerful modular platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "robotic vegetation management for solar farms"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Signed agreements and investment offers excluded as traction/financing. Platform attach/battery capabilities kept as operating conditions of one modular platform; solar decks are the site-specific mechanism."
+}

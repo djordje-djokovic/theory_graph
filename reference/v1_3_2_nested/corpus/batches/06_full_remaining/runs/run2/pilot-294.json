@@ -1,0 +1,133 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Detergent laundry pods use PVA that becomes microplastic pollution returning through water and food",
+      "status": "explicit",
+      "evidence_span": "PVA can be found in this, the detergent laundry pod"
+    },
+    {
+      "id": "P2",
+      "text": "Upcycled agri-waste biobased polymer resins drop into existing twin-screw / plastic manufacturing lines",
+      "status": "explicit",
+      "evidence_span": "our technology can apply to existing plastic manufacturing equipment, which make it very easily adoptable for our partners"
+    },
+    {
+      "id": "P3",
+      "text": "Bacterial fermentation converts diverse biomass wastes into the needed polymer, analogous to brewing",
+      "status": "explicit",
+      "evidence_span": "The process is very much like brewing beer, in which we create bacteria that can intake different type of inedible biomass waste"
+    },
+    {
+      "id": "P4",
+      "text": "Joint development with Unilever and Monosol leverages their machines and infrastructure to scale commercially",
+      "status": "explicit",
+      "evidence_span": "three-way partnership which we can leverage their expertise, their machines, their infrastructure, and to scale up commercially quickly"
+    },
+    {
+      "id": "P5",
+      "text": "Mechanical properties similar to PVA while using less energy/CO2 in manufacturing and eventually lower unit cost",
+      "status": "explicit",
+      "evidence_span": "the mechanical property of our material has a bit similar quality as PVA"
+    },
+    {
+      "id": "P6",
+      "text": "Initial applications face easier regulation and higher-paying customers willing to pay a premium versus food-tech routes",
+      "status": "explicit",
+      "evidence_span": "There's no grass FDA regulation for our initial applications"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "PVA laundry-pod microplastics",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Drop-in biopolymer process",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "CPG scale partnerships",
+      "premise_ids": [
+        "P4"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Easier regulated premium path",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "A bio-based PVA replacement that reduces microplastics in daily life",
+      "status": "explicit",
+      "evidence_span": "Mi Terra is the one that can help us replace PVA once for all"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Environmental gains from waste upcycling and lower emissions/water use",
+      "evidence_span": "we also care about our environment very, very much"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "8,000 tons of these microplastics flow into the ocean"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bio-based solution to replace PVA, first of its kind"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "scale up commercially quickly"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easier route to market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.78
+  },
+  "notes": "NY expansion and fundraising ask excluded. Licensing roadmap treated as scale detail inside partnerships/cost, not separate premise. Application laundry-list folded into polymer replaceability.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-294",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

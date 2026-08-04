@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-528",
+    "coder_session_id": "session_02",
+    "session_case_index": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-08-01T14:35:15+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commercial aviation packs passengers like cattle while private jets cost about 5,000 euros, leaving no middle option",
+      "status": "explicit",
+      "evidence_span": "There's two options. Be treated like cattle or pay 5,000 euros"
+    },
+    {
+      "id": "P2",
+      "text": "A marketplace connecting private pilots with passengers lets them share flight costs and makes private aviation accessible",
+      "status": "explicit",
+      "evidence_span": "Wingly makes private aviation accessible to everybody by connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "id": "P3",
+      "text": "The platform handles booking end-to-end including payments, pricing, matching, suggestions, pilot vetting, and insurance",
+      "status": "explicit",
+      "evidence_span": "the platform takes care of everything for you. Online payments, pricing algorithm, smart matching, flight suggestion, pilot vetting, and insurance"
+    },
+    {
+      "id": "P4",
+      "text": "Flight Request lets passengers request a flight to private pilots when no matching flight is yet posted",
+      "status": "explicit",
+      "evidence_span": "It's the first platform to actually allow you to request a flight to a private pilot easily"
+    },
+    {
+      "id": "P5",
+      "text": "A 2016 regulatory change clarifies that private pilots may share flight costs and advertise flights beforehand",
+      "status": "explicit",
+      "evidence_span": "a 2016 regulatory change made it clear for private pilots that they're allowed to share the cost of a flight and also advertise it on light beforehand"
+    },
+    {
+      "id": "P6",
+      "text": "A tailor-made insurance product adds 1 million euro coverage on marketplace flights",
+      "status": "explicit",
+      "evidence_span": "We developed a tailor-made insurance product that allows us to offer all our customers an extra 1 million euro coverage on all the flights you do"
+    },
+    {
+      "id": "P7",
+      "text": "European private pilots fly with empty seats that can be filled via the marketplace",
+      "status": "explicit",
+      "evidence_span": "They are more than 300,000, flying around 4 million hours per year, in average with 2 to 2.5 empty seats"
+    },
+    {
+      "id": "P8",
+      "text": "The marketplace takes a commission of 15% plus 4 euros per transaction",
+      "status": "explicit",
+      "evidence_span": "Wingly then takes a commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cattle or 5,000 euro private jets",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Pilot-passenger cost-sharing marketplace",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Regulatory and insurance advances",
+      "premise_ids": ["P5", "P6"]
+    },
+    {
+      "id": "D4",
+      "name": "Empty seats on European private flights",
+      "premise_ids": ["P7"]
+    },
+    {
+      "id": "D5",
+      "name": "Transaction commission",
+      "premise_ids": ["P8"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accessible private aviation that combines convenience with pleasure for everyday passengers",
+      "status": "explicit",
+      "evidence_span": "A solution that could combine convenience with pleasure"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Win-win for pilots, passengers, and the environment via cheaper shared flights",
+      "evidence_span": "it's a clear win-to-win for our pilots, our passengers, and also the environment"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "What if there was another solution? A solution that could combine convenience with pleasure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Wingly makes private aviation accessible to everybody by connecting private pilots with passengers so they can share the cost of a flight"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "thanks to regulatory and insurance advances that bring with them a lot of opportunities"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "As we allow pilots to fly up to three times cheaper"
+    },
+    {
+      "from": "D5",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Wingly then takes a commission on this transaction of 15% plus 4 euros"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Platform feature list (payments through insurance) folded as one ops cascade (v1.5.1 §4.1.7); Flight Request kept separate as speaker-framed next-level module. Regulatory and insurance grouped as speaker's enabling pair. Traction, raise, and Airbnb analogy excluded. Singleton D1/D4/D5 retained as independently revisable problem, supply, and monetization conditions. Transcript truncated mid-closing."
+}

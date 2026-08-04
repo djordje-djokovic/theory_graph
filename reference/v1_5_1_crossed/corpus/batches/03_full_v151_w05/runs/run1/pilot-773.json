@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-773",
+    "coder_session_id": "session_06",
+    "session_case_index": 17,
+    "extraction_run": 1,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:01:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Indoor growers' profits depend on controlling many growing conditions, but sensor/notebook data stays siloed and useless for decisions",
+      "status": "explicit",
+      "evidence_span": "this is raw data. It doesn't talk to each other, and it doesn't tell Tom anything. It's virtually useless for Tom"
+    },
+    {
+      "id": "P2",
+      "text": "AgriList aggregates sensor sync, document upload, and manual entry into one operational data place",
+      "status": "explicit",
+      "evidence_span": "AgriList can automatically sync with any hardware he has in the equipment, like sensors. He can upload documents. And he can even enter data manually"
+    },
+    {
+      "id": "P3",
+      "text": "Dashboard, graphs, and task management surface harvest/seed work and yield risks to operations and sales",
+      "status": "explicit",
+      "evidence_span": "Agoralyst also acts as a task manager, showing Tom what he has to do on a day-to-day basis"
+    },
+    {
+      "id": "P4",
+      "text": "Recommendations optimize lighting against time-varying electricity rates to cut energy cost",
+      "status": "explicit",
+      "evidence_span": "AgriList goes a step further and provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings"
+    },
+    {
+      "id": "P5",
+      "text": "Subscription priced per acre per month for greenhouse customers",
+      "status": "explicit",
+      "evidence_span": "Our private beta was released at a subscription price at $1,000 per acre per month"
+    },
+    {
+      "id": "P6",
+      "text": "Target market is large and growing indoor/hydroponic vegetable greenhouse acreage",
+      "status": "explicit",
+      "evidence_span": "There are over 1 million acres of vegetable production greenhouses globally. And that number is growing fast"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Siloed indoor grow operations data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "Unified ops platform and energy recommendations",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "Per-acre SaaS and greenhouse market",
+      "premise_ids": ["P5", "P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Indoor farmers control operations and profits with less guesswork",
+      "status": "explicit",
+      "evidence_span": "helps indoor farmers take control of their operations"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More sustainable efficient food production at scale",
+      "evidence_span": "We have to increase food production 70% by 2050 to meet our growing global food demand. And we have to do that more sustainably and more efficiently"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "being able to control those conditions means being able to control your profits"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "all of Tom's data talks to each other, eliminating the guesswork from decision making"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "subscription price at $1,000 per acre per month"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Lighting/temp/CO2/pH/humidity sensor list and notebook/consultant/gut decision pains folded as one siloed-data problem. Dashboard/graphs/tasks are one ops surface; energy recommendations kept separately revisable. Beta greenhouse count treated as traction. Singleton D1 retained. Anti-template: problem, product, commercial modules separately framed."
+}

@@ -1,0 +1,112 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Competitive sites emphasize textbook algorithms rather than real product engineering problems",
+      "status": "explicit",
+      "evidence_span": "sites like ACM and Topcoder focus on a small set of textbook algorithms"
+    },
+    {
+      "id": "P2",
+      "text": "HackerRank is the competitive league for hackers on real-world problems",
+      "status": "explicit",
+      "evidence_span": "building the competitive lead for hackers to solve real world problems"
+    },
+    {
+      "id": "P3",
+      "text": "Dynamic multi-level challenges across domains like ML and AI",
+      "status": "explicit",
+      "evidence_span": "I'm going to choose a machine learning challenge on level eight"
+    },
+    {
+      "id": "P4",
+      "text": "Company-sourced real problems and datasets make challenges realistic",
+      "status": "explicit",
+      "evidence_span": "to make the experience as real as possible, we are inviting companies to give us real data sets or problems"
+    },
+    {
+      "id": "P5",
+      "text": "Code, compile, test, and compete (including bot games) inside the browser with visualization",
+      "status": "explicit",
+      "evidence_span": "you can compile and test right here. And you can choose any language that you want"
+    },
+    {
+      "id": "P6",
+      "text": "Biweekly archives with released snippets teach optimal algorithms",
+      "status": "explicit",
+      "evidence_span": "archive the challenges every two weeks, and release all the code snippets"
+    },
+    {
+      "id": "P7",
+      "text": "Hackers' competitive spirit around complex problems should be centralized on one platform",
+      "status": "explicit",
+      "evidence_span": "At HackerRank, we're centralizing this"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Market gap and centralization",
+      "premise_ids": [
+        "P1",
+        "P7"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Platform mechanics",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Competitive real-world hacking experience online",
+      "status": "explicit",
+      "evidence_span": "Let's start hacking. It's live right now"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "competitive site for real world problems"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Olympics of programming"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "No monetization module asserted; none invented. Traction week metrics excluded.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1012",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:55:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

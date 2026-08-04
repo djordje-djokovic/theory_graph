@@ -1,0 +1,107 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inaccurate third-party wildfire models caused carriers to abandon writing near wildfire regions",
+      "status": "explicit",
+      "evidence_span": "because of this inaccuracy, they decided they simply can't write anywhere near wildfire areas"
+    },
+    {
+      "id": "P2",
+      "text": "Delos proprietary wildfire models correctly distinguish burn risk and drive where and how to price insurance",
+      "status": "explicit",
+      "evidence_span": "That risk map tells us where to write insurance, but also how to price that insurance"
+    },
+    {
+      "id": "P3",
+      "text": "The company offers property insurance for low-risk homes in catastrophe zones, with monthly active risk-mitigation coaching",
+      "status": "explicit",
+      "evidence_span": "writes insurance specifically for low-risk homes within catastrophe regions"
+    },
+    {
+      "id": "P4",
+      "text": "Structure is an MGA with carriers paying claims and distribution via independent agents",
+      "status": "explicit",
+      "evidence_span": "We're launching as a Managing General Agent, or MGA"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Wildfire risk intelligence",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Low-risk home insurance product",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D3",
+      "name": "MGA and agent distribution",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Insure low-risk homes in catastrophe regions that other carriers avoid",
+      "status": "explicit",
+      "evidence_span": "offer insurance to homes that other insurance companies simply would stay away from"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Homeowners receive ongoing guidance to reduce wildfire exposure",
+      "evidence_span": "top things they can change about their home to protect themselves from wildfire"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "We use this model to be able to understand what areas are low risk and offer insurance to homes"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "understand what areas are low risk"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "low-risk homes within catastrophe regions"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "selling through independent agents"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Mitigation service folded into insurance product P3; also noted in secondary_value as homeowner benefit. Model layer laundry list folded into P2. Analytic side sales and team bios excluded. Premium-potential math treated as framing. Singletons D2/D3 retained.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-439",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:30:40+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-432",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T10:42:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sleep deprivation harms productivity and health at very large societal cost",
+      "status": "explicit",
+      "evidence_span": "The effects of sleep deprivation are both cognitive and physical"
+    },
+    {
+      "id": "P2",
+      "text": "Nuxo delivers personalized coaching on phone using favorite wearable inputs",
+      "status": "explicit",
+      "evidence_span": "You can use it with your favorite wearable device. and start sleeping better now"
+    },
+    {
+      "id": "P3",
+      "text": "Program is developed with leading sleep researchers focusing on circadian/melatonin timing",
+      "status": "explicit",
+      "evidence_span": "actually developed with leading sleep researchers in the field"
+    },
+    {
+      "id": "P4",
+      "text": "Users get a sleep profile then progress through weekly lessons that build habits",
+      "status": "explicit",
+      "evidence_span": "the coaching is based on lessons that are divided into weeks"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution via occupational-health/insurance partners and consumer app purchase",
+      "status": "explicit",
+      "evidence_span": "building the product with the leading and the biggest occupational health care provider in Finland"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Costly sleep problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized research-backed coaching",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "B2B health partners and app channel",
+      "premise_ids": [
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Better sleep via personalized mobile coaching",
+      "status": "explicit",
+      "evidence_span": "personalized sleep coaching in a mobile phone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "costing billions of dollars to their employers and to the society"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "making their sleeping patterns more consistent"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "purchase the coaching there"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Tracker inadequacy folded into need for personalized coaching rather than its own premise. Insurance partner kept inside B2B channel premise."
+}

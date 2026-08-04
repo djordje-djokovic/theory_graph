@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-686",
+    "coder_session_id": "session_05",
+    "session_case_index": 2,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:47:05Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Prior closed-loop neurostimulation was powerful but inaccessible because it required surgery",
+      "status": "explicit",
+      "evidence_span": "frustrated by the lack of accessibility, and that is due to the surgical nature of this product"
+    },
+    {
+      "id": "P2",
+      "text": "Transcranial direct current stimulation can stimulate the brain non-invasively without surgery",
+      "status": "explicit",
+      "evidence_span": "stimulate the brain non-invasively. It's called transcranial direct current stimulation"
+    },
+    {
+      "id": "P3",
+      "text": "Priming the motor cortex with neurostimulation increases training gains in strength and skill for athletes",
+      "status": "explicit",
+      "evidence_span": "prime this part of the brain so that it can be more plastic"
+    },
+    {
+      "id": "P4",
+      "text": "Halo Sport is a headphone-form neurostimulator with proprietary primers that pairs with a phone app during workouts",
+      "status": "explicit",
+      "evidence_span": "put on Halo Sport, like a regular set of headphones"
+    },
+    {
+      "id": "P5",
+      "text": "Multiple proprietary elements and filed patents make the technology defensible",
+      "status": "explicit",
+      "evidence_span": "multiple proprietary elements, so we have a defensible technology, 27 patents filed"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue comes from selling headsets, semi-disposable primers and ear pads, with optional future premium app features",
+      "status": "explicit",
+      "evidence_span": "selling headsets, semi-disposable primers, semi-disposable ear pads"
+    },
+    {
+      "id": "P7",
+      "text": "Beyond sports, the same motor-cortex approach can address medical movement disabilities such as post-stroke impairment",
+      "status": "explicit",
+      "evidence_span": "medical applications for movement"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "non-invasive athlete neuropriming",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "hardware and consumables revenue",
+      "premise_ids": [
+        "P6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "medical movement applications",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Accessible non-surgical neurostimulation that improves athletic training outcomes",
+      "status": "explicit",
+      "evidence_span": "world's first neurostimulation system designed specifically for athletes"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Potential help for people with motor disability after stroke",
+      "evidence_span": "Half the people who have had a stroke, suffer from some sort of motor disability"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "P2",
+      "to": "P3",
+      "type": "premise-premise",
+      "evidence_span": "Can you get more out of your training neurologically if you do this first? And it turns out that you can"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "neurostimulation system designed specifically for athletes"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Halo is a hardware company and we plan on selling headsets"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can help these people with neurostimulation"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Founder credentials and Neuropace biography excluded except as motivating surgical-access problem (P1). Training study percentages treated as evidence of P3 mechanism, not separate premises. Partner logos excluded as traction. Patents folded as IP detail on product (P5 kept because speaker frames defensibility as a condition). Singleton D2/D3 retained as separately revisable monetization and medical-expansion modules."
+}

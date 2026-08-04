@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Mobile fragmentation makes testing a large share of development cost and existing cloud tools are inadequate without device-in-hand",
+      "status": "explicit",
+      "evidence_span": "mobile fragmentation is now really ruining for mobile app developers"
+    },
+    {
+      "id": "P2",
+      "text": "Lifelike near-zero-latency remote interaction with real devices enables testing, debugging, and related features",
+      "status": "explicit",
+      "evidence_span": "once we figured out how to interact with real physical device as if it was on your desk, we can build countless helpful features using that technology"
+    },
+    {
+      "id": "P3",
+      "text": "Custom infrastructure packs many devices per server with demand-driven inventory and cooling racks",
+      "status": "explicit",
+      "evidence_span": "We created a custom-made server infrastructure"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Mobile testing fragmentation problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Remote device platform and farm",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Interact with any real mobile device as if it were on your desk, natively with one tap",
+      "status": "explicit",
+      "evidence_span": "access and interact with any real mobile device just with one tap"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "spending one third of your total development budget just on testing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "interact with them as if they were on your desk"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Infra folded with interaction tech as one platform domain because speaker presents farm as enabling the same remote-access product. Feature roadmap not split.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-761",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

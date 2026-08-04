@@ -1,0 +1,95 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Practical deep learning AI can be applied inside contact centers for customer service",
+      "status": "explicit",
+      "evidence_span": "bringing practical applications of deep learning and AI into customer service"
+    },
+    {
+      "id": "P2",
+      "text": "AI software helps contact centers deliver more consistent service and makes agents more effective",
+      "status": "explicit",
+      "evidence_span": "able to provide a more consistent service. They're empowering their customer service agents in the trenches to be more effective every single day"
+    },
+    {
+      "id": "P3",
+      "text": "Serving customers on Messenger and WhatsApp where they already are expands channel coverage",
+      "status": "explicit",
+      "evidence_span": "we're helping them do that on platforms like Facebook Messenger and WhatsApp"
+    },
+    {
+      "id": "P4",
+      "text": "Combining human and machine intelligence in a seamless experience improves outcomes",
+      "status": "explicit",
+      "evidence_span": "by combining the best of human and machine intelligence in a seamless experience"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Contact-center AI product",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Messaging channel presence",
+      "premise_ids": [
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Create better customer service experiences for people",
+      "status": "explicit",
+      "evidence_span": "help create better experiences for people all around us"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Help agents enjoy their job more and help managers do a better job",
+      "evidence_span": "enjoy their job more"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "combining the best of human and machine intelligence in a seamless experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "serve customers where their customers actually are"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.74
+  },
+  "notes": "Heavy traction/fundraising/team growth excluded. Watson benchmark treated as research evidence, not premise. Government partnership treated as announcement/traction rather than a required theory condition.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-757",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:40:00+02:00"
+  }
+}

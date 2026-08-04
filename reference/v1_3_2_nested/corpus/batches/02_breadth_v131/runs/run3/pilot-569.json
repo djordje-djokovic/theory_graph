@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T10:46:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Finding a qualified, nearby, available tutor takes hours for many students",
+      "status": "explicit",
+      "evidence_span": "it takes, on average, four to five hours to find someone who's qualified, accessible, and available"
+    },
+    {
+      "id": "P2",
+      "text": "Syncios books pre-vetted tutors for in-person or online sessions in a few steps",
+      "status": "explicit",
+      "evidence_span": "pick a course, select a pre-vetted tutor based on your preferences, and directly book a session"
+    },
+    {
+      "id": "P3",
+      "text": "Matching uses ML HR screening plus real-time personalized recommendations",
+      "status": "explicit",
+      "evidence_span": "Syncios will recommend you the best tutor because we have an algorithm that favors our tutors"
+    },
+    {
+      "id": "P4",
+      "text": "Peer tutors share students' educational background and are rewarded for performance",
+      "status": "explicit",
+      "evidence_span": "we match students with peer tutors who have been in their shoes and have the same educational background"
+    },
+    {
+      "id": "P5",
+      "text": "Platform take-rate is a 20% tutor commission; institutions pay monthly for analytics",
+      "status": "explicit",
+      "evidence_span": "charge the institutions, universities, and schools $1,000 per month in exchange for analytics about their students' tutoring activities"
+    },
+    {
+      "id": "P6",
+      "text": "Product and language localization target the MENA market",
+      "status": "explicit",
+      "evidence_span": "Sinkers will cater for the MENA market and will be in Arabic"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Search friction for tutors",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Peer matching and session tech",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Monetization and regional focus",
+      "premise_ids": [
+        "P5",
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Connect students to highly qualified private tutors quickly",
+      "status": "explicit",
+      "evidence_span": "connects students to highly qualified private tutors"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Syncios is your solution"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "decide whether you'd like to meet in person or online via Syncios platform"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The MENA market is around 1.1 billion dollars"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Online whiteboard stack treated as part of P2 booking/session product rather than its own premise. Competitor critique not coded as premises."
+}

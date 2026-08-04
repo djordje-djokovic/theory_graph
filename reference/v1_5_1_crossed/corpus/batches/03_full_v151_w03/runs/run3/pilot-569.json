@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-569",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:36:30Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "After-school private tutoring is essential for success, but many students struggle for hours to find a qualified, accessible, available tutor",
+      "status": "explicit",
+      "evidence_span": "One out of three students struggle to find a tutor"
+    },
+    {
+      "id": "P2",
+      "text": "A peer-to-peer app lets students pick a course, choose a pre-vetted tutor, book in-person or online sessions with chat, materials, and built-in tutoring tools",
+      "status": "explicit",
+      "evidence_span": "a peer-to-peer platform that connects students to highly qualified private tutors in three simple steps"
+    },
+    {
+      "id": "P3",
+      "text": "Tutor hiring is automated with ML pre-selection, and matching uses algorithms and a graph database for personalized real-time recommendations",
+      "status": "explicit",
+      "evidence_span": "Our machine learning algorithm are helping our HR team to pre-select our candidates"
+    },
+    {
+      "id": "P4",
+      "text": "Unlike inflexible centers and online platforms, Syncios matches peer tutors with shared educational background and rewards tutors with hours-based pay, internships, training, and bonuses",
+      "status": "explicit",
+      "evidence_span": "we match students with peer tutors who have been in their shoes and have the same educational background"
+    },
+    {
+      "id": "P5",
+      "text": "MENA Arabic go-to-market with school/university partnerships; monetization is 20% tutor commission plus institutional analytics subscriptions",
+      "status": "explicit",
+      "evidence_span": "We charge our tutors a 20% commission per transaction"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "hard-to-find private tutors",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "peer tutoring booking platform",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "peer-match tutor rewards differentiation",
+      "premise_ids": ["P4"]
+    },
+    {
+      "id": "D4",
+      "name": "MENA institutional commission model",
+      "premise_ids": ["P5"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Education becomes accessible through a self-regulated knowledge-exchange tutoring community",
+      "status": "explicit",
+      "evidence_span": "make education Accessible to all"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "it takes, on average, four to five hours to find someone who's qualified, accessible, and available"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "directly book a session"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "We reward them based on the number of hours they teach"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "These institutions are endorsing SYNCRs and onboarding thousands of their students on the platform"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three-step booking, note/whiteboard/video, ratings, and progress reports folded as feature cascade of one tutoring marketplace. ML HR and matching graph treated as one supply-quality mechanism with booking. Hour and revenue growth figures excluded as traction. Commission and institutional fee kept as one commercial/GTM premise with MENA Arabic focus. Truncated closing."
+}

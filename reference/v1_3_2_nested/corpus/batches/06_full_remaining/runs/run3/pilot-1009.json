@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1009",
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T16:13:22+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Browser-based HTML5 has inherent flaws that prevent high-performance 3D experiences developers want",
+      "status": "explicit",
+      "evidence_span": "inherent flaws that exist in the browser that make that impossible to do things like this"
+    },
+    {
+      "id": "P2",
+      "text": "Famo.us is a JavaScript runtime that delivers native-rivaling performance by applying game-engine ideas and talking directly to the GPU",
+      "status": "explicit",
+      "evidence_span": "Performance that even a native app would die to have"
+    },
+    {
+      "id": "P3",
+      "text": "The solution runs on iOS, Android, PC, Mac, and game consoles—any device with a GPU and accessible OS",
+      "status": "explicit",
+      "evidence_span": "It also runs on Xbox, PlayStation, and Nintendo"
+    },
+    {
+      "id": "P4",
+      "text": "The offering is positioned as a new tool that makes JS engineers 'famous' and can outclass HTML5 and native for many app experiences",
+      "status": "explicit",
+      "evidence_span": "the reason I started famous was to make JavaScript engineers famous"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Browser HTML5 limits",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "High-performance JS GPU engine",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "JS engineer empowerment positioning",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Unlock a whole new world of performant 2D/3D web apps for designers and engineers",
+      "status": "explicit",
+      "evidence_span": "there is a whole new world out there that you didn't know that existed"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They believe that HTML5 was going to be a long haul wait"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "This solution abstracts out to every device that has a GPU"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "They have a new tool now"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Mission to make engineers famous treated as GTM/identity condition tied to tool adoption. Democratize-3D WordPress analogy folded into that positioning rather than separate vision premise. No pricing stated. Evidence spans use contiguous transcript fragments only."
+}

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-129",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:37:10+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Satellite growth creates spectrum noise that endangers consistent Earth–space radio communications",
+      "status": "explicit",
+      "evidence_span": "without clear communications, the entire space sector becomes in jeopardy"
+    },
+    {
+      "id": "P2",
+      "text": "Operators still obtain, coordinate, and defend spectrum with outdated 25-year-old processes costing millions in interference disputes",
+      "status": "explicit",
+      "evidence_span": "costing them millions of dollars in the process"
+    },
+    {
+      "id": "P3",
+      "text": "247X runs interference simulations for co-linear events and embeds them in coordination infrastructure",
+      "status": "explicit",
+      "evidence_span": "We embed that simulation technology into coordination infrastructure in order to expedite the process of how satellite operators work together in the space ecosystem"
+    },
+    {
+      "id": "P4",
+      "text": "Software automates ITU filing triage, multi-simulation forecasts, pass/fail thresholds, and operator–regulator workflows",
+      "status": "explicit",
+      "evidence_span": "The system has automatically run whether or not they will cause simulations or signal interference to my existing constellation"
+    },
+    {
+      "id": "P5",
+      "text": "Near-real-time monitoring and one-stop spectrum management protect rights for operators and regulators",
+      "status": "explicit",
+      "evidence_span": "you can think of us as your one-stop shop for all spectrum management"
+    },
+    {
+      "id": "P6",
+      "text": "A spectrum exchange for subleasing requires prior validation that interference will not occur under coordination agreements",
+      "status": "explicit",
+      "evidence_span": "This spectrum exchange can only come to fruition as we have validated that it will not cause interference as we're subleasing spectrum and the coordination agreements are still being adhered to"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Noisy costly coordination status quo",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "247X spectrum platform",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Validated spectrum exchange",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Clear consistent communications through eased spectrum simulation and coordination",
+      "status": "explicit",
+      "evidence_span": "We need to establish clear communications on a regular basis and MagnaStar is tackling this challenge"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "embedded it within the technology workflow that we have built to automate portions of that process"
+    },
+    {
+      "from": "P3",
+      "to": "P6",
+      "type": "premise-premise",
+      "evidence_span": "This spectrum exchange can only come to fruition as we have validated that it will not cause interference"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "bring relief to the space sector"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easing the complexities of space spectrum"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "building this to be a spectrum exchange"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Independent run: folded millions-of-dollars dispute cost into outdated-process premise; kept exchange as singleton with explicit validation dependency. LOIs and prepaid early adopters excluded as traction."
+}

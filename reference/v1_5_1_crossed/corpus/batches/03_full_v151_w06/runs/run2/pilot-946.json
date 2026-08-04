@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-946",
+    "coder_session_id": "session_01",
+    "session_case_index": 23,
+    "extraction_run": 2,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:06:52Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Most men hate shopping and distrust e-commerce fit, so 93% still buy clothes offline unlike women who shop online more",
+      "status": "explicit",
+      "evidence_span": "93% of men still shop for clothes offline"
+    },
+    {
+      "id": "P2",
+      "text": "Branded marketplace connects men who hate shopping with people who love to shop, matched via MAIL style/size data and a hit-list, with real-time cart feedback conversations",
+      "status": "explicit",
+      "evidence_span": "Branded is a marketplace that connects men who hate shopping with people that love to shop"
+    },
+    {
+      "id": "P3",
+      "text": "Try-on-before-buy with industry-best pickup returns ('return like a man') so men need not repackage or visit the post office; charged only for kept items plus shopper tip",
+      "status": "explicit",
+      "evidence_span": "we let you try stuff on before you buy it"
+    },
+    {
+      "id": "P4",
+      "text": "Supply side scales via underemployed stylish people (students, DJs, artists, models) who have time to shop for men for money",
+      "status": "explicit",
+      "evidence_span": "finding people that would love to make money by shopping for our men isn't a hard sell"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "men hate shopping and distrust fit online",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "personal shopper marketplace with MAIL",
+      "premise_ids": ["P2"]
+    },
+    {
+      "id": "D3",
+      "name": "try-on and return like a man",
+      "premise_ids": ["P3"]
+    },
+    {
+      "id": "D4",
+      "name": "underemployed stylish shopper supply",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Average Joe gets trusted human help finding clothes that fit and style without hating the shopping process",
+      "status": "explicit",
+      "evidence_span": "connects men who hate shopping with people that love to shop"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The only way he knows if something's gonna fit him is to try it on for real"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "shopping for clothes isn't an exact science. It's personal. It requires a human touch"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "return like a man"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "plenty of time to make money by shopping for our men"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Offline preference and fit distrust folded as one male-shopping problem (§4.1.6). MAIL, hit list, matching, real-time cart/feedback, and obscure-source finding folded as marketplace cascade (§4.1.7); try-on/returns split as separately emphasized fit mechanism; shopper-supply GTM split. Waitlist and team bios excluded as traction/credentials. Transcript ends mid-CTA (truncated=true). Four-domain partition; not a need/product/money triad."
+}

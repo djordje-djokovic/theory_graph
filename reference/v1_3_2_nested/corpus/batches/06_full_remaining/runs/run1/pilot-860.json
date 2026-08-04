@@ -1,0 +1,104 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shoppers cannot easily put visual products into words, so keyword search returns unrelated results",
+      "status": "explicit",
+      "evidence_span": "it was very difficult to put in words a visual product that I had in mind. And I got a lot of unrelated results"
+    },
+    {
+      "id": "P2",
+      "text": "Attribute-guided mobile search finds the intended product in under 15 seconds",
+      "status": "explicit",
+      "evidence_span": "With Donde, you can find exactly what you're looking for in less than 15 seconds"
+    },
+    {
+      "id": "P3",
+      "text": "Learning personalizes results using contextual signals such as location, age, taste, and environment",
+      "status": "explicit",
+      "evidence_span": "a learning mechanism that combines the contextual information of the search of the user. her location, her age, everything that we can know about her taste and her environment"
+    },
+    {
+      "id": "P4",
+      "text": "Scraping stores, item fingerprints, and a cross-brand ontology supply a common product language",
+      "status": "explicit",
+      "evidence_span": "Scraping the data of different websites and different stores extracting the unique fingerprints of every item and using and creating an ontology a common language of all the all the brands and order retailers"
+    },
+    {
+      "id": "P5",
+      "text": "AI chooses the best next attribute questions to narrow search quickly",
+      "status": "explicit",
+      "evidence_span": "using an artificial intelligence technology to choose the best question to ask you next"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Visual product search friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Personalized attribute search over scraped inventory",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Intuitive delightful mobile search that finds the exact product quickly and enables on-the-spot purchase",
+      "status": "explicit",
+      "evidence_span": "we offer a very intuitive and delightful search experience for everyone"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P5",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "the same as in 20 questions game, but only in five questions game, using an artificial intelligence technology to choose the best question to ask you next"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "frustrated from the shopping, searching and shopping experience"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "find exactly what you're looking for in less than 15 seconds"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Buy-on-the-spot treated as part of search experience value path, not a separate commercial module (no pricing/channel asserted). Founder intelligence-unit bio excluded. Demo attribute choices (green dress, sleeves) folded into attribute-search premise.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-860",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

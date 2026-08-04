@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-316",
+    "coder_session_id": "session_06",
+    "session_case_index": 1,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T12:20:00Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Plant parasitic nematodes cause large crop losses that farmers must control",
+      "status": "explicit",
+      "evidence_span": "farmers lose roughly 12% of their crops every year to plant parasitic nematodes"
+    },
+    {
+      "id": "P2",
+      "text": "Farmers demand eco-friendly pest-control alternatives amid consumer and regulatory pressure",
+      "status": "explicit",
+      "evidence_span": "This leads to farmers demanding eco-friendly alternatives"
+    },
+    {
+      "id": "P3",
+      "text": "Pheromones can control nematode behaviors such as dispersal",
+      "status": "explicit",
+      "evidence_span": "when you add the pheromones, they disperse and they look for new food"
+    },
+    {
+      "id": "P4",
+      "text": "Ferrocote seed treatment protects young roots by redirecting parasitic nematodes away from seeds",
+      "status": "explicit",
+      "evidence_span": "Ferrocote is a seed treatment that is applied to seeds before they are planted, and it protects the young and vulnerable roots from attack by plant parasitic nematodes"
+    },
+    {
+      "id": "P5",
+      "text": "Nemastim makes beneficial nematodes substantially more effective as biocontrols",
+      "status": "explicit",
+      "evidence_span": "Nemastim makes beneficial nematodes up to 200% more effective"
+    },
+    {
+      "id": "P6",
+      "text": "Products apply in agricultural pest control and indoor agriculture markets",
+      "status": "explicit",
+      "evidence_span": "applications in the current $50 billion agricultural pest control industry and in the future industries such as indoor agriculture"
+    },
+    {
+      "id": "P7",
+      "text": "Commercial partners are needed to scale the technology",
+      "status": "explicit",
+      "evidence_span": "we are seeking commercial partners"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Nematode losses and eco-friendly demand",
+      "premise_ids": ["P1", "P2"]
+    },
+    {
+      "id": "D2",
+      "name": "Pheromone products Ferrocote and Nemastim",
+      "premise_ids": ["P3", "P4", "P5"]
+    },
+    {
+      "id": "D3",
+      "name": "Markets and commercial partners",
+      "premise_ids": ["P6", "P7"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Eco-friendly nematode control that helps farmers grow more food",
+      "status": "explicit",
+      "evidence_span": "Our eco-friendly products control nematodes, so farmers can grow more food"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P3",
+      "to": "P4",
+      "type": "premise-premise",
+      "evidence_span": "We've taken this technology and used it to create our first two products, Ferrocote and Nemastim"
+    },
+    {
+      "from": "P3",
+      "to": "P5",
+      "type": "premise-premise",
+      "evidence_span": "We've taken this technology and used it to create our first two products, Ferrocote and Nemastim"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "farmers demanding eco-friendly alternatives"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our eco-friendly products control nematodes, so farmers can grow more food"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "help us bring eco-friendly pest control"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Three-domain partition justified: problem/demand, pheromone product mechanisms, and market/partner GTM are separately revisable. Financing ask excluded. Co-founder pheromone research coded as the dispersal mechanism (P3), not as biography. Transcript ends mid-closing; truncated=true. Anti-template note: need/product/market triad matches separately asserted modules."
+}

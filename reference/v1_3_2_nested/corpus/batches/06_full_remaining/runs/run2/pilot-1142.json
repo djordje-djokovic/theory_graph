@@ -1,0 +1,83 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Venmo lets users pay and charge friends from a phone-linked credit card and bank account",
+      "status": "explicit",
+      "evidence_span": "You get to link a credit card and a bank account to your phone, and that's where the money comes from"
+    },
+    {
+      "id": "P2",
+      "text": "Giphy hides real money at real-world locations for friends to discover by checking in on location services starting with Foursquare",
+      "status": "explicit",
+      "evidence_span": "Giphy is an iPhone application that lets people hide real money at real-world locations for their friends to find by checking in through Foursquare"
+    },
+    {
+      "id": "P3",
+      "text": "Recipients only need to be Foursquare friends; Venmo delivers the gift without requiring the Giphy app",
+      "status": "explicit",
+      "evidence_span": "all they need to do is be Foursquare friends with you, and Venmo is going to handle the rest"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Phone-linked peer payments",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Check-in money hunt app",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Fun social gifting of real money at places friends visit",
+      "status": "explicit",
+      "evidence_span": "You get to hide real money at real-world locations for your friends to find by checking in"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Venmo is going to handle the rest"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "hide real money at real-world locations for their friends to find"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.82
+  },
+  "notes": "Complement-Foursquare framing treated as pitch context rather than a separately revisable premise. Multi-recipient competition, clues, and notes folded into P2 (§4.1(5)). Business/brand loyalty pitch coded as aspiration not premise (§4.1(4)). Singleton D1 retained: payment rails could fail independently of the check-in gift mechanic.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "case_id": "pilot-1142",
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:48:00+02:00"
+  }
+}

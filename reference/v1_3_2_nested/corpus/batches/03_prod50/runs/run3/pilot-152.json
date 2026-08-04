@@ -1,0 +1,136 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Excess antibiotics drive side effects and antimicrobial resistance",
+      "status": "explicit",
+      "evidence_span": "taking too many antibiotics can pose a danger to our health because of side effects as well as antimicrobial resistance"
+    },
+    {
+      "id": "P2",
+      "text": "Phages are natural and precise bacterial killers that spare good bacteria",
+      "status": "explicit",
+      "evidence_span": "they're natural and they're precise"
+    },
+    {
+      "id": "P3",
+      "text": "Dermatologists are the top antibiotic prescribers, so skin is the first application area",
+      "status": "explicit",
+      "evidence_span": "Dermatologists are actually the number one prescribers of antibiotics across healthcare"
+    },
+    {
+      "id": "P4",
+      "text": "Precision serums require matching tests because efficacy depends on which organism overgrows",
+      "status": "explicit",
+      "evidence_span": "if we were going to bring a precision serum or solution to market, we better have a test"
+    },
+    {
+      "id": "P5",
+      "text": "Four-swab kit with control, robotics prep, and whole genome sequencing characterize full skin microbiome including fungi and mites",
+      "status": "explicit",
+      "evidence_span": "in addition to bacteria, we can also see viruses and fungi, even mites"
+    },
+    {
+      "id": "P6",
+      "text": "Algorithm outputs microbiome type, scores, ingredient recommendations, and matched phage serum",
+      "status": "explicit",
+      "evidence_span": "recommendations on food ingredients, skin care ingredients, as well as her phage serum that's right for her"
+    },
+    {
+      "id": "P7",
+      "text": "Eight formulations from biobank strains are selected by rapid discovery and produced at high titer in bioreactors",
+      "status": "explicit",
+      "evidence_span": "We use bioreactors to produce and scale phages at extremely high titer"
+    },
+    {
+      "id": "P8",
+      "text": "Largest skin microbiome WGS database underpins the platform",
+      "status": "explicit",
+      "evidence_span": "we amassed the largest database on the skin microbiome to date using whole genome sequencing"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "AMR problem and skin entry",
+      "premise_ids": [
+        "P1",
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Discovery kit and sequencing analytics",
+      "premise_ids": [
+        "P4",
+        "P5",
+        "P6",
+        "P8"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Phage formulation and production",
+      "premise_ids": [
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Precision phage-based skin solutions matched to the patient's microbiome to reduce antibiotic dependence",
+      "status": "explicit",
+      "evidence_span": "get people off of Accutane and antibiotics"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Broader human-health phage platform beyond skin",
+      "evidence_span": "platform that is applicable to many areas of human health"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Phages are microbes that infect bacteria"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Skin Microbiome Discovery Kit and custom phage serums"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "formulated eight different formulations"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "Soft-count warning at 8; database kept as separately revisable data asset for precision matching. Transcript truncated. Singleton D3: manufacturing/titer is independently learnable from test kit.",
+  "meta": {
+    "codebook_version": "1.3.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-152",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T12:25:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.1; temperature not API-controlled in this harness."
+  }
+}

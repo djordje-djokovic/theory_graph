@@ -1,0 +1,108 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Commoditized brains/sensors/software leave hardware—especially actuators—as the costly bottleneck (e.g., humanoid manufacturing cost)",
+      "status": "explicit",
+      "evidence_span": "most of that comes from complex actuators and hardware"
+    },
+    {
+      "id": "P2",
+      "text": "Three recreatable building blocks—servo, joint, link—let users build many robot forms and disassemble to rebuild",
+      "status": "explicit",
+      "evidence_span": "They're versatile, so you can use them to build a robot arm, a 3D printer, or even a humanoid robot"
+    },
+    {
+      "id": "P3",
+      "text": "Tightly integrated servo joint embeds motor driver, networking, and mechanical interfaces to cut cost and weight",
+      "status": "explicit",
+      "evidence_span": "combine all of that into one little unit, which is tightly, tightly integrated"
+    },
+    {
+      "id": "P4",
+      "text": "Phone app plus VR/cloud builder with physics engine support rapid programming, sharing, and ordering",
+      "status": "explicit",
+      "evidence_span": "You can assemble and program your robot on the fly, inside of the browser, and test and simulate in a real physics engine"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Actuator hardware constraint",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Integrated modular hardware kit",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Software prototyping stack",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make building robots accessible and thrilling for inventors outside research labs",
+      "status": "explicit",
+      "evidence_span": "that's basically what we want to make really accessible with ModBot"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "P1",
+      "to": "P2",
+      "type": "premise-premise",
+      "evidence_span": "This is where ModBot steps in. We realized we have to get robots out of expensive research labs"
+    },
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "pace of innovation can be massively increased"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "just these three unique parts let you build an amazing array of engineering feats"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "easy to use for rapid prototyping"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "P1->P2 coded on explicit 'This is where ModBot steps in' after stating the hardware constraint. Price examples for dolly/simulator folded into affordability of modular kit. Indiegogo ask excluded.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-891",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:52:00+02:00"
+  }
+}

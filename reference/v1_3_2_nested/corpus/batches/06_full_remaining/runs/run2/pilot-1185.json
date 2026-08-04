@@ -1,0 +1,124 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Traditional job boards inundate employers with spam and irrelevant applications",
+      "status": "explicit",
+      "evidence_span": "out of those 300, 290 are a complete waste of time. Some are spam"
+    },
+    {
+      "id": "P2",
+      "text": "Qualified job seekers struggle to get noticed and want view and employer feedback",
+      "status": "explicit",
+      "evidence_span": "how does my resume or cover letter, the one that's spot on, the one that's perfect for the job I applied to, get noticed?"
+    },
+    {
+      "id": "P3",
+      "text": "Site posts only handpicked full-time quality jobs without scams or MLM",
+      "status": "explicit",
+      "evidence_span": "This is quality jobs for our quality candidates"
+    },
+    {
+      "id": "P4",
+      "text": "Paid applications signal seriousness so employers notice candidates",
+      "status": "explicit",
+      "evidence_span": "job seekers pay to apply on LocalBacon. And they notice that"
+    },
+    {
+      "id": "P5",
+      "text": "Employers commit to application-view notice and feedback to seekers",
+      "status": "explicit",
+      "evidence_span": "agree to give feedback and allow the job seeker to know when they view their application"
+    },
+    {
+      "id": "P6",
+      "text": "Seekers buy discounted job credits starting at $0.99 to apply and unlock add-ons",
+      "status": "explicit",
+      "evidence_span": "The more job credits you buy, the more of a discount we're going to give you. Job credits also allow us to add on other services"
+    },
+    {
+      "id": "P7",
+      "text": "Flagging syncs to employer ATS; shelving notifies the candidate without changing recruiter habits",
+      "status": "explicit",
+      "evidence_span": "if I'm an organization that has an ATS system and I flag a candidate on LocalBacon, that information gets immediately sent to my ATS"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Employer inbox and seeker notice problems",
+      "premise_ids": [
+        "P1",
+        "P2"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Handpicked paid-apply jobs with transparency",
+      "premise_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Credits pricing and ATS employer workflow",
+      "premise_ids": [
+        "P6",
+        "P7"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Solve fundamental hiring problems for seekers and employers",
+      "status": "explicit",
+      "evidence_span": "fix the fundamental problems that exist for both job seekers and employers"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Monster, CareerBuilder, and Craigslist, they're broken"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Job seekers want to get noticed"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "I gain credibility for giving transparency to my process without changing my behavior"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Partition is need / product / commercial-ops; justified because credits+ATS workflow can be revised without changing handpicked listing rules, and the two-sided pain is a separately stated market condition. UI demo features folded into product claims per §4.1(5).",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1185",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:30:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

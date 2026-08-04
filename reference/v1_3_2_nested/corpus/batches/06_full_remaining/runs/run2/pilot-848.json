@@ -1,0 +1,110 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shift to online commerce creates merchant problems of identity proof and information security",
+      "status": "explicit",
+      "evidence_span": "She's moved from buying at bricks and mortar stores to buying online. This creates a number of problems for merchants"
+    },
+    {
+      "id": "P2",
+      "text": "Siddiqui matching compares hashed graph micro-components so raw attributes never leave either side",
+      "status": "explicit",
+      "evidence_span": "instead of exchanging the graphs, we break it down into its micro-components, and we compare the micro-components"
+    },
+    {
+      "id": "P3",
+      "text": "Identity exchange converts holders of verified attributes into reusable Siddiqui-format sources",
+      "status": "explicit",
+      "evidence_span": "get organizations that hold lots of verified identity attributes on us to convert that information into the SIDICI format"
+    },
+    {
+      "id": "P4",
+      "text": "Per-verification fee with 30% revenue share to attribute providers who need not reveal data",
+      "status": "explicit",
+      "evidence_span": "they don't have to give any information because it's all in the Siddiqui form"
+    },
+    {
+      "id": "P5",
+      "text": "Product focuses on reducing false-positive fraud alerts and slow offline identity checks by making verification fast and accurate",
+      "status": "explicit",
+      "evidence_span": "There's a lot of false positives. In the identity verification area, it's slow, it's offline"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Online identity problems",
+      "premise_ids": [
+        "P1",
+        "P5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Non-exchange matching and exchange",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Verification fee model",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Identity verification that is fast, accurate, and privacy-preserving for merchants",
+      "status": "explicit",
+      "evidence_span": "bring those two things together and make it fast and accurate"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "worried about fraud, or you're worried about keeping your information secure"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "The information is integral"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Our model's really simple. It's transactional"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Evidence span for value uses speaker's 'bring those two things together' claim; wording lightly normalized in premise text only. Singleton fee domain retained as separately revisable.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-848",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 2,
+    "extracted_at": "2026-07-31T15:35:00+02:00",
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness."
+  }
+}

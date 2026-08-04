@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1078",
+    "coder_session_id": "session_01",
+    "session_case_index": 10,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:36:03Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Typical search stacks force changes in three places—database, index, and web server—when modifying the index",
+      "status": "explicit",
+      "evidence_span": "every time we wanted to modify the index, we had to change the system in three separate places"
+    },
+    {
+      "id": "P2",
+      "text": "ThriftDB combines database, search index, and web server into one database-with-search system",
+      "status": "explicit",
+      "evidence_span": "ThriftDB is just combining the database, the search index, and the web server into one system"
+    },
+    {
+      "id": "P3",
+      "text": "Companies model data as objects with attributes; ThriftDB handles objects natively for put/get/search",
+      "status": "explicit",
+      "evidence_span": "we designed ThriftDB to handle objects natively. With ThriftDB, you put in objects, you get objects back, you search across them"
+    },
+    {
+      "id": "P4",
+      "text": "Delivers fast scalable search with attribute filters, facets, and flexible schema uploads out of the box",
+      "status": "explicit",
+      "evidence_span": "With ThriftDB, you get fast, scalable search right out of the box"
+    },
+    {
+      "id": "P5",
+      "text": "Same backend powers diverse apps (parts, blog posts, comments); search is still too hard so sites lack good search",
+      "status": "explicit",
+      "evidence_span": "It's still pretty rare to find websites with good search. And I think it's a sign that search is still too difficult to implement"
+    },
+    {
+      "id": "P6",
+      "text": "Launched as on-demand cloud service with free beta signup",
+      "status": "explicit",
+      "evidence_span": "launching it today as a on-demand cloud service available at thriftybee.com"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "search infrastructure complexity",
+      "premise_ids": ["P1", "P5"]
+    },
+    {
+      "id": "D2",
+      "name": "unified object search database",
+      "premise_ids": ["P2", "P3", "P4"]
+    },
+    {
+      "id": "D3",
+      "name": "cloud on-demand go-to-market",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Make search really simple to implement—powerful yet extremely simple",
+      "status": "explicit",
+      "evidence_span": "make search really simple to implement"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "search is still too difficult to implement"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's a really powerful tool that's also extremely simple to use"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "on-demand cloud service"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": true,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Transcript starts mid-greeting (truncated=true). HN/TechCrunch/Octopart demos folded as applications of one object-search mechanism (§4.1.7). Schema-upload flexibility folded into P4 performance/flexibility package (§4.1.8). Octopart founding context is origin framing. Singleton D3: cloud beta GTM separately revisable. Anti-template: infra problem, product, cloud GTM separately revisable."
+}

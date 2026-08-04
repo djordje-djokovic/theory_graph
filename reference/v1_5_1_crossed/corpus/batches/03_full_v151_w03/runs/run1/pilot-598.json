@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-598",
+    "coder_session_id": "session_06",
+    "session_case_index": 20,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 1,
+    "extracted_at": "2026-08-01T14:37:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Sensitive enterprise data moving to the public cloud will be breached if security is only perimeter-based",
+      "status": "explicit",
+      "evidence_span": "The bad guys will find a way in, around, or through your walls, and you will get hacked"
+    },
+    {
+      "id": "P2",
+      "text": "Patented proxy re-encryption embeds access controls in the data so it stays protected on-prem and in cloud and unauthorized viewers see only ciphertext",
+      "status": "explicit",
+      "evidence_span": "With our patented proxy re-encryption cryptosystem, NuCypher is able to protect data wherever it goes"
+    },
+    {
+      "id": "P3",
+      "text": "Solving security and compliance blockers enables enterprise adoption of big data and cloud infrastructure",
+      "status": "explicit",
+      "evidence_span": "Security and compliance are two of the biggest blockers to the adoption of big data and cloud technology in the enterprise"
+    },
+    {
+      "id": "P4",
+      "text": "Go-to-market targets large enterprises such as banks, tech companies, and telecoms, including open-source Hadoop/Kafka offerings",
+      "status": "explicit",
+      "evidence_span": "we're already proving this with some of the largest enterprises in the world"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud data breach risk",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Proxy re-encryption data protection",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Enterprise cloud security GTM",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Body armor for big data—keeping sensitive data secure wherever it moves in the cloud",
+      "status": "explicit",
+      "evidence_span": "NuCypher, a security and encryption platform, is body armor for big data"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "you will get hacked"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "NuCypher will keep your data secure"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "de facto security layer for the $35 billion cloud infrastructure market"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Demo root-access attack scenario treated as illustration of P2. Patents folded into cryptosystem premise. Team credentials excluded. Market $ figure in value evidence is speaker framing for GTM ambition; primary value is data security."
+}

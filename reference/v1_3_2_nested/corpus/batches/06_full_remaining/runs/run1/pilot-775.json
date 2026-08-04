@@ -1,0 +1,119 @@
+{
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Digital media creation for games and film is still almost entirely manual, driving very high time and cost",
+      "status": "explicit",
+      "evidence_span": "it's still an almost entirely manual process"
+    },
+    {
+      "id": "P2",
+      "text": "Example-based AI (artematics) generates new artistic content from examples while keeping the artist in the loop for control",
+      "status": "explicit",
+      "evidence_span": "Artematics is an example-based way of making art"
+    },
+    {
+      "id": "P3",
+      "text": "The system works across artistic data types including images and 3D models, inventing new variants rather than only remixing",
+      "status": "explicit",
+      "evidence_span": "It can work on any kind of artistic data"
+    },
+    {
+      "id": "P4",
+      "text": "Video games are the beachhead market, with Artomatix Cloud extending to the broader industry",
+      "status": "explicit",
+      "evidence_span": "we've identified that video games are our beachhead"
+    },
+    {
+      "id": "P5",
+      "text": "Monetization is through a software-as-a-service business model",
+      "status": "explicit",
+      "evidence_span": "We're going to monetize through a software-as-a-service business model"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Manual digital media costs",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Controllable generative art AI",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gaming beachhead and SaaS",
+      "premise_ids": [
+        "P4",
+        "P5"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Halve the time and cost of digital media creation through automation",
+      "status": "explicit",
+      "evidence_span": "half the time and half the cost of this process through automation"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "Automate tedious art tasks artists do not want to do",
+      "evidence_span": "We automate the kind of work they don't want to do"
+    },
+    {
+      "text": "Enable vastly richer, more varied digital worlds",
+      "evidence_span": "We can take gaming to the next level"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "art costs too much and it takes too long"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "artificial intelligence system that can mimic human-like artistic creativity"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Artomatix Cloud, which can address the entire industry"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.84
+  },
+  "notes": "Patents/trade secrets folded into the AI capability premise per v1.3.2 §4.1(5). 'Future of art' closing treated as vision, not a premise. Traction (NVIDIA win, AAA franchise, acquisition offer) and founder bios excluded. Need/product/money triad justified: SaaS and beachhead are revisable without changing the generative engine.",
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "provenance_note": "Codebook-only prompt v1.3.2; temperature not API-controlled in this harness.",
+    "case_id": "pilot-775",
+    "extraction_run": 1,
+    "extracted_at": "2026-07-31T15:28:00+02:00"
+  }
+}

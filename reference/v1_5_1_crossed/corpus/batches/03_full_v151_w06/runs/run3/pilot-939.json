@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-939",
+    "coder_session_id": "session_03",
+    "session_case_index": 7,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:12:18Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Online fraud is large and growing faster than commerce, while human review and challenge questions waste labor and destroy conversions",
+      "status": "explicit",
+      "evidence_span": "Fraud is an enormous problem for e-commerce merchants"
+    },
+    {
+      "id": "P2",
+      "text": "Real-time identity verification uses social fingerprinting plus behavioral and transactional data to score whether a buyer is who they claim",
+      "status": "explicit",
+      "evidence_span": "We're a real-time online identity verification platform. We focus on using social fingerprinting"
+    },
+    {
+      "id": "P3",
+      "text": "Checkout social sign-in verifies profiles, maps social graph signals to real-world identity, and can pre-populate forms for a smoother secure purchase",
+      "status": "explicit",
+      "evidence_span": "they'd be asked to sign in with a social network"
+    },
+    {
+      "id": "P4",
+      "text": "Simple JS/Magento/REST integration with per-transaction pricing and no annual contracts",
+      "status": "explicit",
+      "evidence_span": "It's a very simple enterprise model. As you can see, it's per transaction. You just pay for what you use"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "online fraud and conversion friction",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "social identity verification score",
+      "premise_ids": [
+        "P2",
+        "P3"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "integration and per-transaction pricing",
+      "premise_ids": [
+        "P4"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Merchants know who they are doing business with and can stop online fraud without killing conversions",
+      "status": "explicit",
+      "evidence_span": "knowing who you're doing business with"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "every one of those steps is destroying conversions"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we can report back to the customer, or to the merchant, a score of zero to 100"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "It's really like Stripe for fraud"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.85
+  },
+  "notes": "Fraud losses, review burden, and challenge-question conversion damage folded as one problem set (§4.1.6). Social fingerprinting, profile validation, address mapping, and pre-populate checkout folded as verification cascade (§4.1.7). Seed/Telefonica/team excluded. Anti-template: problem, verification product, and commercial model separately revisable."
+}

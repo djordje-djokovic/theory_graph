@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "codebook_version": "1.3.2",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-597",
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extraction_run": 3,
+    "extracted_at": "2026-07-31T15:42:00+02:00"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Inter-company data is hard to manage technically and operationally as volumes and third-party use grow",
+      "status": "explicit",
+      "evidence_span": "This explosion in data makes managing inter-company data very hard, both technically and operationally"
+    },
+    {
+      "id": "P2",
+      "text": "Platform automates give/get flows, schema annotation, transforms, sharing, and anomaly monitoring without coding",
+      "status": "explicit",
+      "evidence_span": "Nexla automates the flow"
+    },
+    {
+      "id": "P3",
+      "text": "End-to-end encryption, access control, and anonymization are built into the platform",
+      "status": "explicit",
+      "evidence_span": "We take care of end-to-end encryption, access control, and anonymization"
+    },
+    {
+      "id": "P4",
+      "text": "The system learns data and alerts on schema, quality, and volume changes",
+      "status": "explicit",
+      "evidence_span": "It learns about your data and alerts you to changes in schema, quality, and data volume"
+    },
+    {
+      "id": "P5",
+      "text": "UX lets operations teams scale work that used to be ad hoc engineering",
+      "status": "explicit",
+      "evidence_span": "turns what was traditionally an ad hoc engineering task into a process that can be scaled with an operations team"
+    },
+    {
+      "id": "P6",
+      "text": "Built to run in every infrastructure environment where rivals cannot meet inter-company monitoring, security, and scale",
+      "status": "explicit",
+      "evidence_span": "Nexla was built from the ground up to run in every infrastructure environment"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Inter-company data problem",
+      "premise_ids": [
+        "P1"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Secure smart no-code data ops",
+      "premise_ids": [
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Universal infrastructure deployment",
+      "premise_ids": [
+        "P6"
+      ]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Less integrating, more creating business value from data",
+      "status": "explicit",
+      "evidence_span": "Less time integrating, more time creating business value"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "focus on how to use the data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "make data operations a highly secure, scalable, and repeatable process"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "run in every infrastructure environment"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.75
+  },
+  "notes": "This run splits security and smart monitoring as explicit conditions still co-domain with the ops UX (could fail separately but learned together as one offering). Demo feature list mostly folded into P2. Vision analogy not premised. Singletons D1/D3 justified. Trials excluded."
+}

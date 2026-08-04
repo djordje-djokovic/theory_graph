@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1153",
+    "coder_session_id": "session_05",
+    "session_case_index": 6,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:32:25Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Shopping data collection is one-sided: vendors amass and leverage tracking data while consumers forget purchases and lack leverage",
+      "status": "explicit",
+      "evidence_span": "it's one-sided. Those with the vendors are the only ones that can be amassing and leveraging and tracking the data"
+    },
+    {
+      "id": "P2",
+      "text": "Consumers forward order confirmations into Schwab to capture purchases and augment them with why/need stories for mindful taste signaling",
+      "status": "explicit",
+      "evidence_span": "all I need to do is forward my order confirmations in my inbox to wowat12.com"
+    },
+    {
+      "id": "P3",
+      "text": "Purchase history can be sliced, mashed with analytics (e.g. weather), shared to social, and ingested via Shopify plugin across many stores",
+      "status": "explicit",
+      "evidence_span": "I can start to slice it by when, where, what time, also by what I needed at the time"
+    },
+    {
+      "id": "P4",
+      "text": "Personal RFP / data-out portability lets consumers opt-in share chosen purchase history with brands for personalized deals, loyalty, VIP, and search results",
+      "status": "explicit",
+      "evidence_span": "the data actually gets powerful when the customer can take all that they've amassed and leverage it back for something of value in return"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "one-sided shopping data",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "consumer purchase capture tools",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "personal RFP data out",
+      "premise_ids": ["P4"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Consumers gain vendor-like leverage over their shopping data for personalized value in return",
+      "status": "explicit",
+      "evidence_span": "what if the consumers had as much leverage with the data as the vendors do?"
+    }
+  ],
+  "secondary_value": [
+    {
+      "text": "More mindful shopping via why-behind-purchase storytelling",
+      "evidence_span": "We want consumers to be a little more mindful of what they're shopping for"
+    }
+  ],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Those with the vendors are the only ones that can be amassing and leveraging and tracking the data"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "we're augmenting the basic purchase data, the stuff that's like the what, the how much sort of thing, with the why, the real personal story behind what we're buying"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "leverage it back for something of value in return, better deals, loyalty points, VIP programs"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Data-in capture (forward confirmations + why tags) and history analytics/share/Shopify ingest folded as facets of consumer capture toolset; personal RFP data-out split as speaker-framed grander vision module that could fail independently (§4.1.5). Retailer 'powered by' interest folded lightly into data-out partnership path, not separate premise. ASR Schwab/Schwope/Schwelp kept in spans."
+}

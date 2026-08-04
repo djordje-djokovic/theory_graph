@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "codebook_version": "1.5.1",
+    "pass": "structure",
+    "unit": "pitch_transcript",
+    "hierarchy": "P->D->V",
+    "case_id": "pilot-1002",
+    "coder_session_id": "session_04",
+    "session_case_index": 3,
+    "extraction_run": 3,
+    "model_id": "composer-2.5",
+    "model_provider": "cursor-agent",
+    "temperature": null,
+    "temperature_controlled": false,
+    "extracted_at": "2026-08-01T13:16:10Z"
+  },
+  "premises": [
+    {
+      "id": "P1",
+      "text": "Small businesses previously ran only very basic marketing and need a sophisticated multi-task mix",
+      "status": "explicit",
+      "evidence_span": "Before Alicanto, Ruti and our other beta customers ran very basic marketing"
+    },
+    {
+      "id": "P2",
+      "text": "Data-mining and machine-learning feeds recommend campaigns tailored to business, location, and preferences",
+      "status": "explicit",
+      "evidence_span": "My feeds are based on data mining and machine learning algorithms and are tailored to my business, location, and preferences"
+    },
+    {
+      "id": "P3",
+      "text": "Campaigns can be edited from templates and run across multiple channels including email, postcards, text, and social",
+      "status": "explicit",
+      "evidence_span": "I can run it across multiple marketing channels, emails, postcards, text, and social media"
+    },
+    {
+      "id": "P4",
+      "text": "Alliance campaigns let businesses co-market and reach each other's customers",
+      "status": "explicit",
+      "evidence_span": "Alliances allow businesses to run marketing campaigns together, reaching a huge number of new customers"
+    },
+    {
+      "id": "P5",
+      "text": "Distribution is viral because Alliance invites pull other businesses onto the system",
+      "status": "explicit",
+      "evidence_span": "Our distribution model is highly viral, thanks to our Alliance feature"
+    },
+    {
+      "id": "P6",
+      "text": "Revenue model is freemium with contextual sponsored suggestions",
+      "status": "explicit",
+      "evidence_span": "our revenue model is freemium, with contextual sponsored suggestions built in"
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "basic SMB marketing gap",
+      "premise_ids": ["P1"]
+    },
+    {
+      "id": "D2",
+      "name": "AI recommendations and multi-channel campaigns",
+      "premise_ids": ["P2", "P3"]
+    },
+    {
+      "id": "D3",
+      "name": "Alliance viral distribution",
+      "premise_ids": ["P4", "P5"]
+    },
+    {
+      "id": "D4",
+      "name": "freemium sponsored revenue",
+      "premise_ids": ["P6"]
+    }
+  ],
+  "value": [
+    {
+      "id": "V1",
+      "text": "Local businesses run sophisticated marketing that drives purchase, clients, returns, and revenue KPIs",
+      "status": "explicit",
+      "evidence_span": "they run very sophisticated marketing mix and many, many tasks"
+    }
+  ],
+  "secondary_value": [],
+  "causal_links": [
+    {
+      "from": "D1",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Before Alicanto, Ruti and our other beta customers ran very basic marketing"
+    },
+    {
+      "from": "D2",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "Alicanto makes it easy. It handles all of your marketing needs"
+    },
+    {
+      "from": "D3",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "helping each other reach more customers, driving more traffic to our businesses"
+    },
+    {
+      "from": "D4",
+      "to": "V1",
+      "type": "domain-value",
+      "evidence_span": "our revenue model is freemium, with contextual sponsored suggestions built in"
+    }
+  ],
+  "epistemic_markers": [],
+  "quality": {
+    "thin_transcript": false,
+    "truncated": false,
+    "dependency_pass": true,
+    "coder_confidence": 0.8
+  },
+  "notes": "Calendar/analytics/ROI and SEO/Google Places recommendations folded into the ML recommendation + multi-channel platform cascade (§4.1.7). Alliance co-marketing split as a distinct viral GTM mechanism. Customer-count figures treated as demo traction of channels (§4.2). Singleton D4 retained: freemium sponsorship independently revisable from product and Alliance modules."
+}
