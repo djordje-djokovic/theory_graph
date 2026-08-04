@@ -1,4 +1,4 @@
-﻿# Prompt registry
+# Prompt registry
 
 | Version | File | Status | Notes |
 |---|---|---|---|

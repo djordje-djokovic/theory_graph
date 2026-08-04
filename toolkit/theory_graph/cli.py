@@ -1,4 +1,4 @@
-﻿"""CLI entrypoint: theory-graph init|encode|measure|analyze|compare|status|reproduce|equivalence."""
+"""CLI entrypoint: theory-graph init|encode|measure|analyze|compare|status|reproduce|equivalence."""
 from __future__ import annotations
 
 import json

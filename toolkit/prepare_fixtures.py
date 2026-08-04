@@ -1,4 +1,4 @@
-﻿"""Package helper: refresh fixtures and print lab size."""
+"""Package helper: refresh fixtures and print lab size."""
 from __future__ import annotations
 
 from pathlib import Path

@@ -1,4 +1,4 @@
-﻿# theory_graph
+# theory_graph
 
 Encode entrepreneurial theories as structured graphs (P → D → V), measure architecture
 (breadth, modularity / `n_domains`, …), and relate those measures to outcomes.

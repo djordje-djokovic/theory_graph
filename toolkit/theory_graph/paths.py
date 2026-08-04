@@ -1,4 +1,4 @@
-﻿"""Locate the theory_graph root from any installed/copied location."""
+"""Locate the theory_graph root from any installed/copied location."""
 from __future__ import annotations
 
 from pathlib import Path

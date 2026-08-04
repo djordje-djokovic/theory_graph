@@ -1,4 +1,4 @@
-﻿"""Init + encode experiment runs."""
+"""Init + encode experiment runs."""
 from __future__ import annotations
 
 import csv

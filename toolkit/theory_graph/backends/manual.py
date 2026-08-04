@@ -1,4 +1,4 @@
-﻿"""Manual backend: expects junior to drop JSON into encodings/run{k}/{case_id}.json."""
+"""Manual backend: expects junior to drop JSON into encodings/run{k}/{case_id}.json."""
 from __future__ import annotations
 
 from pathlib import Path
