@@ -1,10 +1,10 @@
-"""Package helper: refresh fixtures and print lab size."""
+﻿"""Package helper: refresh fixtures and print lab size."""
 from __future__ import annotations
 
 from pathlib import Path
 
-from theory_lab.equivalence import _ensure_fixtures
-from theory_lab.paths import lab_root
+from theory_graph.equivalence import _ensure_fixtures
+from theory_graph.paths import lab_root
 
 
 def main() -> int:

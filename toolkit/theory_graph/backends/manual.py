@@ -1,4 +1,4 @@
-"""Manual backend: expects junior to drop JSON into encodings/run{k}/{case_id}.json."""
+﻿"""Manual backend: expects junior to drop JSON into encodings/run{k}/{case_id}.json."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -23,5 +23,5 @@ class ManualBackend:
     ) -> EncodeResult:
         raise RuntimeError(
             "backend=manual does not call an LLM. Place completed JSON files "
-            "under encodings/run{k}/{case_id}.json then run: theory-lab measure"
+            "under encodings/run{k}/{case_id}.json then run: theory-graph measure"
         )

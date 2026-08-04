@@ -1,4 +1,4 @@
-"""CLI entrypoint: theory-lab init|encode|measure|analyze|compare|status|reproduce|equivalence."""
+﻿"""CLI entrypoint: theory-graph init|encode|measure|analyze|compare|status|reproduce|equivalence."""
 from __future__ import annotations
 
 import json
@@ -10,7 +10,7 @@ from .config import ExperimentConfig
 from .corpora import cases_csv, transcripts_dir
 from .paths import ensure_lab_root, lab_root
 
-app = typer.Typer(add_completion=False, no_args_is_help=True, help="Theory encoding lab")
+app = typer.Typer(add_completion=False, no_args_is_help=True, help="theory_graph")
 
 
 def _resolve_run(run: Path, root: Path) -> Path:
@@ -154,8 +154,8 @@ def compare(
     if len(m):
         typer.echo(
             f"paired n={len(m)} "
-            f"Δbreadth={(m['breadth_b'] - m['breadth_a']).mean():.3f} "
-            f"Δdomains={(m['n_domains_b'] - m['n_domains_a']).mean():.3f}"
+            f"Î”breadth={(m['breadth_b'] - m['breadth_a']).mean():.3f} "
+            f"Î”domains={(m['n_domains_b'] - m['n_domains_a']).mean():.3f}"
         )
 
 

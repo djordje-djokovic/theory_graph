@@ -1,4 +1,4 @@
-"""Init + encode experiment runs."""
+﻿"""Init + encode experiment runs."""
 from __future__ import annotations
 
 import csv
@@ -125,7 +125,7 @@ def encode_run(run_dir: Path, *, resume: bool = True) -> dict:
     from .backends import LiteLLMBackend, ManualBackend
     from .config import ExperimentConfig
 
-    load_dotenv(run_dir.parents[1] / ".env")  # theory_encoding_lab/.env
+    load_dotenv(run_dir.parents[1] / ".env")  # theory_graph/.env
     load_dotenv()
 
     cfg = ExperimentConfig.load(run_dir / "config.snapshot.yaml")
