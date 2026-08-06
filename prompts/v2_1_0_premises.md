@@ -101,28 +101,26 @@ The value criterion is not an independent variable in the analysis. It anchors w
 
 ## 5. Worked examples
 
-Three **verbatim hold-out excerpts** from the Startup Battlefield corpus, coded according to section 4. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
+Three **verbatim hold-out transcripts** from the Startup Battlefield corpus, coded according to section 4. The same transcripts and frozen premise lists appear in Pass B and Pass C §5. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
 
-### 5.1 AgriList (`pilot-773`)
+### 5.1 ByteKnight (`pilot-65`)
 
-**Transcript excerpt:** "Meet Tom. Tom's an indoor pepper grower who manages about 50,000 square feet of peppers every day. Tom likes to control everything in his greenhouse. So he has sensors that control lighting, temperature, CO2, pH, relative humidity, and more. He spends hours recording detailed notes in notebooks and records pepper yields by hand. But this is raw data. It doesn't talk to each other, and it doesn't tell Tom anything. It's virtually useless for Tom. So Tom will end up losing hours digging through his notes to find out what goes wrong. He will spend tons of money, thousands of dollars on consultants in order for them to tell him what's going on. Or he will just make decisions every day based on his gut intuition whenever something goes wrong in his greenhouse. It shouldn't be this hard. With AgriList, all of Tom's data talks to each other, eliminating the guesswork from decision making. AgriList can automatically sync with any hardware he has in the equipment, like sensors. He can upload documents. And he can even enter data manually if there isn't a sensor that takes that information. This is a big deal. For the first time, Tom has all of his information in one place. Agoralyst also acts as a task manager, showing Tom what he has to do on a day-to-day basis. He can see what he has to harvest and what he has to seed. And he can see more information for crops coming up in the next few days. So he'll click on one of these information buttons. And he can see, oh no, the green peppers are expecting low yield because of some low germination rates and problems they had. Now that he has this information, Tom can proactively let his sales team know that there's a problem and that they should expect lower yields. And he can take steps towards improving the problem, like increasing the growth cycle by a day. Another thing Tom cares about and looks at on a day-to-day basis is his energy use. His current energy use is the yellow line in this graph. And it shows you that greenhouses use a lot of energy. The green line shows you that Tom can actually take advantage of time-varying electricity rates and turn his lights on or off at different hours in order to take advantage of different rates. AgriList goes a step further and provides recommendations to show Tom when he should turn on and off his lights to achieve maximal savings. With our recommendation, Tom can save $150 today, which means he can save $50,000 annually just by turning his lights on or off at different times."
+**Transcript:** "Hi, everyone. Do you ever think where all the data that goes to the cloud gets processed? It usually ends up in massive, energy-guzzling data centers that are often designed to maximize profits without much regard for the environment. Today, these silicon hubs are facing growing pressure, giving the skyrocketing demand for media and AI processing, and also giving the rising costs of microchips connected to the semiconductor shortage. Meanwhile, 12 billion devices sit idly in our pockets or on our desks. Picture this, a worldwide grid powered by everyone's computers or smartphones, supporting fast, distributed computations and providing a sustainable, equitable way of computing. My name is Fabio, and two years ago I dreamt of this reality. The dream is called ByteKnight. We are a software that harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering. There's an incentive for those who join our network. We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide. Plus, the customers can reap the benefits of cost-effective, speedy computing and accelerate their workflows up to 30 times relative to the cloud. But ByteKnight isn't just about smart tech. We're a green initiative, breathing new life into older devices and reducing substantial energy wastage relative to traditional data centers. The future is looking bright for us. With a beta in action, a growing wait list, and an exciting partnership with Storj, we're set to revolutionize the world of computing, starting from video encoding and generative AI. Join us in this amazing journey. You can find us at booth A7 or on our website www.byteknight.com. Thank you."
 
 **Premises:**
 
 | Id | Premise | Evidence span |
 |---|---|---|
-| P1 | Disconnected sensor and notebook data is insufficient for operational decisions | "doesn't talk to each other, and it doesn't tell Tom anything" |
-| P2 | Unified greenhouse data eliminates guesswork from grower decisions | "all of Tom's data talks to each other, eliminating the guesswork from decision making" |
-| P3 | Hardware sensors, document uploads, and manual entry can feed one platform | "automatically sync with any hardware he has in the equipment, like sensors" |
-| P4 | Integrated task management can track harvest, seeding, and upcoming crop alerts | "acts as a task manager, showing Tom what he has to do on a day-to-day basis" |
-| P5 | Low germination or yield problems can be detected early enough to adjust sales forecasts | "green peppers are expecting low yield because of some low germination rates" |
-| P6 | Growth-cycle adjustments can recover from detected yield problems | "increasing the growth cycle by a day" |
-| P7 | Time-varying electricity rates create savings opportunities for greenhouse lighting | "take advantage of time-varying electricity rates and turn his lights on or off" |
-| P8 | Automated lighting recommendations can achieve substantial annual energy savings | "save $50,000 annually just by turning his lights on or off at different times" |
+| P1 | Cloud data centers are energy-intensive and face rising demand and cost pressure | "massive, energy-guzzling data centers that are often designed to maximize profits without much regard for the environment" |
+| P2 | Billions of idle consumer devices represent unused compute capacity | "12 billion devices sit idly in our pockets or on our desks" |
+| P3 | Distributed software can harness everyday devices for intensive compute workloads | "harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering" |
+| P4 | Revenue sharing can incentivize device owners to join the network | "We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide" |
+| P5 | Distributed compute can be faster and cheaper than traditional cloud for customers | "accelerate their workflows up to 30 times relative to the cloud" |
+| P6 | Reusing idle devices reduces energy waste versus data centers | "reducing substantial energy wastage relative to traditional data centers" |
 
-**Value criterion:** Indoor growers operate with less guesswork in daily decisions. Evidence span: "eliminating the guesswork from decision making."
+**Value criterion:** Computing becomes sustainable and equitable through a distributed device grid. Evidence span: "sustainable, equitable way of computing."
 
-**Notes:** Tom's consultant spend and notebook workflow illustrate the problem; they are not separate premises. Energy savings and yield alerts are premises because each would require a different fix if wrong. Beta revenue and market-size figures elsewhere in the full pitch are excluded under step 3.
+**Notes:** Semiconductor shortage and AI demand illustrate P1; they are not separate premises. Beta status, wait list, and Storj partnership are excluded as traction under step 3.
 
 ### 5.2 Pi Charging (`pilot-620`)
 
@@ -143,20 +141,22 @@ Three **verbatim hold-out excerpts** from the Startup Battlefield corpus, coded 
 
 **Notes:** Reservation counts, press coverage, and investor names elsewhere in the full pitch are excluded as traction. Patent protection and FCC compliance are separate premises because each would require a different change if wrong.
 
-### 5.3 Tango TV (`pilot-649`, truncated)
+### 5.3 Akowe (`pilot-11`)
 
-**Transcript excerpt:** "At Tango TV, we are building a media streaming platform for mostly local content. So here we are talking local movies, local TV shows, even local music videos. You can stream Tango TV on your mobile phone. We have an amazing mobile app. I can demo it to you later. And on your TV. So we are here seeking $500,000 in exchange for e-credit at a pre-money valuation of $2 million. So you could have up to"
+**Transcript:** "Good morning, everyone. My name is Ayodeji. I'm from Lagos, Nigeria. Do you know that in some parts of the world, you can actually order a diploma for just 10 bucks? Absolutely. Fake certificates, fake credentials are a huge problem. And Akowe is a digital issuance platform and verification of academic records using blockchain technology. What we've built is a solution for tertiary institutions to transition from manual credential processes to digital processes for issuance of credentials on the blockchain. We've also built out a verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records to be able to verify academic records via our platform. And finally, we have a mobile app for you, you, you, and you to be able to carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner. Akowe launched late 2020, and we have about 30 corporate customers who use our system for issuing verifiable digital certificates. We also have APIs. People can connect to our system to issue credentials from their systems. And we are also actively fundraising. We're raising pre-seed round, 500k. And we're just over there at M4. If you want to see a demo of how it works, we're happy to show you how it works. Thank you very much."
 
 **Premises:**
 
 | Id | Premise | Evidence span |
 |---|---|---|
-| P1 | Audiences want streaming focused on local movies, TV, and music | "media streaming platform for mostly local content" |
-| P2 | Mobile and TV are both viable delivery endpoints | "stream Tango TV on your mobile phone" |
+| P1 | Fake academic credentials are a widespread problem | "Fake certificates, fake credentials are a huge problem" |
+| P2 | Institutions can issue digital credentials on blockchain | "transition from manual credential processes to digital processes for issuance of credentials on the blockchain" |
+| P3 | Employers and other third parties can verify records through the platform | "verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records" |
+| P4 | Holders can carry verifiable credentials in a mobile app | "carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner" |
 
-**Value criterion:** Local audiences access local media on mobile and TV. Evidence span: "local movies, local TV shows, even local music videos."
+**Value criterion:** Academic credentials are issued and carried safely and verifiably. Evidence span: "safe and verifiable manner."
 
-**Notes:** Transcript truncated mid-sentence during the financing ask; code only present content. Valuation and raise amount are excluded under step 3. The mobile-app demo offer is presentation detail, not a separate premise.
+**Notes:** API issuance extends the institutional channel and is not a separate premise. Corporate customer count, fundraising, booth location, and demo offer are excluded under step 3.
 
 
 ## 6. Output schema (machine only)
@@ -169,19 +169,17 @@ Return exactly one JSON object. No prose outside the JSON.
 {
   "meta": {"codebook_version": "2.1.0", "pass": "premises", "unit": "pitch_transcript", "case_id": "BLIND_CASE_ID", "model_id": "MODEL_ID", "model_provider": "PROVIDER", "temperature": null, "temperature_controlled": false, "extraction_run": 1, "extracted_at": "ISO-8601"},
   "premises": [
-    {"id": "P1", "text": "Disconnected sensor and notebook data is insufficient for operational decisions", "status": "explicit", "evidence_span": "doesn't talk to each other, and it doesn't tell Tom anything"},
-    {"id": "P2", "text": "Unified greenhouse data eliminates guesswork from grower decisions", "status": "explicit", "evidence_span": "all of Tom's data talks to each other, eliminating the guesswork from decision making"},
-    {"id": "P3", "text": "Hardware sensors, document uploads, and manual entry can feed one platform", "status": "explicit", "evidence_span": "automatically sync with any hardware he has in the equipment, like sensors"},
-    {"id": "P4", "text": "Integrated task management can track harvest, seeding, and upcoming crop alerts", "status": "explicit", "evidence_span": "acts as a task manager, showing Tom what he has to do on a day-to-day basis"},
-    {"id": "P5", "text": "Low germination or yield problems can be detected early enough to adjust sales forecasts", "status": "explicit", "evidence_span": "green peppers are expecting low yield because of some low germination rates"},
-    {"id": "P6", "text": "Growth-cycle adjustments can recover from detected yield problems", "status": "explicit", "evidence_span": "increasing the growth cycle by a day"},
-    {"id": "P7", "text": "Time-varying electricity rates create savings opportunities for greenhouse lighting", "status": "explicit", "evidence_span": "take advantage of time-varying electricity rates and turn his lights on or off"},
-    {"id": "P8", "text": "Automated lighting recommendations can achieve substantial annual energy savings", "status": "explicit", "evidence_span": "save $50,000 annually just by turning his lights on or off at different times"}
+    {"id": "P1", "text": "Cloud data centers are energy-intensive and face rising demand and cost pressure", "status": "explicit", "evidence_span": "massive, energy-guzzling data centers that are often designed to maximize profits without much regard for the environment"},
+    {"id": "P2", "text": "Billions of idle consumer devices represent unused compute capacity", "status": "explicit", "evidence_span": "12 billion devices sit idly in our pockets or on our desks"},
+    {"id": "P3", "text": "Distributed software can harness everyday devices for intensive compute workloads", "status": "explicit", "evidence_span": "harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering"},
+    {"id": "P4", "text": "Revenue sharing can incentivize device owners to join the network", "status": "explicit", "evidence_span": "We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide"},
+    {"id": "P5", "text": "Distributed compute can be faster and cheaper than traditional cloud for customers", "status": "explicit", "evidence_span": "accelerate their workflows up to 30 times relative to the cloud"},
+    {"id": "P6", "text": "Reusing idle devices reduces energy waste versus data centers", "status": "explicit", "evidence_span": "reducing substantial energy wastage relative to traditional data centers"}
   ],
   "value": [
-    {"id": "V1", "text": "Indoor growers operate with less guesswork in daily decisions", "status": "explicit", "evidence_span": "eliminating the guesswork from decision making"}
+    {"id": "V1", "text": "Computing becomes sustainable and equitable through a distributed device grid", "status": "explicit", "evidence_span": "sustainable, equitable way of computing"}
   ],
-  "notes": "Energy savings and yield alerts are premises; beta revenue elsewhere in the full pitch is excluded."
+  "notes": "Beta, wait list, and Storj partnership excluded as traction."
 }
 ```
 

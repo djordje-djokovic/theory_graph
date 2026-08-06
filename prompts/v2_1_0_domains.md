@@ -80,27 +80,49 @@ Lists often raise this question. Apply the same test: if one change would addres
 
 ## 5. Worked examples
 
-Three hold-out cases using the **frozen premise lists from Pass A §5**. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
+Three **verbatim hold-out transcripts** from the Startup Battlefield corpus, with the same frozen premise lists as Pass A §5. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
 
-### 5.1 AgriList (`pilot-773`)
+### 5.1 ByteKnight (`pilot-65`)
 
-**Frozen premises:** P1–P8 from Pass A §5.1.
+**Transcript:** "Hi, everyone. Do you ever think where all the data that goes to the cloud gets processed? It usually ends up in massive, energy-guzzling data centers that are often designed to maximize profits without much regard for the environment. Today, these silicon hubs are facing growing pressure, giving the skyrocketing demand for media and AI processing, and also giving the rising costs of microchips connected to the semiconductor shortage. Meanwhile, 12 billion devices sit idly in our pockets or on our desks. Picture this, a worldwide grid powered by everyone's computers or smartphones, supporting fast, distributed computations and providing a sustainable, equitable way of computing. My name is Fabio, and two years ago I dreamt of this reality. The dream is called ByteKnight. We are a software that harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering. There's an incentive for those who join our network. We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide. Plus, the customers can reap the benefits of cost-effective, speedy computing and accelerate their workflows up to 30 times relative to the cloud. But ByteKnight isn't just about smart tech. We're a green initiative, breathing new life into older devices and reducing substantial energy wastage relative to traditional data centers. The future is looking bright for us. With a beta in action, a growing wait list, and an exciting partnership with Storj, we're set to revolutionize the world of computing, starting from video encoding and generative AI. Join us in this amazing journey. You can find us at booth A7 or on our website www.byteknight.com. Thank you."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Cloud data centers are energy-intensive and face rising demand and cost pressure |
+| P2 | Billions of idle consumer devices represent unused compute capacity |
+| P3 | Distributed software can harness everyday devices for intensive compute workloads |
+| P4 | Revenue sharing can incentivize device owners to join the network |
+| P5 | Distributed compute can be faster and cheaper than traditional cloud for customers |
+| P6 | Reusing idle devices reduces energy waste versus data centers |
 
 **Domains:**
 
 | Domain id | Name | Premise ids |
 |---|---|---|
-| D1 | Fragmented grower records | P1 |
-| D2 | Unified data platform | P2, P3 |
-| D3 | Daily grower workflows | P4 |
-| D4 | Yield detection and recovery | P5, P6 |
-| D5 | Greenhouse energy management | P7, P8 |
+| D1 | Cloud data-center pressure | P1 |
+| D2 | Idle device supply | P2 |
+| D3 | Distributed compute platform | P3, P5 |
+| D4 | Provider revenue sharing | P4 |
+| D5 | Green energy savings | P6 |
 
-**Notes:** P1 stays alone: reframing the problem does not force a change to the platform build. P2 and P3 co-revise because unification and ingestion fail together in practice. P4 is a separate workflow module. P5 and P6 co-revise in the yield-alert loop. P7 and P8 co-revise because rate arbitrage and lighting recommendations share one energy module.
+**Notes:** P1 and P2 are separately revisable problem premises. P3 and P5 co-revise because workload orchestration and customer speed claims fail together. P4 is the supply-side incentive model. P6 is a distinct sustainability claim.
 
 ### 5.2 Pi Charging (`pilot-620`)
 
-**Frozen premises:** P1–P6 from Pass A §5.2.
+**Transcript excerpt:** "Instead, we built Pi around a safe magnetic charging standard. But until today, magnetic charging was very limited. You had to put a device down perfectly parallel to the receiver to get any power. But thanks to our incredible team and Leeshan's breakthrough, our patented platform can power multiple devices at any angle. It's safe, it's affordable, and it's FCC compliant. Our business model has two parts. First, we will sell Pi directly to consumers. We have over 50% gross margins and anticipate a very high lifetime value per customer. If you like Pi in your kitchen, you're going to want one in the living room, the bedroom, and in the office and enterprise. Second, we are opening the Pi platform for use by existing consumer electronics OEMs."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Magnetic-field charging can power multiple devices at any angle |
+| P2 | A patent protects the wireless-power approach |
+| P3 | The product meets FCC safety requirements for consumer use |
+| P4 | Direct-to-consumer sales can sustain viable unit economics |
+| P5 | Multi-room adoption extends revenue per customer |
+| P6 | OEM licensing extends the platform to device manufacturers |
 
 **Domains:**
 
@@ -114,17 +136,29 @@ Three hold-out cases using the **frozen premise lists from Pass A §5**. These c
 
 **Notes:** Technology, IP, and regulatory clearance are independently revisable. P4 and P5 co-revise because margin structure and multi-room adoption are the same consumer GTM story. OEM licensing is a separate commercial path.
 
-### 5.3 Tango TV (`pilot-649`, truncated)
+### 5.3 Akowe (`pilot-11`)
 
-**Frozen premises:** P1–P2 from Pass A §5.3.
+**Transcript:** "Good morning, everyone. My name is Ayodeji. I'm from Lagos, Nigeria. Do you know that in some parts of the world, you can actually order a diploma for just 10 bucks? Absolutely. Fake certificates, fake credentials are a huge problem. And Akowe is a digital issuance platform and verification of academic records using blockchain technology. What we've built is a solution for tertiary institutions to transition from manual credential processes to digital processes for issuance of credentials on the blockchain. We've also built out a verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records to be able to verify academic records via our platform. And finally, we have a mobile app for you, you, you, and you to be able to carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner. Akowe launched late 2020, and we have about 30 corporate customers who use our system for issuing verifiable digital certificates. We also have APIs. People can connect to our system to issue credentials from their systems. And we are also actively fundraising. We're raising pre-seed round, 500k. And we're just over there at M4. If you want to see a demo of how it works, we're happy to show you how it works. Thank you very much."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Fake academic credentials are a widespread problem |
+| P2 | Institutions can issue digital credentials on blockchain |
+| P3 | Employers and other third parties can verify records through the platform |
+| P4 | Holders can carry verifiable credentials in a mobile app |
 
 **Domains:**
 
 | Domain id | Name | Premise ids |
 |---|---|---|
-| D1 | Local content streaming | P1, P2 |
+| D1 | Credential fraud problem | P1 |
+| D2 | Institutional digital issuance | P2 |
+| D3 | Third-party verification | P3 |
+| D4 | Mobile credential wallet | P4 |
 
-**Notes:** Thin truncated pitch with only two premises. Local content demand and delivery endpoints co-revise in this fragment because both would change together if the streaming offer failed. A single domain is appropriate here.
+**Notes:** Thin complete pitch. Each product surface is independently revisable: issuance, verification, and holder wallet would change on different fixes.
 
 
 ## 6. Input format (machine only)
@@ -147,13 +181,13 @@ Return exactly one JSON object. No prose outside the JSON.
 {
   "meta": {"codebook_version": "2.1.0", "pass": "strategic_domains", "unit": "pitch_transcript", "case_id": "BLIND_CASE_ID", "model_id": "MODEL_ID", "model_provider": "PROVIDER", "temperature": null, "temperature_controlled": false, "extraction_run": 1, "extracted_at": "ISO-8601"},
   "domains": [
-    {"id": "D1", "name": "Fragmented grower records", "premise_ids": ["P1"]},
-    {"id": "D2", "name": "Unified data platform", "premise_ids": ["P2", "P3"]},
-    {"id": "D3", "name": "Daily grower workflows", "premise_ids": ["P4"]},
-    {"id": "D4", "name": "Yield detection and recovery", "premise_ids": ["P5", "P6"]},
-    {"id": "D5", "name": "Greenhouse energy management", "premise_ids": ["P7", "P8"]}
+    {"id": "D1", "name": "Cloud data-center pressure", "premise_ids": ["P1"]},
+    {"id": "D2", "name": "Idle device supply", "premise_ids": ["P2"]},
+    {"id": "D3", "name": "Distributed compute platform", "premise_ids": ["P3", "P5"]},
+    {"id": "D4", "name": "Provider revenue sharing", "premise_ids": ["P4"]},
+    {"id": "D5", "name": "Green energy savings", "premise_ids": ["P6"]}
   ],
-  "notes": "P2+P3 and P5+P6 and P7+P8 co-revise; P1 and P4 stand alone."
+  "notes": "P3+P5 co-revise; P1, P2, P4, and P6 stand alone."
 }
 ```
 

@@ -102,30 +102,50 @@ When a premise mentions both a mechanism and its economic payoff, tag the failur
 
 ## 5. Worked examples
 
-Three hold-out cases using the **frozen premise lists from Pass A §5**. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
+Three **verbatim hold-out transcripts** from the Startup Battlefield corpus, with the same frozen premise lists as Pass A §5. These cases are reserved for training and agreement calibration and are **excluded from the confirmatory analysis sample** (see `prompts/registry.md` and `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`).
 
-### 5.1 AgriList (`pilot-773`)
+### 5.1 ByteKnight (`pilot-65`)
 
-**Frozen premises:** P1–P8 from Pass A §5.1.
+**Transcript:** "Hi, everyone. Do you ever think where all the data that goes to the cloud gets processed? It usually ends up in massive, energy-guzzling data centers that are often designed to maximize profits without much regard for the environment. Today, these silicon hubs are facing growing pressure, giving the skyrocketing demand for media and AI processing, and also giving the rising costs of microchips connected to the semiconductor shortage. Meanwhile, 12 billion devices sit idly in our pockets or on our desks. Picture this, a worldwide grid powered by everyone's computers or smartphones, supporting fast, distributed computations and providing a sustainable, equitable way of computing. My name is Fabio, and two years ago I dreamt of this reality. The dream is called ByteKnight. We are a software that harnesses the collective strength of everyday devices to tackle intensive tasks like video encoding, generative AI, and 3D rendering. There's an incentive for those who join our network. We share 70% of the revenue, and we allow you to earn up to $150 per month for each device that you provide. Plus, the customers can reap the benefits of cost-effective, speedy computing and accelerate their workflows up to 30 times relative to the cloud. But ByteKnight isn't just about smart tech. We're a green initiative, breathing new life into older devices and reducing substantial energy wastage relative to traditional data centers. The future is looking bright for us. With a beta in action, a growing wait list, and an exciting partnership with Storj, we're set to revolutionize the world of computing, starting from video encoding and generative AI. Join us in this amazing journey. You can find us at booth A7 or on our website www.byteknight.com. Thank you."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Cloud data centers are energy-intensive and face rising demand and cost pressure |
+| P2 | Billions of idle consumer devices represent unused compute capacity |
+| P3 | Distributed software can harness everyday devices for intensive compute workloads |
+| P4 | Revenue sharing can incentivize device owners to join the network |
+| P5 | Distributed compute can be faster and cheaper than traditional cloud for customers |
+| P6 | Reusing idle devices reduces energy waste versus data centers |
 
 **Tags:**
 
 | Premise id | Tag | Rationale |
 |---|---|---|
-| P1 | `FEASIBILITY` | Current disconnected records cannot support operational decisions |
-| P2 | `FEASIBILITY` | Unified data platform must deliver operational clarity |
-| P3 | `FEASIBILITY` | Ingestion from sensors, uploads, and manual entry must work |
-| P4 | `FEASIBILITY` | Task-management module must track daily grower workflows |
-| P5 | `FEASIBILITY` | Yield-problem detection must work early enough to act |
-| P6 | `FEASIBILITY` | Growth-cycle adjustment must recover from yield problems |
-| P7 | `VIABILITY` | Time-varying electricity rates must create usable savings opportunities |
-| P8 | `FEASIBILITY` | Recommendation engine must produce the claimed energy savings; `alt:VIABILITY` |
+| P1 | `VIABILITY` | Incumbent cloud economics and energy costs must create pressure for an alternative |
+| P2 | `FEASIBILITY` | Idle consumer devices must exist as usable compute supply |
+| P3 | `FEASIBILITY` | Distributed orchestration software must run workloads across devices |
+| P4 | `VIABILITY` | Revenue share must attract enough device providers |
+| P5 | `FEASIBILITY` | Distributed compute must deliver the claimed speed and cost advantage; `alt:VIABILITY` |
+| P6 | `FEASIBILITY` | Reused devices must reduce energy waste versus data centers |
 
-**Notes:** P7 is tagged `VIABILITY` because the failure is that rate structures do not create arbitrage value. P8 is primarily a delivery failure (recommendations do not save money); economics are secondary.
+**Notes:** P1 frames the structural opportunity; P5 is primarily a delivery failure if the speed claim fails. Traction items in the closing lines are excluded in Pass A.
 
 ### 5.2 Pi Charging (`pilot-620`)
 
-**Frozen premises:** P1–P6 from Pass A §5.2.
+**Transcript excerpt:** "Instead, we built Pi around a safe magnetic charging standard. But until today, magnetic charging was very limited. You had to put a device down perfectly parallel to the receiver to get any power. But thanks to our incredible team and Leeshan's breakthrough, our patented platform can power multiple devices at any angle. It's safe, it's affordable, and it's FCC compliant. Our business model has two parts. First, we will sell Pi directly to consumers. We have over 50% gross margins and anticipate a very high lifetime value per customer. If you like Pi in your kitchen, you're going to want one in the living room, the bedroom, and in the office and enterprise. Second, we are opening the Pi platform for use by existing consumer electronics OEMs."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Magnetic-field charging can power multiple devices at any angle |
+| P2 | A patent protects the wireless-power approach |
+| P3 | The product meets FCC safety requirements for consumer use |
+| P4 | Direct-to-consumer sales can sustain viable unit economics |
+| P5 | Multi-room adoption extends revenue per customer |
+| P6 | OEM licensing extends the platform to device manufacturers |
 
 **Tags:**
 
@@ -140,18 +160,29 @@ Three hold-out cases using the **frozen premise lists from Pass A §5**. These c
 
 **Notes:** Product, IP, and regulatory premises are `FEASIBILITY`; go-to-market and licensing premises are `VIABILITY`. Pass A already separated these failure types into distinct premises.
 
-### 5.3 Tango TV (`pilot-649`, truncated)
+### 5.3 Akowe (`pilot-11`)
 
-**Frozen premises:** P1–P2 from Pass A §5.3.
+**Transcript:** "Good morning, everyone. My name is Ayodeji. I'm from Lagos, Nigeria. Do you know that in some parts of the world, you can actually order a diploma for just 10 bucks? Absolutely. Fake certificates, fake credentials are a huge problem. And Akowe is a digital issuance platform and verification of academic records using blockchain technology. What we've built is a solution for tertiary institutions to transition from manual credential processes to digital processes for issuance of credentials on the blockchain. We've also built out a verification platform that allows employers, embassies, HR firms, anybody who needs to verify academic records to be able to verify academic records via our platform. And finally, we have a mobile app for you, you, you, and you to be able to carry your credentials, academic credentials, with you anywhere in a safe and verifiable manner. Akowe launched late 2020, and we have about 30 corporate customers who use our system for issuing verifiable digital certificates. We also have APIs. People can connect to our system to issue credentials from their systems. And we are also actively fundraising. We're raising pre-seed round, 500k. And we're just over there at M4. If you want to see a demo of how it works, we're happy to show you how it works. Thank you very much."
+
+**Frozen premises:**
+
+| Id | Premise |
+|---|---|
+| P1 | Fake academic credentials are a widespread problem |
+| P2 | Institutions can issue digital credentials on blockchain |
+| P3 | Employers and other third parties can verify records through the platform |
+| P4 | Holders can carry verifiable credentials in a mobile app |
 
 **Tags:**
 
 | Premise id | Tag | Rationale |
 |---|---|---|
-| P1 | `DESIRABILITY` | Local audiences must want local movies, TV, and music |
-| P2 | `FEASIBILITY` | Mobile and TV delivery endpoints must work |
+| P1 | `DESIRABILITY` | Fraudulent credentials must create demand for trusted records |
+| P2 | `FEASIBILITY` | Institutional blockchain issuance must work |
+| P3 | `FEASIBILITY` | Third-party verification must work |
+| P4 | `FEASIBILITY` | Mobile credential wallet must work |
 
-**Notes:** Thin truncated pitch; tag only the premises given. Financing in the excerpt is excluded in Pass A and is not tagged here.
+**Notes:** Thin complete pitch with four product premises plus problem framing. Fundraising and customer counts are excluded in Pass A.
 
 
 ## 6. Input format (machine only)
@@ -174,16 +205,14 @@ Return exactly one JSON object. No prose outside the JSON.
 {
   "meta": {"codebook_version": "2.1.0", "pass": "dfv", "unit": "pitch_transcript", "case_id": "BLIND_CASE_ID", "model_id": "MODEL_ID", "model_provider": "PROVIDER", "temperature": null, "temperature_controlled": false, "extraction_run": 1, "extracted_at": "ISO-8601"},
   "assignments": [
-    {"premise_id": "P1", "tag": "FEASIBILITY"},
+    {"premise_id": "P1", "tag": "VIABILITY"},
     {"premise_id": "P2", "tag": "FEASIBILITY"},
     {"premise_id": "P3", "tag": "FEASIBILITY"},
-    {"premise_id": "P4", "tag": "FEASIBILITY"},
+    {"premise_id": "P4", "tag": "VIABILITY"},
     {"premise_id": "P5", "tag": "FEASIBILITY"},
-    {"premise_id": "P6", "tag": "FEASIBILITY"},
-    {"premise_id": "P7", "tag": "VIABILITY"},
-    {"premise_id": "P8", "tag": "FEASIBILITY"}
+    {"premise_id": "P6", "tag": "FEASIBILITY"}
   ],
-  "taxonomy_notes": "P8: alt:VIABILITY — savings claim is secondary to recommendation delivery."
+  "taxonomy_notes": "P5: alt:VIABILITY — customer cost savings are secondary to delivery speed."
 }
 ```
 

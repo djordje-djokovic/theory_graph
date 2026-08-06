@@ -63,13 +63,13 @@ Report reliability as three quantities, not one:
 
 Human–model agreement is bounded above by roughly `sqrt(r_hh * r_ll)`, so reporting all three distinguishes an attenuation ceiling from a model failure. For breadth — a count, and the confirmatory IV — report count-level agreement (ICC or Krippendorff's alpha for ratio data, plus mean absolute difference), which avoids the premise-alignment problem entirely. Code independently, reconcile, report pre-reconciliation agreement, and compare the model against the adjudicated standard. Train human coders on the precedent table and few-shot cases using a practice set held out of the analysis sample.
 
-**Calibration hold-outs (Pass A/B/C §5).** The three worked examples in each v2.1.0 prompt file §5 use the same hold-out cases. Pass A §5 gives verbatim transcript excerpts and premise keys; Pass B §5 and Pass C §5 apply composition tags and domain groupings to the **frozen premise lists from Pass A §5**. Pass A excerpts are from corpus transcripts, not composite teaching text. They serve the same pedagogical roles as earlier codebook versions (broad multi-premise, narrow product-and-IP, thin truncated pitch) but are anchored to real cases:
+**Calibration hold-outs (Pass A/B/C §5).** The three worked examples in each v2.1.0 prompt file §5 use the same hold-out cases, the same verbatim transcripts, and the same frozen premise lists. Each pass is self-contained for training and agreement calibration: Pass A §5 adds evidence spans and value; Pass B §5 adds composition tags; Pass C §5 adds domain groupings. Transcripts are from corpus files, not composite teaching text. All three are complete pitches (`truncated=0`). They serve the same pedagogical roles as earlier codebook versions (broad multi-premise, narrow product-and-IP, thin complete pitch) but are anchored to real cases:
 
 | §5 case | Corpus `case_id` | Venture | Teaching profile |
 |---|---|---|---|
-| 5.1 | `pilot-773` | Agrilyst (AgriList) | Broad theory: multiple operational premises plus one value criterion |
-| 5.2 | `pilot-620` | Pi Charging | Narrow theory: product form, IP/regulatory protection, go-to-market |
-| 5.3 | `pilot-649` | Tango TV | Thin truncated pitch: code only what is present |
+| 5.1 | `pilot-65` | ByteKnight (ByteNite) | Broad theory: distributed compute, supply-side incentives, sustainability (~286 words) |
+| 5.2 | `pilot-620` | Pi Charging | Narrow theory: product form, IP/regulatory protection, go-to-market (excerpt) |
+| 5.3 | `pilot-11` | Akowe | Thin complete pitch: credential fraud, issuance, verification, mobile wallet (~218 words) |
 
 Listed in `data/corpora/startup_battlefield/samples/calibration_holdouts.csv`. Exclude these `case_id`s from confirmatory analysis samples and from any model encoding run whose results feed confirmatory IVs. Human–model agreement on §5 may use the reference keys in the prompt; agreement on the analysis sample must not include these cases.
 
