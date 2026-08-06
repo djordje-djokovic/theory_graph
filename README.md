@@ -328,7 +328,8 @@ For `smoke_manual.yaml` or `backend: manual`:
 1. `init` creates message files under `experiments/<run>/messages/`
 2. You (or someone else) produce JSON and save to:
    `experiments/<run>/encodings/premises/run1/pilot-123.json` (etc.)
-3. Then run `measure` (builds `dataset.csv`); optionally `analyze`
+3. `theory-graph encode --run my_run -p dfv,domains` registers later passes (writes message files; no API call)
+4. Then run `measure` (builds `dataset.csv`); optionally `analyze`
 
 ---
 
@@ -407,9 +408,39 @@ Example: 20 pitches × (3 premise runs + 1 dfv) ≈ 80 calls for a small smoke t
 ```powershell
 theory-graph equivalence
 theory-graph reproduce --pipeline all
+theory-graph smoke
 ```
 
-Both should print `PASS`.
+`equivalence` and `reproduce` check published v1.3/v1.5 baselines. `smoke` runs the **v2.1 pipeline** on 3 synthetic cases:
+
+| Step | CLI / behaviour tested |
+|---|---|
+| init | premises-only experiment |
+| measure | corpus join, similarities, premises IVs |
+| encode -p dfv | staged pass registration (manual) |
+| measure | DFV composition columns, no domains yet |
+| encode -p domains | second staged pass |
+| measure | full join: breadth + dfv + domains + similarities |
+| analyze | battlefield preset (M1–M6) |
+| status | done/pending counts |
+| force -p dfv / domains / premises | selective vs full downstream clear |
+| encode --all | all declared passes |
+| analyze-only | edit snapshot analysis, re-run analyze |
+| custom analysis preset | one formula on synthetic data |
+| guard rails | duplicate init, encode before premises, empty measure |
+| compare | two runs, matched cases |
+
+All three should print `PASS`.
+
+**Before a live API run:**
+
+```powershell
+python -m theory_graph.cli smoke
+python -m theory_graph.cli reproduce --pipeline all
+python -m theory_graph.cli equivalence
+```
+
+Then start with `configs/examples/smoke_openai.yaml` (or Ollama/manual) on `smoke_n20` before `full_n376`.
 
 **Compare two finished runs:**
 

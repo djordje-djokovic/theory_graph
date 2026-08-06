@@ -148,7 +148,7 @@ def encode_run(
     only_passes: list[str] | None = None,
 ) -> dict:
     from dotenv import load_dotenv
-    from .backends import LiteLLMBackend, ManualBackend
+    from .backends import LiteLLMBackend
 
     load_dotenv(run_dir.parents[1] / ".env")
     load_dotenv()
@@ -185,7 +185,7 @@ def encode_run(
                 )
 
     if cfg.encoding.backend == "manual":
-        ManualBackend().complete([])
+        return {"done": 0, "skipped": 0, "failed": 0, "status": "done"}
 
     backend = LiteLLMBackend()
     prompts_root = lab_root / "prompts"

@@ -1,4 +1,4 @@
-"""CLI entrypoint: theory-graph init|encode|measure|analyze|compare|status|reproduce|equivalence."""
+"""CLI entrypoint: theory-graph init|encode|measure|analyze|compare|status|smoke|reproduce|equivalence."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -229,6 +229,18 @@ def compare(
             f"avg breadth change {((m['breadth_b'] - m['breadth_a']).mean()):+.2f}, "
             f"avg domains change {((m['n_domains_b'] - m['n_domains_a']).mean()):+.2f}"
         )
+
+
+@app.command()
+def smoke(
+    lab: Path | None = typer.Option(None, "--lab"),
+):
+    """Synthetic v2.1 pipeline smoke test (no API key)."""
+    from .smoke import run_smoke
+
+    root = ensure_lab_root(lab)
+    ok = run_smoke(root)
+    raise typer.Exit(code=0 if ok else 1)
 
 
 @app.command()
