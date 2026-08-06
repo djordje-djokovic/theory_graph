@@ -23,5 +23,5 @@ class ManualBackend:
     ) -> EncodeResult:
         raise RuntimeError(
             "backend=manual does not call an LLM. Place completed JSON files "
-            "under encodings/run{k}/{case_id}.json then run: theory-graph measure"
+            "under encodings/<pass>/run{k}/{case_id}.json then run: theory-graph measure"
         )

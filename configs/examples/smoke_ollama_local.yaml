@@ -1,14 +1,35 @@
+﻿# Smoke: local Ollama (no cloud key). Cheap prompt check on 20 cases.
+# Pass A only (premises); no Pass B for local smoke.
 experiment:
-  corpus: startup_battlefield
-  prompt_version: v2_0_0
-  sample: smoke_n20
-  design: nested
+  run_id: v2_1_0_ollama_smoke   # -> experiments/<run_id>/; bump when anything changes
+  corpus: startup_battlefield   # data/corpora/<corpus>/
+  prompt_version: v2_1_0_premises # prompts/v2_1_0_premises.md
+  sample: smoke_n20             # samples/smoke_n20.csv
+  design: nested                # nested | crossed (provenance label)
+
+passes:
+  - name: premises
+    prompt_version: v2_1_0_premises
+    k_runs: 3
+
 llm:
-  model: "ollama/qwen2.5:14b"
-  temperature: 0.0
-  max_tokens: 6000
-  timeout_s: 300
+  model: "ollama/qwen2.5:14b"   # LiteLLM provider/model
+  temperature: 0.0              # 0 ≈ greedy
+  max_tokens: 6000              # completion cap
+  timeout_s: 300                # local models can be slow
 encoding:
-  backend: api
-  k_runs: 3
-  json_retry: 2
+  backend: api                  # call LiteLLM
+  k_runs: 3                     # encodings per case
+  json_retry: 2                 # retries if reply is not JSON
+
+dataset:
+  outcome: GotSelected
+  similarities:
+    enabled: true
+    method: tfidf
+  embeddings:
+    enabled: false
+
+analysis:
+  preset: battlefield
+  outcome: GotSelected

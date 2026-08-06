@@ -64,6 +64,22 @@ LINK_TYPES = {"premise-premise", "premise-domain", "domain-domain", "domain-valu
 
 LAYER = {"P": 0, "D": 1, "V": 2}
 
+# Codebooks from 2.0.0 on code a flat P->D->V graph: premise-to-domain is membership
+# and domain-value is the only edge type. Published v1.3.2 and v1.5.1 still carry the
+# exploratory dependency layer, so their runs keep validating unchanged.
+FLAT_GRAPH_FROM = (2, 0, 0)
+
+
+def flat_graph_codebook(version: str | None) -> bool:
+    """True when `version` is a codebook that codes domain-value links only."""
+    if not version:
+        return False
+    parts = str(version).lstrip("vV").split(".")
+    try:
+        return tuple(int(p) for p in parts[:3]) >= FLAT_GRAPH_FROM
+    except ValueError:
+        return False
+
 
 def layer_of(node_id: str) -> int | None:
     if not node_id:
@@ -227,7 +243,12 @@ def validate_pairs(case: dict, frozen: dict | None = None) -> list[str]:
 
 
 def validate_premises_pass(case: dict, transcript: str | None = None) -> list[str]:
-    """Validate a v1.4 Pass A1 premises-only JSON (no domains)."""
+    """Validate a premises-only JSON (no domains, no causal_links).
+
+    Accepts both the v1.4 experiment shape (optional value, optional
+    premise-premise links) and the v2.1.0 Pass A shape (optional value, no
+    links at all).
+    """
     errors: list[str] = []
     errors.extend(validate_provenance(case))
     if case.get("domains"):
@@ -241,8 +262,8 @@ def validate_premises_pass(case: dict, transcript: str | None = None) -> list[st
 
     if not premises:
         errors.append("no premises coded")
-    if len(values) != 1:
-        errors.append(f"value must have exactly one item (got {len(values)})")
+    if len(values) > 1:
+        errors.append(f"value must have at most one item (got {len(values)})")
 
     all_ids = premise_ids + value_ids
     if len(all_ids) != len(set(all_ids)):
@@ -264,7 +285,7 @@ def validate_premises_pass(case: dict, transcript: str | None = None) -> list[st
         src, dst, ltype = link.get("from"), link.get("to"), link.get("type")
         tag = f"link[{i}] {src}->{dst}"
         if ltype != "premise-premise":
-            errors.append(f"{tag}: Pass A1 allows only premise-premise links")
+            errors.append(f"{tag}: premises pass allows only premise-premise links")
             continue
         if src not in premise_ids or dst not in premise_ids:
             errors.append(f"{tag}: unresolved premise id")
@@ -273,12 +294,101 @@ def validate_premises_pass(case: dict, transcript: str | None = None) -> list[st
 
     quality = case.get("quality") or {}
     conf = quality.get("coder_confidence")
-    if not isinstance(conf, (int, float)) or not 0.0 <= float(conf) <= 1.0:
+    if conf is not None and (
+        not isinstance(conf, (int, float)) or not 0.0 <= float(conf) <= 1.0
+    ):
         errors.append("quality.coder_confidence must be in [0, 1]")
     if transcript is not None:
         for label, span in spans_of(case):
             if span and not span_matches(span, transcript):
                 errors.append(f"{label}: evidence_span not found in transcript")
+    return errors
+
+
+DOMAIN_TAGS = {"DESIRABILITY", "FEASIBILITY", "VIABILITY", "OTHER"}
+
+
+def validate_domains_pass(case: dict, frozen_premise_ids: list[str] | None = None) -> list[str]:
+    """Validate a v2.1.0 Pass B premise-DFV tagging JSON."""
+    errors: list[str] = []
+    errors.extend(validate_provenance(case))
+
+    for forbidden in ("premises", "domains", "causal_links", "value", "quality"):
+        if case.get(forbidden):
+            errors.append(f"pass=dfv must not include {forbidden}")
+
+    assignments = case.get("assignments") or []
+    if not assignments:
+        errors.append("no assignments coded")
+        return errors
+
+    seen: set[str] = set()
+    for i, a in enumerate(assignments):
+        pid = a.get("premise_id")
+        tag = a.get("tag")
+        if not pid:
+            errors.append(f"assignments[{i}]: missing premise_id")
+            continue
+        if pid in seen:
+            errors.append(f"{pid}: tagged more than once")
+        seen.add(pid)
+        if tag not in DOMAIN_TAGS:
+            errors.append(f"{pid}: invalid tag {tag!r}")
+
+    if frozen_premise_ids is not None:
+        expected = set(frozen_premise_ids)
+        got = {a.get("premise_id") for a in assignments if a.get("premise_id")}
+        missing = expected - got
+        extra = got - expected
+        if missing:
+            errors.append(f"untagged premises: {sorted(missing)}")
+        if extra:
+            errors.append(f"unknown premise_ids: {sorted(extra)}")
+
+    return errors
+
+
+def validate_strategic_pass(case: dict, frozen_premise_ids: list[str] | None = None) -> list[str]:
+    """Validate a v2.1.0 Pass C strategic-domain grouping JSON."""
+    errors: list[str] = []
+    errors.extend(validate_provenance(case))
+
+    for forbidden in ("premises", "causal_links", "value", "assignments", "quality"):
+        if case.get(forbidden):
+            errors.append(f"pass=strategic_domains must not include {forbidden}")
+
+    domains = case.get("domains") or []
+    if not domains:
+        errors.append("no domains coded")
+        return errors
+
+    domain_ids = [d.get("id") for d in domains]
+    if len(domain_ids) != len(set(domain_ids)):
+        errors.append("duplicate domain ids")
+    for did in domain_ids:
+        if not str(did).startswith("D"):
+            errors.append(f"domain id must start with D: {did}")
+
+    membership: dict[str, str] = {}
+    for d in domains:
+        if not (d.get("name") or "").strip():
+            errors.append(f"{d.get('id')}: missing name")
+        for pid in d.get("premise_ids") or []:
+            if pid in membership:
+                errors.append(f"{pid}: assigned to multiple domains")
+            else:
+                membership[pid] = d["id"]
+
+    if frozen_premise_ids is not None:
+        expected = set(frozen_premise_ids)
+        got = set(membership.keys())
+        missing = expected - got
+        extra = got - expected
+        if missing:
+            errors.append(f"unassigned premises: {sorted(missing)}")
+        if extra:
+            errors.append(f"unknown premise_ids: {sorted(extra)}")
+
     return errors
 
 
@@ -294,6 +404,16 @@ def validate(
         return validate_pairs(case, frozen)
     if pass_kind == "premises":
         return validate_premises_pass(case, transcript)
+    if pass_kind == "dfv":
+        frozen_ids = None
+        if frozen and "premises" in frozen:
+            frozen_ids = [p.get("id") for p in frozen["premises"] if p.get("id")]
+        return validate_domains_pass(case, frozen_premise_ids=frozen_ids)
+    if pass_kind == "domains":
+        frozen_ids = None
+        if frozen and "premises" in frozen:
+            frozen_ids = [p.get("id") for p in frozen["premises"] if p.get("id")]
+        return validate_strategic_pass(case, frozen_premise_ids=frozen_ids)
     if pass_kind == "taxonomy":
         return validate_provenance(case, require_model=require_model)
 
@@ -360,12 +480,16 @@ def validate(
             errors.append(f"{pid}: not assigned to any domain")
 
     # Coded links.
+    flat_graph = flat_graph_codebook((case.get("meta") or {}).get("codebook_version"))
     edges: list[tuple[str, str]] = []
     for i, link in enumerate(links):
         src, dst, ltype = link.get("from"), link.get("to"), link.get("type")
         tag = f"link[{i}] {src}->{dst}"
         if ltype not in LINK_TYPES:
             errors.append(f"{tag}: invalid type {ltype!r}")
+            continue
+        if flat_graph and ltype != "domain-value":
+            errors.append(f"{tag}: codebook codes domain-value links only, got {ltype}")
             continue
         if src not in all_ids or dst not in all_ids:
             errors.append(f"{tag}: unresolved node id")
@@ -401,7 +525,9 @@ def validate(
 
     quality = case.get("quality") or {}
     conf = quality.get("coder_confidence")
-    if not isinstance(conf, (int, float)) or not 0.0 <= float(conf) <= 1.0:
+    if conf is not None and (
+        not isinstance(conf, (int, float)) or not 0.0 <= float(conf) <= 1.0
+    ):
         errors.append("quality.coder_confidence must be in [0, 1]")
     if transcript is not None:
         for label, span in spans_of(case):
@@ -430,7 +556,27 @@ def _has_cycle(nodes: list[str], edges: list[tuple[str, str]]) -> bool:
     return seen != len(nodes)
 
 
-def measures(case: dict) -> dict:
+_TERMINAL_PUNCT = ".!?\"')]"
+
+
+def transcript_truncated(transcript: str | None) -> bool | None:
+    """Deterministic truncation flag: does the transcript stop mid-utterance?
+
+    Derived from the text rather than coded by the model, so the control does not
+    inherit coder error and is reproducible without an extraction run. Returns None
+    when no transcript is available.
+    """
+    if transcript is None:
+        return None
+    text = transcript.strip()
+    if not text:
+        return True
+    if text.endswith(("...", "\u2026", "-", "\u2013", "\u2014")):
+        return True
+    return text[-1] not in _TERMINAL_PUNCT
+
+
+def measures(case: dict, transcript: str | None = None) -> dict:
     premises = case.get("premises") or []
     domains = case.get("domains") or []
     values = case.get("value") or []
@@ -497,6 +643,7 @@ def measures(case: dict) -> dict:
         "domain_taxonomies": "|".join(sorted({d.get("taxonomy", "") for d in domains if d.get("taxonomy")})),
         "thin_transcript": bool(quality.get("thin_transcript")),
         "truncated": bool(quality.get("truncated")),
+        "truncated_derived": transcript_truncated(transcript),
         "dependency_pass": bool(quality.get("dependency_pass")),
         "coder_confidence": quality.get("coder_confidence"),
     }
@@ -526,6 +673,7 @@ FIELDS = [
     "domain_taxonomies",
     "thin_transcript",
     "truncated",
+    "truncated_derived",
     "dependency_pass",
     "coder_confidence",
 ]
@@ -609,12 +757,13 @@ def process_dir(
                     "domain_taxonomies": "",
                     "thin_transcript": bool((case.get("quality") or {}).get("thin_transcript")),
                     "truncated": bool((case.get("quality") or {}).get("truncated")),
+                    "truncated_derived": transcript_truncated(transcript),
                     "dependency_pass": bool((case.get("quality") or {}).get("dependency_pass")),
                     "coder_confidence": (case.get("quality") or {}).get("coder_confidence"),
                 }
             )
         else:
-            row.update(measures(case))
+            row.update(measures(case, transcript))
         rows.append(row)
 
     with out.open("w", newline="", encoding="utf-8") as fh:
@@ -756,6 +905,24 @@ def self_test() -> int:
         failed += 1
     else:
         print("ok: case without dependency links accepted")
+
+    # codebook 2.0.0 codes a flat P->D->V graph: domain-value edges only
+    case = json.loads(json.dumps(_GOOD_CASE))
+    case["meta"]["codebook_version"] = "2.0.0"
+    if not any("domain-value links only" in e for e in validate(case)):
+        print("FAIL dependency link under codebook 2.0.0 was not caught")
+        failed += 1
+    else:
+        print("ok: caught dependency link under codebook 2.0.0")
+
+    case["causal_links"] = [
+        l for l in case["causal_links"] if l["type"] == "domain-value"
+    ]
+    if validate(case):
+        print(f"FAIL flat 2.0.0 case rejected: {validate(case)}")
+        failed += 1
+    else:
+        print("ok: flat 2.0.0 case accepted")
 
     # taxonomy optional in Pass A, validated when present
     case = json.loads(json.dumps(_GOOD_CASE))

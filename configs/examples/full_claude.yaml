@@ -1,14 +1,40 @@
+﻿# Full-sample Anthropic run (376 cases x k). Needs ANTHROPIC_API_KEY in .env.
+# Two-pass: Pass A (premises, k=3) → Pass B (domain tags, k=1) on frozen premises.
 experiment:
-  corpus: startup_battlefield
-  prompt_version: v2_0_0
-  sample: full_n376
-  design: nested
+  run_id: v2_1_0_claude_full    # -> experiments/<run_id>/; bump when anything changes
+  corpus: startup_battlefield   # data/corpora/<corpus>/
+  prompt_version: v2_1_0_premises # primary prompt (used when passes not declared)
+  sample: full_n376             # samples/full_n376.csv (paper N)
+  design: nested                # nested | crossed (provenance label)
+
+passes:
+  - name: premises
+    prompt_version: v2_1_0_premises
+    k_runs: 3
+  - name: dfv
+    prompt_version: v2_1_0_dfv
+    k_runs: 1
+    requires: premises
+
 llm:
-  model: "anthropic/claude-sonnet-4-20250514"
-  temperature: 0.0
-  max_tokens: 6000
+  model: "anthropic/claude-sonnet-4-20250514"  # LiteLLM provider/model
+  temperature: 0.0              # 0 ≈ greedy
+  max_tokens: 6000              # completion cap
   timeout_s: 120
 encoding:
-  backend: api
-  k_runs: 3
-  json_retry: 2
+  backend: api                  # call LiteLLM
+  k_runs: 3                     # default; per-pass k_runs override
+  json_retry: 2                 # retries if reply is not JSON
+  # run_passes: [premises, dfv] # omit = encode all declared passes
+
+dataset:
+  outcome: GotSelected
+  similarities:
+    enabled: true
+    method: tfidf
+  embeddings:
+    enabled: false
+
+analysis:
+  preset: battlefield
+  outcome: GotSelected
