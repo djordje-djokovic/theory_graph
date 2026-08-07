@@ -13,6 +13,7 @@ class LiteLLMBackend:
         temperature: float,
         max_tokens: int,
         timeout_s: int = 120,
+        num_ctx: int | None = None,
     ) -> EncodeResult:
         try:
             import litellm
@@ -22,12 +23,21 @@ class LiteLLMBackend:
                 "pip install litellm  (or use encoding.backend: manual)"
             ) from e
 
+        extra: dict = {}
+        if num_ctx is not None and model.split("/", 1)[0] in ("ollama", "ollama_chat"):
+            # Ollama's server-side default context window (often 2048-4096) is
+            # smaller than our codebook + few-shot + transcript prompts, which
+            # silently truncates the input and makes the model ignore frozen
+            # upstream premises. Forward an explicit num_ctx to avoid this.
+            extra["num_ctx"] = num_ctx
+
         resp = litellm.completion(
             model=model,
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
             timeout=timeout_s,
+            **extra,
         )
         choice = resp.choices[0].message
         text = choice.content or ""

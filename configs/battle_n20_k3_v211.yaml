@@ -1,0 +1,47 @@
+# Pass A revision check: same 20 pitches, same model and sampling as
+# battle_n20_k3_qwen3_32b, Pass A codebook v2.1.1 instead of v2.1.0.
+# Everything except experiment.run_id and the premises prompt_version is held
+# constant so the breadth-agreement difference is attributable to the codebook.
+experiment:
+  run_id: battle_n20_k3_v211_qwen3_32b
+  corpus: startup_battlefield
+  prompt_version: v2_1_1_premises
+  sample: smoke_n20
+  design: nested
+
+passes:
+  - name: premises
+    prompt_version: v2_1_1_premises
+    k_runs: 3
+  - name: dfv
+    prompt_version: v2_1_0_dfv
+    k_runs: 1
+    requires: premises
+  - name: domains
+    prompt_version: v2_1_0_domains
+    k_runs: 3
+    requires: premises
+
+llm:
+  model: "ollama_chat/qwen3:32b"
+  temperature: 0.0
+  max_tokens: 6000
+  timeout_s: 600
+  num_ctx: 16384
+
+encoding:
+  backend: api
+  k_runs: 3
+  json_retry: 2
+
+dataset:
+  outcome: GotSelected
+  similarities:
+    enabled: true
+    method: tfidf
+  embeddings:
+    enabled: false
+
+analysis:
+  preset: battlefield
+  outcome: GotSelected

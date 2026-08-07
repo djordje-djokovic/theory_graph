@@ -1,0 +1,36 @@
+# Full corpus Pass A: all 376 Startup Battlefield pitches, k=3 premises, v2.1.1.
+experiment:
+  run_id: full_n376_k3_v211_qwen3_32b
+  corpus: startup_battlefield
+  prompt_version: v2_1_1_premises
+  sample: full_n376
+  design: nested
+
+passes:
+  - name: premises
+    prompt_version: v2_1_1_premises
+    k_runs: 3
+
+llm:
+  model: "ollama_chat/qwen3:32b"
+  temperature: 0.0
+  max_tokens: 6000
+  timeout_s: 600
+  num_ctx: 16384
+
+encoding:
+  backend: api
+  k_runs: 3
+  json_retry: 2
+
+dataset:
+  outcome: GotSelected
+  similarities:
+    enabled: true
+    method: tfidf
+  embeddings:
+    enabled: false
+
+analysis:
+  preset: battlefield
+  outcome: GotSelected

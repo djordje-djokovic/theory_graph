@@ -4,13 +4,42 @@ from __future__ import annotations
 from pathlib import Path
 
 
-def load_prompt(prompts_dir: Path, version: str) -> str:
+def prompt_filename(version: str) -> str:
     # accept "v2_0_0" or "v2_0_0.md"
-    name = version if version.endswith(".md") else f"{version}.md"
+    return version if version.endswith(".md") else f"{version}.md"
+
+
+def load_prompt(prompts_dir: Path, version: str, snapshot_dir: Path | None = None) -> str:
+    """Read a codebook file, preferring the copy frozen into the experiment.
+
+    Codebook files are the audit record for a version, so a run must be read
+    back against the text it was actually encoded with rather than whatever
+    `prompts/` holds later. Runs created before snapshots existed have no
+    snapshot directory and fall back to the shared `prompts/` tree.
+    """
+    name = prompt_filename(version)
+    if snapshot_dir is not None:
+        frozen = snapshot_dir / name
+        if frozen.exists():
+            return frozen.read_text(encoding="utf-8")
     path = prompts_dir / name
     if not path.exists():
         raise FileNotFoundError(f"prompt not found: {path}")
     return path.read_text(encoding="utf-8")
+
+
+def snapshot_prompts(prompts_dir: Path, versions: list[str], snapshot_dir: Path) -> None:
+    """Freeze each codebook file into the experiment folder, once."""
+    snapshot_dir.mkdir(parents=True, exist_ok=True)
+    for version in dict.fromkeys(versions):
+        name = prompt_filename(version)
+        dest = snapshot_dir / name
+        if dest.exists():
+            continue
+        src = prompts_dir / name
+        if not src.exists():
+            raise FileNotFoundError(f"prompt not found: {src}")
+        dest.write_text(src.read_text(encoding="utf-8"), encoding="utf-8")
 
 
 def task_header(codebook_version: str, model_id: str) -> str:
@@ -35,12 +64,21 @@ def build_user_message(
     extraction_run: int,
     coder_session_id: str | None = None,
     session_case_index: int | None = None,
+    frozen_premises: str | None = None,
 ) -> str:
     session_block = ""
     if coder_session_id:
         session_block = f"\n- coder_session_id: {coder_session_id}"
     if session_case_index is not None:
         session_block += f"\n- session_case_index: {session_case_index}"
+
+    frozen_block = ""
+    if frozen_premises is not None:
+        frozen_block = f"""
+## Frozen premises (fixed; from Pass A — do not add, remove, merge, split, or rename)
+
+{frozen_premises}
+"""
 
     return f"""{task_header(codebook_version, model_id)}
 
@@ -52,7 +90,7 @@ def build_user_message(
 
 - case_id: {case_id}
 - extraction_run: {extraction_run}{session_block}
-
+{frozen_block}
 ## Transcript
 
 {transcript}
@@ -79,6 +117,7 @@ def messages_for_case(
     transcript: str,
     model_id: str,
     extraction_run: int,
+    frozen_premises: str | None = None,
 ) -> list[dict]:
     user = build_user_message(
         codebook_text=codebook_text,
@@ -87,6 +126,7 @@ def messages_for_case(
         transcript=transcript,
         model_id=model_id,
         extraction_run=extraction_run,
+        frozen_premises=frozen_premises,
     )
     system = (
         "You are a trained research coder. Return JSON only, conforming to the "

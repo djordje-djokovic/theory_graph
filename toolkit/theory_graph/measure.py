@@ -58,7 +58,23 @@ def measure_run(run_dir: Path, transcripts: Path | None = None) -> Path:
         transcripts=transcripts,
         measures_csv=measures_csv,
     )
-    return write_dataset(df, run_dir)
+    out = write_dataset(df, run_dir)
+
+    with (run_dir / "cases.csv").open(encoding="utf-8") as fh:
+        case_ids = [row["case_id"] for row in csv.DictReader(fh)]
+    passes = cfg.resolved_passes()
+    k_premises = next((p.k_runs for p in passes if p.name == "premises"), cfg.encoding.k_runs)
+    k_domains = next((p.k_runs for p in passes if p.name == "domains"), 1)
+    from .reliability import write_reliability_report
+
+    write_reliability_report(
+        run_dir,
+        case_ids,
+        k_premises=k_premises,
+        k_domains=k_domains,
+        measures_csv=measures_csv,
+    )
+    return out
 
 
 def _measure_file(path: Path, pass_name: str, run: int, transcripts: Path | None) -> dict:

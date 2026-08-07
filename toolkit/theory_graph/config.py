@@ -51,6 +51,11 @@ class LlmBlock(BaseModel):
     temperature: float = 0.0
     max_tokens: int = 6000
     timeout_s: int = 120
+    num_ctx: int | None = None
+    """Context window (tokens) forwarded to Ollama models only. Ollama's server
+    default (commonly 2048-4096) silently truncates long codebook+transcript
+    prompts, which can cause the model to ignore frozen upstream premises.
+    Leave unset for cloud providers (ignored for non-Ollama models)."""
 
 
 class EncodingBlock(BaseModel):
@@ -109,7 +114,18 @@ class ExperimentConfig(BaseModel):
 
     def resolved_passes(self) -> list[PassBlock]:
         if self.passes:
-            return self.passes
+            # Backfill `requires` for recognized pass names (premises/dfv/domains)
+            # when a custom `passes:` block omits it. Without this, a config that
+            # redeclares a standard pass without repeating `requires: premises`
+            # silently loses the upstream-premises link: the pass still runs, but
+            # never receives the frozen premise list, and the model free-styles
+            # its own premises instead of the ones fixed by Pass A.
+            fixed = []
+            for p in self.passes:
+                if p.requires is None and p.name in STANDARD_PASSES:
+                    p = p.model_copy(update={"requires": STANDARD_PASSES[p.name].requires})
+                fixed.append(p)
+            return fixed
         return [
             PassBlock(
                 name="structure",

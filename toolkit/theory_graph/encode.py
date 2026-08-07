@@ -7,9 +7,10 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from . import environment
 from .config import ExperimentConfig, PassBlock, downstream_passes, standard_pass
 from .corpora import samples_dir, transcripts_dir
-from .prompts import load_prompt, messages_for_case
+from .prompts import load_prompt, messages_for_case, snapshot_prompts
 
 
 def _parse_json(text: str) -> dict:
@@ -20,14 +21,24 @@ def _parse_json(text: str) -> dict:
     return json.loads(text)
 
 
+_PASS_SUFFIXES = ("_premises", "_dfv", "_domains")
+
+
 def _codebook_version(prompt_version: str) -> str:
-    return {
-        "v1_3_2": "1.3.2",
-        "v1_5_1": "1.5.1",
-        "v2_0_0": "2.0.0",
-        "v2_1_0_premises": "2.1.0",
-        "v2_1_0_domains": "2.1.0",
-    }.get(prompt_version, prompt_version.lstrip("v").replace("_", "."))
+    """Codebook version recorded in `meta`, e.g. v2_1_1_premises -> 2.1.1.
+
+    The pass suffix names which file of a multi-pass codebook was used, not a
+    separate codebook, so it is stripped before the version is recorded.
+    """
+    single_pass = {"v1_3_2": "1.3.2", "v1_5_1": "1.5.1", "v2_0_0": "2.0.0"}
+    if prompt_version in single_pass:
+        return single_pass[prompt_version]
+    stem = prompt_version
+    for suffix in _PASS_SUFFIXES:
+        if stem.endswith(suffix):
+            stem = stem[: -len(suffix)]
+            break
+    return stem.removeprefix("v").replace("_", ".")
 
 
 def _transcript_path(tdir: Path, case_id: str, tid: str | None = None) -> Path:
@@ -64,11 +75,13 @@ def _write_messages(
     passes: list[PassBlock], cases: list[dict], tdir: Path,
 ) -> None:
     prompts_root = lab_root / "prompts"
+    snapshot_dir = run_dir / "prompts"
+    snapshot_prompts(prompts_root, [p.prompt_version for p in passes], snapshot_dir)
     for row in cases:
         case_id = row["case_id"]
         transcript = _transcript_path(tdir, case_id, row.get("id")).read_text(encoding="utf-8")
         for p in passes:
-            prompt_text = load_prompt(prompts_root, p.prompt_version)
+            prompt_text = load_prompt(prompts_root, p.prompt_version, snapshot_dir)
             cbv = _codebook_version(p.prompt_version)
             for r in range(1, p.k_runs + 1):
                 msgs = messages_for_case(
@@ -189,6 +202,18 @@ def encode_run(
 
     backend = LiteLLMBackend()
     prompts_root = lab_root / "prompts"
+    snapshot_dir = run_dir / "prompts"
+
+    env = environment.capture(
+        model=cfg.llm.model,
+        temperature=cfg.llm.temperature,
+        max_tokens=cfg.llm.max_tokens,
+        num_ctx=cfg.llm.num_ctx,
+        backend=cfg.encoding.backend,
+    )
+    environment.record(run_dir, env)
+    env_stamp = environment.provenance_stamp(env)
+
     with (run_dir / "cases.csv").open(encoding="utf-8") as fh:
         cases = list(csv.DictReader(fh))
 
@@ -198,7 +223,7 @@ def encode_run(
         transcript = _transcript_path(tdir, case_id, row["id"]).read_text(encoding="utf-8")
 
         for p in passes:
-            prompt_text = load_prompt(prompts_root, p.prompt_version)
+            prompt_text = load_prompt(prompts_root, p.prompt_version, snapshot_dir)
             cbv = _codebook_version(p.prompt_version)
             for r in range(1, p.k_runs + 1):
                 out_json = run_dir / "encodings" / p.name / f"run{r}" / f"{case_id}.json"
@@ -206,23 +231,26 @@ def encode_run(
                     skipped += 1
                     continue
 
-                msgs = messages_for_case(
-                    codebook_text=prompt_text, codebook_version=cbv, case_id=case_id,
-                    transcript=transcript, model_id=cfg.llm.model, extraction_run=r,
-                )
+                frozen = None
                 if p.requires:
                     upstream = _consensus_premises(run_dir, case_id, pass_by_name[p.requires].k_runs)
                     if upstream is None:
                         failed += 1
                         continue
                     frozen = "\n".join(f"- {x['id']}: {x.get('text', '')}" for x in upstream.get("premises") or [])
-                    msgs[1]["content"] = msgs[1]["content"].replace("{{frozen_premises_with_ids_and_texts}}", frozen)
+
+                msgs = messages_for_case(
+                    codebook_text=prompt_text, codebook_version=cbv, case_id=case_id,
+                    transcript=transcript, model_id=cfg.llm.model, extraction_run=r,
+                    frozen_premises=frozen,
+                )
 
                 for attempt in range(cfg.encoding.json_retry + 1):
                     try:
                         result = backend.complete(
                             msgs, model=cfg.llm.model, temperature=cfg.llm.temperature,
                             max_tokens=cfg.llm.max_tokens, timeout_s=cfg.llm.timeout_s,
+                            num_ctx=cfg.llm.num_ctx,
                         )
                         (run_dir / "raw" / f"{case_id}_{p.name}_run{r}.txt").write_text(result.raw, encoding="utf-8")
                         obj = _parse_json(result.text)
@@ -234,6 +262,12 @@ def encode_run(
                         meta["model_provider"] = result.provider
                         meta["extraction_run"] = r
                         meta["extracted_at"] = datetime.now(timezone.utc).isoformat()
+                        # Sampling was pinned by this harness, so record it here
+                        # rather than accepting the model's account of it.
+                        meta["temperature"] = cfg.llm.temperature
+                        meta["temperature_controlled"] = cfg.llm.temperature is not None
+                        if env_stamp:
+                            meta["environment"] = env_stamp
                         out_json.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
                         done += 1
                         break

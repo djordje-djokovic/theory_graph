@@ -87,8 +87,30 @@ def layer_of(node_id: str) -> int | None:
     return LAYER.get(node_id[0].upper())
 
 
+# Codebook §4.1 step 7 allows spacing and capitalisation to differ so long as
+# the words match. Typographic variants of the same character are likewise not
+# word differences, so they are folded before comparison.
+_PUNCT_FOLD = str.maketrans({
+    "\u2018": "'", "\u2019": "'", "\u201a": "'", "\u201b": "'",
+    "\u201c": '"', "\u201d": '"', "\u201e": '"', "\u201f": '"',
+    "\u2032": "'", "\u2033": '"',
+    "\u2010": "-", "\u2011": "-", "\u2012": "-", "\u2013": "-",
+    "\u2014": "-", "\u2015": "-", "\u2212": "-",
+    "\u00a0": " ",
+})
+
+# An ellipsis in an evidence span signals passages stitched from separate parts
+# of the transcript, which §4.1 step 7 excludes ("a contiguous substring").
+_ELLIPSIS = re.compile(r"\.\.\.|\u2026")
+
+
 def normalise(text: str) -> str:
-    return re.sub(r"\s+", " ", text or "").strip().lower()
+    return re.sub(r"\s+", " ", (text or "").translate(_PUNCT_FOLD)).strip().lower()
+
+
+def span_is_spliced(span: str) -> bool:
+    """True if the span joins non-adjacent passages with an ellipsis."""
+    return bool(_ELLIPSIS.search(span or ""))
 
 
 def span_matches(span: str, transcript: str) -> bool:
@@ -111,6 +133,26 @@ def span_matches(span: str, transcript: str) -> bool:
         if matcher.ratio() >= SPAN_FUZZ_THRESHOLD:
             return True
     return False
+
+
+def _span_errors(case: dict, transcript: str) -> list[str]:
+    """Span failures, naming ellipsis splicing separately from a missing span.
+
+    Both are invalid. They are distinguished so the validation log shows which
+    rule was broken instead of collapsing every failure into one message.
+    """
+    errors: list[str] = []
+    for label, span in spans_of(case):
+        if not span:
+            continue
+        if span_is_spliced(span):
+            errors.append(
+                f"{label}: evidence_span joins non-adjacent passages with an ellipsis; "
+                "must be one contiguous substring"
+            )
+        elif not span_matches(span, transcript):
+            errors.append(f"{label}: evidence_span not found in transcript")
+    return errors
 
 
 def spans_of(case: dict) -> list[tuple[str, str]]:
@@ -299,9 +341,7 @@ def validate_premises_pass(case: dict, transcript: str | None = None) -> list[st
     ):
         errors.append("quality.coder_confidence must be in [0, 1]")
     if transcript is not None:
-        for label, span in spans_of(case):
-            if span and not span_matches(span, transcript):
-                errors.append(f"{label}: evidence_span not found in transcript")
+        errors.extend(_span_errors(case, transcript))
     return errors
 
 
@@ -530,9 +570,7 @@ def validate(
     ):
         errors.append("quality.coder_confidence must be in [0, 1]")
     if transcript is not None:
-        for label, span in spans_of(case):
-            if span and not span_matches(span, transcript):
-                errors.append(f"{label}: evidence_span not found in transcript")
+        errors.extend(_span_errors(case, transcript))
 
     return errors
 
@@ -721,7 +759,7 @@ def process_dir(
         failures += bool(errors)
         if transcript is not None and (case.get("meta") or {}).get("pass") != "pairs":
             span_checked += 1
-            span_failures += any("evidence_span not found" in e for e in errors)
+            span_failures += any("evidence_span" in e for e in errors)
         row = {
             "case_id": case_id,
             "valid": not errors,

@@ -20,6 +20,7 @@ class ManualBackend:
         temperature: float = 0.0,
         max_tokens: int = 0,
         timeout_s: int = 0,
+        num_ctx: int | None = None,
     ) -> EncodeResult:
         raise RuntimeError(
             "backend=manual does not call an LLM. Place completed JSON files "

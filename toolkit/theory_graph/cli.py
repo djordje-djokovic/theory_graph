@@ -147,6 +147,9 @@ def measure(
     out = measure_run(run_dir, transcripts=transcripts_dir(root, cfg.experiment.corpus))
     typer.echo(f"Built analysis spreadsheet: {_friendly_path(out)}")
     typer.echo(f"Validation details:       {_friendly_path(run_dir / 'validation' / 'measures.csv')}")
+    rel = run_dir / "validation" / "reliability_report.md"
+    if rel.exists():
+        typer.echo(f"Reliability report:       {_friendly_path(rel)}")
     _echo_next_step(run_dir, str(run))
 
 
