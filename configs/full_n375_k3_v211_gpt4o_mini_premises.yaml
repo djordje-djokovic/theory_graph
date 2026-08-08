@@ -1,9 +1,9 @@
-# Full corpus Pass A: all 376 Startup Battlefield pitches, k=3 premises, v2.1.1.
+# Full corpus Pass A: 375 pitches (pilot-108 excluded), k=3 premises, v2.1.1 — gpt-4o-mini.
 experiment:
-  run_id: full_n376_k3_v211_qwen3_32b
+  run_id: full_n375_k3_v211_gpt4o_mini
   corpus: startup_battlefield
   prompt_version: v2_1_1_premises
-  sample: full_n376
+  sample: full_n375
   design: nested
 
 passes:
@@ -12,11 +12,10 @@ passes:
     k_runs: 3
 
 llm:
-  model: "ollama_chat/qwen3:32b"
+  model: "openai/gpt-4o-mini"
   temperature: 0.0
   max_tokens: 6000
-  timeout_s: 600
-  num_ctx: 16384
+  timeout_s: 120
 
 encoding:
   backend: api

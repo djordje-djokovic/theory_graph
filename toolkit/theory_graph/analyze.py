@@ -90,12 +90,21 @@ def run_battlefield_preset(df: pd.DataFrame, outcome: str = "GotSelected") -> st
     else:
         res_lines.append("\nNo domain partition in this run; M2 skipped.")
 
-    has_truncation = (
-        "truncated" in work.columns and work["truncated"].nunique(dropna=True) > 1
+    trunc_col = None
+    if (
+        "transcript_incomplete" in work.columns
+        and work["transcript_incomplete"].nunique(dropna=True) > 1
+    ):
+        trunc_col = "transcript_incomplete"
+    elif "truncated" in work.columns and work["truncated"].nunique(dropna=True) > 1:
+        trunc_col = "truncated"
+    trunc_term = f" + {trunc_col}" if trunc_col else ""
+    trunc_label = (
+        " + transcript incomplete"
+        if trunc_col == "transcript_incomplete"
+        else (" + truncation" if trunc_col else "")
     )
-    trunc_term = " + truncated" if has_truncation else ""
-    trunc_label = " + truncation" if has_truncation else ""
-    if not has_truncation:
+    if not trunc_col:
         res_lines.append(
             "\nTruncation does not vary in this run; joint models fit without the flag."
         )

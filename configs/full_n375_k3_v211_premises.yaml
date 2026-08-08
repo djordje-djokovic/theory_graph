@@ -1,23 +1,15 @@
-# Battery: 20 pitches, k=3 independent premises runs per case (machine-reliability check).
+# Full corpus Pass A: 375 Startup Battlefield pitches (pilot-108 excluded), k=3 premises, v2.1.1.
 experiment:
-  run_id: battle_n20_k3_qwen3_32b
+  run_id: full_n375_k3_v211_qwen3_32b
   corpus: startup_battlefield
-  prompt_version: v2_1_0_premises
-  sample: smoke_n20
+  prompt_version: v2_1_1_premises
+  sample: full_n375
   design: nested
 
 passes:
   - name: premises
-    prompt_version: v2_1_0_premises
+    prompt_version: v2_1_1_premises
     k_runs: 3
-  - name: dfv
-    prompt_version: v2_1_0_dfv
-    k_runs: 1
-    requires: premises
-  - name: domains
-    prompt_version: v2_1_0_domains
-    k_runs: 3
-    requires: premises
 
 llm:
   model: "ollama_chat/qwen3:32b"

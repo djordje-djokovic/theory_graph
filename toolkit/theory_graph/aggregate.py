@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .validate import transcript_truncated
+from .validate import transcript_incomplete, transcript_truncated
 
 
 def load_case(path: Path) -> dict:
@@ -154,6 +154,7 @@ def aggregate_case_runs(
             pass
 
     derived = transcript_truncated(transcript)
+    incomplete = transcript_incomplete(transcript)
     if coded_truncation:
         truncated = int(any(truncated_flags))
     elif derived is None:
@@ -170,6 +171,7 @@ def aggregate_case_runs(
         "breadth_explicit": float(np.median([breadth_explicit(c) for c in run_cases])),
         "breadth_run_sd": float(np.std(breadths)) if len(breadths) > 1 else 0.0,
         "truncated": truncated,
+        "transcript_incomplete": 0 if incomplete is None else int(incomplete),
         "coder_confidence": float(np.nanmean(confidences)) if confidences else np.nan,
         "n_runs": len(run_cases),
     }

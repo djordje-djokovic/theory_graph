@@ -595,6 +595,7 @@ def _has_cycle(nodes: list[str], edges: list[tuple[str, str]]) -> bool:
 
 
 _TERMINAL_PUNCT = ".!?\"')]"
+_TEMPLATE_LEAK = re.compile(r"##\s*Output meta|meta\.codebook_version", re.I)
 
 
 def transcript_truncated(transcript: str | None) -> bool | None:
@@ -612,6 +613,35 @@ def transcript_truncated(transcript: str | None) -> bool | None:
     if text.endswith(("...", "\u2026", "-", "\u2013", "\u2014")):
         return True
     return text[-1] not in _TERMINAL_PUNCT
+
+
+def transcript_opening_truncated(transcript: str | None) -> bool | None:
+    """True when the transcript begins mid-sentence (ASR clip missing the opening)."""
+    if transcript is None:
+        return None
+    text = " ".join(transcript.strip().split())
+    if not text:
+        return True
+    first = text.split()[0]
+    return bool(first) and first[0].islower() and first.lower() != "i"
+
+
+def transcript_template_leak(transcript: str | None) -> bool | None:
+    """True when prompt scaffolding was appended to the corpus transcript file."""
+    if transcript is None:
+        return None
+    return bool(_TEMPLATE_LEAK.search(transcript))
+
+
+def transcript_incomplete(transcript: str | None) -> bool | None:
+    """Composite transcript-quality flag: trailing cutoff, opening cutoff, or template leak."""
+    if transcript is None:
+        return None
+    return (
+        bool(transcript_truncated(transcript))
+        or bool(transcript_opening_truncated(transcript))
+        or bool(transcript_template_leak(transcript))
+    )
 
 
 def measures(case: dict, transcript: str | None = None) -> dict:
@@ -682,6 +712,9 @@ def measures(case: dict, transcript: str | None = None) -> dict:
         "thin_transcript": bool(quality.get("thin_transcript")),
         "truncated": bool(quality.get("truncated")),
         "truncated_derived": transcript_truncated(transcript),
+        "truncated_opening": transcript_opening_truncated(transcript),
+        "template_leak": transcript_template_leak(transcript),
+        "transcript_incomplete": transcript_incomplete(transcript),
         "dependency_pass": bool(quality.get("dependency_pass")),
         "coder_confidence": quality.get("coder_confidence"),
     }
@@ -712,6 +745,9 @@ FIELDS = [
     "thin_transcript",
     "truncated",
     "truncated_derived",
+    "truncated_opening",
+    "template_leak",
+    "transcript_incomplete",
     "dependency_pass",
     "coder_confidence",
 ]
@@ -796,6 +832,9 @@ def process_dir(
                     "thin_transcript": bool((case.get("quality") or {}).get("thin_transcript")),
                     "truncated": bool((case.get("quality") or {}).get("truncated")),
                     "truncated_derived": transcript_truncated(transcript),
+                    "truncated_opening": transcript_opening_truncated(transcript),
+                    "template_leak": transcript_template_leak(transcript),
+                    "transcript_incomplete": transcript_incomplete(transcript),
                     "dependency_pass": bool((case.get("quality") or {}).get("dependency_pass")),
                     "coder_confidence": (case.get("quality") or {}).get("coder_confidence"),
                 }

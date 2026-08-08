@@ -91,5 +91,5 @@ def _measure_file(path: Path, pass_name: str, run: int, transcripts: Path | None
         "errors": "; ".join(errors),
         "spans_checked": transcript is not None,
     }
-    row.update(measures(case))
+    row.update(measures(case, transcript))
     return row
