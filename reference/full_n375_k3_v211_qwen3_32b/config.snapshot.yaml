@@ -1,0 +1,36 @@
+experiment:
+  prompt_version: v2_1_1_premises
+  run_id: full_n375_k3_v211_qwen3_32b
+  corpus: startup_battlefield
+  sample: full_n375
+  design: nested
+llm:
+  model: ollama_chat/qwen3:32b
+  temperature: 0.0
+  max_tokens: 6000
+  timeout_s: 600
+  num_ctx: 16384
+encoding:
+  backend: api
+  k_runs: 3
+  json_retry: 2
+  run_passes: null
+passes:
+- name: premises
+  prompt_version: v2_1_1_premises
+  k_runs: 3
+  requires: null
+dataset:
+  outcome: GotSelected
+  join_columns: null
+  embeddings:
+    enabled: false
+    model: openai/text-embedding-3-small
+    source: transcript
+  similarities:
+    enabled: true
+    method: tfidf
+analysis:
+  preset: battlefield
+  outcome: GotSelected
+  models: null
