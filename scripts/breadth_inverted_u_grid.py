@@ -13,10 +13,8 @@ from theory_graph.robustness import CONTROL_SETS, prep, term_p
 HOLDOUTS = {"pilot-65", "pilot-620", "pilot-11"}
 
 RUNS = [
-    ("full_n375_gpt4o_mini", Path("experiments/full_n375_k3_v211_gpt4o_mini/aggregated/dataset.csv")),
-    ("pilot_n50_qwen3", Path("experiments/pilot_n50_k3_v211_qwen3_32b/aggregated/dataset.csv")),
-    ("battle_n20_gpt4o_mini", Path("experiments/battle_n20_k3_v211_gpt4o_mini/aggregated/dataset.csv")),
-    ("battle_n20_qwen3", Path("experiments/battle_n20_k3_v211_qwen3_32b/aggregated/dataset.csv")),
+    ("full_n375_gpt4o_mini", Path("reference/full_n375_k3_v211_gpt4o_mini/aggregated/dataset.csv")),
+    ("full_n375_qwen3_32b", Path("reference/full_n375_k3_v211_qwen3_32b/aggregated/dataset.csv")),
 ]
 
 

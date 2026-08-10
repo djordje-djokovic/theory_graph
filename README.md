@@ -136,7 +136,7 @@ experiment:
 Other useful fields (defaults are fine for a first try):
 
 ```yaml
-  sample: smoke_n20       # 20 pitches (use full_n376 for everything)
+  sample: smoke_n20       # 20 pitches (use full_n375 for confirmatory)
 llm:
   model: "openai/gpt-4.1"   # which AI to call
 encoding:
@@ -248,7 +248,7 @@ Your config is YAML. Only a few fields matter day to day:
 | Field | What to put |
 |---|---|
 | `experiment.run_id` | Unique name for this experiment → folder `experiments/<run_id>/` |
-| `experiment.sample` | `smoke_n20` (small test) or `full_n376` (full dataset) |
+| `experiment.sample` | `smoke_n20` (small test) or `full_n375` (confirmatory sample) |
 | `experiment.corpus` | Usually `startup_battlefield` (bundled data) |
 | `passes` | Which steps exist and which prompt file each uses |
 | `encoding.run_passes` | Default steps for bare `encode` (omit = all listed passes) |
@@ -390,7 +390,8 @@ theory_graph/
 ## Costs and sample size
 
 - `smoke_n20` = 20 pitches — use this to learn the tool and test prompt wording
-- `full_n376` = full dataset — use only when you are ready (many API calls)
+- `full_n375` = confirmatory sample — use only when you are ready (many API calls)
+- Published n375 results (no re-encode): see `reference/README.md`
 
 Rough cost: each pitch × each pass × `k_runs` (often 3 for premises) = number of AI calls.  
 Example: 20 pitches × (3 premise runs + 1 dfv) ≈ 80 calls for a small smoke test.
@@ -440,7 +441,7 @@ python -m theory_graph.cli reproduce --pipeline all
 python -m theory_graph.cli equivalence
 ```
 
-Then start with `configs/examples/smoke_openai.yaml` (or Ollama/manual) on `smoke_n20` before `full_n376`.
+Then start with `configs/examples/smoke_openai.yaml` (or Ollama/manual) on `smoke_n20` before `full_n375`.
 
 **Compare two finished runs:**
 

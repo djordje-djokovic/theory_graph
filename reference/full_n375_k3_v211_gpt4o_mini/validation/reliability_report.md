@@ -1,7 +1,7 @@
 # Reliability report
 
 Experiment: `full_n375_k3_v211_gpt4o_mini`
-Cases: 375 | Premises runs (k): 3 | Domains runs (k): 1
+Cases: 375 | Premises runs (k): 3 | Domains runs (k): 3
 
 This file is produced automatically when you run **`theory-graph measure`**.
 It summarizes **within-model** agreement: how consistently the same AI model
@@ -31,11 +31,13 @@ codes the same pitch when run multiple times on the same prompt.
 | Breadth: how far apart are the counts? | Mean absolute difference | 0.743 | Premises, on average, between any two runs of the same pitch. |
 | Breadth: reliability of the **analysed** variable | Aggregate α, median of 3 | 0.925 | good (≥0.80) |
 | Breadth: agree on **wording**? | Content match share (≥0.35) | 0.758 | Higher is better; ~1.0 means runs extract the same claims. |
-| Modularity: agree on **domain count**? | Krippendorff α (n_domains) | n/a | not computed (need k≥2 runs with data) |
-| Modularity: agree on **grouping**? | Mean pairwise ARI | n/a | ≥0.80 strong; 0.50–0.80 moderate; <0.50 weak. |
+| Modularity: agree on **domain count**? | Krippendorff α (n_domains) | 0.776 | tentative (0.67–0.80) |
+| Modularity: agree on **grouping**? | Mean pairwise ARI | 0.838 | ≥0.80 strong; 0.50–0.80 moderate; <0.50 weak. |
 
 ### Validation (schema compliance, not agreement)
 
+- **dfv**: 100% valid (1125 files, avg 0.0 errors/file)
+- **domains**: 100% valid (1125 files, avg 0.0 errors/file)
 - **premises**: 87% valid (1125 files, avg 0.2 errors/file)
 
 ---
@@ -78,9 +80,9 @@ and the interval-level figure is disclosed as a sensitivity check:
 **Question:** Given the *same* frozen premise list, does the model group premises
 into the same strategic domains across repeated runs?
 
-- Cases with all 1 domain runs: **0/375**
-- Krippendorff α on domain count (n_domains): **n/a**
-- Mean pairwise ARI on grouping: **n/a**
+- Cases with all 3 domain runs: **375/375**
+- Krippendorff α on domain count (n_domains): **0.776**
+- Mean pairwise ARI on grouping: **0.838**
 - Per-case detail: `validation/reliability_domains_per_case.csv`
 
 ## What this report does *not* include

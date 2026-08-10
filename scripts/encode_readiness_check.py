@@ -18,7 +18,7 @@ def main() -> int:
     cases = pd.read_csv(CASES, dtype={"case_id": str})
     if not SAMPLE.exists():
         # fall back to computed n
-        sample = pd.read_csv(CORP / "samples/full_n376.csv", dtype={"case_id": str})
+        sample = pd.read_csv(CORP / "samples/full_n375.csv", dtype={"case_id": str})
         sample = sample[sample.case_id != "pilot-108"]
     else:
         sample = pd.read_csv(SAMPLE, dtype={"case_id": str})
