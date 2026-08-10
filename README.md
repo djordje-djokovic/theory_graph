@@ -2,7 +2,7 @@
 
 Turn startup pitch transcripts into numbers you can analyze (theory **breadth**, optional DFV composition, optional domain groupings), then run regressions.
 
-**Coauthors (non-coding):** open [`reference/README.md`](reference/README.md). Finished spreadsheets and regression reports for the n=375 GPT-4o-mini and Qwen runs are there. No install or API key needed.
+**Coauthors (non-coding):** start at [`reference/README.md`](reference/README.md). That folder has the finished n=375 spreadsheets and regression reports (GPT-4o-mini and Qwen). No install, API key, or re-encoding needed.
 
 ---
 
