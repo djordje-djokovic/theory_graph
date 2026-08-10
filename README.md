@@ -2,6 +2,8 @@
 
 Turn startup pitch transcripts into structured data (lists of **premises**, optional tags, optional groupings) and run simple statistical analysis.
 
+**Coauthors (non-coding):** skip the setup below. Open [`reference/README.md`](reference/README.md) — finished spreadsheets and regression reports for the n=375 GPT-4o-mini and Qwen runs are there. No install or API key needed.
+
 You do **not** need to edit Python code. Everything is driven by:
 
 1. **Prompt files** (instructions for the AI) in `prompts/`
