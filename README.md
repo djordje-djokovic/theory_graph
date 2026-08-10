@@ -1,20 +1,38 @@
 # theory_graph
 
-Turn startup pitch transcripts into structured data (lists of **premises**, optional tags, optional groupings) and run simple statistical analysis.
+Turn startup pitch transcripts into numbers you can analyze (theory **breadth**, optional DFV composition, optional domain groupings), then run regressions.
 
-**Coauthors (non-coding):** skip the setup below. Open [`reference/README.md`](reference/README.md) — finished spreadsheets and regression reports for the n=375 GPT-4o-mini and Qwen runs are there. No install or API key needed.
-
-You do **not** need to edit Python code. Everything is driven by:
-
-1. **Prompt files** (instructions for the AI) in `prompts/`
-2. **Config files** (settings for one experiment) in `configs/`
-3. **Commands** in the terminal: `init` → `encode` → `measure` → `analyze`
+**Coauthors (non-coding):** open [`reference/README.md`](reference/README.md). Finished spreadsheets and regression reports for the n=375 GPT-4o-mini and Qwen runs are there. No install or API key needed.
 
 ---
 
-## Quick start (copy and paste)
+## How the pipeline fits together
 
-**One-time setup** (do this once on your computer):
+Think of two phases:
+
+| Phase | Commands | What it does | When you use it |
+|---|---|---|---|
+| **1. Encoding** (expensive) | `init` → `encode` | Calls an LLM on each pitch and saves structured JSON | Only when you need **new** AI coding (new model, new prompt, new sample) |
+| **2. Analysis** (cheap) | `measure` → `analyze` | Turns JSON into a spreadsheet, then runs regressions | Whenever you want results, new models, or a re-check |
+
+**Most people working on the paper should start with analysis**, not encoding.
+
+- Published confirmatory outputs live under `reference/` (CSV + regression tables already built).
+- Raw LLM JSON under `experiments/` is local / optional; it is not required to re-run stats on the published runs.
+- Encoding is what *creates* those variables. Once you have `aggregated/dataset.csv`, you can open it in Excel / R / Stata or re-run `analyze` many times without calling any LLM again.
+
+```
+Transcripts ──encode──► JSON encodings ──measure──► dataset.csv ──analyze──► results.md
+                              ▲                            │
+                              │                            └── also open in Excel / R / Stata
+                         (slow, costs $ / hours)
+```
+
+---
+
+## Quick start: run the analysis (no re-encoding)
+
+**One-time setup** (once per computer):
 
 ```powershell
 cd theory_graph
@@ -22,290 +40,36 @@ python -m venv .venv
 .\.venv\Scripts\activate
 pip install -r requirements.txt
 pip install -e .
-copy .env.example .env
 ```
 
-Open `.env` in a text editor and add an API key (for OpenAI, Anthropic, etc.), **or** skip this if you use a local Ollama model (see below).
+You do **not** need an API key for this path.
 
-**Run a small test** (20 pitches, uses an AI API):
+**Re-run regressions on the published n=375 results:**
 
 ```powershell
-copy configs\examples\smoke_openai.yaml configs\my_first_run.yaml
+theory-graph analyze --run reference/full_n375_k3_v211_gpt4o_mini
+theory-graph analyze --run reference/full_n375_k3_v211_qwen3_32b
 ```
 
-Open `configs\my_first_run.yaml` and change `run_id:` to something unique, e.g. `my_first_run`.
+That reads `aggregated/dataset.csv` + `config.snapshot.yaml` and writes / refreshes `analysis/results.md`.
 
-The encode step uses **`-p`** to pick which AI steps to run (comma-separated, no spaces):
+**Or skip the CLI:** open these files directly:
 
-| Flag | Meaning |
+| File | What it is |
 |---|---|
-| `premises` | Extract the main claims from each pitch (always start here) |
-| `dfv` | Tag each claim: **D**esirability / **F**easibility / **V**iability / Other |
-| `domains` | Group claims into strategic themes (optional third step) |
+| `reference/.../aggregated/dataset.csv` | One row per pitch: breadth, DFV, domains, outcome, controls |
+| `reference/.../analysis/results.md` | Logit tables already computed |
+| `reference/.../validation/reliability_report.md` | Within-model agreement (Krippendorff α, etc.) |
 
-Then run these lines (comments explain each step):
+See [`reference/README.md`](reference/README.md) for a plain-language tour of columns and takeaways.
 
-```powershell
-# Create the experiment folder (do once per run_id)
-theory-graph init --config configs\my_first_run.yaml
+### Change the regressions (still no encoding)
 
-# Call the AI for each pitch:
-#   premises = list claims  |  dfv = D/F/V tags on those claims
-# To also run the domains step, use: -p premises,dfv,domains
-theory-graph encode --run my_first_run -p premises,dfv
+Edit the analysis block in the run’s `config.snapshot.yaml` (or copy the folder and edit the copy), then run `analyze` again.
 
-# Check JSON + build the full analysis spreadsheet (take this CSV to Excel/R)
-theory-graph measure --run my_first_run
+Built-in battlefield models (`analysis.preset: battlefield`) cover breadth linear/quadratic, DFV composition, domains, and common controls.
 
-# Run regressions listed in your config (optional if you only want the CSV)
-theory-graph analyze --run my_first_run
-```
-
-**Simplest first try:** use `-p premises` only in the encode line above; add `,dfv` or `,domains` later when you want those steps.
-
-Each command prints a plain-English summary and a **Next step:** line with the exact command to run.
-
-**Results:**
-
-- `experiments\my_first_run\aggregated\dataset.csv` — **main handoff file** (all variables, one row per pitch)
-- `experiments\my_first_run\analysis\results.md` — regression output (if you ran `analyze`)
-
----
-
-## What each command does
-
-| Command | Plain English |
-|---|---|
-| `init` | Creates a new experiment folder from your config. **Run once per experiment.** |
-| `encode` | Sends transcripts to the AI and saves JSON answers. Slow/expensive step. |
-| `measure` | Checks JSON + builds **`aggregated/dataset.csv`** (full analysis spreadsheet). |
-| `analyze` | Runs regressions from your config → **`analysis/results.md`**. Optional. |
-| `status` | Shows encode progress (done / pending per pass). |
-
----
-
-## The three encoding steps (passes)
-
-Each pitch can go through up to three AI steps. The names after **`-p`** in commands match the first column here:
-
-| Name in commands | Prompt file | What the AI does |
-|---|---|---|
-| `premises` | `prompts/v2_1_0_premises.md` | List the main claims/premises in the pitch |
-| `dfv` | `prompts/v2_1_0_dfv.md` | Tag each premise: **D**esirability / **F**easibility / **V**iability / Other |
-| `domains` | `prompts/v2_1_0_domains.md` | Group premises into strategic “domains” (themes) |
-
-**Order matters:** `dfv` and `domains` need `premises` done first (they read the premise list from step 1).
-
-You can run all steps in **one command** (comments optional):
-
-```powershell
-# premises first, then dfv tags, then domain groupings — order in -p does not matter
-theory-graph encode --run my_first_run -p premises,dfv,domains
-```
-
-The order on the command line does not matter — the tool always runs premises first.
-
----
-
-## Step-by-step: your first experiment
-
-### Step 1 — Pick a starter config
-
-Copy an example (do not edit the originals in `configs/examples/`):
-
-| File | Good for |
-|---|---|
-| `smoke_openai.yaml` | OpenAI (needs `OPENAI_API_KEY` in `.env`) |
-| `smoke_anthropic.yaml` | Anthropic |
-| `smoke_ollama_local.yaml` | Free local model (needs Ollama running) |
-| `smoke_manual.yaml` | No AI — you paste JSON files yourself |
-
-```powershell
-copy configs\examples\smoke_openai.yaml configs\my_first_run.yaml
-```
-
-### Step 2 — Edit the config (minimal)
-
-Open `configs\my_first_run.yaml` in any text editor. Change at least:
-
-```yaml
-experiment:
-  run_id: my_first_run    # pick a new name every time you change something important
-```
-
-**Important:** If a folder `experiments/my_first_run/` already exists, `init` will refuse. Pick a new `run_id` (e.g. `my_first_run_v2`).
-
-Other useful fields (defaults are fine for a first try):
-
-```yaml
-  sample: smoke_n20       # 20 pitches (use full_n375 for confirmatory)
-llm:
-  model: "openai/gpt-4.1"   # which AI to call
-encoding:
-  backend: api            # api = call AI | manual = you write JSON
-  run_passes: [premises]  # optional: only encode premises by default
-```
-
-### Step 3 — Init (create the experiment folder)
-
-```powershell
-theory-graph init --config configs\my_first_run.yaml
-```
-
-This creates `experiments/my_first_run/` with:
-
-- `config.snapshot.yaml` — frozen copy of your settings (used from now on)
-- `cases.csv` — list of pitches in this run
-- `messages/` — ready-made prompts per pitch (for manual review)
-- empty `encodings/` folders
-
-**After init, you do not use `--config` again.** All later commands use the snapshot inside the experiment folder.
-
-### Step 4 — Encode (call the AI)
-
-Encode everything at once:
-
-```powershell
-theory-graph encode --run my_first_run -p premises,dfv,domains
-```
-
-Or in stages (inspect premises before continuing):
-
-```powershell
-theory-graph encode --run my_first_run -p premises
-theory-graph status --run my_first_run
-theory-graph encode --run my_first_run -p dfv,domains
-```
-
-If you started with **premises only** in the config and later run `-p dfv` or `-p domains`, those steps are added automatically — no extra setup command.
-
-Check progress anytime:
-
-```powershell
-theory-graph status --run my_first_run
-```
-
-**Re-do premises** (also clears dfv/domains so they stay in sync):
-
-```powershell
-theory-graph encode --run my_first_run -p premises --force
-theory-graph encode --run my_first_run -p dfv,domains
-```
-
-### Step 5 — Measure (build dataset.csv)
-
-```powershell
-theory-graph measure --run my_first_run
-```
-
-This writes:
-
-- **`aggregated/dataset.csv`** — one row per pitch: AI variables + outcome + controls + similarity controls + validation flags (+ optional embeddings)
-- **`validation/measures.csv`** — technical detail per JSON file (for debugging)
-
-Similarity columns (`premise_sim_mean`, `domain_sep`, …) are recomputed from the encoding JSON each time you run `measure`. Re-run after re-encoding or adding the domains pass (`domain_sep` needs domains).
-
-You can stop here and analyze in Excel, R, or Stata using `dataset.csv`.
-
-### Step 6 — Analyze (optional regressions)
-
-```powershell
-theory-graph analyze --run my_first_run
-```
-
-Runs the models in your config → **`analysis/results.md`**.
-
-You can skip this step if you only wanted the CSV.
-
----
-
-## Changing the prompt (instructions to the AI)
-
-Prompts live as markdown files in `prompts/`.
-
-**Do not edit the published old versions** (`v1_3_2.md`, `v1_5_1.md`). Copy and rename instead:
-
-```powershell
-copy prompts\v2_1_0_premises.md prompts\my_premises_v1.md
-# edit my_premises_v1.md in a text editor
-```
-
-Point your config at the new file (filename **without** `.md`):
-
-```yaml
-passes:
-  - name: premises
-    prompt_version: my_premises_v1
-    k_runs: 3
-```
-
-Use a **new** `run_id` when you init again.
-
----
-
-## Config file cheat sheet
-
-Your config is YAML. Only a few fields matter day to day:
-
-| Field | What to put |
-|---|---|
-| `experiment.run_id` | Unique name for this experiment → folder `experiments/<run_id>/` |
-| `experiment.sample` | `smoke_n20` (small test) or `full_n375` (confirmatory sample) |
-| `experiment.corpus` | Usually `startup_battlefield` (bundled data) |
-| `passes` | Which steps exist and which prompt file each uses |
-| `encoding.run_passes` | Default steps for bare `encode` (omit = all listed passes) |
-| `encoding.backend` | `api` or `manual` |
-| `llm.model` | AI model string, e.g. `openai/gpt-4.1`, `ollama/qwen2.5:14b` |
-| `dataset.outcome` | Outcome column from corpus data, e.g. `GotSelected` |
-| `dataset.join_columns` | Extra columns to pull from corpus `cases.csv` (defaults are fine) |
-| `dataset.similarities.enabled` | `true` by default — TF-IDF cosine controls (`premise_sim_mean`, `domain_sep`, …) |
-| `dataset.embeddings.enabled` | `false` by default; set `true` to add `emb_0`, `emb_1`, … columns |
-| `analysis.preset` | `battlefield` = built-in models; `custom` = use `analysis.models` below |
-| `analysis.models` | List of `{name, formula}` regressions (statsmodels syntax) |
-
-**API keys** go in `.env`, never in the YAML file.
-
-Example with all three passes declared but only premises encoded first:
-
-```yaml
-experiment:
-  run_id: my_staged_run
-  corpus: startup_battlefield
-  sample: smoke_n20
-
-passes:
-  - name: premises
-    prompt_version: v2_1_0_premises
-    k_runs: 3
-  - name: dfv
-    prompt_version: v2_1_0_dfv
-    k_runs: 1
-    requires: premises
-  - name: domains
-    prompt_version: v2_1_0_domains
-    k_runs: 1
-    requires: premises
-
-llm:
-  model: "openai/gpt-4.1"
-encoding:
-  backend: api
-  run_passes: [premises]
-
-dataset:
-  outcome: GotSelected
-  similarities:
-    enabled: true
-    method: tfidf
-  embeddings:
-    enabled: false
-
-analysis:
-  preset: battlefield    # built-in regressions; or preset: custom + models: [...]
-  outcome: GotSelected
-```
-
-**Custom regressions** (`preset: custom`):
+Custom example:
 
 ```yaml
 analysis:
@@ -316,37 +80,152 @@ analysis:
       formula: "GotSelected ~ breadth_z + word_count_z"
     - name: Quadratic breadth
       formula: "GotSelected ~ breadth_z + I(breadth_z**2) + word_count_z"
-      when: varies:breadth_z
 ```
 
-Use `when: column:n_domains` or `when: varies:truncated` to skip a model when a column is missing or constant.
+Formulas use [statsmodels](https://www.statsmodels.org/) syntax. Columns must exist in `dataset.csv`.
 
 ---
 
-## Manual mode (no API)
+## What encoding is for (use later, when needed)
 
-For `smoke_manual.yaml` or `backend: manual`:
+**Encoding** = ask an LLM to read each transcript and write structured codes (premises, optional DFV tags, optional domains).
 
-1. `init` creates message files under `experiments/<run>/messages/`
-2. You (or someone else) produce JSON and save to:
-   `experiments/<run>/encodings/premises/run1/pilot-123.json` (etc.)
-3. `theory-graph encode --run my_run -p dfv,domains` registers later passes (writes message files; no API call)
-4. Then run `measure` (builds `dataset.csv`); optionally `analyze`
+Use encoding only when you need **new** machine coding, for example:
+
+- try a different LLM (`llm.model` in the config)
+- change the codebook / prompt
+- expand or shrink the sample
+- add a pass you do not have yet (e.g. DFV after premises-only)
+
+Do **not** re-encode just to change a regression. Change the analysis config and run `analyze`.
+
+| Encode pass (`-p`) | What the AI produces | Typical research use |
+|---|---|---|
+| `premises` | List of claims → **breadth** | Confirmatory IV (Prop 1) |
+| `dfv` | Tag each claim D / F / V / Other | Composition / balance (Prop 2) |
+| `domains` | Group claims into themes | Exploratory modularity |
+
+`dfv` and `domains` need `premises` first. Passes are independent after that: you can encode premises today and add DFV later without redoing premises.
+
+Rough cost: pitches × passes × `k_runs` (often 3 for premises).  
+Examples: `smoke_n20` for learning; `full_n375` for confirmatory work (many API calls; GPT-4o-mini premises-scale runs were on the order of a few dollars and a couple of hours).
 
 ---
 
-## Useful encode options
+## Full pipeline (only if you are encoding)
 
-| What you want | Command |
+You do **not** need to edit Python. Day to day you use:
+
+1. **Prompt files** in `prompts/` (instructions to the AI)
+2. **Config files** in `configs/` (YAML = plain-text settings checklist)
+3. **Commands:** `init` → `encode` → `measure` → `analyze`
+
+### One-time setup for API / local LLM
+
+```powershell
+cd theory_graph
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+pip install -e .
+copy .env.example .env
+```
+
+Add an API key to `.env` for OpenAI / Anthropic, **or** use Ollama locally (see below).
+
+### Minimal encode → measure → analyze
+
+```powershell
+copy configs\examples\smoke_openai.yaml configs\my_first_run.yaml
+# edit run_id in that YAML
+
+theory-graph init --config configs\my_first_run.yaml
+theory-graph encode --run my_first_run -p premises
+theory-graph measure --run my_first_run
+theory-graph analyze --run my_first_run
+```
+
+| Command | Plain English |
 |---|---|
-| Encode default steps from config | `theory-graph encode --run my_run` |
-| Encode specific steps | `theory-graph encode --run my_run -p premises,dfv` |
-| Encode all declared steps | `theory-graph encode --run my_run --all` |
-| Re-do a step (and clear dependent steps) | `theory-graph encode --run my_run -p premises --force` |
-| Check progress | `theory-graph status --run my_run` |
+| `init` | Creates `experiments/<run_id>/` from your config (once per run) |
+| `encode` | Calls the AI; writes JSON under `encodings/` (slow / costly) |
+| `measure` | Validates JSON + builds **`aggregated/dataset.csv`** |
+| `analyze` | Runs regressions → **`analysis/results.md`** |
+| `status` | Shows encode progress |
 
-**Tip:** Use commas in one `-p` flag: `-p premises,dfv,domains`.  
-`-p premises dfv domains` (spaces only) does **not** work in PowerShell.
+After `init`, later commands use the frozen `config.snapshot.yaml` inside the experiment folder (not your original YAML).
+
+**Staged encoding** (inspect premises before DFV/domains):
+
+```powershell
+theory-graph encode --run my_first_run -p premises
+theory-graph status --run my_first_run
+theory-graph encode --run my_first_run -p dfv,domains
+theory-graph measure --run my_first_run
+theory-graph analyze --run my_first_run
+```
+
+Use commas in `-p`: `-p premises,dfv,domains`. Spaces alone do not work in PowerShell.
+
+**Re-do a pass** (clears dependent passes when needed):
+
+```powershell
+theory-graph encode --run my_first_run -p premises --force
+theory-graph encode --run my_first_run -p dfv,domains
+theory-graph measure --run my_first_run
+```
+
+### Starter configs
+
+Copy from `configs/examples/` (do not edit the originals):
+
+| File | Good for |
+|---|---|
+| `smoke_openai.yaml` | OpenAI API |
+| `smoke_anthropic.yaml` | Anthropic |
+| `smoke_ollama_local.yaml` | Free local model (Ollama) |
+| `smoke_manual.yaml` | No AI — you paste JSON yourself |
+
+Confirmatory sample configs (n=375):
+
+- `configs/full_n375_k3_v211_gpt4o_mini_premises.yaml`
+- `configs/full_n375_k3_v211_premises.yaml` (Qwen / local)
+
+### Config cheat sheet
+
+| Field | Meaning |
+|---|---|
+| `experiment.run_id` | Folder name under `experiments/` |
+| `experiment.sample` | `smoke_n20` or `full_n375` |
+| `llm.model` | e.g. `openai/gpt-4o-mini`, `ollama/qwen3:32b` |
+| `passes` | Which encode steps exist + which prompt file |
+| `encoding.k_runs` / per-pass `k_runs` | How many independent AI repeats |
+| `dataset.outcome` | e.g. `GotSelected` |
+| `analysis.preset` | `battlefield` (built-in) or `custom` |
+
+API keys go in `.env`, never in the YAML.
+
+### Changing the prompt
+
+Do not edit published codebook versions in place. Copy and rename:
+
+```powershell
+copy prompts\v2_1_1_premises.md prompts\my_premises_v1.md
+```
+
+Point the config at the new name (without `.md`) and use a **new** `run_id`.
+
+### Manual mode (no API)
+
+1. `init` writes message files under `messages/`
+2. Save human/LLM JSON under `encodings/<pass>/run{k}/`
+3. `measure` then optional `analyze`
+
+### Local model (Ollama)
+
+1. Install [Ollama](https://ollama.com) and pull a model  
+2. Use `configs/examples/smoke_ollama_local.yaml`  
+3. In `.env`: `OLLAMA_BASE_URL=http://localhost:11434`
 
 ---
 
@@ -354,26 +233,21 @@ For `smoke_manual.yaml` or `backend: manual`:
 
 ```
 theory_graph/
-├── prompts/              ← AI instruction files (markdown)
-├── configs/examples/     ← copy these to configs/my_run.yaml
-├── data/corpora/         ← pitch transcripts and sample lists
-├── experiments/          ← one folder per run_id (your outputs)
-│   └── my_first_run/
-│       ├── config.snapshot.yaml
-│       ├── encodings/premises/run1/*.json
-│       ├── validation/measures.csv   ← debug: per-json validation
-│       ├── aggregated/dataset.csv    ← main export (all variables)
-│       └── analysis/results.md       ← regressions (optional)
-└── reference/            ← published baseline runs (read-only)
+├── prompts/                 ← codebook / AI instructions
+├── configs/                 ← experiment settings (YAML)
+├── data/corpora/            ← transcripts + sample lists + cases.csv
+├── reference/               ← published analysis handoffs (use these first)
+│   ├── README.md
+│   ├── full_n375_k3_v211_gpt4o_mini/
+│   └── full_n375_k3_v211_qwen3_32b/
+└── experiments/             ← local runs (often gitignored encodings)
+    └── <run_id>/
+        ├── config.snapshot.yaml
+        ├── encodings/…          ← raw LLM JSON (from encode)
+        ├── aggregated/dataset.csv
+        ├── analysis/results.md
+        └── validation/…
 ```
-
----
-
-## Local model (Ollama, no cloud key)
-
-1. Install [Ollama](https://ollama.com) and pull a model
-2. Use `configs/examples/smoke_ollama_local.yaml`
-3. In `.env`: `OLLAMA_BASE_URL=http://localhost:11434`
 
 ---
 
@@ -381,78 +255,33 @@ theory_graph/
 
 | Problem | Fix |
 |---|---|
-| `run already exists` | Change `run_id` in your YAML to a new name |
-| `cannot encode dfv: run premises first` | Run `-p premises` first, or include premises in the same command |
-| `run not found` | Use the `run_id` name (`my_first_run`) or full path (`experiments/my_first_run`) |
-| Encode skips everything | Files already exist; add `--force` to redo |
-| API errors | Check `.env` keys and `llm.model` in the snapshot |
+| `run already exists` | Change `run_id` and `init` again |
+| `missing …/dataset.csv` | Run `measure`, or point `--run` at a `reference/…` folder that already has the CSV |
+| `cannot encode dfv: run premises first` | Encode `-p premises` first |
+| Encode skips everything | Outputs exist; add `--force` to redo |
+| API errors | Check `.env` and `llm.model` in the snapshot |
 
 ---
 
-## Costs and sample size
-
-- `smoke_n20` = 20 pitches — use this to learn the tool and test prompt wording
-- `full_n375` = confirmatory sample — use only when you are ready (many API calls)
-- Published n375 results (no re-encode): see `reference/README.md`
-
-Rough cost: each pitch × each pass × `k_runs` (often 3 for premises) = number of AI calls.  
-Example: 20 pitches × (3 premise runs + 1 dfv) ≈ 80 calls for a small smoke test.
-
----
-
-## For researchers (optional reading)
-
-**What analysis produces:** premise count (**breadth**) from the premises step; optional composition tags from dfv; optional domain counts from domains. See `experiments/<run>/analysis/results.md`.
-
-**Before publishing:** human-code a random subsample and report agreement with the AI. The pipeline checks JSON shape, not whether coding is “correct.”
-
-**Reproduce bundled baselines** (developers / CI):
-
-```powershell
-theory-graph equivalence
-theory-graph reproduce --pipeline all
-theory-graph smoke
-```
-
-`equivalence` and `reproduce` check published v1.3/v1.5 baselines. `smoke` runs the **v2.1 pipeline** on 3 synthetic cases:
-
-| Step | CLI / behaviour tested |
-|---|---|
-| init | premises-only experiment |
-| measure | corpus join, similarities, premises IVs |
-| encode -p dfv | staged pass registration (manual) |
-| measure | DFV composition columns, no domains yet |
-| encode -p domains | second staged pass |
-| measure | full join: breadth + dfv + domains + similarities |
-| analyze | battlefield preset (M1–M6) |
-| status | done/pending counts |
-| force -p dfv / domains / premises | selective vs full downstream clear |
-| encode --all | all declared passes |
-| analyze-only | edit snapshot analysis, re-run analyze |
-| custom analysis preset | one formula on synthetic data |
-| guard rails | duplicate init, encode before premises, empty measure |
-| compare | two runs, matched cases |
-
-All three should print `PASS`.
-
-**Before a live API run:**
-
-```powershell
-python -m theory_graph.cli smoke
-python -m theory_graph.cli reproduce --pipeline all
-python -m theory_graph.cli equivalence
-```
-
-Then start with `configs/examples/smoke_openai.yaml` (or Ollama/manual) on `smoke_n20` before `full_n375`.
-
-**Compare two finished runs:**
+## Compare two finished runs
 
 ```powershell
 theory-graph compare --runs run_a --runs run_b
 ```
 
-**Add a new dataset:** see `data/corpora/README.md`.
+---
 
+## Developer checks (CI / before a live API run)
+
+```powershell
+theory-graph smoke
+theory-graph reproduce --pipeline all
+theory-graph equivalence
+```
+
+All three should print `PASS`. Details of what `smoke` covers are in the toolkit tests; for paper work, prefer `reference/` + `analyze`.
+
+**Add a new dataset:** see `data/corpora/README.md`.  
 **Prompt history:** see `prompts/registry.md`.
 
 ---
@@ -460,6 +289,10 @@ theory-graph compare --runs run_a --runs run_b
 ## Command reference
 
 ```powershell
+# Analysis on published results (no LLM)
+theory-graph analyze --run reference/full_n375_k3_v211_gpt4o_mini
+
+# Full encode path
 theory-graph init --config configs\my_run.yaml
 theory-graph encode --run my_run -p premises,dfv,domains
 theory-graph measure --run my_run
