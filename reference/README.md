@@ -17,7 +17,7 @@ On the GPT-4o-mini run we also have exploratory extras:
 - **DFV tags** — is each claim about desirability, feasibility, or viability?
 - **Domains** — how those claims group into strategic themes
 
-Encoding (calling the AI) already happened. These folders are the **analysis handoff**: spreadsheets and regression tables. You do not need the raw AI JSON files to read or re-estimate the models.
+Encoding (calling the AI) already happened. These folders are the **analysis handoff**: spreadsheets and regression tables. You do not need the raw AI JSON to read or re-estimate the models. The primary GPT-4o-mini k=3 encodings (premises, DFV, domains) are also in `reference/full_n375_k3_v211_gpt4o_mini/encodings/` so the derived variables can be recomputed from the same JSON.
 
 ---
 
@@ -38,6 +38,7 @@ Folder: `reference/full_n375_k3_v211_gpt4o_mini/`
 | `aggregated/dataset.csv` | Spreadsheet: one row per pitch, all variables | Excel, Google Sheets, R, Stata |
 | `analysis/results.md` | Regression tables (logit models) | Any text editor, VS Code, or Cursor |
 | `validation/reliability_report.md` | How consistently the AI agreed with itself across 3 repeats | Same as above |
+| `encodings/` | Raw k=3 JSON used to build `dataset.csv` | Optional; for audit / re-measure |
 
 ### 2. Comparison run — Qwen3-32b
 
