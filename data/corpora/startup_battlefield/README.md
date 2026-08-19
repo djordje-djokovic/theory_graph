@@ -8,3 +8,4 @@ TechCrunch Startup Battlefield pitch transcripts and Study-2 outcomes/controls.
 - `exclusions.csv` — cases excluded from confirmatory sample (e.g. pilot-108)
 - `samples/full_n375.csv` — confirmatory sample (375 cases); `full_n376.csv` is deprecated
 - `samples/` — other fixed subsets; `calibration_holdouts.csv` lists Pass A §5 practice cases
+- `survival_dv/` — survival and funding dependent variables (`survival_dv.csv`, `survival_panel.csv`) plus the algorithm documentation in `survival_dv/README.md`
